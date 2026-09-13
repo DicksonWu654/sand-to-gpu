@@ -1,0 +1,118 @@
+{
+  "timestamp": "2026-09-13T21:55:23.116Z",
+  "results": [
+    {
+      "id": "moores-law",
+      "state": "a100",
+      "theme": "dark",
+      "shot": "qa/shots/copy-smoke/a100-dark.png",
+      "metrics": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1891,
+        "boxWidth": 324
+      }
+    },
+    {
+      "id": "moores-law",
+      "state": "gv100",
+      "theme": "dark",
+      "shot": "qa/shots/copy-smoke/gv100-dark.png",
+      "metrics": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1912,
+        "boxWidth": 324
+      }
+    },
+    {
+      "id": "node-table",
+      "state": "node-table",
+      "theme": "dark",
+      "shot": "qa/shots/copy-smoke/node-table-dark.png",
+      "metrics": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2938,
+        "boxWidth": 324
+      }
+    },
+    {
+      "id": "ald-cycle",
+      "state": "ald-cycle",
+      "theme": "dark",
+      "shot": "qa/shots/copy-smoke/ald-cycle-dark.png",
+      "metrics": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2150,
+        "boxWidth": 324
+      }
+    },
+    {
+      "id": "moores-law",
+      "state": "a100",
+      "theme": "light",
+      "shot": "qa/shots/copy-smoke/a100-light.png",
+      "metrics": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1891,
+        "boxWidth": 324
+      }
+    },
+    {
+      "id": "moores-law",
+      "state": "gv100",
+      "theme": "light",
+      "shot": "qa/shots/copy-smoke/gv100-light.png",
+      "metrics": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1912,
+        "boxWidth": 324
+      }
+    },
+    {
+      "id": "node-table",
+      "state": "node-table",
+      "theme": "light",
+      "shot": "qa/shots/copy-smoke/node-table-light.png",
+      "metrics": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2938,
+        "boxWidth": 324
+      }
+    },
+    {
+      "id": "ald-cycle",
+      "state": "ald-cycle",
+      "theme": "light",
+      "shot": "qa/shots/copy-smoke/ald-cycle-light.png",
+      "metrics": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2150,
+        "boxWidth": 324
+      }
+    }
+  ],
+  "errors": []
+}

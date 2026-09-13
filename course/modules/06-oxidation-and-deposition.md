@@ -510,12 +510,12 @@ Deposition is the largest segment of **wafer fab equipment (WFE)**, the industry
 |---|---|---|
 | Thermal oxidation temperature range | 800–1,200 °C (furnace); ISSG 900–1,100 °C for seconds | Sets which steps a thermal oxide can follow |
 | Silicon consumed per unit oxide thickness | ~0.44–0.46 (44 nm of Si per 100 nm SiO2) | The surface moves; a 1 nm IL eats ~0.4 nm of a nanosheet |
-| Deal-Grove dry O2 at 1,000 °C (111) | B = 0.0117 µm²/h, B/A = 0.071 µm/h, A = 0.165 µm | Lets you compute any dry oxidation time |
+| Deal-Grove dry O2 at 1,000 °C (111) | B = 0.0117 µm²/h, B/A = 0.071 µm/h, A = 0.165 µm | Model for thicker planar oxides; ultrathin growth and modern 3D structures need corrections |
 | Deal-Grove wet H2O at 1,000 °C (111) | B = 0.287 µm²/h, B/A = 1.27 µm/h, A = 0.226 µm | Wet is ~25× faster in the parabolic regime |
 | (111):(100) linear rate ratio | 1.68 | Fin sidewalls oxidize faster than tops |
 | Activation energies | B: 1.23 eV (dry), 0.78 eV (wet); B/A: ~2.0 eV | 100 °C changes the rate several-fold |
 | Oxidant solubility and diffusivity in SiO2 at 1,000 °C | C*: ~3 × 10¹⁹ (H2O) vs ~5 × 10¹⁶ cm⁻³ (O2); D: ~6 × 10⁻¹⁰ vs ~7 × 10⁻⁹ cm²/s | Solubility, not diffusion, is why wet wins |
-| Time to grow 1 µm oxide at 1,000 °C | ~99 h dry vs ~4.3 h wet | Thick oxides are always grown wet |
+| Time to grow 1 µm oxide at 1,000 °C | ~99 h dry vs ~4.3 h wet | Wet growth is faster; required film quality and device flow can justify dry growth or deposition |
 | HKMG interfacial SiO2 / HfO2 thickness | ~0.5–1.0 nm as formed, ~0.5–0.7 nm after scavenging / ~1.5–2.0 nm; total EOT ~0.8–1.0 nm | The IL is the largest single share of EOT |
 | EOT of 2 nm HfO2 (k ~20) | 2 × 3.9/20 = 0.39 nm | Physically thick against tunneling, electrically thin |
 | Interface trap density after forming-gas anneal | ~10¹⁰ cm⁻² eV⁻¹ | One defect per ~10⁴ nm²; a gate is a few thousand nm² |
@@ -528,7 +528,7 @@ Deposition is the largest segment of **wafer fab equipment (WFE)**, the industry
 | PECVD temperature and RF | 300–400 °C, 13.56 MHz (+ 300–400 kHz LF for stress) | The hottest step allowed over copper |
 | Low-k SiOC:H / porous ULK dielectric constant | k ~2.7–3.0 / ~2.2–2.5 (vs 3.9–4.2 for SiO2) | Lower wiring capacitance, weaker films |
 | W CVD bulk reaction | WF6 + 3 H2 → W + 6 HF at 400–450 °C | Fluorine byproducts force the Ti/TiN liner |
-| ALD growth per cycle (TMA/H2O, HfO2) | ~0.1 nm/cycle (~1/3 monolayer); cycle time 2–10 s single-wafer | Thickness by counting; slowness is intrinsic |
+| ALD growth per cycle (TMA/H2O for Al2O3; suitable Hf precursor for HfO2) | ~0.1 nm/cycle (~1/3 monolayer); cycle time 2–10 s single-wafer | Thickness by counting; slowness is intrinsic |
 | Cycles for 2 nm HfO2 | ~20; ~5.5 × 10¹⁵ Hf atoms/cm² in the finished film | A gate dielectric is ~6 monolayers of hafnium |
 | HfO2 formula-unit density / monolayer areal density | 2.8 × 10²² cm⁻³ / ~9 × 10¹⁴ cm⁻² | Converts GPC to atoms and precursor mass |
 | ALD step count in a 3 nm/2 nm logic flow | on the order of 100 | Why ALD tool spend rivals PVD |

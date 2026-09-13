@@ -66,6 +66,28 @@
       ],
       "answer": 2,
       "explanation": "Each probe is a spring; overtravel sets its compression and hence its force. The lateral wipe of a deflecting cantilever needle breaks the few-nanometer native oxide, which is why contact resistance drops below ~1 Ω, and the resulting probe mark must stay within the assembly house's pad-damage limits."
+    },
+    {
+      "q": "A chip passes a test with 99% stuck-at fault coverage but later fails during memory training. Which interpretation is best?",
+      "options": [
+        "The quoted coverage proves the tester was defective",
+        "Coverage measures the chosen fault model, while memory training may expose timing, interface or interaction failures outside that model",
+        "A 99% coverage test guarantees exactly 1% field failures",
+        "Memory interfaces cannot be tested electrically"
+      ],
+      "answer": 1,
+      "explanation": "Fault coverage is coverage of modeled faults. It is not a measured probability of detecting all physical defects or system-level failure modes."
+    },
+    {
+      "q": "A die passes wafer sort. Which new risk justifies electrical test after packaging?",
+      "options": [
+        "Its logical architecture automatically changes during dicing",
+        "Assembly can create opens, shorts or stressed joints and introduces interfaces absent during wafer probing",
+        "Wafer sort tests only the package substrate",
+        "Passing sort means every final-test failure must be a software bug"
+      ],
+      "answer": 1,
+      "explanation": "Package assembly adds connections and thermal/mechanical stress. Final test checks the assembled component, while wafer sort protects assembly from already-detectable bad dies."
     }
   ]
 }

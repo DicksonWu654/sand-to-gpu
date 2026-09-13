@@ -287,7 +287,8 @@
         h('span', { class: 'w-legend-item' }, h('i', { style: { background: 'var(--panel2)', border: '1px dashed var(--accent2)' } }), 'sheath: no electrons, no glow, strong field'));
       const grid = h('div', { style: { display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '14px', alignItems: 'start' } },
         h('div', null, D, legend), h('div', null, readout, PG));
-      const ro = new ResizeObserver(() => { grid.style.gridTemplateColumns = el.clientWidth < 600 ? '1fr' : '3fr 2fr'; });
+      let layoutFrame = 0, previousWidth = -1;
+      const ro = new ResizeObserver(() => { const width = el.clientWidth; if (width === previousWidth) return; previousWidth = width; cancelAnimationFrame(layoutFrame); layoutFrame = requestAnimationFrame(() => { grid.style.gridTemplateColumns = width < 600 ? 'minmax(0, 1fr)' : 'minmax(0, 3fr) minmax(0, 2fr)'; }); });
       ro.observe(el);
       const io = new IntersectionObserver(es => { visible = es.some(e => e.isIntersecting); if (visible) start(); });
       io.observe(el);
@@ -297,7 +298,7 @@
       for (let i = 0; i < ions.length; i++) spawnIon(ions[i]); for (let i = 0; i < rads.length; i++) spawnRad(rads[i]);
       for (let i = 0; i < 90; i++) step(1 / 60);
       start();
-      return () => { if (raf) cancelAnimationFrame(raf); raf = 0; st.playing = false; io.disconnect(); ro.disconnect(); };
+      return () => { if (raf) cancelAnimationFrame(raf); raf = 0; st.playing = false; io.disconnect(); ro.disconnect(); cancelAnimationFrame(layoutFrame); };
     }
   });
 })();

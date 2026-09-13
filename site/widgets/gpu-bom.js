@@ -21,8 +21,8 @@
   }
 
   window.registerWidget('gpu-bom', {
-    title: 'What an H100 / B200 Costs to Make',
-    caption: 'Tune the die, memory and packaging inputs to see the bill of materials, who captures the money, and what building a million of them takes.',
+    title: 'Illustrative H100 / B200 Cost Model',
+    caption: 'Explore assumed component costs and manufacturing scale. Defaults are estimates, not a disclosed NVIDIA bill of materials or measured product profitability.',
     mount(el, ctx) {
       const { h, svg, fmt } = ctx;
       const usd = n => '$' + fmt(Math.round(n), 0);
@@ -84,14 +84,14 @@
       const readout2 = h('div', { class: 'w-readout' },
         h('div', { class: 'w-stat' }, rHbmCost, h('span', null, 'HBM cost / GPU')),
         h('div', { class: 'w-stat' }, rPack, h('span', null, 'CoWoS+substrate+test / GPU')),
-        h('div', { class: 'w-stat' }, rCogs, h('span', null, 'total COGS / GPU')),
-        h('div', { class: 'w-stat' }, rMargin, h('span', null, 'gross margin')));
+        h('div', { class: 'w-stat' }, rCogs, h('span', null, 'modeled component cost / GPU')),
+        h('div', { class: 'w-stat' }, rMargin, h('span', null, 'price minus modeled cost (%)')));
       const formula = h('div', { class: 'w-formula' });
 
       // ---------- bar charts ----------
       const BW = 700, BH1 = 46, BH2 = 46;
-      const svg1 = svg('svg', { class: 'w-svg', viewBox: `0 0 ${BW} 70`, role: 'img', 'aria-label': 'COGS versus price' });
-      const svg2 = svg('svg', { class: 'w-svg', viewBox: `0 0 ${BW} 70`, role: 'img', 'aria-label': 'Who gets the money' });
+      const svg1 = svg('svg', { class: 'w-svg', viewBox: `0 0 ${BW} 70`, role: 'img', 'aria-label': 'Modeled component cost versus price' });
+      const svg2 = svg('svg', { class: 'w-svg', viewBox: `0 0 ${BW} 70`, role: 'img', 'aria-label': 'Illustrative price allocation' });
       const leg1 = h('div', { class: 'w-legend' });
       const leg2 = h('div', { class: 'w-legend' });
 
@@ -177,13 +177,13 @@
           { k: 'CoWoS + interposer', v: st.cowos, c: 'var(--cu)' },
           { k: 'Substrate', v: st.substrate, c: 'var(--warn)' },
           { k: 'Test + packaging', v: st.testPkg, c: 'var(--muted)' },
-          { k: 'Gross margin', v: nvProfit, c: 'var(--ok)' },
+          { k: 'Unallocated price–cost spread', v: nvProfit, c: 'var(--ok)' },
         ], st.price, BH1);
         drawBar(svg2, leg2, [
           { k: 'TSMC (wafer + CoWoS)', v: tsmc, c: 'var(--si)' },
           { k: 'HBM vendor', v: hbmVendor, c: 'var(--accent2)' },
           { k: 'Substrate / OSAT', v: osat, c: 'var(--cu)' },
-          { k: 'NVIDIA gross profit', v: nvProfit, c: 'var(--ok)' },
+          { k: 'Unallocated price–cost spread', v: nvProfit, c: 'var(--ok)' },
         ], st.price, BH2);
 
         // ---- 1,000,000 GPU scaler ----
@@ -224,8 +224,9 @@
         presetRow, grid, readout1, readout2, formula,
         h('div', { style: { fontWeight: 600, fontSize: '12.5px', color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '.06em', margin: '14px 0 4px' } }, 'Bill of materials vs. selling price'),
         svg1, leg1,
-        h('div', { style: { fontWeight: 600, fontSize: '12.5px', color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '.06em', margin: '14px 0 4px' } }, 'Who gets the money'),
+        h('div', { style: { fontWeight: 600, fontSize: '12.5px', color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '.06em', margin: '14px 0 4px' } }, 'Illustrative price allocation'),
         svg2, leg2,
+        h('div', { class: 'w-note' }, 'The unallocated spread is not gross profit. Gross profit uses realized revenue minus full cost of revenue, which also includes yield fallout, warranty/inventory provisions, logistics, manufacturing overhead and other costs. R&D is a separate operating expense. Inputs are illustrative estimates.'),
         h('div', { style: { fontWeight: 600, fontSize: '12.5px', color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '.06em', margin: '18px 0 4px' } }, 'Scaling to 1,000,000 GPUs'),
         h('div', { class: 'w-note' }, 'Assumptions for this scaler: every HBM stack is modeled as 12-high/24 GB (12 DRAM dies ≈120 mm² each, ~65% wafer yield) regardless of the per-stack capacity set above; CoWoS interposer wafers yield ~30 H100-class (1-die) packages or ~16 B200-class (2-die) packages, per Module 19.'),
         scalerReadout, h('div', { class: 'w-controls' }, capCtl));

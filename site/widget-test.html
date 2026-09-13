@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><rect x=%223%22 y=%223%22 width=%2214%22 height=%2214%22 fill=%22%23B8770A%22/></svg>">
 <title>Widget test</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap">
 <link rel="stylesheet" href="styles.css">
@@ -24,6 +25,7 @@
 <div class="article" style="max-width:760px;margin:0">
   <div class="widget" id="box"></div>
 </div>
+<script src="widget-layout.js"></script>
 <script>window.COURSE = { parts: [], modules: [], built: '' };</script>
 <script>
   // mini harness replicating app.js's widget contract
@@ -57,7 +59,7 @@
     box.append(ctxBase.h('div', { class: 'widget-head' }, ctxBase.h('h4', null, def.title || id), ctxBase.h('span', { class: 'tag' }, 'Interactive')));
     if (def.caption) box.append(ctxBase.h('div', { class: 'widget-cap' }, def.caption));
     const body = ctxBase.h('div', { class: 'widget-body' }); box.append(body);
-    try { cleanup = def.mount(body, ctxBase); } catch (e) { document.getElementById('err').textContent = e.stack; }
+    try { const cleanupWidget = def.mount(body, ctxBase); const cleanupDiagrams = window.prepareWidgetDiagrams(body); cleanup = () => { cleanupDiagrams(); if (typeof cleanupWidget === "function") cleanupWidget(); }; } catch (e) { document.getElementById('err').textContent = e.stack; }
   }
   window.addEventListener('load', () => {
     const pick = document.getElementById('pick');

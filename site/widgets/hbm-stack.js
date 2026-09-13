@@ -66,7 +66,7 @@
       const formula = h('div', { class: 'w-formula', html: 'BW/stack = width × rate ÷ 8 &nbsp;·&nbsp; capacity/stack = height × die_Gb ÷ 8 &nbsp;·&nbsp; height_stack = N·(t<sub>die</sub> + t<sub>gap</sub>) + t<sub>base</sub>' });
 
       // ---------- cross-section SVG ----------
-      const VBW = 260, VBH = 360;
+      const VBW = 300, VBH = 300;
       const xsec = svg('svg', { class: 'w-svg', viewBox: `0 0 ${VBW} ${VBH}`, role: 'img', 'aria-label': 'HBM stack cross-section' });
       const legend = h('div', { class: 'w-legend' },
         ...[['var(--si)', 'core DRAM die'], ['var(--accent2)', 'base / logic die'], ['var(--cu)', 'TSV'], ['var(--warn)', 'microbump + underfill'], ['var(--ok)', 'hybrid Cu-Cu bond'], ['var(--line2)', 'Si interposer']]
@@ -77,21 +77,21 @@
         const totalUm = st.height * (dt + gap) + BASE_DIE;
         const ceiling = GEN[st.gen].ceiling;
         const scaleRef = 900; // µm mapped to drawH px, generous headroom
-        const drawH = 300, baseY = 340;
+        const drawH = 230, baseY = 270;
         const px = um => um * drawH / scaleRef;
-        const stackW = 108, cx = 92;
+        const stackW = 108, cx = 110;
         // fixed caption, away from the dynamic lines so it never collides
-        g.append(svg('text', { x: 6, y: 16, 'font-size': 11, 'font-family': 'var(--mono)', 'font-weight': 600, fill: 'var(--bad)' }, `JEDEC ceiling: ${ceiling} µm`));
+        g.append(svg('text', { x: 6, y: 16, 'font-size': 13, 'font-family': 'var(--mono)', 'font-weight': 600, fill: 'var(--bad)' }, `JEDEC ceiling: ${ceiling} µm`));
         // interposer (decorative, fixed size — not part of the height budget)
         const interW = stackW + 40, interH = 14;
         g.append(svg('rect', { x: cx - 20, y: baseY, width: interW, height: interH, fill: 'var(--line2)' }));
-        g.append(svg('text', { x: cx - 20 + interW / 2, y: baseY + interH + 12, 'text-anchor': 'middle', 'font-size': 10, 'font-family': 'var(--sans)', fill: 'var(--muted)' }, 'Si interposer (CoWoS)'));
+        g.append(svg('text', { x: cx - 20 + interW / 2, y: baseY + interH + 12, 'text-anchor': 'middle', 'font-size': 13, 'font-family': 'var(--sans)', fill: 'var(--muted)' }, 'Si interposer (CoWoS)'));
         let y = baseY;
         // base die
         const baseH = Math.max(4, px(BASE_DIE));
         y -= baseH;
         g.append(svg('rect', { x: cx, y, width: stackW, height: baseH, fill: 'var(--accent2)', stroke: 'var(--panel)', 'stroke-width': 0.6 }));
-        if (baseH >= 9) g.append(svg('text', { x: cx + stackW / 2, y: y + baseH / 2 + 3.5, 'text-anchor': 'middle', 'font-size': 9, 'font-family': 'var(--sans)', fill: 'var(--panel)', 'font-weight': 600 }, 'base die'));
+        if (baseH >= 9) g.append(svg('text', { x: cx + stackW / 2, y: y + baseH / 2 + 3.5, 'text-anchor': 'middle', 'font-size': 13, 'font-family': 'var(--sans)', fill: 'var(--panel)', 'font-weight': 600 }, 'base die'));
         // core dies, bottom to top
         const dieH = Math.max(3, px(dt)), gapH = st.hybrid ? Math.max(1, px(gap)) : Math.max(2.2, px(gap));
         let midDieY = null, midGapY = null;
@@ -117,15 +117,15 @@
         const over = totalUm > ceiling;
         g.append(svg('line', { x1: cx - 10, y1: topY, x2: cx + stackW + 10, y2: topY, stroke: over ? 'var(--bad)' : 'var(--ok)', 'stroke-width': 2 }));
         const farFromCeil = Math.abs(topY - ceilY) > 14;
-        g.append(svg('text', { x: cx + stackW + 14, y: topY + (farFromCeil ? -6 : 11), 'font-size': 11, 'font-family': 'var(--mono)', 'font-weight': 600, fill: over ? 'var(--bad)' : 'var(--ok)' }, `${fmt(totalUm, 0)} µm`));
+        g.append(svg('text', { x: cx + stackW + 14, y: topY + (farFromCeil ? -6 : 11), 'font-size': 13, 'font-family': 'var(--mono)', 'font-weight': 600, fill: over ? 'var(--bad)' : 'var(--ok)' }, `${fmt(totalUm, 0)} µm`));
         // leader labels on the left: die thickness + gap
         if (midDieY != null) {
           g.append(svg('line', { x1: cx, y1: midDieY, x2: cx - 20, y2: midDieY - 12, stroke: 'var(--muted)', 'stroke-width': 0.8, 'stroke-dasharray': '2 2' }));
-          g.append(svg('text', { x: cx - 22, y: midDieY - 9, 'text-anchor': 'end', 'font-size': 10, 'font-family': 'var(--sans)', fill: 'var(--muted)' }, `die ≈ ${fmt(dt, 0)} µm`));
+          g.append(svg('text', { x: cx - 22, y: midDieY - 9, 'text-anchor': 'end', 'font-size': 13, 'font-family': 'var(--sans)', fill: 'var(--muted)' }, `die ≈ ${fmt(dt, 0)} µm`));
         }
         if (midGapY != null) {
           g.append(svg('line', { x1: cx, y1: midGapY, x2: cx - 20, y2: midGapY + 14, stroke: 'var(--muted)', 'stroke-width': 0.8, 'stroke-dasharray': '2 2' }));
-          g.append(svg('text', { x: cx - 22, y: midGapY + 17, 'text-anchor': 'end', 'font-size': 10, 'font-family': 'var(--sans)', fill: 'var(--muted)' }, st.hybrid ? 'bond ≈ 2 µm' : `gap ≈ ${fmt(gap, 0)} µm`));
+          g.append(svg('text', { x: cx - 22, y: midGapY + 17, 'text-anchor': 'end', 'font-size': 13, 'font-family': 'var(--sans)', fill: 'var(--muted)' }, st.hybrid ? 'bond ≈ 2 µm' : `gap ≈ ${fmt(gap, 0)} µm`));
         }
         return { totalUm, ceiling, over };
       }
@@ -195,7 +195,7 @@
       [selHeight, selDie, inRate, inN, bondTC, bondMR, hybridBox].forEach(i => i.addEventListener('input', update));
 
       el.append(controls, bondRow, bondNote, readout, formula,
-        h('div', { class: 'w-grid2' }, h('div', null, xsec, legend), h('div', null, tableWrap)),
+        h('div', { class: 'w-grid2', style: { gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))' } }, h('div', null, xsec, legend), h('div', null, tableWrap)),
         h('div', { class: 'w-note' }, 'Die thickness and bond-line gap are fixed by industry practice at each stack height (Module 15 §4.4–4.5), not user-chosen; the widget solves the height budget so you can see when a bonding choice pushes a stack over the JEDEC ceiling — the real reason Samsung\'s 12-high TC-NCF took until September 2025 to qualify.'));
       selGen.value = st.gen;
       refreshOptions();

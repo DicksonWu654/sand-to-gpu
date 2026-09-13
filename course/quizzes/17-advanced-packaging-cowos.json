@@ -57,17 +57,6 @@
       "explanation": "Once dies are reflowed and underfilled the assembly cannot be taken apart. Two ~$500-600 GPU dies plus eight ~$300-500 HBM3E stacks, interposer and substrate are lost together, so a 95% CoW yield on a 16-per-wafer product loses nearly a whole package per wafer. HBM is shipped as tested known-good stacks and CoWoS re-tests them anyway."
     },
     {
-      "q": "TSMC CoWoS capacity went from ~15k wafers per month at end-2023 to ~35k at end-2024 and ~75-80k at end-2025. Why did AI accelerator unit counts grow much more slowly than these headline figures?",
-      "options": [
-        "Because interposer area roughly doubled each generation (2.5x reticle for H100 at ~29 per wafer, 3.3x for B200 at ~16, 5.5x at ~9), so packages per wafer fell almost as fast as wafer capacity rose",
-        "Because the outsourced oS step at ASE, SPIL and Amkor ran at less than half the yield of TSMC's in-house line",
-        "Because NVIDIA's share of CoWoS fell from ~90% to ~30% as Broadcom and AMD took capacity",
-        "Because each CoWoS wafer must be cycled through the 4N front-end fab again, adding three months per wafer"
-      ],
-      "answer": 0,
-      "explanation": "Wafers per month is not packages per month: an H100 2.5x interposer yields ~29 per 300 mm wafer, a B200 3.3x interposer ~16, and a 5.5x interposer ~9. Doubling wafer capacity per year roughly kept pace with doubling interposer area per generation, which is the arithmetic pushing TSMC toward rectangular panels (CoPoS)."
-    },
-    {
       "q": "A 1,000 W GPU die runs its core logic at ~0.8 V. Why does the module conclude that tens of thousands of its ~100,000 microbumps must be dedicated to power and ground rather than signals?",
       "options": [
         "Because I = P/V gives ~1,250 A, and a 25 um copper pillar can safely carry only ~50-100 mA before electromigration, so supply needs ~12,500-25,000 pillars and the ground return as many again, ~25,000-50,000 bumps before any signal is counted",

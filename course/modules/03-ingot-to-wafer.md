@@ -504,7 +504,7 @@ On the equipment and consumables side, the names have shifted recently: the poli
 | Wire speed / tension | 10–25 m/s / tens of N, held to a fraction of a N | Tension through the wire bow is the cutting force; its drift is the origin of TTV and warp |
 | Kerf loss per slice | ~150–170 µm (DWS), 200+ µm (slurry) | ~15% of the crystal lost per slice, the largest single yield loss in wafering |
 | As-cut slice thickness | ~890–950 µm | The one number tuned backward from 775 µm to cover all downstream removal |
-| Wafers per 2 m ingot | ~1,800 (at 1.06 mm pitch) | The denominator in every per-wafer cost |
+| Wafers per 2 m ingot | ~1,887 gross before end losses (at 1.06 mm pitch); ~1,800 with allowance | The denominator in every per-wafer cost |
 | Saw damage depth | 5–15 µm (DWS), 15–30 µm (slurry) | Sets how much the grinder must remove |
 | DDG removal / damage | 60–80 µm total / 2–5 µm | Where flatness is made; its damage sets the etch depth |
 | Etch removal | 20–30 µm total (KOH 45–55%, 80–90 °C) | First damage-free surface; alkaline preserves the grinder's flatness |

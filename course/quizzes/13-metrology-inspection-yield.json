@@ -13,17 +13,6 @@
       "explanation": "Ellipsometry measures rho = r_p/r_s = tan(Psi) exp(i Delta); thickness comes only from model fitting, which is why recipes are validated against cross-section TEM."
     },
     {
-      "q": "Why does a fab use scatterometry (OCD) rather than CD-SEM to monitor the thickness of the three stacked silicon channels in a nanosheet transistor in-line?",
-      "options": [
-        "CD-SEM cannot operate in a cleanroom",
-        "OCD images each nanosheet with visible light at higher resolution than an electron beam",
-        "CD-SEM gives a top-down 2D image and cannot see buried profile parameters, while OCD fits the diffraction spectrum of a periodic target with an RCWA (or ML) model that returns the full 3D profile, non-destructively, in under a second and without charging or shrinkage",
-        "OCD is a contact technique that physically probes each layer"
-      ],
-      "answer": 2,
-      "explanation": "OCD solves an inverse problem on the specular spectrum of a grating; its output includes buried layer thicknesses and sidewall angles that no top-down SEM image contains."
-    },
-    {
       "q": "In diffraction-based overlay (DBO), two stacked gratings are printed with programmed shifts of +d and -d in two neighboring targets. What is the purpose of the two opposite biases?",
       "options": [
         "To double the target size so the microscope can find it",

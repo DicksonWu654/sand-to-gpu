@@ -68,17 +68,6 @@
       "explanation": "2.5 million EUV exposures per month are needed. One scanner delivers 160 x 24 x 30.4 x 0.85 = ~99,000 exposures per month, so ~25 scanners are needed, and fabs add ~20% for dedication and ramp headroom, giving ~30 at ~$200M each."
     },
     {
-      "q": "A single-chamber tool has a mean process time of 1 hour per lot, with fully random arrivals and processing (c_a = c_e = 1). Using Kingman's approximation, roughly how long does a lot wait in front of it when the tool runs at 90% utilization?",
-      "options": [
-        "About 1 hour",
-        "About 4 hours",
-        "About 9 hours",
-        "About 19 hours"
-      ],
-      "answer": 2,
-      "explanation": "W = u/(1-u) x (c_a^2 + c_e^2)/2 x t_e = 9 x 1 x 1 h = 9 hours of waiting for 1 hour of processing, an X-factor of 10. At 80% utilization the wait would be 4 hours and at 95% it would be 19 hours, which is why only bottleneck scanners are run near the steep end of the operating curve, and why real fabs reach an X-factor of 2-4 only by driving variability below 1 and pooling matched chambers."
-    },
-    {
       "q": "A fab draws 500 MW continuously and starts 100,000 wafers per month. Roughly how much electricity does each wafer account for?",
       "options": [
         "About 36 kWh",

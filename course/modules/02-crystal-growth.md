@@ -408,8 +408,8 @@ By tonnage, most CZ silicon now goes to photovoltaics, and solar pullers have be
 | Growth time / total cycle | 30 to 50+ h / ~2.5 to 3.5 days | ~8 to 12 ingots per puller per month |
 | Wafers per 2 m body | ~1,850 gross (~1.05 to 1.1 mm of ingot per wafer); ~1,500 to 1,800 saleable | Kerf and grinding take ~30 % of the body mass |
 | Neck stress at 300 kg, 3 mm neck | ~400 MPa | Near practical limits; drives support jaws and hardened seeds |
-| FZ maximum zone height (Heywang) | ~15 mm | Independent of diameter; caps production FZ at 200 mm |
-| FZ maximum production diameter | 200 mm (as of 2025) | FZ cannot serve 300 mm fabs; low-oxygen MCZ does instead |
+| FZ maximum zone height (Heywang) | ~15 mm | A simplified capillary-stability estimate; not a proof of a universal diameter ceiling |
+| FZ maximum production diameter | 200 mm (as of 2025) | Commercial range described here; low-oxygen MCZ serves current 300 mm demand, while larger FZ is a development problem |
 | 450 mm status | G450C 2011 to ~2017, abandoned | Wafer area is no longer the cost lever; EUV and packaging are |
 | Top-5 wafer maker share (as of 2025) | ~85 to 90 % of revenue (Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron) | A five-company oligopoly supplies every fab |
 
@@ -443,7 +443,7 @@ By tonnage, most CZ silicon now goes to photovoltaics, and solar pullers have be
 - **"The neck is the weak point, so it should be made thick."** → A thick neck does not filter dislocations; the thin, fast-grown neck is the only reason the crystal is dislocation-free at all. Thickening it to 5 to 6 mm works only with a faster pull and a higher risk of keeping dislocations, so the industry's real answers are to take the weight off the neck with support jaws or to avoid making dislocations at all with boron-hardened seeds.
 - **"MCZ is an optional refinement."** → At 300 mm a 400 kg melt is deep in the turbulent regime; without a field the striations and oxygen scatter would not meet spec, and essentially every 300 mm semiconductor puller is a magnetic one. It is optional only on solar pullers with looser specs.
 - **"450 mm was abandoned because the ingots could not be grown."** → 450 mm ingots and wafers were grown and shipped to G450C. It stalled because the process-tool vendors (ASML above all) would not fund a full tool generation for a handful of customers, and because EUV and packaging, not wafer area, had become the cost levers.
-- **"Float Zone is the higher-quality process, so it should replace CZ."** → FZ is purer but limited to 200 mm, more expensive, and its oxygen-free wafers are mechanically weak in a fab. CZ is the only route to 300 mm, and CZ oxygen is a feature for CMOS.
+- **"Float Zone is the higher-quality process, so it should replace CZ."** → FZ offers low oxygen and high resistivity but its established commercial range here stops at 200 mm; larger diameter is an engineering development challenge. Cost and mechanical behavior also matter. CZ dominates 300 mm supply, and carefully controlled CZ oxygen can be useful for CMOS.
 
 ## Where This Fits in the Supply Chain
 

@@ -552,7 +552,7 @@ The implication for the supply chain is that the fab's risk register looks nothi
 | Fab nitrogen consumption | 30,000–60,000 Nm³/h; ~440,000 t/yr at 40,000 Nm³/h | Why an ASU is built next to every fab |
 | EUV photons per nm² | ~10–20 at 15–30 mJ/cm² (92 eV per photon) | The origin of stochastic defects and the dose-throughput trade |
 | Japan share of photoresist market | ~90% (higher for EUV) | The least replaceable input in lithography |
-| UPW specification | 18.2 MΩ·cm; TOC < 1 ppb; metals < 1 ppt; particles ~10²–10³/L above 20 nm | Purer than anything else made industrially; each parameter needs its own meter |
+| UPW specification | 18.2 MΩ·cm at 25 °C; TOC < 1 ppb; metals < 1 ppt; particles ~10²–10³/L above 20 nm | Resistivity measures ionic contamination; organics, particles and metals need separate measurements |
 | UPW per 300 mm wafer; per fab | ~1,500–2,500 gal (6–9 m³); 2–10 million gal/day; TSMC Arizona ~4.75 M gal/day | Water is the fab's largest consumable by mass |
 | TSMC process-water recycling rate | ~90% in Taiwan (90.3% in 2023); ~65% Arizona (as of 2025), 85–90% target with 2028 reclaim plant | The reclaim rate is what a city permits a fab on |
 | CMP steps per leading-edge wafer | ~20–30+; slurry ~100–300 mL/min per platen; pad life ~12–36 h | Planarization before every lithography level |
@@ -561,7 +561,7 @@ The implication for the supply chain is that the fab's risk register looks nothi
 | EUV mask blank stack | 40 Mo/Si bilayers, ~7 nm period, ~64–67% reflectivity; Ru cap 2.5 nm; TaBN absorber ~55–70 nm; ULE substrate flatness < 30 nm | The mirror that makes EUV possible and the source of unrepairable phase defects |
 | EUV blank supply | Hoya ~2/3, AGC ~1/3 (effective duopoly) | Two companies gate every EUV layer in the world |
 | Multi-beam mask writer | ~262k (IMS) to ~500k (NuFlare) beamlets; ~8–12 h write; MBMW-301 and MBM-3000 both 2023 | Write time no longer depends on pattern complexity, which made curvilinear ILT masks possible |
-| EUV pellicle transmission | ~88–92% (Mitsui polysilicon type); CNT ≥ 94% target, > 97% membrane demos; ~19% throughput penalty at 90% | The double-pass loss is a direct tax on EUV output |
+| EUV pellicle transmission | ~88–92% (Mitsui polysilicon type); CNT ≥ 94% target, > 97% membrane demos; 19% double-pass optical loss at 90%; whole-cycle throughput depends on overhead | The double-pass loss is a direct tax on EUV output |
 | Mask cost | DUV binary $5–20k; ArFi PSM $50–150k; EUV $300–500k; leading-node set ~$20–30M | Decides which chips can exist economically at a leading node |
 | Total semiconductor materials market, 2024 (SEMI) | ~$67.5B, of which ~$43B wafer fab materials; silicon wafers ~$11.5B | Scale of the industry this module describes |
 

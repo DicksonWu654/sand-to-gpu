@@ -1,0 +1,142 @@
+{
+  "id": "transistor-evolution",
+  "errors": [],
+  "results": [
+    {
+      "width": 760,
+      "theme": "dark",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/transistor-evolution-760-dark-initial.png",
+        "qa/shots/sweep/transistor-evolution-760-dark-interaction.png"
+      ],
+      "controls": 2,
+      "controlValuesExercised": 4,
+      "buttonsClicked": 3,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1032,
+        "boxWidth": 724
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1166,
+        "boxWidth": 724
+      }
+    },
+    {
+      "width": 760,
+      "theme": "light",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/transistor-evolution-760-light-initial.png",
+        "qa/shots/sweep/transistor-evolution-760-light-interaction.png"
+      ],
+      "controls": 2,
+      "controlValuesExercised": 4,
+      "buttonsClicked": 3,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1032,
+        "boxWidth": 724
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1166,
+        "boxWidth": 724
+      }
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/transistor-evolution-360-dark-initial.png",
+        "qa/shots/sweep/transistor-evolution-360-dark-interaction.png"
+      ],
+      "controls": 2,
+      "controlValuesExercised": 4,
+      "buttonsClicked": 3,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2237,
+        "boxWidth": 324
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2355,
+        "boxWidth": 324
+      }
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/transistor-evolution-360-light-initial.png",
+        "qa/shots/sweep/transistor-evolution-360-light-interaction.png"
+      ],
+      "controls": 2,
+      "controlValuesExercised": 4,
+      "buttonsClicked": 3,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2237,
+        "boxWidth": 324
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2355,
+        "boxWidth": 324
+      }
+    }
+  ]
+}

@@ -18,6 +18,9 @@ By the end you will be able to explain why room-temperature physics caps how low
 - **Chemical mechanical polishing (CMP)** (Modules 03, 06). The wafer is pressed face-down on a rotating pad with abrasive, chemically active slurry until it is flat to about a nanometre, so each new layer starts on a plane.
 - **Logic gates and cells** (programming background). An **inverter** outputs the opposite of its input, a **NAND** outputs 0 only when both inputs are 1, and a **flip-flop** stores one bit, updated once per clock tick. A chip is a few billion such gates wired together.
 
+
+**How to read the numerical examples.** Public product specifications and dated company statements are attributed where checked. Unattributed geometry, recipe, yield, throughput and price ranges are representative teaching assumptions or reported estimates, not disclosed production data. They illustrate a mechanism or a calculation; applying them to a named chip requires its process, configuration, date and measurement definition. The accompanying review identifies remaining evidence gaps.
+
 ## 1. MOSFET Operation Refresher
 
 ### 1.1 Inversion and threshold voltage
@@ -479,7 +482,7 @@ One paragraph, because none of these is on a foundry's product roadmap. **2D sem
 
 ### 8.1 Who introduced what, when
 
-This is a support timeline, not a mechanism section, and it is meant to be read by its rightmost column: each row is the year in which a new device ingredient first shipped in volume, and the three company columns show who moved first and who followed. Two patterns are worth carrying away. Intel led every device transition from strained silicon (2003) through HKMG (2007) and the FinFET (2011), with TSMC adopting HKMG and the FinFET roughly four years after Intel each time, and then lost the lead when its 10 nm node arrived years late; from N7 (2018) TSMC has held the lead on EUV-era density. Samsung has twice moved first on a new element, EUV in logic at 7LPP and gate-all-around at 3GAE, without converting either into a share lead, because being first with a device and being first with yield are different things. The cadence is the other pattern: a full node every two to three years, with the device change arriving on alternate nodes and the intervening entries (N3E, Intel 7, 5LPE) being refinements of the same device.
+This is a support timeline, not a mechanism section, and it is meant to be read by its rightmost column: each row is the year in which a new device ingredient first shipped in volume, and the three company columns show who moved first and who followed. Two patterns are worth carrying away. Intel introduced major device transitions including strained silicon (2003), HKMG (2007) and its tri-gate announcement (2011; Ivy Bridge products in 2012), with TSMC adopting HKMG and the FinFET roughly four years after Intel each time, and then lost the lead when its 10 nm node arrived years late; from N7 (2018) TSMC has held the lead on EUV-era density. Samsung has twice moved first on a new element, EUV in logic at 7LPP and gate-all-around at 3GAE, without converting either into a share lead, because being first with a device and being first with yield are different things. The cadence is the other pattern: a full node every two to three years, with the device change arriving on alternate nodes and the intervening entries (N3E, Intel 7, 5LPE) being refinements of the same device.
 
 | Year | TSMC | Intel | Samsung | Key device change |
 |---|---|---|---|---|
@@ -500,7 +503,7 @@ Reading the Key device change column: **eSiGe** is the embedded SiGe source/drai
 
 ### 8.2 The SRAM scaling stall
 
-The six-transistor (6T) **SRAM** bit cell (two cross-coupled inverters that hold one bit plus two pass transistors that read and write it; not to be confused with the 6-track cell of Section 2.1) is the densest structure on a logic chip and 30–40% of a GPU or CPU die. It scaled with logic until N5: TSMC's high-density cell went 0.027 µm² (N7) → 0.021 µm² (N5) → 0.0199 µm² (N3B) → **0.021 µm² again on N3E** (relaxed for yield and cost). N2 recovers to ~0.0175 µm² (38 Mb/mm²); Intel's 18A HD cell is 0.021 µm² (31.8 Mb/mm²). To see why it stalled you need to know what the six transistors do.
+The six-transistor (6T) **SRAM** bit cell (two cross-coupled inverters that hold one bit plus two pass transistors that read and write it; not to be confused with the 6-track cell of Section 2.1) is the densest structure on a logic chip and 30–40% of a GPU or CPU die. It scaled with logic until N5: TSMC's high-density cell went 0.027 µm² (N7) → 0.021 µm² (N5) → 0.0199 µm² (N3B) → **0.021 µm² again on N3E** (relaxed for yield and cost). TSMC's [published 2025 N2 SRAM demonstration](https://research.tsmc.com/page/memory/4.html) uses a 0.021 µm² high-density bit cell and achieves 38.1 Mb/mm² at macro level, a reported 1.1× improvement over the previous node. This is a specific cell and macro design, not a universal area for every N2 memory option. Other node comparisons above are reported cell options and must be matched for density, speed and operating voltage. Intel's reported 18A HD option is 0.021 µm²; its macro density is a separate metric. To see why it stalled you need to know what the six transistors do.
 
 **What the six transistors do.** Two inverters, each a PMOS **pull-up (PU)** and an NMOS **pull-down (PD)**, are cross-coupled: the output of each is the input of the other, so the pair has exactly two stable states (one internal node at V_DD, the other at 0) and holds either one for as long as the power is on, with no refresh; that is what "static" means. Two NMOS **pass gates (PG)** connect the two internal nodes to a pair of vertical wires, the **bit lines** (BL and its complement BLB), and their gates are driven by a horizontal **word line (WL)** shared by every cell in the row. Hold: WL low, pass gates off, the loop keeps itself. Read: both bit lines are pre-charged to V_DD, then WL goes high; the node storing 0 pulls its bit line down through its PG and PD in series while the other bit line stays high, and a **sense amplifier** at the foot of the column detects a difference of ~50–100 mV (~) between BL and BLB and amplifies it to a full logic level. Write: the bit line on the side to be forced to 0 is driven to ground with WL high; the PG on that side must overpower the PU holding the internal node at V_DD and drag it below the other inverter's switching point, after which the loop flips and finishes the job itself.
 
@@ -510,7 +513,7 @@ The six-transistor (6T) **SRAM** bit cell (two cross-coupled inverters that hold
 
 **Why it stopped scaling.** Three reasons, each visible in that layout. First, the HD cell already uses one fin (or one narrow sheet) for PU, PG and PD alike, a 1-1-1 configuration; there is no depopulation left to harvest, and with equal fin counts the beta ratio is 1, so the cell already leans on assists. Second, Pelgrom's rule: every shrink of the transistor raises the V_T spread, which the 6σ requirement turns directly into read and write failures; TSMC's step back from 0.0199 µm² (N3B) to 0.021 µm² (N3E) is this effect priced in yield. Third, the geometry has nothing to give: the cell height is 2 CPP and CPP is stuck near 45 nm (Section 2.2); the width is four active strips and two n-to-p spacings set by gate-cut and contact margins that scale slowly; and none of the DTCO tricks that carry logic (Section 8.3) apply, because an SRAM cell has no routing tracks to remove, no cell-to-cell isolation gate to shorten (the diffusion break of Section 8.3), and contacts that already sit as close as they can.
 
-> **Worked example: what a cache costs in silicon.** A 50 MB last-level cache is 400 Mb (8 bits per byte). N2's quoted 38 Mb/mm² is a **macro** density: a macro is a complete memory block, the cell array plus the row decoders and sense amplifiers that select a row and read its bits, and that periphery brings the figure to roughly two thirds of the raw bit-cell density of 1 / 0.0175 µm² ≈ 57 Mb/mm². At 38 Mb/mm² the cache is 400 / 38 ≈ 10.5 mm² of SRAM macros. On N5, with a 0.021 µm² cell and the same macro overhead, the macro density is ~31 Mb/mm² and the same cache takes ~13 mm² (~). Two node steps bought ~20% less SRAM area, while logic density over the same two steps rose ~1.7× (138 → ~230–250 MTr/mm²). Multiply by the 30–40% of a die that is SRAM and the whole-die gain per node is visibly smaller than the logic headline.
+> **Worked example: what a cache costs in silicon.** A decimal 50 MB cache holds 400 Mb. At the published 38.1 Mb/mm² macro density it occupies 400/38.1 ≈ 10.5 mm² before system integration overhead. The physical 0.021 µm² cell alone would allow 47.6 Mb/mm², so the macro reaches about 80% of that ideal cell-only density. Decoders, sensing and other support circuits occupy the rest. A 1.1× macro-density improvement means about 9.1% less area for the same bits, not 10% smaller cells. Never infer a physical bit-cell area by inverting macro density, or assume a logic-density gain applies equally to SRAM.
 
 Cache is therefore expensive silicon, which pushes AMD (**3D V-Cache**, a separate SRAM die bonded directly on top of the CPU die, Module 17) and others toward stacking SRAM made on an older node, and it is a big part of why "2× density per node" no longer means 2× chip capability.
 
@@ -547,7 +550,7 @@ None of these dimensions can be imaged optically; a 6 nm fin is roughly a hundre
 - Strained silicon (embedded SiGe for PMOS, tensile liners and Si:P for NMOS) raises mobility 20–50% by changing the carriers' effective mass; high-k HfO₂ (κ ~20) at ~1 nm EOT cut gate tunnelling > 10×.
 - Replacement metal gate exists because HfO₂ and work-function metals cannot survive the ~1,000 °C S/D anneal: a sacrificial polysilicon gate defines the device, is polished open, pulled out, and replaced by IL/HfO₂/TiN/TiAl/W, with V_T set by metal thickness and dipoles.
 - FinFETs turn the channel into a 6–8 nm wide, ~50 nm tall fin gated on three sides, fully depleted and nearly undoped (~0.06 dopant atoms per fin); width is quantized in fins, and fin depopulation (4 → 2 → 1.5 fins) drove cell-height scaling until it ran out.
-- Node names are marketing; the real metrics are CPP (~45–50 nm floor), metal pitch (23 nm), cell height (tracks × MP) and MTr/mm²; density gain per node fell from 2× to ~1.15×, and measured densities run 15–25% below claims.
+- Node names are marketing; the real metrics are CPP (~45–50 nm floor), metal pitch (23 nm), cell height (tracks × MP) and MTr/mm²; logic-library, SRAM-macro and whole-chip density gains differ; comparisons require a matched circuit mix.
 - Nanosheets stack 3–4 Si ribbons from a Si/SiGe superlattice; SiGe is a sacrificial scaffold, the inner spacer is the hardest step (5–8 nm lateral recess, equal for every sheet), and channel release needs > 100:1 selectivity without stiction.
 - The ~10–12 nm inter-sheet gap holds only ~2 nm of work-function metal per surface, so V_T tuning moved to dipole layers; Samsung shipped GAA first (2022), TSMC N2 and Intel 18A followed in 2025.
 - Contacts now rival the channel: a 15 × 30 nm contact at 10⁻⁹ Ω·cm² is ~220 Ω, reached by doping above 10²¹ cm⁻³ so electrons tunnel through the Schottky barrier and by a titanium silicide interface.
@@ -568,14 +571,14 @@ None of these dimensions can be imaged optically; a 6 nm fin is roughly a hundre
 | EOT of a 1.8 nm HfO₂ + 0.6 nm IL stack | ≈ 0.95 nm from 2.4 nm physical | Two thirds of the electrical thickness is the "unavoidable" interfacial layer |
 | End of Dennard scaling | ~2004–2005 (V_DD stuck near 1 V) | Why power density, not lithography, now limits chips |
 | Intel 45 nm HKMG | 2007; > 10× lower gate leakage | The first new material in the gate since the 1970s |
-| Intel 22 nm fin | 8 nm wide × 34 nm tall, 60 nm pitch (2011) | First production FinFET |
+| Intel 22 nm fin | 8 nm wide × 34 nm tall, 60 nm pitch (announced 2011; Ivy Bridge products 2012) | First widely shipped FinFET generation |
 | 5 nm class fin | ~6–7 nm wide × ~50 nm tall, 26–28 nm pitch | Effective width 2H + W ≈ 106 nm per fin |
 | Dopant atoms in a 7 × 50 × 16 nm fin | ~6 at 10¹⁸ cm⁻³; ~0.06 at 10¹⁶ cm⁻³ | Why fins are left undoped: no atoms to count, no random V_T scatter |
 | CPP: N16 → N7 → N5 → N3E → N2 | 90 → 57 → 51 → 48 → ~45 nm | Cell width; stuck near 45 nm by gate + spacers + contact |
 | Min metal pitch: N16 → N7 → N5 → N3E | 64 → 40 → 30 → 23 nm | Cell height via track count; needs EUV double patterning below 25 nm |
 | HD cell height, N7 / N5 / N3E / Intel 18A | 240 / 180 / ~150–170 / ~160 nm | The remaining density lever |
 | Density, N7 / N5 / N3E / N2 (HD, MTr/mm²) | ~91 / ~138–171 / ~200–215 / ~230–250 | Die size and cost per function (Module 20) |
-| Density gain per node, then vs now | 2× (N16→N10→N7) vs 1.15× (N3E→N2) | Why "a new node" no longer means "twice the transistors" |
+| Density gain per node, then vs now | Historical logic-library gains near 2×; TSMC N2 reports >1.15× chip density versus 3 nm | Why "a new node" no longer means "twice the transistors" |
 | NAND2 width, double vs single diffusion break | 4 CPP vs 3 CPP (25% less area); 6T → 5T with buried/backside rails | DTCO layout tricks, not pitch, now supply most of a node's density gain |
 | Contact resistance, 15 × 30 nm at 10⁻⁹ Ω·cm² | ≈ 220 Ω (2,200 Ω at 10⁻⁸) | Two contacts are ~10% of device resistance today; would halve drive at the old ρ_c |
 | Nanosheet geometry | 3 sheets (Intel has shown 4), 5–7 nm thick, 15–50 nm wide, ~10–13 nm spacing | Continuously tunable width within one cell height |
@@ -588,10 +591,10 @@ None of these dimensions can be imaged optically; a 6 nm fin is roughly a hundre
 | PowerVia (Intel, Blue Sky Creek) | 30% lower platform voltage droop, ~6% frequency, > 90% cell utilization | What backside power buys on a real design |
 | IR drop, illustrative | 1,300 A × 50 µΩ ≈ 65 mV ≈ 9% of 0.75 V (~) | Why a 1,000 W accelerator wants power from below |
 | TSMC A16 SPR vs N2P | 8–10% speed or 15–20% power, 7–10% density | The direct-to-S/D backside contact's payoff |
-| HD SRAM bit cell | N5 0.021 → N3B 0.0199 → N3E 0.021 → N2 ~0.0175 µm²; Intel 18A 0.021 µm² | SRAM stalled while logic kept shrinking |
-| 50 MB cache area | ≈ 10.5 mm² on N2 (38 Mb/mm²) vs ~13 mm² on N5 (~) | ~20% SRAM gain over two nodes vs ~1.7× for logic |
+| HD SRAM bit cell | TSMC 2025 N2 demonstration: 0.021 µm² HD cell, 38.1 Mb/mm² macro; other cell options differ | SRAM stalled while logic kept shrinking |
+| 50 MB cache area | ≈ 10.5 mm² at 38.1 Mb/mm²; published macro gain 1.1× versus previous node | Macro area and physical bit-cell area are different quantities |
 | H100 effective density | 80 B tr / 814 mm² ≈ 98 MTr/mm² (~70% of N5-class peak) | Real dies achieve 50–70% of library peak |
-| N2 wafer price (reported) | ~$30,000 vs ~$20,000 for N3 | A 1.15× density gain against a ~1.5× price rise |
+| N2 wafer price (reported) | ~$30,000 vs ~$20,000 for N3 | Illustrative price ratio; use product-specific density and yield |
 
 ## Key Players
 
@@ -622,7 +625,7 @@ None of these dimensions can be imaged optically; a 6 nm fin is roughly a hundre
 - **"FinFETs and nanosheets are faster because they are smaller."** → They are better because the gate controls the channel from more sides (smaller scale length λ), which reduces leakage and allows shorter gates at the same I_off. At the same gate length a planar device may even have higher drive per unit of footprint; the win is electrostatic.
 - **"The gate is deposited when the transistor is built."** → In every leading-edge process since 2007 the gate you see in the final chip is the second gate; the first (polysilicon) is a sacrificial placeholder removed after the source/drain anneal (replacement metal gate).
 - **"Strain was a planar-era trick that FinFETs and nanosheets no longer need."** → Embedded SiGe:B source/drain is still the main PMOS drive lever at every node, and nanosheet processes are re-engineering strain through the channel itself because the shrinking S/D volume at 45 nm CPP pushes less hard on the channel.
-- **"Transistor density doubles every node, so a new GPU has twice the transistors."** → N3E → N2 is ~1.15× for logic and ~1.2× for SRAM at best; real dies achieve 50–70% of library peak; and SRAM stalled at ~0.021 µm² from N5 through N3E.
+- **"Transistor density doubles every node, so a new GPU has twice the transistors."** → TSMC reports >1.15× chip density for its N2 platform, while its 2025 SRAM demonstration reports 1.1× macro-density improvement. Neither is a universal logic-library ratio; real die density also depends on SRAM, interfaces and unused routing area.
 - **"Backside power is just moving wires to the back."** → It requires wafer-to-wafer bonding, thinning the device wafer to a few hundred nanometres, nano-TSVs or backside contacts landed with ~10 nm overlay to features on the other side, and a whole new backside litho/metal module; and it makes heat removal harder.
 - **"GAA is a small tweak to FinFET."** → It adds a Si/SiGe superlattice starting material, inner spacers, and a channel-release etch, three of the hardest steps in the flow, and forces V_T tuning to switch from metal thickness to dipoles because the ~10 nm inter-sheet gap cannot hold the old stack.
 
@@ -644,3 +647,5 @@ This module consumes everything Part II has built so far: the epitaxial 300 mm w
 - TechInsights blog, "TSMC Reveals 3nm Process Details" (2023), and WikiChip Fuse node analyses (TSMC N7/N5/N3, Intel 10/7/4).
 - SemiAnalysis, "Clash of the Foundries: Gate All Around + Backside Power at 2nm" (October 2024), and imec's annual logic technology roadmap presentations (ITF World).
 - Asianometry (YouTube), "The Gate-All-Around Transistor" and "Backside Power Delivery" episodes, for visual walk-throughs of the flows.
+
+- TSMC, [N2 platform disclosure](https://research.tsmc.com/page/transistor-structure/59.html): >1.15× chip density is distinct from logic-only library density.

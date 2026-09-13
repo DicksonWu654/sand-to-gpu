@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-13T22:09:02.769Z",
+  "widgets": 46,
+  "modules": 22,
+  "surveys": 10,
+  "checks": [
+    "46 widget registrations",
+    "Theme toggles and persists",
+    "Deep module and heading route",
+    "Survey route switches sidebar track",
+    "Quiz answers, saved pass and retry",
+    "Mobile curriculum navigation",
+    "Mobile search readable and keyboard navigable",
+    "Dense diagram keyboard scrolling"
+  ],
+  "errors": []
+}

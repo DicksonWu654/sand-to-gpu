@@ -127,7 +127,7 @@ t ∝ C · η<sup>a</sup> / ω<sup>b</sup>, with a ≈ 0.4–0.6 and b ≈ 0.5,
 
 where C is the solids concentration, η the viscosity and ω the spin speed. Thickness therefore goes as roughly 1/√(rpm): doubling spin speed reduces thickness by ~30%. The fab picks a speed near the middle of the vendor's "spin curve", where the slope is shallow, so that a 1% rpm error gives < 0.5% thickness error. Modern tracks hold thickness uniformity to ~1 nm 3σ across a 300 mm wafer for a 100 nm film.
 
-> **Worked example: reading a spin curve.** A resist that gives 100 nm at 2,000 rpm gives 100 × √(2,000/3,000) ≈ 82 nm at 3,000 rpm. Because thickness goes as the −½ power of speed, a 1% speed error moves thickness by ~0.5%, i.e. 0.5 nm on a 100 nm film, which is why spin motors are controlled to a fraction of a percent. The cost side is just as simple: the more expensive resists are dispensed at ~0.5–1.5 mL per wafer, and at $1,000–3,000 per litre for ArF immersion resist that is ~$1–3 of resist per wafer per layer (EUV resist several times more), so a fab running 80 layers spends more on resist than the number suggests, and every reduced-volume nozzle pays for itself.
+> **Worked example: reading a spin curve.** A resist that gives 100 nm at 2,000 rpm gives 100 × √(2,000/3,000) ≈ 82 nm at 3,000 rpm. Because thickness goes as the −½ power of speed, a 1% speed error moves thickness by ~0.5%, i.e. 0.5 nm on a 100 nm film, which is why spin motors are controlled to a fraction of a percent. The cost side is just as simple: the more expensive resists are dispensed at ~0.5–1.5 mL per wafer, and at $1,000–3,000 per litre for ArF immersion resist the full endpoint range is ~$0.50–4.50 of resist per wafer per layer (a representative purchase/dispense combination can fall around $1–3) (EUV resist several times more), so a fab running 80 layers spends more on resist than the number suggests, and every reduced-volume nozzle pays for itself.
 
 Two practical details. **Dynamic dispense** (while the wafer turns slowly at ~500 rpm) in closed **solvent-saturated cups** keeps the film from skinning over before it is uniform. And surface tension piles fluid up at the wafer edge into the edge bead, up to several micrometers tall, which would flake during handling, so an **edge bead removal (EBR)** nozzle dissolves the outer 1–2 mm (the edge exclusion is ~1.5–2 mm); the backside gets a rinse too, because any resist there becomes a particle that lifts the wafer on the scanner **chuck** (the flat plate on the stage that holds the wafer down, by vacuum, during exposure) and destroys focus.
 
@@ -458,7 +458,7 @@ Photoresist itself is a Japanese-dominated market (JSR, now owned by the Japan I
 | Reticle | 152 × 152 × 6.35 mm quartz, 4× reduction, 26 × 33 mm wafer field | 4× relaxes mask tolerances, but MEEF of 2–4 takes much of that back |
 | Exposure slit | ~26 mm × 6–8 mm, wafer scan speed up to ~800 mm/s | Scanning lets the lens be perfect over a slit, not a field; ~0.1 s per field |
 | Scanner throughput | ~275–295 wph (NXT:2050i / NXT:2100i); ≥310 wph (NXT:2150i) | ~12 s per wafer; sets fab capacity and the track's takt time |
-| Matched-machine overlay spec | ≤1.3 nm (NXT:2100i), ≤1.0 nm (NXT:2150i); on-product ~1.5–3 nm | Overlay is ~20–25% of minimum pitch; the largest term in the EPE budget |
+| Matched-machine overlay spec | ≤1.3 nm (NXT:2100i), ≤1.0 nm (NXT:2150i); on-product ~1.5–3 nm | A few nanometres of overlay consume a substantial part of the edge-placement-error budget |
 | EPE budget at 40 nm pitch | ~10 nm per side; overlay 2.5 + CD/2 1.5 + LER 2 ≈ 3.5 nm (quadrature), ~6 nm worst case | Whether a via lands on its line; why cut layers went to EUV first |
 | ArF immersion scanner price | ~$60–80M (NXT:2100i-class, trade-press estimate) | ~$7 per wafer-pass in depreciation; the basis of the DUV-versus-EUV cost comparison |
 | ArF CAR dose / i-line DNQ dose | 20–40 mJ/cm² / 100–300 mJ/cm² | Chemical amplification is what makes 193 nm throughput possible |
@@ -468,7 +468,7 @@ Photoresist itself is a Japanese-dominated market (JSR, now owned by the Japan I
 | LER / LWR (193i) | ~3–5 nm 3σ | Becomes threshold-voltage and resistance variation downstream |
 | Capillary pressure during rinse | ~3.6 MPa (~36 atm) across a 40 nm gap | Limits resist aspect ratio to ~2.5, hence ~100 nm films |
 | Spin coat speed / thickness scaling | 1,500–4,000 rpm; t ∝ 1/√rpm | A 1% speed error is ~0.5 nm on a 100 nm film |
-| Resist cost per wafer | ~0.5–1.5 mL at $1,000–3,000/L ≈ $1–3 per layer | Multiplied by ~80 layers and millions of wafers; why nozzles are reduced-volume |
+| Resist cost per wafer | ~0.5–1.5 mL at $1,000–3,000/L gives $0.50–4.50 per layer across all endpoints | Multiplied by ~80 layers and millions of wafers; why nozzles are reduced-volume |
 | SADP / SAQP pitch division | 80 → 40 nm / 80 → 20 nm; N7-class fins ~30–34 nm pitch via SAQP | How DUV reached 7 nm-class nodes, at 40+ steps per layer |
 | EUV layers per node | N5 up to 14, N3 ~20–25, N2 ~20–25+; total masks ~70 (N5, analyst reconstruction) versus ~78 (N7), ~80 (N3, N2) | EUV took the tightest layers only; most of the mask set is still DUV/i-line |
 | ASML share of litho market | ~90% by revenue; 100% of EUV (trade-press estimate) | A single supplier for the fab's largest capital line |

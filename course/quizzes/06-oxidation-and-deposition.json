@@ -49,7 +49,7 @@
       "q": "In TMA/H2O ALD of Al2O3, the growth per cycle is about 0.1 nm while a monolayer of Al2O3 is about 0.3 nm. What explains the difference, and what does it imply about thickness control?",
       "options": [
         "The purge steps remove about two-thirds of the film each cycle; thickness must be corrected empirically",
-        "Bulky methyl ligands on adsorbed TMA sterically block neighboring OH sites, so each self-limiting cycle deposits only about one-third of a monolayer; thickness is still exactly N cycles times the GPC",
+        "Bulky methyl ligands on adsorbed TMA sterically block neighboring OH sites, so each self-limiting cycle deposits only about one-third of a monolayer; thickness is approximately N cycles times a calibrated steady-state GPC after nucleation",
         "Water desorbs part of the aluminum as volatile hydroxide; thicker films need higher water doses",
         "Only one-third of the wafer surface is hydroxylated at any time; increasing TMA dose increases growth per cycle proportionally"
       ],

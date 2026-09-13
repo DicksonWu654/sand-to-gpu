@@ -57,7 +57,7 @@
       "explanation": "Escape routing is limited by traces per channel between via pads: (gap - space)/(line + space). At 10/10 um that is ~3; at 2/2 um it is ~20, so the whole die could escape on one signal layer."
     },
     {
-      "q": "A BGA rated MSL 3 is left out of its dry-pack on a factory floor for a week and then reflowed at 260 C. What is the likely failure and its physical cause?",
+      "q": "An MSL 3 package has exceeded its allowed 168-hour floor life at the specified temperature and humidity and is reflowed without the required moisture handling. What failure risk increases, and why?",
       "options": [
         "Solder balls fail to wet because the ENIG finish oxidizes after 168 hours",
         "Wire bonds fatigue because the mold compound softens above its Tg",
@@ -65,7 +65,7 @@
         "Tin whiskers grow from the balls because of the extended exposure"
       ],
       "answer": 2,
-      "explanation": "MSL 3 floor life is 168 hours at 30 C/60% RH; beyond that the part must be baked (125 C, 24 h). Water's vapor pressure at 260 C is ~4.7 MPa, enough to delaminate die attach, mold, or underfill interfaces."
+      "explanation": "MSL 3 floor life is 168 hours at 30 C/60% RH; beyond that the part must be baked (125 C, 24 h). Water's vapor pressure at 260 C is ~4.7 MPa, enough to delaminate die attach, mold, or underfill interfaces. Exactly one week within the specified conditions is the rated limit, not proof of failure. Baking requirements depend on the package, exposure and applicable handling instructions."
     },
     {
       "q": "A 30 x 27 mm die (8.1 cm^2) dissipates 700 W under a lid. Using R = t/(k*A), which layer of the thermal stack costs the most temperature rise, and roughly how much is recovered by switching from a 100 um polymer TIM (k ~5 W/m*K) to a 100 um indium solder TIM (k ~80 W/m*K)?",
@@ -77,6 +77,17 @@
       ],
       "answer": 1,
       "explanation": "R = t/(k*A): silicon 5e-4/(150 x 8.1e-4) = 4.1 mK/W (2.9 C at 700 W); polymer TIM 1e-4/(5 x 8.1e-4) = 25 mK/W (17 C); indium 1e-4/(80 x 8.1e-4) = 1.5 mK/W (1.1 C). The 100 um TIM is the hottest layer in the stack, which is why high-power parts use solder TIM or go lidless with a cold plate on the die."
+    },
+    {
+      "q": "An ABF substrate has an illustrative independent 98% yield for each of 18 build-up stages. Why can eliminating unnecessary stages improve total yield even if the surviving stages do not change?",
+      "options": [
+        "The stage yields multiply: 0.98^18 is about 70%, while 0.98^12 is about 78%",
+        "Yield is always 98% because only the final stage counts",
+        "Six fewer stages guarantees a 6% increase in every package lifetime",
+        "Removing stages automatically doubles routing density"
+      ],
+      "answer": 0,
+      "explanation": "Under this simplified independent-stage model each added stage is another opportunity for loss. Real defects may correlate, and removing layers must preserve routing, power and reliability requirements."
     }
   ]
 }

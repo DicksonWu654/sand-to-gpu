@@ -66,6 +66,28 @@
       ],
       "answer": 2,
       "explanation": "An isotropic etch proceeds sideways under the mask by the same distance it goes down, so a 20 nm film adds ~20 nm of undercut on each side: 20 + 2 × 20 = 60 nm. This geometric limit is why patterning moved to directional plasma etch while wet etch survives for blanket strips and deliberate undercuts like nanosheet release."
+    },
+    {
+      "q": "A 20 nm protected line sits over a 20 nm film. In the simple isotropic model, what happens as the film is etched through?",
+      "options": [
+        "The protected line becomes a 60 nm gate",
+        "Lateral undercut can meet beneath the line and destroy it",
+        "The mask grows 20 nm thicker",
+        "Only the vertical dimension changes"
+      ],
+      "answer": 1,
+      "explanation": "An opening widens; a protected line narrows. With about 20 nm lateral reach from each side, a 20 nm line cannot survive in this idealized geometry."
+    },
+    {
+      "q": "An etch removes 100 nm of target film at a target-to-mask selectivity of 20:1. What nominal mask thickness does that consume?",
+      "options": [
+        "0.2 nm",
+        "5 nm",
+        "20 nm",
+        "2,000 nm"
+      ],
+      "answer": 1,
+      "explanation": "100/20 = 5 nm. The starting mask must additionally cover nonuniformity, over-etch and corner erosion."
     }
   ]
 }

@@ -79,7 +79,7 @@
       "explanation": "The wander distance scales as the square root of D, so moving 32x further (50 nm / 1.6 nm) needs about 32^2 = 1,000x the diffusivity. That is the interstitial supersaturation of 1e3-1e4 created when the implant's excess interstitials, stored in {311} defects, dissolve over minutes at 700-950 C."
     },
     {
-      "q": "A four-point probe on the monitor wafer from a 5e14 cm^-2 arsenic source/drain implant reads V/I = 61.8 ohm after the spike anneal. Full activation at ~1e20 cm^-3 (mobility ~90 cm^2/V.s) would give ~140 ohm/sq. What does the reading tell the process engineer?",
+      "q": "A four-point probe on the monitor wafer from a 5e14 cm^-2 arsenic source/drain implant reads V/I = 61.8 ohm after the spike anneal. Full activation at ~1e20 cm^-3 (mobility ~90 cm^2/V.s) would give ~140 ohm/sq. What does the reading tell the process engineer? For this diagnostic estimate, assume the carrier mobility and profile shape match the reference.",
       "options": [
         "R_s = 4.532 x 61.8 = 280 ohm/sq, i.e. only ~50 % of the dose is active; suspect a cold anneal or dopant clustering",
         "R_s = 61.8 ohm/sq, so the implant was over-dosed by about 2x",
@@ -87,7 +87,7 @@
         "The probe cannot read arsenic layers; a SIMS profile is required"
       ],
       "answer": 0,
-      "explanation": "Sheet resistance is R_s = (pi/ln 2) x V/I = 4.532 x 61.8 = 280 ohm/sq, twice the fully activated value. Since R_s = 1/(q x Q_active x mobility), twice the resistance means half the active dose (about 50 % activation); if the pre-anneal ThermaProbe reading was normal, the implanter delivered the dose and the anneal is the suspect."
+      "explanation": "Sheet resistance is R_s = (pi/ln 2) x V/I = 4.532 x 61.8 = 280 ohm/sq, twice the fully activated value. Since R_s = 1/(q x Q_active x mobility), twice the resistance means half the active dose (about 50 % activation); if the pre-anneal ThermaProbe reading was normal, the implanter delivered the dose and the anneal is the suspect. In production, mobility and profile changes can also change sheet resistance, so this measurement alone does not uniquely determine activation."
     }
   ]
 }

@@ -1,0 +1,142 @@
+{
+  "id": "glossary-flashcards",
+  "errors": [],
+  "results": [
+    {
+      "width": 760,
+      "theme": "dark",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/glossary-flashcards-760-dark-initial.png",
+        "qa/shots/sweep/glossary-flashcards-760-dark-interaction.png"
+      ],
+      "controls": 4,
+      "controlValuesExercised": 51,
+      "buttonsClicked": 5,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1089,
+        "boxWidth": 724
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1088,
+        "boxWidth": 724
+      }
+    },
+    {
+      "width": 760,
+      "theme": "light",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/glossary-flashcards-760-light-initial.png",
+        "qa/shots/sweep/glossary-flashcards-760-light-interaction.png"
+      ],
+      "controls": 4,
+      "controlValuesExercised": 51,
+      "buttonsClicked": 5,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1089,
+        "boxWidth": 724
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1088,
+        "boxWidth": 724
+      }
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/glossary-flashcards-360-dark-initial.png",
+        "qa/shots/sweep/glossary-flashcards-360-dark-interaction.png"
+      ],
+      "controls": 4,
+      "controlValuesExercised": 51,
+      "buttonsClicked": 5,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1593,
+        "boxWidth": 324
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1567,
+        "boxWidth": 324
+      }
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/glossary-flashcards-360-light-initial.png",
+        "qa/shots/sweep/glossary-flashcards-360-light-interaction.png"
+      ],
+      "controls": 4,
+      "controlValuesExercised": 51,
+      "buttonsClicked": 5,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1593,
+        "boxWidth": 324
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1567,
+        "boxWidth": 324
+      }
+    }
+  ]
+}

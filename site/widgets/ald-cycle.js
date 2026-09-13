@@ -73,7 +73,7 @@
           { name: 'H2O pulse', short: 'H2O pulse', color: COL.h2o,
             cap: `Each H2O molecule swaps one ${f.lig} ligand (a group hanging off the ${f.metal} atom) for –OH and releases another ${f.by}. The surface is hydroxylated again: one ${f.metal}–O layer, ~${f.gpc.toFixed(2)} nm or about a third of a monolayer, has been added.` },
           { name: 'Purge (after H2O)', short: 'N2 purge', color: COL.n2,
-            cap: `N2 removes the excess H2O and ${f.by}. One cycle is complete: a stripe is added to the film and the fresh –OH surface is ready for the next ${f.pre} pulse. Thickness is simply cycles × GPC, whatever the dose or feature shape.` },
+            cap: `N2 removes the excess H2O and ${f.by}. One cycle is complete: a stripe is added to the film and the fresh –OH surface is ready for the next ${f.pre} pulse. Thickness ≈ cycles × calibrated GPC once growth is steady and both half-reactions saturate. Deep features can need longer exposure.` },
         ];
       }
 

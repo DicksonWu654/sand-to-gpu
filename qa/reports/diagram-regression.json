@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-09-13T21:51:00.244Z",
+  "results": [
+    {
+      "id": "cowos-flow",
+      "theme": "dark",
+      "themeState": {
+        "actual": "dark",
+        "scheme": "dark",
+        "background": "rgb(14, 19, 27)"
+      },
+      "mutations": 66,
+      "maxRegions": 1,
+      "maxHints": 1,
+      "failures": []
+    },
+    {
+      "id": "rayleigh",
+      "theme": "dark",
+      "themeState": {
+        "actual": "dark",
+        "scheme": "dark",
+        "background": "rgb(14, 19, 27)"
+      },
+      "mutations": 30,
+      "maxRegions": 2,
+      "maxHints": 2,
+      "failures": []
+    },
+    {
+      "id": "scale-ladder",
+      "theme": "dark",
+      "themeState": {
+        "actual": "dark",
+        "scheme": "dark",
+        "background": "rgb(14, 19, 27)"
+      },
+      "mutations": 186,
+      "maxRegions": 2,
+      "maxHints": 2,
+      "failures": []
+    },
+    {
+      "id": "moores-law",
+      "theme": "dark",
+      "themeState": {
+        "actual": "dark",
+        "scheme": "dark",
+        "background": "rgb(14, 19, 27)"
+      },
+      "mutations": 15,
+      "maxRegions": 1,
+      "maxHints": 1,
+      "failures": []
+    },
+    {
+      "id": "cowos-flow",
+      "theme": "light",
+      "themeState": {
+        "actual": "light",
+        "scheme": "light",
+        "background": "rgb(243, 245, 248)"
+      },
+      "mutations": 66,
+      "maxRegions": 1,
+      "maxHints": 1,
+      "failures": []
+    },
+    {
+      "id": "rayleigh",
+      "theme": "light",
+      "themeState": {
+        "actual": "light",
+        "scheme": "light",
+        "background": "rgb(243, 245, 248)"
+      },
+      "mutations": 30,
+      "maxRegions": 2,
+      "maxHints": 2,
+      "failures": []
+    },
+    {
+      "id": "scale-ladder",
+      "theme": "light",
+      "themeState": {
+        "actual": "light",
+        "scheme": "light",
+        "background": "rgb(243, 245, 248)"
+      },
+      "mutations": 186,
+      "maxRegions": 2,
+      "maxHints": 2,
+      "failures": []
+    },
+    {
+      "id": "moores-law",
+      "theme": "light",
+      "themeState": {
+        "actual": "light",
+        "scheme": "light",
+        "background": "rgb(243, 245, 248)"
+      },
+      "mutations": 15,
+      "maxRegions": 1,
+      "maxHints": 1,
+      "failures": []
+    }
+  ],
+  "errors": []
+}

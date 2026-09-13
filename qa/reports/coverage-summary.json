@@ -1,0 +1,380 @@
+{
+  "generated": "2026-09-13T21:45:54.566Z",
+  "provenance": [
+    {
+      "file": "widgets-sweep.json",
+      "timestamp": "2026-09-13T21:15:18.227Z",
+      "completedWidgets": 44,
+      "incomplete": [
+        {
+          "id": "amhs-sim",
+          "error": "Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed."
+        },
+        {
+          "id": "ald-cycle",
+          "error": "Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed."
+        }
+      ]
+    },
+    {
+      "file": "widgets-targeted.json",
+      "timestamp": "2026-09-13T21:19:44.714Z",
+      "completedWidgets": 4,
+      "purpose": "Serial reruns of ALD/AMHS protocol timeouts and changed damascene/GPU-BOM copy; these replace earlier rows for those four IDs."
+    }
+  ],
+  "widgets": [
+    {
+      "id": "ald-cycle",
+      "source": "widgets-targeted.json",
+      "cases": 4,
+      "controlValues": 56,
+      "buttonClicks": 24
+    },
+    {
+      "id": "amhs-sim",
+      "source": "widgets-targeted.json",
+      "cases": 4,
+      "controlValues": 16,
+      "buttonClicks": 8
+    },
+    {
+      "id": "bragg-mirror",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 48,
+      "buttonClicks": 28
+    },
+    {
+      "id": "chain-map",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 0,
+      "buttonClicks": 34
+    },
+    {
+      "id": "cmp-planarize",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 40,
+      "buttonClicks": 4
+    },
+    {
+      "id": "cowos-flow",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 40,
+      "buttonClicks": 52
+    },
+    {
+      "id": "cz-puller",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 24,
+      "buttonClicks": 24
+    },
+    {
+      "id": "damascene",
+      "source": "widgets-targeted.json",
+      "cases": 4,
+      "controlValues": 8,
+      "buttonClicks": 52
+    },
+    {
+      "id": "deal-grove",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 40,
+      "buttonClicks": 0
+    },
+    {
+      "id": "dram-cell",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 24,
+      "buttonClicks": 20
+    },
+    {
+      "id": "etch-profile",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 32,
+      "buttonClicks": 24
+    },
+    {
+      "id": "euv-source",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 16,
+      "buttonClicks": 8
+    },
+    {
+      "id": "euv-stochastics",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 32,
+      "buttonClicks": 12
+    },
+    {
+      "id": "export-timeline",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 152,
+      "buttonClicks": 8
+    },
+    {
+      "id": "fab-anatomy",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 16,
+      "buttonClicks": 4
+    },
+    {
+      "id": "fab-flow",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 8,
+      "buttonClicks": 244
+    },
+    {
+      "id": "geo-share",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 0,
+      "buttonClicks": 32
+    },
+    {
+      "id": "glossary-flashcards",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 204,
+      "buttonClicks": 20
+    },
+    {
+      "id": "gpu-bom",
+      "source": "widgets-targeted.json",
+      "cases": 4,
+      "controlValues": 112,
+      "buttonClicks": 8
+    },
+    {
+      "id": "hbm-stack",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 68,
+      "buttonClicks": 0
+    },
+    {
+      "id": "heat-path",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 40,
+      "buttonClicks": 16
+    },
+    {
+      "id": "hybrid-bond",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 52,
+      "buttonClicks": 24
+    },
+    {
+      "id": "implant-profile",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 64,
+      "buttonClicks": 12
+    },
+    {
+      "id": "implanter-beamline",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 60,
+      "buttonClicks": 8
+    },
+    {
+      "id": "litho-track",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 32,
+      "buttonClicks": 48
+    },
+    {
+      "id": "moores-law",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 20,
+      "buttonClicks": 8
+    },
+    {
+      "id": "mosfet-iv",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 56,
+      "buttonClicks": 8
+    },
+    {
+      "id": "nand-3d-build",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 44,
+      "buttonClicks": 56
+    },
+    {
+      "id": "node-table",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 72,
+      "buttonClicks": 0
+    },
+    {
+      "id": "nvlink-topology",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 600,
+      "buttonClicks": 8
+    },
+    {
+      "id": "package-xsection",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 40,
+      "buttonClicks": 64
+    },
+    {
+      "id": "plasma-reactor",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 24,
+      "buttonClicks": 12
+    },
+    {
+      "id": "purity",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 8,
+      "buttonClicks": 0
+    },
+    {
+      "id": "rack-explorer",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 24,
+      "buttonClicks": 24
+    },
+    {
+      "id": "rayleigh",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 40,
+      "buttonClicks": 0
+    },
+    {
+      "id": "resist-chemistry",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 32,
+      "buttonClicks": 16
+    },
+    {
+      "id": "sadp",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 16,
+      "buttonClicks": 8
+    },
+    {
+      "id": "scale-ladder",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 248,
+      "buttonClicks": 0
+    },
+    {
+      "id": "test-cost",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 80,
+      "buttonClicks": 0
+    },
+    {
+      "id": "transistor-evolution",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 16,
+      "buttonClicks": 12
+    },
+    {
+      "id": "upw-mask-cost",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 68,
+      "buttonClicks": 4
+    },
+    {
+      "id": "wafer-price",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 48,
+      "buttonClicks": 4
+    },
+    {
+      "id": "wafer-slicing",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 24,
+      "buttonClicks": 4
+    },
+    {
+      "id": "wafer-sort-sim",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 48,
+      "buttonClicks": 20
+    },
+    {
+      "id": "yield-calculator",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 76,
+      "buttonClicks": 20
+    },
+    {
+      "id": "yield-cascade",
+      "source": "widgets-sweep.json",
+      "cases": 4,
+      "controlValues": 88,
+      "buttonClicks": 0
+    }
+  ],
+  "totals": {
+    "widgets": 46,
+    "cases": 184,
+    "controlValues": 2856,
+    "buttonClicks": 982,
+    "failures": 0
+  },
+  "failures": [],
+  "limits": [
+    "Combines distinct completed runs; not a claim that the original full run passed without retries.",
+    "Per-widget initial and interaction screenshots are generated evidence, not proof every screenshot was manually inspected.",
+    "Control extrema and selectable options were exercised individually; this does not enumerate every combination or prove physical model accuracy.",
+    "Widget test viewport widths were800/400px; requested card targets760/360px; recorded article content box widths724/324px.",
+    "Animation inspection is sampled, not exhaustive temporal verification."
+  ],
+  "postSweepChecks": [
+    {
+      "file": "diagram-regression.json",
+      "scope": "Four SVG-redrawing widgets, both computed themes, narrow viewport",
+      "cases": 8,
+      "mutations": 594,
+      "failures": 0
+    },
+    {
+      "file": "copy-smoke.json",
+      "scope": "A100/GV100 selected point copy, node true-scale illustration, ALD final-purge caption, dark/light narrow rendering",
+      "states": 8,
+      "failures": 0
+    }
+  ]
+}

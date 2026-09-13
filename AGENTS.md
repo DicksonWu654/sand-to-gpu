@@ -7,3 +7,10 @@
 - Keep builds reproducible: install dependencies with `npm ci`, rebuild course content with `node build.js`, and follow `qa/WIDGET_QA_STANDARD.md` for affected widgets. Record actual validation and unresolved limitations.
 - Keep secrets, credentials, private keys, `node_modules`, and generated screenshots out of Git. Inspect staged changes before committing.
 - Use the user’s configured identity and GPG key to sign commits. Commit and push completed changes to the private GitHub repository; keep the repository private unless explicitly instructed otherwise.
+
+## Lessons from the continuation
+
+- Page QA must assert the rendered theme, not just the requested theme or localStorage value. Hash navigation can retain the current document and its startup state.
+- Some widgets replace their SVG repeatedly. Responsive wrappers must be reused or pruned, including hints and focus regions; test repeated state changes and cleanup.
+- Treat `UNVERIFIABLE` and `UNRESOLVED` consistently in review summaries. A primary-source link can establish a limitation without confirming the whole claim. Keep calculations conditional on their stated inputs.
+- See `CONTINUATION_2026-09-13.md` and the current QA reports before treating the original `HANDOFF.md` as current state.

@@ -30,7 +30,7 @@
   ];
   const EPS = 11.7 / 3.9, T_OX = 0.9, T_SHEET = 5.5, FIN_W = 7, FIN_H = 50, T_DEP = 30;
   const lambda = a => a.id === 'planar' ? Math.sqrt(EPS * T_OX * T_DEP) : a.id === 'finfet' ? Math.sqrt(EPS / 2 * FIN_W * T_OX) : Math.sqrt(EPS / 4 * T_SHEET * T_OX);
-  const VW = 340, VH = 290, FS = 14, LH = 16;
+  const VW = 420, VH = 330, FS = 14, LH = 16;
   const SI = 'var(--si)', G = 'var(--accent2)', HK = 'var(--accent)', NSD = 'var(--ok)', PSD = 'var(--warn)', DIEL = 'var(--line2)', CU = 'var(--cu)', INK = 'var(--ink)';
 
   window.registerWidget('transistor-evolution', {
@@ -167,9 +167,9 @@
           box(g, 0, XL, 16, T, 0, ZD, DIEL, { hatch: true });
           // labels written along the front faces
           const f = (y, s) => { const [x, yy] = P(6, y, ZD); text(g, x, yy, s, { rot }); };
-          f(20.5, 'STI (shallow-trench isolation) oxide');
+          const sti = P(18, 20.5, ZD); place(g, sti[0], sti[1], 10, 282, 'STI: shallow-trench isolation oxide');
           if (bspr) { f(5, 'backside Cu power rail'); text(g, P(6, 12.5, ZD)[0], P(6, 12.5, ZD)[1], 'thinned Si', { rot, fs: 12.5 }); }
-          else f(6, a.id === 'planar' ? 'p-type Si substrate' : 'Si substrate');
+          else { const sub = P(60, 6, ZD); place(g, sub[0], sub[1], 10, 303, a.id === 'planar' ? 'p-type Si substrate' : 'Si substrate'); }
           if (bspr) {
             // nano-TSV pillar shown in section on the front face, plus a strap to the source epi
             poly(g, [[4, 11, ZD], [14, 11, ZD], [14, T + 3, ZD], [4, T + 3, ZD]], { fill: CU, stroke: 'var(--panel)', 'stroke-width': .7 });
@@ -238,9 +238,9 @@
           else sheets.forEach(s => addDots(g, 2, s[1] + 1.5, hw, SX1, DX0, [GX0 - 4, XCUT], s[2]));
           // labels
           const gt = P(52, GT, 36); text(g, gt[0], gt[1] + 5, cf ? 'shared gate' : 'gate', { anchor: 'middle' });
-          const sp = P(GX0 - 2, GT, GZ0 + 4); place(g, sp[0], sp[1], sp[0] - 10, sp[1] - 26, 'gate spacer', { anchor: 'end' });
+          const sp = P(GX0 - 2, GT, GZ0 + 4); place(g, sp[0], sp[1], 12, 34, 'gate spacer', { anchor: 'start' });
           const se = fin ? P(11, T + FH + 4, ZC) : P(11, cf ? T + 66 : T + 40, ZC);
-          place(g, se[0], se[1], se[0] - 2, se[1] - 30, cf ? 'nFET source' : 'source epi', { anchor: 'middle' });
+          place(g, se[0], se[1], 12, 58, cf ? 'nFET source' : 'source epi', { anchor: 'start' });
           if (cf) { const pe = P(6, T + 15, ZC + hw + 6); place(g, pe[0], pe[1], pe[0] - 14, pe[1] + 42, 'pFET source', { anchor: 'middle' }); }
           const yTop = fin ? T + FH : sheets[sheets.length - 1][1];
           col.push({ x: P(XCUT, yTop - 4, ZC + hw)[0], y: P(XCUT, yTop - 4, ZC + hw)[1], t: fin ? 'gate wraps 3 sides' : 'gate wraps all 4 sides' });
@@ -255,7 +255,7 @@
         }
         tsvLabel();
         column(g, col, colX, max, 14, VH - 30);
-        text(g, 6, VH - 6, 'drain half of the gate cut away (dashed) · not to scale', { fill: 'var(--muted)' });
+        text(g, 6, VH - 6, 'Dashed: removed gate half. Not to scale.', { fill: 'var(--muted)' });
         return g;
       }
 
@@ -271,7 +271,7 @@
         g.append(svg('rect', { x: 14, y: 70, width: 16, height: 100, fill: 'none', stroke: 'var(--muted)' }));
         anim.bar = R(15, 169, 14, 0, HK);
         text(g, 22, 60, 'V_G', { anchor: 'middle', mono: true, fill: 'var(--muted)', halo: false });
-        anim.txt = text(g, 22, 188, '0.70 V', { anchor: 'middle', mono: true, halo: false });
+        anim.txt = text(g, 4, 188, '0.70 V', { anchor: 'start', mono: true, halo: false });
         anim.state = text(g, 22, 206, 'ON', { anchor: 'middle', w: 700, fill: NSD, halo: false });
         anim.state2 = a.id === 'cfet' ? text(g, 22, 224, 'pFET OFF', { anchor: 'middle', w: 700, fill: 'var(--bad)', halo: false }) : null;
         const X0 = 48, X1 = 226, xc = 137;
@@ -322,7 +322,8 @@
           }
         }
         column(g, col, colX, max, 14, VH - 30);
-        text(g, 6, VH - 6, 'section ⊥ channel; source and drain lie in front of and behind the page', { fill: 'var(--muted)' });
+        text(g, 6, VH - 22, 'Section perpendicular to channel.', { fill: 'var(--muted)' });
+        text(g, 6, VH - 6, 'Source and drain are in front of / behind this plane.', { fill: 'var(--muted)' });
         return g;
       }
 

@@ -35,7 +35,7 @@
       "explanation": "The wurtzite polarization discontinuity forms a 2DEG confined in a few-nm quantum well, spatially separated from any ionized donors, which is what gives the HEMT its low sheet resistance; a p-GaN gate or cascode is then needed to make the device normally off."
     },
     {
-      "q": "A fab producing 100,000 300 mm wafers per month uses about 1,800 gallons of ultrapure water per wafer. Roughly how much UPW must its plant produce per day, and what is the theoretical resistivity the water must reach?",
+      "q": "A fab producing 100,000 300 mm wafers per month uses about 1,800 gallons of ultrapure water per wafer. Roughly how much UPW must its plant produce per day, and what is the theoretical resistivity the water must reach? Assume a 30-day month and water at 25 °C.",
       "options": [
         "About 600,000 gallons/day at 1.8 MΩ·cm",
         "About 6 million gallons/day at 18.2 MΩ·cm",
@@ -57,15 +57,37 @@
       "explanation": "Because everything absorbs 13.5 nm light, the EUV mask is a Bragg mirror; a particle buried in any of the 40 layers becomes an unrepairable phase defect, and the ion-beam deposition yield needed to avoid that is what has kept Hoya (~2/3) and AGC (~1/3) as an effective duopoly."
     },
     {
-      "q": "An EUV pellicle has 90% transmission at 13.5 nm. What is the approximate scanner throughput penalty from using it, and why?",
+      "q": "A pellicle transmits 90% of EUV light per pass. What is its double-pass optical transmission?",
       "options": [
-        "About 19%, because the light passes through the pellicle twice (to the reflective mask and back), giving 0.9 x 0.9 ≈ 0.81 of the dose",
-        "About 10%, because 10% of the light is absorbed on the way to the mask",
-        "About 1%, because the pellicle only affects out-of-focus light",
-        "Zero, because the scanner compensates by increasing numerical aperture"
+        "90%",
+        "81%",
+        "19%",
+        "180%"
       ],
-      "answer": 0,
-      "explanation": "The EUV mask is reflective, so illumination crosses the membrane on the way in and the reflected image crosses it again on the way out; this double-pass loss is why TSMC initially ran EUV layers without pellicles and why CNT pellicles targeting ≥94% transmission matter so much."
+      "answer": 1,
+      "explanation": "Light crosses it toward the reflective mask and again on the return path: 0.9 × 0.9 = 0.81. The resulting 19% optical loss is not automatically a 19% full-cycle throughput loss, because handling and stage overhead also consume time."
+    },
+    {
+      "q": "A water monitor reads 18.2 MΩ·cm at 25 °C. What additional checks are still necessary for fab use?",
+      "options": [
+        "None; this certifies every contaminant is absent",
+        "Only water color",
+        "Independent checks of particles, organic carbon and relevant trace contaminants",
+        "Only reservoir size"
+      ],
+      "answer": 2,
+      "explanation": "Resistivity is primarily sensitive to ions. An excellent reading does not measure every form of contamination."
+    },
+    {
+      "q": "Why must a nominally equivalent replacement slurry undergo process qualification?",
+      "options": [
+        "Its label determines the final transistor design",
+        "Particle distribution, chemistry and selectivity can change removal rates and defectivity",
+        "Only the supplier's nationality affects polishing",
+        "Slurries never interact with existing films"
+      ],
+      "answer": 1,
+      "explanation": "Chemical-mechanical polishing combines chemical reactions and abrasion. A replacement must preserve removal, uniformity and defect performance on the actual film stack."
     }
   ]
 }

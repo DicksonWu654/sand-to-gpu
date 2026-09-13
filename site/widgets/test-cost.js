@@ -10,7 +10,7 @@
 
   window.registerWidget('test-cost', {
     title: 'Test Economics',
-    caption: 'What a sort cell costs per second, how that turns into dollars per good die, and why a defect caught later costs ten times more at every stage.',
+    caption: 'What a sort cell costs per second, how that turns into dollars per good die, and why a defect caught later can become more expensive downstream.',
     mount(el, ctx) {
       const { h, svg, fmt } = ctx;
       const st = { cap: 5, years: 5, util: 85, tTime: 60, sites: 1, dpw: 60, yield: 85, dieCost: 300, cov: 99, dppmYield: 85 };
@@ -85,27 +85,27 @@
       }
       function drawDppmChart(Y) {
         dppmChart.innerHTML = '';
-        const PL = 60, PR = 16, PT = 16, PB = 34, W = 640, H = 260;
+        const PL = 82, PR = 42, PT = 22, PB = 46, W = 640, H = 260;
         const covs = []; for (let c = 90; c <= 99.999; c += (99.999 - 90) / 200) covs.push(c);
         const xOf = c => PL + (c - 90) / (99.999 - 90) * (W - PL - PR);
         const dppmVals = covs.map(c => Math.max(1e-3, dl(Y, c / 100) * 1e6));
-        const logMax = Math.log10(Math.max(...dppmVals, 10)), logMin = -1;
+        const logMax = Math.ceil(Math.log10(Math.max(...dppmVals, 10))), logMin = -3;
         const yOf = v => PT + (1 - (Math.log10(Math.max(v, 1e-3)) - logMin) / (logMax - logMin)) * (H - PT - PB);
-        for (let e = 0; e <= Math.ceil(logMax); e++) {
+        for (let e = logMin; e <= logMax; e++) {
           const v = Math.pow(10, e), y = yOf(v);
           dppmChart.append(svg('line', { x1: PL, y1: y, x2: W - PR, y2: y, stroke: 'var(--line)', 'stroke-width': 1 }));
-          dppmChart.append(svg('text', { x: PL - 8, y: y + 4, 'text-anchor': 'end', 'font-size': 11, 'font-family': 'var(--mono)', fill: 'var(--muted)' }, fmt(v, 0)));
+          dppmChart.append(svg('text', { x: PL - 8, y: y + 4, 'text-anchor': 'end', 'font-size': 11, 'font-family': 'var(--mono)', fill: 'var(--muted)' }, fmt(v, e < 0 ? -e : 0)));
         }
-        [90, 92, 94, 96, 98, 99, 99.9, 99.999].forEach(c => {
+        [90, 92, 94, 96, 98, 99.999].forEach(c => {
           const x = xOf(c);
-          dppmChart.append(svg('text', { x, y: H - PB + 16, 'text-anchor': 'middle', 'font-size': 10.5, 'font-family': 'var(--mono)', fill: 'var(--muted)' }, fmt(c, c >= 99 ? 3 : 0)));
+          dppmChart.append(svg('text', { x, y: H - PB + 16, 'text-anchor': 'middle', 'font-size': 12, 'font-family': 'var(--mono)', fill: 'var(--muted)' }, fmt(c, c >= 99 ? 3 : 0)));
         });
         const pts = covs.map((c, i) => [xOf(c), yOf(dppmVals[i])]);
         dppmChart.append(svg('polyline', { points: pts.map(p => p.join(',')).join(' '), fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2.5 }));
         const cx = xOf(st.cov), cy = yOf(dl(Y, st.cov / 100) * 1e6);
         dppmChart.append(svg('circle', { cx, cy, r: 5, fill: 'var(--accent)', stroke: 'var(--panel)', 'stroke-width': 1.5 }));
         dppmChart.append(svg('text', { x: (PL + W - PR) / 2, y: H - 4, 'text-anchor': 'middle', 'font-size': 12, 'font-family': 'var(--sans)', fill: 'var(--ink)' }, 'stuck-at fault coverage T (%)'));
-        dppmChart.append(svg('text', { x: 16, y: (PT + H - PB) / 2, 'text-anchor': 'middle', 'font-size': 12, 'font-family': 'var(--sans)', fill: 'var(--ink)', transform: `rotate(-90 16 ${(PT + H - PB) / 2})` }, 'DPPM (log scale)'));
+        dppmChart.append(svg('text', { x: 16, y: (PT + H - PB) / 2, 'text-anchor': 'middle', 'font-size': 12, 'font-family': 'var(--sans)', fill: 'var(--ink)', transform: `rotate(-90 16 ${(PT + H - PB) / 2})` }, 'DPPM (log; zero shown at floor)'));
       }
       covIn.addEventListener('input', updatePanel2); dyIn.addEventListener('input', updatePanel2);
 
@@ -125,9 +125,9 @@
           ruleChart.append(svg('rect', { x, y, width: barW, height: bh, fill: `var(--${r.tone})`, rx: 3 }));
           ruleChart.append(svg('text', { x: x + barW / 2, y: y - 10, 'text-anchor': 'middle', 'font-size': 13, 'font-family': 'var(--mono)', 'font-weight': 600, fill: 'var(--ink)' }, '$' + fmt(vals[i], 0)));
           ruleChart.append(svg('text', { x: x + barW / 2, y: H - PB + 18, 'text-anchor': 'middle', 'font-size': 11.5, 'font-family': 'var(--sans)', fill: 'var(--muted)' }, r.label));
-          ruleChart.append(svg('text', { x: x + barW / 2, y: H - PB + 32, 'text-anchor': 'middle', 'font-size': 10.5, 'font-family': 'var(--mono)', fill: 'var(--muted)' }, '×' + fmt(r.mult, 0)));
+          ruleChart.append(svg('text', { x: x + barW / 2, y: H - PB + 32, 'text-anchor': 'middle', 'font-size': 12, 'font-family': 'var(--mono)', fill: 'var(--muted)' }, '×' + fmt(r.mult, 0)));
         });
-        ruleNote.textContent = `Bars scaled logarithmically from a $${fmt(dieCost, 0)} die (from panel 1): the "rule of ten" says a defect found one stage later costs roughly 10× more to have escaped.`;
+        ruleNote.textContent = `Bars scaled logarithmically from a $${fmt(dieCost, 0)} die (from panel 1): the "rule of ten" is an illustrative escalation heuristic, not a measured law or a universal multiplier.`;
       }
 
       // ---------- assemble ----------

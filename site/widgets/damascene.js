@@ -20,14 +20,14 @@
   const MS = a => 1 / (1 - 1.5 * a + 3 * a * a - 3 * a * a * a * Math.log(1 + 1 / a));
 
   // ---------- cross-section geometry (viewBox units) ----------
-  const VB_W = 330, VB_H = 246, DX0 = 8, DX1 = 190, LX = 199;
+  const VB_W = 360, VB_H = 300, DX0 = 8, DX1 = 190, LX = 199;
   const Y_SURF = 44, Y_TEOS = 51, Y_LK = 58, Y_TR = 112, Y_CAP = 178, Y_CAP1 = 186, Y_BOT = 238;
   const TR_X0 = 56, TR_X1 = 168, VIA_X0 = 100, VIA_X1 = 124, MN_CX = [46, 112, 178], MN_W = 28, MN_H = 38;
   const BAR = 3, LIN = 2, FILM = BAR + LIN, SEED = 3, OB = 14;
 
   window.registerWidget('damascene', {
     title: 'Dual Damascene, Step by Step',
-    caption: 'Copper cannot be plasma-etched, so BEOL wiring is inlaid: etch the dielectric, line it, plate it full, then polish the excess back off. Step through one metal level; the cross-section runs along the new line, across the lines below.',
+    caption: 'Copper is difficult to pattern by conventional subtractive plasma etch, so advanced BEOL wiring is inlaid: etch the dielectric, line it, plate it full, then polish the excess back off. Step through one metal level; the cross-section runs along the new line, across the lines below.',
     mount(el, ctx) {
       const { h, svg, fmt } = ctx;
       const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -154,7 +154,7 @@
 
       // right-hand label column: spread so nothing overlaps, leader line back to the part
       function placeLabels(g, items) {
-        const LH = 14.5, GAP = 5, TOP = 14, BOT = VB_H - 8;
+        const LH = 18, GAP = 7, TOP = 14, BOT = VB_H - 8;
         items.sort((a, b) => a.y - b.y);
         let minY = TOP;
         for (const it of items) { it.y = Math.max(it.y, minY); minY = it.y + it.l.length * LH + GAP; }
@@ -205,7 +205,7 @@
       const wIn = h('input', { type: 'range', min: 12, max: 100, step: 1, value: 20 });
       const wOut = h('output');
       const preset = (label, v) => h('button', { class: 'w-btn', type: 'button', 'data-preset': v, on: { click: () => { wIn.value = v; updatePhysics(); } } }, label);
-      const bar = svg('svg', { class: 'w-svg', viewBox: '0 0 330 50', role: 'img', 'aria-label': 'Width split: barrier, liner, copper', style: { maxWidth: '520px' } });
+      const bar = svg('svg', { class: 'w-svg', viewBox: '0 0 330 76', role: 'img', 'aria-label': 'Width split: barrier, liner, copper', style: { maxWidth: '520px' } });
       const stats = h('div', { class: 'w-readout' });
       const formula = h('div', { class: 'w-formula', style: { display: 'block', whiteSpace: 'normal', lineHeight: 1.6 } });
       const fmtR = ohm => ohm >= 1e6 ? fmt(ohm / 1e6, 2) + ' MΩ' : ohm >= 1e3 ? fmt(ohm / 1e3, ohm >= 1e4 ? 0 : 1) + ' kΩ' : fmt(ohm, 0) + ' Ω';
@@ -233,7 +233,8 @@
         let x = X0;
         segs.forEach(([ww, c, lbl]) => { const sw = ww * sc; R(bar, x, y0, sw, hb, c); if (lbl && sw > (lbl.length > 3 ? 70 : lbl.length * 9)) T(bar, x + sw / 2, y0 + 14.5, lbl, { size: 13, anchor: 'middle', fill: 'var(--panel)' }); x += sw; });
         bar.append(svg('path', { d: `M${X0},${y0 + hb + 4} V${y0 + hb + 12} M${X0 + W},${y0 + hb + 4} V${y0 + hb + 12} M${X0},${y0 + hb + 8} H${X0 + W}`, stroke: 'var(--muted)', 'stroke-width': 1, fill: 'none' }));
-        T(bar, X0 + W / 2, y0 + hb + 22, 'w = ' + w + ' nm   ·   h = 2w = ' + 2 * w + ' nm   ·   TaN 2 + Co 1.5 nm per side', { size: 13, anchor: 'middle', fill: 'var(--muted)', mono: true });
+        T(bar, X0 + W / 2, y0 + hb + 22, 'w = ' + w + ' nm · h = 2w = ' + 2 * w + ' nm', { size: 13, anchor: 'middle', fill: 'var(--muted)', mono: true });
+        T(bar, X0 + W / 2, y0 + hb + 42, 'Each side: TaN 2 nm + Co 1.5 nm', { size: 13, anchor: 'middle', fill: 'var(--muted)', mono: true });
         formula.innerHTML = 'ρ<sub>eff</sub> = ρ₀ · [1 + 0.4·λ/w<sub>Cu</sub> + (MS(α) − 1)], surfaces fully diffuse (p = 0); grain boundaries MS(α) = 1 / [1 − 3α/2 + 3α² − 3α³·ln(1 + 1/α)], α = (λ/w<sub>Cu</sub>)·R/(1 − R), R = 0.32, grain size ≈ w<sub>Cu</sub>. ρ₀ = 1.68 µΩ·cm, λ = 39 nm. w<sub>Cu</sub> = w − 2·(2 + 1.5) nm, h<sub>Cu</sub> = 2w − 3.5 nm. R = ρL/A; t<sub>50</sub> ≈ 0.38·R·C, C = 0.2 fF/µm.';
       }
       wIn.addEventListener('input', updatePhysics);
@@ -248,7 +249,7 @@
         bar, stats, formula,
         h('div', { class: 'w-note' }, 'Presets reproduce the module’s worked example: a 20 nm M2 line ≈ 147 kΩ/mm and ≈ 11 ns unbuffered; an 80 nm M8 line ≈ 2.2 kΩ and ≈ 0.17 ns.'));
 
-      go(0);
+      go(6); // Representative first frame: lined trench and via; Prev returns to the first step.
       updatePhysics();
       return () => { playing = false; if (raf) cancelAnimationFrame(raf); raf = 0; io.disconnect(); };
     }

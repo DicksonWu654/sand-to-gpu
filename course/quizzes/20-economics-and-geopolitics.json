@@ -79,15 +79,15 @@
       "explanation": "TPP = ~989 x 16 = ~15,800 for H100 (density ~15,800 / 814 = ~19 TPP/mm^2); TPP = ~148 x 16 = ~2,370 for H20 (density ~2.9). The H20 keeps H100 memory but ~15% of its compute, which is why it was designed to sit just under the 2,400 band."
     },
     {
-      "q": "Roughly 6 million Blackwell-class packages a year each carry two ~800 mm^2 compute dies (about 60 usable dies per 300 mm wafer), one CoWoS interposer (~15-20 packages per CoWoS wafer), and 8 HBM stacks of 12 DRAM dies. Which part of the chain does this demand strain most, given TSMC shipped ~15 million wafers in 2025 and CoWoS capacity was ~70,000-75,000 wafers a month at the end of 2025?",
+      "q": "An illustrative Blackwell production plan requires about 200,000 logic wafers and 350,000 packaging-wafer equivalents per year. What can comparison with a foundry's total wafer output establish?",
       "options": [
-        "Front-end logic wafers: ~200,000 N4 wafers a year is most of TSMC output",
-        "CoWoS and HBM: the compute dies need only ~200,000 wafers a year (~1-2% of TSMC output), but the packages need ~350,000 CoWoS wafers (a third to a half of capacity) and ~600 million leading-edge DRAM dies at 2-3x the wafer area per bit of commodity DRAM",
-        "Photomasks: each package needs a new mask set",
-        "Nothing is strained; all three lines have spare capacity"
+        "A small percentage of total output proves the required advanced node has spare capacity",
+        "The physical requirements can be estimated, but bottlenecks also depend on qualified node capacity, allocation, HBM, package mix, yield and test",
+        "Packaging wafers are interchangeable with logic wafers",
+        "The highest-cost component must always be the bottleneck"
       ],
       "answer": 1,
-      "explanation": "12 million dies / 60 per wafer = ~200,000 wafers = ~17,000 wspm, ~1-2% of TSMC. 6 million packages / ~17 per CoWoS wafer = ~350,000 CoWoS wafers = ~30,000 wpm against ~70,000-75,000. 48 million stacks x 12 dies = ~600 million HBM dies from 1-beta/1-gamma lines, which is why CoWoS and HBM, not front-end wafers, were the bottlenecks."
+      "explanation": "Company-wide wafer totals mix nodes and customers. They do not show available capacity for this product. Compare each requirement with its specific qualified, allocated resource before drawing a bottleneck conclusion."
     }
   ]
 }

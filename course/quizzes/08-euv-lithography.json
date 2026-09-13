@@ -66,6 +66,28 @@
       ],
       "answer": 2,
       "explanation": "Debris mitigation is the central reliability problem of the LPP source; H2 is the least EUV-absorbing gas, thermalizes the fast ions, and chemically etches tin off the collector as SnH4, extending collector life from weeks to many months."
+    },
+    {
+      "q": "At fixed wavelength and process factor, increasing numerical aperture from 0.33 to 0.55 changes the characteristic resolution by what factor?",
+      "options": [
+        "It becomes 0.33/0.55 ≈ 0.60 of its previous value",
+        "It becomes 0.55/0.33 ≈ 1.67 times larger",
+        "It is unchanged",
+        "It improves by exactly 14 times"
+      ],
+      "answer": 0,
+      "explanation": "Resolution scales inversely with numerical aperture. Smaller features are possible, but depth of focus also shrinks and other process constraints remain."
+    },
+    {
+      "q": "Why should two EUV throughput specifications be compared at the same exposure dose?",
+      "options": [
+        "Dose determines wafer diameter",
+        "A higher required dose generally increases the light delivery time, so different-dose throughput figures are not directly comparable",
+        "Dose has no influence on exposure",
+        "All tools run at identical throughput regardless of resist"
+      ],
+      "answer": 1,
+      "explanation": "The resist needs a certain energy per area. More dose demands more exposure time unless source power or another part of the system compensates; overhead also matters."
     }
   ]
 }

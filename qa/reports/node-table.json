@@ -1,0 +1,142 @@
+{
+  "id": "node-table",
+  "errors": [],
+  "results": [
+    {
+      "width": 760,
+      "theme": "dark",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/node-table-760-dark-initial.png",
+        "qa/shots/sweep/node-table-760-dark-interaction.png"
+      ],
+      "controls": 6,
+      "controlValuesExercised": 18,
+      "buttonsClicked": 0,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2274,
+        "boxWidth": 724
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2274,
+        "boxWidth": 724
+      }
+    },
+    {
+      "width": 760,
+      "theme": "light",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/node-table-760-light-initial.png",
+        "qa/shots/sweep/node-table-760-light-interaction.png"
+      ],
+      "controls": 6,
+      "controlValuesExercised": 18,
+      "buttonsClicked": 0,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2274,
+        "boxWidth": 724
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2274,
+        "boxWidth": 724
+      }
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/node-table-360-dark-initial.png",
+        "qa/shots/sweep/node-table-360-dark-interaction.png"
+      ],
+      "controls": 6,
+      "controlValuesExercised": 18,
+      "buttonsClicked": 0,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2659,
+        "boxWidth": 324
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2659,
+        "boxWidth": 324
+      }
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/node-table-360-light-initial.png",
+        "qa/shots/sweep/node-table-360-light-interaction.png"
+      ],
+      "controls": 6,
+      "controlValuesExercised": 18,
+      "buttonsClicked": 0,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2659,
+        "boxWidth": 324
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2659,
+        "boxWidth": 324
+      }
+    }
+  ]
+}

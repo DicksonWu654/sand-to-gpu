@@ -66,6 +66,28 @@
       ],
       "answer": 1,
       "explanation": "SPR's direct S/D contact is the most area-efficient variant (7-10% density gain over N2P) but the hardest to land; both approaches need carrier bonding, extreme backside thinning, backside litho aligned to front-side marks, and accept a worse thermal path."
+    },
+    {
+      "q": "A gate stack is physically 2.4 nm thick but has an equivalent oxide thickness (EOT) of about 0.95 nm. How can both statements be correct?",
+      "options": [
+        "EOT is the physical thickness after polishing",
+        "The high-k layers provide the capacitance of a thinner SiO2 layer while retaining a thicker physical barrier",
+        "The oxide expands when electrical power is removed",
+        "EOT includes only the metal gate"
+      ],
+      "answer": 1,
+      "explanation": "EOT compares electrical capacitance with SiO2. It is not the microscope-measured thickness of the multilayer insulator; high-k materials provide stronger capacitive coupling per unit thickness."
+    },
+    {
+      "q": "Logic density improves substantially on a new node while SRAM cell area changes little. What follows for a cache-heavy chip?",
+      "options": [
+        "Its total area must shrink by exactly the logic density gain",
+        "Its total area can shrink less than a logic-only estimate predicts",
+        "SRAM contains no transistors and is unaffected by manufacturing",
+        "Its cache must become nonvolatile"
+      ],
+      "answer": 1,
+      "explanation": "A chip combines logic, SRAM, analog and interfaces. Each fraction scales differently, so a logic-library density claim does not determine the complete die area."
     }
   ]
 }

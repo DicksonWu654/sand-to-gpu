@@ -434,9 +434,9 @@ And the 20 mA itself is the space-charge ceiling of Section 3: a machine that co
 | Quantity | Value | Why it matters |
 |---|---|---|
 | Silicon atom density | 5 × 10²² cm⁻³ | The denominator for every doping fraction: 10¹⁵ cm⁻³ is 20 ppb |
-| Intrinsic carrier density, 300 K | ~10¹⁰ cm⁻³ | Undoped silicon is nearly an insulator; every carrier a device uses is put there by doping |
+| Intrinsic carrier density, 300 K | ~10¹⁰ cm⁻³ | Doping controls equilibrium carrier populations; heat, light, injection and gate fields also affect carriers |
 | Practical doping range | 10¹⁵–10²⁰⁺ cm⁻³ (20 ppb to 0.2 %) | Set by crystal-growth control at the bottom and solid solubility at the top |
-| Donor / acceptor ionisation energy (P, B) | ~45 meV | Under two kT at room temperature, so shallow dopants are fully ionised |
+| Donor / acceptor ionisation energy (P, B) | ~45 meV | Often treated as nearly fully ionised in moderately doped silicon at room temperature; verify outside that regime |
 | Resistivity at 10¹⁵ / 10²⁰ cm⁻³ | ~5–13 Ω·cm / ~1 mΩ·cm | Five orders of doping buy four of resistivity because mobility collapses |
 | Boron solid solubility | ~1–2 × 10²⁰ (1,000 °C), ~4 × 10²⁰ cm⁻³ (1,100 °C) | The ceiling on active concentration unless a millisecond anneal freezes in more |
 | Boron diffusivity | ~2 × 10⁻¹⁴ cm²/s at 1,000 °C; ×10 per 100 °C | Temperature, not time, is the big lever on how far dopant moves |

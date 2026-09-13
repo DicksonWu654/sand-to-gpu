@@ -1,0 +1,142 @@
+{
+  "id": "cz-puller",
+  "errors": [],
+  "results": [
+    {
+      "width": 760,
+      "theme": "dark",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/cz-puller-760-dark-initial.png",
+        "qa/shots/sweep/cz-puller-760-dark-interaction.png"
+      ],
+      "controls": 3,
+      "controlValuesExercised": 6,
+      "buttonsClicked": 6,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1265,
+        "boxWidth": 724
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1253,
+        "boxWidth": 724
+      }
+    },
+    {
+      "width": 760,
+      "theme": "light",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/cz-puller-760-light-initial.png",
+        "qa/shots/sweep/cz-puller-760-light-interaction.png"
+      ],
+      "controls": 3,
+      "controlValuesExercised": 6,
+      "buttonsClicked": 6,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1265,
+        "boxWidth": 724
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1253,
+        "boxWidth": 724
+      }
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/cz-puller-360-dark-initial.png",
+        "qa/shots/sweep/cz-puller-360-dark-interaction.png"
+      ],
+      "controls": 3,
+      "controlValuesExercised": 6,
+      "buttonsClicked": 6,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2231,
+        "boxWidth": 324
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2209,
+        "boxWidth": 324
+      }
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/cz-puller-360-light-initial.png",
+        "qa/shots/sweep/cz-puller-360-light-interaction.png"
+      ],
+      "controls": 3,
+      "controlValuesExercised": 6,
+      "buttonsClicked": 6,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2231,
+        "boxWidth": 324
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 2209,
+        "boxWidth": 324
+      }
+    }
+  ]
+}

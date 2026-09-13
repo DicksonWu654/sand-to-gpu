@@ -121,7 +121,7 @@
           const dot = h('button', { class: 'w-step-dot', type: 'button', title: 'Step ' + n + ': ' + name, 'aria-label': 'Step ' + n + ': ' + name,
             style: { width: '14px', height: '14px', boxSizing: 'border-box' },
             on: { click: () => { cur = n; render(); },
-              mouseenter: () => { dot.style.outline = '2px solid var(--accent)'; dot.style.outlineOffset = '1px'; hint.textContent = 'Step ' + n + ' · ' + name + (n === cur ? ' (current)' : ''); },
+              mouseenter: () => { dot.style.outline = '2px solid var(--accent)'; dot.style.outlineOffset = '1px'; hint.textContent = 'Preview: step ' + n + ' · ' + name + (n === cur ? ' (current)' : ''); },
               mouseleave: () => { dot.style.outline = ''; dot.style.outlineOffset = ''; hint.textContent = HINT0; } } });
           row.append(dot); dots.set(n, dot);
         });
@@ -668,6 +668,7 @@
       function render() {
         cur = Math.max(1, Math.min(TOTAL, cur));
         const s = STEPS[cur - 1];
+        hint.textContent = HINT0;
         slider.value = cur;
         count.textContent = `Step ${cur} / ${TOTAL}`;
         prevBtn.disabled = cur === 1; nextBtn.disabled = cur === TOTAL;

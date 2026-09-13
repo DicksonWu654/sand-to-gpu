@@ -1,9 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 20 20%22><rect x=%223%22 y=%223%22 width=%2214%22 height=%2214%22 fill=%22%23B8770A%22/></svg>">
 <title>Sand to GPU</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap">
 <link rel="stylesheet" href="styles.css">
 
+</head>
+<body>
 <header class="topbar">
-  <button class="icon-btn menu-btn" id="menu" aria-label="Open curriculum">
+  <button class="icon-btn menu-btn" id="menu" aria-label="Open curriculum" aria-controls="sidebar" aria-expanded="false">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
   </button>
   <a class="brand" href="#/home" aria-label="Sand to GPU home">
@@ -29,6 +37,7 @@
   <aside class="rail" id="rail" aria-label="On this page"></aside>
 </div>
 
+<script src="widget-layout.js"></script>
 <script src="content.js"></script>
 <script>window.__WIDGETS = {}; window.registerWidget = function (id, def) { window.__WIDGETS[id] = def; };</script>
 <script src="widgets/chain-map.js"></script>
@@ -59,4 +68,24 @@
 <script src="widgets/wafer-price.js"></script>
 <script src="widgets/geo-share.js"></script>
 <script src="widgets/scale-ladder.js"></script>
+<script src="widgets/amhs-sim.js"></script>
+<script src="widgets/bragg-mirror.js"></script>
+<script src="widgets/cmp-planarize.js"></script>
+<script src="widgets/dram-cell.js"></script>
+<script src="widgets/export-timeline.js"></script>
+<script src="widgets/fab-anatomy.js"></script>
+<script src="widgets/glossary-flashcards.js"></script>
+<script src="widgets/heat-path.js"></script>
+<script src="widgets/hybrid-bond.js"></script>
+<script src="widgets/implanter-beamline.js"></script>
+<script src="widgets/litho-track.js"></script>
+<script src="widgets/moores-law.js"></script>
+<script src="widgets/mosfet-iv.js"></script>
+<script src="widgets/nand-3d-build.js"></script>
+<script src="widgets/nvlink-topology.js"></script>
+<script src="widgets/plasma-reactor.js"></script>
+<script src="widgets/resist-chemistry.js"></script>
+<script src="widgets/wafer-sort-sim.js"></script>
 <script src="app.js"></script>
+</body>
+</html>

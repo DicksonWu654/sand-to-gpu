@@ -1,0 +1,6262 @@
+{
+  "mode": "widgets",
+  "timestamp": "2026-09-13T21:15:18.227Z",
+  "results": [
+    {
+      "id": "bragg-mirror",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/bragg-mirror-760-dark-initial.png",
+            "qa/shots/sweep/bragg-mirror-760-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 7,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1272,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1293,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/bragg-mirror-760-light-initial.png",
+            "qa/shots/sweep/bragg-mirror-760-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 7,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1272,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1293,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/bragg-mirror-360-dark-initial.png",
+            "qa/shots/sweep/bragg-mirror-360-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 7,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2640,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2640,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/bragg-mirror-360-light-initial.png",
+            "qa/shots/sweep/bragg-mirror-360-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 7,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2640,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2640,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "chain-map",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/chain-map-760-dark-initial.png",
+            "qa/shots/sweep/chain-map-760-dark-interaction.png"
+          ],
+          "controls": 0,
+          "controlValuesExercised": 0,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1450,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1450,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/chain-map-760-light-initial.png",
+            "qa/shots/sweep/chain-map-760-light-interaction.png"
+          ],
+          "controls": 0,
+          "controlValuesExercised": 0,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1450,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1450,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/chain-map-360-dark-initial.png",
+            "qa/shots/sweep/chain-map-360-dark-interaction.png"
+          ],
+          "controls": 0,
+          "controlValuesExercised": 0,
+          "buttonsClicked": 17,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2402,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2402,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/chain-map-360-light-initial.png",
+            "qa/shots/sweep/chain-map-360-light-interaction.png"
+          ],
+          "controls": 0,
+          "controlValuesExercised": 0,
+          "buttonsClicked": 17,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2402,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2402,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "cmp-planarize",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/cmp-planarize-760-dark-initial.png",
+            "qa/shots/sweep/cmp-planarize-760-dark-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1493,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1502,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/cmp-planarize-760-light-initial.png",
+            "qa/shots/sweep/cmp-planarize-760-light-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1493,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1502,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/cmp-planarize-360-dark-initial.png",
+            "qa/shots/sweep/cmp-planarize-360-dark-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2607,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2607,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/cmp-planarize-360-light-initial.png",
+            "qa/shots/sweep/cmp-planarize-360-light-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2607,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2607,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "cowos-flow",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/cowos-flow-760-dark-initial.png",
+            "qa/shots/sweep/cowos-flow-760-dark-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 13,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1246,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1128,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/cowos-flow-760-light-initial.png",
+            "qa/shots/sweep/cowos-flow-760-light-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 13,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1246,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1128,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/cowos-flow-360-dark-initial.png",
+            "qa/shots/sweep/cowos-flow-360-dark-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 13,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1544,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2325,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/cowos-flow-360-light-initial.png",
+            "qa/shots/sweep/cowos-flow-360-light-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 13,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1544,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2325,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "cz-puller",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/cz-puller-760-dark-initial.png",
+            "qa/shots/sweep/cz-puller-760-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1265,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1253,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/cz-puller-760-light-initial.png",
+            "qa/shots/sweep/cz-puller-760-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1265,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1253,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/cz-puller-360-dark-initial.png",
+            "qa/shots/sweep/cz-puller-360-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2231,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2209,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/cz-puller-360-light-initial.png",
+            "qa/shots/sweep/cz-puller-360-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2231,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2209,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "damascene",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/damascene-760-dark-initial.png",
+            "qa/shots/sweep/damascene-760-dark-interaction.png"
+          ],
+          "controls": 1,
+          "controlValuesExercised": 2,
+          "buttonsClicked": 13,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1463,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1463,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/damascene-760-light-initial.png",
+            "qa/shots/sweep/damascene-760-light-interaction.png"
+          ],
+          "controls": 1,
+          "controlValuesExercised": 2,
+          "buttonsClicked": 13,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1463,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1463,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/damascene-360-dark-initial.png",
+            "qa/shots/sweep/damascene-360-dark-interaction.png"
+          ],
+          "controls": 1,
+          "controlValuesExercised": 2,
+          "buttonsClicked": 13,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1758,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1819,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/damascene-360-light-initial.png",
+            "qa/shots/sweep/damascene-360-light-interaction.png"
+          ],
+          "controls": 1,
+          "controlValuesExercised": 2,
+          "buttonsClicked": 13,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1758,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1819,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "deal-grove",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/deal-grove-760-dark-initial.png",
+            "qa/shots/sweep/deal-grove-760-dark-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 989,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 989,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/deal-grove-760-light-initial.png",
+            "qa/shots/sweep/deal-grove-760-light-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 989,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 989,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/deal-grove-360-dark-initial.png",
+            "qa/shots/sweep/deal-grove-360-dark-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1815,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1815,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/deal-grove-360-light-initial.png",
+            "qa/shots/sweep/deal-grove-360-light-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1815,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1815,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "dram-cell",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/dram-cell-760-dark-initial.png",
+            "qa/shots/sweep/dram-cell-760-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1133,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1133,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/dram-cell-760-light-initial.png",
+            "qa/shots/sweep/dram-cell-760-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1133,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1133,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/dram-cell-360-dark-initial.png",
+            "qa/shots/sweep/dram-cell-360-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2332,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2332,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/dram-cell-360-light-initial.png",
+            "qa/shots/sweep/dram-cell-360-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2332,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2332,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "etch-profile",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/etch-profile-760-dark-initial.png",
+            "qa/shots/sweep/etch-profile-760-dark-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1197,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1260,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/etch-profile-760-light-initial.png",
+            "qa/shots/sweep/etch-profile-760-light-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1197,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1260,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/etch-profile-360-dark-initial.png",
+            "qa/shots/sweep/etch-profile-360-dark-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1977,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2145,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/etch-profile-360-light-initial.png",
+            "qa/shots/sweep/etch-profile-360-light-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1977,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2145,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "euv-source",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/euv-source-760-dark-initial.png",
+            "qa/shots/sweep/euv-source-760-dark-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1188,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1188,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/euv-source-760-light-initial.png",
+            "qa/shots/sweep/euv-source-760-light-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1188,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1188,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/euv-source-360-dark-initial.png",
+            "qa/shots/sweep/euv-source-360-dark-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2385,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2385,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/euv-source-360-light-initial.png",
+            "qa/shots/sweep/euv-source-360-light-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2385,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2385,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "euv-stochastics",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/euv-stochastics-760-dark-initial.png",
+            "qa/shots/sweep/euv-stochastics-760-dark-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1728,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1728,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/euv-stochastics-760-light-initial.png",
+            "qa/shots/sweep/euv-stochastics-760-light-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1728,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1728,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/euv-stochastics-360-dark-initial.png",
+            "qa/shots/sweep/euv-stochastics-360-dark-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 3325,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 3325,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/euv-stochastics-360-light-initial.png",
+            "qa/shots/sweep/euv-stochastics-360-light-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 3325,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 3325,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "export-timeline",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/export-timeline-760-dark-initial.png",
+            "qa/shots/sweep/export-timeline-760-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 38,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1458,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1282,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/export-timeline-760-light-initial.png",
+            "qa/shots/sweep/export-timeline-760-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 38,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1458,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1282,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/export-timeline-360-dark-initial.png",
+            "qa/shots/sweep/export-timeline-360-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 38,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2585,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2145,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/export-timeline-360-light-initial.png",
+            "qa/shots/sweep/export-timeline-360-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 38,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2585,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2145,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "fab-anatomy",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/fab-anatomy-760-dark-initial.png",
+            "qa/shots/sweep/fab-anatomy-760-dark-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1438,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1438,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/fab-anatomy-760-light-initial.png",
+            "qa/shots/sweep/fab-anatomy-760-light-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1438,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1438,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/fab-anatomy-360-dark-initial.png",
+            "qa/shots/sweep/fab-anatomy-360-dark-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1931,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1931,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/fab-anatomy-360-light-initial.png",
+            "qa/shots/sweep/fab-anatomy-360-light-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1931,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1931,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "fab-flow",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/fab-flow-760-dark-initial.png",
+            "qa/shots/sweep/fab-flow-760-dark-interaction.png"
+          ],
+          "controls": 1,
+          "controlValuesExercised": 2,
+          "buttonsClicked": 61,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 800,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 781,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/fab-flow-760-light-initial.png",
+            "qa/shots/sweep/fab-flow-760-light-interaction.png"
+          ],
+          "controls": 1,
+          "controlValuesExercised": 2,
+          "buttonsClicked": 61,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 800,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 781,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/fab-flow-360-dark-initial.png",
+            "qa/shots/sweep/fab-flow-360-dark-interaction.png"
+          ],
+          "controls": 1,
+          "controlValuesExercised": 2,
+          "buttonsClicked": 61,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1395,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1294,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/fab-flow-360-light-initial.png",
+            "qa/shots/sweep/fab-flow-360-light-interaction.png"
+          ],
+          "controls": 1,
+          "controlValuesExercised": 2,
+          "buttonsClicked": 61,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1395,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1294,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "geo-share",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/geo-share-760-dark-initial.png",
+            "qa/shots/sweep/geo-share-760-dark-interaction.png"
+          ],
+          "controls": 0,
+          "controlValuesExercised": 0,
+          "buttonsClicked": 8,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 678,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 698,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/geo-share-760-light-initial.png",
+            "qa/shots/sweep/geo-share-760-light-interaction.png"
+          ],
+          "controls": 0,
+          "controlValuesExercised": 0,
+          "buttonsClicked": 8,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 678,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 698,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/geo-share-360-dark-initial.png",
+            "qa/shots/sweep/geo-share-360-dark-interaction.png"
+          ],
+          "controls": 0,
+          "controlValuesExercised": 0,
+          "buttonsClicked": 8,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 775,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 856,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/geo-share-360-light-initial.png",
+            "qa/shots/sweep/geo-share-360-light-interaction.png"
+          ],
+          "controls": 0,
+          "controlValuesExercised": 0,
+          "buttonsClicked": 8,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 775,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 856,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "glossary-flashcards",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/glossary-flashcards-760-dark-initial.png",
+            "qa/shots/sweep/glossary-flashcards-760-dark-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 51,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1089,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1088,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/glossary-flashcards-760-light-initial.png",
+            "qa/shots/sweep/glossary-flashcards-760-light-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 51,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1089,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1088,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/glossary-flashcards-360-dark-initial.png",
+            "qa/shots/sweep/glossary-flashcards-360-dark-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 51,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1593,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1567,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/glossary-flashcards-360-light-initial.png",
+            "qa/shots/sweep/glossary-flashcards-360-light-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 51,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1593,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1567,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "gpu-bom",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/gpu-bom-760-dark-initial.png",
+            "qa/shots/sweep/gpu-bom-760-dark-interaction.png"
+          ],
+          "controls": 14,
+          "controlValuesExercised": 28,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1184,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1184,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/gpu-bom-760-light-initial.png",
+            "qa/shots/sweep/gpu-bom-760-light-interaction.png"
+          ],
+          "controls": 14,
+          "controlValuesExercised": 28,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1184,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1184,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/gpu-bom-360-dark-initial.png",
+            "qa/shots/sweep/gpu-bom-360-dark-interaction.png"
+          ],
+          "controls": 14,
+          "controlValuesExercised": 28,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2055,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2055,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/gpu-bom-360-light-initial.png",
+            "qa/shots/sweep/gpu-bom-360-light-interaction.png"
+          ],
+          "controls": 14,
+          "controlValuesExercised": 28,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2055,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2055,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "hbm-stack",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/hbm-stack-760-dark-initial.png",
+            "qa/shots/sweep/hbm-stack-760-dark-interaction.png"
+          ],
+          "controls": 8,
+          "controlValuesExercised": 17,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1030,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1030,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/hbm-stack-760-light-initial.png",
+            "qa/shots/sweep/hbm-stack-760-light-interaction.png"
+          ],
+          "controls": 8,
+          "controlValuesExercised": 17,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1030,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1030,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/hbm-stack-360-dark-initial.png",
+            "qa/shots/sweep/hbm-stack-360-dark-interaction.png"
+          ],
+          "controls": 8,
+          "controlValuesExercised": 17,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1905,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1905,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/hbm-stack-360-light-initial.png",
+            "qa/shots/sweep/hbm-stack-360-light-interaction.png"
+          ],
+          "controls": 8,
+          "controlValuesExercised": 17,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1905,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1905,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "heat-path",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/heat-path-760-dark-initial.png",
+            "qa/shots/sweep/heat-path-760-dark-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 4,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1252,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1252,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/heat-path-760-light-initial.png",
+            "qa/shots/sweep/heat-path-760-light-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 4,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1252,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1252,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/heat-path-360-dark-initial.png",
+            "qa/shots/sweep/heat-path-360-dark-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 4,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2360,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2360,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/heat-path-360-light-initial.png",
+            "qa/shots/sweep/heat-path-360-light-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 4,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2360,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2360,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "hybrid-bond",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/hybrid-bond-760-dark-initial.png",
+            "qa/shots/sweep/hybrid-bond-760-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 13,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1523,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1523,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/hybrid-bond-760-light-initial.png",
+            "qa/shots/sweep/hybrid-bond-760-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 13,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1523,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1523,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/hybrid-bond-360-dark-initial.png",
+            "qa/shots/sweep/hybrid-bond-360-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 13,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2378,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2419,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/hybrid-bond-360-light-initial.png",
+            "qa/shots/sweep/hybrid-bond-360-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 13,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2378,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2419,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "implant-profile",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/implant-profile-760-dark-initial.png",
+            "qa/shots/sweep/implant-profile-760-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 16,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1295,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1298,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/implant-profile-760-light-initial.png",
+            "qa/shots/sweep/implant-profile-760-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 16,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1295,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1298,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/implant-profile-360-dark-initial.png",
+            "qa/shots/sweep/implant-profile-360-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 16,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2302,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2285,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/implant-profile-360-light-initial.png",
+            "qa/shots/sweep/implant-profile-360-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 16,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2302,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2285,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "amhs-sim",
+      "error": "Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed."
+    },
+    {
+      "id": "ald-cycle",
+      "error": "Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed."
+    },
+    {
+      "id": "implanter-beamline",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/implanter-beamline-760-dark-initial.png",
+            "qa/shots/sweep/implanter-beamline-760-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 15,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1186,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1186,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/implanter-beamline-760-light-initial.png",
+            "qa/shots/sweep/implanter-beamline-760-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 15,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1186,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1186,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/implanter-beamline-360-dark-initial.png",
+            "qa/shots/sweep/implanter-beamline-360-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 15,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2422,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2422,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/implanter-beamline-360-light-initial.png",
+            "qa/shots/sweep/implanter-beamline-360-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 15,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2422,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2422,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "mosfet-iv",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/mosfet-iv-760-dark-initial.png",
+            "qa/shots/sweep/mosfet-iv-760-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 14,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1397,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1371,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/mosfet-iv-760-light-initial.png",
+            "qa/shots/sweep/mosfet-iv-760-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 14,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1397,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1394,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/mosfet-iv-360-dark-initial.png",
+            "qa/shots/sweep/mosfet-iv-360-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 14,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2904,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2902,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/mosfet-iv-360-light-initial.png",
+            "qa/shots/sweep/mosfet-iv-360-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 14,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2904,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2902,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "nand-3d-build",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/nand-3d-build-760-dark-initial.png",
+            "qa/shots/sweep/nand-3d-build-760-dark-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 11,
+          "buttonsClicked": 14,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1514,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1492,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/nand-3d-build-760-light-initial.png",
+            "qa/shots/sweep/nand-3d-build-760-light-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 11,
+          "buttonsClicked": 14,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1514,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1492,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/nand-3d-build-360-dark-initial.png",
+            "qa/shots/sweep/nand-3d-build-360-dark-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 11,
+          "buttonsClicked": 14,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2659,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2615,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/nand-3d-build-360-light-initial.png",
+            "qa/shots/sweep/nand-3d-build-360-light-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 11,
+          "buttonsClicked": 14,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2659,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2615,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "node-table",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/node-table-760-dark-initial.png",
+            "qa/shots/sweep/node-table-760-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 18,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2274,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2274,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/node-table-760-light-initial.png",
+            "qa/shots/sweep/node-table-760-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 18,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2274,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2274,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/node-table-360-dark-initial.png",
+            "qa/shots/sweep/node-table-360-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 18,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2659,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2659,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/node-table-360-light-initial.png",
+            "qa/shots/sweep/node-table-360-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 18,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2659,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2659,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "nvlink-topology",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/nvlink-topology-760-dark-initial.png",
+            "qa/shots/sweep/nvlink-topology-760-dark-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 150,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1527,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1527,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/nvlink-topology-760-light-initial.png",
+            "qa/shots/sweep/nvlink-topology-760-light-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 150,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1527,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1527,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/nvlink-topology-360-dark-initial.png",
+            "qa/shots/sweep/nvlink-topology-360-dark-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 150,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2861,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2861,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/nvlink-topology-360-light-initial.png",
+            "qa/shots/sweep/nvlink-topology-360-light-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 150,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2861,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2861,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "package-xsection",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/package-xsection-760-dark-initial.png",
+            "qa/shots/sweep/package-xsection-760-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 16,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1277,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1277,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/package-xsection-760-light-initial.png",
+            "qa/shots/sweep/package-xsection-760-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 16,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1277,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1277,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/package-xsection-360-dark-initial.png",
+            "qa/shots/sweep/package-xsection-360-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 16,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1745,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1745,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/package-xsection-360-light-initial.png",
+            "qa/shots/sweep/package-xsection-360-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 16,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1745,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1745,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "plasma-reactor",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/plasma-reactor-760-dark-initial.png",
+            "qa/shots/sweep/plasma-reactor-760-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1487,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1560,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/plasma-reactor-760-light-initial.png",
+            "qa/shots/sweep/plasma-reactor-760-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1487,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1560,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/plasma-reactor-360-dark-initial.png",
+            "qa/shots/sweep/plasma-reactor-360-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2828,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2870,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/plasma-reactor-360-light-initial.png",
+            "qa/shots/sweep/plasma-reactor-360-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2828,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2870,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "purity",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/purity-760-dark-initial.png",
+            "qa/shots/sweep/purity-760-dark-interaction.png"
+          ],
+          "controls": 1,
+          "controlValuesExercised": 2,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1184,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1184,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/purity-760-light-initial.png",
+            "qa/shots/sweep/purity-760-light-interaction.png"
+          ],
+          "controls": 1,
+          "controlValuesExercised": 2,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1184,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1184,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/purity-360-dark-initial.png",
+            "qa/shots/sweep/purity-360-dark-interaction.png"
+          ],
+          "controls": 1,
+          "controlValuesExercised": 2,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1967,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1967,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/purity-360-light-initial.png",
+            "qa/shots/sweep/purity-360-light-interaction.png"
+          ],
+          "controls": 1,
+          "controlValuesExercised": 2,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1967,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1967,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "rack-explorer",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/rack-explorer-760-dark-initial.png",
+            "qa/shots/sweep/rack-explorer-760-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 859,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 806,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/rack-explorer-760-light-initial.png",
+            "qa/shots/sweep/rack-explorer-760-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 859,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 806,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/rack-explorer-360-dark-initial.png",
+            "qa/shots/sweep/rack-explorer-360-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1052,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1069,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/rack-explorer-360-light-initial.png",
+            "qa/shots/sweep/rack-explorer-360-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 6,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1052,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1069,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "rayleigh",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/rayleigh-760-dark-initial.png",
+            "qa/shots/sweep/rayleigh-760-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1523,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1523,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/rayleigh-760-light-initial.png",
+            "qa/shots/sweep/rayleigh-760-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1523,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1523,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/rayleigh-360-dark-initial.png",
+            "qa/shots/sweep/rayleigh-360-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2348,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2348,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/rayleigh-360-light-initial.png",
+            "qa/shots/sweep/rayleigh-360-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 10,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2348,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2348,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "resist-chemistry",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/resist-chemistry-760-dark-initial.png",
+            "qa/shots/sweep/resist-chemistry-760-dark-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 4,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1106,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1106,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/resist-chemistry-760-light-initial.png",
+            "qa/shots/sweep/resist-chemistry-760-light-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 4,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1106,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1106,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/resist-chemistry-360-dark-initial.png",
+            "qa/shots/sweep/resist-chemistry-360-dark-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 4,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1824,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1824,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/resist-chemistry-360-light-initial.png",
+            "qa/shots/sweep/resist-chemistry-360-light-interaction.png"
+          ],
+          "controls": 4,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 4,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1824,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1824,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "sadp",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/sadp-760-dark-initial.png",
+            "qa/shots/sweep/sadp-760-dark-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1018,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1018,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/sadp-760-light-initial.png",
+            "qa/shots/sweep/sadp-760-light-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1018,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1018,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/sadp-360-dark-initial.png",
+            "qa/shots/sweep/sadp-360-dark-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1652,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1652,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/sadp-360-light-initial.png",
+            "qa/shots/sweep/sadp-360-light-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1652,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1652,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "scale-ladder",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/scale-ladder-760-dark-initial.png",
+            "qa/shots/sweep/scale-ladder-760-dark-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 62,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1670,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1670,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/scale-ladder-760-light-initial.png",
+            "qa/shots/sweep/scale-ladder-760-light-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 62,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1670,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1670,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/scale-ladder-360-dark-initial.png",
+            "qa/shots/sweep/scale-ladder-360-dark-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 62,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2049,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2049,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/scale-ladder-360-light-initial.png",
+            "qa/shots/sweep/scale-ladder-360-light-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 62,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2049,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2049,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "test-cost",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/test-cost-760-dark-initial.png",
+            "qa/shots/sweep/test-cost-760-dark-interaction.png"
+          ],
+          "controls": 10,
+          "controlValuesExercised": 20,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1410,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1410,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/test-cost-760-light-initial.png",
+            "qa/shots/sweep/test-cost-760-light-interaction.png"
+          ],
+          "controls": 10,
+          "controlValuesExercised": 20,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1410,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1410,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/test-cost-360-dark-initial.png",
+            "qa/shots/sweep/test-cost-360-dark-interaction.png"
+          ],
+          "controls": 10,
+          "controlValuesExercised": 20,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1984,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1984,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/test-cost-360-light-initial.png",
+            "qa/shots/sweep/test-cost-360-light-interaction.png"
+          ],
+          "controls": 10,
+          "controlValuesExercised": 20,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1984,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1984,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "transistor-evolution",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/transistor-evolution-760-dark-initial.png",
+            "qa/shots/sweep/transistor-evolution-760-dark-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1032,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1166,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/transistor-evolution-760-light-initial.png",
+            "qa/shots/sweep/transistor-evolution-760-light-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1032,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1166,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/transistor-evolution-360-dark-initial.png",
+            "qa/shots/sweep/transistor-evolution-360-dark-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2237,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2355,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/transistor-evolution-360-light-initial.png",
+            "qa/shots/sweep/transistor-evolution-360-light-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 4,
+          "buttonsClicked": 3,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2237,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2355,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "upw-mask-cost",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/upw-mask-cost-760-dark-initial.png",
+            "qa/shots/sweep/upw-mask-cost-760-dark-interaction.png"
+          ],
+          "controls": 8,
+          "controlValuesExercised": 17,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1758,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1758,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/upw-mask-cost-760-light-initial.png",
+            "qa/shots/sweep/upw-mask-cost-760-light-interaction.png"
+          ],
+          "controls": 8,
+          "controlValuesExercised": 17,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1758,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1758,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/upw-mask-cost-360-dark-initial.png",
+            "qa/shots/sweep/upw-mask-cost-360-dark-interaction.png"
+          ],
+          "controls": 8,
+          "controlValuesExercised": 17,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 3151,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 3151,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/upw-mask-cost-360-light-initial.png",
+            "qa/shots/sweep/upw-mask-cost-360-light-interaction.png"
+          ],
+          "controls": 8,
+          "controlValuesExercised": 17,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 3151,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 3151,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "wafer-price",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/wafer-price-760-dark-initial.png",
+            "qa/shots/sweep/wafer-price-760-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1740,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1740,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/wafer-price-760-light-initial.png",
+            "qa/shots/sweep/wafer-price-760-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1740,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1740,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/wafer-price-360-dark-initial.png",
+            "qa/shots/sweep/wafer-price-360-dark-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2552,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2552,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/wafer-price-360-light-initial.png",
+            "qa/shots/sweep/wafer-price-360-light-interaction.png"
+          ],
+          "controls": 6,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2552,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2552,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "wafer-slicing",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/wafer-slicing-760-dark-initial.png",
+            "qa/shots/sweep/wafer-slicing-760-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1545,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1545,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/wafer-slicing-760-light-initial.png",
+            "qa/shots/sweep/wafer-slicing-760-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1545,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1545,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/wafer-slicing-360-dark-initial.png",
+            "qa/shots/sweep/wafer-slicing-360-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2456,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2456,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/wafer-slicing-360-light-initial.png",
+            "qa/shots/sweep/wafer-slicing-360-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 6,
+          "buttonsClicked": 1,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2456,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2456,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "wafer-sort-sim",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/wafer-sort-sim-760-dark-initial.png",
+            "qa/shots/sweep/wafer-sort-sim-760-dark-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1771,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1771,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/wafer-sort-sim-760-light-initial.png",
+            "qa/shots/sweep/wafer-sort-sim-760-light-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1771,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1771,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/wafer-sort-sim-360-dark-initial.png",
+            "qa/shots/sweep/wafer-sort-sim-360-dark-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 3382,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 3402,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/wafer-sort-sim-360-light-initial.png",
+            "qa/shots/sweep/wafer-sort-sim-360-light-interaction.png"
+          ],
+          "controls": 5,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 3382,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 3402,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "yield-calculator",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/yield-calculator-760-dark-initial.png",
+            "qa/shots/sweep/yield-calculator-760-dark-interaction.png"
+          ],
+          "controls": 9,
+          "controlValuesExercised": 19,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1799,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1799,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/yield-calculator-760-light-initial.png",
+            "qa/shots/sweep/yield-calculator-760-light-interaction.png"
+          ],
+          "controls": 9,
+          "controlValuesExercised": 19,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1799,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1799,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/yield-calculator-360-dark-initial.png",
+            "qa/shots/sweep/yield-calculator-360-dark-interaction.png"
+          ],
+          "controls": 9,
+          "controlValuesExercised": 19,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2616,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2616,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/yield-calculator-360-light-initial.png",
+            "qa/shots/sweep/yield-calculator-360-light-interaction.png"
+          ],
+          "controls": 9,
+          "controlValuesExercised": 19,
+          "buttonsClicked": 5,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2616,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2616,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "yield-cascade",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/yield-cascade-760-dark-initial.png",
+            "qa/shots/sweep/yield-cascade-760-dark-interaction.png"
+          ],
+          "controls": 11,
+          "controlValuesExercised": 22,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1622,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1622,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/yield-cascade-760-light-initial.png",
+            "qa/shots/sweep/yield-cascade-760-light-interaction.png"
+          ],
+          "controls": 11,
+          "controlValuesExercised": 22,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1622,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1622,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/yield-cascade-360-dark-initial.png",
+            "qa/shots/sweep/yield-cascade-360-dark-interaction.png"
+          ],
+          "controls": 11,
+          "controlValuesExercised": 22,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2507,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2507,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/yield-cascade-360-light-initial.png",
+            "qa/shots/sweep/yield-cascade-360-light-interaction.png"
+          ],
+          "controls": 11,
+          "controlValuesExercised": 22,
+          "buttonsClicked": 0,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2507,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2507,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "litho-track",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/litho-track-760-dark-initial.png",
+            "qa/shots/sweep/litho-track-760-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 12,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1415,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1437,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/litho-track-760-light-initial.png",
+            "qa/shots/sweep/litho-track-760-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 12,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1415,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1437,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/litho-track-360-dark-initial.png",
+            "qa/shots/sweep/litho-track-360-dark-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 12,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2829,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2895,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/litho-track-360-light-initial.png",
+            "qa/shots/sweep/litho-track-360-light-interaction.png"
+          ],
+          "controls": 3,
+          "controlValuesExercised": 8,
+          "buttonsClicked": 12,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2829,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 2895,
+            "boxWidth": 324
+          }
+        }
+      ]
+    },
+    {
+      "id": "moores-law",
+      "errors": [],
+      "results": [
+        {
+          "width": 760,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/moores-law-760-dark-initial.png",
+            "qa/shots/sweep/moores-law-760-dark-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 5,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1238,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1238,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 760,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/moores-law-760-light-initial.png",
+            "qa/shots/sweep/moores-law-760-light-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 5,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1238,
+            "boxWidth": 724
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1238,
+            "boxWidth": 724
+          }
+        },
+        {
+          "width": 360,
+          "theme": "dark",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/moores-law-360-dark-initial.png",
+            "qa/shots/sweep/moores-law-360-dark-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 5,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1912,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1912,
+            "boxWidth": 324
+          }
+        },
+        {
+          "width": 360,
+          "theme": "light",
+          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+          "shots": [
+            "qa/shots/sweep/moores-law-360-light-initial.png",
+            "qa/shots/sweep/moores-law-360-light-interaction.png"
+          ],
+          "controls": 2,
+          "controlValuesExercised": 5,
+          "buttonsClicked": 2,
+          "states": [],
+          "status": {
+            "error": "",
+            "invalidNumber": false,
+            "documentOverflow": false
+          },
+          "initial": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1912,
+            "boxWidth": 324
+          },
+          "final": {
+            "overlaps": [],
+            "overflow": [],
+            "tinyText": [],
+            "emptyArea": null,
+            "boxHeight": 1912,
+            "boxWidth": 324
+          }
+        }
+      ]
+    }
+  ]
+}

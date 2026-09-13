@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-09-13T22:13:39.539459+00:00",
+  "buildReport": "final-build.json",
+  "staticReport": "static-check.json",
+  "static": {
+    "timestamp": "2026-09-13T22:07:54.470Z",
+    "modules": 22,
+    "surveys": 10,
+    "widgets": 46,
+    "quizQuestions": 176,
+    "internalLinksChecked": 34,
+    "errors": [],
+    "warnings": []
+  },
+  "shellReport": "shell-check.json",
+  "shellChecks": 8,
+  "shellErrors": [],
+  "pageReport": "pages-sweep.json",
+  "pageTimestamp": "2026-09-13T22:10:41.954Z",
+  "pageCases": 132,
+  "routes": 33,
+  "viewports": [
+    1280,
+    375
+  ],
+  "actualDarkCases": 66,
+  "actualLightCases": 66,
+  "widgetMounts": 232,
+  "pageErrors": [],
+  "pageFailures": [],
+  "sourceHashesChecked": 54,
+  "generatedHashesChecked": 2,
+  "changedSourcesOrBuilds": [],
+  "widgetCoverageReport": "coverage-summary.json",
+  "visualInspectionScope": "See QA-2026-09-13.md; automated coverage is not exhaustive visual certification."
+}

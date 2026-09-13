@@ -77,6 +77,17 @@
       ],
       "answer": 1,
       "explanation": "28.6 / 22.0 = 1.30, a 30% rise, above the +20% delta limit though inside the 35 A absolute limit. FT2 looks up the same unit's FT1 record by ECID in the STDF database. If every unit in the lot had risen by ~25%, the diagnosis would be an over-stressed burn-in recipe or a mis-set FT2 thermal head (checked with golden units), not a lot of degrading parts."
+    },
+    {
+      "q": "A qualification sample completes accelerated life testing with zero failures. Which conclusion is justified?",
+      "options": [
+        "The product has zero field failure rate",
+        "Under the assumed stress model and sampling assumptions, the result supports a statistical upper bound on failure rate",
+        "The activation energy of every failure mechanism must be 0.7 eV",
+        "Burn-in can be removed from production without further evidence"
+      ],
+      "answer": 1,
+      "explanation": "A finite zero-failure sample does not prove zero risk. Confidence bounds depend on exposure, sample size and model validity; different mechanisms may accelerate differently."
     }
   ]
 }

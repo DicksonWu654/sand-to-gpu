@@ -1,58 +1,74 @@
-# Sand to GPU: The Complete Semiconductor Supply Chain
+# Sand to GPU
 
-A self-study course that follows silicon from a quartz mine to an NVIDIA GB200 NVL72 rack, at the
-level of the physics, the chemistry, the machines, the real numbers and the real companies.
+An in-depth, self-study course following silicon from quartz to an NVIDIA GPU rack. It explains the physics, chemistry, manufacturing equipment, supply chain, and engineering tradeoffs for a reader who knows programming and school science.
 
-## What is here
+## Course tracks
 
-```
-course/
-  CURRICULUM.md          the 22-module syllabus
-  STYLE_GUIDE.md         the rules every module was written to
-  REVIEW_BRIEF.md        the rules every module was fact-checked to
-  modules/NN-slug.md     the 22 modules (~230,000 words of Markdown)
-  quizzes/NN-slug.json   6 questions per module
-  review/NN-slug.md      the fact-check report for each module (claims checked, verdicts, edits)
-site/
-  index.html             the interactive learning site (open via a static server; see below)
-  widgets/*.js           28 interactive visuals embedded in the modules
-  content.js             generated from course/ by build.js
-build.js                 regenerates site/content.js from course/modules + course/quizzes
-serve.js                 tiny static server for the site
-```
-
-## Reading order
+- **Deep dive:** 22 modules, roughly 512,000 words, covering materials, wafer fabrication, transistors, memory, packaging, testing, GPU systems, and economics.
+- **Survey:** ten shorter chapters connecting the whole supply chain, with links into the deep modules.
+- **Interactive learning:** 46 widget implementations, eight-question module quizzes, search, a glossary, and browser-local progress and theme preferences.
 
 | Part | Modules |
 |---|---|
-| I  Raw materials and wafers | 00 Overview · 01 Sand to polysilicon · 02 Crystal growth · 03 Ingot to wafer · 04 Compound semiconductors and consumables |
-| II  The front end (the fab) | 05 Inside a fab · 06 Oxidation and deposition · 07 DUV lithography · 08 EUV lithography · 09 Etch · 10 Doping · 11 Transistor architectures · 12 Interconnect · 13 Metrology and yield · 14 Wafer sort and test |
-| III Memory | 15 DRAM, NAND and HBM |
-| IV  The back end | 16 Packaging fundamentals · 17 CoWoS, SoIC and chiplets · 18 Final test and burn-in · 19 Building an NVIDIA GPU |
-| V   The ecosystem | 20 Economics and geopolitics · 21 Glossary, node table and master process flow |
+| Materials and wafers | 00 Overview · 01 Sand to polysilicon · 02 Crystal growth · 03 Ingot to wafer · 04 Compound semiconductors and consumables |
+| The fab | 05 Inside a fab · 06 Oxidation and deposition · 07 DUV lithography · 08 EUV lithography · 09 Etch · 10 Doping |
+| Devices, wiring, and yield | 11 Transistors · 12 Interconnect · 13 Metrology and yield · 14 Wafer sort and test |
+| Memory and packaging | 15 DRAM, NAND, and HBM · 16 Packaging · 17 CoWoS, SoIC, and chiplets |
+| Systems and the industry | 18 Final test · 19 Building an NVIDIA GPU · 20 Economics and geopolitics · 21 Glossary and reference tables |
 
-Every module ends with a Key Numbers table, a Key Players table, Common Misconceptions, a paragraph
-placing the stage in the chain, and Further Reading. Numbers marked "~" are approximate; anything
-from 2025–2026 is flagged with an "as of" date in the text.
+## Run locally
 
-## Running the site
+Install Node.js and the locked dependencies, then build and serve:
 
 ```bash
+npm ci
+node build.js
 node serve.js
 ```
 
-then open http://localhost:8790. Progress, quiz scores and theme are stored in your browser only.
+Open [the local course](http://localhost:8790). Use `PORT` to select a different server port. Re-run `node build.js` after editing modules, surveys, quizzes, or widget placements. Progress and quiz scores stay in your browser.
 
-If you edit a module, rebuild the site content with:
+## Check changes
+
+With the local server running:
 
 ```bash
-node build.js
+npm run build
+npm run check
+node qa/shell.js
+npm run qa:sweep -- widgets
+npm run qa:sweep -- pages
 ```
 
-## Accuracy
+For one visual, run `npm run qa:widget -- hbm-stack`. For one page, run `npm run qa:page -- "#/s/01" --width 375 --theme light`.
 
-Each module was written by one author agent and then independently fact-checked by a reviewer agent
-with web access, which verified 30–45 load-bearing claims per module against primary sources and
-edited the module directly. The per-module reports in `course/review/` list every claim, its verdict
-and the source used. Proprietary details (exact fab recipes, contract prices) are described from
-public information and hedged as such.
+Browser checks require Chrome or Chromium. The harness uses Puppeteer's browser, an installed system browser, or `PUPPETEER_EXECUTABLE_PATH`. If needed, install the bundled browser with `npx puppeteer browsers install chrome`. Use `QA_BASE_URL` for a different preview address. Static, shell, and batch checks save JSON reports in `qa/reports/`. Single-widget and single-page commands print their JSON result to standard output; redirect it to a file if needed. Generated screenshots are ignored by Git. Automated geometry checks complement visual inspection; they do not prove the diagrams or course content are scientifically correct.
+
+## Files
+
+```text
+course/modules/           Deep modules (the source of truth)
+course/survey/            Survey chapters
+course/quizzes/           Module quiz data
+course/review/            Historical and second-round review evidence
+course/v1/                Preserved first edition
+site/                     Static learning application and widgets
+site/content.js           Generated content consumed by the application
+qa/                       Browser harness, interaction scenarios, and QA reports
+build.js                  Generates site/content.js
+serve.js                  Local static server
+HANDOFF.md                Original Claude handoff (historical state)
+CONTINUATION_2026-09-13.md Follow-up work, validation, and remaining limits
+```
+
+`course/TEACHING_GUIDE.md` defines the intended reader, explanation sequence, and depth standard. `course/SURVEY_GUIDE.md` defines the shorter track. `qa/WIDGET_QA_STANDARD.md` defines visual and interaction checks.
+
+## Accuracy and review scope
+
+The course combines published technical facts with approximate process ranges and illustrative economic models. Proprietary recipes, prices, market shares, and future plans require particular care. Historical claims retain their stated timeframe; the course is not a live market-data feed.
+
+First-round reports are preserved in `course/review/`. Files ending in `-r2.md` record the follow-up review: the claims examined, supporting primary sources, corrections, and unresolved limits. A targeted review of key claims is not an exhaustive verification of this half-million-word course. Consult the report for each module before relying on a particular number. The [round-two summary](course/review/ROUND2_SUMMARY_2026-09-13.md) counts 669 assessed claims, including 193 explicitly unresolved rows; other rows include conditional calculations and scope corrections.
+
+## Repository
+
+The repository is private. Commits use the configured Git identity and GPG signing key. Dependencies, local credentials, and generated screenshots are excluded; source, review evidence, and reproducible checks are retained. The original hosted Claude artifact is separate from this Git repository.

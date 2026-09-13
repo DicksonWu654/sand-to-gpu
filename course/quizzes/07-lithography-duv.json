@@ -68,10 +68,10 @@
       "explanation": "EUV took the ~15–25 tightest layers (fins, gates, contacts, M1–M4, cuts) where SAQP/LELELE were prohibitively expensive; layers that print in one 193i pass stay on DUV because they are cheaper. N5 was the first TSMC node with fewer masks than its predecessor. ASML is ~90% of litho by revenue; Nikon and Canon are a few percent each."
     },
     {
-      "q": "A layer is qualified at \"8% exposure latitude at 80 nm depth of focus\". What does that statement mean, and which errors consume the budget it describes?",
+      "q": "A layer is qualified at \"8% exposure latitude at 64 nm depth of focus\". What does that statement mean, and which errors consume the budget it describes?",
       "options": [
         "The laser must deliver exactly 8% of its rated power and the lens must be refocused every 80 nm of scan travel; the budget is consumed by stage speed and reticle heating",
-        "The dose may vary by ±4% and the focus by ±40 nm, in any combination, with the printed CD staying within ±10% of target; dose-equivalent errors (laser ~±0.3%, slit uniformity ~±0.3%, resist-thickness swing ~±1%, PEB temperature ~±0.4 nm of CD via ~2 nm/°C, i.e. ~±0.4% dose-equivalent at ~1 nm per 1% dose) and focus errors (levelling ~±15 nm, wafer flatness and topography ~±20 nm, chuck ~±10 nm, lens heating ~±10 nm, ~±29 nm in quadrature against the ±32 nm half-range) each eat into it, and the layer is manufacturable only if what remains is positive",
+        "The dose may vary by ±4% and the focus by ±32 nm, in any combination, with the printed CD staying within ±10% of target; dose-equivalent errors (laser ~±0.3%, slit uniformity ~±0.3%, resist-thickness swing ~±1%, PEB temperature ~±0.4 nm of CD via ~2 nm/°C, i.e. ~±0.4% dose-equivalent at ~1 nm per 1% dose) and focus errors (levelling ~±15 nm, wafer flatness and topography ~±20 nm, chuck ~±10 nm, lens heating ~±10 nm, ~±29 nm in quadrature against the ±32 nm half-range) each eat into it, and the layer is manufacturable only if what remains is positive",
         "8% of dies fail at the wafer edge because the immersion hood leaves 80 nm of water behind; the budget is consumed by watermarks",
         "The resist absorbs 8% of the light in an 80 nm film; the budget is consumed by photon shot noise"
       ],
@@ -83,7 +83,7 @@
       "options": [
         "Because the 193 nm laser's 0.3 pm bandwidth produces a 3–5 nm chromatic blur; halving LER requires a 0.15 pm laser",
         "Because the developer normality (0.26 N) sets a 3–5 nm dissolution front; halving LER needs a double puddle",
-        "Because 30 mJ/cm² is ~2.9 × 10¹⁶ photons/cm², of which a 100 nm film absorbs only ~10%, giving ~10¹⁹–10²⁰ acids/cm³, so a 20 × 20 × 100 nm line segment holds only ~400 acids and its count fluctuates by √400 ≈ 5% (shot noise); with LER² × dose × resolution³ ≈ constant, halving LER at fixed resolution costs ~4× the dose",
+        "Because 30 mJ/cm² is ~2.9 × 10¹⁶ photons/cm², of which a 100 nm film absorbs only ~10%, giving ~10¹⁹–10²⁰ acids/cm³, so a 20 × 20 × 100 nm line segment holds only ~400 acids and its count fluctuates by 1/√400 ≈ 5% (shot noise); with LER² × dose × resolution³ ≈ constant, halving LER at fixed resolution costs ~4× the dose",
         "Because the ALD spacer in SADP is only controllable to 0.5 nm; halving LER needs a thicker spacer"
       ],
       "answer": 2,

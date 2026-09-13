@@ -71,7 +71,8 @@
       const ctx = Object.assign({}, ctxBase, { onTheme(fn) { listeners.push(fn); themeListeners.add(fn); } });
       try {
         const cleanup = def.mount(body, ctx);
-        activeCleanups.push(() => { listeners.forEach(fn => themeListeners.delete(fn)); if (typeof cleanup === 'function') { try { cleanup(); } catch (e) { } } });
+        const cleanupDiagrams = window.prepareWidgetDiagrams(body);
+        activeCleanups.push(() => { cleanupDiagrams(); listeners.forEach(fn => themeListeners.delete(fn)); if (typeof cleanup === 'function') { try { cleanup(); } catch (e) { } } });
       } catch (e) {
         body.classList.add('error'); body.textContent = 'This interactive failed to load: ' + e.message; console.error(id, e);
       }
@@ -80,7 +81,7 @@
   function unmountWidgets() { activeCleanups.forEach(fn => fn()); activeCleanups = []; }
 
   // ---------- progress ----------
-  function passed(n) { const q = state.quiz[n]; return q && q.total && q.score / q.total >= 0.67; }
+  function passed(n) { const q = state.quiz[n]; return q && q.total && q.score / q.total >= 2 / 3; }
   function progressPct() {
     let pts = 0; mods.forEach(m => { if (state.read[m.n]) pts += 0.5; if (passed(m.n)) pts += 0.5; });
     return Math.round(100 * pts / mods.length);
@@ -100,13 +101,13 @@
     sb.append(ctxBase.h('a', { class: 'home', href: '#/home' }, iconHome(), 'Start here: the map'));
     if (survey.length) {
       const sw = ctxBase.h('div', { class: 'track-switch', role: 'tablist', 'aria-label': 'Course track' },
-        ctxBase.h('button', { class: 'track-btn' + (state.track === 'survey' ? ' active' : ''), role: 'tab', 'aria-selected': String(state.track === 'survey'), on: { click: () => { setTrack('survey'); location.hash = '#/s/01'; } } }, ctxBase.h('b', null, 'Survey'), ctxBase.h('small', null, '10 chapters · an afternoon')),
-        ctxBase.h('button', { class: 'track-btn' + (state.track === 'deep' ? ' active' : ''), role: 'tab', 'aria-selected': String(state.track === 'deep'), on: { click: () => { setTrack('deep'); location.hash = '#/m/00'; } } }, ctxBase.h('b', null, 'Deep dive'), ctxBase.h('small', null, '22 modules · the full course')));
+        ctxBase.h('button', { class: 'track-btn' + (state.track === 'survey' ? ' active' : ''), role: 'tab', 'aria-selected': String(state.track === 'survey'), on: { click: () => { setTrack('survey'); location.hash = '#/s/01'; } } }, ctxBase.h('b', null, 'Survey'), ctxBase.h('small', null, survey.length + ' chapters · an afternoon')),
+        ctxBase.h('button', { class: 'track-btn' + (state.track === 'deep' ? ' active' : ''), role: 'tab', 'aria-selected': String(state.track === 'deep'), on: { click: () => { setTrack('deep'); location.hash = '#/m/00'; } } }, ctxBase.h('b', null, 'Deep dive'), ctxBase.h('small', null, mods.length + ' modules · the full course')));
       sb.append(sw);
     }
     if (state.track === 'survey' && survey.length) {
       const box = ctxBase.h('div', { class: 'part' });
-      box.append(ctxBase.h('div', { class: 'part-h' }, ctxBase.h('b', null, 'Survey'), 'The whole chain in ten chapters'));
+      box.append(ctxBase.h('div', { class: 'part-h' }, ctxBase.h('b', null, 'Survey'), 'The whole chain in ' + survey.length + ' chapters'));
       for (const s of survey) {
         box.append(ctxBase.h('a', { class: 'mod' + (state.sread[s.n] ? ' read' : ''), href: '#/s/' + pad(s.n), 'data-s': s.n },
           ctxBase.h('span', { class: 'num' }, 'S' + s.n), ctxBase.h('span', null, s.title), ctxBase.h('span', { class: 'tick' }, iconCheck())));
@@ -138,6 +139,7 @@
     const m = hash.match(/^#\/m\/(\d+)(?:\/(.+))?/);
     const s = hash.match(/^#\/s\/(\d+)(?:\/(.+))?/);
     unmountWidgets();
+    if (spyHandler) { window.removeEventListener('scroll', spyHandler); spyHandler = null; }
     closeSidebar();
     if (s && survey.length) {
       if (state.track !== 'survey') { state.track = 'survey'; store.set('track', 'survey'); renderSidebar(); }
@@ -163,7 +165,7 @@
     art.append(ctxBase.h('section', { class: 'home-hero' },
       ctxBase.h('div', { class: 'eyebrow' }, 'A self-study course', ctxBase.h('span', { class: 'dot' }), ctxBase.h('span', { class: 'meta' }, 'last built ' + C.built.slice(0, 10))),
       ctxBase.h('h1', null, 'From a quartz mine to an NVIDIA rack, one process step at a time.'),
-      ctxBase.h('p', { class: 'lede' }, 'Twenty-two modules that follow silicon through purification, crystal pulling, wafering, the ~1,500-step fab flow, EUV lithography, transistors, interconnect, test, HBM, CoWoS packaging, and finally into a GB200 rack. Every stage is explained at the level of the physics and the machines, with the real numbers and the real companies.'),
+      ctxBase.h('p', { class: 'lede' }, mods.length + ' modules that follow silicon through purification, crystal pulling, wafering, the ~1,500-step fab flow, EUV lithography, transistors, interconnect, test, HBM, CoWoS packaging, and finally into a GB200 rack. Every stage is explained at the level of the physics and the machines, using published specifications, illustrative models, and supplier examples.'),
       ctxBase.h('div', { class: 'cta-row' },
         survey.length ? ctxBase.h('a', { class: 'cta primary', href: '#/s/01' }, 'Start with the survey (an afternoon)') : null,
         ctxBase.h('a', { class: 'cta' + (survey.length ? '' : ' primary'), href: last ? '#/m/' + pad(last.n) : '#/m/00' }, last ? 'Continue deep dive: ' + pad(last.n) + ' ' + last.title : 'Start the deep dive'),
@@ -284,8 +286,8 @@
       score.textContent = `${done} / ${total} answered · ${ok} correct`;
       if (done === total) {
         state.quiz[m.n] = { score: ok, total }; store.set('quiz', state.quiz); renderProgress();
-        verdict.textContent = ok / total >= 0.67 ? `Passed: ${ok} of ${total}.` : `${ok} of ${total}. Re-read the sections you missed and retry.`;
-        verdict.classList.toggle('pass', ok / total >= 0.67);
+        verdict.textContent = ok / total >= 2 / 3 ? `Passed: ${ok} of ${total}.` : `${ok} of ${total}. Re-read the sections you missed and retry.`;
+        verdict.classList.toggle('pass', ok / total >= 2 / 3);
       } else if (saved) verdict.textContent = `Previous attempt: ${saved.score} of ${saved.total}.`;
     }
     qs.forEach((q, i) => {
@@ -372,9 +374,12 @@
   }
 
   // ---------- sidebar (mobile) ----------
-  function closeSidebar() { $('#sidebar').classList.remove('open'); $('#scrim').classList.remove('show'); }
+  const mobileSidebar = window.matchMedia('(max-width: 860px)');
+  function closeSidebar() { $('#sidebar').classList.remove('open'); $('#scrim').classList.remove('show'); $('#sidebar').inert = mobileSidebar.matches; $('#menu').setAttribute('aria-expanded', 'false'); }
   function setupChrome() {
-    $('#menu').addEventListener('click', () => { $('#sidebar').classList.toggle('open'); $('#scrim').classList.toggle('show'); });
+    $('#menu').addEventListener('click', () => { const open = $('#sidebar').classList.toggle('open'); $('#scrim').classList.toggle('show', open); $('#sidebar').inert = !open && mobileSidebar.matches; $('#menu').setAttribute('aria-expanded', String(open)); });
+    mobileSidebar.addEventListener('change', closeSidebar);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('#sidebar').classList.contains('open')) { closeSidebar(); $('#menu').focus(); } });
     $('#scrim').addEventListener('click', closeSidebar);
     $('#theme').addEventListener('click', () => {
       const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;

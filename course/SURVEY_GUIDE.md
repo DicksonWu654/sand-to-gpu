@@ -12,8 +12,9 @@ what each stage does, why it is hard, the two or three numbers that matter, who 
 connects to the stage before and after. They do not want recipes yet.
 
 ## Rules
-1. Every fact and number must come from the deep modules (course/modules/) as they stand now; those
-   have been fact-checked twice. Do not introduce numbers that are not in a deep module. Quote the
+1. Every fact and number must come from the deep modules (course/modules/) after the relevant corrections in this iteration. Review coverage is recorded in
+   `course/review/`; do not assume that every claim has been verified twice. Do not introduce numbers
+   that are not in a deep module. Quote the
    same values the deep modules use so the two tracks never disagree.
 2. Plain language first. Define every term at first use, in one clause. Use analogies. One idea per
    paragraph. Short sections with descriptive headings.

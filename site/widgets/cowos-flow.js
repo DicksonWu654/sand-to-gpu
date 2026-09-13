@@ -21,7 +21,7 @@
     caption: 'Step through the twelve unit processes that turn a bare interposer wafer and known-good dies into a tested CoWoS package.',
     mount(el, ctx) {
       const { h, svg, fmt } = ctx;
-      const st = { i: 0, ipY: 0.98, gpuY: 0.85, hbmY: 0.99, asmY: 0.97, n: 8 };
+      const st = { i: 0, ipY: 0.98, gpuY: 0.999, hbmY: 0.999, asmY: 0.97, n: 8 };
 
       // ---------- step nav ----------
       const dotsWrap = h('div', { class: 'w-step-nav', role: 'tablist' });
@@ -39,30 +39,30 @@
       // ---------- yield stack ----------
       const mkSlider = (min, max, step, val) => h('input', { type: 'range', min, max, step, value: val });
       const inIp = mkSlider(80, 100, 0.5, st.ipY * 100), outIp = h('output');
-      const inGpu = mkSlider(50, 100, 1, st.gpuY * 100), outGpu = h('output');
+      const inGpu = mkSlider(90, 100, 0.01, st.gpuY * 100), outGpu = h('output');
       const inHbm = mkSlider(90, 100, 0.1, st.hbmY * 100), outHbm = h('output');
       const inAsm = mkSlider(80, 100, 0.5, st.asmY * 100), outAsm = h('output');
       const inN = mkSlider(4, 12, 1, st.n), outN = h('output');
       const yieldCtl = h('div', { class: 'w-controls' },
         h('label', { class: 'w-ctl' }, h('span', null, 'Interposer yield'), inIp, outIp),
-        h('label', { class: 'w-ctl' }, h('span', null, 'GPU die KGD'), inGpu, outGpu),
-        h('label', { class: 'w-ctl' }, h('span', null, 'HBM stack KGD'), inHbm, outHbm),
+        h('label', { class: 'w-ctl' }, h('span', null, 'GPU die sound after screen'), inGpu, outGpu),
+        h('label', { class: 'w-ctl' }, h('span', null, 'HBM sound after screen'), inHbm, outHbm),
         h('label', { class: 'w-ctl' }, h('span', null, 'Assembly yield'), inAsm, outAsm),
         h('label', { class: 'w-ctl' }, h('span', null, 'HBM stacks (N)'), inN, outN));
       const rProb = h('b'), rRisk = h('b');
       const yieldReadout = h('div', { class: 'w-readout' },
         h('div', { class: 'w-stat' }, rProb, h('span', null, 'P(package good)')),
         h('div', { class: 'w-stat' }, rRisk, h('span', null, '$ at risk if it fails late')));
-      const yieldFormula = h('div', { class: 'w-formula', html: 'P(good) = Y<sub>interposer</sub> × Y<sub>GPU·KGD</sub> × Y<sub>HBM·KGD</sub><sup>N</sup> × Y<sub>assembly</sub> &nbsp;·&nbsp; $ at risk = $<sub>GPU die</sub> + N·$<sub>HBM</sub> + $<sub>interposer</sub>' });
-      const GPU_PRICE = 450, HBM_PRICE = 150, IP_PRICE = 500;
+      const yieldFormula = h('div', { class: 'w-formula', html: 'P(good) = Y<sub>interposer</sub> × Y<sub>GPU·KGD</sub><sup>2</sup> × Y<sub>HBM·KGD</sub><sup>N</sup> × Y<sub>assembly</sub> &nbsp;·&nbsp; $ at risk = 2·$<sub>GPU die</sub> + N·$<sub>HBM</sub> + $<sub>interposer</sub>' });
+      const GPU_PRICE = 450, HBM_PRICE = 400, IP_PRICE = 1000;
 
       function updateYield() {
         st.ipY = +inIp.value / 100; st.gpuY = +inGpu.value / 100; st.hbmY = +inHbm.value / 100; st.asmY = +inAsm.value / 100; st.n = +inN.value;
-        outIp.textContent = fmt(+inIp.value, 1) + '%'; outGpu.textContent = fmt(+inGpu.value, 0) + '%'; outHbm.textContent = fmt(+inHbm.value, 1) + '%'; outAsm.textContent = fmt(+inAsm.value, 1) + '%'; outN.textContent = st.n;
-        const p = st.ipY * st.gpuY * Math.pow(st.hbmY, st.n) * st.asmY;
+        outIp.textContent = fmt(+inIp.value, 1) + '%'; outGpu.textContent = fmt(+inGpu.value, 2) + '%'; outHbm.textContent = fmt(+inHbm.value, 1) + '%'; outAsm.textContent = fmt(+inAsm.value, 1) + '%'; outN.textContent = st.n;
+        const p = st.ipY * st.gpuY ** 2 * Math.pow(st.hbmY, st.n) * st.asmY;
         rProb.textContent = fmt(p * 100, 1) + '%';
-        const risk = GPU_PRICE + st.n * HBM_PRICE + IP_PRICE;
-        rRisk.textContent = '$' + fmt(risk, 0) + ' (1 in ' + fmt(1 / (1 - p), 0) + ' fails)';
+        const risk = 2 * GPU_PRICE + st.n * HBM_PRICE + IP_PRICE;
+        rRisk.textContent = '$' + fmt(risk, 0) + (p >= 1 ? ' (model: no failures)' : ' (1 in ' + fmt(1 / (1 - p), 0) + ' fails)');
       }
       [inIp, inGpu, inHbm, inAsm, inN].forEach(i => i.addEventListener('input', updateYield));
 
@@ -176,7 +176,7 @@
       el.append(h('div', { class: 'w-steps' }, nav, dotsWrap, h('div', null, stepTitle, stepDesc), stepEquip, xsecHolder, legend),
         h('h5', { style: { margin: '18px 0 4px', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--muted)' } }, 'Yield stack: probability this package is good'),
         yieldCtl, yieldReadout, yieldFormula,
-        h('div', { class: 'w-note' }, 'Default prices: GPU die ~$450, HBM3E stack ~$150, interposer ~$500 (Module 17 economics). Once dies are placed and molded there is no rework, so every failure downstream of step 3 scraps everything built into the module so far.'));
+        h('div', { class: 'w-note' }, 'Illustrative 2025 Blackwell-class cost model, not a disclosed BOM: two GPU dies at ~$450 each, 24 GB HBM3E stacks at ~$400 each, interposer/assembly ~$1,000. Default eight-stack package: ~$5,100 at risk. Post-screen soundness is residual known-good-die quality, not raw wafer yield; independent failures are assumed. Once dies are placed and molded there is no rework, so every failure downstream of step 3 scraps everything built into the module so far.'));
       renderWrap();
       updateYield();
     }

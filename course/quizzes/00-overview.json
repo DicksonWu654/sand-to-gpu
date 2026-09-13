@@ -13,7 +13,7 @@
       "explanation": "The fab adds value through the ~1,000+ patterning, deposition, etch, implant, and CMP steps that build transistors and ~15-18 wiring levels, amortizing a $20-30B facility whose cost is ~70-80% equipment. Purity is fixed before the fab; thinning and HBM integration happen afterward, in packaging."
     },
     {
-      "q": "For an NVIDIA H100 SXM module with a bill of materials on the order of $3,000, which component is the largest share of cost?",
+      "q": "In the module's illustrative H100 SXM bill-of-materials model, which listed component contributes the largest estimated hardware cost?",
       "options": [
         "The 814 mm2 GPU die (~$350 at ~45-50 sellable die per ~$16.5k wafer)",
         "The five HBM3 stacks (80 GB at ~$15-20/GB, roughly $1,200-1,600)",
@@ -21,29 +21,29 @@
         "The SXM printed circuit board and voltage regulators"
       ],
       "answer": 1,
-      "explanation": "HBM is roughly 40-50% of the H100 BOM, with CoWoS packaging and substrate another ~20-25%. The GPU die itself is only ~10-15%, which is why memory and packaging, not the logic wafer, dominate the economics."
+      "explanation": "In this illustrative model, HBM has the largest listed component cost. These are estimates for a historical configuration, not disclosed purchasing prices or a measured NVIDIA product gross margin."
     },
     {
-      "q": "Why has TSMC's front-end wafer capacity NOT been the binding constraint on AI accelerator shipments in 2024-2026?",
+      "q": "TSMC reports total wafer capacity across many nodes. Why does that number alone fail to identify the bottleneck for a particular AI accelerator?",
       "options": [
-        "TSMC has more than 17 million 12-inch-equivalent wafers per year of capacity, but CoWoS packaging (~70-80k wafers/month at end-2025) and HBM supply limit how many packages can be assembled",
-        "NVIDIA moved most GPU production to Samsung and Intel Foundry",
-        "EUV scanner shortages stopped N4 wafer production",
-        "Silicon wafer supply from Shin-Etsu and SUMCO ran out"
+        "All process nodes and package types are interchangeable",
+        "A package needs appropriately allocated logic wafers, memory and packaging capacity; the smallest compatible output can constrain shipments",
+        "Only the raw silicon mass matters",
+        "Foundry capacity measures finished GPU racks"
       ],
-      "answer": 0,
-      "explanation": "Front-end N4/N5-class capacity could supply an order of magnitude more die than were shipped; the bottleneck sits after the wafer, in chip-on-wafer-on-substrate assembly (each CoWoS-L wafer yields only ~16 Blackwell packages) and in HBM stacks that were sold out for 2025 and 2026 in advance."
+      "answer": 1,
+      "explanation": "Total 12-inch-equivalent capacity does not disclose the relevant node, allocation, yield or package and memory availability. Bottlenecks must be assessed for the actual product and period."
     },
     {
-      "q": "An N3-class process has ~20-25 EUV layers. A fab running 100,000 wafer starts per month with EUV scanners delivering ~100-120k wafer-passes per month each needs approximately how many EUV tools?",
+      "q": "A planning example assumes 100,000 wafer starts per month, 24 EUV passes per wafer, and 100,000 productive passes per scanner per month. How many scanners cover that nominal workload?",
       "options": [
-        "2-3",
-        "6-8",
-        "20-25",
-        "150-200"
+        "4",
+        "12",
+        "24",
+        "240"
       ],
       "answer": 2,
-      "explanation": "100k wafers x ~20-25 layers = ~2-2.5 million EUV exposures per month; divided by ~100-120k passes per tool per month gives ~20-25 scanners, i.e. ~$4-5B of lithography tools at ~$200M each."
+      "explanation": "The demand is 2,400,000 passes per month. Divide by 100,000 productive passes per scanner to obtain 24 scanners. Real plans additionally account for the assumptions behind availability, dose, maintenance and reserve capacity."
     },
     {
       "q": "Which set correctly names the three chokepoints of the leading-edge supply chain as described in this module?",
@@ -68,15 +68,15 @@
       "explanation": "In a gate-last flow, a sacrificial amorphous-Si dummy gate is patterned first, spacers and embedded S/D epi are formed around it, ILD0 is deposited and polished to expose it, and only then is it removed and replaced with the HfO2 high-k stack, work-function metals, and W/Co fill, so the metals never see the S/D thermal budget."
     },
     {
-      "q": "Follow one 300 mm N4 wafer through the value ladder in this module: it enters the fab as a ~$150 polished wafer, leaves as a ~$16,500 processed wafer, and yields ~45-50 sellable H100-class dies. Roughly how much product (as SXM modules at 2023-2024 prices) does that one wafer's worth of dies become, and where does most of that value sit?",
+      "q": "A component BOM is estimated at $3,000 and a reseller quotes $30,000 for a GPU module. Which conclusion is justified?",
       "options": [
-        "About $16,500, almost all of it in the fab processing",
-        "About $1.1-1.5 million; most of it is HBM, packaging, board and NVIDIA gross margin rather than the wafer",
-        "About $100,000; most of it is the polysilicon and crystal growth",
-        "About $50 million; most of it is the EUV lithography cost per wafer"
+        "NVIDIA has a verified 90% product gross margin",
+        "NVIDIA spends $27,000 on R&D per unit",
+        "The component estimate is 10% of the reseller quote, but realized revenue and full cost of revenue are needed to calculate gross margin",
+        "The silicon wafer costs $30,000 per die"
       ],
-      "answer": 1,
-      "explanation": "~45-50 sellable dies x ~$25,000-30,000 per SXM module = ~$1.1-1.5 million per wafer. The ~$16,500 of fab processing is about 1% of that; each die is ~$350 of a ~$3,000 module BOM, of which HBM is ~40-50% and packaging ~20-25%, and everything above the BOM is NVIDIA gross margin. The value and the constraints sit after the wafer."
+      "answer": 2,
+      "explanation": "A BOM can omit manufacturing overhead, testing, warranty and other costs; the reseller quote need not equal manufacturer revenue. The arithmetic gap is not a disclosed margin."
     },
     {
       "q": "A GPU and its HBM stacks need thousands of wires between them in a strip a few millimetres wide. Which carrier can route wiring at the ~1 um pitch this requires, and what is it called in a CoWoS package?",

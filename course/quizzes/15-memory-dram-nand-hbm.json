@@ -57,15 +57,37 @@
       "explanation": "16 × ~ 30 µm dies + 16 bump gaps of ~ 12 µm + a ~ 50 µm base die + ~ 30 µm of bottom solder is ~ 750 µm, which fits in 775 µm with microbumps with only ~ 25 µm to spare; hybrid bonding would remove ~ 190 µm of gaps but requires sub-nm surface finishes and sub-µm placement that were not production-ready. The relaxed height therefore let vendors ship HBM4 with proven bonding."
     },
     {
-      "q": "TrendForce estimated HBM at ~ 18% of the top three suppliers' DRAM wafer input for ~ 8% of DRAM bit supply at end-2025. Which combination of factors explains this ~ 2-3× wafer-per-bit penalty?",
+      "q": "HBM requires 2.5 times as many wafer starts per shipped bit as conventional DRAM in an illustrative model. If 100,000 existing monthly starts are redirected from DRAM to HBM, what is the correct comparison?",
       "options": [
-        "HBM uses an older, larger DRAM node so that the TSVs can be etched",
-        "Each HBM stack requires a separate silicon interposer wafer made in the DRAM fab",
-        "HBM core dies are ~ 1.5-1.8× larger per bit (TSV columns, keep-out zones, wider datapath), stack assembly yields only ~ 60-80% for 12-high, every stack needs a foundry-made base die, and the core dies are on the newest node with the lowest output per tool",
-        "HBM cells need 3× larger capacitors to survive the higher operating temperature"
+        "250,000 physical DRAM wafer starts disappear",
+        "The redirected wafers produce HBM bits equivalent to about 40,000 conventional-DRAM wafers; total bit output falls by about 60,000 conventional-wafer-equivalents",
+        "HBM bit output is 250,000 conventional-wafer-equivalents",
+        "No bit output changes because a wafer always holds the same number of useful bits"
       ],
-      "answer": 2,
-      "explanation": "The cells are ordinary 1β/1γ DRAM; the penalty is architectural and yield-driven. This is why diverting ~ 100k wafers per month to HBM removes ~ 250k wafers per month of DDR5-equivalent bits and produced the 2025-26 conventional DRAM shortage."
+      "answer": 1,
+      "explanation": "100,000 / 2.5 = 40,000. The previous 100,000-wafer conventional output is displaced, so the net total-bit reduction is 60,000 equivalents. The inverse calculation—250,000 starts—applies to producing an HBM bit quantity equal to 100,000 conventional wafers."
+    },
+    {
+      "q": "Why does activating a DRAM row require restoring the stored values as part of sensing?",
+      "options": [
+        "DRAM reads use ultraviolet light that destroys the oxide",
+        "Connecting a cell capacitor to the bit line redistributes its small charge; the sense amplifier resolves and restores the value",
+        "The capacitor is deliberately erased to implement wear leveling",
+        "Refresh applies only to flash, so no restoration occurs"
+      ],
+      "answer": 1,
+      "explanation": "Charge sharing produces the small differential voltage used for sensing. The sense amplifier drives the selected cell back toward a clear stored state; the external read does not discard the data."
+    },
+    {
+      "q": "Two 3D NAND products advertise the same layer count. Why might they still have different usable bits per square millimeter?",
+      "options": [
+        "Only the product name determines density",
+        "Channel pitch, active versus support layers, bits per cell, periphery and redundancy can differ",
+        "All NAND cell areas are identical by JEDEC rule",
+        "Die area depends only on the number of packaging bumps"
+      ],
+      "answer": 1,
+      "explanation": "Layer count alone omits lateral geometry, state count and overhead. Compare like-for-like active layers and complete die area, then account for usable capacity and yield."
     }
   ]
 }

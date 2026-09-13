@@ -2,5 +2,14 @@
   "dependencies": {
     "marked": "^14.1.4",
     "puppeteer": "^23.11.1"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node serve.js",
+    "build": "node build.js",
+    "check": "node qa/check.js",
+    "qa:widget": "node qa/render.js widget",
+    "qa:page": "node qa/render.js page",
+    "qa:sweep": "node qa/sweep.js"
   }
 }

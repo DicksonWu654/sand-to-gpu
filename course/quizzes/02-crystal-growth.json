@@ -66,6 +66,28 @@
       ],
       "answer": 1,
       "explanation": "In FZ an RF coil melts a short zone in a vertical poly rod, held by surface tension and electromagnetic pressure, with no container to leach oxygen. It serves power devices, detectors and high-resistivity RF substrates, at a price multiple of CZ and with a 200 mm production ceiling."
+    },
+    {
+      "q": "A crystal grower increases pull speed while the axial temperature gradient stays fixed. Which control ratio changes directly?",
+      "options": [
+        "The v/G ratio increases",
+        "The silicon melting point rises",
+        "The wafer diameter must double",
+        "The segregation coefficient becomes exactly one"
+      ],
+      "answer": 0,
+      "explanation": "v is pull speed and G is temperature gradient. Their ratio affects the balance of intrinsic point defects; faster output must be checked against the defect-control window."
+    },
+    {
+      "q": "Why does float-zone growth usually introduce less oxygen than conventional CZ growth?",
+      "options": [
+        "It uses a colder solid throughout",
+        "Its molten zone does not contact a quartz crucible",
+        "The silicon contains no oxygen atoms before growth under any circumstances",
+        "It eliminates the need for a seed crystal"
+      ],
+      "answer": 1,
+      "explanation": "A quartz crucible supplies oxygen to a CZ melt. Avoiding that contact removes an important oxygen source; it does not imply absolute zero contamination."
     }
   ]
 }

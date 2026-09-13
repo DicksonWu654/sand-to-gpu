@@ -111,10 +111,11 @@ function insertWidgets(html, placements) {
       if (i >= 0) { html = html.slice(0, i + 4) + '\n' + tag + html.slice(i + 4); continue; }
     }
     if (p.before) {
-      const re = new RegExp(`<h[23] id="[^"]*">[^<]*(?:${p.before})`);
+      const re = new RegExp(`<h[23] id="[^"]*">[^<]*(?:${p.before})`, 'i');
       const m = html.match(re);
       if (m) { html = html.slice(0, m.index) + tag + html.slice(m.index); continue; }
     }
+    if (p.before) console.warn('Widget heading not found:', p.widget, p.before);
     // fallback: after intro
     const i = html.indexOf('</p>');
     html = html.slice(0, i + 4) + '\n' + tag + html.slice(i + 4);
@@ -130,12 +131,17 @@ function buildOne(md, n, slug, placement, quizPath) {
   const keyNumbers = extractKeyNumbers(md);
   md = convertMath(md);
   // Authors use "~" for "approximately"; stop GFM treating single tildes as strikethrough.
-  md = md.split('\n').map(line => /^\s*```/.test(line) ? line : line.replace(/(^|[^\~])~(?!~)/g, '$1\~')).join('\n');
+  let fence = null;
+  md = md.split('\n').map(line => {
+    const marker = line.match(/^\s*(`{3,}|~{3,})/);
+    if (marker) { if (!fence) fence = marker[1][0]; else if (fence === marker[1][0]) fence = null; return line; }
+    if (fence) return line;
+    return line.split(/(`+[^`]*`+)/g).map((part, i) => i % 2 ? part : part.replace(/(^|[^\\~])~(?!~)/g, '$1\\~')).join('');
+  }).join('\n');
   const toc = [];
   const idSet = new Set();
   marked.use({ gfm: true, renderer: makeRenderer(toc, idSet) });
   let html = marked.parse(md);
-  html = html.replace(/\~/g, '~'); // escapes survive only inside code blocks; restore them
   html = insertWidgets(html, placement);
   const words = md.split(/\s+/).filter(Boolean).length;
   let quiz = null;
@@ -168,6 +174,7 @@ function build() {
       console.log(`survey ${String(n).padStart(2, '0')}  ${String(s.words).padStart(6)} words  ${s.toc.length} headings  ${s.title}`);
     }
   }
+  fs.writeFileSync(path.join(ROOT, 'course', 'SAND_TO_GPU_full_course.md'), '# Sand to GPU — Complete Deep-Dive Course\n\nGenerated from course/modules by node build.js. Edit individual modules and rebuild.\n\n' + files.map(f => fs.readFileSync(path.join(MOD_DIR, f), 'utf8').trim()).join('\n\n---\n\n') + '\n');
   const payload = { parts: PARTS, modules, survey, built: new Date().toISOString() };
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, 'window.COURSE = ' + JSON.stringify(payload) + ';\n');

@@ -1,3 +1,5 @@
+> **Continuation:** See [CONTINUATION_2026-09-13.md](CONTINUATION_2026-09-13.md) for the Git repository, subsequent work, validation, and remaining limits. The original handoff below is preserved as historical context.
+
 # HANDOFF: "Sand to GPU" semiconductor course + interactive site
 
 Written 2026-09-13. Everything lives in this folder (the session's scratch workspace). All background

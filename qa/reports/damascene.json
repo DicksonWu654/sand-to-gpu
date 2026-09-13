@@ -1,0 +1,142 @@
+{
+  "id": "damascene",
+  "errors": [],
+  "results": [
+    {
+      "width": 760,
+      "theme": "dark",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/damascene-760-dark-initial.png",
+        "qa/shots/sweep/damascene-760-dark-interaction.png"
+      ],
+      "controls": 1,
+      "controlValuesExercised": 2,
+      "buttonsClicked": 13,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1484,
+        "boxWidth": 724
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1484,
+        "boxWidth": 724
+      }
+    },
+    {
+      "width": 760,
+      "theme": "light",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/damascene-760-light-initial.png",
+        "qa/shots/sweep/damascene-760-light-interaction.png"
+      ],
+      "controls": 1,
+      "controlValuesExercised": 2,
+      "buttonsClicked": 13,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1484,
+        "boxWidth": 724
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1484,
+        "boxWidth": 724
+      }
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/damascene-360-dark-initial.png",
+        "qa/shots/sweep/damascene-360-dark-interaction.png"
+      ],
+      "controls": 1,
+      "controlValuesExercised": 2,
+      "buttonsClicked": 13,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1779,
+        "boxWidth": 324
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1840,
+        "boxWidth": 324
+      }
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
+      "shots": [
+        "qa/shots/sweep/damascene-360-light-initial.png",
+        "qa/shots/sweep/damascene-360-light-interaction.png"
+      ],
+      "controls": 1,
+      "controlValuesExercised": 2,
+      "buttonsClicked": 13,
+      "states": [],
+      "status": {
+        "error": "",
+        "invalidNumber": false,
+        "documentOverflow": false
+      },
+      "initial": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1779,
+        "boxWidth": 324
+      },
+      "final": {
+        "overlaps": [],
+        "overflow": [],
+        "tinyText": [],
+        "emptyArea": null,
+        "boxHeight": 1840,
+        "boxWidth": 324
+      }
+    }
+  ]
+}

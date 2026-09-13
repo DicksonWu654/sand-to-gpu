@@ -133,7 +133,7 @@
           s.append(svg('rect', { x: left, y, width: Math.max(1.5, b.v * px), height: bh, fill: `var(--${b.tone})`, rx: 2 }));
           s.append(svg('text', { x: left + b.v * px + 6, y: y + bh * 0.68, 'font-size': 11.5, 'font-family': 'var(--mono)', fill: 'var(--muted)' }, b.v + ' nm'));
         });
-        scaleBox.append(s, h('div', { class: 'w-note' }, 'Drawn at the same scale (12 px/nm). A TSMC N2-class "2 nm" chip has nothing on it that measures 2 or 3 nm — the smallest real features are the ≈ 12–16 nm gate and the ≈ 23 nm metal pitch.'));
+        scaleBox.append(s, h('div', { class: 'w-note' }, 'Drawn at the same scale (12 px/nm). Node names label process generations, not literal printed dimensions. The illustrated gates and metal pitches are larger; deposited dielectric films can be 2 nm or thinner.'));
       }
 
       // ---------- density calculator ----------
