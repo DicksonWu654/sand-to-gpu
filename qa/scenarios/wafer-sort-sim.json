@@ -1,0 +1,42 @@
+[
+  {"click": "#box .w-btn.primary"}, {"wait": 3000}, {"shot": "play-3s"},
+  {"click": "#box .w-btn.primary"}, {"wait": 200}, {"shot": "paused-mid-wafer"},
+
+  {"hover": "#box svg g[aria-label=\"probe tips, 2–8 gf each\"]"}, {"wait": 200}, {"shot": "hover-tips"},
+  {"hover": "#box svg g[aria-label=\"chuck, −40 to +150 °C\"]"}, {"wait": 200}, {"shot": "hover-chuck"},
+  {"hover": "#box svg g[aria-label=\"probe card + stiffener\"]"}, {"wait": 200}, {"shot": "hover-card"},
+  {"hover": "#box .w-btn.primary"},
+
+  {"click": "#box .w-controls:nth-of-type(1) button.w-btn:nth-of-type(2)"}, {"wait": 300}, {"shot": "preset-mobile-16-sites"},
+  {"click": "#box .w-controls:nth-of-type(1) button.w-btn:nth-of-type(3)"}, {"wait": 300}, {"shot": "preset-chiplet-8-sites"},
+  {"click": "#box .w-controls:nth-of-type(1) button.w-btn:nth-of-type(1)"}, {"wait": 300}, {"shot": "preset-gpu-1-site"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 0.5}, {"wait": 200}, {"shot": "d0-max-0.5"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 0.02}, {"wait": 200}, {"shot": "d0-min-0.02"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 0.1},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 20}, {"wait": 400}, {"shot": "area-min-20-1-site"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) select", "value": 16}, {"wait": 400}, {"shot": "area-min-20-16-sites"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 850}, {"wait": 300}, {"shot": "area-max-850-16-sites"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 0.5}, {"wait": 300}, {"shot": "area-max-d0-max"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 0.1},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 800},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) select", "value": 1},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 1}, {"wait": 200}, {"shot": "test-time-min-1s"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 300}, {"wait": 200}, {"shot": "test-time-max-300s"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 240},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) select", "value": 4}, {"wait": 300}, {"shot": "sites-4"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) select", "value": 8}, {"wait": 300}, {"shot": "sites-8"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) select", "value": 1},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 0.01}, {"wait": 200}, {"shot": "cost-min"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 0.12}, {"wait": 200}, {"shot": "cost-max"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 0.108},
+
+  {"click": "#box .w-controls:nth-of-type(2) > div > button:nth-of-type(2)"}, {"wait": 200}, {"shot": "new-wafer-start"},
+  {"click": "#box .w-btn.primary"}, {"wait": 27000}, {"shot": "play-near-end"},
+  {"wait": 6000}, {"shot": "next-wafer-auto"},
+  {"click": "#box .w-btn.primary"}
+]

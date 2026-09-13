@@ -1,0 +1,93 @@
+{
+  "module": 1,
+  "questions": [
+    {
+      "q": "Silicon contains about 5 x 10^22 atoms per cm3. A polysilicon lot is certified at 9N (99.9999999%) total purity. Roughly how many impurity atoms per cm3 does that correspond to, and how does it compare with the ~1.3 x 10^15 cm-3 of boron a wafer maker adds on purpose for a 10 ohm-cm p-type substrate?",
+      "options": [
+        "5 x 10^16 cm-3, about 40 times more than the intentional doping",
+        "5 x 10^13 cm-3, about 25 times fewer than the intentional doping",
+        "5 x 10^10 cm-3, about 25,000 times fewer than the intentional doping",
+        "5 x 10^19 cm-3, roughly equal to the intentional doping"
+      ],
+      "answer": 1,
+      "explanation": "9N means 1 part per billion, so 5 x 10^22 x 10^-9 = 5 x 10^13 impurity atoms per cm3, about 25 times below the deliberate boron level of 1.3 x 10^15 cm-3; only a small fraction of those impurities are electrically active dopants."
+    },
+    {
+      "q": "Why does the Siemens process go to such lengths (many-stage distillation, resin guard beds, complexing agents) to remove boron from trichlorosilane, when metals like iron receive comparatively little attention at that stage?",
+      "options": [
+        "Boron trichloride is a solid at column temperatures and clogs the packing, while metal chlorides are volatile",
+        "Boron has a segregation coefficient of ~0.8 in silicon so crystal growth cannot reject it, and BCl3 boils only ~19 C below SiHCl3, making it hard to separate; iron (k ~ 10^-5) is rejected into the melt during crystal growth and FeCl3 is non-volatile anyway",
+        "Boron is the only impurity that survives the 1,100 C deposition step; all other impurities burn off as gases",
+        "Iron is removed earlier in the arc furnace by oxidative ladle refining, so none reaches the chlorosilane plant"
+      ],
+      "answer": 1,
+      "explanation": "Boron goes almost entirely into the crystal during Czochralski or float-zone growth (k ~ 0.8), so it must be removed chemically, yet BCl3 (12.5 C) and SiHCl3 (31.8 C) have similar volatility. Metals segregate strongly to the melt and their chlorides stay in the column bottoms."
+    },
+    {
+      "q": "A modern Siemens deposition reactor consumes 40-60 kWh per kg of silicon, and older ones 100-150 kWh/kg, even though the reaction SiHCl3 + H2 -> Si + 3HCl is only mildly endothermic. Where does most of the energy go?",
+      "options": [
+        "Compressing hydrogen to the 5-6 bar operating pressure",
+        "Breaking the Si-Cl bonds, which are stronger than Si-O bonds",
+        "Thermal radiation from the ~1,100 C rods to the water-cooled bell-jar wall, which must stay cold so silicon does not deposit on it",
+        "Heating the slim rods from room temperature to 400 C at start-up, since cold silicon is nearly an insulator"
+      ],
+      "answer": 2,
+      "explanation": "A grey body at 1,100 C radiates on the order of 140 kW per square meter, and the reactor wall is deliberately kept cold; rod count, pressure, reflective (silver-plated) walls and the FBR alternative all exist to reduce that radiative loss."
+    },
+    {
+      "q": "The carbothermic reduction SiO2 + 2C -> Si + 2CO has an enthalpy of about +690 kJ per mole of silicon. Which statement about the submerged-arc furnace is correct?",
+      "options": [
+        "The theoretical minimum is ~6.8 MWh per tonne of silicon and real furnaces use 11-13 MWh/t, so about 55-60% of the electricity goes into the reaction",
+        "Real furnaces use about 2 MWh/t because the reaction becomes exothermic above 1,800 C",
+        "The furnace is fuel-fired with natural gas because arcs cannot reach 2,000 C",
+        "Fine beach sand is preferred as feed because its high surface area speeds the reaction"
+      ],
+      "answer": 0,
+      "explanation": "690 kJ/mol divided by 28.09 g/mol gives 24.6 MJ/kg = 6.8 kWh/kg; the remainder of the 11-13 MWh/t covers heating the charge to ~2,000 C, melting, and heat carried out by CO gas. Lumpy quartz is required so gases can escape the packed bed."
+    },
+    {
+      "q": "Why do the world's 300 mm wafer makers buy electronic-grade polysilicon almost entirely from Wacker, Hemlock, Tokuyama, OCI, and High-Purity Silicon Corp. (the former Mitsubishi Materials business), even though Chinese producers such as Tongwei, GCL, and Daqo make roughly 95% of the world's polysilicon?",
+      "options": [
+        "Chinese plants use the FBR silane route, which cannot reach better than 6N purity",
+        "Electronic grade requires 10-100x lower boron and phosphorus, etched and cleanroom-handled chunk, FZ test-ingot verification and 1-2 year customer qualification, and the whole EG market is only ~40-50 kt/yr, so incumbents with long-term contracts and traceable supply chains keep it",
+        "US export controls prohibit the import of any Chinese polysilicon for semiconductor use",
+        "Chinese polysilicon is sold only as granules, which cannot be loaded into a Czochralski crucible"
+      ],
+      "answer": 1,
+      "explanation": "EG is a small (~3% of tonnage), slow-growing, qualification-locked market where purity, surface cleanliness, and traceability matter far more than price; Chinese producers have EG programs but as of ~2025 supply mainly 200 mm and domestic customers."
+    },
+    {
+      "q": "A 300 mm Czochralski ingot has a 2 m cylindrical body grown at ~306 mm diameter. Using a silicon density of 2.33 g/cm3 and a per-wafer pitch of ~1.0-1.1 mm (775 um wafer plus kerf and polishing losses), which estimate is correct?",
+      "options": [
+        "About 34 kg of body silicon and ~180 wafers",
+        "About 343 kg of body silicon and ~1,800-2,000 wafers, so roughly 0.2-0.25 kg of polysilicon per shipped wafer once the charge, crown, tail and pot scrap are counted",
+        "About 3,400 kg of body silicon and ~20,000 wafers",
+        "About 343 kg of body silicon and ~2,600 wafers, since kerf is negligible with diamond wire"
+      ],
+      "answer": 1,
+      "explanation": "pi x (15.3 cm)^2 x 200 cm = ~147,000 cm3, times 2.33 g/cm3 = ~343 kg; a 2,000 mm body at ~1.05 mm pitch gives ~1,900 slices. With a ~400 kg charge and ~1,700 shipped wafers, that is ~0.23 kg polysilicon per wafer, of which only ~127 g is in the finished wafer."
+    },
+    {
+      "q": "Boron trichloride boils at 12.5 C and trichlorosilane at 31.8 C, a relative volatility of roughly 2. Why do the TCS distillation columns need 60-100 trays to bring boron from ~10 ppm in crude TCS down to ~10 ppt?",
+      "options": [
+        "Because BCl3 is a solid at column temperature and must be filtered off on every tray",
+        "Because cutting boron by six orders of magnitude at alpha ~ 2 needs ln(10^6)/ln 2 ~ 20 theoretical stages even at total reflux, roughly double that at a practical reflux ratio, and a real tray is only ~0.5-0.7 of a theoretical stage",
+        "Because each tray removes exactly 1% of the boron, so 100 trays remove all of it",
+        "Because the trays are needed to strip iron and aluminum chlorides, which are more volatile than TCS"
+      ],
+      "answer": 1,
+      "explanation": "The Fenske equation gives N_min = ln F / ln alpha = ln(10^6)/ln 2 ~ 20 stages at total reflux; a practical reflux ratio roughly doubles that, and at a tray efficiency of ~0.5-0.7 that is ~60-80 real trays. Boron side-species that do not obey ideal volatility are why chemical complexing, guard beds and a generous lights cut are layered on top of the columns."
+    },
+    {
+      "q": "Fluidized-bed (FBR) granular polysilicon made from silane uses only 5-15 kWh/kg against 40-60 kWh/kg for a modern Siemens reactor and runs continuously. Why has it not displaced Siemens chunk as feedstock for 300 mm electronic-grade crystals?",
+      "options": [
+        "Silane cannot be purified below 6N because boron and phosphorus hydrides boil at the same temperature as silane",
+        "Granules collide constantly with the reactor wall and pick up iron, chromium and nickel on their surfaces, and they trap tens of ppm of hydrogen that bubbles out and splashes silicon when they melt in a CZ crucible; the material is therefore used as a 20-50% blend in solar crucibles, not as electronic-grade feed",
+        "FBR granules are too large to fit through the feed tube of a Czochralski puller",
+        "The FBR route uses TCS, whose 31.8 C boiling point makes it unsuitable for a continuous reactor"
+      ],
+      "answer": 1,
+      "explanation": "Wall metals and trapped hydrogen are the two unsolved contamination problems, which is why granular silicon is a solar blend material; REC Silicon's Moses Lake granular product failed Hanwha's qualification on impurity levels and ingot yield in 2024-25. Silane itself is easier to purify than TCS, since B2H6 (-93 C) and PH3 (-88 C) boil far from silane's -112 C."
+    }
+  ]
+}

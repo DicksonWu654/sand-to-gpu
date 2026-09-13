@@ -1,0 +1,20 @@
+[
+  {"click": "#box .w-controls div button:nth-of-type(2)"}, {"wait": 700}, {"shot": "nvl72-traffic-playing"},
+  {"hover": "#box svg.w-svg rect:nth-of-type(55)"}, {"wait": 300}, {"shot": "nvl72-hover-gpu37"}, {"hover": "#box .w-legend"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) select", "value": 4},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) select", "value": 40},
+  {"wait": 250}, {"shot": "nvl72-from5-to41"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=checkbox]", "value": true},
+  {"wait": 250}, {"shot": "nvl72-bisection-cut"},
+  {"click": "#box .w-controls div button:nth-of-type(1)"}, {"wait": 250}, {"shot": "nvl72-swapped"},
+  {"click": "#box .w-controls div button:nth-of-type(2)"}, {"wait": 250}, {"shot": "nvl72-paused"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=checkbox]", "value": false},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) select", "value": 0}, {"wait": 300}, {"shot": "hgx-h100"},
+  {"hover": "#box svg.w-svg rect:nth-of-type(5)"}, {"wait": 300}, {"shot": "hgx-h100-hover-gpu3"}, {"hover": "#box .w-legend"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=checkbox]", "value": true}, {"wait": 250}, {"shot": "hgx-h100-cut"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) select", "value": 1}, {"wait": 300}, {"shot": "hgx-b200-cut"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=checkbox]", "value": false}, {"wait": 250}, {"shot": "hgx-b200"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) select", "value": 3}, {"wait": 300}, {"shot": "vr-nvl72-roadmap"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) select", "value": 0}, {"wait": 250}, {"shot": "vr-same-gpu"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=checkbox]", "value": true}, {"wait": 250}, {"shot": "vr-cut"}
+]

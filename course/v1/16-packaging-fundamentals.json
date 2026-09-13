@@ -1,0 +1,71 @@
+{
+  "module": 16,
+  "questions": [
+    {
+      "q": "A 30 mm square flip-chip die on an organic substrate (CTE ~15 ppm/K vs. 2.6 ppm/K for Si) cools from solder solidification at ~217 C to room temperature. Roughly how large is the unconstrained relative displacement at a corner bump, and what package element prevents this from destroying the joint?",
+      "options": [
+        "~0.5 um; the solder resist absorbs it",
+        "~5 um; the copper pillar's ductility absorbs it",
+        "~50 um; capillary underfill couples die and substrate so they bend together instead of shearing the bumps",
+        "~500 um; the integrated heat spreader clamps the die flat"
+      ],
+      "answer": 2,
+      "explanation": "DNP of a corner bump is ~21 mm; 21 mm x 12.4 ppm/K x 192 K is ~50 um, a ~70% shear strain across a 70 um bump. Underfill converts that shear into shared warpage, cutting bump strain by more than an order of magnitude."
+    },
+    {
+      "q": "Why do copper pillar bumps replace solder-only C4 bumps as bump pitch shrinks below ~130 um?",
+      "options": [
+        "Copper is cheaper than tin-silver solder per bump",
+        "A solder ball's height scales with its diameter, so fine-pitch solder bumps become too short for underfill and bridge easily, whereas a tall Cu pillar keeps a ~50-70 um stand-off and also resists electromigration far better than Sn",
+        "Copper pillars can be wire-bonded while solder bumps cannot",
+        "Copper pillars need no under-bump metallurgy"
+      ],
+      "answer": 1,
+      "explanation": "A plated Cu pillar decouples height from pitch and carries 5-10x higher current density before electromigration; the small SnAg cap still provides the solder joint."
+    },
+    {
+      "q": "In stealth dicing, why is a ~1,064 nm laser used and what actually separates the dies?",
+      "options": [
+        "Silicon is transparent at 1,064 nm, so the beam can be focused inside the wafer to create a plane of internal defects; the dies are then separated by stretching the dicing tape, with zero kerf",
+        "1,064 nm is strongly absorbed by silicon, so it ablates a groove from the surface; a blade finishes the cut",
+        "1,064 nm heats the dicing tape, which melts and releases the dies",
+        "1,064 nm matches the bandgap of the low-k dielectric, vaporizing the scribe street"
+      ],
+      "answer": 0,
+      "explanation": "Nonlinear absorption at the focus creates a modified 'SD layer' inside the silicon while the surfaces are untouched; tape expansion of ~10-20% then cleaves along those planes, so there is no kerf, water, or chipping."
+    },
+    {
+      "q": "In the semi-additive process (SAP) for ABF build-up layers, what is the purpose of the permanganate desmear step, and why does ABF contain sub-micron silica filler?",
+      "options": [
+        "Desmear removes photoresist; the silica lowers the film's cost",
+        "Desmear etches the resin skin so the silica particles protrude as a micro-rough surface that electroless copper can adhere to; the filler also sets the film's CTE and stiffness",
+        "Desmear polishes the copper flat; the silica makes the film transparent for laser alignment",
+        "Desmear activates the palladium catalyst; the silica is a flame retardant"
+      ],
+      "answer": 1,
+      "explanation": "Copper adhesion to the build-up dielectric depends on the reproducible roughness left after permanganate desmear exposes the filler; this tuned resin-filler system is central to why Ajinomoto's film became the standard."
+    },
+    {
+      "q": "A 10,000-signal die escape needs about 3-4 signal routing layers at 10/10 um line/space on a 150 um bump pitch. Why does moving to 2/2 um line/space reduce the layer count so dramatically?",
+      "options": [
+        "Finer lines carry more current, so fewer power layers are needed",
+        "The number of traces that fit in the ~85 um channel between adjacent via pads rises from ~3 to ~20, so one layer can escape almost all signals, and each removed layer saves a lamination cycle and a few percent of yield",
+        "Finer lines allow the bumps to be placed at a coarser pitch",
+        "At 2 um the copper can be etched subtractively, which is faster"
+      ],
+      "answer": 1,
+      "explanation": "Escape routing is limited by traces per channel between via pads: (gap - space)/(line + space). At 10/10 um that is ~3; at 2/2 um it is ~20, so the whole die could escape on one signal layer."
+    },
+    {
+      "q": "A BGA rated MSL 3 is left out of its dry-pack on a factory floor for a week and then reflowed at 260 C. What is the likely failure and its physical cause?",
+      "options": [
+        "Solder balls fail to wet because the ENIG finish oxidizes after 168 hours",
+        "Wire bonds fatigue because the mold compound softens above its Tg",
+        "Popcorning: absorbed moisture (~0.1-0.3 wt% in the EMC and substrate) vaporizes at an internal interface, and the several-MPa steam pressure delaminates and cracks the package",
+        "Tin whiskers grow from the balls because of the extended exposure"
+      ],
+      "answer": 2,
+      "explanation": "MSL 3 floor life is 168 hours at 30 C/60% RH; beyond that the part must be baked (125 C, 24 h). Water's vapor pressure at 260 C is ~4.7 MPa, enough to delaminate die attach, mold, or underfill interfaces."
+    }
+  ]
+}

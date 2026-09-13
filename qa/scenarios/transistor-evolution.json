@@ -1,0 +1,32 @@
+[
+  {"click": "#box .w-controls button.w-btn"}, {"wait": 900}, {"shot": "finfet-play-0.9s"},
+  {"wait": 700}, {"shot": "finfet-play-1.6s-off"},
+  {"wait": 1600}, {"shot": "finfet-play-3.2s-on"},
+  {"wait": 1500}, {"shot": "finfet-play-4.7s"},
+  {"click": "#box .w-controls button.w-btn"}, {"wait": 300}, {"shot": "finfet-paused"},
+
+  {"click": "#box .w-step-nav button:nth-of-type(1)"}, {"wait": 300}, {"shot": "planar"},
+  {"set": "#box .w-controls input[type=checkbox]", "value": true}, {"wait": 300}, {"shot": "planar-bspr"},
+  {"set": "#box .w-controls input[type=checkbox]", "value": false}, {"wait": 200},
+
+  {"click": "#box .w-step-nav button:nth-of-type(2)"}, {"wait": 300}, {"shot": "finfet-static"},
+  {"set": "#box .w-controls input[type=checkbox]", "value": true}, {"wait": 300}, {"shot": "finfet-bspr"},
+  {"set": "#box .w-controls input[type=checkbox]", "value": false}, {"wait": 200},
+
+  {"click": "#box .w-step-nav button:nth-of-type(3)"}, {"wait": 300}, {"shot": "gaa-w30"},
+  {"set": "#box .w-controls input[type=range]", "value": 15}, {"wait": 300}, {"shot": "gaa-w15-min"},
+  {"set": "#box .w-controls input[type=range]", "value": 50}, {"wait": 300}, {"shot": "gaa-w50-max"},
+  {"set": "#box .w-controls input[type=checkbox]", "value": true}, {"wait": 300}, {"shot": "gaa-w50-bspr"},
+  {"set": "#box .w-controls input[type=checkbox]", "value": false}, {"wait": 200},
+
+  {"click": "#box .w-step-nav button:nth-of-type(4)"}, {"wait": 300}, {"shot": "cfet-w50"},
+  {"set": "#box .w-controls input[type=range]", "value": 15}, {"wait": 300}, {"shot": "cfet-w15-min"},
+  {"set": "#box .w-controls input[type=range]", "value": 30}, {"wait": 300}, {"shot": "cfet-w30"},
+  {"set": "#box .w-controls input[type=checkbox]", "value": true}, {"wait": 300}, {"shot": "cfet-w30-bspr"},
+
+  {"hover": "#box .w-step-nav button:nth-of-type(2)"}, {"wait": 300}, {"shot": "hover-finfet-tab"},
+
+  {"click": "#box .w-controls button.w-btn"}, {"wait": 1000}, {"shot": "cfet-play-1.0s"},
+  {"wait": 700}, {"shot": "cfet-play-1.7s-off"},
+  {"wait": 1600}, {"shot": "cfet-play-3.3s-on"}
+]

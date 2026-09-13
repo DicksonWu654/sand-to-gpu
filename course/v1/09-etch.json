@@ -1,0 +1,71 @@
+{
+  "module": 9,
+  "questions": [
+    {
+      "q": "In Coburn and Winters' 1979 experiment, silicon exposed to XeF2 alone etched at ~5 Å/min and to a 450 eV Ar+ beam alone at ~2 Å/min. What happened when both were applied simultaneously, and what does it imply about the roles of ions and radicals in plasma etching?",
+      "options": [
+        "The rate was ~7 Å/min (the sum), showing ions and radicals act independently",
+        "The rate rose to ~55 Å/min, far above the sum, showing ions enable the surface chemistry to proceed rapidly wherever they land while radicals supply the reactant",
+        "The rate dropped below 2 Å/min because ions sputtered away the adsorbed fluorine before it could react",
+        "The rate was unchanged at ~5 Å/min because fluorine chemistry is already at its limit"
+      ],
+      "answer": 1,
+      "explanation": "The combined rate (~55 Å/min) was roughly eight times the sum of the individual rates. This ion-enhanced synergy is the basis of anisotropic plasma etching: chemistry supplies rate and selectivity, ions supply direction by activating the reaction only on surfaces they strike."
+    },
+    {
+      "q": "Why does a dual-frequency capacitively coupled dielectric etcher apply ~60 MHz and ~2 MHz (or 400 kHz) to the electrodes at the same time?",
+      "options": [
+        "The two frequencies beat together to produce a resonance that heats the wafer uniformly",
+        "High frequency is used for the mask open and low frequency for the main etch, switched sequentially",
+        "Ions cannot follow fields above their plasma frequency (a few MHz), so the high frequency controls plasma density (ion flux) while the low frequency sets the sheath voltage (ion energy), letting the two be tuned independently",
+        "The 2 MHz supply is only for endpoint detection through RF impedance monitoring"
+      ],
+      "answer": 2,
+      "explanation": "Electrons respond to all RF frequencies but ions respond only below their plasma frequency (~3 MHz at 10^10 cm^-3). The high-frequency source therefore generates density with little added ion energy, and the low-frequency bias develops a large sheath voltage that ions follow, decoupling flux from energy."
+    },
+    {
+      "q": "In a fluorocarbon (e.g., C4F6/Ar/O2) contact-hole etch, what mechanism makes the etch proceed through SiO2 but stop on silicon or silicon nitride?",
+      "options": [
+        "Fluorine radicals react spontaneously with SiO2 but are inert toward Si and Si3N4",
+        "Oxygen released from the etched SiO2 consumes the deposited CFx polymer as CO/CO2/COF2, keeping the film thin, whereas on Si or nitride the polymer thickens until ions can no longer penetrate it",
+        "Silicon and nitride have higher sputter thresholds than SiO2 so the ions cannot remove them",
+        "The wafer is cooled below the boiling point of SiF4 when the etch reaches silicon"
+      ],
+      "answer": 1,
+      "explanation": "Fluorocarbon selectivity is a polymer-thickness effect: the oxygen in oxide burns the carbon film so etching continues, while oxygen-free substrates accumulate a thick blocking polymer. Tuning the gas F/C ratio (or adding O2/H2) moves the balance between etching and deposition."
+    },
+    {
+      "q": "A 3D NAND channel-hole etch removes 10 µm of an ONON stack. Using a conventional rate of ~100–150 nm/min, roughly how long is the single-wafer etch, and why does cryogenic etch (Lam Cryo 3.0, TEL at −60 to −70 °C) matter so much economically?",
+      "options": [
+        "About 5 minutes; cryogenic etch mainly improves selectivity to the carbon hardmask",
+        "About 60–100 minutes per wafer for one step; a ~2.5x rate gain from HF-based cryogenic chemistry cuts the hundreds of channel-hole chambers a NAND fab needs by roughly half",
+        "About 10 seconds; cryogenic etch only exists to reduce greenhouse-gas emissions",
+        "About 8 hours; cryogenic etch is needed because room-temperature plasmas cannot ignite in HF gas"
+      ],
+      "answer": 1,
+      "explanation": "At 100–150 nm/min a 10 µm hole takes over an hour, so chamber throughput is ~1 wafer/hour and a 100k-wafer/month fab needs on the order of hundreds of channel-hole chambers. TEL reports 10 µm in 33 minutes and Lam claims 2.5x conventional rate, which directly translates to fewer $3–6M chambers."
+    },
+    {
+      "q": "In Cl2/Ar atomic layer etching of silicon, why is the Ar+ ion energy restricted to a window of roughly 40–70 eV?",
+      "options": [
+        "Below 40 eV argon cannot be ionized; above 70 eV the chamber walls sputter",
+        "It must be above the threshold to desorb the weakly bound chlorinated SiClx surface layer but below the sputter threshold of bare silicon, so each cycle removes only the chlorinated layer and then self-limits",
+        "The chlorine adsorption step only saturates at that ion energy",
+        "It matches the energy needed to break the Cl–Cl bond in the gas phase"
+      ],
+      "answer": 1,
+      "explanation": "Self-limiting removal requires that ions remove the modified (chlorinated) layer but not the unmodified substrate. Inside the ALE window the etch per cycle (~0.5–1 Å for Si) is independent of ion dose and local flux, eliminating ARDE and microloading."
+    },
+    {
+      "q": "A film 20 nm thick is etched isotropically (wet etch) through a 20 nm wide mask opening. What is the approximate width of the finished feature at the film's top surface, and what does this illustrate?",
+      "options": [
+        "20 nm; wet etch transfers the mask faithfully if the bath is fresh",
+        "30 nm; the undercut is half the film thickness on each side",
+        "60 nm; isotropic etching undercuts the mask by the full film thickness on each side, so wet etch cannot pattern features smaller than about twice the film thickness",
+        "10 nm; surface tension in the liquid shrinks the opening"
+      ],
+      "answer": 2,
+      "explanation": "An isotropic etch proceeds sideways under the mask by the same distance it goes down, so a 20 nm film adds ~20 nm of undercut on each side: 20 + 2 × 20 = 60 nm. This geometric limit is why patterning moved to directional plasma etch while wet etch survives for blanket strips and deliberate undercuts like nanosheet release."
+    }
+  ]
+}

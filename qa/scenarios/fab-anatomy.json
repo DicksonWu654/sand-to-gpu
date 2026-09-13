@@ -1,0 +1,30 @@
+[
+  {"note": "The widget autoplays unless prefers-reduced-motion is on (then it starts paused). The first two shots are taken before any click, so they show motion wherever autoplay is on; the toggle shots flip the Play/Pause button whatever its initial state."},
+  {"wait": 1200}, {"shot": "airflow-1.2s"},
+  {"wait": 1500}, {"shot": "airflow-2.7s"},
+  {"click": "#box .w-controls button.w-btn"}, {"wait": 1500}, {"shot": "toggle-1-after-1.5s"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 0.3}, {"shot": "downflow-min-0.30"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 0.5}, {"shot": "downflow-max-0.50"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 0.45},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 1}, {"shot": "iso-1-mini-env"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 3}, {"shot": "iso-3"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 6}, {"shot": "iso-6-ballroom"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 8}, {"shot": "iso-8-subfab"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 5},
+
+  {"hover": "#box svg rect[aria-label=\"Fan-filter unit (FFU) ceiling\"]"}, {"wait": 200}, {"shot": "hover-ffu"},
+  {"hover": "#box svg rect[aria-label=\"EUV scanner\"]"}, {"wait": 200}, {"shot": "hover-scanner"},
+  {"hover": "#box svg rect[aria-label=\"Load port + EFEM (mini-environment)\"]"}, {"wait": 200}, {"shot": "hover-efem"},
+  {"hover": "#box svg rect[aria-label=\"Overhead hoist transport (OHT)\"]"}, {"wait": 200}, {"shot": "hover-oht"},
+  {"hover": "#box svg rect[aria-label=\"Waffle slab\"]"}, {"wait": 200}, {"shot": "hover-slab"},
+  {"hover": "#box svg rect[aria-label=\"Gas and chemical cabinets / VMBs\"]"}, {"wait": 200}, {"shot": "hover-gas"},
+  {"hover": "#box svg rect[aria-label=\"Return air shaft\"]"}, {"wait": 200}, {"shot": "hover-shaft"},
+  {"hover": "#box svg rect[aria-label=\"Ultrapure water (UPW) plant\"]"}, {"wait": 200}, {"shot": "hover-upw"},
+  {"hover": "#box svg rect[aria-label=\"Make-up air unit (MAU)\"]"}, {"wait": 200}, {"shot": "hover-mau"},
+  {"hover": "#box svg rect[aria-label=\"Cleanroom ballroom\"]"}, {"wait": 200}, {"shot": "hover-ballroom"},
+  {"hover": "#box svg rect[aria-label=\"Sub-fab (return plenum)\"]"}, {"wait": 200}, {"shot": "hover-subfab"},
+
+  {"click": "#box .w-controls button.w-btn"}, {"wait": 1500}, {"shot": "toggle-2-after-1.5s"}
+]

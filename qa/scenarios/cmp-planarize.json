@@ -1,0 +1,35 @@
+[
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 1500}, {"shot": "playing-1500ms"},
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 100}, {"shot": "paused-mid-bulk"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 0}, {"shot": "t0-as-plated"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 8}, {"shot": "t8-humps-shaved"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 40}, {"shot": "t40-bulk"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 62}, {"shot": "t62-zoomed"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 75}, {"shot": "soft-landing"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 84}, {"shot": "just-after-endpoint"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 999}, {"shot": "end-overpolish"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 5},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 120},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 999}, {"shot": "max-rate-end"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 0.5},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 30},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 400}, {"shot": "min-rate-mid"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 1.5},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 80},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 90},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 999}, {"shot": "density-90-end"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 10}, {"shot": "density-10-end"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 50},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 0.2}, {"shot": "width-min-end"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 10}, {"shot": "width-max-end"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 5},
+
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(2)"}, {"shot": "reset-t0"},
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 3000}, {"shot": "play-3s"},
+  {"wait": 4500}, {"shot": "play-7.5s-overpolish"},
+  {"wait": 4000}, {"shot": "play-finished"}
+]

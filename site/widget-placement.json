@@ -1,0 +1,234 @@
+{
+ "0": [
+  {
+   "widget": "fab-flow",
+   "before": "Master Process Flow"
+  },
+  {
+   "widget": "scale-ladder",
+   "before": "How to Read"
+  }
+ ],
+ "1": [
+  {
+   "widget": "purity",
+   "before": "Siemens"
+  }
+ ],
+ "2": [
+  {
+   "widget": "cz-puller",
+   "at": "after-intro"
+  }
+ ],
+ "3": [
+  {
+   "widget": "wafer-slicing",
+   "before": "wire"
+  }
+ ],
+ "4": [
+  {
+   "widget": "upw-mask-cost",
+   "before": "Ultrapure|photomask|Photomask"
+  }
+ ],
+ "5": [
+  {
+   "widget": "fab-flow",
+   "before": "process flow|Process Flow|FEOL"
+  },
+  {
+   "widget": "fab-anatomy",
+   "before": "The Building"
+  },
+  {
+   "widget": "amhs-sim",
+   "before": "AMHS"
+  }
+ ],
+ "6": [
+  {
+   "widget": "deal-grove",
+   "before": "Deal"
+  },
+  {
+   "widget": "ald-cycle",
+   "before": "Atomic Layer Deposition|ALD"
+  }
+ ],
+ "7": [
+  {
+   "widget": "rayleigh",
+   "before": "Rayleigh|Resolution"
+  },
+  {
+   "widget": "sadp",
+   "before": "Multi-patterning|Multi-Patterning|SADP"
+  },
+  {
+   "widget": "resist-chemistry",
+   "before": "Photoresist Chemistry"
+  },
+  {
+   "widget": "litho-track",
+   "before": "Track Recipes|Track, Step"
+  }
+ ],
+ "8": [
+  {
+   "widget": "euv-source",
+   "at": "after-intro"
+  },
+  {
+   "widget": "euv-stochastics",
+   "before": "Stochastic|stochastic|Photon"
+  },
+  {
+   "widget": "bragg-mirror",
+   "before": "The Optics"
+  }
+ ],
+ "9": [
+  {
+   "widget": "etch-profile",
+   "before": "Anisotrop|anisotrop|Mechanism|mechanism"
+  },
+  {
+   "widget": "plasma-reactor",
+   "before": "Plasma|plasma"
+  }
+ ],
+ "10": [
+  {
+   "widget": "implant-profile",
+   "before": "Range|range|Projected"
+  },
+  {
+   "widget": "implanter-beamline",
+   "before": "Inside an Ion Implanter|Implanter"
+  }
+ ],
+ "11": [
+  {
+   "widget": "transistor-evolution",
+   "at": "after-intro"
+  },
+  {
+   "widget": "node-table",
+   "before": "node|Node"
+  },
+  {
+   "widget": "mosfet-iv",
+   "before": "MOSFET Operation"
+  },
+  {
+   "widget": "moores-law",
+   "before": "Node Timeline|Timeline"
+  }
+ ],
+ "12": [
+  {
+   "widget": "damascene",
+   "before": "Dual Damascene|dual damascene|Damascene"
+  },
+  {
+   "widget": "cmp-planarize",
+   "before": "Vias, Resistance|Electromigration"
+  }
+ ],
+ "13": [
+  {
+   "widget": "yield-calculator",
+   "before": "Yield|yield"
+  }
+ ],
+ "14": [
+  {
+   "widget": "test-cost",
+   "before": "Economics|economics|cost|Cost"
+  },
+  {
+   "widget": "wafer-sort-sim",
+   "before": "Probe Cards"
+  }
+ ],
+ "15": [
+  {
+   "widget": "hbm-stack",
+   "before": "HBM|High Bandwidth"
+  },
+  {
+   "widget": "dram-cell",
+   "before": "1T1C"
+  },
+  {
+   "widget": "nand-3d-build",
+   "before": "NAND|3D NAND"
+  }
+ ],
+ "16": [
+  {
+   "widget": "package-xsection",
+   "at": "after-intro"
+  }
+ ],
+ "17": [
+  {
+   "widget": "cowos-flow",
+   "before": "process flow|Process Flow|Step by Step|step by step"
+  },
+  {
+   "widget": "hybrid-bond",
+   "before": "SoIC|Hybrid|hybrid"
+  }
+ ],
+ "18": [
+  {
+   "widget": "yield-cascade",
+   "before": "fallout|Fallout|Yield|yield"
+  }
+ ],
+ "19": [
+  {
+   "widget": "gpu-bom",
+   "before": "Economics|economics|BOM|Cost|cost"
+  },
+  {
+   "widget": "rack-explorer",
+   "before": "NVL72|Rack|rack"
+  },
+  {
+   "widget": "nvlink-topology",
+   "before": "Networking beyond|Networking"
+  },
+  {
+   "widget": "heat-path",
+   "before": "Who builds it|Who Builds"
+  }
+ ],
+ "20": [
+  {
+   "widget": "wafer-price",
+   "before": "Economics of fabs|wafer price|Wafer Price|Fab Economics|fab economics"
+  },
+  {
+   "widget": "geo-share",
+   "before": "Geograph|geograph|Map|map"
+  },
+  {
+   "widget": "export-timeline",
+   "before": "Export|export"
+  }
+ ],
+ "21": [
+  {
+   "widget": "scale-ladder",
+   "before": "Sense of Scale|sense of scale|Unit"
+  },
+  {
+   "widget": "glossary-flashcards",
+   "before": "Glossary"
+  }
+ ]
+}

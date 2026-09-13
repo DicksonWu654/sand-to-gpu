@@ -1,0 +1,48 @@
+[
+  {"hover": "#box svg .dg-plot"}, {"wait": 300}, {"shot": "hover-point"},
+
+  {"set": "#box .w-ctl:nth-child(4) select", "value": "111"},
+  {"set": "#box .w-ctl:nth-child(3) input[type=range]", "value": 2.057},
+  {"wait": 200}, {"shot": "worked-example-dry-1000C-111-1p9h"},
+
+  {"set": "#box .w-ctl:nth-child(4) select", "value": "100"},
+  {"set": "#box .w-ctl:nth-child(1) select", "value": "wet"},
+  {"set": "#box .w-ctl:nth-child(3) input[type=range]", "value": 1.778},
+  {"wait": 200}, {"shot": "wet-1000C-1h"},
+
+  {"set": "#box .w-ctl:nth-child(2) input[type=range]", "value": 1200},
+  {"set": "#box .w-ctl:nth-child(3) input[type=range]", "value": 2.778},
+  {"wait": 200}, {"shot": "wet-1200C-10h-max"},
+
+  {"set": "#box .w-ctl:nth-child(5) select", "value": "log"},
+  {"wait": 200}, {"shot": "wet-1200C-10h-logaxis"},
+  {"set": "#box .w-ctl:nth-child(5) select", "value": "linear"},
+
+  {"set": "#box .w-ctl:nth-child(2) input[type=range]", "value": 800},
+  {"set": "#box .w-ctl:nth-child(3) input[type=range]", "value": 0},
+  {"wait": 200}, {"shot": "wet-800C-1min-min"},
+
+  {"set": "#box .w-ctl:nth-child(1) select", "value": "dry"},
+  {"wait": 200}, {"shot": "dry-800C-1min-min"},
+
+  {"set": "#box .w-ctl:nth-child(2) input[type=range]", "value": 1200},
+  {"set": "#box .w-ctl:nth-child(3) input[type=range]", "value": 2.778},
+  {"wait": 200}, {"shot": "dry-1200C-10h-max"},
+
+  {"set": "#box .w-ctl:nth-child(2) input[type=range]", "value": 1010},
+  {"wait": 200}, {"shot": "dry-1010C-10h-crossover-right"},
+  {"hover": "#box svg .dg-plot"}, {"wait": 300}, {"shot": "dry-1010C-10h-hover"},
+
+  {"set": "#box .w-ctl:nth-child(2) input[type=range]", "value": 1100},
+  {"set": "#box .w-ctl:nth-child(3) input[type=range]", "value": 1.0},
+  {"set": "#box .w-ctl:nth-child(4) select", "value": "111"},
+  {"wait": 200}, {"shot": "dry-1100C-10min-111"},
+
+  {"set": "#box .w-ctl:nth-child(1) select", "value": "wet"},
+  {"set": "#box .w-ctl:nth-child(2) input[type=range]", "value": 900},
+  {"set": "#box .w-ctl:nth-child(3) input[type=range]", "value": 2.3},
+  {"wait": 200}, {"shot": "wet-900C-3p3h-111"},
+
+  {"set": "#box .w-ctl:nth-child(5) select", "value": "log"},
+  {"wait": 200}, {"shot": "wet-900C-3p3h-111-logaxis"}
+]

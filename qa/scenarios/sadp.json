@@ -1,0 +1,43 @@
+[
+  {"click": "#box .w-step-nav .w-btn:last-of-type"}, {"wait": 250}, {"shot": "sadp-s2-mandrel-etch"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(3)"}, {"wait": 250}, {"shot": "sadp-s3-spacer-ald"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(4)"}, {"wait": 250}, {"shot": "sadp-s4-etch-back"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(5)"}, {"wait": 250}, {"shot": "sadp-s5-mandrel-pull"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(6)"}, {"wait": 250}, {"shot": "sadp-s6-transfer"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(7)"}, {"wait": 250}, {"shot": "sadp-s7-cut-mask"},
+  {"click": "#box .w-step-nav .w-btn:first-of-type"}, {"wait": 250}, {"shot": "sadp-after-prev"},
+  {"hover": "#box .w-step-nav .w-step-dot:nth-of-type(2)"}, {"wait": 300}, {"shot": "hover-dot2"},
+
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(3)"}, {"wait": 200},
+  {"set": "#box .w-controls input[type=range]", "value": 160}, {"wait": 250}, {"shot": "sadp-s3-P160-max"},
+  {"set": "#box .w-controls input[type=range]", "value": 76}, {"wait": 250}, {"shot": "sadp-s3-P76-min"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(5)"}, {"wait": 250}, {"shot": "sadp-s5-P76-min"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(6)"}, {"wait": 250}, {"shot": "sadp-s6-P76-min"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(7)"}, {"wait": 250}, {"shot": "sadp-s7-P76-min"},
+  {"set": "#box .w-controls input[type=range]", "value": 160}, {"wait": 250}, {"shot": "sadp-s7-P160-max"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(5)"}, {"wait": 250}, {"shot": "sadp-s5-P160-max"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(1)"}, {"wait": 250}, {"shot": "sadp-s1-P160-max"},
+
+  {"set": "#box .w-controls input[type=range]", "value": 80}, {"wait": 200},
+  {"set": "#box .w-controls input[type=checkbox]", "value": true}, {"wait": 300}, {"shot": "saqp-s1-after-toggle"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(2)"}, {"wait": 250}, {"shot": "saqp-s2-mandrel-etch"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(3)"}, {"wait": 250}, {"shot": "saqp-s3-spacer1-ald"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(5)"}, {"wait": 250}, {"shot": "saqp-s5-mandrel-pull"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(6)"}, {"wait": 250}, {"shot": "saqp-s6-spacer2-ald"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(7)"}, {"wait": 250}, {"shot": "saqp-s7-spacer2-etchback"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(8)"}, {"wait": 250}, {"shot": "saqp-s8-mandrel2-pull"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(9)"}, {"wait": 250}, {"shot": "saqp-s9-transfer"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(10)"}, {"wait": 250}, {"shot": "saqp-s10-cut-mask"},
+  {"click": "#box .w-step-nav .w-btn:last-of-type"}, {"wait": 250}, {"shot": "saqp-next-at-end"},
+
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(6)"}, {"wait": 200},
+  {"set": "#box .w-controls input[type=range]", "value": 76}, {"wait": 250}, {"shot": "saqp-s6-P76-min"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(8)"}, {"wait": 250}, {"shot": "saqp-s8-P76-min"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(9)"}, {"wait": 250}, {"shot": "saqp-s9-P76-min"},
+  {"set": "#box .w-controls input[type=range]", "value": 160}, {"wait": 250}, {"shot": "saqp-s9-P160-max"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(6)"}, {"wait": 250}, {"shot": "saqp-s6-P160-max"},
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(8)"}, {"wait": 250}, {"shot": "saqp-s8-P160-max"},
+
+  {"click": "#box .w-step-nav .w-step-dot:nth-of-type(10)"}, {"wait": 200},
+  {"set": "#box .w-controls input[type=checkbox]", "value": false}, {"wait": 300}, {"shot": "sadp-after-untoggle-from-s10"}
+]

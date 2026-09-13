@@ -1,0 +1,38 @@
+[
+  {"click": "#box button[data-k=play]"}, {"wait": 1500}, {"shot": "play-1.5s"},
+
+  {"hover": "#box svg [aria-label=\"TIM2 (paste under the plate)\"]"}, {"wait": 200}, {"shot": "hover-tim2"},
+  {"hover": "#box svg [aria-label=\"GPU die (silicon)\"]"}, {"wait": 200}, {"shot": "hover-die"},
+  {"hover": "#box svg [aria-label=\"CDU heat exchanger (approach)\"]"}, {"wait": 200}, {"shot": "hover-cdu"},
+  {"hover": "#box svg [aria-label=\"Coolant warms (inlet → mean)\"]"}, {"wait": 200}, {"shot": "hover-coolant-warms"},
+  {"hover": "#box .w-formula"},
+
+  {"set": "#box select[data-k=tim]", "value": "1"}, {"shot": "tim2-pumped-out-throttles"},
+  {"set": "#box select[data-k=tim]", "value": "0"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 1400}, {"shot": "power-max-1400"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 400}, {"shot": "power-min-400"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 1200},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 50}, {"shot": "inlet-max-50"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 15}, {"shot": "inlet-min-15"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 40},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 0.5}, {"shot": "flow-min-0.5"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 4}, {"shot": "flow-max-4"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 1.75},
+
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(2)"}, {"wait": 800}, {"shot": "preset-h100-air"},
+  {"hover": "#box svg [aria-label=\"Fin stack → air\"]"}, {"wait": 200}, {"shot": "hover-fins-air"},
+  {"hover": "#box svg [aria-label=\"CRAH chilled-water coil (approach)\"]"}, {"wait": 200}, {"shot": "hover-crah"},
+  {"hover": "#box .w-formula"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 1200}, {"shot": "air-at-1200w-why-liquid"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 120}, {"shot": "air-flow-max-120"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 20},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 50},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 1400}, {"shot": "air-worst-case"},
+
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(4)"}, {"wait": 800}, {"shot": "preset-gb300"},
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(3)"}, {"wait": 300},
+  {"click": "#box button[data-k=play]"}, {"shot": "paused"}
+]

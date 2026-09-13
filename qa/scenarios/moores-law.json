@@ -1,0 +1,20 @@
+[
+  {"hover": "#box svg [data-chip=\"wse2\"]"}, {"wait": 200}, {"shot": "hover-wse2"},
+  {"hover": "#box svg [data-chip=\"4004\"]"}, {"wait": 200}, {"shot": "hover-4004"},
+  {"hover": "#box svg [data-chip=\"b200\"]"}, {"wait": 200}, {"shot": "hover-b200"},
+  {"hover": "#box svg [data-chip=\"rome\"]"}, {"wait": 200}, {"shot": "hover-rome"},
+  {"set": "#box select", "value": "clock"}, {"wait": 300}, {"shot": "overlay-clock"},
+  {"hover": "#box svg [data-chip=\"7950x\"]"}, {"wait": 200}, {"shot": "overlay-clock-hover-7950x"},
+  {"set": "#box select", "value": "cost"}, {"wait": 300}, {"shot": "overlay-cost"},
+  {"hover": "#box svg [data-chip=\"prescott\"]"}, {"wait": 200}, {"shot": "overlay-cost-hover-prescott"},
+  {"set": "#box select", "value": "none"}, {"wait": 200},
+  {"set": "#box input[type=range]", "value": 1}, {"wait": 300}, {"shot": "T-1yr"},
+  {"set": "#box input[type=range]", "value": 4}, {"wait": 300}, {"shot": "T-4yr"},
+  {"click": "#box .ml-fit"}, {"wait": 300}, {"shot": "T-bestfit"},
+  {"set": "#box input[type=range]", "value": 2}, {"wait": 200},
+  {"click": "#box .ml-play"}, {"wait": 2600}, {"shot": "play-early"},
+  {"wait": 3300}, {"shot": "play-mid"},
+  {"click": "#box .ml-play"}, {"wait": 300}, {"shot": "paused"},
+  {"click": "#box .ml-play"}, {"wait": 6500}, {"shot": "play-end"},
+  {"hover": "#box svg [data-chip=\"h100\"]"}, {"wait": 200}, {"shot": "final-hover-h100"}
+]

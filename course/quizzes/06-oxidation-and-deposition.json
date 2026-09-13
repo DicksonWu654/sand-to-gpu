@@ -1,0 +1,93 @@
+{
+  "module": 6,
+  "questions": [
+    {
+      "q": "A 200 nm thermal oxide is grown on a bare silicon wafer. Roughly how far below the original silicon surface is the new Si/SiO2 interface, and why?",
+      "options": [
+        "0 nm: the oxide is deposited on top of the silicon and the interface stays at the original surface",
+        "About 88 nm: the oxidant diffuses through the oxide and reacts at the buried interface, and each SiO2 unit occupies about 2.27 times the volume of the Si atom it came from",
+        "About 200 nm: every nanometer of oxide replaces a nanometer of silicon one-for-one",
+        "About 44 nm: only the first fifth of the oxide consumes silicon, after which growth is purely additive"
+      ],
+      "answer": 1,
+      "explanation": "Thermal oxidation consumes ~0.44 of the oxide thickness in silicon (Si density 5.0e22 cm^-3 vs SiO2 unit density 2.2e22 cm^-3), so 200 nm of oxide moves the interface ~88 nm down; the reaction happens at the buried interface, not the top surface."
+    },
+    {
+      "q": "In the Deal-Grove model, why is wet (H2O) oxidation 20 to 25 times faster than dry O2 oxidation in the parabolic regime at 1,000 C?",
+      "options": [
+        "Water molecules are smaller and diffuse through SiO2 much faster than O2",
+        "The Si-Si bond-breaking reaction has a much lower activation energy with water",
+        "The solubility C* of H2O in SiO2 is roughly 600 times that of O2, so B = 2DC*/N1 is much larger even though D is similar or smaller",
+        "Steam is at higher pressure than oxygen in a furnace, so more molecules hit the surface"
+      ],
+      "answer": 2,
+      "explanation": "The parabolic constant B scales with the oxidant solubility C* in the oxide; water's C* (~3e19 cm^-3) is ~600x oxygen's (~5e16 cm^-3), more than compensating for its roughly ten times lower diffusivity and the factor of two in N1."
+    },
+    {
+      "q": "Using the Deal-Grove (111) constants at 1,000 C for dry O2 (A = 0.165 um, B = 0.0117 um^2/h, tau = 0.37 h), how long does it take to grow a 100 nm oxide?",
+      "options": [
+        "About 0.5 h, because 100 nm is well inside the linear regime where x = (B/A) t",
+        "About 1.9 h, from t = (x^2 + A x)/B - tau, in the mixed linear-parabolic regime since x is comparable to A",
+        "About 8.5 h, from the parabolic law t = x^2/B",
+        "About 14 h, because dry oxidation at 1,000 C is essentially diffusion-limited for any thickness"
+      ],
+      "answer": 1,
+      "explanation": "t = (0.01 + 0.0165)/0.0117 - 0.37 = 2.26 - 0.37 = 1.9 h; with x = 100 nm smaller than A = 165 nm, the linear term dominates but neither limit alone is accurate."
+    },
+    {
+      "q": "Why can a vertical LPCVD furnace deposit uniform polysilicon on 125 wafers stacked 6 mm apart, whereas epitaxy must be done one wafer at a time with an engineered showerhead or laminar flow?",
+      "options": [
+        "LPCVD runs in the surface-reaction-limited regime where rate depends on temperature, not gas flow, and low pressure makes the gas diffusivity huge; epi runs mass-transport limited where every wafer needs an identical boundary layer",
+        "Polysilicon is amorphous so it does not care about uniformity, while epitaxial films are crystalline",
+        "Silane is far more reactive than dichlorosilane so it can penetrate between closely stacked wafers",
+        "Furnaces run at higher temperature, which increases the sticking coefficient and improves step coverage"
+      ],
+      "answer": 0,
+      "explanation": "At low temperature and low pressure the surface reaction (Arrhenius, Ea ~1-2 eV) is the bottleneck and gas transport is not, so only temperature uniformity matters; at high temperature the rate is set by D/delta of the boundary layer, which requires controlled flow geometry over each wafer."
+    },
+    {
+      "q": "In TMA/H2O ALD of Al2O3, the growth per cycle is about 0.1 nm while a monolayer of Al2O3 is about 0.3 nm. What explains the difference, and what does it imply about thickness control?",
+      "options": [
+        "The purge steps remove about two-thirds of the film each cycle; thickness must be corrected empirically",
+        "Bulky methyl ligands on adsorbed TMA sterically block neighboring OH sites, so each self-limiting cycle deposits only about one-third of a monolayer; thickness is still exactly N cycles times the GPC",
+        "Water desorbs part of the aluminum as volatile hydroxide; thicker films need higher water doses",
+        "Only one-third of the wafer surface is hydroxylated at any time; increasing TMA dose increases growth per cycle proportionally"
+      ],
+      "answer": 1,
+      "explanation": "Saturation is reached when the surface is covered with methyl-terminated Al species that block adjacent sites, giving a sub-monolayer but perfectly repeatable GPC; because each half-reaction is self-limiting, increasing the dose does not change the thickness."
+    },
+    {
+      "q": "Why does the CVD tungsten process for a contact plug begin with a Ti/TiN liner and a thin WF6 + SiH4 (or B2H6) nucleation layer before the WF6 + H2 bulk deposition?",
+      "options": [
+        "The nucleation layer sets the crystal orientation so the bulk tungsten grows epitaxially with low resistivity",
+        "Hydrogen reduction of WF6 only works above 600 C, so the nucleation layer must be deposited first and used to heat the wafer",
+        "WF6 does not nucleate on dielectrics and attacks bare silicon (forming wormholes and SiF4) while its HF byproduct etches oxide, so a TiN fluorine barrier and a silane-reduced seed layer are needed before H2 reduction can take over",
+        "The Ti/TiN liner is a copper diffusion barrier required by the later dual-damascene steps"
+      ],
+      "answer": 2,
+      "explanation": "WF6 reacts directly with silicon (2 WF6 + 3 Si -> 2 W + 3 SiF4) and will not reduce on SiO2 with H2 alone; the Ti/TiN glue-and-barrier layer plus the SiH4-reduced nucleation layer protect the substrate and provide a surface for the fast, conformal H2 bulk reaction at 400-450 C."
+    },
+    {
+      "q": "Why does conventional magnetron sputtering fail to coat the bottom and lower sidewalls of a 20 nm wide, 60 nm deep via, and how does ionized PVD fix it?",
+      "options": [
+        "Sputtered atoms carry a positive charge and are repelled by the insulating sidewalls; ionized PVD neutralizes them before they reach the wafer",
+        "Sputtered atoms fly in straight lines and arrive from a wide range of angles, so the top corners grow an overhang that shadows the bottom; ionized PVD ionizes most of the metal flux in flight and a negative wafer bias pulls the ions in at normal incidence, so they reach the via bottom and can resputter it onto the lower sidewalls",
+        "The argon pressure is too high for any atom to cross the target-to-wafer gap; ionized PVD simply lowers the pressure below 1 mtorr",
+        "Sputtered metal condenses only on heated surfaces and the via bottom is the coldest spot; ionized PVD heats the wafer so the bottom coats first"
+      ],
+      "answer": 1,
+      "explanation": "PVD is line-of-sight: atoms leave the target with a roughly cosine angular spread and land on whatever faces them, so the via mouth and upper sidewalls collect material while the bottom is shadowed. Ionizing 50-90% of the metal flux (RF coil or self-ionized plasma) and biasing the wafer makes the arrival direction normal to the wafer, which reaches the bottom and, at higher bias, resputters bottom material onto the sidewalls where continuity matters."
+    },
+    {
+      "q": "Selective source/drain epitaxy grows SiGe:B in the recessed silicon cavities beside the gate but leaves the neighbouring oxide and nitride bare. What makes the growth selective?",
+      "options": [
+        "The dielectric surfaces are covered with photoresist during the epi step, which is stripped afterwards",
+        "Germane and dichlorosilane react only with silicon atoms, so no film can ever form on an oxide",
+        "Silicon nucleates immediately on crystalline silicon but only after an incubation delay on SiO2 and SiN, as isolated nuclei; HCl in the gas etches those nuclei, and at the right HCl:Si balance the net growth rate on dielectric is zero while growth on silicon stays positive",
+        "The growth temperature is set so that the precursors decompose on silicon but are below their decomposition temperature on oxide"
+      ],
+      "answer": 2,
+      "explanation": "Selectivity comes from the HCl balance, not from masking: the small amorphous nuclei that eventually form on SiO2 and SiN are etched away by HCl faster than they grow, while the crystalline film on exposed silicon grows faster than it is etched. Chlorine-containing precursors (DCS) need less HCl, and cyclic deposition-etch (CDE) alternates fast non-selective growth with short HCl or Cl2 etches to strip the dielectric nuclei. Photoresist cannot survive the 550-700 C growth temperature."
+    }
+  ]
+}

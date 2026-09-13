@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Widget test</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { padding: 20px; }
+  .frame { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .frame > div { padding: 20px; border-radius: 8px; }
+  .dark { color-scheme: dark; }
+  h2 { font-family: var(--sans); }
+  .bar { font-family: var(--sans); margin-bottom: 14px; display: flex; gap: 8px; align-items: center; }
+</style>
+</head>
+<body>
+<div class="bar">
+  <label>Widget <select id="pick"></select></label>
+  <button class="w-btn" id="theme">Toggle theme</button>
+  <span id="err" style="color:var(--bad)"></span>
+</div>
+<div class="article" style="max-width:760px;margin:0">
+  <div class="widget" id="box"></div>
+</div>
+<script>window.COURSE = { parts: [], modules: [], built: '' };</script>
+<script>
+  // mini harness replicating app.js's widget contract
+  const registry = {};
+  window.registerWidget = (id, def) => { registry[id] = def; };
+  const themeListeners = new Set();
+  function mk(el, attrs, kids) {
+    if (attrs) for (const k in attrs) { const v = attrs[k];
+      if (k === 'class') el.setAttribute('class', v);
+      else if (k === 'style' && typeof v === 'object') Object.assign(el.style, v);
+      else if (k === 'on') for (const ev in v) el.addEventListener(ev, v[ev]);
+      else if (k === 'html') el.innerHTML = v;
+      else if (v != null) el.setAttribute(k, v); }
+    for (const kid of kids.flat()) if (kid != null) el.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+    return el;
+  }
+  const ctxBase = {
+    tokens() { const cs = getComputedStyle(document.documentElement); const g = n => cs.getPropertyValue('--' + n).trim();
+      return { ink: g('ink'), muted: g('muted'), ground: g('ground'), panel: g('panel'), panel2: g('panel2'), line: g('line'), line2: g('line2'), accent: g('accent'), accent2: g('accent2'), si: g('si'), cu: g('cu'), euv: g('accent2'), ok: g('ok'), warn: g('warn'), bad: g('bad') }; },
+    fmt(n, d) { if (n == null || !isFinite(n)) return '–'; return Number(n).toLocaleString('en-US', { maximumFractionDigits: d == null ? 2 : d }).replace(/,/g, ' '); },
+    h(tag, attrs, ...kids) { return mk(document.createElement(tag), attrs, kids); },
+    svg(tag, attrs, ...kids) { return mk(document.createElementNS('http://www.w3.org/2000/svg', tag), attrs, kids); },
+    onTheme(fn) { themeListeners.add(fn); },
+  };
+  let cleanup = null;
+  function mount(id) {
+    if (cleanup) { try { cleanup(); } catch (e) {} cleanup = null; }
+    themeListeners.clear();
+    const box = document.getElementById('box'); box.innerHTML = ''; document.getElementById('err').textContent = '';
+    const def = registry[id]; if (!def) { box.textContent = 'not registered: ' + id; return; }
+    box.append(ctxBase.h('div', { class: 'widget-head' }, ctxBase.h('h4', null, def.title || id), ctxBase.h('span', { class: 'tag' }, 'Interactive')));
+    if (def.caption) box.append(ctxBase.h('div', { class: 'widget-cap' }, def.caption));
+    const body = ctxBase.h('div', { class: 'widget-body' }); box.append(body);
+    try { cleanup = def.mount(body, ctxBase); } catch (e) { document.getElementById('err').textContent = e.stack; }
+  }
+  window.addEventListener('load', () => {
+    const pick = document.getElementById('pick');
+    Object.keys(registry).sort().forEach(id => pick.append(ctxBase.h('option', { value: id }, id)));
+    const q = new URLSearchParams(location.search).get('w');
+    if (q && registry[q]) pick.value = q;
+    pick.addEventListener('change', () => mount(pick.value));
+    if (pick.value) mount(pick.value);
+    document.getElementById('theme').addEventListener('click', () => {
+      const r = document.documentElement; r.setAttribute('data-theme', r.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+      themeListeners.forEach(fn => fn());
+    });
+  });
+  window.addEventListener('error', e => { document.getElementById('err').textContent = e.message; });
+</script>
+<script src="widgets/chain-map.js"></script>
+<script src="widgets/purity.js"></script>
+<script src="widgets/cz-puller.js"></script>
+<script src="widgets/wafer-slicing.js"></script>
+<script src="widgets/upw-mask-cost.js"></script>
+<script src="widgets/fab-flow.js"></script>
+<script src="widgets/deal-grove.js"></script>
+<script src="widgets/ald-cycle.js"></script>
+<script src="widgets/rayleigh.js"></script>
+<script src="widgets/sadp.js"></script>
+<script src="widgets/euv-source.js"></script>
+<script src="widgets/euv-stochastics.js"></script>
+<script src="widgets/etch-profile.js"></script>
+<script src="widgets/implant-profile.js"></script>
+<script src="widgets/transistor-evolution.js"></script>
+<script src="widgets/node-table.js"></script>
+<script src="widgets/damascene.js"></script>
+<script src="widgets/yield-calculator.js"></script>
+<script src="widgets/test-cost.js"></script>
+<script src="widgets/hbm-stack.js"></script>
+<script src="widgets/package-xsection.js"></script>
+<script src="widgets/cowos-flow.js"></script>
+<script src="widgets/yield-cascade.js"></script>
+<script src="widgets/gpu-bom.js"></script>
+<script src="widgets/rack-explorer.js"></script>
+<script src="widgets/wafer-price.js"></script>
+<script src="widgets/geo-share.js"></script>
+<script src="widgets/scale-ladder.js"></script>
+<script src="widgets/implanter-beamline.js"></script>
+<script src="widgets/mosfet-iv.js"></script>
+<script src="widgets/fab-anatomy.js"></script>
+<script src="widgets/moores-law.js"></script>
+<script src="widgets/litho-track.js"></script>
+<script src="widgets/plasma-reactor.js"></script>
+<script src="widgets/resist-chemistry.js"></script>
+<script src="widgets/bragg-mirror.js"></script>
+<script src="widgets/amhs-sim.js"></script>
+<script src="widgets/cmp-planarize.js"></script>
+<script src="widgets/wafer-sort-sim.js"></script>
+<script src="widgets/nand-3d-build.js"></script>
+<script src="widgets/heat-path.js"></script>
+<script src="widgets/hybrid-bond.js"></script>
+<script src="widgets/glossary-flashcards.js"></script>
+<script src="widgets/nvlink-topology.js"></script>
+<script src="widgets/export-timeline.js"></script>
+<script src="widgets/dram-cell.js"></script>
+</body>
+</html>

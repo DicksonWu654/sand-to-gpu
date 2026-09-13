@@ -1,0 +1,104 @@
+{
+  "module": 13,
+  "questions": [
+    {
+      "q": "A spectroscopic ellipsometer reports a 1.85 nm gate oxide with 0.01 nm repeatability. What does the instrument actually measure, and why can its accuracy still be off by several tenths of a nanometer?",
+      "options": [
+        "It measures the time-of-flight of photons through the film; accuracy is limited by detector timing jitter",
+        "It measures the polarization change (Psi and Delta) of obliquely reflected light across many wavelengths and infers thickness by fitting an optical model; if the model (dispersion, interfacial layer, roughness) is wrong, the fitted thickness is wrong regardless of repeatability",
+        "It counts atomic layers directly by X-ray diffraction; accuracy is limited by the lattice constant uncertainty",
+        "It measures reflectance at a single wavelength; accuracy is limited by lamp intensity drift"
+      ],
+      "answer": 1,
+      "explanation": "Ellipsometry measures rho = r_p/r_s = tan(Psi) exp(i Delta); thickness comes only from model fitting, which is why recipes are validated against cross-section TEM."
+    },
+    {
+      "q": "Why does a fab use scatterometry (OCD) rather than CD-SEM to monitor the thickness of the three stacked silicon channels in a nanosheet transistor in-line?",
+      "options": [
+        "CD-SEM cannot operate in a cleanroom",
+        "OCD images each nanosheet with visible light at higher resolution than an electron beam",
+        "CD-SEM gives a top-down 2D image and cannot see buried profile parameters, while OCD fits the diffraction spectrum of a periodic target with an RCWA (or ML) model that returns the full 3D profile, non-destructively, in under a second and without charging or shrinkage",
+        "OCD is a contact technique that physically probes each layer"
+      ],
+      "answer": 2,
+      "explanation": "OCD solves an inverse problem on the specular spectrum of a grating; its output includes buried layer thicknesses and sidewall angles that no top-down SEM image contains."
+    },
+    {
+      "q": "In diffraction-based overlay (DBO), two stacked gratings are printed with programmed shifts of +d and -d in two neighboring targets. What is the purpose of the two opposite biases?",
+      "options": [
+        "To double the target size so the microscope can find it",
+        "To allow the proportionality constant between the +1/-1 order intensity asymmetry and the overlay error to be cancelled algebraically, so overlay is obtained without knowing the stack's optical response",
+        "To measure overlay in x and y simultaneously with one target",
+        "To compensate for resist shrinkage under the electron beam"
+      ],
+      "answer": 1,
+      "explanation": "The asymmetry between the +1st and -1st diffraction orders is proportional to overlay; with two known biases the unknown sensitivity drops out, giving ~0.1 nm repeatability from a fast, small target."
+    },
+    {
+      "q": "A single-beam e-beam inspector at a 5 nm pixel would need on the order of 2.8 x 10^15 pixels (about 80 days at 400 MHz) to cover a 300 mm wafer. What is the practical consequence, and how do multi-beam tools such as the ASML HMI eScan 1100 address it?",
+      "options": [
+        "EBI is used only on bare wafers; multi-beam tools add dark-field channels",
+        "EBI covers only a small fraction of each wafer on selected care areas; the eScan 1100 splits the source into a 5 x 5 array of 25 beams with separate detectors for up to ~15x single-beam throughput, extending sampling but still not replacing full-wafer optical inspection",
+        "EBI is faster than optical inspection at all pixel sizes; multi-beam tools are used for review only",
+        "EBI cannot see electrical opens; multi-beam tools add voltage contrast"
+      ],
+      "answer": 1,
+      "explanation": "Serial pixel scanning limits single-beam EBI to well under 1% of a wafer; 9-beam (eScan 1000) and 25-beam (eScan 1100) arrays multiply throughput but remain sampling tools for critical EUV layers."
+    },
+    {
+      "q": "At D0 = 0.1 defects/cm2, an 800 mm2 GPU die yields about 45% under the Poisson model but about 51% under the negative binomial model with alpha = 2, while a 100 mm2 phone die yields ~90.5% under both. What explains the divergence for the large die?",
+      "options": [
+        "The negative binomial model assumes defects cluster (gamma-distributed density with clustering parameter alpha), which leaves more large dies defect-free than independent Poisson defects would; the models converge for small dies because A x D0 is small",
+        "The Poisson model ignores edge dies, which are more numerous for large dies",
+        "The negative binomial model includes systematic yield loss, which is larger for small dies",
+        "Large dies have more metal layers, and the Poisson model only counts one layer"
+      ],
+      "answer": 0,
+      "explanation": "Y = (1 + A D0/alpha)^(-alpha) reduces to exp(-A D0) as alpha goes to infinity; real defects cluster, so the Poisson model is pessimistic for large dies, and the choice of alpha matters enormously for GPU economics."
+    },
+    {
+      "q": "The GH100 die (814 mm2) has 144 physical SMs but the H100 SXM product enables only 132. Roughly how does this change the number of sellable dies per 300 mm wafer at D0 = 0.1/cm2, assuming ~70% of the die area is harvestable?",
+      "options": [
+        "It has no effect on yield; SMs are disabled only for power reasons",
+        "It roughly doubles the sellable count, from ~27 to 31 fully defect-free dies (of ~60 to 63 candidates) to ~47 to 49, because only defects in the ~30% non-harvestable area (fabric, memory controllers, NVLink) are fatal",
+        "It reduces yield because disabled SMs still consume test time",
+        "It raises the count to all ~63 candidates, since any defect can be routed around"
+      ],
+      "answer": 1,
+      "explanation": "Survival of the ~2.44 cm2 unrepairable region is exp(-0.244) = 78%, and the chance of more than 12 dead SMs in the harvestable region is negligible, so effective yield is ~78% instead of ~45 to 51%."
+    },
+    {
+      "q": "An etch CD has a specification of 18 to 22 nm. The process runs at a mean of 20.2 nm with a standard deviation of 0.5 nm. What is its C_pk, and what is the cheapest way to reach the 1.33 target?",
+      "options": [
+        "C_pk = 2.0; it already exceeds the target",
+        "C_pk = min(22 - 20.2, 20.2 - 18) / (3 x 0.5) = 1.8 / 1.5 = 1.2, below 1.33; centring the mean at 20.0 nm with a recipe offset raises it to 2.0 / 1.5 = 1.33 without reducing the spread",
+        "C_pk = 0.6; the only fix is tighter metrology precision",
+        "C_pk cannot be computed without the control limits"
+      ],
+      "answer": 1,
+      "explanation": "C_pk uses the nearer specification limit: (USL - mean)/(3 sigma) = 1.2. Centring costs nothing; the alternative, cutting sigma to about 0.45 nm, is months of process work. C_pk = 1.33 means the nearer limit is 4 sigma from the mean (~60 ppm outside if centred)."
+    },
+    {
+      "q": "Overlaying a metal-1 inspection map on the sort map shows that dies carrying a class-X defect fail 70% of the time, while dies without one fail 30% of the time. What is the kill ratio of class X, and what is it used for?",
+      "options": [
+        "0.70; it is the fraction of all dies that fail",
+        "0.40; it is the difference in failure rates and is used only for reporting",
+        "About 0.57, from (0.70 - 0.30)/(1 - 0.30): the extra failures attributable to class X as a fraction of the dies that would otherwise have passed; multiplied by the class-X count per die it gives the yield loss forecast used to disposition a held lot",
+        "1.0; any real defect is a killer"
+      ],
+      "answer": 2,
+      "explanation": "The kill ratio removes the baseline failure rate from other causes and normalizes by the dies that would otherwise pass. Kill ratio x defects per die is the yield forecast that decides whether a held lot ships, is reworked, or is scrapped."
+    },
+    {
+      "q": "A WAT via chain of 10^6 vias in series reads open at 5% of the sites on a lot. Assuming independent via failures, what is the per-via open probability, and why does the fab track it?",
+      "options": [
+        "5 x 10^-2 per via; it is the die yield",
+        "About 5 x 10^-8 per via, from p = -ln(0.95)/10^6, because the chain survives with probability exp(-N x p); it is a per-layer input to the defect-density model and a lot-by-lot monitor of which layer's D0 is moving",
+        "5 x 10^-6 per via, obtained by dividing 5% by 10^4",
+        "It cannot be computed without knowing the via resistance"
+      ],
+      "answer": 1,
+      "explanation": "One open via anywhere opens the chain, so a 95% chain survival rate over 10^6 vias implies a per-via open rate near 5 x 10^-8. Comb/serpentine structures give the same kind of per-layer defect density, e.g. -ln(0.97)/0.01 cm^2 = 3/cm^2 for 3 failures in 100 sites."
+    }
+  ]
+}

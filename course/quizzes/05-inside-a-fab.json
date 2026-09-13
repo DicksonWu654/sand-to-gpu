@@ -1,0 +1,104 @@
+{
+  "module": 5,
+  "questions": [
+    {
+      "q": "A fab starts 100,000 wafers per month and has a 90-day cycle time. Using Little's law, roughly how many wafers are in the fab (WIP) at any instant?",
+      "options": [
+        "About 30,000 wafers",
+        "About 100,000 wafers",
+        "About 300,000 wafers",
+        "About 3,000,000 wafers"
+      ],
+      "answer": 2,
+      "explanation": "WIP = throughput x cycle time. 100,000 wafers/month is ~3,300 wafers/day; times 90 days gives ~296,000 wafers, i.e. roughly 12,000 lots of 25 sitting in tools, buffers, and stockers."
+    },
+    {
+      "q": "Why can the ballroom of a 300 mm leading-edge fab be run at only ISO 5-6 rather than ISO 1-3?",
+      "options": [
+        "Modern ULPA filters make the whole room ISO 1 anyway, so the ballroom class is only a nominal rating",
+        "Wafers are sealed in FOUPs at all times and are only exposed inside tool mini-environments (EFEMs) that have their own ULPA fan-filter units at ISO 1-3",
+        "Killer defect sizes at N3/N2 are larger than 0.5 um, so ISO 5 air is clean enough for direct wafer exposure",
+        "The OHT vehicles carry wafers above the laminar flow zone, where particle counts are lowest"
+      ],
+      "answer": 1,
+      "explanation": "The FOUP plus load port plus EFEM mini-environment means the wafer never sees ballroom air; only the small volumes that touch bare wafers must be ISO 1-3, which makes the ballroom layout, full automation, and human presence possible."
+    },
+    {
+      "q": "A $20 billion fab has $15 billion in tools (depreciated over 5 years) and $5 billion in building (depreciated over 20 years) and produces 1.2 million wafers per year at full output. What is the approximate depreciation cost per wafer, and what happens to it at 50% loading?",
+      "options": [
+        "~$1,000 per wafer, unchanged at 50% loading because depreciation is a variable cost",
+        "~$2,700 per wafer, roughly doubling to ~$5,400 at 50% loading because depreciation is a fixed cost",
+        "~$16,700 per wafer, halving at 50% loading",
+        "~$270 per wafer, rising slightly at 50% loading"
+      ],
+      "answer": 1,
+      "explanation": "Annual depreciation is $15B/5 + $5B/20 = $3.25B; divided by 1.2M wafers gives ~$2,700 per wafer. Depreciation accrues whether or not wafers are made, so at half the output the per-wafer charge doubles. This is why fabs run 24/7 at high utilization."
+    },
+    {
+      "q": "According to Kingman's queueing approximation, what happens to the average waiting time at a tool as its utilization rises from 80% to 95%, all else equal?",
+      "options": [
+        "It rises by about 19% because utilization rose by 15 percentage points",
+        "It falls, because a busier tool processes lots faster",
+        "It rises by roughly a factor of 5, because the u/(1-u) term goes from 4 to 19",
+        "It stays constant as long as the tool is not the bottleneck"
+      ],
+      "answer": 2,
+      "explanation": "Waiting time scales with u/(1-u): at 80% utilization this is 4, at 95% it is 19. This 'operating curve' is why bottleneck scanners are run at ~85-95% while other tools are deliberately given slack to protect cycle time."
+    },
+    {
+      "q": "Why are copper seed PVD and copper electroplating tools placed close together and governed by a queue-time (Q-time) limit of a few hours?",
+      "options": [
+        "The plating bath must be kept at the same temperature as the PVD chamber",
+        "The 2-5 nm Cu seed layer oxidizes in air, and plating onto an oxidized seed produces voids and poor adhesion",
+        "The AMHS cannot transport FOUPs containing copper wafers more than a few hundred meters",
+        "Copper wafers must stay in vacuum, so the two tools share one cluster mainframe"
+      ],
+      "answer": 1,
+      "explanation": "A freshly sputtered ultra-thin copper seed reacts with air; if the delay before plating is too long the plated film nucleates poorly and the interconnect is defective. Many step pairs in the flow carry similar Q-time limits for surface-chemistry reasons, and the MES dispatcher enforces them."
+    },
+    {
+      "q": "A fab runs 100,000 wafers per month with 25 EUV layers. An NXE:3800E achieves an effective ~160 wafers per hour at production doses with ~85% availability. Approximately how many EUV scanners are required before adding margin?",
+      "options": [
+        "About 5",
+        "About 12",
+        "About 25",
+        "About 100"
+      ],
+      "answer": 2,
+      "explanation": "2.5 million EUV exposures per month are needed. One scanner delivers 160 x 24 x 30.4 x 0.85 = ~99,000 exposures per month, so ~25 scanners are needed, and fabs add ~20% for dedication and ramp headroom, giving ~30 at ~$200M each."
+    },
+    {
+      "q": "A single-chamber tool has a mean process time of 1 hour per lot, with fully random arrivals and processing (c_a = c_e = 1). Using Kingman's approximation, roughly how long does a lot wait in front of it when the tool runs at 90% utilization?",
+      "options": [
+        "About 1 hour",
+        "About 4 hours",
+        "About 9 hours",
+        "About 19 hours"
+      ],
+      "answer": 2,
+      "explanation": "W = u/(1-u) x (c_a^2 + c_e^2)/2 x t_e = 9 x 1 x 1 h = 9 hours of waiting for 1 hour of processing, an X-factor of 10. At 80% utilization the wait would be 4 hours and at 95% it would be 19 hours, which is why only bottleneck scanners are run near the steep end of the operating curve, and why real fabs reach an X-factor of 2-4 only by driving variability below 1 and pooling matched chambers."
+    },
+    {
+      "q": "A fab draws 500 MW continuously and starts 100,000 wafers per month. Roughly how much electricity does each wafer account for?",
+      "options": [
+        "About 36 kWh",
+        "About 360 kWh",
+        "About 3,600 kWh",
+        "About 36,000 kWh"
+      ],
+      "answer": 2,
+      "explanation": "500,000 kW x 24 h x 30.4 days is about 365 million kWh per month; divided by 100,000 wafers that is roughly 3,600 kWh per wafer, about a household's annual use. At $0.10 per kWh it is about $360 per wafer, 3-4% of a ~$10,000 wafer, consistent with the ~5% utilities line in the cost breakdown once water and gases are added."
+    },
+    {
+      "q": "Why are FOUPs, load ports, and stockers in a leading-edge fab fitted with nitrogen purge?",
+      "options": [
+        "To cool the wafers quickly after high-temperature anneal and epitaxy steps",
+        "To displace oxygen and humidity so that native oxide regrowth on cleaned silicon and oxidation of copper and cobalt between BEOL steps are slowed, and so the FOUP's polymer walls do not release adsorbed HF or ammonia back onto the wafers",
+        "To keep the FOUP at positive pressure so that the OHT vehicle's gripper can hold it securely",
+        "To make the FOUP lighter so that the overhead hoist can lift it faster"
+      ],
+      "answer": 1,
+      "explanation": "A purged FOUP holds wafers at a few percent humidity in a nearly oxygen-free atmosphere. That slows the surface chemistry that queue-time limits exist to control (native oxide on HF-last silicon, oxidation of the 2-5 nm copper seed, corrosion of exposed copper after CMP) and stops the polycarbonate body from feeding absorbed process chemicals back onto the wafers. Stockers and buffers purge lots that are waiting under humidity-sensitive Q-time limits for the same reason."
+    }
+  ]
+}

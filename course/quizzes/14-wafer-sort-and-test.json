@@ -1,0 +1,71 @@
+{
+  "module": 14,
+  "questions": [
+    {
+      "q": "A large die yields Y = 0.70 at sort and the scan program achieves T = 0.99 fault coverage. Using the Williams-Brown model DL = 1 - Y^(1-T), roughly how many defective parts per million escape, and what happens if coverage is raised to 0.999?",
+      "options": [
+        "About 300 DPPM; raising coverage to 0.999 has almost no effect because yield dominates",
+        "About 3,560 DPPM; raising coverage to 0.999 cuts escapes roughly tenfold to about 360 DPPM",
+        "About 10,000 DPPM (1 - T); coverage and yield are independent so raising T to 0.999 gives 1,000 DPPM",
+        "About 30 DPPM; raising coverage to 0.999 brings it to zero"
+      ],
+      "answer": 1,
+      "explanation": "DL = 1 - 0.70^0.01 = 1 - exp(0.01 ln 0.70) = 0.00356, or ~3,560 DPPM; at T = 0.999 it is 1 - 0.70^0.001 = ~357 DPPM. Each additional nine of coverage cuts escapes about tenfold, and lower yield makes escapes worse at the same coverage."
+    },
+    {
+      "q": "Why do probers re-align the wafer to the probe card after heating the chuck to 125 °C, rather than reusing the alignment done at room temperature?",
+      "options": [
+        "Silicon's ~2.6 ppm/K expansion moves the wafer edge by roughly 78 µm across 300 mm for a 100 K rise, which is larger than a 45 µm pad, and the probe card expands differently",
+        "The vacuum clamp weakens at high temperature and the wafer slips on the chuck",
+        "The camera optics defocus at high temperature and the original alignment data is lost",
+        "The probe tips soften above 100 °C and must be re-seated before each wafer"
+      ],
+      "answer": 0,
+      "explanation": "300 mm x 2.6e-6/K x 100 K = 78 µm of total expansion, far more than the ±1 µm positioning budget, and the ceramic/PCB probe card expands by a different amount, so a hot alignment after soak is required."
+    },
+    {
+      "q": "Why is simple IDDQ testing (comparing quiescent supply current to a fixed limit) no longer an effective defect screen on advanced-node SoCs, and what replaced it?",
+      "options": [
+        "Modern testers cannot measure current accurately; it was replaced by scan testing",
+        "IDDQ only detects opens, which are rare at advanced nodes; it was replaced by continuity testing",
+        "Intrinsic leakage across billions of transistors is amperes and varies across the wafer by more than a defect adds; delta-IDDQ between vector states and statistical outlier screening (PAT/DPAT) replaced fixed limits",
+        "IDDQ requires the chip to be powered down, which is impossible on a GPU; it was replaced by burn-in"
+      ],
+      "answer": 2,
+      "explanation": "A CMOS bridging defect adds a roughly constant current, but at advanced nodes the background leakage swamps it and varies with process corner; delta-IDDQ and comparing each die to its wafer neighbors recover the signal."
+    },
+    {
+      "q": "A GPU sort cell (tester, prober, probe cards, overhead) costs about $0.10 per productive second and tests one die at a time for 240 s across two temperature insertions. A mobile SoC is tested 16 sites in parallel for 25 s on a $0.05 per second cell. What are the approximate per-die sort costs?",
+      "options": [
+        "GPU ~$2.40, mobile SoC ~$1.25",
+        "GPU ~$240, mobile SoC ~$0.80",
+        "GPU ~$24, mobile SoC ~$1.25",
+        "GPU ~$24, mobile SoC ~$0.08"
+      ],
+      "answer": 3,
+      "explanation": "GPU: 240 s x $0.10 = ~$24 per die. Mobile SoC: 25 s x $0.05 / 16 sites = ~$0.078 per die. Multi-site parallelism is the main reason small-die test is cheap and single-site GPU test is not."
+    },
+    {
+      "q": "In a package with 8 HBM stacks of 12 DRAM dies each (96 DRAM dies), each DRAM die shipped at 500 DPPM after wafer test, roughly what fraction of packages will contain at least one escaped bad DRAM die, and why does this matter so much for CoWoS?",
+      "options": [
+        "About 0.05%; it barely matters because HBM stacks can be reworked",
+        "About 4.7%; every such package scraps more than $10,000 of good GPU, HBM, interposer, and substrate because bonded stacks cannot be reworked",
+        "About 48%; this is why HBM is tested only after stacking",
+        "About 0.5%; the interposer's redundancy repairs the bad die"
+      ],
+      "answer": 1,
+      "explanation": "1 - (1 - 0.0005)^96 = ~4.7%. Thermocompression- and hybrid-bonded stacks have no rework path, so known-good-die quality on every constituent die directly sets the scrap rate on the most expensive assembly in the chain."
+    },
+    {
+      "q": "What is the mechanical purpose of probe overtravel (driving the chuck 50 to 100 µm past first contact), and what does it produce on an aluminum pad?",
+      "options": [
+        "It compensates for chuck flatness error only; it leaves no mark on the pad",
+        "It bends the probes sideways to hit multiple pads per probe, reducing probe count",
+        "It compresses each probe spring to generate ~2 to 8 gf of contact force and, on cantilever needles, a 10 to 25 µm scrub that scrapes through the native Al2O3 to reach clean metal",
+        "It heats the tip by friction so it can solder itself to the pad for the duration of the test"
+      ],
+      "answer": 2,
+      "explanation": "Each probe is a spring; overtravel sets its compression and hence its force. The lateral wipe of a deflecting cantilever needle breaks the few-nanometer native oxide, which is why contact resistance drops below ~1 Ω, and the resulting probe mark must stay within the assembly house's pad-damage limits."
+    }
+  ]
+}

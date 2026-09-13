@@ -1,0 +1,63 @@
+[
+  {"click": "#box .w-step-nav button:nth-of-type(2)"}, {"wait": 300}, {"shot": "preset-oxide-contact"},
+  {"click": "#box .w-step-nav button:nth-of-type(3)"}, {"wait": 300}, {"shot": "preset-si-fin"},
+  {"click": "#box .w-step-nav button:nth-of-type(4)"}, {"wait": 300}, {"shot": "preset-bosch"},
+  {"click": "#box .w-step-nav button:nth-of-type(5)"}, {"wait": 300}, {"shot": "preset-wet-hf"},
+  {"click": "#box .w-step-nav button:nth-of-type(6)"}, {"wait": 300}, {"shot": "preset-nand-cryo"},
+  {"click": "#box .w-step-nav button:nth-of-type(1)"}, {"wait": 300},
+
+  {"set": "#box .w-controls label:nth-of-type(1) input[type=range]", "value": 0},
+  {"set": "#box .w-controls label:nth-of-type(2) input[type=range]", "value": 0},
+  {"set": "#box .w-controls label:nth-of-type(3) input[type=range]", "value": 0},
+  {"set": "#box .w-controls label:nth-of-type(4) input[type=range]", "value": 5},
+  {"wait": 300}, {"shot": "all-min"},
+
+  {"set": "#box .w-controls label:nth-of-type(1) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label:nth-of-type(2) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label:nth-of-type(3) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label:nth-of-type(4) input[type=range]", "value": 120},
+  {"wait": 300}, {"shot": "all-max"},
+
+  {"set": "#box .w-controls label:nth-of-type(1) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label:nth-of-type(2) input[type=range]", "value": 0},
+  {"set": "#box .w-controls label:nth-of-type(3) input[type=range]", "value": 0},
+  {"set": "#box .w-controls label:nth-of-type(4) input[type=range]", "value": 60},
+  {"wait": 300}, {"shot": "ion-only-sputter"},
+
+  {"set": "#box .w-controls label:nth-of-type(1) input[type=range]", "value": 0},
+  {"set": "#box .w-controls label:nth-of-type(2) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label:nth-of-type(3) input[type=range]", "value": 0},
+  {"set": "#box .w-controls label:nth-of-type(4) input[type=range]", "value": 120},
+  {"wait": 300}, {"shot": "chem-only-120s"},
+
+  {"set": "#box .w-controls label:nth-of-type(1) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label:nth-of-type(2) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label:nth-of-type(3) input[type=range]", "value": 0},
+  {"set": "#box .w-controls label:nth-of-type(4) input[type=range]", "value": 120},
+  {"wait": 300}, {"shot": "ion-chem-nopass-120s"},
+
+  {"set": "#box .w-controls label:nth-of-type(1) input[type=range]", "value": 50},
+  {"set": "#box .w-controls label:nth-of-type(2) input[type=range]", "value": 50},
+  {"set": "#box .w-controls label:nth-of-type(3) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label:nth-of-type(4) input[type=range]", "value": 120},
+  {"wait": 300}, {"shot": "pass-max-120s"},
+
+  {"set": "#box .w-controls label:nth-of-type(1) input[type=range]", "value": 50},
+  {"set": "#box .w-controls label:nth-of-type(2) input[type=range]", "value": 50},
+  {"set": "#box .w-controls label:nth-of-type(3) input[type=range]", "value": 50},
+  {"set": "#box .w-controls label:nth-of-type(4) input[type=range]", "value": 5},
+  {"wait": 300}, {"shot": "defaults-time-min"},
+
+  {"set": "#box .w-controls label:nth-of-type(1) input[type=range]", "value": 70},
+  {"set": "#box .w-controls label:nth-of-type(2) input[type=range]", "value": 20},
+  {"set": "#box .w-controls label:nth-of-type(3) input[type=range]", "value": 10},
+  {"set": "#box .w-controls label:nth-of-type(4) input[type=range]", "value": 90},
+  {"wait": 300}, {"shot": "notch-regime"},
+
+  {"click": "#box .w-step-nav button:nth-of-type(4)"}, {"wait": 200},
+  {"set": "#box .w-controls label:nth-of-type(4) input[type=range]", "value": 120},
+  {"wait": 300}, {"shot": "bosch-120s-landed"},
+
+  {"hover": "#box .w-step-nav button:nth-of-type(3)"}, {"wait": 300}, {"shot": "hover-preset"},
+  {"hover": "#box svg.w-svg"}, {"wait": 300}, {"shot": "hover-svg"}
+]

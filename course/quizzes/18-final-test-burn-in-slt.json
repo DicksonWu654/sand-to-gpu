@@ -1,0 +1,82 @@
+{
+  "module": 18,
+  "questions": [
+    {
+      "q": "Using the Arrhenius model with Ea = 0.7 eV, the acceleration factor of a 125 C burn-in relative to 55 C use is about 78. If the use temperature is instead 85 C, roughly what happens to the acceleration factor, and why does this matter for a GPU?",
+      "options": [
+        "It rises to ~150 because the stress-to-use gap in kelvin is smaller and the exponent scales inversely",
+        "It stays ~78 because Arrhenius acceleration depends only on the stress temperature",
+        "It falls to ~10, so the same 48 h burn-in covers only ~3 weeks of hot-running field time instead of ~5 months",
+        "It falls to ~1 because 85 C is above the activation threshold for defect-driven failure"
+      ],
+      "answer": 2,
+      "explanation": "AF = exp[(Ea/k)(1/T_use - 1/T_stress)]; raising T_use from 328 K to 358 K shrinks the reciprocal-temperature difference and the exponent, giving AF ~10. Burn-in duration must therefore be set against the customer's real junction temperature."
+    },
+    {
+      "q": "Which of the following can be tested for the first time at package-level final test rather than at wafer sort, and for what physical reason?",
+      "options": [
+        "Scan-chain stuck-at faults, because scan requires the package's power planes",
+        "The GPU-to-HBM interface and NVLink SerDes at 200 Gb/s, because the HBM stacks did not exist at sort and a probe card cannot pass those data rates or full current",
+        "SRAM repair fuses, because fuses cannot be programmed until the package lid is attached",
+        "Transistor threshold voltage, because it changes during reflow"
+      ],
+      "answer": 1,
+      "explanation": "The 1,024-bit-per-stack HBM bus, the die-to-die NV-HBI link and at-speed PAM4 SerDes require the assembled package and a controlled-impedance socket; probe cards are limited in current per needle and are impedance discontinuities at those rates."
+    },
+    {
+      "q": "A back-end flow has assembly yield 98%, FT1 96%, burn-in plus FT2 99.2%, SLT 98.5% and module test 99%. Starting from 1,000 sorted die, approximately how many modules ship, and which single stage costs the most in dollars?",
+      "options": [
+        "~910 modules; FT1, because it has the largest fallout on a package already worth ~$3,000",
+        "~960 modules; assembly, because it has the lowest yield of the chain",
+        "~910 modules; SLT, because system-level test slots are the most expensive equipment",
+        "~850 modules; burn-in, because the oven damages good parts"
+      ],
+      "answer": 0,
+      "explanation": "0.98 x 0.96 x 0.992 x 0.985 x 0.99 = 0.910. FT1 removes ~39 units at ~$3,000 each (~$117k), more than any other stage, because the fallout is highest and the full package value including HBM is already at risk. The yields are the module's illustrative industry ranges, not published NVIDIA data; the compounding arithmetic is what carries over."
+    },
+    {
+      "q": "Why does a system-level test (SLT) insertion catch failures that a scan program with 99% stuck-at coverage misses?",
+      "options": [
+        "SLT runs at a higher temperature than the ATE can reach",
+        "Scan coverage is measured against a fault model, while SLT boots real firmware and exercises clock-domain crossings, power-management state transitions and analog-firmware interactions that no fault model represents",
+        "SLT applies a higher voltage stress than burn-in",
+        "SLT tests the HBM stacks, which scan cannot access"
+      ],
+      "answer": 1,
+      "explanation": "Structural test targets modelled faults on synchronous logic; SLT is the only screen that runs the product as a system, which is why its fallout on GPUs (~0.5-2%) consists almost entirely of parts that passed every ATE block."
+    },
+    {
+      "q": "In an HBM stack, how is each DRAM die tested after stacking, when a probe can no longer reach it?",
+      "options": [
+        "Each die is probed through dedicated test TSVs that run to the top of the stack",
+        "The stack is X-rayed and any die with visible defects is remapped",
+        "The base die provides an IEEE 1500 wrapper for serial access to every die's test registers and a direct-access port that exposes a reduced-width interface for array testing, plus MBIST and TSV/lane repair logic",
+        "It is not tested until the stack is on the CoWoS interposer, because the 1,024-bit interface is required"
+      ],
+      "answer": 2,
+      "explanation": "The JEDEC HBM standard places test access in the base die: IEEE 1500 for per-die control and repair programming, and a DA port so the full array can be tested through a few hundred pads before the wide interface exists."
+    },
+    {
+      "q": "A clean HTOL result (3 lots x 77 units, 1,000 h at 125 C, zero failures) with an acceleration factor of ~78 to use temperature gives roughly what upper-bound failure rate at 60% confidence?",
+      "options": [
+        "~5 FIT",
+        "~51 FIT",
+        "~500 FIT",
+        "~5,000 FIT"
+      ],
+      "answer": 1,
+      "explanation": "231 x 1,000 x 78 = 18.0 million equivalent device-hours; with zero fails, chi-squared(0.60, 2 dof)/2 = 0.916, so lambda <= 0.916 / 18.0e6 per hour = 5.1e-8 per hour = ~51 failures per 1e9 device-hours."
+    },
+    {
+      "q": "A GPU read IDDQ = 22.0 A at FT1 and 28.6 A at FT2 after burn-in. The absolute IDDQ limit is 35 A and the FT2 delta limit is +20%. What is the verdict, and why is a per-unit delta a better screen than an absolute limit here?",
+      "options": [
+        "Pass: 28.6 A is inside the 35 A absolute limit, and delta limits are only advisory",
+        "Fail: the +30% rise exceeds the delta limit; a per-unit comparison is needed because the healthy population's IDDQ spread across process corners (roughly +/-40%) is wider than the 20-30% drift of a degrading part, so no absolute limit can catch the drift without also failing healthy high-leakage units",
+        "Fail: any IDDQ rise after burn-in proves a defect, so the delta limit should be 0%",
+        "Pass: burn-in permanently raises leakage in every part by about 30%, so the rise is expected"
+      ],
+      "answer": 1,
+      "explanation": "28.6 / 22.0 = 1.30, a 30% rise, above the +20% delta limit though inside the 35 A absolute limit. FT2 looks up the same unit's FT1 record by ECID in the STDF database. If every unit in the lot had risen by ~25%, the diagnosis would be an over-stressed burn-in recipe or a mis-set FT2 thermal head (checked with golden units), not a lot of degrading parts."
+    }
+  ]
+}

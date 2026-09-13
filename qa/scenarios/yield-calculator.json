@@ -1,0 +1,61 @@
+[
+  {"click": "#box .widget-body > div:nth-of-type(1) button.w-btn:nth-of-type(2)"}, {"wait": 250}, {"shot": "preset-b200"},
+  {"click": "#box .widget-body > div:nth-of-type(1) button.w-btn:nth-of-type(3)"}, {"wait": 250}, {"shot": "preset-a17"},
+  {"click": "#box .widget-body > div:nth-of-type(1) button.w-btn:nth-of-type(4)"}, {"wait": 250}, {"shot": "preset-chiplet50"},
+  {"click": "#box .widget-body > div:nth-of-type(1) button.w-btn:nth-of-type(1)"}, {"wait": 250}, {"shot": "preset-h100"},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(1) input[type=range]", "value": 3},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 3},
+  {"wait": 400}, {"shot": "die-min-3x3"},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(1) input[type=range]", "value": 35},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 35},
+  {"wait": 250}, {"shot": "die-max-35x35"},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(1) input[type=range]", "value": 29},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 28},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 10},
+  {"wait": 250}, {"shot": "edge-max-10"},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0},
+  {"wait": 250}, {"shot": "edge-min-0"},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 3},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(4) input[type=range]", "value": 0.5},
+  {"wait": 250}, {"shot": "scribe-max"},
+  {"set": "#box .w-controls .w-ctl:nth-child(4) input[type=range]", "value": 0.1},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(5) input[type=range]", "value": 1},
+  {"wait": 250}, {"shot": "d0-max-1.0"},
+  {"set": "#box .w-controls .w-ctl:nth-child(5) input[type=range]", "value": 0.01},
+  {"wait": 250}, {"shot": "d0-min-0.01"},
+  {"set": "#box .w-controls .w-ctl:nth-child(5) input[type=range]", "value": 0.5},
+  {"wait": 250}, {"shot": "d0-risk-0.5"},
+  {"set": "#box .w-controls .w-ctl:nth-child(5) input[type=range]", "value": 0.1},
+
+  {"set": "#box select", "value": "murphy"}, {"wait": 250}, {"shot": "model-murphy"},
+  {"set": "#box select", "value": "negbin"}, {"wait": 250}, {"shot": "model-negbin-alpha2"},
+  {"set": "#box .w-controls .w-ctl:nth-child(6) input[type=range]", "value": 0.5},
+  {"wait": 250}, {"shot": "negbin-alpha-min"},
+  {"set": "#box .w-controls .w-ctl:nth-child(6) input[type=range]", "value": 5},
+  {"wait": 250}, {"shot": "negbin-alpha-max"},
+  {"set": "#box .w-controls .w-ctl:nth-child(6) input[type=range]", "value": 2},
+  {"set": "#box select", "value": "poisson"},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(8) input[type=range]", "value": 40000},
+  {"wait": 250}, {"shot": "price-max"},
+  {"set": "#box .w-controls .w-ctl:nth-child(8) input[type=range]", "value": 3000},
+  {"wait": 250}, {"shot": "price-min"},
+  {"set": "#box .w-controls .w-ctl:nth-child(8) input[type=range]", "value": 17000},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(1) input[type=range]", "value": 3},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 3},
+  {"set": "#box .w-controls .w-ctl:nth-child(5) input[type=range]", "value": 1},
+  {"wait": 400}, {"shot": "die-min-d0-max"},
+  {"set": "#box .w-controls .w-ctl:nth-child(1) input[type=range]", "value": 29},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 28},
+  {"set": "#box .w-controls .w-ctl:nth-child(5) input[type=range]", "value": 0.1},
+
+  {"click": "#box button.w-btn.primary"}, {"wait": 250}, {"shot": "reroll"},
+  {"hover": "#box .widget-body > div:nth-of-type(1) button.w-btn:nth-of-type(3)"}, {"wait": 300}, {"shot": "hover-preset"},
+  {"hover": "#box svg rect"}, {"wait": 300}, {"shot": "hover-die"}
+]

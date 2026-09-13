@@ -1,0 +1,48 @@
+[
+  {"click": "#box .w-step-nav button.w-btn"}, {"wait": 250}, {"shot": "a-cost-per-btransistor"},
+  {"click": "#box .w-step-nav button.w-btn"}, {"wait": 250}, {"shot": "a-back-to-per-wafer"},
+
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(1) label.w-ctl:nth-of-type(1) input[type=range]", "value": 20},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(1) label.w-ctl:nth-of-type(2) input[type=range]", "value": 5},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(1) label.w-ctl:nth-of-type(3) input[type=range]", "value": 40000},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(1) input[type=range]", "value": 90},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(2) input[type=range]", "value": 5500},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(3) input[type=range]", "value": 58},
+  {"wait": 250}, {"shot": "b-module-worked-example-40k-wspm"},
+
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(1) input[type=range]", "value": 70},
+  {"wait": 250}, {"shot": "b-util-70"},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(1) input[type=range]", "value": 50},
+  {"wait": 250}, {"shot": "b-util-50-min"},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(1) input[type=range]", "value": 100},
+  {"wait": 250}, {"shot": "b-util-100-max"},
+
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(1) label.w-ctl:nth-of-type(1) input[type=range]", "value": 40},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(1) label.w-ctl:nth-of-type(2) input[type=range]", "value": 3},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(1) label.w-ctl:nth-of-type(3) input[type=range]", "value": 20000},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(1) input[type=range]", "value": 50},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(2) input[type=range]", "value": 8000},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(3) input[type=range]", "value": 70},
+  {"wait": 250}, {"shot": "b-all-max-cost"},
+
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(1) label.w-ctl:nth-of-type(1) input[type=range]", "value": 5},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(1) label.w-ctl:nth-of-type(2) input[type=range]", "value": 10},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(1) label.w-ctl:nth-of-type(3) input[type=range]", "value": 200000},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(1) input[type=range]", "value": 100},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(2) input[type=range]", "value": 2000},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(3) input[type=range]", "value": 30},
+  {"wait": 250}, {"shot": "b-all-min-cost"},
+
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(1) label.w-ctl:nth-of-type(1) input[type=range]", "value": 20},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(1) label.w-ctl:nth-of-type(2) input[type=range]", "value": 5},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(1) label.w-ctl:nth-of-type(3) input[type=range]", "value": 100000},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(1) input[type=range]", "value": 90},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(2) input[type=range]", "value": 4000},
+  {"set": "#box .w-grid2 .w-controls:nth-of-type(2) label.w-ctl:nth-of-type(3) input[type=range]", "value": 58},
+  {"wait": 200},
+
+  {"hover": "#box svg[aria-label^=\"Hyperscaler\"] g:nth-of-type(1)"}, {"wait": 300}, {"shot": "c-hover-2020"},
+  {"hover": "#box svg[aria-label^=\"Hyperscaler\"] g:nth-of-type(5)"}, {"wait": 300}, {"shot": "c-hover-2024"},
+  {"hover": "#box svg[aria-label^=\"Hyperscaler\"] g:nth-of-type(7)"}, {"wait": 300}, {"shot": "c-hover-2026"},
+  {"hover": "#box .w-step-nav button.w-btn"}, {"wait": 300}, {"shot": "a-hover-toggle-btn"}
+]

@@ -1,0 +1,21 @@
+[
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 2500}, {"shot": "play-2s"},
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"shot": "paused"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 60}, {"shot": "u-60"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 90}, {"shot": "u-90"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 95}, {"shot": "u-95"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 97}, {"shot": "u-97-shelf-overflows"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 98}, {"shot": "u-98-explode"},
+
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(2)"}, {"shot": "u-98-hot-lots"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 80}, {"shot": "u-80-hot-lots"},
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 2000},
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"shot": "hot-lot-moving"},
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(2)"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 20000}, {"shot": "wspm-min-20k"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 150000}, {"shot": "wspm-max-150k"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 100000},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 80}, {"shot": "defaults-restored"}
+]

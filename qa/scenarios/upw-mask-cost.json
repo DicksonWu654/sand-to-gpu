@@ -1,0 +1,42 @@
+[
+  {"set": "#box input[data-ctl=wafers]", "value": 500000},
+  {"set": "#box input[data-ctl=gal]", "value": 2500},
+  {"set": "#box input[data-ctl=reclaim]", "value": 0},
+  {"wait": 250},
+  {"shot": "upw-max-noreclaim"},
+
+  {"set": "#box input[data-ctl=wafers]", "value": 10000},
+  {"set": "#box input[data-ctl=gal]", "value": 800},
+  {"set": "#box input[data-ctl=reclaim]", "value": 95},
+  {"wait": 250},
+  {"shot": "upw-min-reclaim95"},
+
+  {"set": "#box input[data-ctl=wafers]", "value": 100000},
+  {"set": "#box input[data-ctl=gal]", "value": 1800},
+  {"set": "#box input[data-ctl=reclaim]", "value": 85},
+  {"hover": "#box svg[aria-label=\"Ultrapure water plant\"] g[data-stage=ro]"},
+  {"wait": 300},
+  {"shot": "upw-module-example-hover-ro"},
+
+  {"set": "#box input[data-ctl=layers]", "value": 140},
+  {"set": "#box input[data-ctl=euv]", "value": 140},
+  {"set": "#box select[data-ctl=peuv]", "value": 500},
+  {"set": "#box input[data-ctl=vol]", "value": 0},
+  {"wait": 250},
+  {"shot": "mask-max-layers-all-euv-1k"},
+
+  {"set": "#box input[data-ctl=euv]", "value": 0},
+  {"set": "#box input[data-ctl=crit]", "value": 0},
+  {"set": "#box input[data-ctl=layers]", "value": 40},
+  {"set": "#box select[data-ctl=peuv]", "value": 400},
+  {"set": "#box input[data-ctl=vol]", "value": 9},
+  {"wait": 250},
+  {"shot": "mask-min-layers-1M"},
+
+  {"set": "#box input[data-ctl=layers]", "value": 95},
+  {"set": "#box input[data-ctl=euv]", "value": 25},
+  {"set": "#box input[data-ctl=crit]", "value": 50},
+  {"set": "#box input[data-ctl=vol]", "value": 1},
+  {"wait": 250},
+  {"shot": "mask-module-example-2000w"}
+]

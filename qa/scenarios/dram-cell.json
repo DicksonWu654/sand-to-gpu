@@ -1,0 +1,33 @@
+[
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 400}, {"shot": "timeline-sense-firing"},
+  {"wait": 1800}, {"shot": "timeline-hold-1fA"},
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 100}, {"shot": "paused-hold"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 2},
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(2)"}, {"wait": 2000}, {"shot": "write1-then-leak-100fA"},
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 2000}, {"shot": "hold-leaking-100fA"},
+  {"wait": 2400}, {"shot": "share-weak-dv"},
+  {"wait": 500}, {"shot": "sense-on"},
+  {"wait": 200}, {"shot": "bit-lost-restore"},
+  {"wait": 800}, {"shot": "hold-a-0"},
+  {"wait": 4300}, {"shot": "rewrite-1-packets"},
+
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 100},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 0},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 10},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 150}, {"shot": "extremes-unreadable-cs10-cbl150"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 30},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 30}, {"shot": "extremes-big-cell-cs30-cbl30"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 12},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 80}, {"shot": "cbl80-floor-near-top"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 35},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 3}, {"shot": "leak-max-1000fA"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": -1}, {"shot": "leak-min-100aA"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 0},
+
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(3)"}, {"wait": 2100}, {"shot": "manual-write0-done"},
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(4)"}, {"wait": 1300}, {"shot": "manual-read0-share"},
+  {"wait": 2000}, {"shot": "manual-read0-done"},
+  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(2)"}, {"wait": 1100}, {"shot": "manual-write1-mid"},
+  {"wait": 1200}, {"click": "#box .w-controls > div > button.w-btn:nth-of-type(5)"}, {"wait": 3500}, {"shot": "manual-refresh-done"}
+]

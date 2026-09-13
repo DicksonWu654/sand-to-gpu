@@ -1,0 +1,71 @@
+{
+  "module": 0,
+  "questions": [
+    {
+      "q": "A polished 300 mm prime wafer costs ~$100-150 when it enters a leading-edge fab and is worth ~$17,000-20,000 when it leaves ~3 months later. Which single factor best explains where that value was added?",
+      "options": [
+        "The silicon was purified further inside the fab, from 9N to 11N",
+        "Roughly 1,000-1,500 process steps across ~70-100+ mask layers were performed on tools from a fab costing ~$20-30B, with most capex in equipment",
+        "The wafer was thinned from 775 um to ~30 um, which is the most expensive step",
+        "The fab embedded HBM memory into the wafer during the BEOL"
+      ],
+      "answer": 1,
+      "explanation": "The fab adds value through the ~1,000+ patterning, deposition, etch, implant, and CMP steps that build transistors and ~15-18 wiring levels, amortizing a $20-30B facility whose cost is ~70-80% equipment. Purity is fixed before the fab; thinning and HBM integration happen afterward, in packaging."
+    },
+    {
+      "q": "For an NVIDIA H100 SXM module with a bill of materials on the order of $3,000, which component is the largest share of cost?",
+      "options": [
+        "The 814 mm2 GPU die (~$350 at ~45-50 sellable die per ~$16.5k wafer)",
+        "The five HBM3 stacks (80 GB at ~$15-20/GB, roughly $1,200-1,600)",
+        "Wafer sort and final test",
+        "The SXM printed circuit board and voltage regulators"
+      ],
+      "answer": 1,
+      "explanation": "HBM is roughly 40-50% of the H100 BOM, with CoWoS packaging and substrate another ~20-25%. The GPU die itself is only ~10-15%, which is why memory and packaging, not the logic wafer, dominate the economics."
+    },
+    {
+      "q": "Why has TSMC's front-end wafer capacity NOT been the binding constraint on AI accelerator shipments in 2024-2026?",
+      "options": [
+        "TSMC has more than 17 million 12-inch-equivalent wafers per year of capacity, but CoWoS packaging (~75-80k wafers/month at end-2025) and HBM supply limit how many packages can be assembled",
+        "NVIDIA moved most GPU production to Samsung and Intel Foundry",
+        "EUV scanner shortages stopped N4 wafer production",
+        "Silicon wafer supply from Shin-Etsu and SUMCO ran out"
+      ],
+      "answer": 0,
+      "explanation": "Front-end N4/N5-class capacity could supply an order of magnitude more die than were shipped; the bottleneck sits after the wafer, in chip-on-wafer-on-substrate assembly (each CoWoS-L wafer yields only ~16 Blackwell packages) and in HBM stacks that were sold out for 2025 and 2026 in advance."
+    },
+    {
+      "q": "An N3-class process has ~20-25 EUV layers. A fab running 100,000 wafer starts per month with EUV scanners delivering ~100-120k wafer-passes per month each needs approximately how many EUV tools?",
+      "options": [
+        "2-3",
+        "6-8",
+        "20-25",
+        "150-200"
+      ],
+      "answer": 2,
+      "explanation": "100k wafers x ~20-25 layers = ~2-2.5 million EUV exposures per month; divided by ~100-120k passes per tool per month gives ~20-25 scanners, i.e. ~$4-5B of lithography tools at ~$200M each."
+    },
+    {
+      "q": "Which set correctly names the three chokepoints of the leading-edge supply chain as described in this module?",
+      "options": [
+        "Quartz mining, metallurgical-grade silicon smelting, and polysilicon purification",
+        "EUV lithography (ASML), leading-edge foundry (TSMC in Taiwan), and advanced packaging plus HBM (CoWoS; SK hynix/Samsung/Micron)",
+        "EDA software, CPU IP licensing, and server ODM assembly",
+        "Copper supply, ultrapure water, and data-center electricity"
+      ],
+      "answer": 1,
+      "explanation": "Each of these three is a step where one or a handful of firms hold nearly all capability: ASML is the sole EUV supplier, TSMC makes >90% of the most advanced logic wafers, and CoWoS capacity and HBM output gated AI accelerator supply. Raw silicon is cheap and abundant."
+    },
+    {
+      "q": "In the master process flow, 'replacement metal gate' (gate-last) comes AFTER which of these steps, and why?",
+      "options": [
+        "After M1 dual damascene, because the gate is formed in the BEOL",
+        "After source/drain epitaxy and ILD0 CMP, because the dummy polysilicon gate must survive the high-temperature S/D epi and anneal steps before being swapped for high-k and work-function metals",
+        "Before STI formation, because the gate defines the active area",
+        "After wafer sort, because the gate metal is deposited during bumping"
+      ],
+      "answer": 1,
+      "explanation": "In a gate-last flow, a sacrificial amorphous-Si dummy gate is patterned first, spacers and embedded S/D epi are formed around it, ILD0 is deposited and polished to expose it, and only then is it removed and replaced with the HfO2 high-k stack, work-function metals, and W/Co fill, so the metals never see the S/D thermal budget."
+    }
+  ]
+}

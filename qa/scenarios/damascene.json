@@ -1,0 +1,25 @@
+[
+  {"click": "#box .w-step-nav button.w-btn:last-of-type"}, {"wait": 250}, {"shot": "s02-lowk"},
+  {"click": "#box .w-step-dot[aria-label='Step 3']"}, {"wait": 250}, {"shot": "s03-hardmask"},
+  {"click": "#box .w-step-dot[aria-label='Step 4']"}, {"wait": 250}, {"shot": "s04-via-etch"},
+  {"click": "#box .w-step-dot[aria-label='Step 5']"}, {"wait": 250}, {"shot": "s05-trench-etch"},
+  {"click": "#box .w-step-dot[aria-label='Step 6']"}, {"wait": 250}, {"shot": "s06-cap-open-middle"},
+  {"click": "#box .w-step-dot[aria-label='Step 7']"}, {"wait": 250}, {"shot": "s07-barrier-liner"},
+  {"click": "#box .w-step-dot[aria-label='Step 8']"}, {"wait": 250}, {"shot": "s08-seed"},
+  {"click": "#box .w-step-dot[aria-label='Step 9']"}, {"wait": 500}, {"shot": "s09-superfill-t0.5s"},
+  {"wait": 700}, {"shot": "s09-superfill-t1.2s"},
+  {"wait": 1500}, {"shot": "s09-superfill-done"},
+  {"click": "#box .w-steps > button.w-btn"}, {"wait": 900}, {"shot": "s09-replay-t0.9s"},
+  {"click": "#box .w-step-dot[aria-label='Step 10']"}, {"wait": 250}, {"shot": "s10-anneal"},
+  {"click": "#box .w-step-nav button.w-btn:last-of-type"}, {"wait": 250}, {"shot": "s11-cmp-cap-last"},
+  {"click": "#box .w-step-nav button.w-btn:last-of-type"}, {"wait": 250}, {"shot": "s11-next-past-end"},
+  {"click": "#box .w-step-nav button.w-btn:first-of-type"}, {"wait": 250}, {"shot": "s10-after-prev"},
+
+  {"set": "#box .w-controls input[type=range]", "value": 10}, {"wait": 250}, {"shot": "width-10nm-min"},
+  {"set": "#box .w-controls input[type=range]", "value": 100}, {"wait": 250}, {"shot": "width-100nm-max"},
+  {"set": "#box .w-controls input[type=range]", "value": 20}, {"wait": 250}, {"shot": "width-20nm-module-example"},
+
+  {"hover": "#box .w-step-dot[aria-label='Step 4']"}, {"wait": 300}, {"shot": "hover-dot4"},
+  {"hover": "#box .w-step-nav button.w-btn:first-of-type"}, {"wait": 300}, {"shot": "hover-prev"},
+  {"click": "#box .w-step-dot[aria-label='Step 1']"}, {"wait": 250}, {"shot": "s01-back-to-start"}
+]

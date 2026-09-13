@@ -1,0 +1,71 @@
+{
+  "module": 7,
+  "questions": [
+    {
+      "q": "An ASML NXT:2100i (193.4 nm, NA 1.35) is run at a production k1 of 0.28. What is the approximate single-exposure half-pitch, and what happens to it at the theoretical k1 floor?",
+      "options": [
+        "~ 20 nm; at k1 = 0.25 it reaches ~ 10 nm, which is why SAQP was abandoned",
+        "~ 134 nm, because the effective wavelength in water is 193/1.44",
+        "~ 40 nm (80 nm pitch); at k1 = 0.25 it reaches ~ 36 nm, so ~ 72–80 nm is the tightest pitch 193i can print in one exposure",
+        "~ 72 nm; the k1 floor is 0.5 because only the 0th and +1st diffraction orders can ever enter the lens"
+      ],
+      "answer": 2,
+      "explanation": "CD = k1·λ/NA = 0.28 × 193.4 / 1.35 ≈ 40 nm half-pitch. Two-beam imaging with off-axis illumination allows k1 down to 0.25 (≈ 36 nm), which is why 193i single-exposure pitches bottom out around 76–80 nm and tighter pitches need multi-patterning."
+    },
+    {
+      "q": "In a chemically amplified resist, why is the post-exposure bake (PEB) rather than the exposure itself the step that determines the final line width?",
+      "options": [
+        "The PEB evaporates the casting solvent, which is what makes exposed resist soluble in TMAH",
+        "Exposure only converts PAG molecules into a sparse latent image of acid; during PEB each acid molecule catalytically cleaves hundreds to thousands of protecting groups (t-BOC or tertiary esters) and diffuses 5–20 nm, so PEB temperature, time, and delay set both the chemical gain and the edge blur",
+        "The PEB cross-links the novolac resin so it survives the plasma etch",
+        "The PEB is where the DNQ undergoes the Wolff rearrangement to form indene carboxylic acid"
+      ],
+      "answer": 1,
+      "explanation": "In a CAR the photon creates only an acid; deprotection happens thermally during PEB with the acid regenerated after every reaction (gain ~10^2–10^3). Acid diffusion during PEB is also the main resolution/LER/sensitivity trade-off knob, which is why PEB is controlled to ~0.1 °C and the exposure-to-PEB delay to seconds."
+    },
+    {
+      "q": "Why did water immersion at 193 nm win over the 157 nm F2 excimer as the path beyond dry ArF?",
+      "options": [
+        "157 nm needed CaF2 for every lens element (intrinsic birefringence, boule supply), had no workable pellicle, and needed fluorinated resists with poor etch resistance, while water (n = 1.44, ~1 m absorption length) raised the NA from 0.93 to 1.35 using existing lens materials, masks, and resists, giving a larger resolution gain than the 193→157 wavelength step",
+        "Water absorbs strongly at 157 nm, so immersion was only possible at 193 nm; the industry chose immersion because it made resists cheaper",
+        "The F2 laser could not reach 6 kHz repetition rate, limiting throughput below 100 wph",
+        "157 nm light is EUV and requires vacuum and reflective optics"
+      ],
+      "answer": 0,
+      "explanation": "The 157 nm programs were killed ~2003 by materials problems (CaF2 birefringence, no pellicle, poor resists). Immersion raises NA = n·sin θ to 1.35 with water, an effective wavelength of 134 nm, using the fused-silica lenses, 6% MoSi masks, and CAR platforms already in place."
+    },
+    {
+      "q": "In self-aligned double patterning (SADP), what physically sets the width of the final lines, and what is the main design consequence of the process?",
+      "options": [
+        "The lithographic mandrel CD sets the line width; the consequence is that overlay between the two exposures adds ~3–5 nm of space variation",
+        "The developer normality (0.26 N TMAH) sets the line width; the consequence is that only positive-tone resists can be used",
+        "The etch trim sets the line width; the consequence is that pitch cannot be reduced below the mandrel pitch",
+        "The ALD spacer thickness deposited on the mandrel sidewalls sets the line width (controllable to < 0.5 nm); because each spacer wraps around its mandrel, every line is a closed loop and line-ends must be created with a separate cut mask, which restricts the layer to 1D gridded lines at one pitch"
+      ],
+      "answer": 3,
+      "explanation": "SADP prints mandrels at the relaxed pitch, deposits a conformal ALD spacer, etches it back, and pulls the mandrel; the two spacers per mandrel halve the pitch (80 → 40 nm) with CD set by deposition. The loops and single-pitch constraint are why cut masks and restricted 1D layouts appear at 20 nm and below; LELE, not SADP, is the scheme whose spaces depend on overlay."
+    },
+    {
+      "q": "Depth of focus scales as k2·λ/NA². For the NA 1.35 immersion lens with k2 ≈ 0.6, what is the approximate total DOF, and which fab practices follow directly from it?",
+      "options": [
+        "~ 600 nm; resist films can be 1–2 µm thick and wafer leveling is unimportant",
+        "~ 60–65 nm; resists are only ~80–120 nm thick, spin-on-carbon/SiARC tri-layers planarize topography, and the scanner maps wafer height field by field with a level sensor on the second TWINSCAN stage",
+        "~ 6 nm; this is why 193i can only be used on perfectly flat bare-silicon wafers",
+        "~ 134 nm; this equals the effective wavelength in water"
+      ],
+      "answer": 1,
+      "explanation": "DOF = 0.6 × 193.4 / 1.35² ≈ 64 nm total (±32 nm), the entire budget for wafer flatness, topography, chuck particles, leveling, and lens field curvature. Thin resists, planarizing underlayers, and per-field leveling on the measurement stage are the consequences."
+    },
+    {
+      "q": "Which statement about EUV versus DUV layer usage at TSMC N5/N3-class nodes and the litho tool market is correct?",
+      "options": [
+        "EUV replaced all 193i layers at N5; ASML's DUV business has since collapsed to a few percent of revenue",
+        "N3 uses EUV for all ~80 layers, which is why the mask count fell for the first time",
+        "N5 uses ~14 EUV layers and N3 ~20–25 out of roughly 80 mask layers, each EUV layer replacing several 193i multi-patterning exposures, so the majority of layers remain 193i/KrF/i-line; ASML holds ~90% of the litho market with DUV still about half its system revenue and China a large DUV customer",
+        "Nikon and Canon together hold about half the ArF immersion market, with ASML's dominance limited to EUV"
+      ],
+      "answer": 2,
+      "explanation": "EUV took the ~15–25 tightest layers (fins, gates, contacts, M1–M4, cuts) where SAQP/LELELE were prohibitively expensive; layers that print in one 193i pass stay on DUV because they are cheaper. N5 was the first TSMC node with fewer masks than its predecessor. ASML is ~90% of litho by revenue; Nikon and Canon are a few percent each."
+    }
+  ]
+}

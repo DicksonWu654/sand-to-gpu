@@ -1,0 +1,104 @@
+{
+  "module": 19,
+  "questions": [
+    {
+      "q": "GH100 is an 814 mm2 die. At a mature N4 defect density of ~0.1 per cm2, the Poisson yield model gives roughly 45% perfect dies, yet NVIDIA sells ~40-50 H100s from a wafer of ~62-65 gross dies. What makes this possible?",
+      "options": [
+        "TSMC's 4N process has a defect density an order of magnitude below the industry norm",
+        "The die is built with 144 SMs and 6 HBM controllers but ships with 132 SMs and 5 HBM stacks enabled, so dies with defects in the spare SMs or one memory partition are still sellable",
+        "NVIDIA uses a two-die design so that only one of the pair must be defect-free",
+        "Wafer sort rejects only dies with defects in the L2 cache, and all other defects are corrected in firmware"
+      ],
+      "answer": 1,
+      "explanation": "Harvesting (designed-in redundancy that is fused off at sort) raises the fraction of sellable dies to ~65-80%, far above the perfect-die yield. This is why reticle-limited dies are economic and why the H100 die ends up at only ~$300-400."
+    },
+    {
+      "q": "Why is NVIDIA the largest customer for hardware emulators such as Cadence Palladium and Synopsys ZeBu?",
+      "options": [
+        "Emulators are required by TSMC to generate the OPC data for EUV masks",
+        "RTL simulation of a full GPU runs at a few cycles per second, so booting a driver is impossible pre-silicon, while emulation at ~1-10 MHz can run real software; a base-layer respin costs a $20-30M mask set plus ~3-4 months, so emulation capacity is cheap insurance",
+        "Emulators replace static timing analysis for signoff of the clock tree",
+        "Emulators are used in production to test each packaged GPU before shipment"
+      ],
+      "answer": 1,
+      "explanation": "Emulation is the only way to execute billions of cycles of real firmware, drivers, and CUDA kernels against the full RTL before tape-out. The 2024 Blackwell mask change (a metal-level respin to fix a yield-limiting design flaw), which cost roughly a production quarter, illustrates the stakes."
+    },
+    {
+      "q": "In the physical design flow, what does DRC/LVS signoff (typically in Siemens Calibre) verify that synthesis, place-and-route, and static timing analysis do not?",
+      "options": [
+        "That every polygon obeys the foundry's geometric rules (widths, spacings, densities, multi-patterning constraints) and that the transistors and wires extracted from the layout match the gate-level netlist",
+        "That all setup and hold timing paths meet the clock period across process corners",
+        "That IR drop from the C4 bumps to the transistors stays within ~5-10% of Vdd",
+        "That the RTL is functionally equivalent to the C++ performance model"
+      ],
+      "answer": 0,
+      "explanation": "DRC checks the geometry against the PDK rule deck; LVS proves the layout implements the netlist. Timing is PrimeTime/Tempus, IR drop is RedHawk/Voltus, and functional equivalence is checked by simulation, emulation, and formal tools."
+    },
+    {
+      "q": "Why does Blackwell B200 require CoWoS-L rather than the CoWoS-S used for H100?",
+      "options": [
+        "CoWoS-L supports HBM3E while CoWoS-S only supports HBM3",
+        "The two reticle-limited dies plus eight HBM stacks need ~3.3 reticles of interposer, at which a whole-silicon reticle-stitched interposer becomes too costly and low-yielding, so TSMC puts silicon only where fine wiring is needed: small silicon bridges (LSI) embedded in an organic RDL interposer under the die-to-die and HBM edges, carrying the 10 TB/s NV-HBI link",
+        "CoWoS-L is cheaper per package, which offsets the higher HBM cost",
+        "CoWoS-S cannot dissipate more than 700 W"
+      ],
+      "answer": 1,
+      "explanation": "CoWoS-S interposers are already reticle-stitched (H100's is ~2.5 reticles of silicon); at ~3.3 reticles a whole-silicon slab's cost and defect-driven yield loss become prohibitive, and only the strips under the die-to-die and die-to-HBM edges need silicon-fine wiring. CoWoS-L therefore uses an organic RDL interposer with local silicon bridges only at those edges. It is more expensive per package than CoWoS-S, but it is the practical way to build a ~3.3-reticle package."
+    },
+    {
+      "q": "The GB200 NVL72 uses roughly 5,000 passive copper cables (about 2 miles) for its NVLink spine instead of optical links. What is the primary engineering consequence of that choice?",
+      "options": [
+        "The rack can be air-cooled because copper cables generate no heat",
+        "The NVLink domain must extend across many racks because copper has longer reach than fiber",
+        "Passive copper at 200 Gb/s per lane reaches only ~1-1.5 m, which confines the 72-GPU NVLink domain to one rack and drives the ~120-140 kW power density that forces direct liquid cooling, in exchange for saving ~20 kW of transceiver power and a large fraction of the cost",
+        "Copper limits NVLink bandwidth to 900 GB/s per GPU"
+      ],
+      "answer": 2,
+      "explanation": "The reach limit of copper is the reason NVL72 is a single very dense rack. Avoiding thousands of ~15-20 W optical transceivers saves power and money, but concentrating 72 GPUs, 36 CPUs, and 18 switch chips in one enclosure makes cold plates and CDUs mandatory."
+    },
+    {
+      "q": "Public BOM estimates put an H100 SXM at ~$3,000-3,500 to manufacture against a ~$25-30k price. Which statement about the cost structure is correct?",
+      "options": [
+        "The GPU die is the largest cost because a 4N wafer costs ~$16-17k",
+        "The five HBM3 stacks (~$1,300-2,000) are the largest item, CoWoS plus substrate is ~$500-1,000, and the GPU die is only ~$300-400, about 10% of the total",
+        "Test and burn-in exceed the cost of the die and memory combined",
+        "The SXM board and VRM are roughly half of the total"
+      ],
+      "answer": 1,
+      "explanation": "Memory is ~40-50% of the H100 BOM and packaging plus test ~20-25%; the die that consumes the entire front-end process is only ~10%. The same structure holds at roughly double the numbers for B200, and it is why HBM and CoWoS allocation, not wafer supply, governed GPU volumes in 2023-26."
+    },
+    {
+      "q": "An H100 SM runs at ~1.8 GHz, so the clock period is ~555 ps. Why do designers have only ~465 ps of that for logic on each path, and what is the escalating sequence of fixes when a path does not fit?",
+      "options": [
+        "The clock is only 84% duty cycle; failing paths are fixed by raising the supply voltage in the VRM firmware",
+        "The flip-flop's clock-to-output delay (~40 ps), the next flip-flop's setup margin (~20 ps), and clock skew plus jitter (~30 ps) are subtracted first; a failing path is fixed by upsizing cells, inserting repeaters, re-placing cells closer together, and, as a last resort, changing the RTL, which restarts the emulation compile",
+        "Parasitic extraction adds a fixed 90 ps to every path; failing paths are fixed by adding another metal layer to the PDK",
+        "The emulator can only run at 465 ps per cycle; failing paths are fixed by moving them to a slower clock domain"
+      ],
+      "answer": 1,
+      "explanation": "Only the time between one flip-flop's output becoming valid and the next flip-flop's setup deadline is available for gates and wires, and skew and jitter eat into it. At ~15-25 ps per 4N gate that is ~20-30 levels of logic per cycle, and a wire across a 1-2 mm SM can cost ~100 ps on its own, which is why blocks are kept small and why timing closure is the largest schedule risk in physical design."
+    },
+    {
+      "q": "In 2023 the quoted lead time for an H100 reached ~52 weeks. What was that 52 weeks actually made of?",
+      "options": [
+        "52 weeks of wafer processing, because an 80-mask-layer N4 flow takes about a year",
+        "About 6 months of physical cycle time from wafer start to a GPU on a board, with the remainder being queueing for CoWoS packaging and HBM allocation and the ~12-month capacity commitments the chain requires",
+        "26 weeks in the fab and 26 weeks of burn-in and system-level test",
+        "Mostly the ~3-month tape-out-to-first-silicon delay repeated for each stepping"
+      ],
+      "answer": 1,
+      "explanation": "Cycle time (how long a unit of material spends moving through the chain) is ~6 months to a GPU on a board and ~7+ to a burned-in rack. Lead time was longer because HBM wafers, substrates and CoWoS slots must be primed months ahead and NVIDIA commits to TSMC wafer and CoWoS capacity a year or more out; the queue was for allocation, not processing."
+    },
+    {
+      "q": "A GB200 NVL72 rack draws ~130 kW and ~85% of that heat leaves through the liquid loop. Water carries 4.18 kJ per kg per degree C. If the coolant is allowed to warm by 10 degrees C between inlet and outlet, roughly what flow does one rack need?",
+      "options": [
+        "~16 L/min, about a kitchen tap",
+        "~160 L/min (about 2.6 kg/s), roughly a bathtub of water per minute",
+        "~1,600 L/min, which is why NVL72 needs a dedicated facility water main per rack",
+        "~2 L/min, since most of the heat is removed by the CDU's refrigeration cycle"
+      ],
+      "answer": 1,
+      "explanation": "~110 kW into the water divided by (4.18 kJ/kg-K x 10 K) gives ~2.6 kg/s, about 160 L/min per rack; 770 racks in a 100 MW site move ~2 m3/s. The CDU is a heat exchanger and pump set, not a refrigerator, and the flow arithmetic is what sizes the manifolds, pumps and pipes of a liquid-cooled data center."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "module": 19,
+  "questions": [
+    {
+      "q": "GH100 is an 814 mm2 die. At a mature N4 defect density of ~0.1 per cm2, the Poisson yield model gives roughly 45% perfect dies, yet NVIDIA sells ~40-50 H100s from a wafer of ~62-65 gross dies. What makes this possible?",
+      "options": [
+        "TSMC's 4N process has a defect density an order of magnitude below the industry norm",
+        "The die is built with 144 SMs and 6 HBM controllers but ships with 132 SMs and 5 HBM stacks enabled, so dies with defects in the spare SMs or one memory partition are still sellable",
+        "NVIDIA uses a two-die design so that only one of the pair must be defect-free",
+        "Wafer sort rejects only dies with defects in the L2 cache, and all other defects are corrected in firmware"
+      ],
+      "answer": 1,
+      "explanation": "Harvesting (designed-in redundancy that is fused off at sort) raises the fraction of sellable dies to ~65-80%, far above the perfect-die yield. This is why reticle-limited dies are economic and why the H100 die ends up at only ~$300-400."
+    },
+    {
+      "q": "Why is NVIDIA the largest customer for hardware emulators such as Cadence Palladium and Synopsys ZeBu?",
+      "options": [
+        "Emulators are required by TSMC to generate the OPC data for EUV masks",
+        "RTL simulation of a full GPU runs at a few cycles per second, so booting a driver is impossible pre-silicon, while emulation at ~1-10 MHz can run real software; a base-layer respin costs a $20-30M mask set plus ~3-4 months, so emulation capacity is cheap insurance",
+        "Emulators replace static timing analysis for signoff of the clock tree",
+        "Emulators are used in production to test each packaged GPU before shipment"
+      ],
+      "answer": 1,
+      "explanation": "Emulation is the only way to execute billions of cycles of real firmware, drivers, and CUDA kernels against the full RTL before tape-out. The 2024 Blackwell mask change (a metal-level respin to fix a yield-limiting design flaw), which cost roughly a production quarter, illustrates the stakes."
+    },
+    {
+      "q": "In the physical design flow, what does DRC/LVS signoff (typically in Siemens Calibre) verify that synthesis, place-and-route, and static timing analysis do not?",
+      "options": [
+        "That every polygon obeys the foundry's geometric rules (widths, spacings, densities, multi-patterning constraints) and that the transistors and wires extracted from the layout match the gate-level netlist",
+        "That all setup and hold timing paths meet the clock period across process corners",
+        "That IR drop from the C4 bumps to the transistors stays within ~5-10% of Vdd",
+        "That the RTL is functionally equivalent to the C++ performance model"
+      ],
+      "answer": 0,
+      "explanation": "DRC checks the geometry against the PDK rule deck; LVS proves the layout implements the netlist. Timing is PrimeTime/Tempus, IR drop is RedHawk/Voltus, and functional equivalence is checked by simulation, emulation, and formal tools."
+    },
+    {
+      "q": "Why does Blackwell B200 require CoWoS-L rather than the CoWoS-S used for H100?",
+      "options": [
+        "CoWoS-L supports HBM3E while CoWoS-S only supports HBM3",
+        "The two reticle-limited dies plus eight HBM stacks exceed 3x the reticle area, beyond what a single passive silicon interposer can span, so TSMC embeds small silicon bridges (LSI) in an organic RDL interposer to carry the 10 TB/s NV-HBI die-to-die link",
+        "CoWoS-L is cheaper per package, which offsets the higher HBM cost",
+        "CoWoS-S cannot dissipate more than 700 W"
+      ],
+      "answer": 1,
+      "explanation": "CoWoS-L replaces the monolithic silicon interposer with an RDL interposer containing local silicon bridges under the die-to-die and die-to-HBM edges. It is more expensive and yields worse than CoWoS-S, but it is the only way to build a ~3.3-reticle package."
+    },
+    {
+      "q": "The GB200 NVL72 uses roughly 5,000 passive copper cables (about 2 miles) for its NVLink spine instead of optical links. What is the primary engineering consequence of that choice?",
+      "options": [
+        "The rack can be air-cooled because copper cables generate no heat",
+        "The NVLink domain must extend across many racks because copper has longer reach than fiber",
+        "Passive copper at 200 Gb/s per lane reaches only ~1-1.5 m, which confines the 72-GPU NVLink domain to one rack and drives the ~120-140 kW power density that forces direct liquid cooling, in exchange for saving ~20 kW of transceiver power and a large fraction of the cost",
+        "Copper limits NVLink bandwidth to 900 GB/s per GPU"
+      ],
+      "answer": 2,
+      "explanation": "The reach limit of copper is the reason NVL72 is a single very dense rack. Avoiding thousands of ~15-20 W optical transceivers saves power and money, but concentrating 72 GPUs, 36 CPUs, and 18 switch chips in one enclosure makes cold plates and CDUs mandatory."
+    },
+    {
+      "q": "Public BOM estimates put an H100 SXM at ~$3,000-3,500 to manufacture against a ~$25-30k price. Which statement about the cost structure is correct?",
+      "options": [
+        "The GPU die is the largest cost because a 4N wafer costs ~$16-17k",
+        "The five HBM3 stacks (~$1,300-2,000) are the largest item, CoWoS plus substrate is ~$500-1,000, and the GPU die is only ~$300-400, about 10% of the total",
+        "Test and burn-in exceed the cost of the die and memory combined",
+        "The SXM board and VRM are roughly half of the total"
+      ],
+      "answer": 1,
+      "explanation": "Memory is ~40-50% of the H100 BOM and packaging plus test ~20-25%; the die that consumes the entire front-end process is only ~10%. The same structure holds at roughly double the numbers for B200, and it is why HBM and CoWoS allocation, not wafer supply, governed GPU volumes in 2023-26."
+    }
+  ]
+}

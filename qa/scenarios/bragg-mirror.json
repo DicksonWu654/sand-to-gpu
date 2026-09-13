@@ -1,0 +1,44 @@
+[
+  {"set": "#box input[data-ctl=N]", "value": 10}, {"wait": 200}, {"shot": "n-min-10"},
+  {"set": "#box input[data-ctl=N]", "value": 80}, {"wait": 200}, {"shot": "n-max-80"},
+  {"set": "#box input[data-ctl=N]", "value": 40},
+
+  {"set": "#box input[data-ctl=d]", "value": 6.5}, {"wait": 200}, {"shot": "d-min-6.5"},
+  {"set": "#box input[data-ctl=d]", "value": 7.5}, {"wait": 200}, {"shot": "d-max-7.5"},
+  {"set": "#box input[data-ctl=d]", "value": 6.91},
+
+  {"set": "#box input[data-ctl=G]", "value": 0.3}, {"wait": 200}, {"shot": "gamma-min-0.30"},
+  {"set": "#box input[data-ctl=G]", "value": 0.5}, {"wait": 200}, {"shot": "gamma-max-0.50"},
+  {"set": "#box input[data-ctl=G]", "value": 0.4},
+
+  {"set": "#box input[data-ctl=th]", "value": 20}, {"wait": 200}, {"shot": "theta-max-20"},
+  {"set": "#box input[data-ctl=th]", "value": 8}, {"wait": 200}, {"shot": "theta-8"},
+  {"set": "#box input[data-ctl=th]", "value": 3}, {"wait": 200}, {"shot": "theta-3"},
+  {"set": "#box input[data-ctl=th]", "value": 0},
+
+  {"set": "#box input[data-ctl=probe]", "value": 12.8}, {"wait": 200}, {"shot": "probe-off-peak-12.8"},
+  {"set": "#box input[data-ctl=probe]", "value": 15}, {"wait": 200}, {"shot": "probe-max-15"},
+  {"set": "#box input[data-ctl=probe]", "value": 13.5},
+
+  {"set": "#box input[data-ctl=sys]", "value": true}, {"wait": 200}, {"shot": "system-passband-on"},
+  {"set": "#box input[data-ctl=sys]", "value": false},
+
+  {"click": "#box button[data-preset=\"Module estimate, d = 6.97 nm\"]"}, {"wait": 200}, {"shot": "preset-module-estimate"},
+  {"click": "#box button[data-preset=\"Period +1 %\"]"}, {"wait": 200}, {"shot": "preset-period-plus-1pct"},
+  {"click": "#box button[data-preset=\"Collector rim, 20°\"]"}, {"wait": 200}, {"shot": "preset-collector-rim"},
+  {"set": "#box input[data-ctl=d]", "value": 7.4}, {"wait": 200}, {"shot": "rim-regraded-d-7.40"},
+  {"click": "#box button[data-preset=\"Thin stack, 15 pairs\"]"}, {"wait": 200}, {"shot": "preset-thin-15"},
+  {"click": "#box button[data-preset=\"80 pairs\"]"}, {"wait": 200}, {"shot": "preset-80"},
+  {"click": "#box button[data-preset=\"Tuned to 13.5 nm\"]"}, {"wait": 200}, {"shot": "preset-tuned-13.5"},
+
+  {"set": "#box input[data-ctl=N]", "value": 80}, {"set": "#box input[data-ctl=d]", "value": 6.5}, {"set": "#box input[data-ctl=G]", "value": 0.5}, {"set": "#box input[data-ctl=th]", "value": 20}, {"wait": 200}, {"shot": "edge-peak-below-12nm"},
+  {"set": "#box input[data-ctl=N]", "value": 10}, {"set": "#box input[data-ctl=d]", "value": 7.5}, {"set": "#box input[data-ctl=G]", "value": 0.3}, {"set": "#box input[data-ctl=th]", "value": 0}, {"wait": 200}, {"shot": "edge-n10-d7.5-g0.3"},
+  {"click": "#box button[data-preset=\"Tuned to 13.5 nm\"]"}, {"wait": 200},
+
+  {"click": "#box button[data-ctl=play]"}, {"wait": 1300}, {"shot": "sweep-1.3s"},
+  {"wait": 1500}, {"shot": "sweep-2.8s"},
+  {"click": "#box button[data-ctl=play]"}, {"wait": 200}, {"shot": "sweep-paused"},
+  {"set": "#box input[data-ctl=probe]", "value": 13.5},
+
+  {"hover": "#box .w-grid2 > div:nth-child(2) svg"}, {"wait": 300}, {"shot": "hover-chart"}
+]

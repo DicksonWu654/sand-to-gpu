@@ -1,0 +1,71 @@
+{
+  "module": 3,
+  "questions": [
+    {
+      "q": "A 300 mm block is sliced on a diamond-wire saw with a 120 µm core wire carrying ~15 µm grit, producing as-cut slices of ~900 µm. Roughly how much ingot length is consumed per wafer, and what fraction of that ends up as kerf sludge?",
+      "options": [
+        "About 0.90 mm per wafer, with essentially no kerf because diamond wire cuts without loss",
+        "About 1.06 mm per wafer, of which ~160 µm (~15%) is kerf",
+        "About 1.5 mm per wafer, of which ~600 µm (40%) is kerf",
+        "About 0.78 mm per wafer, since the saw cuts directly to the final 775 µm thickness"
+      ],
+      "answer": 1,
+      "explanation": "Pitch equals as-cut thickness plus kerf; the kerf is roughly the wire diameter plus twice the grit height, ~160 µm, so each wafer consumes ~1.06 mm of ingot and ~15% of that is lost as sludge. The slice is later ground, etched and polished from ~900 µm down to 775 µm."
+    },
+    {
+      "q": "Why does chemical-mechanical polishing with colloidal silica leave no subsurface damage layer, when even the finest diamond grinding does?",
+      "options": [
+        "The silica particles are so small that their cracks are below the resolution of any metrology",
+        "The polishing pressure is too low for any fracture to occur, so removal is purely mechanical but gentle",
+        "The alkaline slurry chemically hydrates the top silicon monolayers, and the silica abrasive (softer than silicon) only shears away that weakened film, so the crystal is never fractured",
+        "The polyurethane pad absorbs all the mechanical energy, leaving the slurry to dissolve silicon uniformly"
+      ],
+      "answer": 2,
+      "explanation": "CMP removal is chemical-mechanical: pH 10-11 slurry softens the surface into a hydrated silica-like film and the ~50 nm amorphous silica particles (Mohs ~6 vs silicon ~7) remove only that film. Since nothing harder than silicon touches the crystal, no cracks or dislocations are created."
+    },
+    {
+      "q": "Which statement correctly describes the roles of SC-1 and SC-2 in the RCA clean?",
+      "options": [
+        "SC-1 (HCl/H2O2) removes metals; SC-2 (NH4OH/H2O2) removes particles",
+        "SC-1 (NH4OH/H2O2) undercuts and lifts particles by repeatedly growing and etching a chemical oxide, but can deposit metal hydroxides at high pH, which SC-2 (HCl/H2O2) then dissolves as chlorides",
+        "Both are HF-based; SC-1 is dilute and SC-2 is concentrated, removing successively thicker oxides",
+        "SC-1 removes organics only; SC-2 removes both particles and metals, so SC-1 is optional"
+      ],
+      "answer": 1,
+      "explanation": "SC-1's particle removal works by oxide regrowth/etch undercut plus electrostatic repulsion at pH ~10, but Fe, Al, Zn and Ca precipitate as hydroxides in that bath. The acidic SC-2 keeps those metals in solution as soluble chlorides while peroxide holds them oxidized so they do not plate onto the silicon."
+    },
+    {
+      "q": "A polished 300 mm wafer is specified at SFQR of 20 nm, yet the same wafer sags roughly 90 µm at its center when supported only at the rim. How are these compatible?",
+      "options": [
+        "The 90 µm figure applies only to 200 mm wafers; 300 mm wafers are thick enough not to sag",
+        "SFQR is measured with the back surface chucked flat and is the residual range within each 26 x 8 mm site after a best-fit plane, so gravity sag and global shape are removed just as a scanner's per-site leveling removes them",
+        "The wafer maker pre-warps the wafer so that gravity flattens it during exposure",
+        "SFQR is only specified in the central 100 mm of the wafer where sag is negligible"
+      ],
+      "answer": 1,
+      "explanation": "Flatness metrics such as SFQR are defined for a back-chucked wafer and per lithography site, so long-wavelength shape (sag, bow, warp) is filtered out. The scanner tilts and focuses on each site, and only the residual within the site limits its focus budget."
+    },
+    {
+      "q": "Why does an epitaxial layer grown by CVD from trichlorosilane at ~1,100 °C eliminate crystal-originated particles (COPs) from the wafer surface?",
+      "options": [
+        "The high temperature melts the top few micrometers of the substrate and recrystallizes it without voids",
+        "HCl produced by the TCS reaction etches away all the voids before growth starts",
+        "The epi layer is grown atom by atom from the gas phase with no vacancy supersaturation, so it contains no voids, and lateral step-flow growth overgrows the ~100 nm substrate pits within the first few hundred nanometers",
+        "COPs migrate toward the heavily doped p+ substrate during the hydrogen bake"
+      ],
+      "answer": 2,
+      "explanation": "COPs are ~100 nm octahedral voids from vacancy agglomeration during crystal growth. A CVD layer is deposited under conditions that never create such vacancy clusters, and the growing steps fill in the pits where substrate voids intersect the surface, giving a defect-free device layer."
+    },
+    {
+      "q": "In the Smart Cut SOI process, what actually causes the donor wafer to split, transferring a thin silicon film onto the handle?",
+      "options": [
+        "The buried oxide is selectively etched with HF, releasing the top layer",
+        "A high-dose hydrogen implant (~5 x 10^16 cm^-2) creates a buried layer of platelets that grow, pressurize and coalesce during a 400-600 °C anneal, fracturing the donor along the implant plane after it has been bonded to the handle",
+        "The bonded pair is cooled rapidly so thermal-expansion mismatch cleaves the donor",
+        "A wire saw slices the bonded pair at the depth of the implant"
+      ],
+      "answer": 1,
+      "explanation": "Hydrogen implanted at a chosen energy defines the split depth with implant-level uniformity; the anneal after room-temperature hydrophilic bonding drives platelet growth until the donor cleaves. The transferred film is then annealed at ~1,100 °C to form covalent bonds and thinned/smoothed to its final thickness, and the donor is reused ~10 times."
+    }
+  ]
+}

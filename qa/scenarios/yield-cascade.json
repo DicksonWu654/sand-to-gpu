@@ -1,0 +1,75 @@
+[
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(1) input[type=range]", "value": 30},
+  {"wait": 250}, {"shot": "sort-min-30"},
+
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(1) input[type=range]", "value": 95},
+  {"wait": 250}, {"shot": "sort-max-95"},
+
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(1) input[type=range]", "value": 65},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(2) input[type=range]", "value": 85},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(3) input[type=range]", "value": 80},
+  {"wait": 250}, {"shot": "assembly-ft-min"},
+
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(1) input[type=range]", "value": 30},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(2) input[type=range]", "value": 85},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(3) input[type=range]", "value": 80},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(4) input[type=range]", "value": 90},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(5) input[type=range]", "value": 90},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(6) input[type=range]", "value": 90},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(7) input[type=range]", "value": 90},
+  {"wait": 250}, {"shot": "all-min"},
+
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(1) input[type=range]", "value": 95},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(2) input[type=range]", "value": 100},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(3) input[type=range]", "value": 100},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(4) input[type=range]", "value": 100},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(5) input[type=range]", "value": 100},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(6) input[type=range]", "value": 100},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(7) input[type=range]", "value": 100},
+  {"wait": 250}, {"shot": "all-max"},
+
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(1) input[type=range]", "value": 65},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(2) input[type=range]", "value": 98},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(3) input[type=range]", "value": 96},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(4) input[type=range]", "value": 99.2},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(5) input[type=range]", "value": 98.5},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(6) input[type=range]", "value": 99},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(7) input[type=range]", "value": 99.5},
+  {"wait": 250}, {"shot": "module-worked-example"},
+
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(1) input[type=range]", "value": 65},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(2) input[type=range]", "value": 98},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(3) input[type=range]", "value": 95},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(4) input[type=range]", "value": 99},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(5) input[type=range]", "value": 98},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(6) input[type=range]", "value": 99},
+  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(7) input[type=range]", "value": 99.5},
+
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(1) input[type=range]", "value": 0.3},
+  {"wait": 250}, {"shot": "ea-min"},
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(1) input[type=range]", "value": 1.0},
+  {"wait": 250}, {"shot": "ea-max"},
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(1) input[type=range]", "value": 0.7},
+
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(2) input[type=range]", "value": 85},
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(3) input[type=range]", "value": 70},
+  {"wait": 250}, {"shot": "tstress-min-tuse-max"},
+
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(2) input[type=range]", "value": 150},
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(3) input[type=range]", "value": 40},
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(1) input[type=range]", "value": 1.0},
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(4) input[type=range]", "value": 48},
+  {"wait": 250}, {"shot": "arrhenius-all-max"},
+
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(1) input[type=range]", "value": 0.7},
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(2) input[type=range]", "value": 125},
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(3) input[type=range]", "value": 85},
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(4) input[type=range]", "value": 4},
+  {"wait": 250}, {"shot": "tuse-85-bi-min"},
+
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(3) input[type=range]", "value": 55},
+  {"set": "#box .widget-body > div:nth-of-type(7) label:nth-of-type(4) input[type=range]", "value": 24},
+
+  {"hover": "#box svg polygon"}, {"wait": 300}, {"shot": "hover-funnel"},
+  {"hover": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(3) input[type=range]"}, {"wait": 300}, {"shot": "hover-ft-slider"}
+]

@@ -1,0 +1,40 @@
+[
+  {"click": "#box .w-steps > .w-step-nav:first-child > button:nth-child(2)"}, {"wait": 250}, {"shot": "s02-plasma"},
+  {"click": "#box .w-step-dot[aria-label^='Step 3']"}, {"wait": 250}, {"shot": "s03-align"},
+  {"click": "#box .w-step-dot[aria-label^='Step 4']"}, {"wait": 1500}, {"shot": "s04-bondwave-t1.5s"},
+  {"wait": 1500}, {"shot": "s04-bondwave-t3s"},
+  {"click": "#box .w-step-dot[aria-label^='Step 5']"}, {"wait": 1300}, {"shot": "s05-anneal-heating"},
+  {"wait": 3600}, {"shot": "s05-anneal-done"},
+  {"click": "#box .w-steps > .w-step-nav:first-child > button:nth-child(4)"}, {"wait": 2200}, {"shot": "s05-anneal-replay-t2.2s"},
+  {"click": "#box .w-steps > .w-step-nav:first-child > button:nth-child(1)"}, {"wait": 300}, {"shot": "s04-after-prev"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 1}, {"wait": 300}, {"shot": "pitch-1um-min"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 10}, {"wait": 300}, {"shot": "pitch-10um-max"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 6},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 600},
+  {"click": "#box .w-step-dot[aria-label^='Step 3']"}, {"wait": 250}, {"shot": "align-600nm-over-budget"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 0}, {"wait": 250}, {"shot": "align-0nm"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 150},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 10},
+  {"click": "#box .w-step-dot[aria-label^='Step 5']"}, {"wait": 4600}, {"shot": "dish-10nm-gap-open"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 5},
+  {"click": "#box .w-step-dot[aria-label^='Step 5']"}, {"wait": 4600}, {"shot": "dish-5nm-marginal"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 1},
+  {"click": "#box .w-step-dot[aria-label^='Step 1']"}, {"wait": 250}, {"shot": "dish-1nm-step1"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 3},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=checkbox]", "value": true},
+  {"click": "#box .w-step-dot[aria-label^='Step 5']"}, {"wait": 400}, {"shot": "particle-1um-wow-anneal"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) select", "value": "cow"}, {"wait": 300}, {"shot": "particle-1um-cow"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(6) select", "value": "0.1"}, {"wait": 300}, {"shot": "particle-0.1um-cow"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) select", "value": "wow"}, {"wait": 300}, {"shot": "particle-0.1um-wow"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(6) select", "value": "1"},
+  {"click": "#box .w-step-dot[aria-label^='Step 1']"}, {"wait": 250}, {"shot": "particle-step1"},
+  {"click": "#box .w-step-dot[aria-label^='Step 4']"}, {"wait": 400}, {"shot": "particle-step4-prebond"},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=checkbox]", "value": false},
+
+  {"hover": "#box .w-step-dot[aria-label^='Step 2']"}, {"wait": 300}, {"shot": "hover-dot2"},
+  {"click": "#box .w-step-dot[aria-label^='Step 1']"}, {"wait": 250}, {"shot": "s01-back-to-start"}
+]

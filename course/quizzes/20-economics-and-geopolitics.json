@@ -1,0 +1,93 @@
+{
+  "module": 20,
+  "questions": [
+    {
+      "q": "A 40,000 wspm leading-edge fab cost $20 billion and depreciates its tools over 5 years. If utilization falls from 90% to 50%, what happens to the depreciation cost per wafer, and why does this matter for foundry behavior?",
+      "options": [
+        "It roughly doubles (from ~$8k to ~$14k per wafer), which is why foundries discount older nodes to keep fabs loaded rather than idle them",
+        "It stays the same because depreciation is a fixed cost that does not depend on output",
+        "It falls, because fewer wafers mean less tool wear and lower maintenance",
+        "It rises by about 10%, a minor effect compared with materials costs"
+      ],
+      "answer": 0,
+      "explanation": "Annual depreciation (~$3.4B) is fixed, so spreading it over 240,000 instead of 432,000 wafers raises the per-wafer charge from ~$7,900 to ~$14,200. This operating leverage is why utilization, not price, drives foundry margins through the cycle."
+    },
+    {
+      "q": "Why has cost per transistor stopped falling meaningfully since roughly the 28 nm node, even though logic density still improves ~1.5–1.7x per node?",
+      "options": [
+        "Because foundries now use only EUV, which makes every layer more expensive than DUV",
+        "Because wafer price rises ~1.5–1.8x per node, SRAM bit cells stopped shrinking (N3E ~0.021 um^2, same as N5), and analog/I/O do not scale, so most of the die does not get cheaper",
+        "Because transistor counts have hit the reticle limit and can no longer grow",
+        "Because design costs are now included in wafer prices by the foundries"
+      ],
+      "answer": 1,
+      "explanation": "Wafer price growth now cancels the density gain, and roughly half the area of a modern CPU or GPU (SRAM, analog, I/O) barely scales at all, which is why chiplets moved those blocks to older nodes."
+    },
+    {
+      "q": "The October 2023 update to the US export controls replaced the interconnect-bandwidth test of the October 2022 rule with a performance-density metric. What loophole did that close?",
+      "options": [
+        "Chinese firms had been buying EUV scanners through Singapore intermediaries",
+        "NVIDIA had built the A800 and H800 by capping interconnect bandwidth at 400 GB/s on otherwise identical dies, keeping them under the 600 GB/s threshold while retaining full compute",
+        "Hyperscalers had been renting H100 capacity to Chinese customers from data centers in Malaysia",
+        "SMIC had been importing immersion DUV tools classified as 28 nm equipment"
+      ],
+      "answer": 1,
+      "explanation": "The 2022 rule caught chips with TPP >= 4800 and interconnect >= 600 GB/s; A800/H800 ducked the second test. The 2023 rule keys on TPP and TPP per mm^2 alone, which is what forced the far weaker H20 (TPP ~2400)."
+    },
+    {
+      "q": "What is the binding technical limit on SMIC's ability to follow TSMC below 5 nm-class, given that it has demonstrated 7 nm-class (Kirin 9000S, 2023) and 5 nm-class parts?",
+      "options": [
+        "China cannot obtain 300 mm silicon wafers of sufficient purity",
+        "SMIC lacks EDA tools capable of place-and-route below 7 nm",
+        "Without EUV, each shrink requires more DUV multi-patterning passes, so mask count, cost, and defect exposure rise while yield falls (reported well below 50% at 5 nm-class), making the node possible but uneconomic and 3 nm-class not credible",
+        "SMIC's fabs are limited to 200 mm wafers"
+      ],
+      "answer": 2,
+      "explanation": "EUV has never been licensed to China and immersion DUV above the NXT:1980i class is now restricted, so SMIC's only path is quadruple-plus patterning, which trades yield and cost for dimension."
+    },
+    {
+      "q": "Roughly what fraction of the world's most advanced (5 nm-class and below) logic wafers and of CoWoS-class advanced packaging is produced in Taiwan, and which risk scenario would most directly remove that output without physically damaging fabs?",
+      "options": [
+        "About 50% of both; a major earthquake near Tainan",
+        "About 90% of both; a naval blockade that stops inbound chemicals, gases and spares and outbound wafers within weeks",
+        "About 70% of wafers and 30% of packaging; a US export-control action against TSMC",
+        "About 90% of wafers but under 20% of packaging; a typhoon season power outage"
+      ],
+      "answer": 1,
+      "explanation": "Taiwan holds ~90% of leading-edge logic and ~90%+ of CoWoS-class packaging. Fabs hold days to weeks of consumables, so a blockade idles them without destroying them; earthquakes such as Hualien (Apr 2024) have cost only ~0.1% of a quarter's revenue."
+    },
+    {
+      "q": "The CHIPS Act's Section 48D investment tax credit was raised from 25% to 35% in the July 2025 tax law. In the worked example of moving ~12,500 wspm of N3 capacity to Arizona, what is the net effect of US incentives on capex versus Taiwan, and where does the persistent US cost penalty actually sit?",
+      "options": [
+        "Net US capex is still ~50% above Taiwan because tools cost more in the US; the penalty is tool pricing",
+        "Net US capex ends up below Taiwan's unsubsidized figure because tools (~80% of capex) cost the same everywhere and the credit plus grants offset the ~1.5x construction premium; the persistent penalty is ~5–20% higher operating cost per wafer",
+        "Incentives exactly cancel the construction premium, leaving costs identical; the penalty is entirely in mask-set costs",
+        "Incentives do not apply to foreign-headquartered firms like TSMC, so the full 1.5x premium remains"
+      ],
+      "answer": 1,
+      "explanation": "Only the ~20% building share carries the construction premium; the 35% credit on qualifying property and pro-rata grants more than offset it. The lasting gap is per-wafer operating cost (labor, imported chemicals, scale), which TSMC recovers by pricing US-origin wafers higher."
+    },
+    {
+      "q": "Under the October 2023 US export rule, total processing performance (TPP) is peak operations per second in trillions multiplied by the bit-width of those operations, and performance density is TPP divided by die area. An H100 delivers ~989 TFLOPS of dense 16-bit math on an 814 mm^2 die; the H20 uses the same die at ~148 TFLOPS. Which statement is correct?",
+      "options": [
+        "H100: TPP ~15,800 and density ~19 TPP/mm^2, over both the 4,800 and 5.92 lines; H20: TPP ~2,370 and density ~2.9, under the control lines and just under the 2,400 notification band, which is why it was exportable",
+        "Both chips have the same TPP because they share a die; only interconnect bandwidth differs",
+        "H20 fails the density test because it uses the full 814 mm^2 die",
+        "TPP is measured in memory bandwidth, so the H20 with full HBM3 is controlled and the H100 is not"
+      ],
+      "answer": 0,
+      "explanation": "TPP = ~989 x 16 = ~15,800 for H100 (density ~15,800 / 814 = ~19 TPP/mm^2); TPP = ~148 x 16 = ~2,370 for H20 (density ~2.9). The H20 keeps H100 memory but ~15% of its compute, which is why it was designed to sit just under the 2,400 band."
+    },
+    {
+      "q": "Roughly 6 million Blackwell-class packages a year each carry two ~800 mm^2 compute dies (about 60 usable dies per 300 mm wafer), one CoWoS interposer (~15-20 packages per CoWoS wafer), and 8 HBM stacks of 12 DRAM dies. Which part of the chain does this demand strain most, given TSMC shipped ~15 million wafers in 2025 and CoWoS capacity was ~70,000-75,000 wafers a month at the end of 2025?",
+      "options": [
+        "Front-end logic wafers: ~200,000 N4 wafers a year is most of TSMC output",
+        "CoWoS and HBM: the compute dies need only ~200,000 wafers a year (~1-2% of TSMC output), but the packages need ~350,000 CoWoS wafers (a third to a half of capacity) and ~600 million leading-edge DRAM dies at 2-3x the wafer area per bit of commodity DRAM",
+        "Photomasks: each package needs a new mask set",
+        "Nothing is strained; all three lines have spare capacity"
+      ],
+      "answer": 1,
+      "explanation": "12 million dies / 60 per wafer = ~200,000 wafers = ~17,000 wspm, ~1-2% of TSMC. 6 million packages / ~17 per CoWoS wafer = ~350,000 CoWoS wafers = ~30,000 wpm against ~70,000-75,000. 48 million stacks x 12 dies = ~600 million HBM dies from 1-beta/1-gamma lines, which is why CoWoS and HBM, not front-end wafers, were the bottlenecks."
+    }
+  ]
+}

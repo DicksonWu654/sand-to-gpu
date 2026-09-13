@@ -1,0 +1,93 @@
+{
+  "module": 10,
+  "questions": [
+    {
+      "q": "A p+ extension is implanted with 11B+ at 10 keV (Rp ~ 37 nm, delta-Rp ~ 17 nm) to a dose of 1e15 cm^-2. Roughly what is the as-implanted peak boron concentration?",
+      "options": [
+        "~ 6e17 cm^-3",
+        "~ 2e19 cm^-3",
+        "~ 2e20 cm^-3",
+        "~ 6e22 cm^-3"
+      ],
+      "answer": 2,
+      "explanation": "For a Gaussian profile the peak is Np = Q / (sqrt(2*pi) * delta-Rp) = 0.4 * 1e15 / 1.7e-6 cm = 2.4e20 cm^-3, which is right at boron's solid-solubility limit; this is why 1e15 cm^-2 is the canonical high dose."
+    },
+    {
+      "q": "Why does a 1,050 C spike anneal lasting under a second often produce LESS boron diffusion than an 800 C anneal for 10 minutes?",
+      "options": [
+        "Boron diffusivity is lower at 1,050 C than at 800 C",
+        "Transient enhanced diffusion from dissolving {311} interstitial defects is worse at lower temperature because the interstitials are released slowly instead of annihilating quickly at the surface",
+        "The spike anneal melts the surface so dopants cannot move",
+        "At 800 C boron pairs with vacancies and becomes highly mobile"
+      ],
+      "answer": 1,
+      "explanation": "TED is driven by the excess silicon interstitials left by the implant; at 700-900 C the {311} defects release them slowly over minutes and boron diffusivity is enhanced 1,000x, while a spike anneal gets through the transient in under a second."
+    },
+    {
+      "q": "A high-current implanter runs in deceleration mode: ions are extracted at 5 keV and slowed to 500 eV before the wafer. What is the specific risk this creates and how do modern tools mitigate it?",
+      "options": [
+        "Space charge blows up the beam; mitigated by a plasma flood gun",
+        "The Faraday cup over-counts dose; mitigated by a suppression electrode",
+        "Channeling increases; mitigated by 7 degree tilt",
+        "Energy contamination: ions neutralised by charge exchange before the decel stage arrive at the full 5 keV and land ~ 10x deeper; mitigated by a bend or energy filter after deceleration"
+      ],
+      "answer": 3,
+      "explanation": "A neutral cannot be decelerated by the electrostatic decel stage, so a few percent of the beam arriving at 10x the intended energy creates a deep tail that sets the junction depth; placing the energy filter after the decel stage removes anything not at the final energy."
+    },
+    {
+      "q": "Which statement about the analyser magnet is correct? A 49 amu BF2+ ion at 30 keV is selected instead of 11B+ because...",
+      "options": [
+        "BF2+ has a higher charge state so it gains more energy per volt",
+        "BF2+ delivers its boron atom at only about 30 x (11/49) = 6.7 keV, giving a shallower profile than the tool could otherwise reach, and the heavy fragments amorphise the surface as they go",
+        "BF2+ is the only boron-bearing ion produced in a BF3 plasma",
+        "Fluorine acts as a donor and compensates the boron"
+      ],
+      "answer": 1,
+      "explanation": "The molecular ion shares its kinetic energy among its atoms in proportion to mass, so a 30 keV BF2+ implant is effectively a 6.7 keV boron implant with a self-amorphising fluorine co-implant; the same principle is used by B18H22 cluster ions."
+    },
+    {
+      "q": "Why are the channels of modern FinFET and nanosheet transistors left undoped, with threshold voltage set by gate work-function metals rather than a channel implant?",
+      "options": [
+        "At 1e18 cm^-3 a 20 nm x 20 nm x 20 nm channel contains only ~ 8 dopant atoms, so Poisson statistics (random dopant fluctuation) would make the threshold voltage uncontrollable",
+        "Implanters cannot reach the 1e17-1e18 cm^-3 doping range",
+        "Dopants in the channel would diffuse into the gate oxide during the anneal",
+        "The high-k dielectric is destroyed by any implant"
+      ],
+      "answer": 0,
+      "explanation": "1e18 cm^-3 x (20 nm)^3 = 8 atoms, with a +/-35 % statistical spread; fully depleted fins and sheets do not need channel doping for electrostatics, so the industry moved V_T control to TiN/TiAl/dipole layers in the metal gate."
+    },
+    {
+      "q": "Silicon carbide power MOSFETs are implanted with aluminium at ~ 500 C wafer temperature and annealed at 1,600-1,800 C under a carbon cap. Why is each of these three unusual conditions necessary?",
+      "options": [
+        "Hot implant increases beam current; the high anneal temperature drives the Al deep; the carbon cap adds n-type dopant",
+        "Hot implant reduces channeling; the high temperature dissolves {311} defects; the carbon cap acts as an anti-reflective layer",
+        "Hot implant prevents amorphisation (amorphous SiC does not regrow in the correct polytype); ~ 1,700 C is needed to activate Al because dopants barely diffuse or activate in SiC below that; the carbon cap stops the SiC surface subliming and step-bunching",
+        "All three are only needed because SiC wafers are 150 mm rather than 300 mm"
+      ],
+      "answer": 2,
+      "explanation": "Diffusion in SiC is negligible, so every doped region must be implanted to its final shape and activated at extreme temperature; amorphised SiC recrystallises as defective 3C material, and bare SiC loses silicon by sublimation above ~ 1,500 C, hence the graphitised-photoresist cap."
+    },
+    {
+      "q": "Boron's equilibrium diffusivity at 800 C is about 4e-17 cm^2/s, so a 10-minute anneal should give a wander distance sqrt(Dt) of only ~1.6 nm. Yet a 1e14 cm^-2 boron implant annealed at 800 C for 10 minutes moves ~50 nm. Roughly what enhancement of the diffusivity does this imply, and what causes it?",
+      "options": [
+        "~30x, caused by the surface oxide injecting vacancies",
+        "~1,000x, caused by the excess silicon interstitials released from dissolving {311} defects (transient enhanced diffusion)",
+        "~30,000x, caused by boron melting the surface",
+        "~1,000,000x, caused by channeling during the implant"
+      ],
+      "answer": 1,
+      "explanation": "The wander distance scales as the square root of D, so moving 32x further (50 nm / 1.6 nm) needs about 32^2 = 1,000x the diffusivity. That is the interstitial supersaturation of 1e3-1e4 created when the implant's excess interstitials, stored in {311} defects, dissolve over minutes at 700-950 C."
+    },
+    {
+      "q": "A four-point probe on the monitor wafer from a 5e14 cm^-2 arsenic source/drain implant reads V/I = 61.8 ohm after the spike anneal. Full activation at ~1e20 cm^-3 (mobility ~90 cm^2/V.s) would give ~140 ohm/sq. What does the reading tell the process engineer?",
+      "options": [
+        "R_s = 4.532 x 61.8 = 280 ohm/sq, i.e. only ~50 % of the dose is active; suspect a cold anneal or dopant clustering",
+        "R_s = 61.8 ohm/sq, so the implant was over-dosed by about 2x",
+        "R_s = 280 ohm/sq, so the junction is twice as deep as intended",
+        "The probe cannot read arsenic layers; a SIMS profile is required"
+      ],
+      "answer": 0,
+      "explanation": "Sheet resistance is R_s = (pi/ln 2) x V/I = 4.532 x 61.8 = 280 ohm/sq, twice the fully activated value. Since R_s = 1/(q x Q_active x mobility), twice the resistance means half the active dose (about 50 % activation); if the pre-anneal ThermaProbe reading was normal, the implanter delivered the dose and the anneal is the suspect."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "module": 4,
+  "questions": [
+    {
+      "q": "Silicon carbide boules are grown by physical vapor transport (seeded sublimation) rather than by Czochralski pulling. What is the fundamental reason?",
+      "options": [
+        "SiC is too hard to be pulled through a seed neck without cracking",
+        "Quartz crucibles dissolve carbon, contaminating the melt",
+        "SiC never melts into a liquid of its own composition at practical pressures (it has no congruent melting point); it decomposes at ~2,830 °C and 35 atm into liquid silicon and solid carbon, so there is no stable melt to pull from",
+        "The 4H polytype can only form from a vapor phase below 1,000 °C"
+      ],
+      "answer": 2,
+      "explanation": "SiC sublimes and decomposes rather than melting under accessible conditions, so it must be transported as vapor from a ~2,400 °C source onto a slightly cooler seed at ~100–500 µm/h, which is why boules take about a week and substrates cost tens of times more than a silicon wafer of the same diameter."
+    },
+    {
+      "q": "A Si0.75Ge0.25 layer is grown epitaxially on a silicon wafer. Which statement about its strain and critical thickness is correct?",
+      "options": [
+        "The film is under ~1% compressive strain (mismatch ≈ 0.042 x 0.25) and relaxes by misfit dislocations above an equilibrium critical thickness of roughly 35–40 nm",
+        "The film is under tensile strain because Ge atoms are smaller than Si, and it can be grown arbitrarily thick",
+        "The film is unstrained because SiGe is fully miscible with Si",
+        "The film relaxes only if its Ge content exceeds 50%, regardless of thickness"
+      ],
+      "answer": 0,
+      "explanation": "Ge's lattice constant is 4.2% larger than Si's, so the alloy is compressed in-plane to match the substrate; Matthews–Blakeslee theory gives a critical thickness of a few tens of nm at x = 0.25, which is why nanosheet SiGe sacrificial layers are kept to ~10 nm."
+    },
+    {
+      "q": "Why does an AlGaN/GaN HEMT conduct without any intentional doping of the channel?",
+      "options": [
+        "GaN is naturally n-type due to nitrogen vacancies at ~10^19 cm^-3",
+        "Aluminum diffuses into the GaN and acts as a shallow donor",
+        "The silicon substrate injects electrons through the buffer layer",
+        "Spontaneous and piezoelectric polarization at the AlGaN/GaN interface create a fixed sheet charge that is neutralized by a ~10^13 cm^-2 two-dimensional electron gas with mobility of ~1,500–2,000 cm^2/V·s"
+      ],
+      "answer": 3,
+      "explanation": "The wurtzite polarization discontinuity forms a 2DEG confined in a few-nm quantum well, spatially separated from any ionized donors, which is what gives the HEMT its low sheet resistance; a p-GaN gate or cascode is then needed to make the device normally off."
+    },
+    {
+      "q": "A fab producing 100,000 300 mm wafers per month uses about 1,800 gallons of ultrapure water per wafer. Roughly how much UPW must its plant produce per day, and what is the theoretical resistivity the water must reach?",
+      "options": [
+        "About 600,000 gallons/day at 1.8 MΩ·cm",
+        "About 6 million gallons/day at 18.2 MΩ·cm",
+        "About 60 million gallons/day at 18.2 MΩ·cm",
+        "About 6 million gallons/day at 182 MΩ·cm"
+      ],
+      "answer": 1,
+      "explanation": "100,000 x 1,800 / 30 ≈ 6.0 million gallons/day (~22,700 m^3/day). 18.2 MΩ·cm at 25 °C is the resistivity of water with essentially zero ions; with TOC below 1 ppb and metals below 1 ppt it is the purest liquid produced industrially, and ~85–90% of it is reclaimed at leading fabs."
+    },
+    {
+      "q": "Which set correctly describes an EUV photomask blank and why only two companies supply it?",
+      "options": [
+        "A 6025 fused-silica plate with a 70 nm chromium absorber; Hoya and AGC hold patents on chrome sputtering",
+        "A quartz plate with a MoSi 6% attenuated phase shifter; Hoya and AGC are the only makers of molybdenum silicide",
+        "A low-thermal-expansion (ULE-type) substrate with 40 Mo/Si bilayers (~7 nm period, ~65% reflectivity), a Ru cap and a TaBN absorber; Hoya and AGC are the only makers who can deposit the multilayer with essentially zero printable phase defects",
+        "A silicon wafer coated with a thin tin-oxide absorber; only Hoya and AGC have licensed the Inpria chemistry"
+      ],
+      "answer": 2,
+      "explanation": "Because everything absorbs 13.5 nm light, the EUV mask is a Bragg mirror; a particle buried in any of the 40 layers becomes an unrepairable phase defect, and the ion-beam deposition yield needed to avoid that is what has kept Hoya (~2/3) and AGC (~1/3) as an effective duopoly."
+    },
+    {
+      "q": "An EUV pellicle has 90% transmission at 13.5 nm. What is the approximate scanner throughput penalty from using it, and why?",
+      "options": [
+        "About 19%, because the light passes through the pellicle twice (to the reflective mask and back), giving 0.9 x 0.9 ≈ 0.81 of the dose",
+        "About 10%, because 10% of the light is absorbed on the way to the mask",
+        "About 1%, because the pellicle only affects out-of-focus light",
+        "Zero, because the scanner compensates by increasing numerical aperture"
+      ],
+      "answer": 0,
+      "explanation": "The EUV mask is reflective, so illumination crosses the membrane on the way in and the reflected image crosses it again on the way out; this double-pass loss is why TSMC initially ran EUV layers without pellicles and why CNT pellicles targeting ≥94% transmission matter so much."
+    }
+  ]
+}

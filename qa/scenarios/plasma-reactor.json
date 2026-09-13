@@ -1,0 +1,24 @@
+[
+  {"click": "#box button[data-role=play]"}, {"wait": 1500}, {"shot": "ccp-playing-1500ms"},
+
+  {"set": "#box input[data-k=pressure]", "value": 2.301}, {"wait": 700}, {"shot": "ccp-pressure-max-200mtorr"},
+  {"set": "#box input[data-k=pressure]", "value": 0}, {"wait": 700}, {"shot": "ccp-pressure-min-1mtorr"},
+  {"set": "#box input[data-k=pressure]", "value": 1.301},
+
+  {"set": "#box input[data-k=bias]", "value": 1500}, {"wait": 700}, {"shot": "ccp-bias-max-1500w"},
+  {"set": "#box input[data-k=bias]", "value": 0}, {"wait": 700}, {"shot": "ccp-bias-zero"},
+  {"set": "#box input[data-k=bias]", "value": 500},
+
+  {"set": "#box input[data-k=source]", "value": 3000}, {"wait": 700}, {"shot": "ccp-source-max-3000w"},
+  {"set": "#box input[data-k=source]", "value": 100}, {"wait": 700}, {"shot": "ccp-source-min-100w"},
+  {"set": "#box input[data-k=bias]", "value": 1500}, {"wait": 500}, {"shot": "ccp-extreme-lowsource-highbias"},
+
+  {"click": "#box button[data-role=mode-icp]"}, {"wait": 1200}, {"shot": "icp-default"},
+  {"set": "#box input[data-k=bias]", "value": 1500}, {"wait": 700}, {"shot": "icp-bias-max-1500w"},
+  {"set": "#box input[data-k=bias]", "value": 0}, {"set": "#box input[data-k=source]", "value": 3000}, {"wait": 700}, {"shot": "icp-bias-zero-source-max"},
+  {"set": "#box input[data-k=pressure]", "value": 2.301}, {"wait": 700}, {"shot": "icp-pressure-max-200mtorr"},
+
+  {"click": "#box button[data-role=mode-ccp]"}, {"wait": 300},
+  {"click": "#box button[data-role=play]"}, {"wait": 300}, {"shot": "ccp-paused"},
+  {"click": "#box button[data-role=play]"}, {"wait": 2500}, {"shot": "ccp-resumed-2500ms"}
+]

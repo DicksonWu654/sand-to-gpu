@@ -1,0 +1,71 @@
+{
+  "module": 2,
+  "questions": [
+    {
+      "q": "Why does the Dash necking process eliminate dislocations from a Czochralski seed crystal?",
+      "options": [
+        "The high temperature of the melt anneals the dislocations out of the seed before growth begins",
+        "Growing a thin (~3 mm) neck at several mm/min lets dislocations, which glide on {111} planes inclined to the <100> axis, reach the free surface and exit before the crystal carries them along",
+        "The neck is grown under a strong magnetic field that pins dislocations in the seed holder",
+        "Dislocations cannot exist in silicon below a critical diameter of about 5 mm"
+      ],
+      "answer": 1,
+      "explanation": "Dash's method is geometric: in a thin, fast-grown neck every dislocation inclined to the growth axis glides out to the surface within a few tens of millimetres, and the vacancy supersaturation from fast growth helps them climb out. After that the crystal stays dislocation-free unless a new one is nucleated."
+    },
+    {
+      "q": "A 300 mm CZ ingot is grown from a 400 kg boron-doped melt with k = 0.8, targeted at 10 ohm-cm at the seed end. According to the Scheil equation, what happens to the resistivity toward the tail, and why?",
+      "options": [
+        "It rises, because boron evaporates from the melt during the run",
+        "It stays exactly constant, because the melt is well mixed",
+        "It falls to roughly 6 to 7 ohm-cm at 90% solidified, because k < 1 leaves the melt progressively enriched in boron and C_s = k C0 (1-g)^(k-1)",
+        "It falls by a factor of about 4.5, the same as phosphorus"
+      ],
+      "answer": 2,
+      "explanation": "With k = 0.8 the exponent (k-1) is -0.2, so the solid concentration at g = 0.9 is 0.1^(-0.2) = 1.58 times the seed-end value, taking ~10 ohm-cm down to ~6.4 ohm-cm. Phosphorus (k = 0.35) would give a factor of ~4.5, which is why n-type CZ ingots have a much larger axial spread."
+    },
+    {
+      "q": "In Voronkov's v/G theory, what determines whether a CZ crystal becomes vacancy-rich (forming COP voids) or interstitial-rich (forming dislocation loops)?",
+      "options": [
+        "The oxygen concentration: above 12 ppma the crystal is vacancy-rich",
+        "The ratio of pull rate v to the axial temperature gradient G at the interface; above a critical value of about 1.3 to 2 x 10^-3 cm^2/(min K) advection dominates and the more numerous vacancies arrive in excess and annihilate the interstitials, while below it diffusion dominates and the faster-diffusing interstitials win",
+        "The crucible rotation rate, which sets the convective flux of interstitials to the interface",
+        "The dopant type: boron-doped crystals are always vacancy-rich"
+      ],
+      "answer": 1,
+      "explanation": "Both point defects are incorporated at equilibrium and then annihilate, diffuse, and are advected at speed v. High v/G favours advection and leaves excess vacancies (COPs); low v/G gives diffusion time and the faster interstitials win. Because G is higher at the crystal edge, one pull rate can give both regimes across the radius, separated by the OSF ring."
+    },
+    {
+      "q": "Why are the interstitial oxygen levels of 10 to 14 ppma found in CZ silicon deliberately retained in most logic and memory substrates rather than minimised?",
+      "options": [
+        "Oxygen is an n-type dopant that sets the substrate resistivity",
+        "Oxygen cannot be removed because it comes from the argon atmosphere",
+        "Dissolved oxygen strengthens the wafer against slip during thermal processing, and controlled oxygen precipitation in the bulk provides intrinsic gettering of metals beneath a denuded zone",
+        "Oxygen lowers the melting point of the melt so pulling can proceed at a lower heater power"
+      ],
+      "answer": 2,
+      "explanation": "Oxygen from crucible dissolution pins dislocations (raising yield stress) and, via a denuded-zone / precipitation anneal sequence, forms SiO2 precipitates and punched-out loops in the bulk that trap Fe, Cu and Ni. Only image sensors, power and RF products specify low oxygen, using MCZ or FZ."
+    },
+    {
+      "q": "A 300 kg ingot hangs from a 3 mm Dash neck. Roughly what tensile stress does the neck carry, and what does the industry do about it at 300 mm?",
+      "options": [
+        "About 4 MPa, which is negligible, so no special measures are needed",
+        "About 40 MPa, handled by using a steel seed holder",
+        "About 400 MPa, so pullers use thicker fast-grown necks, heavily boron-doped neck-less seeds, or mechanical crystal-support jaws that grip the crown after it is grown",
+        "About 4 GPa, which is why 300 mm ingots are limited to 100 kg"
+      ],
+      "answer": 2,
+      "explanation": "Stress = m g / (pi r^2) = 2,943 N / 7.07 x 10^-6 m^2, about 416 MPa, uncomfortably close to practical limits for a real neck with surface flaws. Crystal support mechanisms, thicker necks and hardened (B > 10^19) seeds are the production solutions."
+    },
+    {
+      "q": "Which statement correctly describes Float Zone silicon relative to Czochralski silicon?",
+      "options": [
+        "FZ uses a synthetic quartz crucible with a stronger magnetic field, giving lower oxygen and 300 mm capability",
+        "FZ has no crucible, so oxygen is below ~10^16 cm^-3 and resistivity can exceed 10^4 ohm-cm, but surface-tension support of the molten zone limits production diameter to 200 mm and the oxygen-free wafers are mechanically weaker in the fab",
+        "FZ is cheaper than CZ because it needs no crucible, and is used for all DRAM substrates",
+        "FZ crystals are polycrystalline and used only for solar cells"
+      ],
+      "answer": 1,
+      "explanation": "In FZ an RF coil melts a short zone in a vertical poly rod, held by surface tension and electromagnetic pressure, with no container to leach oxygen. It serves power devices, detectors and high-resistivity RF substrates, at a price multiple of CZ and with a 200 mm production ceiling."
+    }
+  ]
+}

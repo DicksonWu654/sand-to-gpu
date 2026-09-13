@@ -1,0 +1,27 @@
+[
+  {"hover": "#box svg rect:nth-of-type(11)"}, {"wait": 300}, {"shot": "L1-hover-dieA"},
+  {"click": "#box .w-step-nav > button.w-btn:last-of-type"}, {"wait": 250}, {"shot": "L2-superchip"},
+  {"click": "#box button[aria-label='Level 3']"}, {"wait": 250}, {"shot": "L3-tray-middle"},
+  {"click": "#box button[aria-label='Level 4']"}, {"wait": 250}, {"shot": "L4-rack"},
+  {"hover": "#box svg rect:nth-of-type(5)"}, {"wait": 300}, {"shot": "L4-hover-spine"},
+  {"click": "#box button[aria-label='Level 5']"}, {"wait": 250}, {"shot": "L5-pod"},
+  {"click": "#box button[aria-label='Level 6']"}, {"wait": 250}, {"shot": "L6-hall-defaults-last"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 10},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 250},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 1.6},
+  {"wait": 250}, {"shot": "L6-hall-min-10MW-250kW-pue1.6"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 1000},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 1},
+  {"wait": 250}, {"shot": "L6-hall-max-1000MW-100kW-pue1.0"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 130},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 1.2},
+  {"wait": 250},
+  {"hover": "#box svg rect:nth-of-type(2)"}, {"wait": 300}, {"shot": "L6-hover-pod1"},
+
+  {"click": "#box .w-step-nav > button.w-btn:first-of-type"}, {"wait": 250}, {"shot": "L5-after-prev"}
+]

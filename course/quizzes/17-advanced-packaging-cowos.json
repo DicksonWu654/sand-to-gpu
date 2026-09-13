@@ -1,0 +1,104 @@
+{
+  "module": 17,
+  "questions": [
+    {
+      "q": "NVIDIA moved Blackwell (B200) from CoWoS-S to CoWoS-L. What is the core mechanism by which CoWoS-L lowers cost and stress relative to a full 3.3x-reticle silicon interposer?",
+      "options": [
+        "It replaces the silicon interposer with a thicker organic substrate whose 8-15 um lines can carry the HBM interface directly",
+        "It shrinks each GPU die below the reticle limit so the interposer can be exposed in a single field",
+        "It embeds small 65 nm-class LSI silicon bridges only under the die edges that need sub-micron routing, and builds the rest of the interposer as ~2 um organic RDL with copper TIVs for power",
+        "It stacks the HBM directly on top of the GPU with hybrid bonding so no interposer wiring is needed"
+      ],
+      "answer": 2,
+      "explanation": "CoWoS-L keeps fine 0.4 um-class silicon RDL only in the Local Silicon Interconnect bridges where GPU meets HBM or GPU meets GPU; the large-area interposer is molded organic RDL with through-InFO vias. A 3.3x CoWoS-S interposer would have been the most expensive silicon in the package after the GPU dies and worse CTE-matched to the substrate."
+    },
+    {
+      "q": "A Blackwell-class interposer is ~48 x 58 mm with a five-layer RDL, and the scanner field is 26 x 33 mm. How many stitched exposures does one interposer need, and what tolerance does stitching impose?",
+      "options": [
+        "A 2 x 2 array per layer, so 20 stitched fields per interposer, with field-to-field overlay held well under 100 nm because 0.4 um lines cross the stitch boundaries",
+        "A single exposure per layer because interposer RDL is patterned on older 65 nm tools that have larger fields",
+        "A 3 x 3 array per layer, so 45 fields, with overlay of a few micrometres, comparable to die-bonder placement accuracy",
+        "Two half-field exposures per layer, since High-NA anamorphic optics are used for interposer RDL"
+      ],
+      "answer": 0,
+      "explanation": "48 x 58 mm exceeds 26 x 33 mm in both directions, so each layer is a 2 x 2 array of overlapping fields; five layers gives twenty stitched fields. Wires drawn across a boundary must overlap so a small overlay error does not open them, which for 0.4 um lines means overlay well under 100 nm. The 3 x 3 array applies to the 5.5x (~60 x 78 mm) generation."
+    },
+    {
+      "q": "In hybrid bonding (SoIC), why does a single 1 um particle at the interface matter so much more than it would in a microbump joint, and what is the consequence for the process?",
+      "options": [
+        "The particle shorts adjacent copper pads because there is no underfill to insulate them, so a thick dielectric is added",
+        "The particle dissolves into the copper during the anneal and forms brittle intermetallics, so the anneal is limited to 150 C",
+        "The particle blocks the plasma activation step, so activation is repeated until the surface passes ellipsometry",
+        "With no solder to absorb it, the thinned surfaces bend around the particle and leave an unbonded void on the order of a millimetre across, killing every pad inside it; so cleaning, activation, and bonding run in an ISO Class 1 mini-environment with inline void inspection before anneal"
+      ],
+      "answer": 3,
+      "explanation": "A hybrid bond is a direct oxide-to-oxide and Cu-to-Cu contact with no compliant solder, so a trapped 1 um particle produces a void hundreds to thousands of times its own size. That is why the bond cell is ISO Class 1 and why infrared or acoustic inspection catches voids before the 200-300 C anneal makes them permanent."
+    },
+    {
+      "q": "Compare connection density between a conventional CoWoS microbump array and a 6 um-pitch hybrid bond. Which pair of numbers is correct?",
+      "options": [
+        "Microbumps at 10-15 um pitch give ~5,000 per mm2; hybrid bonding at 6 um gives ~10,000 per mm2, roughly 2x",
+        "Microbumps at 40-55 um pitch (Cu pillar plus SnAg cap) give a few hundred per mm2; hybrid bonding at 6 um gives ~28,000 per mm2, roughly 50-60x a 45 um array",
+        "Microbumps at 100-130 um pitch give ~60 per mm2; hybrid bonding at 6 um gives ~1,000 per mm2",
+        "Both are around 25 um pitch; hybrid bonding wins only on energy per bit, not density"
+      ],
+      "answer": 1,
+      "explanation": "Die-to-interposer microbumps sit at 40-55 um pitch (a ~25 um pillar with ~10 um of solder), about 330-500 per mm2 at 45-55 um. Hybrid bonding at 6 um pitch packs ~28,000 connections per mm2 (1/(6 um)^2), roughly 55x the 45 um array and ~470x a 130 um C4 array (~59 per mm2), which is why the stacked-die interface behaves like a wide on-die bus at ~0.1 pJ/bit. 100-130 um is the C4 or UCIe standard-package pitch."
+    },
+    {
+      "q": "Why does the module say known-good die (KGD) and re-testing HBM stacks before placement are economically unavoidable in CoWoS assembly?",
+      "options": [
+        "Because reflowed microbumps can be reworked only once, so a second failure scraps the module",
+        "Because TSMC charges per placement and untested dies raise the tool count required",
+        "Because after microbump reflow and underfill there is no rework, so one dead HBM stack or one open joint among ~250,000 microbumps scraps an assembly carrying ~$5,000-7,000 of parts that would have sold for over $30,000",
+        "Because HBM stacks are not tested by their makers and CoWoS is the first electrical test they receive"
+      ],
+      "answer": 2,
+      "explanation": "Once dies are reflowed and underfilled the assembly cannot be taken apart. Two ~$500-600 GPU dies plus eight ~$300-500 HBM3E stacks, interposer and substrate are lost together, so a 95% CoW yield on a 16-per-wafer product loses nearly a whole package per wafer. HBM is shipped as tested known-good stacks and CoWoS re-tests them anyway."
+    },
+    {
+      "q": "TSMC CoWoS capacity went from ~15k wafers per month at end-2023 to ~35k at end-2024 and ~75-80k at end-2025. Why did AI accelerator unit counts grow much more slowly than these headline figures?",
+      "options": [
+        "Because interposer area roughly doubled each generation (2.5x reticle for H100 at ~29 per wafer, 3.3x for B200 at ~16, 5.5x at ~9), so packages per wafer fell almost as fast as wafer capacity rose",
+        "Because the outsourced oS step at ASE, SPIL and Amkor ran at less than half the yield of TSMC's in-house line",
+        "Because NVIDIA's share of CoWoS fell from ~90% to ~30% as Broadcom and AMD took capacity",
+        "Because each CoWoS wafer must be cycled through the 4N front-end fab again, adding three months per wafer"
+      ],
+      "answer": 0,
+      "explanation": "Wafers per month is not packages per month: an H100 2.5x interposer yields ~29 per 300 mm wafer, a B200 3.3x interposer ~16, and a 5.5x interposer ~9. Doubling wafer capacity per year roughly kept pace with doubling interposer area per generation, which is the arithmetic pushing TSMC toward rectangular panels (CoPoS)."
+    },
+    {
+      "q": "A 1,000 W GPU die runs its core logic at ~0.8 V. Why does the module conclude that tens of thousands of its ~100,000 microbumps must be dedicated to power and ground rather than signals?",
+      "options": [
+        "Because I = P/V gives ~1,250 A, and a 25 um copper pillar can safely carry only ~50-100 mA before electromigration, so supply needs ~12,500-25,000 pillars and the ground return as many again, ~25,000-50,000 bumps before any signal is counted",
+        "Because the JEDEC HBM footprint requires one ground bump next to every signal bump on the GPU side as well",
+        "Because at 45 um pitch a 25 um pillar is too resistive to carry a 10 Gb/s signal, so most bumps are left unused as spacers",
+        "Because the interposer TSVs can only be placed under power pads, so the bump map is set by TSV count"
+      ],
+      "answer": 0,
+      "explanation": "Current, not I/O count, sets the bump count. 1,000 W / 0.8 V = 1,250 A. A 25 um pillar is limited to tens of milliamps by electromigration (the electron wind that pushes metal atoms downstream and opens a void), so ~12,500-25,000 pillars carry the supply current and the same number return it through ground, ~25,000-50,000 for power alone. The ~13,000 HBM signals and other I/O are a minority of the ~100,000 bumps."
+    },
+    {
+      "q": "A CoWoS-S interposer starts as a 775 um-thick wafer, yet its 10 um-diameter TSVs are etched only ~100 um deep and the wafer is later ground down to ~100 um from the back. Why not etch straight through the full thickness?",
+      "options": [
+        "Because the Bosch process cannot etch silicon deeper than 100 um regardless of hole width",
+        "Because a 10 um hole 775 um deep would have a ~77:1 aspect ratio that cannot be etched straight, lined conformally with oxide, barrier and seed, or plated without voids, whereas a 10:1 hole can; so the holes are etched shallow, wiring is built on top, and the excess silicon is ground away once the molded dies make the wafer rigid",
+        "Because the front-side RDL must be built before the TSVs, and the RDL tools cannot handle a wafer with through-holes",
+        "Because grinding is cheaper than etching per micrometre, so TSMC etches as little as possible and grinds the rest for cost"
+      ],
+      "answer": 1,
+      "explanation": "Aspect ratio (depth divided by width) governs everything: a 10:1 hole can be Bosch-etched in ~100-200 cycles, lined with a conformal TEOS oxide, TaN barrier and copper seed, and filled bottom-up in about an hour; a 77:1 hole cannot be lined or filled void-free. The remaining 675 um of silicon exists only for handling strength and is removed in Step 3 after the dies and mold compound have turned the wafer into a rigid tile, which is also why chip-on-wafer precedes the thinning."
+    },
+    {
+      "q": "An organic substrate (CTE ~15 ppm/C) 100 mm on a side carries a silicon interposer (CTE 2.6 ppm/C) through a reflow that swings the temperature by ~220 C. Roughly how much more does the substrate expand than the silicon would, and what is the consequence?",
+      "options": [
+        "About 2.6 um, small enough that no underfill is needed for CoWoS",
+        "About 26 um, which is why microbumps are made ~30 um tall",
+        "About 0.26 mm (Δα·ΔT·L = 12 x 10^-6 x 220 x 100 mm), so the bonded stack must bend by hundreds of micrometres, lifting corner C4 joints or squashing central ones unless mold compounds, cores, stiffeners and reflow profiles are engineered against it",
+        "About 2.6 mm, which is why the interposer is always smaller than 50 mm"
+      ],
+      "answer": 2,
+      "explanation": "The differential expansion is the CTE difference (15 - 2.6 ≈ 12 ppm/C) times the temperature swing (220 C) times the length (100 mm): 12 x 10^-6 x 220 x 100 mm ≈ 0.26 mm. The stack is stress-free when the solder freezes and bends as it cools, changing sign at the next reflow, with amplitudes of hundreds of micrometres. Corner joints open if the gap exceeds the bump height when the solder freezes; a domed module bridges its central C4s. Engineers measure it by shadow moire through a reflow profile and qualify with JEDEC temperature cycling."
+    }
+  ]
+}

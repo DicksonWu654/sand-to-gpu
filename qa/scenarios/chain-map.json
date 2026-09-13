@@ -1,0 +1,22 @@
+[
+  {"hover": "#box svg[aria-label^='Map of'] g.cards g[data-id=feol]"},
+  {"wait": 300},
+  {"shot": "hover-feol"},
+  {"click": "#box svg[aria-label^='Map of'] g.cards g[data-id=ingot]"},
+  {"wait": 300},
+  {"shot": "click-ingot"},
+  {"click": "#box svg[aria-label^='Map of'] g.cards g[data-id=cowos]"},
+  {"wait": 300},
+  {"shot": "click-cowos"},
+  {"click": "#box svg[aria-label^='Map of'] g.cards g[data-id=hbm]"},
+  {"wait": 300},
+  {"shot": "click-hbm"},
+  {"click": "#box svg[aria-label^='Map of'] g.cards g[data-id=dc]"},
+  {"wait": 300},
+  {"shot": "click-datacenter"},
+  {"hover": "#box svg[aria-label^='Map of'] g.cards g[data-id=beol]"},
+  {"wait": 300},
+  {"shot": "hover-beol-while-dc-selected"},
+  {"hover": "#box .w-legend"},
+  {"wait": 200}
+]

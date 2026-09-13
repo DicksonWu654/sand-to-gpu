@@ -1,0 +1,44 @@
+[
+  {"wait": 1600}, {"shot": "after-autoplay-developed"},
+  {"click": "#box button.w-btn.primary"}, {"wait": 1300}, {"shot": "play-1.3s-not-yet-open"},
+  {"wait": 1700}, {"shot": "play-3s-hole-growing"},
+  {"wait": 1800},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(1) input[type=range]", "value": 10}, {"wait": 200}, {"shot": "dose-min-10"},
+  {"set": "#box .w-controls .w-ctl:nth-child(1) input[type=range]", "value": 80}, {"wait": 200}, {"shot": "dose-max-80"},
+  {"set": "#box .w-controls .w-ctl:nth-child(1) input[type=range]", "value": 15}, {"wait": 200}, {"shot": "module-half-dose-15"},
+  {"set": "#box .w-controls .w-ctl:nth-child(1) input[type=range]", "value": 30},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 15}, {"wait": 200}, {"shot": "cd-min-15"},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 40}, {"wait": 200}, {"shot": "cd-max-40"},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 30},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 5}, {"wait": 200}, {"shot": "absorb-min-5"},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 40}, {"wait": 200}, {"shot": "absorb-max-40"},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 14},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(4) input[type=range]", "value": 5}, {"wait": 200}, {"shot": "thresh-min-5"},
+  {"set": "#box .w-controls .w-ctl:nth-child(4) input[type=range]", "value": 30}, {"wait": 200}, {"shot": "thresh-max-30"},
+  {"set": "#box .w-controls .w-ctl:nth-child(4) input[type=range]", "value": 20},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(1) input[type=range]", "value": 10},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 15},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 5},
+  {"set": "#box .w-controls .w-ctl:nth-child(4) input[type=range]", "value": 5}, {"wait": 200}, {"shot": "worst-case-all-min"},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(1) input[type=range]", "value": 80},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 40},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 40},
+  {"set": "#box .w-controls .w-ctl:nth-child(4) input[type=range]", "value": 30}, {"wait": 200}, {"shot": "best-case-all-max"},
+
+  {"set": "#box .w-controls .w-ctl:nth-child(1) input[type=range]", "value": 30},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 30},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 14},
+  {"set": "#box .w-controls .w-ctl:nth-child(4) input[type=range]", "value": 20}, {"wait": 200},
+  {"click": "#box button.w-btn:nth-child(2)"}, {"wait": 300}, {"shot": "resampled-defaults"},
+  {"click": "#box button.w-btn:nth-child(3)"}, {"wait": 300}, {"shot": "forced-failing-hole"},
+  {"click": "#box button.w-btn:nth-child(3)"}, {"wait": 300},
+
+  {"hover": "#box [data-strip] canvas"}, {"wait": 300}, {"shot": "hover-sample"},
+  {"hover": "#box svg[aria-label^='Failure']"}, {"wait": 300}, {"shot": "hover-chart"}
+]

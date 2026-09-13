@@ -1,0 +1,45 @@
+[
+  {"click": "#box .widget-body > div:nth-of-type(1) button:nth-of-type(2)"},
+  {"click": "#box .widget-body > div:nth-of-type(1) button:nth-of-type(2)"},
+  {"wait": 1500}, {"shot": "electrons-1.5s"},
+
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(1) input", "value": 0.2}, {"shot": "vg-0.2-off-subthreshold"},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(1) input", "value": 0}, {"shot": "vg-0-min"},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(1) input", "value": 1.0}, {"shot": "vg-1.0-max"},
+
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(1) input", "value": 0.5},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(2) input", "value": 0.05}, {"shot": "vd-0.05-linear-region"},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(2) input", "value": 1.0}, {"shot": "vd-1.0-max"},
+
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(1) input", "value": 0.7},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(2) input", "value": 0.7},
+  {"set": "#box .widget-body > div:nth-of-type(1) select", "value": "planar"}, {"shot": "preset-planar"},
+  {"set": "#box .widget-body > div:nth-of-type(1) select", "value": "gaa"}, {"shot": "preset-gaa"},
+
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(3) input", "value": 0.2},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(4) input", "value": 100},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(5) input", "value": 150},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(2) input", "value": 1.0}, {"shot": "extremes-leaky-vt0.2-ss100-dibl150"},
+
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(3) input", "value": 0.6},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(4) input", "value": 60},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(5) input", "value": 0},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(2) input", "value": 0.05}, {"shot": "extremes-ideal-vt0.6-ss60-dibl0-vd0.05"},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(2) input", "value": 0.7}, {"shot": "extremes-ideal-vd0.7"},
+
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(3) input", "value": 0.5},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(4) input", "value": 100},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(5) input", "value": 0},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(2) input", "value": 0.7}, {"shot": "vt0.5-ss100-dibl0-vd0.7"},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(3) input", "value": 0.6},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(4) input", "value": 80},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(2) input", "value": 0.05}, {"shot": "vt0.6-ss80-dibl0-vd0.05"},
+
+  {"set": "#box .widget-body > div:nth-of-type(1) select", "value": "finfet"},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(3) input", "value": 0.35},
+  {"set": "#box .widget-body > div:nth-of-type(2) label:nth-of-type(2) input", "value": 0.7},
+  {"click": "#box .widget-body > div:nth-of-type(1) button:nth-of-type(2)"}, {"wait": 2200}, {"shot": "sweep-2.2s"},
+  {"wait": 2000}, {"shot": "sweep-4.2s"},
+  {"click": "#box .widget-body > div:nth-of-type(1) button:nth-of-type(2)"},
+  {"click": "#box .widget-body > div:nth-of-type(1) button:nth-of-type(1)"}, {"shot": "toggled-play-pause"}
+]

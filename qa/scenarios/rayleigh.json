@@ -1,0 +1,23 @@
+[
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0.25}, {"wait": 200}, {"shot": "k1-min"},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0.26}, {"wait": 200}, {"shot": "k1-026"},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0.5}, {"wait": 200}, {"shot": "k1-050"},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0.8}, {"wait": 200}, {"shot": "k1-max"},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0.28},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 0.9}, {"wait": 200}, {"shot": "193i-na-min"},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 1.35},
+  {"set": "#box select", "value": "euv"}, {"wait": 200}, {"shot": "euv-033"},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 0.55}, {"wait": 200}, {"shot": "euv-055"},
+  {"set": "#box select", "value": "g"}, {"wait": 200}, {"shot": "g-line"},
+  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 0.3},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0.8}, {"wait": 200}, {"shot": "g-line-namin-k1max"},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0.6},
+  {"set": "#box select", "value": "i"}, {"wait": 200}, {"shot": "i-line-k1-060"},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0.28},
+  {"set": "#box select", "value": "krf"}, {"wait": 200}, {"shot": "krf"},
+  {"set": "#box select", "value": "arf"}, {"wait": 200}, {"shot": "arf-dry"},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0.25}, {"wait": 200}, {"shot": "arf-dry-k1-min"},
+  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0.28},
+  {"click": "#box .rayleigh-chart g[data-bar='4']"}, {"wait": 200}, {"shot": "click-bar-193i"},
+  {"hover": "#box .rayleigh-chart g[data-bar='2'] rect"}, {"wait": 300}, {"shot": "hover-bar"}
+]

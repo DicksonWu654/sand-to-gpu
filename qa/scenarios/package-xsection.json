@@ -1,0 +1,34 @@
+[
+  {"hover": "#box svg rect[fill='var(--si)']"}, {"wait": 300}, {"shot": "cowos-s-hover-interposer-rect"},
+  {"click": "#box .w-legend button[data-id='buildup']"}, {"wait": 250}, {"shot": "cowos-s-click-buildup"},
+  {"click": "#box .w-legend button[data-id^='die:HBM']"}, {"wait": 250}, {"shot": "cowos-s-click-hbm"},
+  {"click": "#box .w-legend button[data-id='c4']"}, {"wait": 250}, {"shot": "cowos-s-click-c4"},
+  {"hover": "#box .w-legend button[data-id='lid']"}, {"wait": 300}, {"shot": "cowos-s-hover-lid-button"},
+
+  {"set": "#box select", "value": "fcbga"}, {"wait": 300}, {"shot": "fcbga-default"},
+  {"click": "#box .w-legend button[data-id='c4']"}, {"wait": 250}, {"shot": "fcbga-click-c4"},
+  {"click": "#box .w-legend button[data-id='balls']"}, {"wait": 250}, {"shot": "fcbga-click-balls"},
+
+  {"set": "#box select", "value": "qfp"}, {"wait": 300}, {"shot": "qfp-default"},
+  {"click": "#box .w-legend button[data-id='wirebond']"}, {"wait": 250}, {"shot": "qfp-click-wirebond"},
+  {"click": "#box .w-legend button[data-id='leadframe']"}, {"wait": 250}, {"shot": "qfp-click-leadframe"},
+
+  {"set": "#box select", "value": "info"}, {"wait": 300}, {"shot": "info-default"},
+  {"click": "#box .w-legend button[data-id='rdlF']"}, {"wait": 250}, {"shot": "info-click-rdl"},
+
+  {"set": "#box select", "value": "cowos-l"}, {"wait": 300}, {"shot": "cowos-l-default"},
+  {"click": "#box .w-legend button[data-id='rdlL']"}, {"wait": 250}, {"shot": "cowos-l-click-rdl"},
+
+  {"set": "#box select", "value": "soic-cowos"}, {"wait": 300}, {"shot": "soic-default"},
+  {"click": "#box .w-legend button[data-id$=':top']"}, {"wait": 250}, {"shot": "soic-click-top-tier"},
+  {"click": "#box .w-legend button[data-id='interposer']"}, {"wait": 250}, {"shot": "soic-click-interposer"},
+
+  {"set": "#box label.w-ctl:nth-of-type(1) input[type=range]", "value": 5},
+  {"set": "#box label.w-ctl:nth-of-type(2) input[type=range]", "value": 25}, {"wait": 250}, {"shot": "cte-min-d5-dt25"},
+  {"set": "#box label.w-ctl:nth-of-type(1) input[type=range]", "value": 30},
+  {"set": "#box label.w-ctl:nth-of-type(2) input[type=range]", "value": 250}, {"wait": 250}, {"shot": "cte-max-d30-dt250"},
+  {"set": "#box label.w-ctl:nth-of-type(1) input[type=range]", "value": 21},
+  {"set": "#box label.w-ctl:nth-of-type(2) input[type=range]", "value": 192}, {"wait": 250}, {"shot": "cte-module-example-d21-dt192"},
+
+  {"set": "#box select", "value": "cowos-s"}, {"wait": 300}, {"shot": "back-to-cowos-s"}
+]

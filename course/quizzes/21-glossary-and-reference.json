@@ -1,0 +1,93 @@
+{
+  "module": 21,
+  "questions": [
+    {
+      "q": "In the glossary, what does MOL (Middle of Line) refer to?",
+      "options": [
+        "The 15-18 copper/low-k interconnect levels built after the first contact level",
+        "The contact levels between the transistors and M1: trench silicide, source/drain contacts (W, Co, or Ru), gate contacts, and M0",
+        "The mid-wafer inspection point between FEOL and BEOL where WAT parametric tests are run",
+        "The middle deck of a string-stacked 3D NAND array"
+      ],
+      "answer": 1,
+      "explanation": "MOL is the set of contact levels that connect the FEOL transistors to the first true BEOL wiring level. The copper/low-k stack above it is the BEOL; WAT is an end-of-line parametric test, not a process stage."
+    },
+    {
+      "q": "Using the sense-of-scale table, order these from largest to smallest: the tightest N3/N2 metal pitch, the contacted poly pitch, the EUV wavelength, and a killer particle.",
+      "options": [
+        "EUV wavelength > metal pitch > killer particle > contacted poly pitch",
+        "Metal pitch > EUV wavelength > contacted poly pitch > killer particle",
+        "Killer particle > contacted poly pitch > metal pitch > EUV wavelength",
+        "Contacted poly pitch (~45-48 nm) > killer particle (~20-30 nm) roughly equal to metal pitch (~23-25 nm) > EUV wavelength (13.5 nm)"
+      ],
+      "answer": 3,
+      "explanation": "CPP is ~45-48 nm, the tightest metal pitch is ~23-25 nm, a killer particle is anything larger than about half the metal pitch (~20-30 nm), and the EUV wavelength is 13.5 nm. The scanner prints features larger than its wavelength only by virtue of k1 near 0.3 and NA 0.33-0.55."
+    },
+    {
+      "q": "The node table shows contacted poly pitch (CPP) essentially flat at ~45-50 nm from TSMC N5 through N2 and A16. Why, and where does remaining density gain come from?",
+      "options": [
+        "CPP must fit a gate, two spacers, and a contact, so it has hit a physical floor; density now comes from metal-pitch scaling, cell-height reduction (fewer tracks, backside power), and DTCO",
+        "CPP is limited by the 0.33 NA EUV resolution of ~13.5 nm, so only High-NA tools can shrink it; density gains come from FinFET fin count",
+        "Foundries deliberately hold CPP constant so PDKs remain compatible across nodes; density comes from larger reticles",
+        "CPP stopped scaling because copper resistivity rises sharply below 50 nm; density now comes from stacking two logic dies with SoIC"
+      ],
+      "answer": 0,
+      "explanation": "A gate pitch has to contain the gate length, two dielectric spacers, and a source/drain contact, and each of those has stopped shrinking. Since N5 the density gain per node (~1.15-1.3x) has come from metal pitch, track reduction, backside power delivery, and design-technology co-optimization such as SDB and COAG."
+    },
+    {
+      "q": "According to the node table and its commentary, what happened to wafer price and lithography's share of cost between TSMC N5 and N2?",
+      "options": [
+        "Wafer price fell from ~$30k to ~$16-17k as EUV matured, and litho's share dropped to ~25%",
+        "Wafer price stayed at ~$10k while EUV layer count fell from ~25 to ~14",
+        "Wafer price rose from ~$16-17k (N5) to ~$30k (N2) as EUV layers went from ~14 to ~25+, and litho's share of wafer cost grew from ~25% at N16 to ~35-40% at N2",
+        "Wafer price rose to ~$30k solely because N2 uses High-NA EUV on every critical layer"
+      ],
+      "answer": 2,
+      "explanation": "The table lists N5 at ~$16-17k with ~14 EUV layers and N2 at ~$30k with ~25+ EUV layers including EUV LELE on M0 and vias. Each EUV layer costs 2-3x a DUV layer in tool time, so litho's share climbed from ~25% at N16 to ~35-40% at N2, and cost per transistor stopped falling."
+    },
+    {
+      "q": "The glossary defines Little's law as WIP = throughput x cycle time. A fab running 100,000 wafer starts per month with a 90-day cycle time carries roughly how many wafers in process?",
+      "options": [
+        "~100,000 wafers, one month's worth",
+        "~300,000 wafers, three months' worth",
+        "~900,000 wafers, since each wafer passes through ~9 re-entrant loops",
+        "~30,000 wafers, since lots of 25 are counted as single units"
+      ],
+      "answer": 1,
+      "explanation": "100,000 wafers per month times a 3-month (90-day) cycle time gives ~300,000 wafers in process at any moment. Re-entrant flow explains why the cycle time is 90 days for 1,000-1,500 steps but does not multiply the WIP count."
+    },
+    {
+      "q": "The glossary lists three die-yield models. Which statement correctly matches them?",
+      "options": [
+        "Poisson is the industry default; Murphy is the most pessimistic; negative binomial ignores defect clustering",
+        "Negative binomial is the most pessimistic; Poisson includes a clustering parameter alpha; Murphy is used only for memory",
+        "Murphy Y = e^(-A*D0) is the simplest; Poisson uses the squared bracket form; both assume clustering",
+        "Poisson Y = e^(-A*D0) is the simplest and most pessimistic; Murphy Y = [(1 - e^(-A*D0))/(A*D0)]^2 is less pessimistic for large dies; negative binomial Y = (1 + A*D0/alpha)^(-alpha) with alpha ~2-5 accounts for clustering and is the industry default"
+      ],
+      "answer": 3,
+      "explanation": "Poisson assumes random, unclustered defects and gives the lowest yield; Murphy softens it for large dies; the negative binomial adds a clustering parameter alpha (typically 2-5) and is what foundries actually use. All three take die area A and killer defect density D0 (~0.05-0.1 /cm2 at a mature leading node) as inputs."
+    },
+    {
+      "q": "The module quotes four numbers: the ~45-48 nm contacted poly pitch, the ~23-25 nm minimum metal pitch, the ~10 nm Rayleigh resolution of 0.33 NA EUV (0.25 x 13.5 nm / 0.33), and the ~26-30 nm fin pitch. Which one is a half-pitch rather than a pitch?",
+      "options": [
+        "The ~45-48 nm contacted poly pitch, because it is measured from gate center to gate center",
+        "The ~23-25 nm minimum metal pitch, because M0 lines are printed by EUV double patterning",
+        "The ~10 nm Rayleigh figure, because k1 x lambda / NA gives the minimum half-pitch (one line width when lines and spaces are equal); the other three are center-to-center pitches",
+        "The ~26-30 nm fin pitch, because fins are narrower than the spaces between them"
+      ],
+      "answer": 2,
+      "explanation": "The Rayleigh criterion, resolution = k1 x lambda / NA, gives a half-pitch: 0.25 x 13.5 nm / 0.33 is about 10.2 nm, and 0.33 NA EUV resolves ~13 nm half-pitch in production, which is the same statement as ~26 nm pitch. CPP, metal pitch and fin pitch are all center-to-center repeat distances, i.e. full pitches. Check which is meant before comparing numbers."
+    },
+    {
+      "q": "Why does EUV lithography suffer more stochastic (random) pattern failures than ArF lithography at similar doses?",
+      "options": [
+        "Each EUV mirror reflects only ~70% of the light, so the aerial image reaching the wafer is blurrier than an ArF lens image",
+        "An EUV photon carries ~14x the energy of an ArF photon, so a 20 mJ/cm2 EUV dose is only ~14 photons per nm2 versus ~290 per nm2 for ArF at 30 mJ/cm2; a 10 x 10 nm contact receives only ~1,400 photons, whose square-root shot noise is ~3%, and the rare hole that receives far fewer than average does not open",
+        "EUV resists are not chemically amplified, so every photon must clear a resist site on its own",
+        "The 13.5 nm wavelength is smaller than the resist polymer molecules, so the image cannot be resolved chemically"
+      ],
+      "answer": 1,
+      "explanation": "A dose is energy per area, and photon energy scales as 1/wavelength: a 13.5 nm photon is 92 eV and a 193 nm photon 6.4 eV. At production doses EUV therefore puts down roughly 20x fewer photons per nm2 than ArF, and the random arrival of photons (shot noise, proportional to the square root of the count) becomes a visible fraction of the exposure in a 10 x 10 nm feature. Mirror losses affect throughput, not shot noise per unit dose, and most EUV resists are chemically amplified."
+    }
+  ]
+}

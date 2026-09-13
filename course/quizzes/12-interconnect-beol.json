@@ -1,0 +1,93 @@
+{
+  "module": 12,
+  "questions": [
+    {
+      "q": "A copper line is scaled from 40 nm wide to 20 nm wide. Beyond the geometric 1/(w x h) increase in resistance, why does its effective resistivity also rise several-fold?",
+      "options": [
+        "Copper oxidizes more readily in narrow trenches, raising its resistivity",
+        "The line width is below copper's ~39 nm electron mean free path, so surface and grain-boundary scattering add to phonon scattering, while the fixed ~3 to 4 nm barrier/liner per sidewall takes a growing share of the cross section",
+        "The low-k dielectric around the line becomes conductive at small spacings",
+        "Electroplated copper has a different crystal structure below 30 nm"
+      ],
+      "answer": 1,
+      "explanation": "Fuchs-Sondheimer surface scattering and Mayadas-Shatzkes grain-boundary scattering raise effective resistivity to ~5 to 8 uOhm-cm at 20 nm width, and the non-scaling TaN/Co barrier and liner consume roughly a third of the width."
+    },
+    {
+      "q": "Why is copper interconnect built by damascene (etch dielectric, fill metal, polish) rather than by the subtractive etch used for aluminum?",
+      "options": [
+        "Copper is too soft to survive plasma etching",
+        "Copper halide etch products (CuCl, CuCl2) are not volatile below roughly 200 to 250 C, which photoresist cannot survive, and copper must be sealed by a diffusion barrier on every side",
+        "Damascene is cheaper because it needs fewer lithography steps",
+        "Copper cannot be sputtered as a blanket film"
+      ],
+      "answer": 1,
+      "explanation": "Aluminum chlorides are volatile at ~180 C, but copper chlorides are not at resist-compatible temperatures, so the pattern is etched into the dielectric and copper is inlaid and polished back."
+    },
+    {
+      "q": "In copper electrochemical deposition, what mechanism causes a narrow via to fill from the bottom up (superfill) instead of pinching off at the top?",
+      "options": [
+        "The electric field is strongest at the via bottom, attracting more Cu2+ ions",
+        "The suppressor is consumed at the bottom and the leveler plates copper preferentially there",
+        "The large, diffusion-limited suppressor (PEG plus Cl-) blocks deposition on the field and trench mouth, while the small accelerator (SPS) adsorbed at the bottom becomes concentrated as the shrinking bottom surface area fills, speeding deposition there",
+        "The copper seed is thickest at the via bottom because of PVD line-of-sight deposition"
+      ],
+      "answer": 2,
+      "explanation": "This is the curvature-enhanced accelerator coverage mechanism: accelerator does not desorb, so as the bottom surface shrinks its coverage rises and deposition accelerates, while the suppressed field stays slow."
+    },
+    {
+      "q": "During copper CMP, what makes the process planarize (remove high points faster than recessed areas) rather than simply thin the copper uniformly?",
+      "options": [
+        "The pad is harder than copper and only touches the highest features",
+        "Slurry oxidizer and complexing agent attack copper everywhere, but a corrosion inhibitor (BTA) passivates the surface; the pad and abrasives strip that passivation only at high points, where removal then proceeds",
+        "The eddy-current endpoint sensor stops the polish in recessed areas",
+        "The slurry pH is chosen so copper dissolves only under high pressure"
+      ],
+      "answer": 1,
+      "explanation": "Cu CMP is chemically driven and mechanically gated: H2O2 oxidizes, glycine complexes, BTA passivates, and abrasion removes the passivating film only where the pad contacts, so recessed areas are protected."
+    },
+    {
+      "q": "A 30 um long copper line at 1 MA/cm2 does not fail by electromigration in accelerated tests even though longer lines of the same width do. Which effect explains this?",
+      "options": [
+        "The Blech effect: below a critical J x L product (~2,000 to 4,000 A/cm for Cu), the stress gradient that builds between the compressed anode and tensile cathode ends drives a back-flux that cancels the electron-wind flux",
+        "Black's equation predicts lifetime proportional to line length",
+        "Short lines have no grain boundaries and therefore no diffusion path",
+        "The cobalt cap only works on lines shorter than ~50 um"
+      ],
+      "answer": 0,
+      "explanation": "At J = 1 MA/cm2 the critical Blech length is ~20 to 40 um; lines shorter than this, bounded by barriers at both ends, are effectively immortal, which design rules exploit."
+    },
+    {
+      "q": "Why is ruthenium a candidate to replace copper at M0/M1 despite having a bulk resistivity of 7.1 uOhm-cm, more than four times copper's 1.68 uOhm-cm?",
+      "options": [
+        "Ruthenium has a higher melting point, so it can be annealed to larger grains than copper",
+        "Ruthenium is cheaper than copper per gram",
+        "Ruthenium's short electron mean free path (~6.6 nm) gives it a lower rho x lambda product, and it needs essentially no diffusion barrier, so below roughly 12 to 15 nm line width its total line resistance beats barrier-clad copper; it can also be dry-etched (volatile RuO4), enabling subtractive patterning",
+        "Ruthenium has a lower dielectric constant than copper"
+      ],
+      "answer": 2,
+      "explanation": "The figure of merit at small dimensions is rho x lambda plus the barrier share; Ru wins on both at sub-15 nm widths, and its etchability restores the subtractive metal option with airgaps and no CMP dishing."
+    },
+    {
+      "q": "In the dual damascene flow, why is the plated copper annealed before CMP rather than after it?",
+      "options": [
+        "The anneal hardens the copper so the pad can abrade it cleanly",
+        "As-plated copper is metastable and recrystallizes into larger grains over hours (its resistance drops ~20 percent); a forced anneal at 150 to 400 C completes this first, so the film has a stable removal rate during polishing, grains as large as the trench allows (bamboo structure), and relaxed stress before the cap is deposited",
+        "The anneal drives the plating additives out of the copper so they do not contaminate the slurry",
+        "CMP must be done on a hot wafer for the BTA inhibitor to work"
+      ],
+      "answer": 1,
+      "explanation": "Polishing a film that is still recrystallizing gives an unstable removal rate, so the anneal (furnace or hotplate, N2/H2) is done first; it also produces the bamboo grain structure that resists electromigration and relaxes stress before the SiCN cap goes on."
+    },
+    {
+      "q": "Why does moving the power grid to the back of the wafer (backside power delivery) allow the M0 pitch to relax, as Intel reported for PowerVia (30 nm to 36 nm)?",
+      "options": [
+        "The thinned wafer conducts heat better, so the wires can be spaced further apart",
+        "The backside metal carries the signals, so M0 no longer needs to exist",
+        "In a conventional stack the power rails occupy M0 tracks alongside every standard-cell row; with power delivered from the back through nano-TSVs those tracks are freed for signals, so fewer tracks are needed per cell and the remaining lines can be spaced wider, which also raised cell utilization by 5 to 10 percent",
+        "Backside power removes the need for EUV lithography on M0"
+      ],
+      "answer": 2,
+      "explanation": "Power rails no longer compete for space on the front side. Intel's PowerVia test vehicle on Intel 4 relaxed M0 from 30 to 36 nm, improved cell utilization by 5 to 10 percent and cut IR drop, while the tight-pitch signal layers are built exactly as before."
+    }
+  ]
+}

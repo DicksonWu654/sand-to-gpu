@@ -1,0 +1,37 @@
+[
+  {"click": "#box button.w-btn.primary"}, {"wait": 200}, {"shot": "step02-pads"},
+  {"click": "#box .w-step-nav[role=tablist] button.w-step-dot:nth-of-type(3)"}, {"wait": 200}, {"shot": "step03-cow"},
+  {"click": "#box .w-step-nav[role=tablist] button.w-step-dot:nth-of-type(4)"}, {"wait": 200}, {"shot": "step04-underfill"},
+  {"click": "#box .w-step-nav[role=tablist] button.w-step-dot:nth-of-type(5)"}, {"wait": 200}, {"shot": "step05-mold"},
+  {"click": "#box .w-step-nav[role=tablist] button.w-step-dot:nth-of-type(6)"}, {"wait": 200}, {"shot": "step06-carrier-mid"},
+  {"click": "#box .w-step-nav[role=tablist] button.w-step-dot:nth-of-type(7)"}, {"wait": 200}, {"shot": "step07-grind"},
+  {"click": "#box .w-step-nav[role=tablist] button.w-step-dot:nth-of-type(8)"}, {"wait": 200}, {"shot": "step08-c4"},
+  {"click": "#box .w-step-nav[role=tablist] button.w-step-dot:nth-of-type(9)"}, {"wait": 200}, {"shot": "step09-debond"},
+  {"click": "#box .w-step-nav[role=tablist] button.w-step-dot:nth-of-type(10)"}, {"wait": 200}, {"shot": "step10-singulate"},
+  {"click": "#box .w-step-nav[role=tablist] button.w-step-dot:nth-of-type(11)"}, {"wait": 200}, {"shot": "step11-wos"},
+  {"click": "#box .w-step-nav[role=tablist] button.w-step-dot:nth-of-type(12)"}, {"wait": 200}, {"shot": "step12-lid-last"},
+  {"click": "#box .w-step-nav > button.w-btn:not(.primary)"}, {"wait": 200}, {"shot": "step11-after-prev"},
+  {"hover": "#box .w-step-nav[role=tablist] button.w-step-dot:nth-of-type(3)"}, {"wait": 300}, {"shot": "hover-dot3"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 80},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 50},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 90},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 80},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 12},
+  {"wait": 200}, {"shot": "yield-all-min-n12"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 100},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 4},
+  {"wait": 200}, {"shot": "yield-all-max-n4"},
+
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 98},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 85},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(3) input[type=range]", "value": 99},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(4) input[type=range]", "value": 97},
+  {"set": "#box .w-controls label.w-ctl:nth-of-type(5) input[type=range]", "value": 8},
+  {"wait": 200}, {"shot": "yield-defaults-restored"},
+  {"hover": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]"}, {"wait": 300}, {"shot": "hover-gpu-slider"}
+]

@@ -1,0 +1,9 @@
+# Working on Sand to GPU
+
+- Preserve the course’s teaching depth, sequence, and concrete explanations when improving prose or visuals.
+- Check technical claims against authoritative primary sources; distinguish measured data, published estimates, and illustrative models. Date time-sensitive claims and document uncertainty.
+- Read `HANDOFF.md`, the course guides, and relevant widget/QA specifications before continuing their work.
+- Delegate independent research, audits, implementation, and testing to subagents; coordinate ownership to avoid overlapping edits.
+- Keep builds reproducible: install dependencies with `npm ci`, rebuild course content with `node build.js`, and follow `qa/WIDGET_QA_STANDARD.md` for affected widgets. Record actual validation and unresolved limitations.
+- Keep secrets, credentials, private keys, `node_modules`, and generated screenshots out of Git. Inspect staged changes before committing.
+- Use the user’s configured identity and GPG key to sign commits. Commit and push completed changes to the private GitHub repository; keep the repository private unless explicitly instructed otherwise.

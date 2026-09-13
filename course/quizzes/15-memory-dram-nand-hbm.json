@@ -1,0 +1,71 @@
+{
+  "module": 15,
+  "questions": [
+    {
+      "q": "A DRAM cell with Cs = 12 fF shares charge with a bit line of Cbl = 36 fF precharged to VDD/2 = 0.55 V. Roughly what signal reaches the sense amplifier, and why can't the capacitor simply shrink with the cell footprint?",
+      "options": [
+        "~ 550 mV; it can shrink, because the sense amplifier is differential",
+        "~ 1.1 V; the word-line boost voltage VPP restores the full signal",
+        "~ 12 mV; DRAM works because reads are repeated 64 times per refresh cycle",
+        "~ 140 mV; below ~ 60-80 mV the sense amp's offset and bit-line noise cause read errors, so Cs must stay ~ 10-20 fF and the capacitor grows taller instead"
+      ],
+      "answer": 3,
+      "explanation": "Charge sharing gives ΔV = 0.55 V × 12/(12+36) ≈ 140 mV. Sense amplifiers need a margin above their mismatch offset and coupling noise, so capacitance has been held roughly constant since the mid-2000s while the capacitor's height rose to > 1 µm at aspect ratios above 40."
+    },
+    {
+      "q": "In the 3D NAND gate-replacement flow, when is the tungsten word-line metal actually deposited?",
+      "options": [
+        "First, as alternating W/oxide layers, before the channel holes are etched",
+        "Immediately after the channel-hole etch, before the ONO and polysilicon channel",
+        "After the channel, staircase and slit are formed: hot phosphoric acid dissolves the sacrificial silicon nitride layers through the slit, and W (with TiN/Al2O3 liners) is ALD/CVD-filled into the resulting horizontal cavities",
+        "During BEOL, together with the copper bit lines"
+      ],
+      "answer": 2,
+      "explanation": "The stack is deposited as oxide/nitride pairs because nitride can be etched with > 100:1 selectivity in hot H3PO4 and the etch must happen after the channel pillars exist to hold the oxide shelves up; W is then filled from the slit inward and etched back in the slit to separate the layers."
+    },
+    {
+      "q": "Why does HBM4 at its JEDEC base rate deliver ~ 2 TB/s per stack while running each pin at a lower speed (~ 8 Gbps) than HBM3E (~ 9.2 Gbps)?",
+      "options": [
+        "HBM4 core dies use a faster 1γ DRAM cell with lower latency",
+        "HBM4 doubles the interface from 1,024 to 2,048 data bits, so 2,048 × 8 Gbps / 8 ≈ 2.05 TB/s; bandwidth is pins × data rate",
+        "HBM4 uses hybrid bonding, which removes the solder joint resistance that limited HBM3E",
+        "HBM4 stacks are 16-high, and bandwidth scales with the number of core dies"
+      ],
+      "answer": 1,
+      "explanation": "HBM is a wide-and-slow interface. HBM3E: 1,024 × 9.2 Gbps ≈ 1.18 TB/s. HBM4: 2,048 × 8 Gbps ≈ 2.05 TB/s. Doubling the width puts the burden on the base die (now made on a foundry logic process) and the interposer routing rather than on per-pin signalling."
+    },
+    {
+      "q": "SK hynix's MR-MUF process won most of NVIDIA's HBM3/HBM3E business over Samsung's TC-NCF. Which statement best describes the mechanism behind that advantage?",
+      "options": [
+        "MR-MUF forms all solder joints at once in a reflow oven and then injects a filled epoxy molding compound with ~ 2× the thermal conductivity of NCF, giving higher throughput, less force on thin dies, lower warpage and cooler stacks; TC-NCF bonds each die serially under heat and force through a low-conductivity film",
+        "MR-MUF uses hybrid Cu-Cu bonding with no bumps, giving a thinner stack",
+        "MR-MUF places the base die on a TSMC logic process, which Samsung could not access",
+        "MR-MUF thins dies to 30 µm, whereas TC-NCF cannot go below 100 µm"
+      ],
+      "answer": 0,
+      "explanation": "Thermo-compression bonding dwells each of 12 dies at ~ 250-300 °C under force, with an epoxy film of plastic-like conductivity; mass reflow plus molded underfill parallelizes the joint formation and uses a silica-filled EMC that conducts heat better and holds the stack flatter. Samsung's 12-high HBM3E only passed NVIDIA qualification in September 2025."
+    },
+    {
+      "q": "JEDEC's HBM4 standard sets the package height at 775 µm for both 12-high and 16-high stacks. What did that decision do to the technology roadmap?",
+      "options": [
+        "It forced immediate adoption of hybrid bonding, because 16 microbumped dies cannot fit",
+        "It allowed 16-high stacks to be built with existing microbump TCB/MR-MUF processes by thinning core dies to ~ 30 µm, postponing hybrid bonding to HBM4E/HBM5",
+        "It made 16-high stacks impossible until 3D DRAM is available",
+        "It had no effect, because HBM height is set by the GPU lid, not by JEDEC"
+      ],
+      "answer": 1,
+      "explanation": "16 × ~ 30 µm dies + 16 bump gaps of ~ 12 µm + a ~ 50 µm base die + ~ 30 µm of bottom solder is ~ 750 µm, which fits in 775 µm with microbumps with only ~ 25 µm to spare; hybrid bonding would remove ~ 190 µm of gaps but requires sub-nm surface finishes and sub-µm placement that were not production-ready. The relaxed height therefore let vendors ship HBM4 with proven bonding."
+    },
+    {
+      "q": "TrendForce estimated HBM at ~ 18% of the top three suppliers' DRAM wafer input for ~ 8% of DRAM bit supply at end-2025. Which combination of factors explains this ~ 2-3× wafer-per-bit penalty?",
+      "options": [
+        "HBM uses an older, larger DRAM node so that the TSVs can be etched",
+        "Each HBM stack requires a separate silicon interposer wafer made in the DRAM fab",
+        "HBM core dies are ~ 1.5-1.8× larger per bit (TSV columns, keep-out zones, wider datapath), stack assembly yields only ~ 60-80% for 12-high, every stack needs a foundry-made base die, and the core dies are on the newest node with the lowest output per tool",
+        "HBM cells need 3× larger capacitors to survive the higher operating temperature"
+      ],
+      "answer": 2,
+      "explanation": "The cells are ordinary 1β/1γ DRAM; the penalty is architectural and yield-driven. This is why diverting ~ 100k wafers per month to HBM removes ~ 250k wafers per month of DDR5-equivalent bits and produced the 2025-26 conventional DRAM shortage."
+    }
+  ]
+}

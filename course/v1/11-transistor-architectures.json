@@ -1,0 +1,71 @@
+{
+  "module": 11,
+  "questions": [
+    {
+      "q": "A production FinFET has a subthreshold swing of 65 mV/dec. If a designer lowers the threshold voltage of a cell by 130 mV to gain speed, roughly how does its off-state leakage change, and why can no conventional MOSFET at 300 K do better than about 60 mV/dec?",
+      "options": [
+        "Leakage doubles; the limit comes from the mobility of silicon",
+        "Leakage rises ~100x; the limit is (kT/q) ln(10) times the body factor, set by the Boltzmann distribution of carriers in the source",
+        "Leakage rises ~10x; the limit is set by gate-oxide tunneling",
+        "Leakage is unchanged; only drain-induced barrier lowering changes I_off"
+      ],
+      "answer": 1,
+      "explanation": "Each 65 mV of V_T reduction multiplies I_off by 10, so 130 mV gives ~100x. SS = (kT/q) ln(10) x (1 + C_dep/C_ox) >= 59.6 mV/dec at 300 K because carriers surmounting the source barrier follow a Boltzmann distribution."
+    },
+    {
+      "q": "Using the double-gate scale-length approximation lambda = sqrt((eps_Si/(2 eps_ox)) x t_Si x t_ox) with eps_Si/eps_ox = 3, a 7 nm fin, and 0.9 nm EOT, what minimum gate length does the L_g >= 5 lambda rule give, and what is the main way a nanosheet lowers it further?",
+      "options": [
+        "~ 8 nm; by using a higher-k dielectric",
+        "~ 45 nm; by making the fin taller",
+        "~ 15 nm; by gating a thinner (5-6 nm) body on all four sides, which reduces lambda to ~ 2 nm",
+        "~ 15 nm; by increasing channel doping to shrink the depletion depth"
+      ],
+      "answer": 2,
+      "explanation": "lambda = sqrt(1.5 x 7 x 0.9) ~ 3.1 nm, so L_g >= ~ 15 nm. A nanosheet is thinner and gated on four sides, giving lambda ~ 1.9 nm and allowing L_g ~ 10-12 nm; doping the channel would degrade mobility and add variability."
+    },
+    {
+      "q": "In a replacement-metal-gate (gate-last) flow, why is the polysilicon gate deposited first and then removed, rather than depositing the HfO2/metal stack at the start?",
+      "options": [
+        "Polysilicon is easier to pattern with EUV than metal",
+        "The high-k and work-function metals cannot survive the ~1000 C source/drain activation anneal without work-function drift and interfacial-layer regrowth, so the real gate is built after all high-temperature steps",
+        "Metal gates require a self-aligned contact cap, which can only be formed on polysilicon",
+        "The dummy poly provides the tensile strain needed for NMOS mobility"
+      ],
+      "answer": 1,
+      "explanation": "Gate-first flows (IBM/Samsung 32/28 nm) exposed the HKMG stack to the S/D anneal and lost V_T control; gate-last uses sacrificial poly to define the device, does the anneal, then replaces poly with IL/HfO2/WFM/fill in the empty trench."
+    },
+    {
+      "q": "A standard-cell library on a FinFET node has CPP = 51 nm, minimum metal pitch = 30 nm, and 6-track cells. Estimate the NAND2-based transistor density.",
+      "options": [
+        "~ 45 MTr/mm2",
+        "~ 91 MTr/mm2",
+        "~ 145 MTr/mm2",
+        "~ 290 MTr/mm2"
+      ],
+      "answer": 2,
+      "explanation": "Cell height = 6 x 30 = 180 nm; a NAND2 is 3 CPP = 153 nm wide; area = 153 x 180 = 27,540 nm2 = 0.02754 um2 holding 4 transistors, so 4 / 0.02754 = ~ 145 MTr/mm2 (TSMC N5 class)."
+    },
+    {
+      "q": "Which step is unique to the gate-all-around nanosheet flow and why is it considered the hardest?",
+      "options": [
+        "Fin reveal by STI recess, because the etch depth sets fin height",
+        "Inner spacer formation: the SiGe layers are laterally recessed 5-8 nm, a dielectric is ALD-filled into the cavities and etched back, and the recess must be identical for every sheet because it sets each sheet's gate length and gate-to-S/D isolation",
+        "Self-aligned contact cap formation, because the gate recess must be uniform",
+        "Dual stress liner deposition, because tensile and compressive films must be patterned separately"
+      ],
+      "answer": 1,
+      "explanation": "Without inner spacers the replacement gate metal filling the inter-sheet gaps would short to the source/drain epi; the lateral recess suffers loading differences between top and bottom sheets, and 1 nm of non-uniformity becomes 1 nm of L_g mismatch."
+    },
+    {
+      "q": "Intel's PowerVia and TSMC's A16 Super Power Rail both deliver power from the back of the wafer. What is the key structural difference between them, and what shared process cost do both incur?",
+      "options": [
+        "PowerVia uses copper while SPR uses ruthenium; both require High-NA EUV",
+        "PowerVia uses nano-TSVs from the M0 rails down through the STI, while SPR makes backside contacts directly to the source/drain epi; both require bonding to a carrier wafer and thinning the device wafer to a few hundred nanometers",
+        "PowerVia is a sequential CFET while SPR is monolithic; both require a Si/SiGe superlattice",
+        "PowerVia places signals on the back and power on the front, the reverse of SPR; both eliminate the need for CMP"
+      ],
+      "answer": 1,
+      "explanation": "SPR's direct S/D contact is the most area-efficient variant (7-10% density gain over N2P) but the hardest to land; both approaches need carrier bonding, extreme backside thinning, backside litho aligned to front-side marks, and accept a worse thermal path."
+    }
+  ]
+}

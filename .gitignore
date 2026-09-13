@@ -1,0 +1,35 @@
+# Dependencies and local tool configuration
+node_modules/
+.claude/
+
+# Generated QA artifacts and scratch work
+qa/shots/
+qa/tmp/
+qa/**/*.png
+qa/**/*.jpg
+qa/**/*.jpeg
+qa/**/*.webp
+shot-test.png
+_tmm_tmp.js
+playwright-report/
+test-results/
+coverage/
+*.log
+*.tmp
+
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
