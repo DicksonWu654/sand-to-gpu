@@ -58,12 +58,13 @@
     "source": {
       "file": "course/modules/01-sand-to-polysilicon.md",
       "heading": "2. The Rock: Quartz and Quartzite"
-    }
+    },
+    "scene": "charge-bed"
   },
   {
     "section": "3-carbothermic-reduction-the-submerged-arc-furnace",
     "family": "apparatus",
-    "title": "Break the silicon\u2013oxygen bond with heat and carbon",
+    "title": "Break the silicon–oxygen bond with heat and carbon",
     "caption": "Electrical energy drives the overall reduction; silicon and gaseous carbon monoxide leave through different paths. Schematic, not to scale.",
     "nodes": [
       {
@@ -91,7 +92,8 @@
     "source": {
       "file": "course/modules/01-sand-to-polysilicon.md",
       "heading": "3. Carbothermic Reduction: The Submerged-Arc Furnace"
-    }
+    },
+    "scene": "arc-furnace"
   },
   {
     "section": "4-the-siemens-process",
@@ -124,7 +126,8 @@
     "source": {
       "file": "course/modules/01-sand-to-polysilicon.md",
       "heading": "4. The Siemens Process"
-    }
+    },
+    "scene": "siemens"
   },
   {
     "section": "5-fbr-granular-polysilicon-the-silane-route",
@@ -158,7 +161,8 @@
     "source": {
       "file": "course/modules/01-sand-to-polysilicon.md",
       "heading": "5. FBR Granular Polysilicon: the Silane Route"
-    }
+    },
+    "scene": "fluidized-bed"
   },
   {
     "section": "6-grades-electronic-grade-vs-solar-grade",

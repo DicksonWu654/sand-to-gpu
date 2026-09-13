@@ -1,37 +1,156 @@
 [
-  {"click": "#box button.w-btn.primary"}, {"wait": 3000}, {"shot": "play-3s"},
-  {"click": "#box button.w-btn.primary"}, {"shot": "paused"},
-
-  {"click": "#box .w-step-nav .w-step-dot[title^='Phase 2:']"},
-  {"click": "#box button.w-btn.primary"}, {"wait": 1500},
-  {"click": "#box button.w-btn.primary"}, {"shot": "phase2-neck-mid"},
-
-  {"click": "#box .w-step-nav .w-step-dot[title^='Phase 3:']"},
-  {"click": "#box button.w-btn.primary"}, {"wait": 1250},
-  {"click": "#box button.w-btn.primary"}, {"shot": "phase3-crown-mid"},
-
-  {"click": "#box .w-step-nav .w-step-dot[title^='Phase 4:']"}, {"shot": "phase4-body-start"},
-  {"click": "#box button.w-btn.primary"}, {"wait": 7000},
-  {"click": "#box button.w-btn.primary"}, {"shot": "phase4-body-mid"},
-
-  {"click": "#box .w-step-nav .w-step-dot[title^='Phase 5:']"}, {"shot": "phase5-tail-start"},
-  {"click": "#box button.w-btn.primary"}, {"wait": 3800}, {"shot": "end-of-run"},
-
-  {"click": "#box .w-step-nav .w-step-dot[title^='Phase 1:']"}, {"shot": "phase1-meltdown-start"},
-  {"click": "#box button.w-btn.primary"}, {"wait": 1500},
-  {"click": "#box button.w-btn.primary"}, {"shot": "phase1-meltdown-mid"},
-
-  {"click": "#box .w-step-nav .w-step-dot[title^='Phase 4:']"},
-  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0.5}, {"shot": "pullrate-min-0.5"},
-  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 1.5}, {"shot": "pullrate-max-1.5"},
-  {"set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]", "value": 0.8},
-
-  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 4},
-  {"set": "#box .w-controls .w-ctl:nth-child(4) input[type=range]", "value": 15}, {"shot": "speed4-rpm15"},
-  {"set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]", "value": 0.5},
-  {"set": "#box .w-controls .w-ctl:nth-child(4) input[type=range]", "value": 5}, {"shot": "speed0.5-rpm5"},
-
-  {"click": "#box .w-step-nav button.w-btn:last-of-type"}, {"shot": "next-btn"},
-  {"click": "#box .w-step-nav button.w-btn:first-of-type"},
-  {"hover": "#box .w-step-nav .w-step-dot[title^='Phase 3:']"}, {"shot": "hover-dot3"}
+  {
+    "click": "#box button.w-btn.primary"
+  },
+  {
+    "wait": 3000
+  },
+  {
+    "shot": "play-3s"
+  },
+  {
+    "click": "#box button.w-btn.primary"
+  },
+  {
+    "shot": "paused"
+  },
+  {
+    "click": "#box [data-phase=\"1\"]"
+  },
+  {
+    "click": "#box button.w-btn.primary"
+  },
+  {
+    "wait": 1500
+  },
+  {
+    "click": "#box button.w-btn.primary"
+  },
+  {
+    "shot": "phase2-neck-mid"
+  },
+  {
+    "click": "#box [data-phase=\"2\"]"
+  },
+  {
+    "click": "#box button.w-btn.primary"
+  },
+  {
+    "wait": 1250
+  },
+  {
+    "click": "#box button.w-btn.primary"
+  },
+  {
+    "shot": "phase3-crown-mid"
+  },
+  {
+    "click": "#box [data-phase=\"3\"]"
+  },
+  {
+    "shot": "phase4-body-start"
+  },
+  {
+    "click": "#box button.w-btn.primary"
+  },
+  {
+    "wait": 7000
+  },
+  {
+    "click": "#box button.w-btn.primary"
+  },
+  {
+    "shot": "phase4-body-mid"
+  },
+  {
+    "click": "#box [data-phase=\"4\"]"
+  },
+  {
+    "shot": "phase5-tail-start"
+  },
+  {
+    "click": "#box button.w-btn.primary"
+  },
+  {
+    "wait": 3800
+  },
+  {
+    "shot": "end-of-run"
+  },
+  {
+    "click": "#box [data-phase=\"0\"]"
+  },
+  {
+    "shot": "phase1-meltdown-start"
+  },
+  {
+    "click": "#box button.w-btn.primary"
+  },
+  {
+    "wait": 1500
+  },
+  {
+    "click": "#box button.w-btn.primary"
+  },
+  {
+    "shot": "phase1-meltdown-mid"
+  },
+  {
+    "click": "#box [data-phase=\"3\"]"
+  },
+  {
+    "set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]",
+    "value": 0.5
+  },
+  {
+    "shot": "pullrate-min-0.5"
+  },
+  {
+    "set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]",
+    "value": 1.5
+  },
+  {
+    "shot": "pullrate-max-1.5"
+  },
+  {
+    "set": "#box .w-controls .w-ctl:nth-child(3) input[type=range]",
+    "value": 0.8
+  },
+  {
+    "set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]",
+    "value": 4
+  },
+  {
+    "set": "#box .w-controls .w-ctl:nth-child(4) input[type=range]",
+    "value": 15
+  },
+  {
+    "shot": "speed4-rpm15"
+  },
+  {
+    "set": "#box .w-controls .w-ctl:nth-child(2) input[type=range]",
+    "value": 0.5
+  },
+  {
+    "set": "#box .w-controls .w-ctl:nth-child(4) input[type=range]",
+    "value": 5
+  },
+  {
+    "shot": "speed0.5-rpm5"
+  },
+  {
+    "click": "#box [aria-label='Next phase']"
+  },
+  {
+    "shot": "next-btn"
+  },
+  {
+    "click": "#box [aria-label='Previous phase']"
+  },
+  {
+    "hover": "#box [data-phase=\"2\"]"
+  },
+  {
+    "shot": "hover-dot3"
+  }
 ]

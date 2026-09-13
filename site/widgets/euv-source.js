@@ -85,8 +85,8 @@
 
       const txt = (x, y, s, o) => { o = o || {}; return svg('text', { x, y, 'font-family': o.mono ? 'var(--mono)' : 'var(--sans)', 'font-size': o.size || 12.5, 'font-weight': o.bold ? 600 : 400, fill: o.fill || 'var(--muted)', 'text-anchor': o.anchor || 'start' }, s); };
       const marker = (id, color) => svg('marker', { id, viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 6, markerHeight: 6, orient: 'auto-start-reverse' }, svg('path', { d: 'M0,0 L10,5 L0,10 z', fill: color }));
-      const defs = () => svg('defs', null, marker(uid + '-warn', 'var(--warn)'), marker(uid + '-ok', 'var(--ok)'), marker(uid + '-mu', 'var(--muted)'));
-      const mk = c => `url(#${uid}-${c})`;
+      const defs = (scope = 'source') => svg('defs', null, marker(uid + '-' + scope + '-warn', 'var(--warn)'), marker(uid + '-' + scope + '-ok', 'var(--ok)'), marker(uid + '-' + scope + '-mu', 'var(--muted)'));
+      const mk = (c, scope = 'source') => `url(#${uid}-${scope}-${c})`;
 
       // ================= Panel A: source vessel =================
       const A = svg('svg', { class: 'w-svg', viewBox: '0 0 360 316', role: 'img', 'aria-label': 'Source vessel: droplet generator, CO2 laser through the collector hole, tin plasma, ellipsoidal collector, intermediate focus' });
@@ -140,7 +140,7 @@
 
       // ================= Panel B: scanner =================
       const Bs = svg('svg', { class: 'w-svg', viewBox: '0 0 360 316', role: 'img', 'aria-label': 'Scanner: illuminator facet mirrors, grazing folds, reflective reticle, six projection mirrors, wafer stage' });
-      Bs.append(defs());
+      Bs.append(defs('scanner'));
       Bs.append(txt(2, 13, 'Scanner (vacuum, few Pa H₂)', { bold: true, fill: 'var(--ink)' }));
       Bs.append(svg('rect', { x: 2, y: 90, width: 168, height: 216, rx: 8, fill: 'var(--panel2)', 'fill-opacity': .5, stroke: 'var(--line2)' }));
       Bs.append(svg('rect', { x: 178, y: 62, width: 180, height: 182, rx: 8, fill: 'var(--panel2)', 'fill-opacity': .5, stroke: 'var(--line2)' }));
@@ -164,12 +164,12 @@
       // reticle: Mo/Si stripe with absorber ticks on the lit (lower) face
       Bs.append(svg('rect', { x: 96, y: 34, width: 108, height: 8, rx: 1.5, fill: 'var(--si)' }));
       for (let x = 101; x < 200; x += 8) Bs.append(svg('rect', { x, y: 39, width: 4, height: 4, fill: 'var(--ink)', opacity: .75 }));
-      Bs.append(svg('line', { x1: 100, y1: 52, x2: 130, y2: 52, stroke: 'var(--muted)', 'stroke-width': 1.2, 'marker-start': mk('mu'), 'marker-end': mk('mu') }));
+      Bs.append(svg('line', { x1: 100, y1: 52, x2: 130, y2: 52, stroke: 'var(--muted)', 'stroke-width': 1.2, 'marker-start': mk('mu', 'scanner'), 'marker-end': mk('mu', 'scanner') }));
       Bs.append(svg('circle', { cx: 12, cy: 172, r: 4.5, fill: 'none', stroke: 'var(--accent2)', 'stroke-width': 1.8 }));
       // wafer + stage + scan arrow
       Bs.append(svg('rect', { x: 236, y: 280, width: 68, height: 10, rx: 2, fill: 'var(--line2)' }));
       Bs.append(svg('ellipse', { cx: 270, cy: 274, rx: 40, ry: 6, fill: 'var(--si)', 'fill-opacity': .6, stroke: 'var(--si)' }));
-      Bs.append(svg('line', { x1: 196, y1: 274, x2: 226, y2: 274, stroke: 'var(--muted)', 'stroke-width': 1.2, 'marker-start': mk('mu'), 'marker-end': mk('mu') }));
+      Bs.append(svg('line', { x1: 196, y1: 274, x2: 226, y2: 274, stroke: 'var(--muted)', 'stroke-width': 1.2, 'marker-start': mk('mu', 'scanner'), 'marker-end': mk('mu', 'scanner') }));
       const waferFlash = svg('circle', { cx: 270, cy: 272, r: 4, fill: 'var(--accent2)', opacity: 0 });
       const packetHalo = svg('circle', { cx: 12, cy: 172, r: 12, fill: 'var(--accent2)', opacity: 0 });
       const packetB = svg('circle', { cx: 12, cy: 172, r: 5.5, fill: 'var(--accent2)', opacity: 0 });

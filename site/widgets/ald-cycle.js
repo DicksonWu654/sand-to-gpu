@@ -296,15 +296,17 @@
       io.observe(el);
 
       // ---------- step-through controls ----------
-      const dots = h('div', { class: 'w-step-nav', role: 'tablist' });
+      const dots = h('div', { class: 'w-step-nav' });
+      const phaseRail = h('div', { class: 'w-lab-progress', 'aria-label': 'ALD half-reactions and purges' });
+      const phaseButtons = [0, 1, 2, 3].map(i => h('button', { type: 'button', on: { click: () => goto(i) } }, h('span', null, String(i + 1).padStart(2, '0')), h('b')));
+      phaseRail.append(...phaseButtons);
       const counter = h('span', { class: 'count' });
       const prevBtn = h('button', { class: 'w-btn', title: 'Previous step' }, 'Prev');
       const nextBtn = h('button', { class: 'w-btn', title: 'Next step' }, 'Next');
       const playBtn = h('button', { class: 'w-btn' + (st.playing ? ' primary' : ''), title: 'Auto-advance through the four steps' }, st.playing ? 'Pause' : 'Play');
       const stepTitle = h('div', { class: 'w-step-title' });
       const stepDesc = h('div', { class: 'w-step-desc' });
-      const dotBtns = [0, 1, 2, 3].map(i => h('button', { class: 'w-step-dot', on: { click: () => goto(i) } }));
-      dots.append(...dotBtns, counter, prevBtn, nextBtn, playBtn);
+      dots.append(counter, prevBtn, nextBtn, playBtn);
       function goto(idx) {
         if (st.step === 3 && idx === 0) st.incs.push(gpcAt(st.dose));
         else if (st.step === 0 && idx === 3) st.incs.pop();
@@ -319,7 +321,7 @@
       const filmSel = h('select', null, h('option', { value: 'Al2O3' }, 'Al₂O₃ (TMA + H₂O)'), h('option', { value: 'HfO2' }, 'HfO₂ (TEMAH + H₂O)'));
       const targetIn = h('input', { type: 'number', min: 0.2, max: 50, step: 0.1, value: st.target, style: { width: '70px' } });
       const tLabels = () => [`${F().pre} pulse`, 'Purge 1', 'H₂O pulse', 'Purge 2'];
-      const tSliders = st.t.map((v, i) => h('input', { type: 'range', min: i % 2 ? 0.5 : 0.05, max: i % 2 ? 5 : 1, step: i % 2 ? 0.1 : 0.05, value: v }));
+      const tSliders = st.t.map((v, i) => h('input', { type: 'range', 'aria-label': 'Timing step ' + (i + 1), min: i % 2 ? 0.5 : 0.05, max: i % 2 ? 5 : 1, step: i % 2 ? 0.1 : 0.05, value: v }));
       const tOuts = st.t.map(() => h('output'));
       const tSpans = st.t.map(() => h('span'));
       const controls = h('div', { class: 'w-controls' },
@@ -337,7 +339,7 @@
       const legend = h('div', { class: 'w-legend' });
 
       // ---------- self-limiting dose chart ----------
-      const doseSlider = h('input', { type: 'range', min: 0, max: 2, step: 0.05, value: st.dose });
+      const doseSlider = h('input', { type: 'range', 'aria-label': 'Precursor dose', min: 0, max: 2, step: 0.05, value: st.dose });
       const doseOut = h('output');
       const chart = svg('svg', { class: 'w-svg', role: 'img', 'aria-label': 'Growth per cycle versus precursor dose' });
       function paintChart() {
@@ -368,7 +370,7 @@
 
       function renderAll() {
         const f = F(), S = steps(f), gpc = f.gpc, n = st.incs.length;
-        S.forEach((s, i) => { const b = dotBtns[i]; b.className = 'w-step-dot' + (i === st.step ? ' active' : i < st.step ? ' done' : ''); b.setAttribute('aria-label', `Step ${i + 1}: ${s.name}`); b.title = `Step ${i + 1}: ${s.name}`; });
+        phaseButtons.forEach((button, i) => { button.setAttribute('aria-label', `Step ${i + 1}: ${S[i].name}`); button.querySelector('b').textContent = S[i].short; button.setAttribute('aria-pressed', String(i === st.step)); });
         counter.textContent = `Step ${st.step + 1} / 4 · cycle ${n + 1}`;
         stepTitle.textContent = `${st.step + 1}. ${S[st.step].name}`;
         stepDesc.textContent = S[st.step].cap;
@@ -398,11 +400,15 @@
 
       el.classList.add(id);
       el.append(h('style', null, `.${id} .w-step-dot:hover{outline:2px solid var(--accent);outline-offset:2px}`),
-        h('div', { class: 'w-steps' }, dots, h('div', null, stepTitle, stepDesc), chamber, legend),
-        controls, timing, readout, formula,
+        h('div', { class: 'w-lab-kicker' }, 'A surface reaction, one half-cycle at a time'), phaseRail,
+        h('div', { class: 'w-studio' }, chamber), h('div', { class: 'w-steps' }, dots, h('div', null, stepTitle, stepDesc)),
+        h('div', { class: 'w-console' }, controls, readout),
+        h('details', { class: 'w-details' }, h('summary', null, 'Pulse timing, molecular key and target calculation'), timing, legend, formula),
         h('h5', { style: { margin: '16px 0 4px', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--muted)' } }, 'Self-limitation: growth per cycle vs. precursor dose'),
         doseCtl, chart,
-        h('div', { class: 'w-note' }, 'GPC ≈ 0.10 nm/cycle for Al₂O₃ (TMA + H₂O, 150–300 °C; Module 06 quotes ~0.1 nm, 1.0–1.2 Å) and ≈ 0.08 nm/cycle for HfO₂ (TEMAH + H₂O, 250–300 °C; the module\'s range is 0.05–0.1 nm, ~20–30 cycles for 1.5–2 nm). A cycle is only ~⅓ of a 0.3 nm monolayer because the bulky ligands sterically block neighbouring –OH sites. The default timings are the module\'s worked example (0.3 s pulse + 3 s purge + 0.2 s pulse + 4 s purge = 7.5 s/cycle), so the default 2 nm target reproduces its 20 cycles × 7.5 s = 150 s; the example takes 0.1 nm/cycle, the upper end for TEMAH near 300 °C, while at 0.08 nm the same film needs 25 cycles. Above the saturation dose the curve is flat: extra precursor bounces off the capped surface (drag Dose past 1× and watch the zoomed surface). Changing the film resets the demo counter.' + (reduced ? ' Reduced motion is on: each step shows a mid-step snapshot; Play advances the steps.' : '')));
+        h('div', { class: 'w-note' }, 'Schematic atoms and film layers. The dose curve illustrates saturation; growth per cycle depends on chemistry and process conditions. Pulse timings and calibrated growth values are explained in the model notes.'),
+        h('details', { class: 'w-details' }, h('summary', null, 'Growth calibration, timing example and model notes'),
+        h('div', { class: 'w-note' }, 'GPC ≈ 0.10 nm/cycle for Al₂O₃ (TMA + H₂O, 150–300 °C; Module 06 quotes ~0.1 nm, 1.0–1.2 Å) and ≈ 0.08 nm/cycle for HfO₂ (TEMAH + H₂O, 250–300 °C; the module\'s range is 0.05–0.1 nm, ~20–30 cycles for 1.5–2 nm). A cycle is only ~⅓ of a 0.3 nm monolayer because the bulky ligands sterically block neighbouring –OH sites. The default timings are the module\'s worked example (0.3 s pulse + 3 s purge + 0.2 s pulse + 4 s purge = 7.5 s/cycle), so the default 2 nm target reproduces its 20 cycles × 7.5 s = 150 s; the example takes 0.1 nm/cycle, the upper end for TEMAH near 300 °C, while at 0.08 nm the same film needs 25 cycles. Above the saturation dose the curve is flat: extra precursor bounces off the capped surface (drag Dose past 1× and watch the zoomed surface). Changing the film resets the demo counter.' + (reduced ? ' Reduced motion is on: each step shows a mid-step snapshot; Play advances the steps.' : ''))));
 
       // Keep the step caption box tall enough for the longest caption so the drawing never jumps between steps.
       function fitDesc() {

@@ -242,7 +242,8 @@
     const eyebrowRight = (isSurvey ? '' : 'Module ' + pad(n) + ' · ') + Math.max(1, Math.round(m.words / 230)) + ' min read';
     art.append(ctxBase.h('header', { class: 'mod-head' },
       ctxBase.h('div', { class: 'eyebrow' }, eyebrowLeft, ctxBase.h('span', { class: 'dot' }), ctxBase.h('span', { class: 'meta' }, eyebrowRight)),
-      ctxBase.h('div', { class: 'chapter-intro' }, ctxBase.h('div', null, ctxBase.h('h1', { class: 'title' }, m.title), ctxBase.h('p', { class: 'chapter-deck' }, Shell.description(n, isSurvey))), ctxBase.h('div', { class: 'chapter-object', html: Shell.icon(!isSurvey && n === 0 ? 'package' : Shell.stages[Shell.stageFor(n, isSurvey)].icon) })),
+      ctxBase.h('div', { class: 'chapter-intro' }, ctxBase.h('h1', { class: 'title' }, m.title), ctxBase.h('p', { class: 'chapter-deck' }, Shell.description(n, isSurvey))),
+      ctxBase.h('div', { html: Shell.plate(n, isSurvey) }),
       ctxBase.h('div', { class: 'chapter-stage', html: Shell.ribbon(n, isSurvey) })));
     const prose = ctxBase.h('div', { class: 'prose', html: m.html });
     decorateProse(prose);
@@ -295,10 +296,11 @@
     const rail = $('#rail'); rail.innerHTML = '';
     rail.append(ctxBase.h('div', { class: 'rail-top' }, ctxBase.h('h5', null, isSurvey ? 'In this chapter' : 'In this module'), ctxBase.h('span', null, m.toc.filter(t => t.depth === 2).length + ' sections')));
     const toc=ctxBase.h('nav', { class: 'toc', 'aria-label': 'On this page' });
-    let group = null, groupId = '', index=0;
+    let group = null, groupId = '';
     m.toc.forEach(t => {
-      if (t.depth === 2 || !group) { groupId=t.id; group=ctxBase.h('div', { class: 'toc-group', 'data-section': groupId }); toc.append(group); index++; }
-      group.append(ctxBase.h('a', { href: base + pad(n) + '/' + t.id, class: 'd' + t.depth, 'data-id': t.id, 'data-section': groupId }, t.depth===2 ? ctxBase.h('span', { class:'toc-number' }, pad(index)) : null, ctxBase.h('span',null,t.text)));
+      if (t.depth === 2 || !group) { groupId=t.id; group=ctxBase.h('div', { class: 'toc-group', 'data-section': groupId }); toc.append(group); }
+      const numbered = t.depth === 2 ? t.text.match(/^(\d+(?:\.\d+)*)(?:[.)])\s+/) : null;
+      group.append(ctxBase.h('a', { href: base + pad(n) + '/' + t.id, class: 'd' + t.depth, 'data-id': t.id, 'data-section': groupId }, t.depth===2 ? ctxBase.h('span', { class:'toc-number', 'aria-hidden': 'true' }, numbered ? numbered[1].padStart(2, '0') : '·') : null, ctxBase.h('span',null,numbered ? t.text.slice(numbered[0].length) : t.text)));
     }); rail.append(toc);
     rail.append(ctxBase.h('div', { class: 'rail-bottom' }, ctxBase.h('span', null, 'Follow your curiosity.'), ctxBase.h('a', { href: '#/home' }, 'Return to the atlas ↗')));
   }

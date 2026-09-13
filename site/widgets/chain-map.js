@@ -218,7 +218,8 @@
         extra.replaceChildren(field('Suppliers', n.who), field('Estimated cost / value', n.cost), field('Elapsed time', n.time), field('Where', n.where));
       }
       select.addEventListener('change', () => choose(select.value));
-      el.append(overview, nav, mechanism, explanation, h('div', { class: 'w-note' }, 'Schematics show the sequence and convergence of processes, not physical scale. Supplier shares, timelines and prices are course estimates; see the module’s sources and review notes.'), reference, value);
+      el.classList.add('chain-map-lab');
+      el.append(h('style', null, '@container(max-width:480px){.chain-map-lab .w-stage-strip .w-btn{grid-template-columns:48px minmax(0,1fr);gap:3px 12px!important;padding:10px 12px!important;border-top-width:1px!important;border-left:3px solid var(--line2)}.chain-map-lab .w-stage-strip .w-btn>svg{grid-column:1;grid-row:1/3;width:44px;height:44px}.chain-map-lab .w-stage-strip .w-btn>span:first-child{grid-column:2}.chain-map-lab .w-stage-strip .w-btn>strong{grid-column:2;font-size:13px;line-height:1.4}.chain-map-lab .w-stage-strip .w-btn>span:last-child{display:none}.chain-map-lab .w-stage-strip .w-btn.primary{border-left-color:var(--accent)}}'), overview, nav, mechanism, explanation, h('div', { class: 'w-note' }, 'Schematics show the sequence and convergence of processes, not physical scale. Supplier shares, timelines and prices are course estimates; see the module’s sources and review notes.'), reference, value);
       render();
     }
   });

@@ -1,0 +1,118 @@
+{
+  "checkedAt": "2026-09-13T23:53:11.811Z",
+  "cases": [
+    {
+      "width": 1280,
+      "name": "charge",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 1280,
+      "name": "furnace",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 1280,
+      "name": "siemens",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 1280,
+      "name": "fbr",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 1280,
+      "name": "cz",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 1280,
+      "name": "layers",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 1280,
+      "name": "compare",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 1280,
+      "name": "branch",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 375,
+      "name": "charge",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 375,
+      "name": "furnace",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 375,
+      "name": "siemens",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 375,
+      "name": "fbr",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 375,
+      "name": "cz",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 375,
+      "name": "layers",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 375,
+      "name": "compare",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    },
+    {
+      "width": 375,
+      "name": "branch",
+      "theme": "dark",
+      "overflow": false,
+      "svgLabels": true
+    }
+  ],
+  "errors": []
+}

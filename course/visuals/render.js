@@ -163,6 +163,7 @@ function validate(figs, lesson) {
   if(ids.has(f.section)) throw Error('Duplicate figure '+f.section);
   ids.add(f.section);
   if(!lesson.sections.some(s=>s.id===f.section)) throw Error('Unknown section '+f.section);
+  if(f.scene&&!require('./scenes').names.has(f.scene)) throw Error('Unknown scene '+f.scene);
   if(!families.has(f.family)||!f.title||!f.caption||!Array.isArray(f.nodes)||f.nodes.length<2||f.nodes.length>6) throw Error('Invalid figure '+f.section);
   for(const n of f.nodes) { if(!n.label||!n.detail) throw Error('Unexplained figure node '+f.section); glyph(n.glyph,n.variant); }
   for(const e of f.edges||[]) if(!f.nodes[e.from]||!f.nodes[e.to]) throw Error('Invalid figure edge '+f.section);
@@ -170,44 +171,73 @@ function validate(figs, lesson) {
  }
 }
 function render(f,key) {
- const count=f.nodes.length, id=`fig-${key}-${f.section}`, marker=`${id}-arrow`;
+ const count=f.nodes.length,id=`fig-${key}-${f.section}`,marker=`${id}-arrow`;
  const arrow=(x1,y1,x2,y2)=>`<path d="M${x1} ${y1}L${x2} ${y2}" class="sf-link" marker-end="url(#${marker})"/>`;
- const draw=(n,i,x,y,scale=1.35)=>`<g transform="translate(${x},${y}) scale(${scale})" class="sf-object sf-object-${i%4}">${glyph(n.glyph,n.variant)}</g><text x="${x}" y="${y+68}" class="sf-number">${i+1}</text>`;
- let art='',height=220;
- if(f.family==='layers') {
-  height=count*83+48;
-  const wiring=f.nodes.filter(n=>n.glyph==='wires').length>=3;
-  f.nodes.forEach((n,i)=>{const y=24+i*83;art+=`<g class="sf-object sf-object-${i%4}"><path d="M80 ${y+12}L340 ${y} 620 ${y+12} 360 ${y+32}Z"/><path d="M80 ${y+12}V${y+47}L360 ${y+67} 620 ${y+47}V${y+12}L360 ${y+32}Z"/><path d="M130 ${y+32}L360 ${y+49} 570 ${y+32}" class="sf-fine"/></g><g transform="translate(348,${y+28}) scale(.47)" class="sf-object">${wiring?'':glyph(n.glyph,n.variant)}</g>${wiring?`<path d="M135 ${y+18}L330 ${y+31} 450 ${y+13}M215 ${y+11}L460 ${y+28} 550 ${y+17}" class="sf-hot"/>${i<count-1?`<path d="M330 ${y+31}V${y+114}M460 ${y+28}V${y+111}" class="sf-via"/>`:''}`:''}<text x="665" y="${y+45}" class="sf-number">${i+1}</text>`;});
- } else if(f.family==='scale') {
-  height=360;
-  f.nodes.forEach((n,i)=>{let x=36+i*58,y=28+i*39,w=628-i*112,h=292-i*48;art+=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="8" class="sf-boundary sf-object-${i%4}"/><text x="${x+20}" y="${y+32}" class="sf-number">${count-i}</text>`;});
-  art+=`<g transform="translate(355,220) scale(.7)" class="sf-object">${glyph(f.nodes[0].glyph,f.nodes[0].variant)}</g>`;
- } else if(f.family==='branch') {
-  height=Math.max(260,(count-1)*100);let cy=height/2;
-  f.nodes.slice(0,-1).forEach((n,i)=>{let y=55+i*(height-110)/Math.max(1,count-2);art+=arrow(210,y,495,cy)+draw(n,i,135,y,.65);});
-  art+=draw(f.nodes[count-1],count-1,565,cy,1.1);
- } else if(f.family==='network') {
-  height=370;let pts=f.nodes.map((n,i)=>({x:350+235*Math.cos(-Math.PI/2+i*2*Math.PI/count),y:165+115*Math.sin(-Math.PI/2+i*2*Math.PI/count)}));
-  (f.edges||[]).forEach(e=>{let a=pts[e.from],b=pts[e.to],d=Math.hypot(b.x-a.x,b.y-a.y),dx=(b.x-a.x)/d,dy=(b.y-a.y)/d;art+=arrow(a.x+dx*48,a.y+dy*48,b.x-dx*52,b.y-dy*52);});
-  pts.forEach((p,i)=>art+=draw(f.nodes[i],i,p.x,p.y,.7));
- } else {
-  const gap=600/count, pts=f.nodes.map((n,i)=>({x:50+gap*(i+.5),y:90}));
-  if(f.family==='apparatus') {height=260;art+='<path d="M24 182H676M48 184V205M652 184V205" class="sf-platform"/>';}
-  if(f.family!=='compare') pts.slice(0,-1).forEach((p,i)=>art+=arrow(p.x+(count>4?44:59),p.y,pts[i+1].x-(count>4?44:59),p.y));
-  if(f.family==='compare') pts.slice(1).forEach(p=>art+=`<path d="M${p.x-gap/2} 20V185" class="sf-divider"/>`);
-  if(f.family==='cycle') {height=270;art+=`<path d="M${pts[count-1].x} 173V225H${pts[0].x}V173" class="sf-link" marker-end="url(#${marker})"/>`;}
-  pts.forEach((p,i)=>art+=draw(f.nodes[i],i,p.x,p.y, count>4?1:1.35));
+ const defs=`<defs><marker id="${marker}" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 6 3 0 6" class="sf-arrowhead"/></marker></defs>`;
+ const svg=(art,width,height)=>`<svg viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${id}-svg-title ${id}-desc"><title id="${id}-svg-title">${esc(f.title)}</title><desc id="${id}-desc">${esc(f.caption)} ${f.nodes.map(n=>`${esc(n.label)}: ${esc(n.detail)}`).join(' ')}</desc>${defs}${art}</svg>`;
+ const icon=(n,i)=>`<svg viewBox="-54 -49 108 98" role="img" aria-label="${esc(n.label+': '+n.detail)}"><g class="sf-object sf-object-${i%4}">${glyph(n.glyph,n.variant)}</g></svg>`;
+ const item=(n,i)=>`<li class="sf-unit">${icon(n,i)}<div class="sf-unit-copy"><strong>${esc(n.label)}</strong><span>${esc(n.detail)}</span></div></li>`;
+ const legend=`<ol class="sf-legend">${f.nodes.map(n=>`<li><strong>${esc(n.label)}</strong><span>${esc(n.detail)}</span></li>`).join('')}</ol>`;
+ const text=(x,y,s)=>{let lines=[''];for(const w of s.split(' ')){if((lines.at(-1)+' '+w).trim().length>22)lines.push(w);else lines[lines.length-1]+=(lines.at(-1)?' ':'')+w;}return `<text x="${x}" y="${y}" class="sf-label">${lines.map((l,i)=>`<tspan x="${x}" dy="${i?24:0}">${esc(l)}</tspan>`).join('')}</text>`;};
+ let drawing='',detail='';
+ if(f.scene){const result=require('./scenes').scene(f.scene,marker);drawing=svg(result.art,700,result.height);detail=legend;}
+ else if(['compare','apparatus','flow','cycle'].includes(f.family)) {
+  drawing=`<ol class="sf-legend sf-components sf-count-${count} ${['flow','cycle'].includes(f.family)?'sf-process':''}">${f.nodes.map(item).join('')}</ol>${f.family==='cycle'?'<div class="sf-cycle-return"><span>↶</span> Repeat / return path</div>':''}`;
+ } else if(f.family==='layers') {
+  const row=90,height=count*row+16,wiring=f.nodes.filter(n=>n.glyph==='wires').length>=3;
+  let art='';
+  f.nodes.forEach((n,i)=>{
+   const y=8+i*row;
+   const color=`sf-object-${i%4}`;
+   // One contiguous, vertically ordered section. Material motifs occupy the layer instead of a stamped icon.
+   art+=`<g class="sf-object ${color}"><path d="M12 ${y}H320V${y+row}H12Z"/></g>`;
+   if(['microbump','bga','bump','flip-chip','hybrid-bond','hybrid-pads'].includes(n.variant)){
+    art+=`<path d="M25 ${y+19}H307M25 ${y+70}H307" class="sf-trace"/>`;
+    for(let x=50;x<303;x+=50)art+=`<path d="M${x} ${y+25}V${y+64}" class="sf-via"/>`;
+   }else if(n.glyph==='mask'){
+    for(let x=25;x<300;x+=75)art+=`<path d="M${x} ${y+20}h47v50h-47Z" class="sf-solid"/>`;
+   }else if(n.glyph==='clean'){
+    for(let x=60;x<300;x+=90)art+=`<path d="M${x} ${y+16}V${y+67}m-8-9 8 9 8-9" class="sf-hot"/>`;
+   }else if(n.glyph==='furnace'||n.glyph==='test'){
+    [75,166,257].forEach(x=>{art+=`<g transform="translate(${x},${y+44}) scale(.78)" class="sf-object ${color}">${glyph(n.glyph,n.variant)}</g>`;});
+   }else if(n.glyph==='gas'){
+    art+=`<path d="M25 ${y+22}H125V${y+63}H303M25 ${y+65}H71V${y+41}H231V${y+17}H303" class="sf-trace"/>`;
+   }else if(n.glyph==='wires'){
+    art+=`<path d="M30 ${y+23}H113V${y+60}H285M48 ${y+64}H76V${y+18}H302" class="sf-trace"/>`;
+    if(wiring&&i<count-1)art+=`<path d="M113 ${y+60}V${y+row+23}M285 ${y+60}V${y+row+60}" class="sf-via"/>`;
+   }else if(n.glyph==='crystal'||n.glyph==='wafer'||n.variant==='substrate'){
+    for(let a=35;a<305;a+=30)for(let b=y+18;b<y+row-8;b+=24)art+=`<circle cx="${a}" cy="${b}" r="2" class="sf-solid sf-grain"/>`;
+   }else if(n.glyph==='transistor'){
+    art+=`<path d="M22 ${y+61}H310" class="sf-fine"/>`;
+    [65,166,268].forEach(x=>{art+=`<g transform="translate(${x},${y+41}) scale(.75)" class="sf-object ${color}">${glyph(n.glyph,n.variant)}</g>`;});
+   }else if(n.glyph==='memory'){
+    for(let a=0;a<3;a++)art+=`<path d="M30 ${y+17+a*23}H302" class="sf-trace"/>`;
+    art+=`<path d="M74 ${y+8}V${y+82}M164 ${y+8}V${y+82}M254 ${y+8}V${y+82}" class="sf-via"/>`;
+   }else if(n.glyph==='film'||n.glyph==='mask'||n.glyph==='clean'){
+    art+=`<path d="M23 ${y+29}H308M23 ${y+58}H308" class="sf-material-line"/>`;
+   }else if(n.glyph==='package'||n.glyph==='chip'){
+    art+=`<path d="M49 ${y+17}H283V${y+56}H49Z" class="sf-object sf-accent"/>`;
+    for(let a=64;a<280;a+=35)art+=`<path d="M${a} ${y+56}V${y+76}" class="sf-via"/>`;
+   }else art+=`<path d="M25 ${y+24}H305M25 ${y+48}H305M25 ${y+72}H305" class="sf-material-line"/>`;
+  });
+  drawing=`<div class="sf-stack">${svg(art,332,height).replace('<svg viewBox','<svg preserveAspectRatio="none" viewBox')}<ol class="sf-legend sf-stack-labels">${f.nodes.map(n=>`<li><strong>${esc(n.label)}</strong><span>${esc(n.detail)}</span></li>`).join('')}</ol></div>`;
+ }else if(f.family==='branch'){
+  drawing=`<div class="sf-convergence"><ol class="sf-legend sf-branch-inputs">${f.nodes.slice(0,-1).map(item).join('')}</ol><div class="sf-merge" aria-hidden="true"><span>→</span></div><ol class="sf-legend sf-branch-output">${item(f.nodes[count-1],count-1)}</ol></div>`;
+ }else if(f.family==='scale'){
+  drawing=`<ol class="sf-legend sf-scale-levels">${f.nodes.map((n,i)=>({n,i})).reverse().map(({n,i},j)=>`<li style="--level:${j}">${icon(n,i)}<div><strong>${esc(n.label)}</strong><span>${esc(n.detail)}</span></div></li>`).join('')}</ol>`;
+ }else if(f.family==='network'){
+  const pts=f.nodes.map((n,i)=>({x:380+230*Math.cos(-Math.PI/2+i*2*Math.PI/count),y:190+130*Math.sin(-Math.PI/2+i*2*Math.PI/count)}));let art='';
+  f.edges.forEach(e=>{const a=pts[e.from],b=pts[e.to],d=Math.hypot(b.x-a.x,b.y-a.y),dx=(b.x-a.x)/d,dy=(b.y-a.y)/d;art+=arrow(a.x+dx*53,a.y+dy*53,b.x-dx*58,b.y-dy*58);});
+  pts.forEach((p,i)=>art+=`<g transform="translate(${p.x},${p.y})" class="sf-object sf-object-${i%4}">${glyph(f.nodes[i].glyph,f.nodes[i].variant)}</g>${text(p.x,p.y+62,f.nodes[i].label)}`);
+  drawing=svg(art,760,430);detail=legend;
  }
  const terminalVariants=f.nodes.map(n=>n.variant);
- if(['source','gate','channel','drain'].every(v=>terminalVariants.includes(v))) {
-  height=350;
-  const number=v=>terminalVariants.indexOf(v)+1;
-  art=`<g class="sf-object"><path d="M70 176H630V296H70Z"/><path d="M105 159H241V225H105ZM459 159H595V225H459Z" class="sf-accent"/><path d="M273 68H427V139H273Z" class="sf-accent"/><path d="M257 148H443V159H257Z"/><path d="M241 179H459V193H241Z" class="sf-accent"/><path d="M172 103V159M527 103V159M350 30V68"/><path d="M173 206H526M509 194 526 206 509 218M295 160V175M350 160V175M405 160V175" class="sf-hot"/></g><text x="172" y="142" class="sf-number">${number('source')}</text><text x="350" y="114" class="sf-number">${number('gate')}</text><text x="350" y="249" class="sf-number">${number('channel')}</text><text x="527" y="142" class="sf-number">${number('drain')}</text>`;
+ if(!f.scene&&['source','gate','channel','drain'].every(v=>terminalVariants.includes(v))) {
+  drawing=svg(`<g class="sf-object"><path d="M70 176H630V296H70Z"/><path d="M105 159H241V225H105ZM459 159H595V225H459Z" class="sf-accent"/><path d="M273 68H427V139H273Z" class="sf-accent"/><path d="M257 148H443V159H257Z"/><path d="M241 179H459V193H241Z" class="sf-accent"/><path d="M172 103V159M527 103V159M350 30V68"/><path d="M173 206H526M509 194 526 206 509 218M295 160V175M350 160V175M405 160V175" class="sf-hot"/></g>${text(172,91,'Source')}${text(350,22,'Gate')}${text(350,264,'Channel')}${text(527,91,'Drain')}`,700,320);detail=legend;
  }
- const individual=['compare','apparatus'].includes(f.family);
- const drawing=individual?`<div class="sf-comparison ${f.family==='apparatus'?'sf-sequence':''}">${f.nodes.map((n,i)=>`<div class="sf-unit"><svg viewBox="-58 -52 116 108" role="img" aria-label="${esc(n.label+': '+n.detail)}"><g class="sf-object sf-object-${i%4}">${glyph(n.glyph,n.variant)}</g></svg><span class="sf-direct-label">${i+1}. ${esc(n.label)}</span></div>`).join('')}</div>`:`<svg viewBox="0 0 700 ${height}" role="img" aria-labelledby="${id}-svg-title ${id}-desc"><title id="${id}-svg-title">${esc(f.title)}</title><desc id="${id}-desc">${esc(f.caption)} ${f.nodes.map((n,i)=>`${i+1}. ${esc(n.label)}: ${esc(n.detail)}`).join(' ')}</desc><defs><marker id="${marker}" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 6 3 0 6" class="sf-arrowhead"/></marker></defs>${art}</svg>`;
  const relation=(f.edges||[]).filter(e=>e.label).map(e=>`<li><span>${esc(f.nodes[e.from].label)} → ${esc(f.nodes[e.to].label)}</span> ${esc(e.label)}</li>`).join('');
- return `<figure class="section-figure sf-${f.family}" data-section-figure="${esc(f.section)}" aria-labelledby="${id}-title"><div class="sf-eyebrow">VISUAL EXPLANATION · ${esc(f.family==='layers'?'CROSS-SECTION':f.family.toUpperCase())}</div><h3 id="${id}-title" class="sf-title">${esc(f.title)}</h3><div class="sf-drawing">${drawing}</div><ol class="sf-legend">${f.nodes.map(n=>`<li><strong>${esc(n.label)}</strong><span>${esc(n.detail)}</span></li>`).join('')}</ol>${relation?`<ul class="sf-relations">${relation}</ul>`:''}<figcaption>${esc(f.caption)}${f.note?` <span class="sf-note">${esc(f.note)}</span>`:''}</figcaption></figure>`;
+ const familyLabel=f.scene?'APPARATUS STUDY':({layers:'CROSS-SECTION',branch:'CONVERGENCE',compare:'SIDE BY SIDE',apparatus:'COMPONENT STUDY',scale:'SYSTEM LEVELS',network:'CONNECTIONS',flow:'PROCESS',cycle:'CYCLE'}[f.family]);
+ return `<figure class="section-figure sf-${f.family}${f.scene?' sf-scene sf-scene-'+f.scene:''}" data-section-figure="${esc(f.section)}" aria-labelledby="${id}-title"><div class="sf-eyebrow">VISUAL EXPLANATION <span>·</span> ${familyLabel}</div><h3 id="${id}-title" class="sf-title">${esc(f.title)}</h3><div class="sf-drawing">${drawing}</div>${detail}${relation?`<ul class="sf-relations">${relation}</ul>`:''}<figcaption>${esc(f.caption)}${f.note?` <span class="sf-note">${esc(f.note)}</span>`:''}</figcaption></figure>`;
 }
 function insertAfterOpening(html, headingEnd, sectionEnd, content) {
  const body=html.slice(headingEnd,sectionEnd);

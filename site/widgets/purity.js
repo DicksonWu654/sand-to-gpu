@@ -79,7 +79,11 @@
       // ---- dot grid (canvas) ----
       const canvas = h('canvas', { style: { display: 'block', width: '100%', maxWidth: '320px', borderRadius: '4px' }, 'aria-label': 'Grid of 10 000 dots representing silicon atoms' });
       const gridNote = h('div', { class: 'w-note' });
-      const gridWrap = h('div', null, canvas, gridNote);
+      const gridWrap = h('div', { class: 'purity-specimen' }, canvas, gridNote);
+      const specimenCount = h('b', { class: 'purity-denominator' });
+      const specimenScale = h('span', { class: 'w-lab-kicker' });
+      const insight = h('div', { class: 'w-insight' });
+      const presets = [2, 6, 9, 11].map(value => h('button', { type: 'button', class: 'w-btn', 'data-purity': value, on: { click: () => { slider.value = value; update(); } } }, value + 'N'));
       const gctx = canvas.getContext('2d');
       const fontFam = getComputedStyle(el).fontFamily || 'sans-serif';
       let cssSize = 300;
@@ -279,6 +283,10 @@
         N = +slider.value;
         sliderOut.textContent = N + 'N';
         stPur.textContent = purityStr(N);
+        specimenCount.textContent = '1 in ' + pow10(N);
+        specimenScale.textContent = N <= 4 ? 'Atom view · 10 000 dots' : N <= 8 ? 'Grid view · 10 000 atoms per tile' : 'Wall view · 10⁸ atoms per tile';
+        insight.textContent = N >= 9 ? 'Electronic purity still leaves ' + sci(SI_ATOMS * Math.pow(10, -N)) + ' foreign atoms in every cubic centimetre. What matters is which atoms remain.' : N >= 5 ? 'The foreign atoms have not vanished. The view expands to show enough silicon to find one.' : 'Each highlighted dot is a foreign atom. Add one nine and the impurity fraction falls tenfold.';
+        presets.forEach(button => button.setAttribute('aria-pressed', String(+button.dataset.purity === N)));
         stFrac.innerHTML = fractionStr(N) + ' <span style="color:var(--muted);font-weight:400">(10' + sup(-N) + ')</span>';
         const atoms = SI_ATOMS * Math.pow(10, -N);
         stAtoms.textContent = sci(atoms);
@@ -290,12 +298,18 @@
 
       // assemble
       const h5 = txt => h('h5', { style: { margin: '18px 0 6px', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--muted)' } }, txt);
-      const grid2 = h('div', { class: 'w-grid2' }, gridWrap,
-        h('div', null, readout, formula, h('div', { class: 'w-note' }, `Each dot in the grid is one silicon atom, ${num(CELLS)} per grid; once no grid holds a foreign atom the picture zooms out to grids of grids. The readouts convert the same fraction to the real yardstick, atoms per cm³ — crystalline silicon has 5.0 × 10²² of them.`)));
-      el.append(ctl, grid2,
-        h5('Where the impurities sit against intended doping'), scaleWrap, scaleNote,
-        h5('The three grades and what they cost — bar = purity range in nines'), grades,
-        h('div', { class: 'w-note' }, 'Prices from Module 01: chemical-grade MG-Si ~$1,500–2,500/tonne; solar polysilicon ~$5–8/kg in China (2025–26) or ~$19–22/kg for documented non-Xinjiang material; electronic grade ~$20–40/kg on multi-year contracts. At 0.23 kg per 300 mm wafer, the polysilicon in a $150 wafer is worth ~$5–10.'));
+      const figure = h('div', { class: 'w-studio' },
+        h('div', { class: 'w-lab-kicker' }, 'The impurity budget'), specimenCount,
+        h('div', { class: 'w-note' }, 'foreign atoms at the selected purity'), gridWrap, specimenScale);
+      const reference = h('details', { class: 'w-details' }, h('summary', null, 'Material grades, prices and concentration references'),
+        h5('The three grades — bar = purity range in nines'), grades,
+        h('div', { class: 'w-note' }, 'Prices from Module 01: chemical-grade MG-Si ~$1,500–2,500/tonne; solar polysilicon ~$5–8/kg in China (2025–26) or ~$19–22/kg for documented non-Xinjiang material; electronic grade ~$20–40/kg on multi-year contracts. At 0.23 kg per 300 mm wafer, the polysilicon in a $150 wafer is worth ~$5–10.'), scaleNote);
+      el.classList.add('purity-lab');
+      el.append(h('style', null, '.purity-lab .purity-denominator{display:block;font:600 clamp(30px,5vw,46px)/1.1 var(--sans);letter-spacing:-.05em;color:var(--ink);margin:8px 0}.purity-lab .purity-specimen canvas{margin:22px auto 12px;border:1px solid var(--line)}.purity-lab .w-studio{gap:6px}.purity-lab .w-studio>.w-note{margin:4px 0}.purity-lab .w-console .w-readout{display:grid;gap:20px 12px}.purity-lab .w-console .w-stat{min-width:0}.purity-lab .w-console .w-ctl{grid-template-columns:1fr auto}.purity-lab .w-console .w-ctl>span{grid-column:1/-1}.purity-lab .w-console .w-step-nav{margin:14px 0}@container(min-width:600px){.purity-lab .w-workbench{grid-template-columns:minmax(0,1fr) minmax(260px,.9fr)}}.purity-lab .w-console .w-readout{grid-template-columns:repeat(2,minmax(0,1fr))}.purity-lab .w-stat b{overflow-wrap:anywhere}'),
+        h('div', { class: 'w-workbench' }, figure, h('div', { class: 'w-console' }, h('div', { class: 'w-lab-kicker' }, 'Add another nine'), ctl,
+          h('div', { class: 'w-step-nav', 'aria-label': 'Common purity levels' }, presets), readout, formula)), insight,
+        h('section', { class: 'w-lab-section' }, h5('Unwanted impurities vs. intentional doping'), scaleWrap,
+          h('div', { class: 'w-note' }, 'The same fraction, expressed as atoms per cm³. Intentional dopants set electrical behaviour; unwanted impurities need their own much tighter limits. The scale is logarithmic.')), reference);
 
       // Resize is deferred to the next frame: reacting synchronously inside the
       // observer callback resizes the very elements being observed (canvas height

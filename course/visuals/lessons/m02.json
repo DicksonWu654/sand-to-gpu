@@ -90,7 +90,8 @@
     "source": {
       "file": "course/modules/02-crystal-growth.md",
       "heading": "Anatomy of a 300 mm CZ Puller"
-    }
+    },
+    "scene": "cz-puller"
   },
   {
     "section": "the-cz-recipe-step-by-step",

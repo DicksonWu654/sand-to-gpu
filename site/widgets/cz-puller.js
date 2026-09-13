@@ -67,7 +67,7 @@
         h('label', { class: 'w-ctl' }, h('span', null, 'Animation speed'), speedSlider, speedOut),
         h('label', { class: 'w-ctl' }, h('span', null, 'Pull rate (body)'), vSlider, vOut),
         h('label', { class: 'w-ctl' }, h('span', null, 'Crucible rotation'), rpmSlider, rpmOut));
-      const stage = h('div');
+      const stage = h('div', { class: 'w-studio' });
 
       // ---------- readouts / phase card / formula ----------
       const B = () => h('b');
@@ -81,16 +81,25 @@
         h('div', { class: 'w-stat' }, stNeck, h('span', null, 'stress on 3 mm neck (unsupported)')),
         h('div', { class: 'w-stat' }, stOx, h('span', null, 'interstitial oxygen (indicative, from crucible rpm)')),
         h('div', { class: 'w-stat' }, stVG, h('span', null, 'v/G, cm²/(min·K), with G ≈ 30 K/cm')));
-      const prevBtn = h('button', { class: 'w-btn', type: 'button' }, '‹ Prev');
-      const nextBtn = h('button', { class: 'w-btn', type: 'button' }, 'Next ›');
-      const dots = NAMES.map((n, i) => h('button', { class: 'w-step-dot', type: 'button', title: 'Phase ' + (i + 1) + ': ' + n, 'aria-label': 'Jump to phase ' + (i + 1) + ': ' + n }));
+      const prevBtn = h('button', { class: 'w-btn', type: 'button', 'aria-label': 'Previous phase' }, '‹ Prev');
+      const nextBtn = h('button', { class: 'w-btn', type: 'button', 'aria-label': 'Next phase' }, 'Next ›');
       const countSpan = h('span', { class: 'count' });
       const phaseName = h('div', { class: 'w-step-title' }), phaseWhy = h('div', { class: 'w-step-desc' });
-      const phaseCard = h('div', { class: 'w-steps' }, h('div', { class: 'w-step-nav' }, prevBtn, dots, nextBtn, countSpan), phaseName, phaseWhy);
+      const phaseCard = h('div', { class: 'w-steps' }, h('div', { class: 'w-step-nav' }, prevBtn, nextBtn, countSpan), phaseName, phaseWhy);
       const formula = h('div', { class: 'w-formula' });
       const note = h('div', { class: 'w-note' },
         'The main view is drawn to scale (roughly 5–6 mm per pixel on a desktop screen; the exact figure is printed under the time bar) except that the body is shortened at the break mark so the full 2.4 m crystal fits, the neck is drawn 4 px wide instead of under 1 px so it is visible (the inset has the true proportions), and the animation stretches meltdown, neck, crown and tail so they can be watched — the time bar is to scale. Crucible rotation carries hot, oxygen-rich melt from the dissolving quartz wall toward the centre, so more rpm means more oxygen (the readout is indicative, not a model). 300 mm pullers usually add a mechanical crystal support after the crown so the neck does not carry the full load.');
-      el.append(ctl, stage, readout, phaseCard, formula, note);
+      let detailView = false;
+      const viewButtons = [h('button', { type: 'button', class: 'w-btn', 'data-cz-view': 'apparatus', on: { click: () => { detailView = false; render(); } } }, 'Puller apparatus'), h('button', { type: 'button', class: 'w-btn', 'data-cz-view': 'neck', on: { click: () => { detailView = true; render(); } } }, 'Inspect the seed neck')];
+      const viewNav = h('div', { class: 'w-step-nav' }, viewButtons);
+      const phaseRail = h('div', { class: 'w-lab-progress', 'aria-label': 'Crystal growth phases' });
+      const phaseButtons = NAMES.map((name, i) => h('button', { type: 'button', 'data-phase': i, on: { click: () => jump(i) } }, h('span', null, String(i + 1).padStart(2, '0')), h('b', null, name)));
+      phaseRail.append(...phaseButtons);
+      const secondary = h('div', { class: 'w-readout' }, ...Array.from(readout.children).slice(4));
+      const reference = h('details', { class: 'w-details' }, h('summary', null, 'Mass balance, neck stress and model assumptions'), secondary, formula, note);
+      el.append(h('div', { class: 'w-lab-kicker' }, 'Grow one continuous crystal'), phaseRail, viewNav, stage, phaseCard,
+        h('div', { class: 'w-console' }, h('div', { class: 'w-lab-kicker' }, 'Control the growth run'), ctl, readout),
+        h('div', { class: 'w-note' }, 'Body length is compressed at the break mark. The inset magnifies the Dash neck; oxygen and defect readouts are illustrative. Open the model notes for assumptions.'), reference);
 
       // ---------- SVG scene ----------
       let scene = null;
@@ -232,7 +241,7 @@
         // ---- inset: seed end magnified (local coords 248 × 340, scaled by k) ----
         const IN = svg('g', { transform: `translate(${insetX},${insetY}) scale(${k})` });
         const IT = (x, y, s, o = {}) => svg('text', { x, y, 'font-family': o.mono ? MONO : SANS, 'font-size': ifs, fill: o.fill || 'var(--ink)', 'text-anchor': o.anchor || 'start' }, s);
-        IN.append(svg('rect', { x: .5, y: .5, width: insW - 1, height: insH - 1, rx: 6, fill: 'var(--ground)', stroke: 'var(--line)' }), IT(8, 17, 'seed end, magnified ~12×'));
+        IN.append(svg('rect', { x: .5, y: .5, width: insW - 1, height: insH - 1, rx: 6, fill: 'var(--ground)', stroke: 'var(--line)' }), IT(8, 17, 'seed end, magnified'));
         const ic = 124;
         IN.append(svg('line', { x1: ic, y1: 20, x2: ic, y2: 30, stroke: 'var(--muted)', 'stroke-width': 2 }),
           svg('rect', { x: ic - 20, y: 30, width: 40, height: 10, fill: 'var(--ink)', 'fill-opacity': .75 }),
@@ -258,10 +267,10 @@
           svg('path', { d: cp + ' Z', fill: 'var(--si)', stroke: 'var(--ink)', 'stroke-opacity': .5 }),
           svg('path', { d: `M${ic - 70},281 Q${ic - 64},280 ${ic - 62},276 M${ic + 70},281 Q${ic + 64},280 ${ic + 62},276`, fill: 'none', stroke: 'var(--ink)', 'stroke-width': 2, 'stroke-linecap': 'round' }),
           svg('rect', { x: 1, y: 320, width: insW - 2, height: 19, fill: 'var(--ground)' }));
-        [[98, 38, 'seed holder', { fill: 'var(--muted)' }], [98, 64, 'seed', {}], [98, 79, '10–20 mm', { mono: true, fill: 'var(--muted)' }],
-         [98, 128, 'dislocations', {}], [98, 143, 'glide out on', { fill: 'var(--muted)' }], [98, 158, '{111} planes,', { fill: 'var(--muted)' }], [98, 173, '~35° to axis', { fill: 'var(--muted)' }]]
+        [[98, 38, 'seed holder', { fill: 'var(--muted)' }], [98, 64, 'seed', {}], [98, 84, '10–20 mm', { mono: true, fill: 'var(--muted)' }],
+         [98, 124, 'dislocations', {}], [98, 142, 'glide out on', { fill: 'var(--muted)' }], [98, 160, '{111} planes,', { fill: 'var(--muted)' }], [98, 178, '~35° to axis', { fill: 'var(--muted)' }]]
           .forEach(([x, y, s, o]) => IN.append(IT(x, y, s, Object.assign({ anchor: 'end' }, o))));
-        [[136, 130, 'Dash neck', {}], [136, 145, '3 mm × 150 mm', { mono: true, fill: 'var(--muted)' }], [136, 160, 'pulled at', { fill: 'var(--muted)' }], [136, 175, '3–6 mm/min', { mono: true, fill: 'var(--muted)' }], [8, 258, 'meniscus', {}]]
+        [[136, 126, 'Dash neck', {}], [136, 145, '3 mm × 150 mm', { mono: true, fill: 'var(--muted)' }], [136, 164, 'pulled at', { fill: 'var(--muted)' }], [136, 183, '3–6 mm/min', { mono: true, fill: 'var(--muted)' }], [8, 258, 'meniscus', {}]]
           .forEach(([x, y, s, o]) => IN.append(IT(x, y, s, o)));
         IN.append(svg('line', { x1: 30, y1: 262, x2: ic - 66, y2: 277, stroke: 'var(--muted)', 'stroke-width': 1 }));   // leader from the label to the meniscus curve
         IN.append(IT(ic, 333, 'crown flares to 306 mm over ~80 mm', { anchor: 'middle' }));
@@ -283,7 +292,7 @@
         if (wide) ['', 'Body shortened at the break mark;', 'neck drawn 4 px wide (inset is true).'].forEach((s, i) => { const t = T(timeX, noteY + (i + 0.8) * lh, s, { fill: 'var(--muted)', size: fsm }); if (i === 0) scaleNote = t; D.append(t); });
         const setScaleNote = w => { if (scaleNote) scaleNote.textContent = 'Main view: 1 screen px ≈ ' + fmt(W / Math.max(1, w) / S, 1) + ' mm.'; };
         setScaleNote(cw);
-        return { D, wide, S, Sb, cx, lh, rX, rC, tq, rSo, rCh, rPC, xL, xR, paneW, yTop, tPC, yValve, yInt, hMelt0, rim0, floor0, yChB1, yLab, seedW, seedH, holdH, insW, setScaleNote,
+        return { D, wide, W, H, primaryH: yBot + 4, detailX: insetX, detailY: insetY, detailW: insW * k, detailH: timeY + tbH * k + 6 - insetY, IN, tb, primaryNodes: [...D.children].filter(node => node !== defs && node !== IN && node !== tb), S, Sb, cx, lh, rX, rC, tq, rSo, rCh, rPC, xL, xR, paneW, yTop, tPC, yValve, yInt, hMelt0, rim0, floor0, yChB1, yLab, seedW, seedH, holdH, insW, setScaleNote,
           grad, meltClip, chunkClip, heater, cruc, tail, body, habit, brk, crown, neck, cable, holder, seedR, menis, arrS, arrC, shaftRpm, LAB, dislNeck, totalTxt, nowTxt, segs, cursor, keyTxt };
       }
       function fitLabels(sc) {
@@ -393,14 +402,23 @@
         phaseName.textContent = 'Phase ' + (cur + 1) + ' — ' + NAMES[cur];
         phaseWhy.textContent = WHY[cur];
         countSpan.textContent = 'Phase ' + (cur + 1) + ' / 5';
-        dots.forEach((d, i) => { d.classList.toggle('active', i === cur); d.classList.toggle('done', i < cur); });
+        phaseButtons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === cur)));
         prevBtn.disabled = cur === 0; nextBtn.disabled = cur === 4;
         vOut.textContent = fmt(st.v, 1) + ' mm/min'; rpmOut.textContent = st.rpm + ' rpm'; speedOut.textContent = fmt(st.speed, 1) + '×';
         playBtn.textContent = st.playing ? 'Pause' : 'Play';
         const lift = st.v * Math.pow(D_BODY / 2 / R_MELT_MM, 2) * RHO_S / RHO_L;
         formula.innerHTML = `body time = L / v = 2 000 mm / ${fmt(st.v, 1)} mm/min ≈ ${fmt(sch.P[3].h, 1)} h &nbsp;·&nbsp; crucible lift = v (r<sub>crystal</sub>/r<sub>melt</sub>)² (ρ<sub>s</sub>/ρ<sub>l</sub>) = ${fmt(lift, 2)} mm/min &nbsp;·&nbsp; mass = ρ<sub>s</sub> π r² L = 343 kg per 2 m body &nbsp;·&nbsp; neck stress = m g / (π r²) ≈ 416 MPa at 300 kg on 3 mm`;
       }
-      function render() { updateText(draw()); }
+      function render() {
+        updateText(draw());
+        if (!scene) return;
+        const g = scene;
+        viewButtons.forEach((button, i) => button.setAttribute('aria-pressed', String(detailView === !!i)));
+        g.primaryNodes.forEach(node => { node.style.display = detailView ? 'none' : ''; });
+        g.IN.style.display = g.tb.style.display = detailView || g.wide ? '' : 'none';
+        g.D.setAttribute('viewBox', detailView ? `${g.detailX} ${g.detailY} ${g.detailW} ${g.detailH}` : `0 0 ${g.W} ${g.wide ? g.H : g.primaryH}`);
+        g.D.setAttribute('aria-label', detailView ? 'Magnified seed, Dash neck, dislocations escaping to the surface, and the process time budget' : 'Czochralski puller apparatus growing a silicon crystal from a heated melt');
+      }
 
       // ---------- layout / rebuild ----------
       let mode = '', fsCur = 0, paneCur = 0;
@@ -449,7 +467,6 @@
       speedSlider.addEventListener('input', () => { st.speed = +speedSlider.value; render(); });
       vSlider.addEventListener('input', () => { const { cur, frac } = progressAt(schedule(st.v).P, st.simH); st.v = +vSlider.value; const P = schedule(st.v).P; st.simH = P[cur].start + frac * P[cur].h; render(); });
       rpmSlider.addEventListener('input', () => { st.rpm = +rpmSlider.value; render(); });
-      dots.forEach((d, i) => d.addEventListener('click', () => jump(i)));
       prevBtn.addEventListener('click', () => { const { cur } = progressAt(schedule(st.v).P, st.simH); if (cur > 0) jump(cur - 1); });
       nextBtn.addEventListener('click', () => { const { cur } = progressAt(schedule(st.v).P, st.simH); if (cur < 4) jump(cur + 1); });
 

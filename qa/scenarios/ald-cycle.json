@@ -1,58 +1,88 @@
 [
-  {"click": "#box .w-step-dot:nth-of-type(2)"}, {"wait": 1500}, {"shot": "step2-purge"},
-  {"click": "#box .w-step-dot:nth-of-type(3)"}, {"wait": 1500}, {"shot": "step3-h2o"},
-  {"click": "#box .w-step-dot:nth-of-type(4)"}, {"wait": 1500}, {"shot": "step4-purge"},
-  {"click": "#box .w-step-nav button:nth-of-type(6)"}, {"wait": 1500}, {"shot": "cycle2-step1"},
-  {"click": "#box .w-step-nav button:nth-of-type(6)"}, {"wait": 1500},
-  {"click": "#box .w-step-nav button:nth-of-type(6)"}, {"wait": 1500},
-  {"click": "#box .w-step-nav button:nth-of-type(6)"}, {"wait": 1500},
-  {"click": "#box .w-step-nav button:nth-of-type(6)"}, {"wait": 1500},
-  {"click": "#box .w-step-nav button:nth-of-type(6)"}, {"wait": 1500},
-  {"click": "#box .w-step-nav button:nth-of-type(6)"}, {"wait": 1500},
-  {"click": "#box .w-step-nav button:nth-of-type(6)"}, {"wait": 1500},
-  {"click": "#box .w-step-nav button:nth-of-type(6)"}, {"wait": 1500}, {"shot": "cycle4-step1"},
-  {"click": "#box .w-step-nav button:nth-of-type(5)"}, {"wait": 1500}, {"shot": "prev-wrap-to-purge2"},
-  {"click": "#box .w-step-nav button:nth-of-type(5)"}, {"wait": 1500}, {"shot": "prev-to-h2o"},
-  {"click": "#box .w-step-nav button:nth-of-type(5)"}, {"wait": 1500}, {"shot": "prev-to-purge1"},
-  {"click": "#box .w-step-nav button:nth-of-type(5)"}, {"wait": 1500}, {"shot": "prev-to-tma"},
-  {"set": "#box select", "value": "HfO2"}, {"wait": 1500}, {"shot": "hfo2-step1"},
-  {"click": "#box .w-step-dot:nth-of-type(2)"}, {"wait": 1500}, {"shot": "hfo2-purge"},
-  {"click": "#box .w-step-dot:nth-of-type(3)"}, {"wait": 1500}, {"shot": "hfo2-h2o"},
-  {"click": "#box .w-step-dot:nth-of-type(4)"}, {"wait": 1500},
-  {"click": "#box .w-step-nav button:nth-of-type(6)"}, {"wait": 1500}, {"shot": "hfo2-cycle2"},
-  {"set": "#box select", "value": "Al2O3"}, {"wait": 300},
-  {"click": "#box .w-step-dot:nth-of-type(1)"}, {"wait": 1500},
-  {"set": "#box input[type=number]", "value": 50}, {"wait": 300}, {"shot": "target-max-50nm"},
-  {"set": "#box input[type=number]", "value": 0.2}, {"wait": 300}, {"shot": "target-min-0.2nm"},
-  {"set": "#box input[type=number]", "value": ""}, {"wait": 300}, {"shot": "target-empty"},
-  {"set": "#box input[type=number]", "value": 2}, {"wait": 300},
-  {"set": "#box .w-controls:nth-of-type(3) label:nth-of-type(1) input", "value": 1}, {"wait": 200},
-  {"set": "#box .w-controls:nth-of-type(3) label:nth-of-type(2) input", "value": 5}, {"wait": 200},
-  {"set": "#box .w-controls:nth-of-type(3) label:nth-of-type(3) input", "value": 1}, {"wait": 200},
-  {"set": "#box .w-controls:nth-of-type(3) label:nth-of-type(4) input", "value": 5}, {"wait": 300}, {"shot": "timing-max"},
-  {"set": "#box .w-controls:nth-of-type(3) label:nth-of-type(1) input", "value": 0.05}, {"wait": 200},
-  {"set": "#box .w-controls:nth-of-type(3) label:nth-of-type(2) input", "value": 0.5}, {"wait": 200},
-  {"set": "#box .w-controls:nth-of-type(3) label:nth-of-type(3) input", "value": 0.05}, {"wait": 200},
-  {"set": "#box .w-controls:nth-of-type(3) label:nth-of-type(4) input", "value": 0.5}, {"wait": 300}, {"shot": "timing-min"},
-  {"set": "#box .w-controls:nth-of-type(3) label:nth-of-type(1) input", "value": 0.3}, {"wait": 200},
-  {"set": "#box .w-controls:nth-of-type(3) label:nth-of-type(2) input", "value": 3}, {"wait": 200},
-  {"set": "#box .w-controls:nth-of-type(3) label:nth-of-type(3) input", "value": 0.2}, {"wait": 200},
-  {"set": "#box .w-controls:nth-of-type(3) label:nth-of-type(4) input", "value": 4}, {"wait": 300},
-  {"set": "#box h5 + .w-controls input[type=range]", "value": 0}, {"wait": 300},
-  {"click": "#box .w-step-dot:nth-of-type(1)"}, {"wait": 1500}, {"shot": "dose-0-tma"},
-  {"set": "#box h5 + .w-controls input[type=range]", "value": 0.3}, {"wait": 300},
-  {"click": "#box .w-step-dot:nth-of-type(1)"}, {"wait": 1500}, {"shot": "dose-0.3-tma"},
-  {"click": "#box .w-step-dot:nth-of-type(3)"}, {"wait": 1500}, {"shot": "dose-0.3-h2o"},
-  {"click": "#box .w-step-dot:nth-of-type(4)"}, {"wait": 1500},
-  {"click": "#box .w-step-nav button:nth-of-type(6)"}, {"wait": 1500}, {"shot": "dose-0.3-cycle2"},
-  {"set": "#box h5 + .w-controls input[type=range]", "value": 2}, {"wait": 300},
-  {"click": "#box .w-step-dot:nth-of-type(1)"}, {"wait": 1500}, {"shot": "dose-2-tma"},
-  {"click": "#box .w-step-dot:nth-of-type(2)"}, {"wait": 1500}, {"shot": "dose-2-purge"},
-  {"click": "#box .w-step-dot:nth-of-type(3)"}, {"wait": 1500}, {"shot": "dose-2-h2o"},
-  {"set": "#box h5 + .w-controls input[type=range]", "value": 1}, {"wait": 300},
-  {"click": "#box .w-step-dot:nth-of-type(1)"}, {"wait": 500},
-  {"hover": "#box .w-step-dot:nth-of-type(2)"}, {"wait": 300}, {"shot": "hover-dot"},
-  {"click": "#box .w-step-nav button:nth-of-type(7)"}, {"wait": 2100}, {"shot": "playing-2s"},
-  {"wait": 1800}, {"shot": "playing-4s"},
-  {"click": "#box .w-step-nav button:nth-of-type(7)"}, {"wait": 300}, {"shot": "paused"}
+  {
+    "click": "#box .w-lab-progress button:nth-child(2)"
+  },
+  {
+    "wait": 500
+  },
+  {
+    "shot": "purge"
+  },
+  {
+    "click": "#box .w-lab-progress button:nth-child(3)"
+  },
+  {
+    "wait": 500
+  },
+  {
+    "shot": "water-reaction"
+  },
+  {
+    "click": "#box .w-lab-progress button:nth-child(4)"
+  },
+  {
+    "click": "#box button[title=\"Next step\"]"
+  },
+  {
+    "shot": "completed-cycle"
+  },
+  {
+    "set": "#box select",
+    "value": "HfO2"
+  },
+  {
+    "shot": "hafnia"
+  },
+  {
+    "click": "#box details summary"
+  },
+  {
+    "set": "#box input[aria-label=\"Timing step 1\"]",
+    "value": 1
+  },
+  {
+    "set": "#box input[aria-label=\"Timing step 2\"]",
+    "value": 5
+  },
+  {
+    "set": "#box input[aria-label=\"Timing step 3\"]",
+    "value": 1
+  },
+  {
+    "set": "#box input[aria-label=\"Timing step 4\"]",
+    "value": 5
+  },
+  {
+    "set": "#box input[type=number]",
+    "value": 50
+  },
+  {
+    "shot": "target-and-timing-max"
+  },
+  {
+    "set": "#box input[aria-label=\"Precursor dose\"]",
+    "value": 0
+  },
+  {
+    "shot": "zero-dose"
+  },
+  {
+    "set": "#box input[aria-label=\"Precursor dose\"]",
+    "value": 2
+  },
+  {
+    "shot": "excess-dose"
+  },
+  {
+    "click": "#box button[title=\"Auto-advance through the four steps\"]"
+  },
+  {
+    "wait": 2100
+  },
+  {
+    "shot": "playing"
+  },
+  {
+    "click": "#box button[title=\"Auto-advance through the four steps\"]"
+  }
 ]

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-13T23:24:08.691Z",
+  "timestamp": "2026-09-13T23:52:58.637Z",
   "cases": 132,
   "failures": 0,
   "results": [
@@ -72,8 +72,10 @@
       "labFonts": [
         "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
       ],
-      "controlFonts": [],
-      "controlsChecked": 0,
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 4,
       "tokens": {
         "ground": "#f5f3ed",
         "panel": "#fdfcf8",
@@ -105,7 +107,7 @@
       "controlFonts": [
         "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
       ],
-      "controlsChecked": 8,
+      "controlsChecked": 10,
       "tokens": {
         "ground": "#f5f3ed",
         "panel": "#fdfcf8",
@@ -775,7 +777,7 @@
       "controlFonts": [
         "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
       ],
-      "controlsChecked": 8,
+      "controlsChecked": 10,
       "tokens": {
         "ground": "#f5f3ed",
         "panel": "#fdfcf8",
@@ -1120,8 +1122,10 @@
       "labFonts": [
         "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
       ],
-      "controlFonts": [],
-      "controlsChecked": 0,
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 4,
       "tokens": {
         "ground": "#171d1b",
         "panel": "#1e2723",
@@ -1153,7 +1157,7 @@
       "controlFonts": [
         "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
       ],
-      "controlsChecked": 8,
+      "controlsChecked": 10,
       "tokens": {
         "ground": "#171d1b",
         "panel": "#1e2723",
@@ -1823,7 +1827,7 @@
       "controlFonts": [
         "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
       ],
-      "controlsChecked": 8,
+      "controlsChecked": 10,
       "tokens": {
         "ground": "#171d1b",
         "panel": "#1e2723",
@@ -2168,8 +2172,10 @@
       "labFonts": [
         "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
       ],
-      "controlFonts": [],
-      "controlsChecked": 0,
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 4,
       "tokens": {
         "ground": "#f5f3ed",
         "panel": "#fdfcf8",
@@ -2201,7 +2207,7 @@
       "controlFonts": [
         "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
       ],
-      "controlsChecked": 8,
+      "controlsChecked": 10,
       "tokens": {
         "ground": "#f5f3ed",
         "panel": "#fdfcf8",
@@ -2871,7 +2877,7 @@
       "controlFonts": [
         "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
       ],
-      "controlsChecked": 8,
+      "controlsChecked": 10,
       "tokens": {
         "ground": "#f5f3ed",
         "panel": "#fdfcf8",
@@ -3216,8 +3222,10 @@
       "labFonts": [
         "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
       ],
-      "controlFonts": [],
-      "controlsChecked": 0,
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 4,
       "tokens": {
         "ground": "#171d1b",
         "panel": "#1e2723",
@@ -3249,7 +3257,7 @@
       "controlFonts": [
         "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
       ],
-      "controlsChecked": 8,
+      "controlsChecked": 10,
       "tokens": {
         "ground": "#171d1b",
         "panel": "#1e2723",
@@ -3919,7 +3927,7 @@
       "controlFonts": [
         "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
       ],
-      "controlsChecked": 8,
+      "controlsChecked": 10,
       "tokens": {
         "ground": "#171d1b",
         "panel": "#1e2723",

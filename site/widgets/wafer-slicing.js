@@ -57,10 +57,14 @@
       const note = h('div', { class: 'w-note' },
         'Assumes a 300 mm ingot (ρ = 2.33 g/cm³) and $30/kg for the electronic-grade polysilicon consumed to make the kerf, the midpoint of Module 01’s $20–40/kg range. Kerf sludge is not recoverable for semiconductor use (it carries nickel, iron and coolant from the wire), so the value shown is silicon consumed, not silicon sold. A 2.0 m body loses ~35 mm to five band-saw block cuts and their test slugs, which is where the 1 965 mm default comes from; the crown and tail are cropped and remelted. Removal stack-up: Module 03’s worked example holds the etch (25 µm), double-side polish (18 µm) and final CMP (1.5 µm) fixed, so the double-disk grind absorbs whatever the saw leaves; the as-cut target is the number a wafer maker tunes.');
 
-      el.append(ctl, readout, formula,
-        head('Multi-wire saw: the work zone', playBtn, prog), sawSvg, sawNote,
-        head('The whole ingot: which block is in the saw'), ingotSvg,
-        head('Removal stack-up: as-cut slice to finished wafer'), stackSvg, warn, note);
+      const insight = h('div', { class: 'w-insight' });
+      el.append(h('div', { class: 'w-studio' }, h('div', { class: 'w-lab-kicker' }, 'From a solid cylinder to hundreds of slices'),
+          head('Multi-wire saw: the work zone', playBtn, prog), sawSvg),
+        insight, h('div', { class: 'w-console' }, h('div', { class: 'w-lab-kicker' }, 'Change the cut'), ctl, readout),
+        h('section', { class: 'w-lab-section' }, head('The whole ingot: which block is in the saw'), ingotSvg),
+        h('section', { class: 'w-lab-section' }, head('Removal stack-up: as-cut slice to finished wafer'), stackSvg, h('div', { class: 'w-note' }, 'Bars begin at 700 µm, not zero, to show the removal steps clearly. Etch, polish and CMP removals are held fixed; grinding absorbs the remaining difference.'), warn),
+        h('div', { class: 'w-note' }, 'Schematic apparatus; the slice-to-kerf ratio is exact but pitch is exaggerated so each cut remains visible.'),
+        h('details', { class: 'w-details' }, h('summary', null, 'Cutting geometry, material balance and assumptions'), formula, sawNote, note));
 
       // ---------- SVG helpers ----------
       function clear(s) { while (s.firstChild) s.removeChild(s.firstChild); }
@@ -220,7 +224,7 @@
       function drawIngot(d) {
         clear(ingotSvg);
         const wide = mode === 'wide', W = wide ? 620 : 340;
-        const left = 46, right = 46, bodyH = wide ? 40 : 34, top = 32;
+        const left = 46, right = 46, bodyH = wide ? 40 : 34, top = 40;
         const pxmm = (W - left - right) / 2500, L = st.body * pxmm, x0 = left, x1 = left + L, yc = top + bodyH / 2, bot = top + bodyH;
         const n = Math.max(1, Math.round(st.body / BLOCK_MM)), bmm = st.body / n, bpx = bmm * pxmm;
         ingotSvg.append(svg('path', { d: `M${x0},${top} Q${x0 - 36},${top} ${x0 - 36},${yc} Q${x0 - 36},${bot} ${x0},${bot} Z`, fill: 'var(--si)', opacity: 0.2, stroke: 'var(--line2)', 'stroke-dasharray': '3 2' }));
@@ -237,7 +241,7 @@
         // sliceable-length dimension above the body, outside the bar
         const dy = top - 9;
         ingotSvg.append(LN(x0 + 2, dy, x1 - 2, dy, { stroke: 'var(--accent)' }), LN(x0 + 2, dy - 4, x0 + 2, dy + 4, { stroke: 'var(--accent)' }), LN(x1 - 2, dy - 4, x1 - 2, dy + 4, { stroke: 'var(--accent)' }));
-        ingotSvg.append(T((x0 + x1) / 2, dy - 5, `sliceable length ${fx(st.body, 0)} mm`, { 'text-anchor': 'middle', 'font-weight': 600 }));
+        ingotSvg.append(T((x0 + x1) / 2, 12, `sliceable length ${fx(st.body, 0)} mm`, { 'text-anchor': 'middle', 'font-weight': 600 }));
         const ly1 = bot + LH + 2, ly2 = ly1 + LH, ly3 = ly2 + LH, tx = wide ? x0 : 6;
         ingotSvg.append(T(hx0 + 2, ly1, '↑ this block is in the saw above', { fill: 'var(--accent)', 'font-weight': 600 }));
         ingotSvg.append(T(tx, ly2, wide ? `${n} blocks of ~${Math.round(bmm)} mm; a test slug (violet) is cut at every block face` : `${n} blocks × ~${Math.round(bmm)} mm · slugs (violet) at cuts`, { fill: 'var(--muted)' }));
@@ -256,7 +260,7 @@
           { name: 'Alkaline etch', val: v2, delta: ETCH },
           { name: 'Double-side polish', val: v3, delta: DSP },
           { name: 'Final CMP + RCA clean', val: FINAL_UM, delta: CMP }];
-        const base = 700, BX0 = wide ? 200 : 8, BX1 = wide ? 520 : 236, rowH = wide ? 34 : 2 * LH + 12, barH = wide ? 20 : 16;
+        const base = 700, BX0 = wide ? 220 : 8, BX1 = wide ? 530 : 236, rowH = wide ? 34 : 2 * LH + 12, barH = wide ? 20 : 16;
         const xOf = v => BX0 + Math.max(0, v - base) / (st.raw - base) * (BX1 - BX0);
         rows.forEach((r, i) => {
           const y = 10 + i * rowH, last = i === rows.length - 1;
@@ -267,9 +271,7 @@
           if (r.delta != null) stackSvg.append(T(W - 8, ty, '−' + fx(r.delta, Number.isInteger(r.delta) ? 0 : 1) + ' µm', { 'text-anchor': 'end', 'font-family': 'var(--mono)', fill: r.warn ? 'var(--warn)' : 'var(--muted)', 'font-weight': r.warn ? 700 : 400 }));
         });
         const fy = 10 + rows.length * rowH + (wide ? 6 : 12), fxo = wide ? 15 : 8;
-        stackSvg.append(T(fxo, fy, 'bars start at 700 µm, not 0, so each step is visible', { fill: 'var(--muted)' }));
-        stackSvg.append(T(fxo, fy + LH, wide ? 'etch, polish and CMP removals are fixed; the grind absorbs whatever the saw leaves' : 'etch, polish, CMP fixed; the grind absorbs the rest', { fill: 'var(--muted)' }));
-        stackSvg.setAttribute('viewBox', `0 0 ${W} ${fy + LH + 6}`);
+        stackSvg.setAttribute('viewBox', `0 0 ${W} ${fy}`);
       }
 
       // ---------- numbers ----------
@@ -286,6 +288,7 @@
         bodyO.textContent = fx(st.body, 0) + ' mm'; rawO.textContent = fx(st.raw, 0) + ' µm'; kerfO.textContent = fx(st.kerf, 0) + ' µm';
         const d = derive();
         stPitch.textContent = fx(d.pitchMM, 2) + ' mm';
+        insight.textContent = 'Every wire makes a wafer and a waste slot. At this pitch, ' + fx(d.gross, 0) + ' gross slices become about ' + fx(d.shipped, 0) + ' shipped wafers after the model’s 3% discard allowance.';
         stCount.textContent = fx(d.shipped, 0) + ' (' + fx(d.gross, 0) + ')';
         stKerfPct.textContent = fx(d.kerfPct, 1) + ' %';
         stKerfMass.textContent = fx(d.kerfKg, 1) + ' kg (~$' + fx(d.kerfValue, 0) + ')';

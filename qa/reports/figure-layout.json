@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-13T23:56:17.239Z",
+  "figureCases": 1408,
+  "cases": [
+    {
+      "width": 1280,
+      "theme": "light",
+      "figures": 352
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "figures": 352
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "figures": 352
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "figures": 352
+    }
+  ],
+  "errors": []
+}

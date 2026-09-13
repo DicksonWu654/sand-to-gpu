@@ -72,6 +72,8 @@ Section figures are authored in `course/visuals/lessons/`, keyed to exact sectio
 
 `npm run check` includes strict figure coverage and source-preservation checks. The [visual refactor record](DESIGN_REFACTOR_2026-09-13.md) describes the implementation and validation evidence.
 
+The [second visual refinement](VISUAL_POLISH_2026-09-13.md) adds apparatus studies, richer chapter openings, direct-label figure layouts and further lab improvements, with its validation and reproduction commands.
+
 ## Accuracy and review scope
 
 The course combines published technical facts with approximate process ranges and illustrative economic models. Proprietary recipes, prices, market shares, and future plans require particular care. Historical claims retain their stated timeframe; the course is not a live market-data feed.

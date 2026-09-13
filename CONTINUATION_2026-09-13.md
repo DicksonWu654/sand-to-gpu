@@ -1,5 +1,7 @@
 # Sand to GPU continuation, 2026-09-13
 
+Latest work: [second visual refinement](VISUAL_POLISH_2026-09-13.md), including apparatus studies, chapter openings, responsive diagram layouts and additional lab refinements.
+
 The subsequent [visual and layout refactor](DESIGN_REFACTOR_2026-09-13.md) records the new atlas interface, 352 section figures, eight redesigned labs, and final validation. The record below describes the earlier course-completion and review pass.
 
 This record follows `HANDOFF.md`, which preserves the original Claude session's state. Work continued in the same directory using Codex agents and local build/browser tools. The Claude Workflow API and artifact publishing tool are not available in this session; this pass does not claim to have resumed those workflow run IDs.
