@@ -1,46 +1,207 @@
 [
-  {"click": "#box .widget-body > div:nth-of-type(2) input[value=tcncf]"}, {"wait": 250}, {"shot": "hbm3e-12high-tcncf-over"},
-  {"set": "#box .widget-body > div:nth-of-type(2) input[type=checkbox]", "value": true}, {"wait": 250}, {"shot": "hbm3e-12high-hybrid"},
-  {"set": "#box .widget-body > div:nth-of-type(2) input[type=checkbox]", "value": false},
-  {"click": "#box .widget-body > div:nth-of-type(2) input[value=mrmuf]"}, {"wait": 250},
-
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(2) select", "value": "8"},
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(3) select", "value": "32"},
-  {"wait": 250}, {"shot": "hbm3e-8high-32gb"},
-
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(4) input[type=range]", "value": 8.0},
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(5) input[type=range]", "value": 4},
-  {"wait": 250}, {"shot": "hbm3e-rate-min-stacks-min"},
-
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(1) select", "value": "HBM2E"},
-  {"wait": 250}, {"shot": "hbm2e-default"},
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(2) select", "value": "4"},
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(3) select", "value": "8"},
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(4) input[type=range]", "value": 3.2},
-  {"wait": 250}, {"shot": "hbm2e-4high-8gb-min"},
-
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(1) select", "value": "HBM3"},
-  {"wait": 250}, {"shot": "hbm3-default"},
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(2) select", "value": "12"},
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(3) select", "value": "24"},
-  {"wait": 250}, {"shot": "hbm3-12high-24gb"},
-
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(1) select", "value": "HBM4"},
-  {"wait": 250}, {"shot": "hbm4-default"},
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(2) select", "value": "16"},
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(3) select", "value": "32"},
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(4) input[type=range]", "value": 11},
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(5) input[type=range]", "value": 12},
-  {"wait": 250}, {"shot": "hbm4-16high-32gb-max"},
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(4) input[type=range]", "value": 10.5},
-  {"wait": 250}, {"shot": "hbm4-rate-10p5"},
-  {"click": "#box .widget-body > div:nth-of-type(2) input[value=tcncf]"}, {"wait": 250}, {"shot": "hbm4-16high-tcncf"},
-  {"set": "#box .widget-body > div:nth-of-type(2) input[type=checkbox]", "value": true}, {"wait": 250}, {"shot": "hbm4-16high-hybrid"},
-  {"set": "#box .widget-body > div:nth-of-type(2) input[type=checkbox]", "value": false},
-  {"click": "#box .widget-body > div:nth-of-type(2) input[value=mrmuf]"},
-
-  {"set": "#box .widget-body > div:nth-of-type(1) label:nth-of-type(1) select", "value": "HBM3E"},
-  {"wait": 250}, {"shot": "back-to-hbm3e"},
-  {"hover": "#box svg rect:nth-of-type(3)"}, {"wait": 300}, {"shot": "hover-die"},
-  {"hover": "#box .widget-body > div:nth-of-type(2) input[value=tcncf]"}, {"wait": 300}, {"shot": "hover-tcncf"}
+  {
+    "click": "#box input[value=tcncf]"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm3e-12high-tcncf-over"
+  },
+  {
+    "set": "#box input[aria-label='Hybrid bonding']",
+    "value": true
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm3e-12high-hybrid"
+  },
+  {
+    "set": "#box input[aria-label='Hybrid bonding']",
+    "value": false
+  },
+  {
+    "click": "#box input[value=mrmuf]"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "set": "#box [aria-label='Stack height']",
+    "value": "8"
+  },
+  {
+    "set": "#box [aria-label='Per-die capacity']",
+    "value": "32"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm3e-8high-32gb"
+  },
+  {
+    "set": "#box [aria-label='Pin data rate']",
+    "value": 8.0
+  },
+  {
+    "set": "#box [aria-label='Stacks per GPU']",
+    "value": 4
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm3e-rate-min-stacks-min"
+  },
+  {
+    "set": "#box [aria-label='HBM generation']",
+    "value": "HBM2E"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm2e-default"
+  },
+  {
+    "set": "#box [aria-label='Stack height']",
+    "value": "4"
+  },
+  {
+    "set": "#box [aria-label='Per-die capacity']",
+    "value": "8"
+  },
+  {
+    "set": "#box [aria-label='Pin data rate']",
+    "value": 3.2
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm2e-4high-8gb-min"
+  },
+  {
+    "set": "#box [aria-label='HBM generation']",
+    "value": "HBM3"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm3-default"
+  },
+  {
+    "set": "#box [aria-label='Stack height']",
+    "value": "12"
+  },
+  {
+    "set": "#box [aria-label='Per-die capacity']",
+    "value": "24"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm3-12high-24gb"
+  },
+  {
+    "set": "#box [aria-label='HBM generation']",
+    "value": "HBM4"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm4-default"
+  },
+  {
+    "set": "#box [aria-label='Stack height']",
+    "value": "16"
+  },
+  {
+    "set": "#box [aria-label='Per-die capacity']",
+    "value": "32"
+  },
+  {
+    "set": "#box [aria-label='Pin data rate']",
+    "value": 11
+  },
+  {
+    "set": "#box [aria-label='Stacks per GPU']",
+    "value": 12
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm4-16high-32gb-max"
+  },
+  {
+    "set": "#box [aria-label='Pin data rate']",
+    "value": 10.5
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm4-rate-10p5"
+  },
+  {
+    "click": "#box input[value=tcncf]"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm4-16high-tcncf"
+  },
+  {
+    "set": "#box input[aria-label='Hybrid bonding']",
+    "value": true
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "hbm4-16high-hybrid"
+  },
+  {
+    "set": "#box input[aria-label='Hybrid bonding']",
+    "value": false
+  },
+  {
+    "click": "#box input[value=mrmuf]"
+  },
+  {
+    "set": "#box [aria-label='HBM generation']",
+    "value": "HBM3E"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "back-to-hbm3e"
+  },
+  {
+    "hover": "#box svg rect:nth-of-type(3)"
+  },
+  {
+    "wait": 300
+  },
+  {
+    "shot": "hover-die"
+  },
+  {
+    "hover": "#box input[value=tcncf]"
+  },
+  {
+    "wait": 300
+  },
+  {
+    "shot": "hover-tcncf"
+  }
 ]

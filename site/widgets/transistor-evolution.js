@@ -35,7 +35,7 @@
 
   window.registerWidget('transistor-evolution', {
     title: 'Planar → FinFET → Nanosheet → CFET',
-    caption: 'Pick an architecture. Left: the gate is cut open so you can see the channel it wraps (1, 3 or 4 sides). Right: the section through the gate; the bright band is the inversion layer that appears when the gate is ON.',
+    caption: 'Pick an architecture, then switch between its cross-section and 3D cutaway. Follow how the gate wraps the channel; the bright inversion layer appears when the gate is on.',
     mount(el, ctx) {
       const { h, svg, fmt } = ctx;
       const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -368,13 +368,24 @@
       const wCtl = h('label', { class: 'w-ctl' }, h('span', null, 'Sheet width'), wIn, wOut);
       const bsprCtl = h('label', { class: 'w-ctl', style: { minWidth: '200px', flex: '0 0 auto' } }, h('span', null, 'Backside power rail'), bsprIn, bsprOut);
       const controls = h('div', { class: 'w-controls' }, bsprCtl, wCtl, h('div', { style: { display: 'flex', gap: '8px', flexWrap: 'wrap' } }, playBtn, flipBtn));
-      const grid = h('div', { class: 'w-grid2' });
+      const grid = h('div', { class: 'w-grid2 w-studio', style: { gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 310px), 1fr))' } });
+      let selectedView = 'section';
+      const viewButtons = h('div', { class: 'w-step-nav', 'aria-label': 'Transistor drawing view' });
+      const showView = () => {
+        [...grid.children].forEach((p, i) => p.hidden = selectedView === 'section' ? i === 0 : i === 1);
+        [...viewButtons.children].forEach(b => { const on = b.dataset.view === selectedView; b.classList.toggle('primary', on); b.setAttribute('aria-pressed', on); });
+      };
+      for (const [id, label] of [['section', 'Cross-section'], ['three-d', '3D cutaway']]) viewButtons.append(h('button', { class: 'w-btn', 'data-view': id, on: { click: () => { selectedView = id; showView(); } } }, label));
+      grid.style.gridTemplateColumns = 'minmax(0, 1fr)'; grid.style.maxWidth = '580px'; grid.style.margin = '0 auto'; grid.style.width = '100%';
       const readout = h('div', { class: 'w-readout' });
       const table = h('table');
       const legend = h('div', { class: 'w-legend' }, ...[[SI, 'silicon channel / body'], [G, 'gate metal'], [HK, 'high-k gate oxide'], [INK, 'inversion layer, carriers'], [NSD, 'nFET S/D epi (Si:P)'], [PSD, 'pFET S/D epi (SiGe:B)'], [DIEL, 'STI / isolation / spacers'], [CU, 'backside Cu rail, nano-TSV']]
         .map(([c, t]) => h('span', { class: 'w-legend-item' }, h('i', { style: { background: c, border: '1px solid var(--muted)' } }), t)));
       const formula = h('div', { class: 'w-formula' });
-      el.append(seg, plain, controls, grid, readout, legend, table, formula, h('div', { class: 'w-note' }, 'Scale lengths follow Frank–Taur–Wong: λ_planar ≈ √(ε_Si/ε_ox · t_ox · t_dep), λ_DG ≈ √(ε_Si/2ε_ox · t_Si · t_ox), λ_GAA ≈ √(ε_Si/4ε_ox · d · t_ox), with t_ox = 0.9 nm EOT and L_g ≥ 5–6 λ. Effective width W_eff is the gated perimeter: 2H + W = 107 nm per fin, 2(w + t) per sheet; the GAA drive comparison is against a two-fin FinFET (214 nm). Epi = epitaxial crystal regrown on the channel ends; STI = shallow-trench isolation oxide between devices.'));
+      plain.classList.add('w-insight');
+      el.append(seg, viewButtons, grid, plain, h('div', { class: 'w-console' }, controls), readout,
+        h('div', { class: 'w-note' }, 'Cutaway schematics emphasize how the gate surrounds the channel; dimensions are illustrative. The scale-length calculation uses the assumptions in the reference below.'),
+        h('details', { class: 'w-reference' }, h('summary', null, 'Architecture reference, materials & model'), legend, table, formula, h('div', { class: 'w-note' }, 'Scale lengths follow Frank–Taur–Wong: λ_planar ≈ √(ε_Si/ε_ox · t_ox · t_dep), λ_DG ≈ √(ε_Si/2ε_ox · t_Si · t_ox), λ_GAA ≈ √(ε_Si/4ε_ox · d · t_ox), with t_ox = 0.9 nm EOT and L_g ≥ 5–6 λ. Effective width W_eff is the gated perimeter: 2H + W = 107 nm per fin, 2(w + t) per sheet; the GAA drive comparison is against a two-fin FinFET (214 nm). Epi = epitaxial crystal regrown on the channel ends; STI = shallow-trench isolation oxide between devices.')));
 
       function render() {
         seg.innerHTML = '';
@@ -388,6 +399,7 @@
         anim.n = []; anim.p = [];
         grid.innerHTML = '';
         grid.append(h('div', null, h('div', { class: 'w-step-title' }, '3D sketch (gate cut open)'), isoView()), h('div', null, h('div', { class: 'w-step-title' }, 'Cross-section through the gate'), xsView()));
+        showView();
         const lam = lambda(a);
         const stat = (v, l) => h('div', { class: 'w-stat' }, h('b', null, v), h('span', null, l));
         readout.innerHTML = '';

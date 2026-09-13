@@ -2,6 +2,7 @@
 (function () {
   'use strict';
   const C = window.COURSE;
+  const Shell = window.CourseShell;
   const $ = (s, r) => (r || document).querySelector(s);
   const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
   const mods = C.modules.slice().sort((a, b) => a.n - b.n);
@@ -98,11 +99,12 @@
   function renderSidebar() {
     const sb = $('#sidebar');
     sb.innerHTML = '';
-    sb.append(ctxBase.h('a', { class: 'home', href: '#/home' }, iconHome(), 'Start here: the map'));
+    sb.append(ctxBase.h('div', { class: 'curriculum-label' }, 'THE FIELD GUIDE'));
+    sb.append(ctxBase.h('a', { class: 'home', href: '#/home' }, iconHome(), 'Explore the atlas'));
     if (survey.length) {
       const sw = ctxBase.h('div', { class: 'track-switch', role: 'tablist', 'aria-label': 'Course track' },
-        ctxBase.h('button', { class: 'track-btn' + (state.track === 'survey' ? ' active' : ''), role: 'tab', 'aria-selected': String(state.track === 'survey'), on: { click: () => { setTrack('survey'); location.hash = '#/s/01'; } } }, ctxBase.h('b', null, 'Survey'), ctxBase.h('small', null, survey.length + ' chapters · an afternoon')),
-        ctxBase.h('button', { class: 'track-btn' + (state.track === 'deep' ? ' active' : ''), role: 'tab', 'aria-selected': String(state.track === 'deep'), on: { click: () => { setTrack('deep'); location.hash = '#/m/00'; } } }, ctxBase.h('b', null, 'Deep dive'), ctxBase.h('small', null, mods.length + ' modules · the full course')));
+        ctxBase.h('button', { class: 'track-btn' + (state.track === 'survey' ? ' active' : ''), role: 'tab', 'aria-selected': String(state.track === 'survey'), on: { click: () => { setTrack('survey'); location.hash = '#/s/01'; } } }, ctxBase.h('b', null, 'Survey'), ctxBase.h('small', null, survey.length + ' chapters')),
+        ctxBase.h('button', { class: 'track-btn' + (state.track === 'deep' ? ' active' : ''), role: 'tab', 'aria-selected': String(state.track === 'deep'), on: { click: () => { setTrack('deep'); location.hash = '#/m/00'; } } }, ctxBase.h('b', null, 'Deep dive'), ctxBase.h('small', null, mods.length + ' modules')));
       sb.append(sw);
     }
     if (state.track === 'survey' && survey.length) {
@@ -127,19 +129,30 @@
       }
       sb.append(box);
     }
-    sb.append(ctxBase.h('div', { class: 'legend' }, ctxBase.h('span', null, ctxBase.h('i', { class: 'r' }), 'read to the end'), ctxBase.h('span', null, ctxBase.h('i', { class: 'p' }), 'quiz passed (two thirds or better)')));
+    sb.append(ctxBase.h('div', { class: 'legend' }, ctxBase.h('span', null, ctxBase.h('i', { class: 'r' }), 'Read'), ctxBase.h('span', null, ctxBase.h('i', { class: 'p' }), 'Quiz passed')));
   }
   const pad = n => String(n).padStart(2, '0');
   function iconCheck() { return ctxBase.svg('svg', { viewBox: '0 0 12 12', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, ctxBase.svg('path', { d: 'M2 6.5l2.5 2.5L10 3.5' })); }
   function iconHome() { return ctxBase.svg('svg', { width: 16, height: 16, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, ctxBase.svg('path', { d: 'M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z' })); }
 
   // ---------- router ----------
+  let currentPage = null;
+  function scrollToAnchor(anchor) {
+    const target = document.getElementById(decodeURIComponent(anchor));
+    if (target) requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+  }
   function route() {
     const hash = location.hash || '#/home';
     const m = hash.match(/^#\/m\/(\d+)(?:\/(.+))?/);
     const s = hash.match(/^#\/s\/(\d+)(?:\/(.+))?/);
+    const pageKey = s ? 's/' + Number(s[1]) : m ? 'm/' + Number(m[1]) : 'home';
+    const anchor = (s || m || [])[2];
+    if (currentPage === pageKey && anchor) { closeSidebar(); scrollToAnchor(anchor); return; }
+    currentPage = pageKey;
+    document.body.classList.toggle('is-home', pageKey === 'home');
     unmountWidgets();
     if (spyHandler) { window.removeEventListener('scroll', spyHandler); spyHandler = null; }
+    if (spyFrame != null) { cancelAnimationFrame(spyFrame); spyFrame = null; }
     closeSidebar();
     if (s && survey.length) {
       if (state.track !== 'survey') { state.track = 'survey'; store.set('track', 'survey'); renderSidebar(); }
@@ -153,56 +166,63 @@
     renderProgress();
   }
 
-  // ---------- home ----------
+  // ---------- home components ----------
+  function courseCard(m, isSurvey) {
+    const label = isSurvey ? 'S' + pad(m.n) : pad(m.n);
+    const status = isSurvey ? (state.sread[m.n] ? ' · Read' : '') : (passed(m.n) ? ' · Quiz passed' : state.read[m.n] ? ' · Read' : '');
+    return ctxBase.h('a', { class: 'mod-card' + (!isSurvey && passed(m.n) ? ' passed' : ''), href: (isSurvey ? '#/s/' : '#/m/') + pad(m.n) },
+      ctxBase.h('span', { class: 'n' }, label),
+      ctxBase.h('span', { class: 'mod-card-copy' }, ctxBase.h('span', { class: 't' }, m.title), ctxBase.h('span', { class: 'm' }, Math.max(1, Math.round(m.words / 230)) + ' min' + status)),
+      ctxBase.h('span', { class: 'card-arrow', 'aria-hidden': 'true' }, '↗'));
+  }
   function renderHome() {
-    document.title = 'Sand to GPU';
+    document.title = 'Sand to GPU · The engineering atlas';
     const main = $('#main'); main.innerHTML = '';
     $('#rail').innerHTML = '';
-    const words = mods.reduce((a, m) => a + m.words, 0);
-    const widgetsCount = Object.keys(registry).length;
-    const art = ctxBase.h('div', { class: 'article' });
+    const art = ctxBase.h('div', { class: 'home-page' });
     const last = state.last != null && byN.get(state.last);
-    art.append(ctxBase.h('section', { class: 'home-hero' },
-      ctxBase.h('div', { class: 'eyebrow' }, 'A self-study course', ctxBase.h('span', { class: 'dot' }), ctxBase.h('span', { class: 'meta' }, 'last built ' + C.built.slice(0, 10))),
-      ctxBase.h('h1', null, 'From a quartz mine to an NVIDIA rack, one process step at a time.'),
-      ctxBase.h('p', { class: 'lede' }, mods.length + ' modules that follow silicon through purification, crystal pulling, wafering, the ~1,500-step fab flow, EUV lithography, transistors, interconnect, test, HBM, CoWoS packaging, and finally into a GB200 rack. Every stage is explained at the level of the physics and the machines, using published specifications, illustrative models, and supplier examples.'),
-      ctxBase.h('div', { class: 'cta-row' },
-        survey.length ? ctxBase.h('a', { class: 'cta primary', href: '#/s/01' }, 'Start with the survey (an afternoon)') : null,
-        ctxBase.h('a', { class: 'cta' + (survey.length ? '' : ' primary'), href: last ? '#/m/' + pad(last.n) : '#/m/00' }, last ? 'Continue deep dive: ' + pad(last.n) + ' ' + last.title : 'Start the deep dive'),
-        ctxBase.h('a', { class: 'cta', href: '#/m/08' }, 'Jump to EUV'),
-        ctxBase.h('a', { class: 'cta', href: '#/m/19' }, 'Jump to the GPU')),
-      ctxBase.h('div', { class: 'stats' },
-        stat(mods.length, 'modules'), stat(Math.round(words / 1000) + 'k', 'words of reading'), stat(widgetsCount, 'interactive visuals'), stat(mods.reduce((a, m) => a + (m.quiz ? m.quiz.questions.length : 0), 0), 'quiz questions'))
-    ));
-    const map = ctxBase.h('div', { class: 'widget', 'data-widget': 'chain-map' });
-    art.append(map);
-    const parts = ctxBase.h('div', { class: 'part-list' });
-    if (survey.length) {
-      const grid = ctxBase.h('div', { class: 'mod-grid' });
-      for (const s of survey) {
-        grid.append(ctxBase.h('a', { class: 'mod-card', href: '#/s/' + pad(s.n) },
-          ctxBase.h('span', { class: 'n' }, 'S' + s.n),
-          ctxBase.h('span', null, ctxBase.h('span', { class: 't' }, s.title), ctxBase.h('span', { class: 'm' }, Math.max(1, Math.round(s.words / 230)) + ' min read' + (state.sread[s.n] ? ' · read' : '')))));
-      }
-      parts.append(ctxBase.h('div', { class: 'part-card' }, ctxBase.h('h3', null, ctxBase.h('b', null, 'Survey'), 'The whole chain in ten short chapters, then go deeper'), grid));
-    }
+    const hero = ctxBase.h('section', { class: 'home-hero' },
+      ctxBase.h('div', { class: 'hero-copy' },
+        ctxBase.h('div', { class: 'eyebrow' }, ctxBase.h('span', { class: 'status-dot', 'aria-hidden': 'true' }), 'An illustrated guide to semiconductors'),
+        ctxBase.h('h1', null, 'Extraordinary machines.', ctxBase.h('br'), ctxBase.h('em', null, 'Ordinary sand.')),
+        ctxBase.h('div', { class: 'hero-intro' },
+          ctxBase.h('p', { class: 'lede' }, 'Follow selected quartz through the physics, factories and extraordinary precision that turn silicon into a GPU. A connected story, from raw material to computing system.'),
+          ctxBase.h('a', { class: 'text-link', href: '#reading-paths' }, 'Find your starting point', ctxBase.h('span', { 'aria-hidden': 'true' }, '↓')))),
+      ctxBase.h('div', { class: 'hero-visual', html: Shell.journey() }),
+      ctxBase.h('div', { class: 'hero-caption' }, ctxBase.h('span', null, 'A journey in five transformations'), ctxBase.h('span', null, 'Explore any stage ↑ · Schematics not to scale')));
+    art.append(hero);
+    const paths = ctxBase.h('section', { class: 'reading-paths', id: 'reading-paths' },
+      ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '01 / CHOOSE YOUR PATH'), ctxBase.h('h2', null, 'The big picture. Or every detail.')),
+      ctxBase.h('div', { class: 'path-options' },
+        ctxBase.h('a', { class: 'path-option survey-path', href: '#/s/01' },
+          ctxBase.h('div', { class: 'path-top' }, ctxBase.h('span', { class: 'eyebrow' }, 'The survey'), ctxBase.h('span', { class: 'path-arrow', 'aria-hidden': 'true' }, '↗')),
+          ctxBase.h('h3', null, 'See how it all connects.'),
+          ctxBase.h('p', null, 'A guided first pass through the whole chain. Build a mental map, then follow your curiosity deeper.'),
+          ctxBase.h('div', { class: 'path-bottom' }, ctxBase.h('span', null, survey.length + ' chapters · An afternoon'), ctxBase.h('b', null, 'Start the survey →'))),
+        ctxBase.h('a', { class: 'path-option deep-path', href: last ? '#/m/' + pad(last.n) : '#/m/00' },
+          ctxBase.h('div', { class: 'path-top' }, ctxBase.h('span', { class: 'eyebrow' }, 'The deep dive'), ctxBase.h('span', { class: 'path-arrow', 'aria-hidden': 'true' }, '↗')),
+          ctxBase.h('h3', null, 'Get inside the process.'),
+          ctxBase.h('p', null, 'The mechanisms, machines and tradeoffs. Work through detailed explanations, interactive experiments and quizzes.'),
+          ctxBase.h('div', { class: 'path-bottom' }, ctxBase.h('span', null, mods.length + ' modules · At your own pace'), ctxBase.h('b', null, last ? 'Continue module ' + pad(last.n) + ' →' : 'Start the deep dive →')))));
+    art.append(paths);
+    const curriculum = ctxBase.h('section', { class: 'home-curriculum' },
+      ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '02 / THE COMPLETE ATLAS'), ctxBase.h('h2', null, 'One connected story.')));
+    const surveyDetails = ctxBase.h('details', { class: 'curriculum-part' });
+    surveyDetails.append(ctxBase.h('summary', null, ctxBase.h('span', { class: 'part-index' }, 'S'), ctxBase.h('span', null, ctxBase.h('b', null, 'The survey'), ctxBase.h('small', null, 'Ten chapters to connect the whole chain')), ctxBase.h('span', { class: 'expand-sign', 'aria-hidden': 'true' }, '+')));
+    const surveyGrid = ctxBase.h('div', { class: 'mod-grid' }); survey.forEach(m => surveyGrid.append(courseCard(m, true))); surveyDetails.append(surveyGrid); curriculum.append(surveyDetails);
     for (const part of C.parts) {
-      const grid = ctxBase.h('div', { class: 'mod-grid' });
-      for (const n of part.modules) {
-        const m = byN.get(n); if (!m) continue;
-        const q = state.quiz[n];
-        grid.append(ctxBase.h('a', { class: 'mod-card' + (passed(n) ? ' passed' : ''), href: '#/m/' + pad(n) },
-          ctxBase.h('span', { class: 'n' }, pad(n)),
-          ctxBase.h('span', null, ctxBase.h('span', { class: 't' }, m.title), ctxBase.h('span', { class: 'm' }, Math.max(1, Math.round(m.words / 230)) + ' min read' + (state.read[n] ? ' · read' : '') + (q ? ` · quiz ${q.score}/${q.total}` : '')))));
-      }
-      parts.append(ctxBase.h('div', { class: 'part-card' }, ctxBase.h('h3', null, ctxBase.h('b', null, 'Part ' + part.id), part.title), grid));
+      const group = ctxBase.h('details', { class: 'curriculum-part', open: part.id === 'I' ? '' : null });
+      group.append(ctxBase.h('summary', null, ctxBase.h('span', { class: 'part-index' }, part.id), ctxBase.h('span', null, ctxBase.h('b', null, part.title), ctxBase.h('small', null, part.modules.length + (part.modules.length === 1 ? ' module' : ' modules'))), ctxBase.h('span', { class: 'expand-sign', 'aria-hidden': 'true' }, '+')));
+      const grid = ctxBase.h('div', { class: 'mod-grid' }); part.modules.forEach(n => { const m=byN.get(n); if(m) grid.append(courseCard(m, false)); });
+      group.append(grid); curriculum.append(group);
     }
-    art.append(parts);
+    art.append(curriculum);
+    art.append(ctxBase.h('footer', { class: 'atlas-footer' }, ctxBase.h('b', null, 'Sand to GPU'), ctxBase.h('p', null, 'A self-study field guide. Read, experiment, connect the dots.'), ctxBase.h('a', { href: '#/m/21' }, 'Glossary & reference ↗')));
     main.append(art);
-    mountWidgets(main);
+    // The home-page jump is local scrolling, not a course route.
+    $('.text-link', hero).addEventListener('click', e => { e.preventDefault(); paths.scrollIntoView({ block: 'start' }); });
     window.scrollTo(0, 0);
   }
-  function stat(v, l) { return ctxBase.h('div', null, ctxBase.h('b', null, String(v)), ctxBase.h('span', null, l)); }
 
   // ---------- module ----------
   function renderModule(n, anchor, track) {
@@ -217,14 +237,17 @@
     const main = $('#main'); main.innerHTML = '';
     const idx = list.indexOf(m);
     const prev = list[idx - 1], next = list[idx + 1];
-    const art = ctxBase.h('div', { class: 'article' });
+    const art = ctxBase.h('article', { class: 'article' });
     const eyebrowLeft = isSurvey ? 'Survey track · chapter ' + n + ' of ' + list.length : 'Part ' + m.part + ' · ' + (part ? part.title : '');
     const eyebrowRight = (isSurvey ? '' : 'Module ' + pad(n) + ' · ') + Math.max(1, Math.round(m.words / 230)) + ' min read';
     art.append(ctxBase.h('header', { class: 'mod-head' },
       ctxBase.h('div', { class: 'eyebrow' }, eyebrowLeft, ctxBase.h('span', { class: 'dot' }), ctxBase.h('span', { class: 'meta' }, eyebrowRight)),
-      ctxBase.h('h1', { class: 'title' }, m.title)));
+      ctxBase.h('div', { class: 'chapter-intro' }, ctxBase.h('div', null, ctxBase.h('h1', { class: 'title' }, m.title), ctxBase.h('p', { class: 'chapter-deck' }, Shell.description(n, isSurvey))), ctxBase.h('div', { class: 'chapter-object', html: Shell.icon(!isSurvey && n === 0 ? 'package' : Shell.stages[Shell.stageFor(n, isSurvey)].icon) })),
+      ctxBase.h('div', { class: 'chapter-stage', html: Shell.ribbon(n, isSurvey) })));
     const prose = ctxBase.h('div', { class: 'prose', html: m.html });
-    art.append(prose);
+    decorateProse(prose);
+    const chapterTools = renderChapterTools(m, prose, base, n);
+    art.append(chapterTools, prose);
     if (m.quiz && m.quiz.questions && m.quiz.questions.length) art.append(renderQuiz(m));
     const label = x => isSurvey ? 'S' + x.n : pad(x.n);
     const pn = ctxBase.h('nav', { class: 'prevnext' });
@@ -234,42 +257,76 @@
     else pn.append(ctxBase.h('span'));
     art.append(pn);
     main.append(art);
-    // rail
-    const rail = $('#rail'); rail.innerHTML = '';
-    if (m.toc.length) {
-      const toc = ctxBase.h('div', { class: 'toc' });
-      m.toc.forEach(t => toc.append(ctxBase.h('a', { href: base + pad(n) + '/' + t.id, class: 'd' + t.depth, 'data-id': t.id }, t.text)));
-      rail.append(ctxBase.h('h5', null, isSurvey ? 'In this chapter' : 'In this module'), toc);
-    }
-    if (m.keyNumbers && m.keyNumbers.length) {
-      const kn = ctxBase.h('div', { class: 'kn' }, ctxBase.h('h5', null, 'Key numbers'));
-      m.keyNumbers.slice(0, 8).forEach(k => kn.append(ctxBase.h('div', null, ctxBase.h('span', null, k.k), ctxBase.h('span', null, k.v))));
-      rail.append(kn);
-    }
+    renderChapterRail(m, base, n, isSurvey);
     mountWidgets(main);
     // intra-module anchors
     $$('a[href^="#"]', prose).forEach(a => { const h = a.getAttribute('href'); if (!h.startsWith('#/')) a.setAttribute('href', base + pad(n) + '/' + h.slice(1)); });
-    if (anchor) { const el = document.getElementById(anchor); if (el) { setTimeout(() => el.scrollIntoView({ block: 'start' }), 0); } }
+    if (anchor) scrollToAnchor(anchor);
     else window.scrollTo(0, 0);
     watchScroll(m, isSurvey);
   }
 
-  // scroll spy + read tracking
+  // ---------- reading components ----------
+  function decorateProse(prose) {
+    let sectionKind = '';
+    Array.from(prose.children).forEach(el => {
+      if (el.tagName === 'H2') {
+        const text = el.textContent.toLowerCase();
+        sectionKind = /further reading|references|sources/.test(text) ? 'reference-content' : /summary|key takeaways/.test(text) ? 'summary-content' : /misconception/.test(text) ? 'misconception-content' : '';
+        el.classList.add('section-heading');
+      }
+      if (sectionKind) el.classList.add(sectionKind);
+    });
+  }
+  function renderChapterTools(m, prose, base, n) {
+    const visuals = $$('.section-figure, .widget[data-widget]', prose);
+    visuals.forEach((figure, i) => { if (!figure.id) figure.id = 'visual-' + (i + 1); });
+    const bar = ctxBase.h('div', { class: 'chapter-tools' });
+    const outline = ctxBase.h('details', { class: 'chapter-outline' });
+    outline.append(ctxBase.h('summary', null, 'In this chapter', ctxBase.h('span', { 'aria-hidden': 'true' }, '⌄')));
+    const links = ctxBase.h('nav', { 'aria-label': 'Chapter sections' });
+    m.toc.filter(t => t.depth === 2).forEach(t => links.append(ctxBase.h('a', { href: base + pad(n) + '/' + t.id }, t.text)));
+    outline.append(links); bar.append(outline);
+    if (visuals.length) bar.append(ctxBase.h('a', { class: 'visual-jump', href: base + pad(n) + '/' + visuals[0].id }, ctxBase.h('span', { class: 'visual-symbol', 'aria-hidden': 'true' }, '◈'), visuals.length + ' visuals to explore', ctxBase.h('span', { 'aria-hidden': 'true' }, '↓')));
+    bar.append(ctxBase.h('div', { class: 'reading-status' }, ctxBase.h('span', { class: 'reading-label' }, 'Reading progress'), ctxBase.h('b', { id: 'reading-percent' }, '0%')));
+    return bar;
+  }
+  function renderChapterRail(m, base, n, isSurvey) {
+    const rail = $('#rail'); rail.innerHTML = '';
+    rail.append(ctxBase.h('div', { class: 'rail-top' }, ctxBase.h('h5', null, isSurvey ? 'In this chapter' : 'In this module'), ctxBase.h('span', null, m.toc.filter(t => t.depth === 2).length + ' sections')));
+    const toc=ctxBase.h('nav', { class: 'toc', 'aria-label': 'On this page' });
+    let group = null, groupId = '', index=0;
+    m.toc.forEach(t => {
+      if (t.depth === 2 || !group) { groupId=t.id; group=ctxBase.h('div', { class: 'toc-group', 'data-section': groupId }); toc.append(group); index++; }
+      group.append(ctxBase.h('a', { href: base + pad(n) + '/' + t.id, class: 'd' + t.depth, 'data-id': t.id, 'data-section': groupId }, t.depth===2 ? ctxBase.h('span', { class:'toc-number' }, pad(index)) : null, ctxBase.h('span',null,t.text)));
+    }); rail.append(toc);
+    rail.append(ctxBase.h('div', { class: 'rail-bottom' }, ctxBase.h('span', null, 'Follow your curiosity.'), ctxBase.h('a', { href: '#/home' }, 'Return to the atlas ↗')));
+  }
+  // Scroll spy uses document positions because figures and prose may contain nested elements.
   let spyHandler = null;
+  let spyFrame = null;
   function watchScroll(m, isSurvey) {
     if (spyHandler) window.removeEventListener('scroll', spyHandler);
-    const heads = () => $$('.prose h2[id], .prose h3[id]');
-    spyHandler = () => {
-      const y = window.scrollY + 90;
-      let cur = null; heads().forEach(h => { if (h.offsetTop <= y) cur = h.id; });
-      $$('#rail .toc a').forEach(a => a.classList.toggle('active', a.dataset.id === cur));
-      const doc = document.documentElement;
-      const nearEnd = (window.scrollY + window.innerHeight) / doc.scrollHeight > 0.9;
-      if (isSurvey) { if (!state.sread[m.n] && nearEnd) { state.sread[m.n] = true; store.set('sread', state.sread); renderSidebar(); $$('.sidebar a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#/s/' + pad(m.n))); } return; }
-      if (!state.read[m.n] && nearEnd) { state.read[m.n] = true; store.set('read', state.read); renderProgress(); }
-    };
-    window.addEventListener('scroll', spyHandler, { passive: true });
-    spyHandler();
+    const knownHeadings = new Set(m.toc.map(heading => heading.id));
+    const heads = $$('.prose h2[id], .prose h3[id]').filter(heading => knownHeadings.has(heading.id));
+    let queued=false;
+    function update() {
+      queued=false; spyFrame=null;
+      const y = window.scrollY + 140;
+      let cur = heads[0]?.id, section=heads.find(h=>h.tagName==='H2')?.id;
+      heads.forEach(h => { if (h.getBoundingClientRect().top + window.scrollY <= y) { cur=h.id; if(h.tagName==='H2')section=h.id; } });
+      $$('#rail .toc a').forEach(a => { const active=a.dataset.id===cur; a.classList.toggle('active',active); if(active)a.setAttribute('aria-current','location'); else a.removeAttribute('aria-current'); });
+      $$('#rail .toc-group').forEach(g=>g.classList.toggle('in-view',g.dataset.section===section));
+      const doc=document.documentElement;
+      const percentage=Math.min(100,Math.max(0,Math.round(100*window.scrollY/Math.max(1,doc.scrollHeight-window.innerHeight))));
+      const progress=$('#reading-percent'); if(progress)progress.textContent=percentage+'%';
+      document.documentElement.style.setProperty('--reading-progress',percentage+'%');
+      const nearEnd=(window.scrollY+window.innerHeight)/doc.scrollHeight>0.9;
+      if(isSurvey) { if(!state.sread[m.n]&&nearEnd){state.sread[m.n]=true;store.set('sread',state.sread);renderSidebar();$$('.sidebar a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#/s/'+pad(m.n)));} return; }
+      if(!state.read[m.n]&&nearEnd){state.read[m.n]=true;store.set('read',state.read);renderProgress();}
+    }
+    spyHandler=()=>{if(!queued){queued=true;spyFrame=requestAnimationFrame(update);}};
+    window.addEventListener('scroll',spyHandler,{passive:true});update();
   }
 
   // ---------- quiz ----------
@@ -277,7 +334,7 @@
     const qs = m.quiz.questions;
     const box = ctxBase.h('section', { class: 'quiz' });
     const score = ctxBase.h('span', { class: 'score' });
-    box.append(ctxBase.h('div', { class: 'quiz-head' }, ctxBase.h('h3', null, 'Check your understanding'), score));
+    box.append(ctxBase.h('div', { class: 'quiz-head' }, ctxBase.h('div', null, ctxBase.h('span', { class: 'eyebrow' }, 'PUT IT TOGETHER'), ctxBase.h('h3', null, 'Check your understanding')), score));
     const answered = new Map();
     const saved = state.quiz[m.n];
     const verdict = ctxBase.h('span', { class: 'verdict' });
@@ -377,6 +434,7 @@
   const mobileSidebar = window.matchMedia('(max-width: 860px)');
   function closeSidebar() { $('#sidebar').classList.remove('open'); $('#scrim').classList.remove('show'); $('#sidebar').inert = mobileSidebar.matches; $('#menu').setAttribute('aria-expanded', 'false'); }
   function setupChrome() {
+    $('.skip-link').addEventListener('click', e => { e.preventDefault(); $('#main').focus(); $('#main').scrollIntoView(); });
     $('#menu').addEventListener('click', () => { const open = $('#sidebar').classList.toggle('open'); $('#scrim').classList.toggle('show', open); $('#sidebar').inert = !open && mobileSidebar.matches; $('#menu').setAttribute('aria-expanded', String(open)); });
     mobileSidebar.addEventListener('change', closeSidebar);
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('#sidebar').classList.contains('open')) { closeSidebar(); $('#menu').focus(); } });

@@ -1,0 +1,444 @@
+[
+  {
+    "section": "the-building-why-a-fab-is-a-vertical-sandwich",
+    "family": "layers",
+    "title": "The cleanroom sits inside a service stack",
+    "caption": "Air handling, vibration control and utilities occupy separate vertical zones around the process floor. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "clean",
+        "label": "Air supply above",
+        "detail": "Filtered air enters from the ceiling plenum."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Process floor",
+        "detail": "Tools operate on a mechanically stable deck."
+      },
+      {
+        "glyph": "gas",
+        "label": "Subfab services",
+        "detail": "Pumps, exhaust and supporting equipment sit below."
+      },
+      {
+        "glyph": "material",
+        "label": "Structural foundation",
+        "detail": "The building controls vibration and supports heavy equipment."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "The Building: Why a Fab Is a Vertical Sandwich"
+    }
+  },
+  {
+    "section": "cleanroom-classes-and-airflow",
+    "family": "apparatus",
+    "title": "Move particles away from the wafer environment",
+    "caption": "Filtered downward airflow dilutes and carries contamination toward return paths; room classification is only one part of wafer protection. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "clean",
+        "label": "Ceiling filtration",
+        "detail": "Filters remove particles from supplied air."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Controlled work zone",
+        "detail": "Air moves past tools and protected wafer interfaces."
+      },
+      {
+        "glyph": "queue",
+        "label": "Return path",
+        "detail": "Air leaves through the floor and recirculation system."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "Cleanroom Classes and Airflow"
+    }
+  },
+  {
+    "section": "the-foup-and-the-mini-environment",
+    "family": "flow",
+    "title": "Protection continues through the wafer handoff",
+    "caption": "A FOUP and a tool mini-environment protect successive parts of wafer handling inside the cleanroom; they are not layers stacked above the wafer. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "package",
+        "label": "Closed FOUP",
+        "detail": "A carrier protects wafers between processing steps."
+      },
+      {
+        "glyph": "clean",
+        "label": "Controlled docking",
+        "detail": "The carrier connects to the tool through a protected interface."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Tool mini-environment",
+        "detail": "Local controls protect the wafer during transfer to the process tool."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "The FOUP and the Mini-Environment"
+    }
+  },
+  {
+    "section": "amhs-how-100-000-wafers-a-month-actually-move",
+    "family": "flow",
+    "title": "A lot travels between service points",
+    "caption": "The AMHS carries FOUPs while dispatch software selects destinations; a stocker buffers lots between operations. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "package",
+        "label": "FOUP at load port",
+        "detail": "A carrier holds the wafers as one transport unit."
+      },
+      {
+        "glyph": "queue",
+        "label": "Overhead vehicle",
+        "detail": "The handling system moves it along the rail network."
+      },
+      {
+        "glyph": "queue",
+        "label": "Stocker or destination",
+        "detail": "The lot waits or reaches the next tool."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Tool handoff",
+        "detail": "Docking enables controlled wafer transfer."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "AMHS: How 100,000 Wafers a Month Actually Move"
+    }
+  },
+  {
+    "section": "the-process-flow-1-000-1-500-steps-revisited-dozens-of-times",
+    "family": "cycle",
+    "title": "A fab route repeatedly revisits tool families",
+    "caption": "The wafer returns to deposition, patterning and removal with different recipes; the repeating route creates a queueing network. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Deposition visit",
+        "detail": "Add the material required by this layer.",
+        "variant": "cvd"
+      },
+      {
+        "glyph": "mask",
+        "label": "Patterning visit",
+        "detail": "Define where the next operation acts.",
+        "variant": "grid"
+      },
+      {
+        "glyph": "etch",
+        "label": "Removal visit",
+        "detail": "Transfer or refine the patterned geometry.",
+        "variant": "anisotropic"
+      },
+      {
+        "glyph": "test",
+        "label": "Measurement visit",
+        "detail": "Check the process result before the next loop.",
+        "variant": "instrument"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "The Process Flow: 1,000–1,500 Steps, Revisited Dozens of Times"
+    }
+  },
+  {
+    "section": "tools-counts-cost-utilization-clustering",
+    "family": "branch",
+    "title": "Utilization is limited by more than purchase price",
+    "caption": "Installed tools need uptime, a suitable recipe mix and available upstream work to produce qualified wafers. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "furnace",
+        "label": "Installed equipment",
+        "detail": "Tool capacity defines the nominal processing resource."
+      },
+      {
+        "glyph": "clean",
+        "label": "Maintenance and recovery",
+        "detail": "Downtime reduces available production time."
+      },
+      {
+        "glyph": "queue",
+        "label": "Recipe and lot mix",
+        "detail": "Work must match the tool's qualified capabilities."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Effective output",
+        "detail": "The combination determines usable process capacity."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "Tools: Counts, Cost, Utilization, Clustering"
+    }
+  },
+  {
+    "section": "the-lot-the-recipe-and-the-software-stack",
+    "family": "flow",
+    "title": "A route becomes executable tool instructions",
+    "caption": "The manufacturing system tracks the lot while dispatch and equipment control apply the correct recipe and collect history. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "package",
+        "label": "Lot identity",
+        "detail": "Wafers share a product, route and tracked history."
+      },
+      {
+        "glyph": "design",
+        "label": "Manufacturing system",
+        "detail": "Software selects and authorizes the next operation."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Tool recipe",
+        "detail": "Controlled parameters implement the process step."
+      },
+      {
+        "glyph": "test",
+        "label": "Recorded results",
+        "detail": "Equipment data and measurements update the lot history.",
+        "variant": "instrument"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "The Lot, the Recipe, and the Software Stack"
+    }
+  },
+  {
+    "section": "people",
+    "family": "branch",
+    "title": "Different teams control different sources of variation",
+    "caption": "A fab depends on coordinated equipment, process and production work; the roles converge on repeatable output. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "clean",
+        "label": "Equipment teams",
+        "detail": "Maintain tool condition and recover failures."
+      },
+      {
+        "glyph": "test",
+        "label": "Process engineers",
+        "detail": "Qualify recipes and interpret process variation."
+      },
+      {
+        "glyph": "queue",
+        "label": "Production teams",
+        "detail": "Coordinate lots, priorities and daily execution."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Stable manufacturing",
+        "detail": "The combined work sustains qualified production."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "People"
+    }
+  },
+  {
+    "section": "utilities-a-fab-is-a-chemical-plant",
+    "family": "branch",
+    "title": "Every tool depends on a utility network",
+    "caption": "Power, water, gas and exhaust systems are production inputs, not incidental building services. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wires",
+        "label": "Electrical supply",
+        "detail": "Tools and environmental systems require continuous power."
+      },
+      {
+        "glyph": "clean",
+        "label": "Water systems",
+        "detail": "Process rinses and cooling serve different water needs."
+      },
+      {
+        "glyph": "gas",
+        "label": "Gases and exhaust",
+        "detail": "Delivery and abatement support controlled chemistry."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Process equipment",
+        "detail": "Utility reliability constrains manufacturing availability."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "Utilities: A Fab Is a Chemical Plant"
+    }
+  },
+  {
+    "section": "contamination-sources-and-gowning",
+    "family": "branch",
+    "title": "Contamination reaches the wafer through several routes",
+    "caption": "Gowning reduces human emissions, but tools, chemicals and ambient molecules also need control. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "People and garments",
+        "detail": "Movement releases particles and fibers."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Tool surfaces",
+        "detail": "Wear and process residues can become contamination."
+      },
+      {
+        "glyph": "gas",
+        "label": "Chemical environment",
+        "detail": "Airborne molecules and input impurities reach surfaces."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Wafer exposure",
+        "detail": "Local barriers and clean handling interrupt these paths."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "Contamination Sources and Gowning"
+    }
+  },
+  {
+    "section": "tsmc-s-fab-organization",
+    "family": "network",
+    "title": "A multi-phase fab shares a site backbone",
+    "caption": "Separate manufacturing phases can share utility infrastructure and connect through transport bridges; this is a conceptual campus layout. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Shared utilities",
+        "detail": "Site infrastructure supplies separate manufacturing phases."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Production phase A",
+        "detail": "One cleanroom block provides qualified process capacity."
+      },
+      {
+        "glyph": "queue",
+        "label": "Transport bridge",
+        "detail": "Automated material handling moves lots between connected phases."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Production phase B",
+        "detail": "Another block can be constructed and ramped separately."
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "utilities"
+      },
+      {
+        "from": 0,
+        "to": 3,
+        "label": "utilities"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "lot transport"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "lot transport"
+      }
+    ],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "TSMC's Fab Organization"
+    }
+  },
+  {
+    "section": "bringing-up-a-node",
+    "family": "flow",
+    "title": "A new node advances through evidence gates",
+    "caption": "Architecture choices become integrated recipes, then yield learning and qualified production; construction alone does not complete a node. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "design",
+        "label": "Pathfinding",
+        "detail": "Explore device and integration options."
+      },
+      {
+        "glyph": "transistor",
+        "label": "Process development",
+        "detail": "Turn the chosen architecture into an integrated flow.",
+        "variant": "gaa"
+      },
+      {
+        "glyph": "test",
+        "label": "Yield learning",
+        "detail": "Find defects and improve process control.",
+        "variant": "grid"
+      },
+      {
+        "glyph": "furnace",
+        "label": "Production ramp",
+        "detail": "Expand qualified output after the process is ready."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "Bringing Up a Node"
+    }
+  },
+  {
+    "section": "fab-economics",
+    "family": "compare",
+    "title": "Fixed costs make unused capacity expensive",
+    "caption": "Equipment costs continue while output changes; maximizing load must still respect queueing delays and process quality. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "furnace",
+        "label": "Fixed installed cost",
+        "detail": "Equipment and buildings incur time-based costs."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Qualified wafer output",
+        "detail": "Good production spreads those costs over usable product."
+      },
+      {
+        "glyph": "queue",
+        "label": "Congestion tradeoff",
+        "detail": "Very high loading can lengthen waits and cycle time."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/05-inside-a-fab.md",
+      "heading": "Fab Economics"
+    }
+  }
+]

@@ -1,0 +1,428 @@
+[
+  {
+    "section": "why-single-crystal-and-why",
+    "family": "compare",
+    "title": "A continuous lattice avoids grain-boundary interruptions",
+    "caption": "Crystal orientation describes the lattice direction presented to processing; a polished appearance alone does not imply a single crystal. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Single crystal",
+        "detail": "One continuous lattice extends through the substrate.",
+        "variant": "lattice"
+      },
+      {
+        "glyph": "material",
+        "label": "Multiple grains",
+        "detail": "Boundaries interrupt crystal order and can trap charge.",
+        "variant": "polycrystal"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Oriented surface",
+        "detail": "A specified crystal plane becomes the device-building surface."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "Why Single Crystal, and Why <100>"
+    }
+  },
+  {
+    "section": "a-brief-history-in-three-names",
+    "family": "flow",
+    "title": "From crystal pulling to semiconductor manufacturing",
+    "caption": "The historical progression links a growth method, semiconductor adaptation and dislocation control rather than a sudden single invention. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Czochralski pulling",
+        "detail": "A seed draws a crystal out of a melt."
+      },
+      {
+        "glyph": "transistor",
+        "label": "Teal's semiconductor work",
+        "detail": "Single-crystal material becomes central to electronics."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Dash necking",
+        "detail": "A thin neck lets dislocations escape before body growth."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "A Brief History in Three Names"
+    }
+  },
+  {
+    "section": "anatomy-of-a-300-mm-cz-puller",
+    "family": "apparatus",
+    "title": "A seed, a melt and a controlled hot zone",
+    "caption": "The pull shaft extracts crystal while the heater, crucible and gas environment maintain growth conditions. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Pull shaft and seed",
+        "detail": "Rotation and upward motion guide crystal growth."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Melt in quartz",
+        "detail": "Liquid silicon sits inside a supported crucible.",
+        "variant": "cz-puller"
+      },
+      {
+        "glyph": "heat",
+        "label": "Heater and insulation",
+        "detail": "The hot zone shapes the temperature field.",
+        "variant": "thermal"
+      },
+      {
+        "glyph": "gas",
+        "label": "Argon environment",
+        "detail": "Gas management controls the chamber atmosphere."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "Anatomy of a 300 mm CZ Puller"
+    }
+  },
+  {
+    "section": "the-cz-recipe-step-by-step",
+    "family": "flow",
+    "title": "Establish a clean crystal before growing the useful body",
+    "caption": "Necking, shoulder formation and body growth serve different purposes; the final tail separates the crystal from the melt. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "furnace",
+        "label": "Melt and seed",
+        "detail": "Prepare the melt and establish crystal contact."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Neck and shoulder",
+        "detail": "Remove dislocations, then expand the diameter."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Constant-diameter body",
+        "detail": "Maintain the useful crystal section."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Tail and cooldown",
+        "detail": "Taper, detach and cool the grown ingot."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "The CZ Recipe, Step by Step"
+    }
+  },
+  {
+    "section": "point-defects-v-g-and-the-voronkov-theory",
+    "family": "compare",
+    "title": "Growth rate and thermal gradient change the defect balance",
+    "caption": "The v/G framework describes competing vacancy and interstitial populations; the figure does not define a universal operating threshold. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Vacancy-rich regime",
+        "detail": "Missing lattice atoms can cluster during cooling."
+      },
+      {
+        "glyph": "heat",
+        "label": "Balance at the interface",
+        "detail": "Pulling rate and temperature gradient act together."
+      },
+      {
+        "glyph": "material",
+        "label": "Interstitial-rich regime",
+        "detail": "Extra silicon atoms can also form extended defects."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "Point Defects, v/G, and the Voronkov Theory"
+    }
+  },
+  {
+    "section": "oxygen-and-carbon",
+    "family": "branch",
+    "title": "Trace the impurity path through the hot zone",
+    "caption": "Oxygen originates largely from quartz; carbon-containing hot-zone reactions provide another route into the growing crystal. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "Quartz wall",
+        "detail": "Contact with molten silicon introduces oxygen."
+      },
+      {
+        "glyph": "heat",
+        "label": "Graphite surroundings",
+        "detail": "Hot-zone chemistry can introduce carbon-bearing species."
+      },
+      {
+        "glyph": "gas",
+        "label": "Gas transport",
+        "detail": "Evaporation and convection redistribute species."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Growing interface",
+        "detail": "A fraction of impurities becomes incorporated into the crystal."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "Oxygen and Carbon"
+    }
+  },
+  {
+    "section": "magnetic-czochralski",
+    "family": "apparatus",
+    "title": "A magnetic field calms an electrically conducting melt",
+    "caption": "Magnetic control damps melt motion, influencing heat and impurity transport at the growth interface. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "furnace",
+        "label": "Conducting silicon melt",
+        "detail": "Convection moves heat and dissolved impurities.",
+        "variant": "cz-puller"
+      },
+      {
+        "glyph": "wires",
+        "label": "Applied magnetic field",
+        "detail": "Electromagnetic forces oppose parts of the flow."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Growth interface",
+        "detail": "A steadier environment helps control crystal uniformity."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "Magnetic Czochralski"
+    }
+  },
+  {
+    "section": "the-ingot-size-mass-and-time",
+    "family": "flow",
+    "title": "One furnace cycle contains more than pulling time",
+    "caption": "Charging, melting, growth and cooldown occupy equipment even when useful body length is not increasing. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "Charge and melt",
+        "detail": "Prepare liquid silicon and stabilize the hot zone."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Grow the body",
+        "detail": "Useful cylinder length accumulates gradually."
+      },
+      {
+        "glyph": "heat",
+        "label": "Cool and unload",
+        "detail": "The crystal must cool before handling."
+      },
+      {
+        "glyph": "clean",
+        "label": "Turn around the tool",
+        "detail": "Prepare the chamber for the next run."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "The Ingot: Size, Mass, and Time"
+    }
+  },
+  {
+    "section": "the-heavy-crystal-problem",
+    "family": "apparatus",
+    "title": "A massive body hangs through a narrow neck",
+    "caption": "The thin neck removes dislocations during growth but becomes a mechanical load path as the ingot gets heavier. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wires",
+        "label": "Pulling mechanism",
+        "detail": "The shaft carries the suspended load."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Dash neck",
+        "detail": "The narrow section concentrates tensile stress."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Crystal body",
+        "detail": "Increasing mass increases the supported weight."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "The Heavy-Crystal Problem"
+    }
+  },
+  {
+    "section": "yield-what-gets-thrown-away",
+    "family": "compare",
+    "title": "Not every kilogram becomes a prime wafer",
+    "caption": "The useful ingot body is only part of the original charge; geometry and electrical specifications both remove material. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "furnace",
+        "label": "Residual melt",
+        "detail": "Some silicon remains in the crucible."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Crown and tail",
+        "detail": "Growth-transition regions are cropped off."
+      },
+      {
+        "glyph": "test",
+        "label": "Out-of-spec body",
+        "detail": "Electrical or defect screening can reject sections."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Qualified cylinder",
+        "detail": "Accepted material proceeds to slicing."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "Yield: What Gets Thrown Away"
+    }
+  },
+  {
+    "section": "float-zone",
+    "family": "apparatus",
+    "title": "Float zone removes the crucible from the melt",
+    "caption": "An induction-heated liquid zone travels through a feed rod; surface tension holds the small molten region between solid sections. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Polycrystalline feed rod",
+        "detail": "Solid feed supplies the moving molten zone."
+      },
+      {
+        "glyph": "heat",
+        "label": "Induction coil and zone",
+        "detail": "Localized heating melts a narrow region.",
+        "variant": "float-zone"
+      },
+      {
+        "glyph": "crystal",
+        "label": "Seeded crystal below",
+        "detail": "Controlled solidification creates the single crystal."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "Float Zone"
+    }
+  },
+  {
+    "section": "450-mm-the-diameter-that-did-not-happen",
+    "family": "branch",
+    "title": "A larger wafer requires a coordinated equipment transition",
+    "caption": "Area gains alone do not justify a diameter transition; compatible handling, process tools and investment must arrive together. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wafer",
+        "label": "Larger substrate",
+        "detail": "More surface area changes the cost-per-wafer opportunity."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Process equipment",
+        "detail": "Chambers and processes require redesign and qualification."
+      },
+      {
+        "glyph": "queue",
+        "label": "Handling ecosystem",
+        "detail": "Carriers and automation must support the format."
+      },
+      {
+        "glyph": "design",
+        "label": "Industry adoption",
+        "detail": "The economic decision depends on the whole ecosystem."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "450 mm: The Diameter That Did Not Happen"
+    }
+  },
+  {
+    "section": "epi-versus-bulk-what-the-crystal-grower-is-growing-for",
+    "family": "layers",
+    "title": "The active layer can differ from the bulk substrate",
+    "caption": "An epitaxial wafer adds a controlled crystalline layer onto a separately specified supporting substrate. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Epitaxial device layer",
+        "detail": "A controlled crystalline surface layer inherits the substrate orientation."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Bulk substrate",
+        "detail": "The ingot supplies the supporting crystal and its electrical specification."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "Epi Versus Bulk: What the Crystal Grower Is Growing For"
+    }
+  },
+  {
+    "section": "solar-cz-same-physics-different-economics",
+    "family": "compare",
+    "title": "One growth mechanism, different optimization targets",
+    "caption": "Electronic and photovoltaic customers use crystal growth under different quality, geometry and throughput priorities. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "transistor",
+        "label": "Electronic CZ",
+        "detail": "Defect and electrical uniformity requirements constrain growth.",
+        "variant": "cz-puller"
+      },
+      {
+        "glyph": "light",
+        "label": "Solar CZ",
+        "detail": "High silicon throughput and cell geometry guide optimization.",
+        "variant": "cz-puller"
+      },
+      {
+        "glyph": "furnace",
+        "label": "Recharge operation",
+        "detail": "Additional feed can extend production from a hot crucible.",
+        "variant": "cz-puller"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/02-crystal-growth.md",
+      "heading": "Solar CZ: Same Physics, Different Economics"
+    }
+  }
+]

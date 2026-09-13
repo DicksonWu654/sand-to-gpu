@@ -1,0 +1,1666 @@
+[
+  {
+    "track": "m",
+    "lesson": 0,
+    "title": "The Whole Supply Chain on One Page",
+    "source": "course/modules/00-overview.md",
+    "sections": [
+      {
+        "id": "what-a-chip-is-physically",
+        "heading": "What a chip is, physically"
+      },
+      {
+        "id": "the-chain-in-one-table",
+        "heading": "The Chain in One Table"
+      },
+      {
+        "id": "stage-by-stage",
+        "heading": "Stage by Stage"
+      },
+      {
+        "id": "money-flow-and-industry-structure",
+        "heading": "Money Flow and Industry Structure"
+      },
+      {
+        "id": "the-three-chokepoints",
+        "heading": "The Three Chokepoints"
+      },
+      {
+        "id": "master-process-flow-sand-to-rack-in-60-steps",
+        "heading": "Master Process Flow: Sand to Rack in ~60 Steps"
+      },
+      {
+        "id": "how-to-read-this-course",
+        "heading": "How to Read This Course"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 1,
+    "title": "Sand to Polysilicon",
+    "source": "course/modules/01-sand-to-polysilicon.md",
+    "sections": [
+      {
+        "id": "1-why-purity-is-the-whole-game",
+        "heading": "1. Why Purity Is the Whole Game"
+      },
+      {
+        "id": "2-the-rock-quartz-and-quartzite",
+        "heading": "2. The Rock: Quartz and Quartzite"
+      },
+      {
+        "id": "3-carbothermic-reduction-the-submerged-arc-furnace",
+        "heading": "3. Carbothermic Reduction: The Submerged-Arc Furnace"
+      },
+      {
+        "id": "4-the-siemens-process",
+        "heading": "4. The Siemens Process"
+      },
+      {
+        "id": "5-fbr-granular-polysilicon-the-silane-route",
+        "heading": "5. FBR Granular Polysilicon: the Silane Route"
+      },
+      {
+        "id": "6-grades-electronic-grade-vs-solar-grade",
+        "heading": "6. Grades: Electronic Grade vs Solar Grade"
+      },
+      {
+        "id": "7-how-purity-is-measured",
+        "heading": "7. How Purity Is Measured"
+      },
+      {
+        "id": "8-how-much-polysilicon-a-wafer-needs",
+        "heading": "8. How Much Polysilicon a Wafer Needs"
+      },
+      {
+        "id": "9-economics-the-china-boom-and-xinjiang",
+        "heading": "9. Economics, the China Boom, and Xinjiang"
+      },
+      {
+        "id": "10-the-other-ultra-pure-feedstocks-crucibles-and-graphite",
+        "heading": "10. The Other Ultra-Pure Feedstocks: Crucibles and Graphite"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 2,
+    "title": "Crystal Growth: Czochralski and Float Zone",
+    "source": "course/modules/02-crystal-growth.md",
+    "sections": [
+      {
+        "id": "why-single-crystal-and-why",
+        "heading": "Why Single Crystal, and Why <100>"
+      },
+      {
+        "id": "a-brief-history-in-three-names",
+        "heading": "A Brief History in Three Names"
+      },
+      {
+        "id": "anatomy-of-a-300-mm-cz-puller",
+        "heading": "Anatomy of a 300 mm CZ Puller"
+      },
+      {
+        "id": "the-cz-recipe-step-by-step",
+        "heading": "The CZ Recipe, Step by Step"
+      },
+      {
+        "id": "point-defects-v-g-and-the-voronkov-theory",
+        "heading": "Point Defects, v/G, and the Voronkov Theory"
+      },
+      {
+        "id": "oxygen-and-carbon",
+        "heading": "Oxygen and Carbon"
+      },
+      {
+        "id": "magnetic-czochralski",
+        "heading": "Magnetic Czochralski"
+      },
+      {
+        "id": "the-ingot-size-mass-and-time",
+        "heading": "The Ingot: Size, Mass, and Time"
+      },
+      {
+        "id": "the-heavy-crystal-problem",
+        "heading": "The Heavy-Crystal Problem"
+      },
+      {
+        "id": "yield-what-gets-thrown-away",
+        "heading": "Yield: What Gets Thrown Away"
+      },
+      {
+        "id": "float-zone",
+        "heading": "Float Zone"
+      },
+      {
+        "id": "450-mm-the-diameter-that-did-not-happen",
+        "heading": "450 mm: The Diameter That Did Not Happen"
+      },
+      {
+        "id": "epi-versus-bulk-what-the-crystal-grower-is-growing-for",
+        "heading": "Epi Versus Bulk: What the Crystal Grower Is Growing For"
+      },
+      {
+        "id": "solar-cz-same-physics-different-economics",
+        "heading": "Solar CZ: Same Physics, Different Economics"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 3,
+    "title": "From Ingot to Polished Wafer",
+    "source": "course/modules/03-ingot-to-wafer.md",
+    "sections": [
+      {
+        "id": "the-process-flow-at-a-glance",
+        "heading": "The Process Flow at a Glance"
+      },
+      {
+        "id": "why-775-m-wafer-thickness-and-mechanics",
+        "heading": "Why 775 µm: Wafer Thickness and Mechanics"
+      },
+      {
+        "id": "cropping-sectioning-and-ingot-qc",
+        "heading": "Cropping, Sectioning, and Ingot QC"
+      },
+      {
+        "id": "cylindrical-grinding-to-diameter",
+        "heading": "Cylindrical Grinding to Diameter"
+      },
+      {
+        "id": "orientation-and-the-notch",
+        "heading": "Orientation and the Notch"
+      },
+      {
+        "id": "multi-wire-slicing",
+        "heading": "Multi-Wire Slicing"
+      },
+      {
+        "id": "lapping-and-double-disk-grinding",
+        "heading": "Lapping and Double-Disk Grinding"
+      },
+      {
+        "id": "edge-profiling",
+        "heading": "Edge Profiling"
+      },
+      {
+        "id": "etching-to-remove-damage",
+        "heading": "Etching to Remove Damage"
+      },
+      {
+        "id": "laser-marking",
+        "heading": "Laser Marking"
+      },
+      {
+        "id": "polishing-i-double-side-polishing-dsp",
+        "heading": "Polishing I: Double-Side Polishing (DSP)"
+      },
+      {
+        "id": "polishing-ii-final-front-side-mirror-polish-and-the-edge",
+        "heading": "Polishing II: Final Front-Side Mirror Polish and the Edge"
+      },
+      {
+        "id": "capstone-where-the-115-m-went",
+        "heading": "Capstone: Where the 115 µm Went"
+      },
+      {
+        "id": "cleaning-the-rca-sequence-and-drying",
+        "heading": "Cleaning: The RCA Sequence and Drying"
+      },
+      {
+        "id": "flatness-metrology",
+        "heading": "Flatness Metrology"
+      },
+      {
+        "id": "particle-and-defect-inspection",
+        "heading": "Particle and Defect Inspection"
+      },
+      {
+        "id": "beyond-polished-epitaxial-annealed-and-soi-wafers",
+        "heading": "Beyond Polished: Epitaxial, Annealed, and SOI Wafers"
+      },
+      {
+        "id": "test-monitor-and-reclaim-wafers",
+        "heading": "Test, Monitor, and Reclaim Wafers"
+      },
+      {
+        "id": "packaging-and-shipping",
+        "heading": "Packaging and Shipping"
+      },
+      {
+        "id": "a-representative-300-mm-prime-wafer-specification",
+        "heading": "A Representative 300 mm Prime Wafer Specification"
+      },
+      {
+        "id": "economics-and-market-structure",
+        "heading": "Economics and Market Structure"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 4,
+    "title": "Beyond Silicon: Compound Semiconductors and Fab Consumables",
+    "source": "course/modules/04-materials-and-consumables.md",
+    "sections": [
+      {
+        "id": "why-silicon-wins-and-where-it-loses",
+        "heading": "Why silicon wins, and where it loses"
+      },
+      {
+        "id": "silicon-germanium-the-alloy-inside-every-modern-transistor",
+        "heading": "Silicon-germanium: the alloy inside every modern transistor"
+      },
+      {
+        "id": "strained-silicon-the-idea-that-went-the-other-way",
+        "heading": "Strained silicon: the idea that went the other way"
+      },
+      {
+        "id": "silicon-carbide-the-material-you-cannot-melt",
+        "heading": "Silicon carbide: the material you cannot melt"
+      },
+      {
+        "id": "gallium-nitride-the-heterostructure-material",
+        "heading": "Gallium nitride: the heterostructure material"
+      },
+      {
+        "id": "gallium-arsenide-and-indium-phosphide-the-iii-v-workhorses",
+        "heading": "Gallium arsenide and indium phosphide: the III-V workhorses"
+      },
+      {
+        "id": "germanium",
+        "heading": "Germanium"
+      },
+      {
+        "id": "the-periodic-table-at-2-nm-and-below",
+        "heading": "The periodic table at 2 nm and below"
+      },
+      {
+        "id": "the-scale-of-it",
+        "heading": "The scale of it"
+      },
+      {
+        "id": "photoresists",
+        "heading": "Photoresists"
+      },
+      {
+        "id": "gases",
+        "heading": "Gases"
+      },
+      {
+        "id": "wet-chemicals",
+        "heading": "Wet chemicals"
+      },
+      {
+        "id": "ultrapure-water",
+        "heading": "Ultrapure water"
+      },
+      {
+        "id": "cmp-slurries-and-pads",
+        "heading": "CMP slurries and pads"
+      },
+      {
+        "id": "sputter-targets",
+        "heading": "Sputter targets"
+      },
+      {
+        "id": "precursors-for-ald-and-cvd",
+        "heading": "Precursors for ALD and CVD"
+      },
+      {
+        "id": "quartzware-and-sic-furnace-parts",
+        "heading": "Quartzware and SiC furnace parts"
+      },
+      {
+        "id": "photomasks-the-supply-chain-in-depth",
+        "heading": "Photomasks: the supply chain in depth"
+      },
+      {
+        "id": "why-japan-dominates-materials",
+        "heading": "Why Japan dominates materials"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 5,
+    "title": "Inside a Leading-Edge Fab",
+    "source": "course/modules/05-inside-a-fab.md",
+    "sections": [
+      {
+        "id": "the-building-why-a-fab-is-a-vertical-sandwich",
+        "heading": "The Building: Why a Fab Is a Vertical Sandwich"
+      },
+      {
+        "id": "cleanroom-classes-and-airflow",
+        "heading": "Cleanroom Classes and Airflow"
+      },
+      {
+        "id": "the-foup-and-the-mini-environment",
+        "heading": "The FOUP and the Mini-Environment"
+      },
+      {
+        "id": "amhs-how-100-000-wafers-a-month-actually-move",
+        "heading": "AMHS: How 100,000 Wafers a Month Actually Move"
+      },
+      {
+        "id": "the-process-flow-1-000-1-500-steps-revisited-dozens-of-times",
+        "heading": "The Process Flow: 1,000–1,500 Steps, Revisited Dozens of Times"
+      },
+      {
+        "id": "tools-counts-cost-utilization-clustering",
+        "heading": "Tools: Counts, Cost, Utilization, Clustering"
+      },
+      {
+        "id": "the-lot-the-recipe-and-the-software-stack",
+        "heading": "The Lot, the Recipe, and the Software Stack"
+      },
+      {
+        "id": "people",
+        "heading": "People"
+      },
+      {
+        "id": "utilities-a-fab-is-a-chemical-plant",
+        "heading": "Utilities: A Fab Is a Chemical Plant"
+      },
+      {
+        "id": "contamination-sources-and-gowning",
+        "heading": "Contamination Sources and Gowning"
+      },
+      {
+        "id": "tsmc-s-fab-organization",
+        "heading": "TSMC's Fab Organization"
+      },
+      {
+        "id": "bringing-up-a-node",
+        "heading": "Bringing Up a Node"
+      },
+      {
+        "id": "fab-economics",
+        "heading": "Fab Economics"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 6,
+    "title": "Thermal Oxidation and Thin-Film Deposition",
+    "source": "course/modules/06-oxidation-and-deposition.md",
+    "sections": [
+      {
+        "id": "1-thermal-oxidation-growing-sio2-from-the-wafer-itself",
+        "heading": "1. Thermal Oxidation: Growing SiO2 from the Wafer Itself"
+      },
+      {
+        "id": "2-furnaces-and-rapid-thermal-processing",
+        "heading": "2. Furnaces and Rapid Thermal Processing"
+      },
+      {
+        "id": "3-chemical-vapor-deposition-fundamentals",
+        "heading": "3. Chemical Vapor Deposition: Fundamentals"
+      },
+      {
+        "id": "4-the-cvd-family",
+        "heading": "4. The CVD Family"
+      },
+      {
+        "id": "5-atomic-layer-deposition",
+        "heading": "5. Atomic Layer Deposition"
+      },
+      {
+        "id": "6-physical-vapor-deposition",
+        "heading": "6. Physical Vapor Deposition"
+      },
+      {
+        "id": "7-epitaxy",
+        "heading": "7. Epitaxy"
+      },
+      {
+        "id": "8-film-stress-engineering",
+        "heading": "8. Film Stress Engineering"
+      },
+      {
+        "id": "9-film-characterization-briefly",
+        "heading": "9. Film Characterization, Briefly"
+      },
+      {
+        "id": "10-the-deposition-equipment-market",
+        "heading": "10. The Deposition Equipment Market"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 7,
+    "title": "Photolithography I: Photoresist and DUV",
+    "source": "course/modules/07-lithography-duv.md",
+    "sections": [
+      {
+        "id": "what-a-litho-layer-has-to-achieve",
+        "heading": "What a Litho Layer Has to Achieve"
+      },
+      {
+        "id": "the-litho-cell-at-a-glance",
+        "heading": "The Litho Cell at a Glance"
+      },
+      {
+        "id": "photoresist-chemistry",
+        "heading": "Photoresist Chemistry"
+      },
+      {
+        "id": "the-track-recipes-step-by-step",
+        "heading": "The Track Recipes, Step by Step"
+      },
+      {
+        "id": "the-optics-resolution-depth-of-focus-and-the-wavelength-marc",
+        "heading": "The Optics: Resolution, Depth of Focus, and the Wavelength March"
+      },
+      {
+        "id": "anatomy-of-a-193-nm-immersion-scanner",
+        "heading": "Anatomy of a 193 nm Immersion Scanner"
+      },
+      {
+        "id": "process-windows-bossung-plots-and-the-focus-exposure-matrix",
+        "heading": "Process Windows: Bossung Plots and the Focus-Exposure Matrix"
+      },
+      {
+        "id": "resolution-enhancement-techniques",
+        "heading": "Resolution Enhancement Techniques"
+      },
+      {
+        "id": "multi-patterning",
+        "heading": "Multi-Patterning"
+      },
+      {
+        "id": "the-lithography-roadmap-by-layer-as-of-2026",
+        "heading": "The Lithography Roadmap by Layer (as of 2026)"
+      },
+      {
+        "id": "the-tool-market-and-geography",
+        "heading": "The Tool Market and Geography"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 8,
+    "title": "Photolithography II: EUV in Full Detail",
+    "source": "course/modules/08-euv-lithography.md",
+    "sections": [
+      {
+        "id": "why-13-5-nm",
+        "heading": "Why 13.5 nm"
+      },
+      {
+        "id": "the-laser-produced-plasma-source",
+        "heading": "The Laser-Produced Plasma Source"
+      },
+      {
+        "id": "the-optics",
+        "heading": "The Optics"
+      },
+      {
+        "id": "the-reflective-reticle",
+        "heading": "The Reflective Reticle"
+      },
+      {
+        "id": "the-wafer-side",
+        "heading": "The Wafer Side"
+      },
+      {
+        "id": "photon-physics-and-stochastics",
+        "heading": "Photon Physics and Stochastics"
+      },
+      {
+        "id": "euv-resists",
+        "heading": "EUV Resists"
+      },
+      {
+        "id": "resolution-limits-and-multipatterning",
+        "heading": "Resolution Limits and Multipatterning"
+      },
+      {
+        "id": "high-na-and-hyper-na",
+        "heading": "High-NA and Hyper-NA"
+      },
+      {
+        "id": "the-machine-its-supply-chain-and-its-economics",
+        "heading": "The Machine, Its Supply Chain, and Its Economics"
+      },
+      {
+        "id": "who-has-euv-and-who-is-not-allowed-to",
+        "heading": "Who Has EUV, and Who Is Not Allowed To"
+      },
+      {
+        "id": "history",
+        "heading": "History"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 9,
+    "title": "Etch: Transferring the Pattern",
+    "source": "course/modules/09-etch.md",
+    "sections": [
+      {
+        "id": "what-an-etch-has-to-deliver",
+        "heading": "What an Etch Has to Deliver"
+      },
+      {
+        "id": "wet-etch-still-the-workhorse-for-selectivity",
+        "heading": "Wet Etch: Still the Workhorse for Selectivity"
+      },
+      {
+        "id": "plasma-physics-for-engineers",
+        "heading": "Plasma Physics for Engineers"
+      },
+      {
+        "id": "etch-mechanisms-chemical-physical-and-the-synergy-between-th",
+        "heading": "Etch Mechanisms: Chemical, Physical, and the Synergy Between Them"
+      },
+      {
+        "id": "hardmasks-mask-erosion-and-strip",
+        "heading": "Hardmasks, Mask Erosion, and Strip"
+      },
+      {
+        "id": "the-critical-etches-in-a-modern-flow",
+        "heading": "The Critical Etches in a Modern Flow"
+      },
+      {
+        "id": "atomic-layer-etching-and-selective-removal",
+        "heading": "Atomic Layer Etching and Selective Removal"
+      },
+      {
+        "id": "running-an-etch-in-production-endpoint-chamber-matching-cons",
+        "heading": "Running an Etch in Production: Endpoint, Chamber Matching, Consumables"
+      },
+      {
+        "id": "plasma-damage-and-its-mitigation",
+        "heading": "Plasma Damage and Its Mitigation"
+      },
+      {
+        "id": "tools-vendors-and-the-market",
+        "heading": "Tools, Vendors, and the Market"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 10,
+    "title": "Doping: Ion Implantation and Annealing",
+    "source": "course/modules/10-doping.md",
+    "sections": [
+      {
+        "id": "1-the-physics-of-doping",
+        "heading": "1. The Physics of Doping"
+      },
+      {
+        "id": "2-thermal-diffusion-the-original-method",
+        "heading": "2. Thermal Diffusion: The Original Method"
+      },
+      {
+        "id": "3-inside-an-ion-implanter",
+        "heading": "3. Inside an Ion Implanter"
+      },
+      {
+        "id": "4-implanter-classes-tools-and-special-modes",
+        "heading": "4. Implanter Classes, Tools and Special Modes"
+      },
+      {
+        "id": "5-where-the-ions-stop-range-statistics",
+        "heading": "5. Where the Ions Stop: Range Statistics"
+      },
+      {
+        "id": "6-damage-amorphisation-and-transient-enhanced-diffusion",
+        "heading": "6. Damage, Amorphisation and Transient Enhanced Diffusion"
+      },
+      {
+        "id": "7-the-annealing-zoo",
+        "heading": "7. The Annealing Zoo"
+      },
+      {
+        "id": "8-implants-in-a-modern-finfet-and-gaa-flow",
+        "heading": "8. Implants in a Modern FinFET and GAA Flow"
+      },
+      {
+        "id": "9-implants-beyond-logic",
+        "heading": "9. Implants Beyond Logic"
+      },
+      {
+        "id": "10-metrology",
+        "heading": "10. Metrology"
+      },
+      {
+        "id": "11-safety",
+        "heading": "11. Safety"
+      },
+      {
+        "id": "12-market-cost-and-throughput",
+        "heading": "12. Market, Cost and Throughput"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 11,
+    "title": "Building a Transistor: Planar to FinFET to GAA to CFET",
+    "source": "course/modules/11-transistor-architectures.md",
+    "sections": [
+      {
+        "id": "1-mosfet-operation-refresher",
+        "heading": "1. MOSFET Operation Refresher"
+      },
+      {
+        "id": "2-cmos-basics-and-what-a-node-actually-measures",
+        "heading": "2. CMOS Basics and What a \"Node\" Actually Measures"
+      },
+      {
+        "id": "3-the-planar-era-strain-and-hkmg",
+        "heading": "3. The Planar Era: Strain and HKMG"
+      },
+      {
+        "id": "4-finfet",
+        "heading": "4. FinFET"
+      },
+      {
+        "id": "5-a-complete-finfet-feol-mol-process-flow",
+        "heading": "5. A Complete FinFET FEOL/MOL Process Flow"
+      },
+      {
+        "id": "6-gate-all-around-nanosheets",
+        "heading": "6. Gate-All-Around Nanosheets"
+      },
+      {
+        "id": "7-forksheet-cfet-and-the-roadmap-beyond",
+        "heading": "7. Forksheet, CFET, and the Roadmap Beyond"
+      },
+      {
+        "id": "8-node-timeline-sram-and-design-co-optimization",
+        "heading": "8. Node Timeline, SRAM, and Design Co-Optimization"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 12,
+    "title": "Interconnect: The Back End of Line",
+    "source": "course/modules/12-interconnect-beol.md",
+    "sections": [
+      {
+        "id": "why-interconnect-became-the-bottleneck",
+        "heading": "Why Interconnect Became the Bottleneck"
+      },
+      {
+        "id": "anatomy-of-the-metal-stack",
+        "heading": "Anatomy of the Metal Stack"
+      },
+      {
+        "id": "from-aluminum-to-copper",
+        "heading": "From Aluminum to Copper"
+      },
+      {
+        "id": "the-dual-damascene-flow-step-by-step",
+        "heading": "The Dual Damascene Flow, Step by Step"
+      },
+      {
+        "id": "vias-resistance-and-the-small-dimension-tax",
+        "heading": "Vias, Resistance and the Small-Dimension Tax"
+      },
+      {
+        "id": "electromigration",
+        "heading": "Electromigration"
+      },
+      {
+        "id": "other-reliability-mechanisms",
+        "heading": "Other Reliability Mechanisms"
+      },
+      {
+        "id": "the-new-metals",
+        "heading": "The New Metals"
+      },
+      {
+        "id": "the-top-of-the-stack",
+        "heading": "The Top of the Stack"
+      },
+      {
+        "id": "backside-power-delivery",
+        "heading": "Backside Power Delivery"
+      },
+      {
+        "id": "interconnect-metrology-and-test-structures",
+        "heading": "Interconnect Metrology and Test Structures"
+      },
+      {
+        "id": "design-rules-the-beol-imposes",
+        "heading": "Design Rules the BEOL Imposes"
+      },
+      {
+        "id": "tools-materials-and-who-supplies-what",
+        "heading": "Tools, Materials and Who Supplies What"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 13,
+    "title": "Metrology, Inspection and Yield",
+    "source": "course/modules/13-metrology-inspection-yield.md",
+    "sections": [
+      {
+        "id": "1-film-metrology-measuring-thickness-without-touching",
+        "heading": "1. Film Metrology: Measuring Thickness Without Touching"
+      },
+      {
+        "id": "2-cd-metrology-measuring-the-width-of-a-line",
+        "heading": "2. CD Metrology: Measuring the Width of a Line"
+      },
+      {
+        "id": "3-overlay-aligning-one-layer-to-the-next",
+        "heading": "3. Overlay: Aligning One Layer to the Next"
+      },
+      {
+        "id": "4-defect-inspection-finding-something-you-do-not-know-is-the",
+        "heading": "4. Defect Inspection: Finding Something You Do Not Know Is There"
+      },
+      {
+        "id": "5-defect-review-and-classification",
+        "heading": "5. Defect Review and Classification"
+      },
+      {
+        "id": "6-reading-a-wafer-map",
+        "heading": "6. Reading a Wafer Map"
+      },
+      {
+        "id": "7-in-line-electrical-test-pcm-and-wat",
+        "heading": "7. In-Line Electrical Test: PCM and WAT"
+      },
+      {
+        "id": "8-spc-apc-fdc-and-the-excursion",
+        "heading": "8. SPC, APC, FDC, and the Excursion"
+      },
+      {
+        "id": "9-yield-theory",
+        "heading": "9. Yield Theory"
+      },
+      {
+        "id": "10-redundancy-repair-harvesting-and-binning",
+        "heading": "10. Redundancy, Repair, Harvesting, and Binning"
+      },
+      {
+        "id": "11-the-economics-of-process-control",
+        "heading": "11. The Economics of Process Control"
+      },
+      {
+        "id": "12-metrology-and-inspection-for-euv",
+        "heading": "12. Metrology and Inspection for EUV"
+      },
+      {
+        "id": "13-wafer-level-reliability",
+        "heading": "13. Wafer-Level Reliability"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 14,
+    "title": "Wafer Sort and Test",
+    "source": "course/modules/14-wafer-sort-and-test.md",
+    "sections": [
+      {
+        "id": "why-test-exists-the-rule-of-ten",
+        "heading": "Why Test Exists: The Rule of Ten"
+      },
+      {
+        "id": "the-test-flow-in-order",
+        "heading": "The Test Flow, in Order"
+      },
+      {
+        "id": "wafer-sort-the-prober",
+        "heading": "Wafer Sort: The Prober"
+      },
+      {
+        "id": "probe-cards",
+        "heading": "Probe Cards"
+      },
+      {
+        "id": "the-ate",
+        "heading": "The ATE"
+      },
+      {
+        "id": "what-a-test-program-contains",
+        "heading": "What a Test Program Contains"
+      },
+      {
+        "id": "design-for-test",
+        "heading": "Design for Test"
+      },
+      {
+        "id": "multi-site-testing-and-the-economics-of-tester-time",
+        "heading": "Multi-Site Testing and the Economics of Tester Time"
+      },
+      {
+        "id": "coverage-escapes-and-dppm",
+        "heading": "Coverage, Escapes, and DPPM"
+      },
+      {
+        "id": "binning-at-sort",
+        "heading": "Binning at Sort"
+      },
+      {
+        "id": "known-good-die",
+        "heading": "Known-Good-Die"
+      },
+      {
+        "id": "test-at-temperature-the-hot-and-cold-split",
+        "heading": "Test at Temperature: The Hot and Cold Split"
+      },
+      {
+        "id": "adaptive-test-and-data-analytics",
+        "heading": "Adaptive Test and Data Analytics"
+      },
+      {
+        "id": "test-data-stdf-and-the-loop-back-to-the-fab",
+        "heading": "Test Data: STDF and the Loop Back to the Fab"
+      },
+      {
+        "id": "gpu-specific-test-challenges",
+        "heading": "GPU-Specific Test Challenges"
+      },
+      {
+        "id": "who-does-the-testing",
+        "heading": "Who Does the Testing"
+      },
+      {
+        "id": "the-equipment-market",
+        "heading": "The Equipment Market"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 15,
+    "title": "Memory: DRAM, NAND and HBM Manufacturing",
+    "source": "course/modules/15-memory-dram-nand-hbm.md",
+    "sections": [
+      {
+        "id": "1-why-memory-is-a-different-business-from-logic",
+        "heading": "1. Why memory is a different business from logic"
+      },
+      {
+        "id": "2-the-1t1c-cell-and-the-sense-amplifier",
+        "heading": "2. The 1T1C cell and the sense amplifier"
+      },
+      {
+        "id": "3-the-buried-word-line-and-the-6f-cell",
+        "heading": "3. The buried word line and the 6F² cell"
+      },
+      {
+        "id": "4-the-storage-capacitor",
+        "heading": "4. The storage capacitor"
+      },
+      {
+        "id": "5-periphery-beol-and-the-die",
+        "heading": "5. Periphery, BEOL and the die"
+      },
+      {
+        "id": "6-node-naming-and-where-euv-is-used",
+        "heading": "6. Node naming and where EUV is used"
+      },
+      {
+        "id": "7-the-roadmap-4f-vct-and-3d-dram",
+        "heading": "7. The roadmap: 4F² VCT and 3D DRAM"
+      },
+      {
+        "id": "8-dram-players-and-capacity",
+        "heading": "8. DRAM players and capacity"
+      },
+      {
+        "id": "9-the-nand-cell-floating-gate-to-charge-trap",
+        "heading": "9. The NAND cell: floating gate to charge trap"
+      },
+      {
+        "id": "10-the-3d-nand-architecture",
+        "heading": "10. The 3D NAND architecture"
+      },
+      {
+        "id": "11-the-gate-replacement-flow-step-by-step",
+        "heading": "11. The gate-replacement flow step by step"
+      },
+      {
+        "id": "12-string-stacking-and-the-layer-race",
+        "heading": "12. String stacking and the layer race"
+      },
+      {
+        "id": "13-nand-players",
+        "heading": "13. NAND players"
+      },
+      {
+        "id": "14-hbm-and-the-bandwidth-wall",
+        "heading": "14. HBM and the bandwidth wall"
+      },
+      {
+        "id": "15-anatomy-of-an-hbm-stack",
+        "heading": "15. Anatomy of an HBM stack"
+      },
+      {
+        "id": "16-the-core-die-tsv-formation",
+        "heading": "16. The core die: TSV formation"
+      },
+      {
+        "id": "17-thinning-backside-reveal-and-microbumps",
+        "heading": "17. Thinning, backside reveal and microbumps"
+      },
+      {
+        "id": "18-stacking-tc-ncf-versus-mr-muf",
+        "heading": "18. Stacking: TC-NCF versus MR-MUF"
+      },
+      {
+        "id": "19-hybrid-bonding-the-16-high-and-hbm4e-question",
+        "heading": "19. Hybrid bonding: the 16-high and HBM4E question"
+      },
+      {
+        "id": "20-the-base-die-moves-to-a-logic-foundry",
+        "heading": "20. The base die moves to a logic foundry"
+      },
+      {
+        "id": "21-testing-and-known-good-stacks",
+        "heading": "21. Testing and known-good stacks"
+      },
+      {
+        "id": "22-thermal-issues",
+        "heading": "22. Thermal issues"
+      },
+      {
+        "id": "23-economics-price-wafer-consumption-and-the-shortage",
+        "heading": "23. Economics: price, wafer consumption and the shortage"
+      },
+      {
+        "id": "24-who-supplies-whom",
+        "heading": "24. Who supplies whom"
+      },
+      {
+        "id": "25-handoff-to-cowos",
+        "heading": "25. Handoff to CoWoS"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 16,
+    "title": "Packaging Fundamentals: From Wafer to Chip",
+    "source": "course/modules/16-packaging-fundamentals.md",
+    "sections": [
+      {
+        "id": "what-a-package-must-do",
+        "heading": "What a Package Must Do"
+      },
+      {
+        "id": "the-back-end-flow-in-order",
+        "heading": "The Back-End Flow in Order"
+      },
+      {
+        "id": "the-substrate-in-depth",
+        "heading": "The Substrate in Depth"
+      },
+      {
+        "id": "leadframes-and-the-mass-market",
+        "heading": "Leadframes and the Mass Market"
+      },
+      {
+        "id": "molding-marking-ball-attach-lids-singulation",
+        "heading": "Molding, Marking, Ball Attach, Lids, Singulation"
+      },
+      {
+        "id": "wafer-level-and-fan-out-packaging",
+        "heading": "Wafer-Level and Fan-Out Packaging"
+      },
+      {
+        "id": "the-package-taxonomy",
+        "heading": "The Package Taxonomy"
+      },
+      {
+        "id": "package-reliability-and-qualification",
+        "heading": "Package Reliability and Qualification"
+      },
+      {
+        "id": "the-industry-osats-foundry-back-ends-and-equipment",
+        "heading": "The Industry: OSATs, Foundry Back Ends, and Equipment"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 17,
+    "title": "Advanced Packaging: CoWoS, SoIC and Chiplets",
+    "source": "course/modules/17-advanced-packaging-cowos.md",
+    "sections": [
+      {
+        "id": "why-the-package-became-the-chip",
+        "heading": "Why the Package Became the Chip"
+      },
+      {
+        "id": "anatomy-of-a-cowos-package-top-to-bottom",
+        "heading": "Anatomy of a CoWoS Package, Top to Bottom"
+      },
+      {
+        "id": "cowos-a-short-history",
+        "heading": "CoWoS: A Short History"
+      },
+      {
+        "id": "the-three-cowos-variants",
+        "heading": "The Three CoWoS Variants"
+      },
+      {
+        "id": "the-cowos-process-flow-step-by-step",
+        "heading": "The CoWoS Process Flow, Step by Step"
+      },
+      {
+        "id": "what-goes-wrong-the-hard-problems",
+        "heading": "What Goes Wrong: The Hard Problems"
+      },
+      {
+        "id": "capacity-the-bottleneck-of-the-ai-era",
+        "heading": "Capacity: The Bottleneck of the AI Era"
+      },
+      {
+        "id": "soic-hybrid-bonding-and-true-3d",
+        "heading": "SoIC: Hybrid Bonding and True 3D"
+      },
+      {
+        "id": "the-competitors-intel-samsung-and-the-osats",
+        "heading": "The Competitors: Intel, Samsung, and the OSATs"
+      },
+      {
+        "id": "fan-out-and-the-move-to-panels",
+        "heading": "Fan-Out and the Move to Panels"
+      },
+      {
+        "id": "the-chiplet-paradigm",
+        "heading": "The Chiplet Paradigm"
+      },
+      {
+        "id": "two-handoffs-heat-to-the-rack-light-to-the-fibre",
+        "heading": "Two Handoffs: Heat to the Rack, Light to the Fibre"
+      },
+      {
+        "id": "equipment-who-makes-the-tools",
+        "heading": "Equipment: Who Makes the Tools"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 18,
+    "title": "Final Test, Burn-in and System-Level Test",
+    "source": "course/modules/18-final-test-burn-in-slt.md",
+    "sections": [
+      {
+        "id": "why-package-test-exists-what-sort-could-not-see",
+        "heading": "Why Package Test Exists: What Sort Could Not See"
+      },
+      {
+        "id": "the-post-packaging-flow",
+        "heading": "The Post-Packaging Flow"
+      },
+      {
+        "id": "the-test-cell-handlers-sockets-and-thermal-control",
+        "heading": "The Test Cell: Handlers, Sockets and Thermal Control"
+      },
+      {
+        "id": "final-test-what-the-program-does-and-what-it-costs",
+        "heading": "Final Test: What the Program Does and What It Costs"
+      },
+      {
+        "id": "burn-in-physics-and-practice",
+        "heading": "Burn-in: Physics and Practice"
+      },
+      {
+        "id": "ft2-measuring-what-burn-in-changed",
+        "heading": "FT2: Measuring What Burn-in Changed"
+      },
+      {
+        "id": "system-level-test-testing-the-product-not-the-circuit",
+        "heading": "System-Level Test: Testing the Product, Not the Circuit"
+      },
+      {
+        "id": "outgoing-qa-and-shipment",
+        "heading": "Outgoing QA and Shipment"
+      },
+      {
+        "id": "reliability-qualification-jesd47-and-aec-q100",
+        "heading": "Reliability Qualification: JESD47 and AEC-Q100"
+      },
+      {
+        "id": "hbm-known-good-die-known-good-stack-and-the-2-5d-problem",
+        "heading": "HBM: Known-Good Die, Known-Good Stack and the 2.5D Problem"
+      },
+      {
+        "id": "yield-fallout-along-the-chain",
+        "heading": "Yield Fallout Along the Chain"
+      },
+      {
+        "id": "dppm-and-what-the-field-actually-sees",
+        "heading": "DPPM and What the Field Actually Sees"
+      },
+      {
+        "id": "failure-analysis-from-field-return-to-root-cause",
+        "heading": "Failure Analysis: From Field Return to Root Cause"
+      },
+      {
+        "id": "where-back-end-test-happens-and-what-it-costs",
+        "heading": "Where Back-End Test Happens and What It Costs"
+      },
+      {
+        "id": "the-gpu-flow-end-to-end-and-rack-level-triage",
+        "heading": "The GPU Flow End to End, and Rack-Level Triage"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 19,
+    "title": "Building an NVIDIA GPU: From RTL to Rack",
+    "source": "course/modules/19-building-an-nvidia-gpu.md",
+    "sections": [
+      {
+        "id": "what-the-die-has-to-be",
+        "heading": "What the die has to be"
+      },
+      {
+        "id": "rtl-writing-the-chip",
+        "heading": "RTL: writing the chip"
+      },
+      {
+        "id": "verification-why-nvidia-runs-more-emulators-than-anyone",
+        "heading": "Verification: why NVIDIA runs more emulators than anyone"
+      },
+      {
+        "id": "the-pdk-the-libraries-and-4n",
+        "heading": "The PDK, the libraries, and \"4N\""
+      },
+      {
+        "id": "ip-the-blocks-nvidia-does-not-design-from-scratch",
+        "heading": "IP: the blocks NVIDIA does not design from scratch"
+      },
+      {
+        "id": "physical-design-from-netlist-to-polygons",
+        "heading": "Physical design: from netlist to polygons"
+      },
+      {
+        "id": "tape-out-from-polygons-to-masks",
+        "heading": "Tape-out: from polygons to masks"
+      },
+      {
+        "id": "first-silicon-bring-up-and-respins",
+        "heading": "First silicon, bring-up, and respins"
+      },
+      {
+        "id": "the-dies-in-numbers",
+        "heading": "The dies in numbers"
+      },
+      {
+        "id": "the-manufacturing-timeline-of-one-gpu",
+        "heading": "The manufacturing timeline of one GPU"
+      },
+      {
+        "id": "the-sxm-module",
+        "heading": "The SXM module"
+      },
+      {
+        "id": "the-hgx-baseboard",
+        "heading": "The HGX baseboard"
+      },
+      {
+        "id": "the-server-dgx-and-its-oem-cousins",
+        "heading": "The server: DGX and its OEM cousins"
+      },
+      {
+        "id": "gb200-the-superchip-and-the-compute-tray",
+        "heading": "GB200: the superchip and the compute tray"
+      },
+      {
+        "id": "the-nvl72-rack",
+        "heading": "The NVL72 rack"
+      },
+      {
+        "id": "networking-beyond-the-rack",
+        "heading": "Networking beyond the rack"
+      },
+      {
+        "id": "who-builds-it",
+        "heading": "Who builds it"
+      },
+      {
+        "id": "the-bill-of-materials-of-an-h100-where-the-cost-goes",
+        "heading": "The bill of materials of an H100: where the cost goes"
+      },
+      {
+        "id": "nvidia-s-margin-tsmc-s-revenue-and-the-allocation-game",
+        "heading": "NVIDIA's margin, TSMC's revenue, and the allocation game"
+      },
+      {
+        "id": "the-supplier-tree",
+        "heading": "The supplier tree"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 20,
+    "title": "Economics, Geography and Geopolitics of the Chain",
+    "source": "course/modules/20-economics-and-geopolitics.md",
+    "sections": [
+      {
+        "id": "the-economics-toolkit-five-ideas-that-explain-the-industry",
+        "heading": "The Economics Toolkit: Five Ideas That Explain the Industry"
+      },
+      {
+        "id": "the-money-size-and-shape-of-the-industry",
+        "heading": "The Money: Size and Shape of the Industry"
+      },
+      {
+        "id": "the-layers-and-who-owns-them",
+        "heading": "The Layers and Who Owns Them"
+      },
+      {
+        "id": "the-geographic-map",
+        "heading": "The Geographic Map"
+      },
+      {
+        "id": "fab-economics-what-a-wafer-costs",
+        "heading": "Fab Economics: What a Wafer Costs"
+      },
+      {
+        "id": "cycles-utilization-memory-and-the-ai-supercycle",
+        "heading": "Cycles: Utilization, Memory and the AI Supercycle"
+      },
+      {
+        "id": "taiwan-concentration-risk",
+        "heading": "Taiwan Concentration Risk"
+      },
+      {
+        "id": "diversification-arizona-kumamoto-dresden-and-the-intel-quest",
+        "heading": "Diversification: Arizona, Kumamoto, Dresden, and the Intel Question"
+      },
+      {
+        "id": "export-controls-in-detail",
+        "heading": "Export Controls in Detail"
+      },
+      {
+        "id": "china-s-response",
+        "heading": "China's Response"
+      },
+      {
+        "id": "industrial-policy-elsewhere",
+        "heading": "Industrial Policy Elsewhere"
+      },
+      {
+        "id": "what-if-single-points-of-failure",
+        "heading": "What If: Single Points of Failure"
+      },
+      {
+        "id": "workforce-and-talent",
+        "heading": "Workforce and Talent"
+      },
+      {
+        "id": "how-to-read-industry-data",
+        "heading": "How to Read Industry Data"
+      }
+    ]
+  },
+  {
+    "track": "m",
+    "lesson": 21,
+    "title": "Glossary and Reference",
+    "source": "course/modules/21-glossary-and-reference.md",
+    "sections": [
+      {
+        "id": "glossary",
+        "heading": "Glossary"
+      },
+      {
+        "id": "units-conventions-and-a-sense-of-scale",
+        "heading": "Units, Conventions, and a Sense of Scale"
+      },
+      {
+        "id": "node-table",
+        "heading": "Node Table"
+      },
+      {
+        "id": "master-process-flow",
+        "heading": "Master Process Flow"
+      },
+      {
+        "id": "who-buys-from-whom",
+        "heading": "Who Buys From Whom"
+      },
+      {
+        "id": "what-to-learn-next",
+        "heading": "What to Learn Next"
+      }
+    ]
+  },
+  {
+    "track": "s",
+    "lesson": 1,
+    "title": "The big picture from sand to GPU",
+    "source": "course/survey/S01-the-big-picture.md",
+    "sections": [
+      {
+        "id": "1-what-a-chip-actually-is",
+        "heading": "1. What a chip actually is"
+      },
+      {
+        "id": "2-several-branches-meet-in-the-factory",
+        "heading": "2. Several branches meet in the factory"
+      },
+      {
+        "id": "3-build-a-circuit-by-repeating-controlled-changes",
+        "heading": "3. Build a circuit by repeating controlled changes"
+      },
+      {
+        "id": "4-why-scale-creates-difficulty-in-opposite-directions",
+        "heading": "4. Why scale creates difficulty in opposite directions"
+      },
+      {
+        "id": "5-why-memory-and-packaging-belong-in-the-same-story",
+        "heading": "5. Why memory and packaging belong in the same story"
+      },
+      {
+        "id": "6-why-no-company-can-replace-the-chain-overnight",
+        "heading": "6. Why no company can replace the chain overnight"
+      }
+    ]
+  },
+  {
+    "track": "s",
+    "lesson": 2,
+    "title": "From sand to a mirror",
+    "source": "course/survey/S02-from-sand-to-a-mirror.md",
+    "sections": [
+      {
+        "id": "1-the-useful-ingredient-in-the-rock",
+        "heading": "1. The useful ingredient in the rock"
+      },
+      {
+        "id": "2-purification-works-by-changing-the-form-of-silicon",
+        "heading": "2. Purification works by changing the form of silicon"
+      },
+      {
+        "id": "3-growing-one-crystal-instead-of-freezing-a-lump",
+        "heading": "3. Growing one crystal instead of freezing a lump"
+      },
+      {
+        "id": "4-some-impurities-are-managed-rather-than-eliminated",
+        "heading": "4. Some impurities are managed rather than eliminated"
+      },
+      {
+        "id": "5-a-saw-cut-is-only-the-beginning-of-a-wafer",
+        "heading": "5. A saw cut is only the beginning of a wafer"
+      },
+      {
+        "id": "6-cleaning-and-inspection-preserve-the-starting-point",
+        "heading": "6. Cleaning and inspection preserve the starting point"
+      }
+    ]
+  },
+  {
+    "track": "s",
+    "lesson": 3,
+    "title": "Inside the fab",
+    "source": "course/survey/S03-inside-the-fab.md",
+    "sections": [
+      {
+        "id": "1-the-cleanroom-is-only-the-visible-part",
+        "heading": "1. The cleanroom is only the visible part"
+      },
+      {
+        "id": "2-cleanliness-is-about-the-wafer-s-environment",
+        "heading": "2. Cleanliness is about the wafer's environment"
+      },
+      {
+        "id": "3-wafers-travel-with-an-identity-and-a-history",
+        "heading": "3. Wafers travel with an identity and a history"
+      },
+      {
+        "id": "4-the-wafer-revisits-operations-as-the-chip-grows",
+        "heading": "4. The wafer revisits operations as the chip grows"
+      },
+      {
+        "id": "5-waiting-explains-much-of-the-production-time",
+        "heading": "5. Waiting explains much of the production time"
+      },
+      {
+        "id": "6-expensive-equipment-makes-coordination-valuable",
+        "heading": "6. Expensive equipment makes coordination valuable"
+      }
+    ]
+  },
+  {
+    "track": "s",
+    "lesson": 4,
+    "title": "Drawing with light",
+    "source": "course/survey/S04-drawing-with-light.md",
+    "sections": [
+      {
+        "id": "1-making-a-temporary-pattern-in-chemistry",
+        "heading": "1. Making a temporary pattern in chemistry"
+      },
+      {
+        "id": "2-why-the-wavelength-matters-without-setting-every-dimension",
+        "heading": "2. Why the wavelength matters without setting every dimension"
+      },
+      {
+        "id": "3-deep-ultraviolet-remains-a-major-manufacturing-tool",
+        "heading": "3. Deep ultraviolet remains a major manufacturing tool"
+      },
+      {
+        "id": "4-extreme-ultraviolet-requires-a-different-machine",
+        "heading": "4. Extreme ultraviolet requires a different machine"
+      },
+      {
+        "id": "5-small-patterns-expose-the-randomness-of-individual-events",
+        "heading": "5. Small patterns expose the randomness of individual events"
+      },
+      {
+        "id": "6-alignment-and-throughput-determine-whether-the-pattern-is-",
+        "heading": "6. Alignment and throughput determine whether the pattern is useful"
+      }
+    ]
+  },
+  {
+    "track": "s",
+    "lesson": 5,
+    "title": "Adding and removing layers",
+    "source": "course/survey/S05-adding-and-removing-layers.md",
+    "sections": [
+      {
+        "id": "1-every-film-has-a-job-in-the-device",
+        "heading": "1. Every film has a job in the device"
+      },
+      {
+        "id": "2-different-deposition-methods-reach-different-surfaces",
+        "heading": "2. Different deposition methods reach different surfaces"
+      },
+      {
+        "id": "3-atomic-layer-deposition-controls-the-reaction-sequence",
+        "heading": "3. Atomic layer deposition controls the reaction sequence"
+      },
+      {
+        "id": "4-etching-turns-the-stencil-into-a-shape",
+        "heading": "4. Etching turns the stencil into a shape"
+      },
+      {
+        "id": "5-precise-removal-requires-knowing-when-and-where-to-stop",
+        "heading": "5. Precise removal requires knowing when and where to stop"
+      },
+      {
+        "id": "6-doping-changes-electrical-behavior-and-heat-completes-the-",
+        "heading": "6. Doping changes electrical behavior, and heat completes the work"
+      }
+    ]
+  },
+  {
+    "track": "s",
+    "lesson": 6,
+    "title": "The transistor and its wiring",
+    "source": "course/survey/S06-transistor-and-wiring.md",
+    "sections": [
+      {
+        "id": "1-a-switch-built-from-an-electric-field",
+        "heading": "1. A switch built from an electric field"
+      },
+      {
+        "id": "2-why-flat-transistors-became-fins",
+        "heading": "2. Why flat transistors became fins"
+      },
+      {
+        "id": "3-surrounding-the-channel-without-losing-the-circuit",
+        "heading": "3. Surrounding the channel without losing the circuit"
+      },
+      {
+        "id": "4-making-wiring-inside-an-insulating-stack",
+        "heading": "4. Making wiring inside an insulating stack"
+      },
+      {
+        "id": "5-the-wire-can-become-the-slow-part",
+        "heading": "5. The wire can become the slow part"
+      },
+      {
+        "id": "6-supplying-power-from-another-side",
+        "heading": "6. Supplying power from another side"
+      }
+    ]
+  },
+  {
+    "track": "s",
+    "lesson": 7,
+    "title": "Knowing it works",
+    "source": "course/survey/S07-knowing-it-works.md",
+    "sections": [
+      {
+        "id": "1-measure-before-the-mistake-becomes-expensive",
+        "heading": "1. Measure before the mistake becomes expensive"
+      },
+      {
+        "id": "2-why-a-fab-cannot-examine-everything-equally",
+        "heading": "2. Why a fab cannot examine everything equally"
+      },
+      {
+        "id": "3-yield-connects-physics-to-economics",
+        "heading": "3. Yield connects physics to economics"
+      },
+      {
+        "id": "4-touch-the-wafer-and-ask-electrical-questions",
+        "heading": "4. Touch the wafer and ask electrical questions"
+      },
+      {
+        "id": "5-a-good-bare-die-is-not-a-finished-product",
+        "heading": "5. A good bare die is not a finished product"
+      },
+      {
+        "id": "6-decide-what-evidence-is-enough",
+        "heading": "6. Decide what evidence is enough"
+      }
+    ]
+  },
+  {
+    "track": "s",
+    "lesson": 8,
+    "title": "Memory and why it sits beside the GPU",
+    "source": "course/survey/S08-memory-and-hbm.md",
+    "sections": [
+      {
+        "id": "1-computing-needs-somewhere-to-put-things",
+        "heading": "1. Computing needs somewhere to put things"
+      },
+      {
+        "id": "2-a-dram-bit-is-a-very-small-stored-charge",
+        "heading": "2. A DRAM bit is a very small stored charge"
+      },
+      {
+        "id": "3-nand-remembers-by-changing-a-transistor",
+        "heading": "3. NAND remembers by changing a transistor"
+      },
+      {
+        "id": "4-building-memory-upward",
+        "heading": "4. Building memory upward"
+      },
+      {
+        "id": "5-hbm-puts-a-wide-road-beside-the-processor",
+        "heading": "5. HBM puts a wide road beside the processor"
+      },
+      {
+        "id": "6-stack-yield-and-the-cost-of-a-useful-bit",
+        "heading": "6. Stack yield and the cost of a useful bit"
+      }
+    ]
+  },
+  {
+    "track": "s",
+    "lesson": 9,
+    "title": "From bare die to a packaged GPU",
+    "source": "course/survey/S09-packaging-a-gpu.md",
+    "sections": [
+      {
+        "id": "1-why-a-chip-needs-an-engineered-home",
+        "heading": "1. Why a chip needs an engineered home"
+      },
+      {
+        "id": "2-separate-useful-dies-without-damaging-them",
+        "heading": "2. Separate useful dies without damaging them"
+      },
+      {
+        "id": "3-make-reliable-joints-and-fan-them-outward",
+        "heading": "3. Make reliable joints and fan them outward"
+      },
+      {
+        "id": "4-put-the-processor-and-memory-on-a-shared-fine-wiring-struc",
+        "heading": "4. Put the processor and memory on a shared fine-wiring structure"
+      },
+      {
+        "id": "5-why-larger-integration-raises-the-stakes",
+        "heading": "5. Why larger integration raises the stakes"
+      },
+      {
+        "id": "6-stacking-dies-without-solder",
+        "heading": "6. Stacking dies without solder"
+      }
+    ]
+  },
+  {
+    "track": "s",
+    "lesson": 10,
+    "title": "Becoming a GPU, a rack and an industry",
+    "source": "course/survey/S10-becoming-a-gpu.md",
+    "sections": [
+      {
+        "id": "1-turn-behavior-into-a-manufacturable-circuit",
+        "heading": "1. Turn behavior into a manufacturable circuit"
+      },
+      {
+        "id": "2-find-mistakes-before-they-become-silicon",
+        "heading": "2. Find mistakes before they become silicon"
+      },
+      {
+        "id": "3-follow-one-product-through-several-companies",
+        "heading": "3. Follow one product through several companies"
+      },
+      {
+        "id": "4-a-package-becomes-a-board-a-server-and-a-rack",
+        "heading": "4. A package becomes a board, a server and a rack"
+      },
+      {
+        "id": "5-communication-determines-how-much-the-system-can-cooperate",
+        "heading": "5. Communication determines how much the system can cooperate"
+      },
+      {
+        "id": "6-read-the-industry-through-constraints-and-accounting",
+        "heading": "6. Read the industry through constraints and accounting"
+      }
+    ]
+  }
+]

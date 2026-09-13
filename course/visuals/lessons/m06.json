@@ -1,0 +1,318 @@
+[
+  {
+    "section": "1-thermal-oxidation-growing-sio2-from-the-wafer-itself",
+    "family": "layers",
+    "title": "Thermal oxide consumes the silicon underneath it",
+    "caption": "Oxidant reaches the interface through the oxide, where reaction consumes silicon and grows the film. The interface is a boundary between materials, not a third material layer. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Growing silicon dioxide",
+        "detail": "Oxidant passes through the growing oxide to react at its lower boundary."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Remaining silicon",
+        "detail": "Silicon is consumed at the moving silicon–oxide interface."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "heading": "1. Thermal Oxidation: Growing SiO2 from the Wafer Itself"
+    }
+  },
+  {
+    "section": "2-furnaces-and-rapid-thermal-processing",
+    "family": "compare",
+    "title": "Choose the heating tool around the thermal budget",
+    "caption": "Batch furnaces and rapid thermal tools expose wafers to different time-temperature histories. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "furnace",
+        "label": "Batch furnace",
+        "detail": "Many wafers share a sustained thermal process.",
+        "variant": "tube-furnace"
+      },
+      {
+        "glyph": "heat",
+        "label": "Rapid thermal process",
+        "detail": "A wafer heats and cools much more quickly.",
+        "variant": "thermal"
+      },
+      {
+        "glyph": "transistor",
+        "label": "Existing device structure",
+        "detail": "Dopants and materials limit allowable thermal exposure.",
+        "variant": "planar"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "heading": "2. Furnaces and Rapid Thermal Processing"
+    }
+  },
+  {
+    "section": "3-chemical-vapor-deposition-fundamentals",
+    "family": "flow",
+    "title": "A deposited atom arrives inside a molecule",
+    "caption": "CVD couples gas transport, surface reaction and removal of volatile by-products. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Deliver precursor",
+        "detail": "Gas flow transports source molecules toward the wafer."
+      },
+      {
+        "glyph": "film",
+        "label": "Adsorb and react",
+        "detail": "Surface chemistry releases the film-forming species.",
+        "variant": "cvd"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Grow the solid film",
+        "detail": "Deposited material accumulates on the substrate.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "gas",
+        "label": "Remove by-products",
+        "detail": "Volatile reaction products leave through the exhaust."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "heading": "3. Chemical Vapor Deposition: Fundamentals"
+    }
+  },
+  {
+    "section": "4-the-cvd-family",
+    "family": "compare",
+    "title": "Different CVD families supply reaction energy differently",
+    "caption": "Temperature, pressure and plasma assistance help match a film process to the device's thermal and geometric constraints. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "furnace",
+        "label": "Thermal CVD",
+        "detail": "Heat drives reactions at the wafer.",
+        "variant": "tube-furnace"
+      },
+      {
+        "glyph": "gas",
+        "label": "Plasma-enhanced CVD",
+        "detail": "Activated species enable useful reactions at lower temperatures.",
+        "variant": "plasma-chamber"
+      },
+      {
+        "glyph": "film",
+        "label": "Process-specific variants",
+        "detail": "Film density, conformality and gap filling guide the choice.",
+        "variant": "cvd"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "heading": "4. The CVD Family"
+    }
+  },
+  {
+    "section": "5-atomic-layer-deposition",
+    "family": "cycle",
+    "title": "Separate two self-limiting surface reactions",
+    "caption": "Purges keep precursor pulses apart; each half-reaction saturates available surface sites before the next begins. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Precursor A pulse",
+        "detail": "The first reactant binds to available surface sites.",
+        "variant": "ald"
+      },
+      {
+        "glyph": "clean",
+        "label": "Purge A",
+        "detail": "Remove excess precursor and gaseous by-products."
+      },
+      {
+        "glyph": "film",
+        "label": "Reactant B pulse",
+        "detail": "The second reactant converts the adsorbed layer.",
+        "variant": "ald"
+      },
+      {
+        "glyph": "clean",
+        "label": "Purge B",
+        "detail": "Clear the chamber before repeating the cycle."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "heading": "5. Atomic Layer Deposition"
+    }
+  },
+  {
+    "section": "6-physical-vapor-deposition",
+    "family": "apparatus",
+    "title": "Sputtering is physical transport from target to wafer",
+    "caption": "Ions eject atoms from a solid target; line-of-sight arrival helps explain why deep recessed coverage is difficult. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Argon ions",
+        "detail": "The plasma supplies energetic projectiles."
+      },
+      {
+        "glyph": "material",
+        "label": "Solid target",
+        "detail": "Impact dislodges atoms from the desired material."
+      },
+      {
+        "glyph": "film",
+        "label": "Traveling flux",
+        "detail": "Atoms move across the chamber toward exposed surfaces.",
+        "variant": "pvd"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Substrate film",
+        "detail": "Arrival and sticking create the deposited layer."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "heading": "6. Physical Vapor Deposition"
+    }
+  },
+  {
+    "section": "7-epitaxy",
+    "family": "layers",
+    "title": "Epitaxy copies the crystal while changing composition",
+    "caption": "A compatible substrate supplies lattice order; controlled growth can create doped regions or alternating material layers. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Engineered epitaxial layer",
+        "detail": "The deposited crystal inherits the template orientation while growth controls its composition and doping."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Crystalline template",
+        "detail": "The substrate supports epitaxial growth."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "heading": "7. Epitaxy"
+    }
+  },
+  {
+    "section": "8-film-stress-engineering",
+    "family": "compare",
+    "title": "A stressed film bends its substrate",
+    "caption": "Intrinsic growth effects and thermal mismatch contribute to film stress; curvature is a mechanical response of the stack. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Tensile film stress",
+        "detail": "The film tends to contract relative to its constraint.",
+        "variant": "tensile"
+      },
+      {
+        "glyph": "film",
+        "label": "Compressive film stress",
+        "detail": "The film tends to expand relative to its constraint.",
+        "variant": "compressive"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Wafer curvature",
+        "detail": "The substrate bends in response to the net stress.",
+        "variant": "warped"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "heading": "8. Film Stress Engineering"
+    }
+  },
+  {
+    "section": "9-film-characterization-briefly",
+    "family": "branch",
+    "title": "One film needs several kinds of evidence",
+    "caption": "Thickness, composition, structure and stress are distinct properties; complementary measurements constrain the process. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Optical measurements",
+        "detail": "Reflected polarization or spectra help infer thickness and optical properties.",
+        "variant": "optical"
+      },
+      {
+        "glyph": "test",
+        "label": "Structural measurements",
+        "detail": "Diffraction and related methods probe order or composition.",
+        "variant": "instrument"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Curvature measurements",
+        "detail": "Bending provides evidence of film stress.",
+        "variant": "warped"
+      },
+      {
+        "glyph": "film",
+        "label": "Qualified film",
+        "detail": "The combined properties determine suitability for the device."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "heading": "9. Film Characterization, Briefly"
+    }
+  },
+  {
+    "section": "10-the-deposition-equipment-market",
+    "family": "branch",
+    "title": "Deposition tools specialize around different film jobs",
+    "caption": "The equipment market comprises several process families; capability and qualification matter alongside overall spending. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "furnace",
+        "label": "Thermal batch films",
+        "detail": "Furnaces support selected high-temperature materials.",
+        "variant": "tube-furnace"
+      },
+      {
+        "glyph": "film",
+        "label": "Conformal growth",
+        "detail": "ALD and related processes serve complex geometries.",
+        "variant": "ald"
+      },
+      {
+        "glyph": "material",
+        "label": "Metal deposition",
+        "detail": "PVD and other routes build conductive layers.",
+        "variant": "pvd"
+      },
+      {
+        "glyph": "transistor",
+        "label": "Integrated device flow",
+        "detail": "Multiple tool families cooperate across one chip process.",
+        "variant": "gaa"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "heading": "10. The Deposition Equipment Market"
+    }
+  }
+]

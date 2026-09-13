@@ -1,0 +1,187 @@
+[
+  {
+    "family": "compare",
+    "title": "Three kinds of evidence answer different questions",
+    "caption": "Dimensional measurement, defect inspection and electrical behavior are complementary. Passing one does not establish all the others.",
+    "nodes": [
+      {
+        "label": "Metrology",
+        "detail": "How thick, wide or well aligned is the intended structure?",
+        "glyph": "test",
+        "variant": "optical"
+      },
+      {
+        "label": "Inspection",
+        "detail": "Is an unexpected particle, bridge or missing feature present?",
+        "glyph": "test",
+        "variant": "electron"
+      },
+      {
+        "label": "Electrical test",
+        "detail": "Does the structure behave as the test requires?",
+        "glyph": "test",
+        "variant": "probe"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "1-measure-before-the-mistake-becomes-expensive"
+  },
+  {
+    "family": "flow",
+    "title": "Inspect broadly, then investigate selectively",
+    "caption": "Detailed images cover limited area at a time. Sampling and review strategies balance sensitivity, throughput and the cost of missed defects.",
+    "nodes": [
+      {
+        "label": "Broad inspection",
+        "detail": "Survey the wafer for suspicious features.",
+        "glyph": "test",
+        "variant": "optical"
+      },
+      {
+        "label": "Selected sites",
+        "detail": "Choose locations using signals and a sampling plan.",
+        "glyph": "wafer"
+      },
+      {
+        "label": "Detailed review",
+        "detail": "Examine a smaller region at higher resolution.",
+        "glyph": "test",
+        "variant": "electron"
+      },
+      {
+        "label": "Process decision",
+        "detail": "Use the evidence to investigate, hold or continue.",
+        "glyph": "design"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "2-why-a-fab-cannot-examine-everything-equally"
+  },
+  {
+    "family": "flow",
+    "title": "Yield is defined at a particular stage",
+    "caption": "Each test or assembly stage has its own acceptance requirements. A useful yield number identifies both the unit and the criterion.",
+    "nodes": [
+      {
+        "label": "Processed wafer",
+        "detail": "Early process checks assess wafer-level conditions.",
+        "glyph": "wafer"
+      },
+      {
+        "label": "Die sort",
+        "detail": "Electrical tests classify individual dies.",
+        "glyph": "test",
+        "variant": "probe"
+      },
+      {
+        "label": "Assembly",
+        "detail": "Suitable dies become a package with new interfaces.",
+        "glyph": "package",
+        "variant": "flip-chip"
+      },
+      {
+        "label": "Product bins",
+        "detail": "Final requirements determine useful grades or rejection.",
+        "glyph": "chip"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "3-yield-connects-physics-to-economics"
+  },
+  {
+    "family": "apparatus",
+    "title": "Temporary contacts connect each die to the tester",
+    "caption": "A prober positions the wafer, the probe card supplies contacts and ATE exercises the selected die. The resulting wafer map guides later selection.",
+    "nodes": [
+      {
+        "label": "Wafer and prober",
+        "detail": "Place each die at the required contact position.",
+        "glyph": "wafer"
+      },
+      {
+        "label": "Probe card",
+        "detail": "Make temporary electrical connections.",
+        "glyph": "test",
+        "variant": "probe"
+      },
+      {
+        "label": "ATE",
+        "detail": "Apply stimuli and evaluate measured responses.",
+        "glyph": "test"
+      },
+      {
+        "label": "Wafer map",
+        "detail": "Record pass, fail and product-bin information.",
+        "glyph": "design"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "4-touch-the-wafer-and-ask-electrical-questions"
+  },
+  {
+    "family": "flow",
+    "title": "Assembly creates new things to test",
+    "caption": "Known-good die means a specified incoming test flow passed. Package connections, stresses and system interfaces require additional evidence.",
+    "nodes": [
+      {
+        "label": "Screened die",
+        "detail": "Passes its incoming test requirements.",
+        "glyph": "chip"
+      },
+      {
+        "label": "Assembly",
+        "detail": "Creates joints and combines materials or dies.",
+        "glyph": "package",
+        "variant": "flip-chip"
+      },
+      {
+        "label": "Package test",
+        "detail": "Exercises newly formed electrical interfaces.",
+        "glyph": "test",
+        "variant": "probe"
+      },
+      {
+        "label": "Reliability evidence",
+        "detail": "Evaluates behavior under specified stresses and conditions.",
+        "glyph": "heat"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "5-a-good-bare-die-is-not-a-finished-product"
+  },
+  {
+    "family": "branch",
+    "title": "Choose test coverage around the consequences",
+    "caption": "Testing consumes time and resources, while escapes put downstream value at risk. The decision must reflect the failure mechanism and product context.",
+    "nodes": [
+      {
+        "label": "Possible failure",
+        "detail": "Identify what could escape the current flow.",
+        "glyph": "chip"
+      },
+      {
+        "label": "Downstream exposure",
+        "detail": "Consider valuable neighbors and wasted system time.",
+        "glyph": "rack"
+      },
+      {
+        "label": "Test cost",
+        "detail": "Account for equipment time and usable device lifetime.",
+        "glyph": "test"
+      },
+      {
+        "label": "Coverage decision",
+        "detail": "Choose evidence proportionate to the stated risks.",
+        "glyph": "design"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "6-decide-what-evidence-is-enough"
+  }
+]

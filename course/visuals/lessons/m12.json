@@ -1,0 +1,445 @@
+[
+  {
+    "section": "why-interconnect-became-the-bottleneck",
+    "family": "flow",
+    "title": "A narrower wire can cost more delay",
+    "caption": "Shrinking a wire reduces its conducting area while resistance and capacitance influence signal delay. Transistor scaling therefore does not automatically accelerate the interconnect.",
+    "nodes": [
+      {
+        "label": "Smaller cross-section",
+        "glyph": "wires",
+        "detail": "Less conductor carries the signal",
+        "variant": "narrow"
+      },
+      {
+        "label": "Higher effective resistance",
+        "glyph": "wires",
+        "detail": "Geometric and size effects impede current",
+        "variant": "narrow"
+      },
+      {
+        "label": "Wire capacitance",
+        "glyph": "film",
+        "detail": "Conductors couple through surrounding dielectrics",
+        "variant": "capacitive"
+      },
+      {
+        "label": "Signal delay",
+        "glyph": "queue",
+        "detail": "Charging the connected wiring takes time"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "Why Interconnect Became the Bottleneck"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "anatomy-of-the-metal-stack",
+    "family": "layers",
+    "title": "Local connections grow into global routes",
+    "caption": "Fine lower levels connect nearby devices; higher levels handle longer routes and power. Vias connect one metal level to the next.",
+    "nodes": [
+      {
+        "label": "Upper metal",
+        "glyph": "wires",
+        "detail": "Long-distance signal and power distribution",
+        "variant": "wide"
+      },
+      {
+        "label": "Intermediate metal",
+        "glyph": "wires",
+        "detail": "Routes between circuit blocks",
+        "variant": "line"
+      },
+      {
+        "label": "Local metal",
+        "glyph": "wires",
+        "detail": "Connects neighboring devices",
+        "variant": "narrow"
+      },
+      {
+        "label": "MOL contacts",
+        "glyph": "transistor",
+        "detail": "Connects metal wiring to transistor terminals",
+        "variant": "contact"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "Anatomy of the Metal Stack"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "from-aluminum-to-copper",
+    "family": "compare",
+    "title": "Two metals lead to different patterning flows",
+    "caption": "Aluminum can be patterned by removing unwanted metal. Copper wiring is commonly formed by filling patterns already etched in dielectric.",
+    "nodes": [
+      {
+        "label": "Subtractive aluminum",
+        "glyph": "etch",
+        "detail": "Deposit metal then etch the unwanted regions",
+        "variant": "subtractive"
+      },
+      {
+        "label": "Damascene copper",
+        "glyph": "wires",
+        "detail": "Etch dielectric openings then fill them with copper",
+        "variant": "damascene"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "From Aluminum to Copper"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-dual-damascene-flow-step-by-step",
+    "family": "flow",
+    "title": "Shape the empty space before filling the wire",
+    "caption": "Dual damascene integrates the via and trench into a repeated dielectric-fill-polish sequence.",
+    "nodes": [
+      {
+        "label": "Via and trench",
+        "glyph": "etch",
+        "detail": "Pattern openings in the insulating stack",
+        "variant": "via-trench"
+      },
+      {
+        "label": "Barrier and seed",
+        "glyph": "film",
+        "detail": "Prepare the surfaces for copper fill",
+        "variant": "liner"
+      },
+      {
+        "label": "Copper fill",
+        "glyph": "wires",
+        "detail": "Electrochemical deposition fills the openings",
+        "variant": "damascene"
+      },
+      {
+        "label": "CMP and cap",
+        "glyph": "clean",
+        "detail": "Remove overburden and prepare the next level",
+        "variant": "planar"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "The Dual Damascene Flow, Step by Step"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "vias-resistance-and-the-small-dimension-tax",
+    "family": "compare",
+    "title": "The liner occupies part of the opening",
+    "caption": "A fixed protective lining takes a greater fraction of a smaller via. The remaining conducting core is what carries current.",
+    "nodes": [
+      {
+        "label": "Larger opening",
+        "glyph": "wires",
+        "detail": "The conductor retains more of the available cross-section",
+        "variant": "wide"
+      },
+      {
+        "label": "Smaller opening",
+        "glyph": "wires",
+        "detail": "The lining consumes a larger fraction of the opening",
+        "variant": "narrow"
+      },
+      {
+        "label": "Via interface",
+        "glyph": "film",
+        "detail": "Interfaces add resistance to the vertical connection",
+        "variant": "liner"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "Vias, Resistance and the Small-Dimension Tax"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "electromigration",
+    "family": "flow",
+    "title": "Current can gradually move the metal itself",
+    "caption": "Electromigration redistributes atoms. Material depletion can form a void, while accumulation can create a protrusion or short.",
+    "nodes": [
+      {
+        "label": "Current-carrying wire",
+        "glyph": "wires",
+        "detail": "Electrons flow through a confined conductor",
+        "variant": "line"
+      },
+      {
+        "label": "Atom transport",
+        "glyph": "material",
+        "detail": "Momentum transfer drives gradual redistribution"
+      },
+      {
+        "label": "Local depletion",
+        "glyph": "etch",
+        "detail": "A void raises resistance or breaks continuity",
+        "variant": "void"
+      },
+      {
+        "label": "Local accumulation",
+        "glyph": "material",
+        "detail": "A hillock can threaten nearby insulation",
+        "variant": "hillock"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "Electromigration"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "other-reliability-mechanisms",
+    "family": "compare",
+    "title": "Interconnect can fail in more than one way",
+    "caption": "Electrical stress, mechanical stress and dielectric integrity produce different failures and require different evidence.",
+    "nodes": [
+      {
+        "label": "Dielectric breakdown",
+        "glyph": "film",
+        "detail": "Insulation loses its ability to separate conductors",
+        "variant": "breakdown"
+      },
+      {
+        "label": "Stress voiding",
+        "glyph": "wires",
+        "detail": "Mechanical stress creates depleted regions",
+        "variant": "void"
+      },
+      {
+        "label": "Interface failure",
+        "glyph": "material",
+        "detail": "Adhesion and material boundaries affect reliability"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "Other Reliability Mechanisms"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-new-metals",
+    "family": "compare",
+    "title": "Smaller wiring changes the material tradeoff",
+    "caption": "Bulk resistivity alone does not determine the best narrow interconnect. Liner requirements, surfaces and integration also matter.",
+    "nodes": [
+      {
+        "label": "Copper with liners",
+        "glyph": "wires",
+        "detail": "Barriers protect nearby dielectric from copper",
+        "variant": "liner"
+      },
+      {
+        "label": "Alternative metals",
+        "glyph": "material",
+        "detail": "Different materials can change scaling and integration limits"
+      },
+      {
+        "label": "Airgap dielectric",
+        "glyph": "film",
+        "detail": "A lower-permittivity space reduces wire-to-wire coupling",
+        "variant": "airgap"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "The New Metals"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-top-of-the-stack",
+    "family": "layers",
+    "title": "The top of the chip meets the package",
+    "caption": "The upper interconnect ends in protected connection sites. The package takes those connections to a much larger pitch.",
+    "nodes": [
+      {
+        "label": "Package connection",
+        "glyph": "package",
+        "detail": "Bumps or pads connect the die outward",
+        "variant": "flip-chip"
+      },
+      {
+        "label": "Passivation",
+        "glyph": "film",
+        "detail": "Protects the finished chip surface"
+      },
+      {
+        "label": "Top metal",
+        "glyph": "wires",
+        "detail": "Distributes power and longer-distance signals",
+        "variant": "wide"
+      },
+      {
+        "label": "Lower interconnect",
+        "glyph": "wires",
+        "detail": "Connects down toward the transistors",
+        "variant": "narrow"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "The Top of the Stack"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "backside-power-delivery",
+    "family": "compare",
+    "title": "Separate power access from frontside routing",
+    "caption": "Backside power moves part of the power-delivery network to the opposite side of the device layer. Signal routing and device connections still need their own paths.",
+    "nodes": [
+      {
+        "label": "Frontside delivery",
+        "glyph": "wires",
+        "detail": "Power and signals compete within frontside wiring",
+        "variant": "frontside"
+      },
+      {
+        "label": "Backside delivery",
+        "glyph": "wafer",
+        "detail": "The thinned wafer allows power connections from below",
+        "variant": "backside"
+      },
+      {
+        "label": "Device connection",
+        "glyph": "transistor",
+        "detail": "Vertical connections join the power network to devices",
+        "variant": "contact"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "Backside Power Delivery"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "interconnect-metrology-and-test-structures",
+    "family": "compare",
+    "title": "Measure the wire and its connections",
+    "caption": "Line, via-chain and comb structures are separate test geometries, not sequential stations. They distinguish conductor resistance, repeated vertical contacts and insulation between adjacent lines.",
+    "nodes": [
+      {
+        "label": "Line structure",
+        "glyph": "wires",
+        "detail": "Measures resistance along a conductor",
+        "variant": "line"
+      },
+      {
+        "label": "Via chain",
+        "glyph": "wires",
+        "detail": "Amplifies the contribution of repeated vertical connections",
+        "variant": "via-chain"
+      },
+      {
+        "label": "Comb structure",
+        "glyph": "wires",
+        "detail": "Probes separation between adjacent conductors",
+        "variant": "comb"
+      },
+      {
+        "label": "Electrical tester",
+        "glyph": "test",
+        "detail": "Reads the response under controlled conditions",
+        "variant": "instrument"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "Interconnect Metrology and Test Structures"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "design-rules-the-beol-imposes",
+    "family": "compare",
+    "title": "Layout must respect manufacturable geometry",
+    "caption": "Width, spacing, enclosure and density constraints limit how a circuit can be routed. They describe different physical failure risks.",
+    "nodes": [
+      {
+        "label": "Width and spacing",
+        "glyph": "wires",
+        "detail": "Control conductor dimensions and separation",
+        "variant": "parallel"
+      },
+      {
+        "label": "Via enclosure",
+        "glyph": "wires",
+        "detail": "Keeps a via properly landed on its metal",
+        "variant": "via"
+      },
+      {
+        "label": "Pattern density",
+        "glyph": "mask",
+        "detail": "Affects deposition, etch and polishing uniformity",
+        "variant": "pattern"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "Design Rules the BEOL Imposes"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "tools-materials-and-who-supplies-what",
+    "family": "flow",
+    "title": "Different tools finish one wiring level",
+    "caption": "No single tool produces a completed interconnect. Each operation must preserve the geometry and interfaces produced upstream.",
+    "nodes": [
+      {
+        "label": "Pattern and etch",
+        "glyph": "mask",
+        "detail": "Define the dielectric openings"
+      },
+      {
+        "label": "Barrier and seed deposition",
+        "glyph": "film",
+        "detail": "Prepare a continuous lining and conductive seed"
+      },
+      {
+        "label": "Copper plating",
+        "glyph": "wires",
+        "detail": "Fill the patterned openings"
+      },
+      {
+        "label": "CMP and inspection",
+        "glyph": "clean",
+        "detail": "Planarize and verify before repeating the level"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/12-interconnect-beol.md",
+      "heading": "Tools, Materials and Who Supplies What"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  }
+]

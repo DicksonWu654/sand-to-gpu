@@ -165,186 +165,61 @@
 
   window.registerWidget('chain-map', {
     title: 'The Supply Chain in One Map',
-    caption: 'Follow the numbers 1 → 16: rows read left to right and the hooked line returns to the next row; HBM (dashed) is made in parallel and joins at stage 11. Click a card (or hover to preview) and the panel explains what happens there, what goes in and out, who does it and what it costs.',
+    caption: 'Follow the material, then explore where chip design and a separate memory line meet it. Select a phase or a manufacturing stage to inspect the transformation.',
     mount(el, ctx) {
       const { h, svg } = ctx;
-      const uid = 'cm' + Math.random().toString(36).slice(2, 7);
-      let sel = NODES[0], shown = sel, narrowMode = false;
-      const T = (x, y, s, o, txt) => svg('text', Object.assign({ x, y, 'font-size': s, 'font-family': 'var(--sans)', fill: 'var(--ink)' }, o || {}), txt);
-
-      // ---------- layout: 4 x 4 grid of 172 x 92 cards, a branch band between rows 2 and 3 ----------
-      const CW = 172, CH = 92, ML = 28, GX = 12, W = 760;
-      const X = [0, 1, 2, 3].map(c => ML + c * (CW + GX));
-      const Y = [12, 148, 420, 556];              // rows 1-4
-      const BY = 284;                             // branch band (HBM card + callouts)
-      const H = Y[3] + CH + 10;
-      const pos = NODES.map((n, i) => ({ x: X[i % 4], y: Y[Math.floor(i / 4)] }));
-      const hbmPos = { x: X[2], y: BY };
-
-      const flow = svg('svg', { class: 'w-svg', viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'Map of the semiconductor supply chain, 16 numbered stages plus the HBM branch' });
-      const defs = svg('defs');
-      [['m', 'var(--muted)'], ['m2', 'var(--accent2)']].forEach(([k, fill]) => defs.append(
-        svg('marker', { id: `${uid}-${k}`, markerWidth: 8, markerHeight: 8, refX: 7.5, refY: 4, orient: 'auto', markerUnits: 'userSpaceOnUse' },
-          svg('path', { d: 'M0 0 L8 4 L0 8 Z', fill }))));
-      flow.append(defs);
-      const arrow = (d, o) => svg('path', Object.assign({ d, fill: 'none', stroke: 'var(--muted)', 'stroke-width': 2, 'marker-end': `url(#${uid}-m)` }, o || {}));
-      // within-row arrows
-      NODES.forEach((n, i) => { if (i % 4 < 3) flow.append(arrow(`M${pos[i].x + CW} ${pos[i].y + CH / 2} H${pos[i + 1].x}`)); });
-      // row-return elbows: down from the last card, left along the gap, down the left margin, into the first card of the next row
-      const r = 8, xL = 10;
-      [0, 1, 2].forEach(row => {
-        const yBot = Y[row] + CH, yMid = Y[row + 1] + CH / 2, xFrom = X[3] + CW / 2;
-        flow.append(arrow(`M${xFrom} ${yBot} V${yBot + 22 - r} a${r} ${r} 0 0 1 ${-r} ${r} H${xL + r} a${r} ${r} 0 0 0 ${-r} ${r} V${yMid - r} a${r} ${r} 0 0 0 ${r} ${r} H${ML}`));
+      let current = NODES.find(n => n.id === 'cowos');
+      const icon = (name, size = 64) => {
+        const d = svg('svg', { viewBox: '0 0 44 44', width: size, height: size, 'aria-hidden': 'true', style: { flexShrink: '0' } });
+        glyph(svg, name).forEach(x => d.append(x)); return d;
+      };
+      const phases = [
+        { name: '01 · Material', label: 'Purify & shape', id: 'ingot', glyph: 'cz', cat: 'mat' },
+        { name: '02 · Wafer fab', label: 'Build the circuit', id: 'feol', glyph: 'feol', cat: 'fab' },
+        { name: '03 · Packaging', label: 'Bring chips together', id: 'cowos', glyph: 'cowos', cat: 'pkg' },
+        { name: '04 · Systems', label: 'Power & connect', id: 'rack', glyph: 'rack', cat: 'sys' }
+      ];
+      const overview = h('div', { class: 'w-studio' });
+      overview.append(h('div', { class: 'w-figure-title' }, 'One material journey. Two essential branches.'));
+      const strip = h('div', { class: 'w-stage-strip', style: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 145px), 1fr))', gap: '10px' } });
+      const phaseBtns = phases.map((phase, i) => {
+        const b = h('button', { class: 'w-btn', 'data-phase': phase.cat, style: { display: 'grid', justifyItems: 'start', gap: '7px', whiteSpace: 'normal', textAlign: 'left', padding: '14px', borderTop: '3px solid ' + CAT[phase.cat].v }, on: { click: () => choose(phase.id) } },
+          h('span', { style: { fontSize: '11px', fontFamily: 'var(--mono)', color: 'var(--muted)' } }, phase.name), icon(phase.glyph, 56), h('strong', null, phase.label), h('span', { style: { color: CAT[phase.cat].v } }, i < 3 ? 'Continues →' : 'Compute at scale'));
+        strip.append(b); return b;
       });
-      // HBM branch arrow straight down into the packaging card
-      const hx = hbmPos.x + CW / 2;
-      flow.append(arrow(`M${hx} ${BY + CH} V${Y[2]}`, { stroke: 'var(--accent2)', 'stroke-dasharray': '5 4', 'marker-end': `url(#${uid}-m2)` }));
-      flow.append(T(hx + 9, Y[2] - 16, 13, { fill: 'var(--accent2)', 'font-weight': 600 }, 'HBM stacks join the GPU die here'));
-      // branch annotation (column 4 of the band)
-      const ax = X[3] + 2;
-      [['Parallel branch', { fill: 'var(--accent2)', 'font-weight': 700 }], ['DRAM fab ~2–3 months,', null], ['then ~1 week of TSV', null],
-        ['stacking and test.', null], ['SK hynix, Samsung, Micron', null]].forEach(([s, o], i) =>
-        flow.append(T(ax, BY + 18 + i * 17, 13, Object.assign({ fill: 'var(--muted)' }, o || {}), s)));
-      // orientation callout (columns 1-2 of the band), Module 00's second orientation fact
-      const cx0 = X[0], cw = X[1] + CW - X[0];
-      flow.append(svg('rect', { x: cx0, y: BY, width: cw, height: CH, rx: 8, fill: 'var(--panel2)', stroke: 'var(--line2)', 'stroke-width': 1.2, 'stroke-dasharray': '5 4' }));
-      [['Time: ~6–9 months from polysilicon to server', { 'font-weight': 700 }], ['~3 months of it inside the wafer fab (stages 6–8),', null],
-        ['1–2 months in packaging and test (10–12).', null], ['Everything after the wafer is fast; everything', null], ['before it is cheap.', null]].forEach(([s, o], i) =>
-        flow.append(T(cx0 + 12, BY + 22 + i * 16, 13, Object.assign({ fill: i ? 'var(--muted)' : 'var(--ink)' }, o || {}), s)));
-
-      // ---------- cards ----------
-      const cardsG = svg('g', { class: 'cards' }); flow.append(cardsG);
-      const cards = new Map();
-      function drawCard(n, p, num) {
-        const col = CAT[n.cat].v;
-        const g = svg('g', { tabindex: 0, role: 'button', 'data-id': n.id, 'aria-label': (num ? num + '. ' : '') + n.name.replace('|', ' ') + ' — module ' + pad(n.mod), style: { cursor: 'pointer', color: col } });
-        const box = svg('rect', { x: p.x, y: p.y, width: CW, height: CH, rx: 8, fill: 'var(--panel2)', stroke: col, 'stroke-width': 2 });
-        const tint = svg('rect', { x: p.x, y: p.y, width: CW, height: CH, rx: 8, fill: col, 'fill-opacity': 0 });
-        g.append(box, tint, svg('rect', { x: p.x + 4, y: p.y + 8, width: 6, height: CH - 16, rx: 3, fill: col }));
-        g.append(svg('circle', { cx: p.x + 26, cy: p.y + 18, r: 11, fill: col }),
-          T(p.x + 26, p.y + 22.5, 13, { 'font-family': 'var(--mono)', 'font-weight': 700, 'text-anchor': 'middle', fill: 'var(--panel)' }, num || '‖'));
-        const ig = svg('g', { transform: `translate(${p.x + 14},${p.y + 38})` });
-        glyph(svg, n.glyph).forEach(s => ig.append(s)); g.append(ig);
-        const lines = n.name.split('|'), tx = p.x + 64;
-        lines.forEach((s, i) => g.append(T(tx, p.y + (lines.length === 1 ? 34 : 25 + i * 17), 14, { 'font-weight': 700 }, s)));
-        g.append(T(tx, p.y + 62, 13, { 'font-family': 'var(--mono)', fill: 'var(--ink)' }, n.out1));
-        g.append(T(p.x + CW - 6, p.y + 84, 13, { 'font-family': 'var(--mono)', 'text-anchor': 'end', fill: 'var(--muted)' }, 'Module ' + pad(n.mod)));
-        const select = () => { sel = n; show(n); paint(); };
-        g.addEventListener('click', select);
-        g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(); } });
-        g.addEventListener('mouseenter', () => { g.hover = true; show(n); paint(); });
-        g.addEventListener('mouseleave', () => { g.hover = false; show(sel); paint(); });
-        g.addEventListener('focus', () => { g.hover = true; show(n); paint(); });
-        g.addEventListener('blur', () => { g.hover = false; show(sel); paint(); });
-        cardsG.append(g); cards.set(n.id, { g, box, tint });
+      const branches = h('div', { style: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '12px', marginTop: '14px' } },
+        h('div', { style: { padding: '12px', borderLeft: '2px solid var(--accent)', background: 'var(--panel)' } }, h('b', null, 'Circuit design → wafer fab'), h('div', { class: 'w-note', style: { margin: '4px 0 0' } }, 'The design becomes the masks that tell the fab where to build each layer.')),
+        h('button', { class: 'w-btn', 'data-id': 'hbm', style: { display: 'flex', alignItems: 'center', gap: '12px', whiteSpace: 'normal', textAlign: 'left', borderLeft: '2px dashed var(--accent2)' }, on: { click: () => choose('hbm') } }, icon('hbm', 44), h('span', null, h('b', null, 'HBM memory → packaging'), h('span', { style: { display: 'block', fontWeight: '400', marginTop: '4px' } }, 'A separate DRAM line joins the GPU die here.'))));
+      overview.append(strip, branches);
+      const select = h('select', { 'aria-label': 'Manufacturing stage', style: { width: '100%' } });
+      ALL.forEach(n => select.append(h('option', { value: n.id }, (NODES.indexOf(n) >= 0 ? (NODES.indexOf(n) + 1) + '. ' : 'Parallel · ') + n.name.replace('|', ' '))));
+      const prev = h('button', { class: 'w-btn', on: { click: () => advance(-1) } }, '← Previous');
+      const next = h('button', { class: 'w-btn', on: { click: () => advance(1) } }, 'Next →');
+      const nav = h('div', { class: 'w-console' }, h('label', { class: 'w-ctl' }, h('span', null, 'Inspect a stage'), select), h('div', { class: 'w-step-nav' }, prev, next));
+      const mechanism = h('div', { class: 'w-studio' });
+      const explanation = h('div', { class: 'w-insight', 'aria-live': 'polite' });
+      const extra = h('div', { class: 'w-grid2' });
+      const reference = h('details', { class: 'w-reference' }, h('summary', null, 'Suppliers, timing & estimated economics'), extra);
+      const value = h('details', { class: 'w-reference' }, h('summary', null, 'Follow the value of one wafer’s material'),
+        h('div', { class: 'w-note' }, 'Illustrative H100 worked example from Module 00. These are estimates at different stages, including additional components and finally selling price; they are not interchangeable measures of cost.'),
+        h('div', { style: { display: 'grid', gap: '10px', padding: '12px 0' } }, ...VALUE.map(p => h('div', { style: { display: 'grid', gridTemplateColumns: 'minmax(105px, 1fr) 2fr', gap: '16px', alignItems: 'baseline', borderBottom: '1px solid var(--line)', paddingBottom: '8px' } }, h('b', { style: { fontFamily: 'var(--mono)', color: 'var(--accent)' } }, p.txt), h('span', null, p.cap)))),
+        h('div', { class: 'w-formula' }, 'Per-wafer sales ≈ 45–50 sellable modules × $25–30k. Module BOM ≈ 45–50 × $3,300.'));
+      const field = (title, text) => h('div', null, h('div', { class: 'w-figure-title' }, title), h('div', null, text));
+      function choose(id) { current = ALL.find(n => n.id === id); render(); }
+      function advance(delta) { const i = ALL.indexOf(current); choose(ALL[Math.max(0, Math.min(ALL.length - 1, i + delta))].id); }
+      function render() {
+        const n = current, i = ALL.indexOf(n); select.value = n.id;
+        prev.disabled = i === 0; next.disabled = i === ALL.length - 1;
+        phaseBtns.forEach((b, j) => { const active = phases[j].cat === n.cat || (n.cat === 'mem' && phases[j].cat === 'pkg'); b.classList.toggle('primary', active); b.setAttribute('aria-pressed', active); });
+        mechanism.replaceChildren(h('div', { class: 'w-figure-title' }, 'The transformation · ' + CAT[n.cat].label),
+          h('div', { style: { display: 'flex', gap: '18px', alignItems: 'center', margin: '12px 0 20px' } }, icon(n.glyph, 100), h('div', null, h('h3', { style: { margin: '0 0 6px', fontSize: '22px' } }, n.name.replace('|', ' ')), h('a', { href: '#/m/' + pad(n.mod) }, 'Read module ' + pad(n.mod) + ' →'))),
+          h('div', { style: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '16px' } }, field('IN →', n.in), field('OUT →', n.out)));
+        explanation.textContent = n.why;
+        extra.replaceChildren(field('Suppliers', n.who), field('Estimated cost / value', n.cost), field('Elapsed time', n.time), field('Where', n.where));
       }
-      NODES.forEach((n, i) => drawCard(n, pos[i], String(i + 1)));
-      drawCard(HBM, hbmPos, '');
-      function paint() {
-        cards.forEach(({ g, box, tint }, id) => {
-          const isSel = id === sel.id;
-          // selected: tint + 3.5 stroke; hover only: 3 stroke (a distinct, lighter affordance)
-          box.setAttribute('stroke-width', isSel ? 3.5 : g.hover ? 3 : 2);
-          tint.setAttribute('fill-opacity', isSel ? .16 : g.hover ? .06 : 0);
-        });
-        listBtns.forEach((b, id) => b.classList.toggle('primary', id === sel.id));
-      }
-
-      // ---------- narrow vertical list (< 560 px) ----------
-      const list = h('div', { style: { display: 'none', flexDirection: 'column', gap: '6px' } });
-      const listBtns = new Map();
-      function listItem(n, num, indent) {
-        const btn = h('button', {
-          class: 'w-btn', 'data-id': n.id,
-          style: { display: 'flex', alignItems: 'center', gap: '10px', justifyContent: 'flex-start', borderLeft: `4px solid ${CAT[n.cat].v}`, textAlign: 'left', marginLeft: indent ? '22px' : '0' },
-          on: { click: () => { sel = n; show(n); paint(); } }
-        }, h('span', { style: { fontFamily: 'var(--mono)', fontSize: '12px', minWidth: '20px' } }, num), h('span', null, n.name.replace('|', ' ')),
-          h('span', { style: { marginLeft: 'auto', fontFamily: 'var(--mono)', fontSize: '11.5px', opacity: .85 } }, 'M' + pad(n.mod)));
-        list.append(btn); listBtns.set(n.id, btn);
-      }
-      NODES.forEach((n, i) => { if (n.id === 'cowos') listItem(HBM, '↳', true); listItem(n, String(i + 1)); });
-
-      // ---------- detail panel ----------
-      const wrap = h('div', { style: { marginTop: '14px', padding: '12px 14px', background: 'var(--ground)', borderRadius: '8px' } });
-      const head = h('div', { style: { display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: '4px 10px', marginBottom: '6px' } });
-      const why = h('div', { style: { fontSize: '13.5px', lineHeight: '1.45', margin: '0 0 10px' } });
-      const detail = h('div', { class: 'w-grid2' });
-      wrap.append(head, why, detail);
-      function field(label, val) {
-        return h('div', null, h('div', { style: { fontSize: '11.5px', textTransform: 'uppercase', letterSpacing: '.06em', color: 'var(--muted)' } }, label), h('div', { style: { fontSize: '13.5px' } }, val));
-      }
-      function fill(n) {
-        head.innerHTML = ''; detail.innerHTML = '';
-        const num = NODES.indexOf(n);
-        head.append(
-          h('h5', { style: { margin: 0, fontSize: '15px', fontFamily: 'var(--sans)' } }, (num >= 0 ? (num + 1) + ' · ' : '') + n.name.replace('|', ' ')),
-          h('span', { style: { fontSize: '11.5px', fontFamily: 'var(--mono)', color: CAT[n.cat].v, whiteSpace: 'nowrap' } }, CAT[n.cat].label),
-          h('a', { href: '#/m/' + pad(n.mod), style: { marginLeft: narrowMode ? '0' : 'auto', flexBasis: narrowMode ? '100%' : 'auto', fontSize: '12.5px', fontFamily: 'var(--sans)', whiteSpace: 'nowrap' } }, 'Go to module ' + pad(n.mod) + ' →'));
-        why.textContent = n.why;
-        detail.append(field('What goes in', n.in), field('What comes out', n.out), field('Who does it', n.who), field('Rough cost / value', n.cost), field('Time', n.time), field('Where', n.where));
-      }
-      function show(n) { shown = n; fill(n); }
-      // give the panel the height of its tallest stage so hovering never reflows the strip below
-      function fitDetail() {
-        wrap.style.minHeight = '0';
-        let max = 0; ALL.forEach(n => { fill(n); max = Math.max(max, wrap.offsetHeight); });
-        fill(shown); wrap.style.minHeight = narrowMode ? '0' : max + 'px';   // the narrow list has no hover preview, so nothing to guard
-      }
-
-      // ---------- legend ----------
-      const legend = h('div', { class: 'w-legend', style: { marginTop: '8px' } },
-        ...Object.values(CAT).map(c => h('span', { class: 'w-legend-item' }, h('i', { style: { background: c.v } }), c.label)),
-        h('span', { class: 'w-legend-item' }, h('i', { style: { background: 'transparent', border: '2px dashed var(--accent2)' } }), 'dashed = joins from a parallel branch'));
-
-      // ---------- value of ONE wafer's material (log strip; HTML list when narrow) ----------
-      const VX0 = 36, VX1 = 690, VL0 = Math.log10(4), VL1 = 7, VY = 108;
-      const vx = v => VX0 + (Math.log10(v) - VL0) / (VL1 - VL0) * (VX1 - VX0);
-      const vstrip = svg('svg', { class: 'w-svg', viewBox: '0 0 720 140', role: 'img', 'aria-label': 'Value of the material from one 300 mm wafer, log scale' });
-      vstrip.append(svg('line', { x1: VX0 - 10, y1: VY, x2: VX1 + 14, y2: VY, stroke: 'var(--line2)', 'stroke-width': 2, 'marker-end': `url(#${uid}-m)` }));
-      [10, 100, 1e3, 1e4, 1e5, 1e6, 1e7].forEach(t => {
-        const x = vx(t);
-        vstrip.append(svg('line', { x1: x, y1: VY, x2: x, y2: VY + 6, stroke: 'var(--line2)', 'stroke-width': 1.5 }));
-        vstrip.append(T(x, VY + 23, 12.5, { 'font-family': 'var(--mono)', 'text-anchor': 'middle', fill: 'var(--muted)' }, t >= 1e6 ? '$' + t / 1e6 + 'M' : t >= 1e3 ? '$' + t / 1e3 + 'k' : '$' + t));
-      });
-      VALUE.forEach((p, i) => {
-        const x = vx(p.v), far = i % 2 === 1, top = far ? VY - 65 : VY - 25;
-        if (p.mult) vstrip.append(T((x + vx(VALUE[i - 1].v)) / 2, VY - 9, 12.5, { 'font-family': 'var(--mono)', 'font-weight': 700, 'text-anchor': 'middle', fill: 'var(--accent)' }, p.mult));
-        vstrip.append(svg('line', { x1: x, y1: VY - 6, x2: x, y2: top, stroke: 'var(--accent)', 'stroke-width': 1.5 }));
-        vstrip.append(svg('circle', { cx: x, cy: VY, r: 5, fill: 'var(--accent)', stroke: 'var(--panel)', 'stroke-width': 1.5 }));
-        const anchor = i === 0 ? 'start' : 'middle', tx = i === 0 ? x - 4 : x;
-        vstrip.append(T(tx, top - 27, 13.5, { 'font-family': 'var(--mono)', 'font-weight': 700, 'text-anchor': anchor }, p.txt));
-        vstrip.append(T(tx, top - 11, 12.5, { 'text-anchor': anchor, fill: 'var(--muted)' }, p.cap));
-      });
-      // narrow fallback: one row per point (value · caption · multiplier), never a scaled-down 720-wide SVG
-      const vlist = h('div', { style: { display: 'none', flexDirection: 'column', gap: '4px', margin: '6px 0 2px' } },
-        ...VALUE.map((p, i) => h('div', { style: { display: 'flex', alignItems: 'baseline', gap: '10px', padding: '6px 10px', background: 'var(--ground)', borderRadius: '6px', borderLeft: '4px solid var(--accent)' } },
-          h('b', { style: { fontFamily: 'var(--mono)', fontSize: '14px', minWidth: '84px' } }, p.txt),
-          h('span', { style: { fontSize: '13px', flex: '1 1 auto' } }, p.cap),
-          h('span', { style: { fontFamily: 'var(--mono)', fontSize: '12px', color: 'var(--accent)', fontWeight: 700, whiteSpace: 'nowrap' } }, p.mult ? p.mult + ' ↑' : 'start'))));
-
-      // ---------- assemble ----------
-      el.append(flow, list, legend, wrap,
-        h('h5', { style: { margin: '20px 0 2px', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--muted)' } }, 'Value of the material from ONE 300 mm wafer (log scale)'),
-        vstrip, vlist,
-        h('div', { class: 'w-formula' }, 'per-wafer value = sellable die per wafer (~45–50) × module price (~$25–30k) ≈ $1.3 M; BOM ≈ 45–50 × $3 300 ≈ $150k'),
-        h('div', { class: 'w-note' }, 'Every point is the same material, one 300 mm wafer, at a later stage: ~230 g of polysilicon ($20–40/kg), the polished wafer, the wafer after ~3 months in the fab, and the 45–50 finished GPU modules it yields, first at bill-of-materials cost and then at selling price. Source: Module 00 table and H100 worked example.'));
-      show(sel); paint();
-
-      // ---------- responsive switch ----------
-      let rafId = 0;
-      const ro = new ResizeObserver(entries => {
-        const w = entries[0].contentRect.width;
-        if (rafId) cancelAnimationFrame(rafId);
-        rafId = requestAnimationFrame(() => {
-          rafId = 0;
-          narrowMode = w < 560;
-          flow.style.display = narrowMode ? 'none' : 'block'; list.style.display = narrowMode ? 'flex' : 'none';
-          vstrip.style.display = narrowMode ? 'none' : 'block'; vlist.style.display = narrowMode ? 'flex' : 'none';
-          fitDetail();
-        });
-      });
-      ro.observe(el);
-      return () => { ro.disconnect(); if (rafId) cancelAnimationFrame(rafId); };
+      select.addEventListener('change', () => choose(select.value));
+      el.append(overview, nav, mechanism, explanation, h('div', { class: 'w-note' }, 'Schematics show the sequence and convergence of processes, not physical scale. Supplier shares, timelines and prices are course estimates; see the module’s sources and review notes.'), reference, value);
+      render();
     }
   });
 })();

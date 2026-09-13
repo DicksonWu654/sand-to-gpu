@@ -1,0 +1,200 @@
+[
+  {
+    "family": "layers",
+    "title": "The cleanroom is one level of the factory",
+    "caption": "Air handling, processing and service infrastructure form a coordinated environment. This is a functional section, not a building blueprint.",
+    "nodes": [
+      {
+        "label": "Air handling",
+        "detail": "Filters and conditions air supplied to the process floor.",
+        "glyph": "clean"
+      },
+      {
+        "label": "Processing floor",
+        "detail": "Tools and wafer handling occupy controlled space.",
+        "glyph": "test"
+      },
+      {
+        "label": "Subfab services",
+        "detail": "Pumps, utilities and exhaust support the tools.",
+        "glyph": "gas"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "1-the-cleanroom-is-only-the-visible-part"
+  },
+  {
+    "family": "scale",
+    "title": "Control the environment closest to the wafer",
+    "caption": "The carrier and tool enclosure provide additional boundaries inside the cleanroom. Garments alone do not control chemical contamination.",
+    "nodes": [
+      {
+        "label": "Wafer surface",
+        "detail": "Particles and residues can damage device structures.",
+        "glyph": "wafer"
+      },
+      {
+        "label": "Carrier and tool",
+        "detail": "Local enclosures limit exposure during handling.",
+        "glyph": "clean"
+      },
+      {
+        "label": "Cleanroom",
+        "detail": "Controlled air and disciplined work reduce contamination.",
+        "glyph": "clean"
+      },
+      {
+        "label": "Facility",
+        "detail": "Utilities and people must support the controlled environment.",
+        "glyph": "rack"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "2-cleanliness-is-about-the-wafer-s-environment"
+  },
+  {
+    "family": "network",
+    "title": "A wafer travels with a process record",
+    "caption": "Physical transport and manufacturing records must remain synchronized. A carrier location alone does not establish that its wafers completed the right steps.",
+    "nodes": [
+      {
+        "label": "FOUP",
+        "detail": "Protects wafers during transport.",
+        "glyph": "wafer"
+      },
+      {
+        "label": "Process tool",
+        "detail": "Receives and processes the identified material.",
+        "glyph": "test"
+      },
+      {
+        "label": "Lot history",
+        "detail": "Records the route, completed steps and disposition.",
+        "glyph": "design"
+      },
+      {
+        "label": "Dispatch decision",
+        "detail": "Selects a valid next operation.",
+        "glyph": "queue"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "physical transfer"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "completion and measurements"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "route and holds"
+      },
+      {
+        "from": 3,
+        "to": 0,
+        "label": "next destination"
+      }
+    ],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "3-wafers-travel-with-an-identity-and-a-history"
+  },
+  {
+    "family": "cycle",
+    "title": "The same tool types serve many layers",
+    "caption": "The sequence returns to familiar operations as the structure grows. A wafer cannot skip the starting-surface requirements of the next step.",
+    "nodes": [
+      {
+        "label": "Deposit",
+        "detail": "Add a film to the current surface.",
+        "glyph": "film"
+      },
+      {
+        "label": "Lithography",
+        "detail": "Align and define the next pattern.",
+        "glyph": "mask"
+      },
+      {
+        "label": "Etch",
+        "detail": "Transfer the pattern into the target material.",
+        "glyph": "etch"
+      },
+      {
+        "label": "Planarize and assess",
+        "detail": "Prepare and measure the next working surface.",
+        "glyph": "test",
+        "variant": "optical"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "4-the-wafer-revisits-operations-as-the-chip-grows"
+  },
+  {
+    "family": "flow",
+    "title": "Process time sits inside a larger cycle time",
+    "caption": "A lot waits between transformations. In a stable system, more work in progress at the same output rate implies a longer average cycle time.",
+    "nodes": [
+      {
+        "label": "Queue",
+        "detail": "Wait for an eligible tool and compatible conditions.",
+        "glyph": "queue"
+      },
+      {
+        "label": "Process",
+        "detail": "The tool changes the wafer.",
+        "glyph": "film"
+      },
+      {
+        "label": "Transport",
+        "detail": "Move to the next operation.",
+        "glyph": "wafer"
+      },
+      {
+        "label": "Measure or hold",
+        "detail": "Check evidence and release the lot when appropriate.",
+        "glyph": "test",
+        "variant": "probe"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "5-waiting-explains-much-of-the-production-time"
+  },
+  {
+    "family": "branch",
+    "title": "Several constraints set useful output",
+    "caption": "Installed equipment is valuable only when materials, staffing, maintenance and scheduling let it produce qualified wafers.",
+    "nodes": [
+      {
+        "label": "Available tools",
+        "detail": "Maintenance and faults affect productive time.",
+        "glyph": "test"
+      },
+      {
+        "label": "Ready material",
+        "detail": "The right lots and inputs must reach the tools.",
+        "glyph": "wafer"
+      },
+      {
+        "label": "Coordinated schedule",
+        "detail": "Dispatch respects process routes and priorities.",
+        "glyph": "queue"
+      },
+      {
+        "label": "Qualified output",
+        "detail": "Completed wafers share the factory\u2019s fixed costs.",
+        "glyph": "chip"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "6-expensive-equipment-makes-coordination-valuable"
+  }
+]

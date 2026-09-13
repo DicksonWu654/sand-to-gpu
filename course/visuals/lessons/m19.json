@@ -1,0 +1,816 @@
+[
+  {
+    "section": "what-the-die-has-to-be",
+    "family": "branch",
+    "title": "A GPU combines computation, storage and movement",
+    "caption": "The die's organization must support the intended workload, not merely maximize the transistor count.",
+    "nodes": [
+      {
+        "label": "Compute blocks",
+        "glyph": "transistor",
+        "detail": "Perform the required arithmetic and control",
+        "variant": "logic"
+      },
+      {
+        "label": "On-chip storage",
+        "glyph": "memory",
+        "detail": "Keeps frequently used data near computation",
+        "variant": "sram"
+      },
+      {
+        "label": "Interconnect and I/O",
+        "glyph": "wires",
+        "detail": "Move data among blocks and beyond the die",
+        "variant": "fanout"
+      },
+      {
+        "label": "GPU architecture",
+        "glyph": "chip",
+        "detail": "Balances the blocks for the target workloads"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "What the die has to be"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "rtl-writing-the-chip",
+    "family": "flow",
+    "title": "RTL describes a circuit's behavior and state",
+    "caption": "Hardware description code becomes a hardware structure through synthesis. It is not a program subsequently executed as source text by the finished chip.",
+    "nodes": [
+      {
+        "label": "Behavior and state",
+        "glyph": "design",
+        "detail": "Define operations and clocked storage"
+      },
+      {
+        "label": "RTL modules",
+        "glyph": "design",
+        "detail": "Describe the connected hardware blocks"
+      },
+      {
+        "label": "Synthesis",
+        "glyph": "transistor",
+        "detail": "Maps the description into logic elements",
+        "variant": "logic"
+      },
+      {
+        "label": "Netlist",
+        "glyph": "wires",
+        "detail": "Records cells and their electrical connections",
+        "variant": "netlist"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "RTL: writing the chip"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "verification-why-nvidia-runs-more-emulators-than-anyone",
+    "family": "cycle",
+    "title": "Find errors before committing them to masks",
+    "caption": "Simulation, formal methods and emulation provide different ways to exercise a design. Results feed corrections back into the hardware description.",
+    "nodes": [
+      {
+        "label": "Design version",
+        "glyph": "design",
+        "detail": "Defines the behavior being checked"
+      },
+      {
+        "label": "Verification environment",
+        "glyph": "test",
+        "detail": "Applies workloads, assertions or proof conditions"
+      },
+      {
+        "label": "Observed mismatch",
+        "glyph": "chip",
+        "detail": "Identifies a behavior that violates the requirement"
+      },
+      {
+        "label": "Design correction",
+        "glyph": "design",
+        "detail": "Updates the circuit and starts another check"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "Verification: why NVIDIA runs more emulators than anyone"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-pdk-the-libraries-and-4n",
+    "family": "branch",
+    "title": "A design must fit a particular manufacturing process",
+    "caption": "The process design kit and libraries constrain what can be implemented and how it is verified.",
+    "nodes": [
+      {
+        "label": "PDK rules and models",
+        "glyph": "design",
+        "detail": "Describe process constraints and device behavior"
+      },
+      {
+        "label": "Cell libraries",
+        "glyph": "transistor",
+        "detail": "Provide characterized logic building blocks",
+        "variant": "cmos"
+      },
+      {
+        "label": "Design tools",
+        "glyph": "wires",
+        "detail": "Place, route and verify using those inputs",
+        "variant": "netlist"
+      },
+      {
+        "label": "Manufacturable layout",
+        "glyph": "chip",
+        "detail": "Meets the process-specific implementation requirements",
+        "variant": "layout"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "The PDK, the libraries, and \"4N\""
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "ip-the-blocks-nvidia-does-not-design-from-scratch",
+    "family": "branch",
+    "title": "Purchased IP still needs product-level integration",
+    "caption": "Reusable blocks reduce what must be designed from scratch, but their interfaces, verification and physical integration remain part of the chip project.",
+    "nodes": [
+      {
+        "label": "Reusable interface IP",
+        "glyph": "wires",
+        "detail": "Provides an established connection function",
+        "variant": "interface"
+      },
+      {
+        "label": "Reusable circuit IP",
+        "glyph": "transistor",
+        "detail": "Supplies specialized circuit blocks",
+        "variant": "logic"
+      },
+      {
+        "label": "Product-specific logic",
+        "glyph": "chip",
+        "detail": "Implements the differentiating functions",
+        "variant": "logic"
+      },
+      {
+        "label": "Integrated GPU design",
+        "glyph": "design",
+        "detail": "Connects and verifies all blocks as one product"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "IP: the blocks NVIDIA does not design from scratch"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "physical-design-from-netlist-to-polygons",
+    "family": "flow",
+    "title": "Place cells and make the connections physical",
+    "caption": "Physical design turns the netlist into locations and wire shapes while checking timing, power and manufacturability.",
+    "nodes": [
+      {
+        "label": "Floorplan",
+        "glyph": "design",
+        "detail": "Allocates space for major blocks and connections"
+      },
+      {
+        "label": "Placement",
+        "glyph": "transistor",
+        "detail": "Locates the cells within that plan",
+        "variant": "logic"
+      },
+      {
+        "label": "Clock and routing",
+        "glyph": "wires",
+        "detail": "Builds the clock network and signal connections",
+        "variant": "netlist"
+      },
+      {
+        "label": "Sign-off layout",
+        "glyph": "mask",
+        "detail": "Checks the resulting implementation before release",
+        "variant": "layout"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "Physical design: from netlist to polygons"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "tape-out-from-polygons-to-masks",
+    "family": "flow",
+    "title": "Released layout becomes the mask set",
+    "caption": "Tape-out hands a checked physical design into mask preparation. The resulting masks encode the patterns used by fabrication.",
+    "nodes": [
+      {
+        "label": "Verified layout",
+        "glyph": "design",
+        "detail": "Contains the approved physical geometry"
+      },
+      {
+        "label": "Mask data preparation",
+        "glyph": "mask",
+        "detail": "Converts layout into manufacturable mask patterns",
+        "variant": "layout"
+      },
+      {
+        "label": "Mask fabrication",
+        "glyph": "mask",
+        "detail": "Writes and processes the reticles",
+        "variant": "reticle"
+      },
+      {
+        "label": "Foundry patterning",
+        "glyph": "wafer",
+        "detail": "Uses the reticles within the process flow",
+        "variant": "grid"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "Tape-out: from polygons to masks"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "first-silicon-bring-up-and-respins",
+    "family": "cycle",
+    "title": "First silicon closes the loop between model and hardware",
+    "caption": "Bring-up compares the manufactured chip's behavior with its intended operation. A required design change can lead to another mask revision and fabrication cycle.",
+    "nodes": [
+      {
+        "label": "First fabricated die",
+        "glyph": "chip",
+        "detail": "Provides the first hardware implementation",
+        "variant": "logic"
+      },
+      {
+        "label": "Bring-up and characterization",
+        "glyph": "test",
+        "detail": "Check functions and electrical behavior"
+      },
+      {
+        "label": "Failure diagnosis",
+        "glyph": "design",
+        "detail": "Separate design, process and system causes"
+      },
+      {
+        "label": "Revision decision",
+        "glyph": "mask",
+        "detail": "Determine whether a respin is required",
+        "variant": "reticle"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "First silicon, bring-up, and respins"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-dies-in-numbers",
+    "family": "compare",
+    "title": "Die area, transistor count and memory describe different things",
+    "caption": "Comparing processors requires keeping the metric and product generation explicit. No single headline number summarizes the die.",
+    "nodes": [
+      {
+        "label": "Physical die area",
+        "glyph": "chip",
+        "detail": "Describes the silicon footprint",
+        "variant": "large"
+      },
+      {
+        "label": "Transistor count",
+        "glyph": "transistor",
+        "detail": "Counts devices in the implemented design",
+        "variant": "logic"
+      },
+      {
+        "label": "Memory and interconnect",
+        "glyph": "memory",
+        "detail": "Describe resources and how data reaches computation",
+        "variant": "sram"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "The dies in numbers"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-manufacturing-timeline-of-one-gpu",
+    "family": "flow",
+    "title": "One GPU travels through several manufacturing stages",
+    "caption": "Logic fabrication and memory fabrication proceed as coordinated branches before assembly. The displayed main path is the logic die's route.",
+    "nodes": [
+      {
+        "label": "Wafer fabrication",
+        "glyph": "wafer",
+        "detail": "Builds the logic transistors and wiring",
+        "variant": "grid"
+      },
+      {
+        "label": "Sort and preparation",
+        "glyph": "test",
+        "detail": "Screens and prepares useful dies",
+        "variant": "probe"
+      },
+      {
+        "label": "Advanced package",
+        "glyph": "package",
+        "detail": "Combines logic with separately fabricated HBM",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "Module and system",
+        "glyph": "rack",
+        "detail": "Adds board-level power, connections and cooling",
+        "variant": "server"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "The manufacturing timeline of one GPU"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-sxm-module",
+    "family": "network",
+    "title": "The SXM module connects the GPU package to a system board",
+    "caption": "The accelerator package and power circuitry are mounted components connected through the module PCB. The connector joins that board to the wider system; this is a connection diagram, not a vertical layer order.",
+    "nodes": [
+      {
+        "label": "GPU package",
+        "glyph": "package",
+        "detail": "Contains the processor and its HBM",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "Module PCB",
+        "glyph": "wires",
+        "detail": "Routes signals and power around the package",
+        "variant": "board"
+      },
+      {
+        "label": "Power circuitry",
+        "glyph": "transistor",
+        "detail": "Supports the package's electrical requirements",
+        "variant": "power"
+      },
+      {
+        "label": "Module connector",
+        "glyph": "wires",
+        "detail": "Joins the module to the larger system board",
+        "variant": "connector"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "mounted on and connected through"
+      },
+      {
+        "from": 2,
+        "to": 0,
+        "label": "regulated power"
+      },
+      {
+        "from": 1,
+        "to": 3,
+        "label": "routed board connections"
+      }
+    ],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "The SXM module"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-hgx-baseboard",
+    "family": "network",
+    "title": "The HGX baseboard joins several accelerator modules",
+    "caption": "High-bandwidth local connections and board-level power distribution make the modules work as a coordinated platform.",
+    "nodes": [
+      {
+        "label": "Accelerator modules",
+        "glyph": "package",
+        "detail": "Provide GPU computation and attached memory",
+        "variant": "sxm"
+      },
+      {
+        "label": "Local interconnect",
+        "glyph": "wires",
+        "detail": "Connects the accelerator resources",
+        "variant": "die-to-die"
+      },
+      {
+        "label": "Baseboard",
+        "glyph": "chip",
+        "detail": "Provides shared physical routing and support",
+        "variant": "board"
+      },
+      {
+        "label": "Host system",
+        "glyph": "rack",
+        "detail": "Supplies the wider server environment",
+        "variant": "server"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "GPU-to-GPU communication"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "board-level links"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "system integration"
+      }
+    ],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "The HGX baseboard"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-server-dgx-and-its-oem-cousins",
+    "family": "branch",
+    "title": "A server adds the infrastructure around accelerators",
+    "caption": "The GPU platform must work with host processors, networking, power and cooling to become a usable server.",
+    "nodes": [
+      {
+        "label": "GPU platform",
+        "glyph": "package",
+        "detail": "Provides accelerator computation",
+        "variant": "sxm"
+      },
+      {
+        "label": "Host and network",
+        "glyph": "chip",
+        "detail": "Manage workloads and external communication",
+        "variant": "board"
+      },
+      {
+        "label": "Power and cooling",
+        "glyph": "heat",
+        "detail": "Support sustained operation"
+      },
+      {
+        "label": "Integrated server",
+        "glyph": "rack",
+        "detail": "Combines hardware with the required system design",
+        "variant": "server"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "The server: DGX and its OEM cousins"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "gb200-the-superchip-and-the-compute-tray",
+    "family": "network",
+    "title": "A superchip is a connected CPU-and-GPU assembly",
+    "caption": "The compute tray groups these connected assemblies with the power, cooling and networking needed by the rack.",
+    "nodes": [
+      {
+        "label": "Grace CPU",
+        "glyph": "chip",
+        "detail": "Provides the associated CPU functions",
+        "variant": "cpu"
+      },
+      {
+        "label": "Blackwell GPUs",
+        "glyph": "chip",
+        "detail": "Provide accelerator computation",
+        "variant": "gpu"
+      },
+      {
+        "label": "CPU-to-GPU links",
+        "glyph": "wires",
+        "detail": "Connect the CPU and GPU resources",
+        "variant": "die-to-die"
+      },
+      {
+        "label": "Compute tray",
+        "glyph": "rack",
+        "detail": "Packages the assemblies for rack integration",
+        "variant": "tray"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 2,
+        "label": "CPU communication"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "GPU communication"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "tray integration"
+      }
+    ],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "GB200: the superchip and the compute tray"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-nvl72-rack",
+    "family": "branch",
+    "title": "A rack integrates compute, communication and utilities",
+    "caption": "Compute trays alone are not a complete rack. Switching, power delivery and cooling enable the devices to operate together.",
+    "nodes": [
+      {
+        "label": "Compute trays",
+        "glyph": "chip",
+        "detail": "Contain the CPU-and-GPU assemblies",
+        "variant": "board"
+      },
+      {
+        "label": "Switch trays",
+        "glyph": "wires",
+        "detail": "Provide rack-level accelerator communication",
+        "variant": "switch"
+      },
+      {
+        "label": "Power and cooling",
+        "glyph": "heat",
+        "detail": "Supply energy and remove heat"
+      },
+      {
+        "label": "NVL72 system",
+        "glyph": "rack",
+        "detail": "Integrates those functions as a coordinated rack",
+        "variant": "rack"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "The NVL72 rack"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "networking-beyond-the-rack",
+    "family": "network",
+    "title": "Scale-up and scale-out cross different boundaries",
+    "caption": "Local accelerator links coordinate tightly coupled devices; external networking connects the rack with a larger cluster.",
+    "nodes": [
+      {
+        "label": "Accelerators within a rack",
+        "glyph": "chip",
+        "detail": "Communicate through local high-bandwidth links",
+        "variant": "board"
+      },
+      {
+        "label": "Rack network interface",
+        "glyph": "wires",
+        "detail": "Connects the local system to external networking",
+        "variant": "interface"
+      },
+      {
+        "label": "Cluster fabric",
+        "glyph": "wires",
+        "detail": "Carries communication among systems",
+        "variant": "network"
+      },
+      {
+        "label": "Other racks",
+        "glyph": "rack",
+        "detail": "Provide additional compute resources",
+        "variant": "rack"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "rack boundary"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "network links"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "cluster communication"
+      }
+    ],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "Networking beyond the rack"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "who-builds-it",
+    "family": "network",
+    "title": "Design ownership and manufacturing execution are different roles",
+    "caption": "A product owner coordinates specialists that fabricate silicon, assemble packages and build systems.",
+    "nodes": [
+      {
+        "label": "NVIDIA",
+        "glyph": "design",
+        "detail": "Defines the GPU product and platform"
+      },
+      {
+        "label": "Foundry and memory suppliers",
+        "glyph": "wafer",
+        "detail": "Manufacture the required logic and memory",
+        "variant": "grid"
+      },
+      {
+        "label": "Package integrators",
+        "glyph": "package",
+        "detail": "Assemble the accelerator component",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "System manufacturers",
+        "glyph": "rack",
+        "detail": "Build and integrate boards, servers and racks",
+        "variant": "server"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "product and capacity requirements"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "logic and memory components"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "accelerator packages"
+      }
+    ],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "Who builds it"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-bill-of-materials-of-an-h100-where-the-cost-goes",
+    "family": "branch",
+    "title": "A bill of materials adds unlike manufactured components",
+    "caption": "An illustrative package cost must distinguish fabricated dies, memory, packaging and module hardware. It is not the same as the product's selling price.",
+    "nodes": [
+      {
+        "label": "Logic die cost",
+        "glyph": "chip",
+        "detail": "Accounts for the useful fabricated processor die",
+        "variant": "logic"
+      },
+      {
+        "label": "HBM cost",
+        "glyph": "memory",
+        "detail": "Accounts for separately manufactured memory stacks",
+        "variant": "hbm"
+      },
+      {
+        "label": "Package and module cost",
+        "glyph": "package",
+        "detail": "Adds assembly and supporting materials",
+        "variant": "sxm"
+      },
+      {
+        "label": "Illustrative BOM",
+        "glyph": "design",
+        "detail": "Combines the explicitly assumed component costs"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "The bill of materials of an H100: where the cost goes"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "nvidia-s-margin-tsmc-s-revenue-and-the-allocation-game",
+    "family": "compare",
+    "title": "Revenue belongs to the transaction being counted",
+    "caption": "The product owner's sale, the foundry's wafer sale and the component bill of materials measure different boundaries. Adding them can double-count value.",
+    "nodes": [
+      {
+        "label": "Foundry transaction",
+        "glyph": "wafer",
+        "detail": "Records the manufacturing supplier's wafer revenue",
+        "variant": "grid"
+      },
+      {
+        "label": "Product transaction",
+        "glyph": "package",
+        "detail": "Records the GPU supplier's sale",
+        "variant": "sxm"
+      },
+      {
+        "label": "Component cost",
+        "glyph": "design",
+        "detail": "Accounts for purchased and manufactured inputs"
+      },
+      {
+        "label": "Gross margin",
+        "glyph": "design",
+        "detail": "Relates revenue to the applicable cost of goods"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "NVIDIA's margin, TSMC's revenue, and the allocation game"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-supplier-tree",
+    "family": "branch",
+    "title": "Many specialized inputs converge on the GPU product",
+    "caption": "The supplier tree follows what each participant provides. A dependency can constrain production even when it contributes a small share of total cost.",
+    "nodes": [
+      {
+        "label": "Design tools and IP",
+        "glyph": "design",
+        "detail": "Enable implementation and verification"
+      },
+      {
+        "label": "Wafers, tools and materials",
+        "glyph": "wafer",
+        "detail": "Enable logic and memory manufacturing",
+        "variant": "grid"
+      },
+      {
+        "label": "Packaging and system parts",
+        "glyph": "package",
+        "detail": "Enable assembly, power and cooling",
+        "variant": "sxm"
+      },
+      {
+        "label": "Finished GPU system",
+        "glyph": "rack",
+        "detail": "Depends on the combined supplier network",
+        "variant": "rack"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "heading": "The supplier tree"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  }
+]

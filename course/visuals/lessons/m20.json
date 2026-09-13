@@ -1,0 +1,521 @@
+[
+  {
+    "section": "the-economics-toolkit-five-ideas-that-explain-the-industry",
+    "family": "cycle",
+    "title": "Capacity decisions create delayed economic feedback",
+    "caption": "High fixed costs make utilization important; qualification and construction take time. Investment therefore responds to demand with a lag.",
+    "nodes": [
+      {
+        "label": "Qualified capacity",
+        "glyph": "furnace",
+        "detail": "Represents installed and usable production assets"
+      },
+      {
+        "label": "Utilization",
+        "glyph": "queue",
+        "detail": "Determines how fully those assets are used"
+      },
+      {
+        "label": "Revenue and margin",
+        "glyph": "design",
+        "detail": "Reflect output, pricing and operating costs"
+      },
+      {
+        "label": "Investment decisions",
+        "glyph": "design",
+        "detail": "Add or change capacity after a delay"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "The Economics Toolkit: Five Ideas That Explain the Industry"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-money-size-and-shape-of-the-industry",
+    "family": "compare",
+    "title": "Industry totals depend on the counted boundary",
+    "caption": "Chip sales, equipment sales and end-system sales are different transactions. Comparing totals requires knowing what each includes.",
+    "nodes": [
+      {
+        "label": "Semiconductor sales",
+        "glyph": "chip",
+        "detail": "Count sold semiconductor products"
+      },
+      {
+        "label": "Equipment and materials",
+        "glyph": "furnace",
+        "detail": "Count inputs used to manufacture those products"
+      },
+      {
+        "label": "End-system sales",
+        "glyph": "rack",
+        "detail": "Include semiconductors inside a larger finished product"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "The Money: Size and Shape of the Industry"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-layers-and-who-owns-them",
+    "family": "network",
+    "title": "The value chain separates design, manufacturing and assembly",
+    "caption": "An IDM combines roles that a fabless company obtains from external manufacturing partners.",
+    "nodes": [
+      {
+        "label": "Design and IP",
+        "glyph": "design",
+        "detail": "Define the semiconductor product"
+      },
+      {
+        "label": "Wafer fabrication",
+        "glyph": "wafer",
+        "detail": "Builds transistors and interconnect"
+      },
+      {
+        "label": "Assembly and test",
+        "glyph": "package",
+        "detail": "Turns useful dies into qualified components"
+      },
+      {
+        "label": "System integration",
+        "glyph": "rack",
+        "detail": "Uses those components in end products"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "layout and process requirements"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "fabricated dies"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "qualified components"
+      }
+    ],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "The Layers and Who Owns Them"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-geographic-map",
+    "family": "network",
+    "title": "A geographic map is a map of dependencies",
+    "caption": "Different countries and regions concentrate different capabilities. Manufacturing therefore depends on cross-border material, tool and product flows.",
+    "nodes": [
+      {
+        "label": "Design centers",
+        "glyph": "design",
+        "detail": "Develop products and implementation tools"
+      },
+      {
+        "label": "Equipment and materials centers",
+        "glyph": "furnace",
+        "detail": "Supply specialized production inputs"
+      },
+      {
+        "label": "Fabrication centers",
+        "glyph": "wafer",
+        "detail": "Produce logic and memory wafers"
+      },
+      {
+        "label": "Assembly and system centers",
+        "glyph": "package",
+        "detail": "Integrate and deliver finished hardware"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 2,
+        "label": "designs"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "tools and materials"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "manufactured components"
+      }
+    ],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "The Geographic Map"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "fab-economics-what-a-wafer-costs",
+    "family": "branch",
+    "title": "Wafer economics combines fixed and variable costs",
+    "caption": "The cost assigned to each output wafer depends on how the fab's fixed costs are spread, as well as the processing inputs it consumes.",
+    "nodes": [
+      {
+        "label": "Depreciation",
+        "glyph": "furnace",
+        "detail": "Allocates the installed capital over its useful accounting life"
+      },
+      {
+        "label": "Operating inputs",
+        "glyph": "material",
+        "detail": "Include consumables, utilities and labor"
+      },
+      {
+        "label": "Utilization and yield",
+        "glyph": "wafer",
+        "detail": "Change useful output from the installed assets"
+      },
+      {
+        "label": "Cost per useful output",
+        "glyph": "design",
+        "detail": "Depends on the stated accounting and process assumptions"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "Fab Economics: What a Wafer Costs"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "cycles-utilization-memory-and-the-ai-supercycle",
+    "family": "cycle",
+    "title": "Investment can arrive after the demand signal changes",
+    "caption": "Memory and manufacturing cycles reflect the delay between demand, capacity decisions and qualified supply.",
+    "nodes": [
+      {
+        "label": "Demand change",
+        "glyph": "rack",
+        "detail": "Alters orders for semiconductor products"
+      },
+      {
+        "label": "Utilization and pricing",
+        "glyph": "queue",
+        "detail": "Respond as supply tightens or loosens"
+      },
+      {
+        "label": "Capacity investment",
+        "glyph": "furnace",
+        "detail": "Commits to new manufacturing capability"
+      },
+      {
+        "label": "Delayed supply",
+        "glyph": "wafer",
+        "detail": "Arrives after construction and qualification"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "Cycles: Utilization, Memory and the AI Supercycle"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "taiwan-concentration-risk",
+    "family": "branch",
+    "title": "Concentration links different products to a shared disruption",
+    "caption": "A common manufacturing location or supplier can connect otherwise separate product supply chains to the same risk.",
+    "nodes": [
+      {
+        "label": "Leading-edge fabrication",
+        "glyph": "wafer",
+        "detail": "Concentrates a critical manufacturing capability"
+      },
+      {
+        "label": "Specialized suppliers",
+        "glyph": "furnace",
+        "detail": "Support that capability's operation"
+      },
+      {
+        "label": "Customer products",
+        "glyph": "chip",
+        "detail": "Rely on the resulting production"
+      },
+      {
+        "label": "Shared disruption exposure",
+        "glyph": "queue",
+        "detail": "Links multiple downstream products to the same dependency"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "Taiwan Concentration Risk"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "diversification-arizona-kumamoto-dresden-and-the-intel-quest",
+    "family": "flow",
+    "title": "A new location must become a qualified production system",
+    "caption": "Building a fab is only part of diversification. Tools, suppliers, staff and process qualification must also work at the new site.",
+    "nodes": [
+      {
+        "label": "Site and construction",
+        "glyph": "furnace",
+        "detail": "Create the physical facility"
+      },
+      {
+        "label": "Tools and supply chain",
+        "glyph": "material",
+        "detail": "Establish the manufacturing inputs"
+      },
+      {
+        "label": "Workforce and process transfer",
+        "glyph": "design",
+        "detail": "Develop the required operating capability"
+      },
+      {
+        "label": "Qualified output",
+        "glyph": "wafer",
+        "detail": "Produces wafers meeting the intended requirements"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "Diversification: Arizona, Kumamoto, Dresden, and the Intel Question"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "export-controls-in-detail",
+    "family": "flow",
+    "title": "A control acts through defined items, destinations and uses",
+    "caption": "Export controls operate through their legal scope and licensing rules. This schematic explains the decision boundary without asserting current policy details.",
+    "nodes": [
+      {
+        "label": "Covered item or technology",
+        "glyph": "furnace",
+        "detail": "Identify what the rule applies to"
+      },
+      {
+        "label": "Destination and end use",
+        "glyph": "design",
+        "detail": "Establish the relevant transaction context"
+      },
+      {
+        "label": "License requirements",
+        "glyph": "test",
+        "detail": "Determine the applicable authorization conditions"
+      },
+      {
+        "label": "Supply-chain effect",
+        "glyph": "wafer",
+        "detail": "Changes access within the scope of the actual rule"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "Export Controls in Detail"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "china-s-response",
+    "family": "branch",
+    "title": "Substitution requires a complete qualified capability",
+    "caption": "Domestic investment, process adaptation and supplier development address different parts of a constrained manufacturing chain.",
+    "nodes": [
+      {
+        "label": "Equipment development",
+        "glyph": "furnace",
+        "detail": "Works toward replacing unavailable tools"
+      },
+      {
+        "label": "Materials qualification",
+        "glyph": "material",
+        "detail": "Establishes compatible production inputs"
+      },
+      {
+        "label": "Process adaptation",
+        "glyph": "design",
+        "detail": "Adjusts manufacturing to available capabilities"
+      },
+      {
+        "label": "Usable manufacturing",
+        "glyph": "wafer",
+        "detail": "Requires the pieces to work together at acceptable yield"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "China's Response"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "industrial-policy-elsewhere",
+    "family": "branch",
+    "title": "Industrial policy supports more than factory construction",
+    "caption": "Incentives, research, infrastructure and workforce development affect different conditions needed for a viable semiconductor operation.",
+    "nodes": [
+      {
+        "label": "Capital support",
+        "glyph": "furnace",
+        "detail": "Changes the economics of new facilities"
+      },
+      {
+        "label": "Research and infrastructure",
+        "glyph": "design",
+        "detail": "Develops enabling capabilities and shared resources"
+      },
+      {
+        "label": "Workforce development",
+        "glyph": "test",
+        "detail": "Builds the skills needed to run and improve production"
+      },
+      {
+        "label": "Qualified ecosystem",
+        "glyph": "wafer",
+        "detail": "Combines capability, operation and supply-chain support"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "Industrial Policy Elsewhere"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "what-if-single-points-of-failure",
+    "family": "network",
+    "title": "A small upstream dependency can stop a large downstream flow",
+    "caption": "The impact of a bottleneck depends on substitution and qualification, not only on the supplier's sales value.",
+    "nodes": [
+      {
+        "label": "Specialized input",
+        "glyph": "material",
+        "detail": "Has few qualified alternatives"
+      },
+      {
+        "label": "Manufacturing step",
+        "glyph": "furnace",
+        "detail": "Requires that input to operate"
+      },
+      {
+        "label": "Fabricated components",
+        "glyph": "chip",
+        "detail": "Cannot advance when the step is blocked"
+      },
+      {
+        "label": "Downstream systems",
+        "glyph": "rack",
+        "detail": "Lose access to the missing components"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "required input"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "process completion"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "component supply"
+      }
+    ],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "What If: Single Points of Failure"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "workforce-and-talent",
+    "family": "cycle",
+    "title": "Operating experience develops the next generation of capability",
+    "caption": "A skilled workforce learns from production, resolves process problems and trains new staff. Facilities alone do not reproduce that experience.",
+    "nodes": [
+      {
+        "label": "Training",
+        "glyph": "design",
+        "detail": "Builds the initial technical foundation"
+      },
+      {
+        "label": "Production experience",
+        "glyph": "furnace",
+        "detail": "Exposes real equipment and yield problems"
+      },
+      {
+        "label": "Process improvement",
+        "glyph": "test",
+        "detail": "Converts experience into repeatable solutions"
+      },
+      {
+        "label": "Knowledge transfer",
+        "glyph": "design",
+        "detail": "Develops future operators and engineers"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "Workforce and Talent"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "how-to-read-industry-data",
+    "family": "compare",
+    "title": "Check the denominator before comparing an industry chart",
+    "caption": "Revenue, capacity, shipments and yield describe different quantities. A number is interpretable only with its unit, boundary and time period.",
+    "nodes": [
+      {
+        "label": "Revenue",
+        "glyph": "design",
+        "detail": "Measures money earned across a stated transaction boundary"
+      },
+      {
+        "label": "Capacity",
+        "glyph": "furnace",
+        "detail": "Measures potential production over a stated interval"
+      },
+      {
+        "label": "Shipments",
+        "glyph": "chip",
+        "detail": "Measure delivered units or bits"
+      },
+      {
+        "label": "Yield",
+        "glyph": "test",
+        "detail": "Measures the useful fraction of a defined input population"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "heading": "How to Read Industry Data"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  }
+]

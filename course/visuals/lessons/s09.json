@@ -1,0 +1,168 @@
+[
+  {
+    "family": "layers",
+    "title": "A package connects several physical scales",
+    "caption": "The package supports the die, carries power and signals, and helps transfer heat. Fine connections near silicon fan out toward a coarser board interface.",
+    "nodes": [
+      {
+        "label": "Die",
+        "detail": "Contains delicate circuitry and fine connection points.",
+        "glyph": "chip"
+      },
+      {
+        "label": "Joints",
+        "detail": "Join the die to the receiving wiring structure.",
+        "glyph": "package",
+        "variant": "flip-chip"
+      },
+      {
+        "label": "Substrate",
+        "detail": "Redistributes connections and provides support.",
+        "glyph": "wires"
+      },
+      {
+        "label": "Board interface",
+        "detail": "Connects the component to the wider system.",
+        "glyph": "package"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "1-why-a-chip-needs-an-engineered-home"
+  },
+  {
+    "family": "flow",
+    "title": "Prepare a wafer for safe die separation",
+    "caption": "Thinning reduces stiffness and can introduce damage. Support and controlled separation protect the selected good dies.",
+    "nodes": [
+      {
+        "label": "Test map",
+        "detail": "Identify suitable dies before assembly.",
+        "glyph": "test",
+        "variant": "probe"
+      },
+      {
+        "label": "Backgrind",
+        "detail": "Remove silicon from the rear as required.",
+        "glyph": "wafer"
+      },
+      {
+        "label": "Support and finish",
+        "detail": "Manage thin-wafer handling and subsurface damage.",
+        "glyph": "film"
+      },
+      {
+        "label": "Separate",
+        "detail": "Release individual dies along the designated streets.",
+        "glyph": "chip"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "2-separate-useful-dies-without-damaging-them"
+  },
+  {
+    "family": "compare",
+    "title": "Peripheral wires or an area of joints",
+    "caption": "Wire bonding reaches die-edge pads. Flip-chip assembly faces the active surface toward the receiving structure and distributes connections across an area.",
+    "nodes": [
+      {
+        "label": "Wire bond",
+        "detail": "Fine wires arc between die pads and package contacts.",
+        "glyph": "package",
+        "variant": "wire-bond"
+      },
+      {
+        "label": "Flip chip",
+        "detail": "Bumps or pillars join facing contact arrays.",
+        "glyph": "package",
+        "variant": "flip-chip"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "3-make-reliable-joints-and-fan-them-outward"
+  },
+  {
+    "family": "compare",
+    "title": "Fine wiring can use different constructions",
+    "caption": "CoWoS variants differ in their interposer or redistribution structure. A common product label does not imply an identical physical stack.",
+    "nodes": [
+      {
+        "label": "CoWoS-S",
+        "detail": "A silicon interposer supports fine die-to-die wiring.",
+        "glyph": "package",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "CoWoS-R",
+        "detail": "An RDL interposer provides the fine redistribution.",
+        "glyph": "package",
+        "variant": "cowos-r"
+      },
+      {
+        "label": "CoWoS-L",
+        "detail": "Local silicon connections combine with an RDL structure.",
+        "glyph": "package",
+        "variant": "cowos-l"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "4-put-the-processor-and-memory-on-a-shared-fine-wiring-struc"
+  },
+  {
+    "family": "branch",
+    "title": "One weak input can threaten the combined assembly",
+    "caption": "Early screening protects value that would otherwise be committed to difficult-to-rework joints and interfaces.",
+    "nodes": [
+      {
+        "label": "Compute die",
+        "detail": "A valuable die with its own test history.",
+        "glyph": "chip"
+      },
+      {
+        "label": "Memory stacks",
+        "detail": "Each stack brings separate yield and test evidence.",
+        "glyph": "memory",
+        "variant": "hbm"
+      },
+      {
+        "label": "Wiring structure",
+        "detail": "Interposer and substrate must meet their own requirements.",
+        "glyph": "wires"
+      },
+      {
+        "label": "Completed assembly",
+        "detail": "Integration commits the incoming components to a shared package.",
+        "glyph": "package",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "5-why-larger-integration-raises-the-stakes"
+  },
+  {
+    "family": "compare",
+    "title": "Hybrid bonding joins surfaces directly",
+    "caption": "Hybrid bonding brings dielectric surfaces and metal connections together. Cleanliness, flatness and alignment are essential to making both interfaces meet.",
+    "nodes": [
+      {
+        "label": "Solder-based joints",
+        "detail": "Raised joints connect separated die surfaces.",
+        "glyph": "package",
+        "variant": "flip-chip"
+      },
+      {
+        "label": "Hybrid bond",
+        "detail": "Prepared dielectric and metal surfaces bond directly.",
+        "glyph": "package",
+        "variant": "hybrid-bond"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "6-stacking-dies-without-solder"
+  }
+]

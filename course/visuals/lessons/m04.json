@@ -1,0 +1,619 @@
+[
+  {
+    "section": "why-silicon-wins-and-where-it-loses",
+    "family": "compare",
+    "title": "Choose the material for the job",
+    "caption": "Silicon's manufacturing ecosystem and oxide are powerful advantages, while power and optical devices reward different properties. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "transistor",
+        "label": "Silicon logic",
+        "detail": "A useful oxide and mature processes support dense switching.",
+        "variant": "cmos"
+      },
+      {
+        "glyph": "heat",
+        "label": "Wide-bandgap power",
+        "detail": "SiC and GaN address demanding voltage or switching conditions.",
+        "variant": "planar"
+      },
+      {
+        "glyph": "light",
+        "label": "Compound-semiconductor optics",
+        "detail": "Direct-bandgap materials enable efficient light emission.",
+        "variant": "optical"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Why silicon wins, and where it loses"
+    }
+  },
+  {
+    "section": "silicon-germanium-the-alloy-inside-every-modern-transistor",
+    "family": "branch",
+    "title": "SiGe stressors strain nearby silicon",
+    "caption": "Embedded SiGe source and drain regions can stress the neighboring silicon channel. These arrows show a mechanical influence, not a vertical layer stack. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "SiGe source region",
+        "detail": "Its preferred lattice spacing differs from surrounding silicon.",
+        "variant": "source"
+      },
+      {
+        "glyph": "crystal",
+        "label": "SiGe drain region",
+        "detail": "The other embedded region also contributes mechanical stress.",
+        "variant": "drain"
+      },
+      {
+        "glyph": "transistor",
+        "label": "Silicon channel",
+        "detail": "The nearby constrained channel experiences strain that affects carrier transport.",
+        "variant": "channel"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Silicon-germanium: the alloy inside every modern transistor"
+    }
+  },
+  {
+    "section": "strained-silicon-the-idea-that-went-the-other-way",
+    "family": "layers",
+    "title": "Grow thin silicon on a larger lattice",
+    "caption": "The original strained-silicon approach places a thin Si layer over relaxed SiGe; the overlayer stretches to fit the template. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Thin silicon layer",
+        "detail": "The layer is held under tensile strain.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "crystal",
+        "label": "Relaxed SiGe buffer",
+        "detail": "A larger lattice spacing acts as the template.",
+        "variant": "strain"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Silicon substrate",
+        "detail": "The original wafer supports the engineered buffer."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Strained silicon: the idea that went the other way"
+    }
+  },
+  {
+    "section": "silicon-carbide-the-material-you-cannot-melt",
+    "family": "apparatus",
+    "title": "Grow SiC through vapor transport",
+    "caption": "SiC growth avoids ordinary melt pulling: hot source material supplies vapor that recrystallizes on a cooler seed. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "SiC source",
+        "detail": "Heated source material supplies vapor species."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Thermal gradient",
+        "detail": "Temperature differences drive transport through the chamber."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Seed crystal",
+        "detail": "Vapor deposits onto the growth surface."
+      },
+      {
+        "glyph": "wafer",
+        "label": "SiC boule",
+        "detail": "The resulting crystal is sliced for power-device substrates."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Silicon carbide: the material you cannot melt"
+    }
+  },
+  {
+    "section": "gallium-nitride-the-heterostructure-material",
+    "family": "layers",
+    "title": "The useful channel sits at a heterointerface",
+    "caption": "An electron channel forms near the AlGaN/GaN interface; it is not a separate bulk material layer. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "AlGaN barrier",
+        "detail": "The upper material contributes interface polarization."
+      },
+      {
+        "glyph": "crystal",
+        "label": "GaN layer",
+        "detail": "The conducting electron channel forms near the interface with the barrier."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Gallium nitride: the heterostructure material"
+    }
+  },
+  {
+    "section": "gallium-arsenide-and-indium-phosphide-the-iii-v-workhorses",
+    "family": "compare",
+    "title": "Different III–V materials serve different signals",
+    "caption": "GaAs and InP retain important roles where fast carriers or light emission matter; they do not simply replace silicon CMOS. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wires",
+        "label": "GaAs radio-frequency devices",
+        "detail": "Fast electronic behavior supports selected RF functions."
+      },
+      {
+        "glyph": "light",
+        "label": "InP optical devices",
+        "detail": "Material properties suit important optical communication functions."
+      },
+      {
+        "glyph": "transistor",
+        "label": "Silicon CMOS",
+        "detail": "Complementary device integration remains a separate strength."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Gallium arsenide and indium phosphide: the III-V workhorses"
+    }
+  },
+  {
+    "section": "germanium",
+    "family": "branch",
+    "title": "Germanium returns in specialized roles",
+    "caption": "Germanium's oxide and thermal limitations constrain broad replacement of silicon, but its alloy and optical roles remain useful. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "SiGe alloy partner",
+        "detail": "Ge changes lattice spacing and electronic properties."
+      },
+      {
+        "glyph": "light",
+        "label": "Optical applications",
+        "detail": "Selected devices exploit germanium's optical response.",
+        "variant": "optical"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Specialty substrates",
+        "detail": "Niche structures use germanium wafers."
+      },
+      {
+        "glyph": "material",
+        "label": "Material selection",
+        "detail": "The useful property must outweigh integration constraints."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Germanium"
+    }
+  },
+  {
+    "section": "the-periodic-table-at-2-nm-and-below",
+    "family": "flow",
+    "title": "Separate production devices from research options",
+    "caption": "Today's silicon-based structures provide the reference point; alternative channel materials still require device and manufacturing integration. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "transistor",
+        "label": "Silicon nanosheets",
+        "detail": "The established manufacturing direction defines the baseline.",
+        "variant": "gaa"
+      },
+      {
+        "glyph": "material",
+        "label": "Candidate channel materials",
+        "detail": "Research explores new electronic structures."
+      },
+      {
+        "glyph": "test",
+        "label": "Integration evidence",
+        "detail": "Contacts, defects and reproducibility must be demonstrated.",
+        "variant": "instrument"
+      },
+      {
+        "glyph": "furnace",
+        "label": "Manufacturable process",
+        "detail": "A promising material must work across a production flow."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "The periodic table at 2 nm and below"
+    }
+  },
+  {
+    "section": "the-scale-of-it",
+    "family": "branch",
+    "title": "The fab depends on several material streams",
+    "caption": "Substrate, process consumables and packaging materials enter different stages; their importance is not proportional only to mass. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wafer",
+        "label": "Silicon wafers",
+        "detail": "Provide the circuit-building surface."
+      },
+      {
+        "glyph": "gas",
+        "label": "Fab chemicals and gases",
+        "detail": "Repeated unit processes consume specialized inputs."
+      },
+      {
+        "glyph": "package",
+        "label": "Packaging materials",
+        "detail": "Assembly needs substrates, compounds and connections."
+      },
+      {
+        "glyph": "chip",
+        "label": "Completed product",
+        "detail": "Qualified material streams combine throughout production."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "The scale of it"
+    }
+  },
+  {
+    "section": "photoresists",
+    "family": "flow",
+    "title": "A temporary film carries the image",
+    "caption": "Photoresist changes chemical behavior when exposed, allowing development to leave a spatial pattern. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Coat and bake",
+        "detail": "Create a uniform photosensitive film."
+      },
+      {
+        "glyph": "light",
+        "label": "Expose",
+        "detail": "Light modifies selected regions according to the image.",
+        "variant": "incident"
+      },
+      {
+        "glyph": "clean",
+        "label": "Develop",
+        "detail": "Chemistry removes the soluble regions."
+      },
+      {
+        "glyph": "mask",
+        "label": "Resist pattern",
+        "detail": "The remaining film masks the next process.",
+        "variant": "grid"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Photoresists"
+    }
+  },
+  {
+    "section": "gases",
+    "family": "apparatus",
+    "title": "Gas purity must survive the delivery path",
+    "caption": "A qualified cylinder is only the beginning: delivery surfaces, purification and flow control also determine what reaches the wafer. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Source gas",
+        "detail": "The supplied chemical must meet impurity limits."
+      },
+      {
+        "glyph": "clean",
+        "label": "Purification and delivery",
+        "detail": "Lines and filters preserve the clean gas stream."
+      },
+      {
+        "glyph": "wires",
+        "label": "Flow control",
+        "detail": "The tool meters gases into the recipe."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Process chamber",
+        "detail": "Surface reactions depend on the delivered chemistry."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Gases"
+    }
+  },
+  {
+    "section": "wet-chemicals",
+    "family": "cycle",
+    "title": "Cleaning chemistry must not become contamination",
+    "caption": "A wet process removes material from the wafer but can also redeposit contaminants unless the chemical and rinse streams are controlled. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Qualified chemical",
+        "detail": "High-purity reagent enters the process."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Surface reaction",
+        "detail": "The bath dissolves or releases target contamination."
+      },
+      {
+        "glyph": "clean",
+        "label": "Clean rinse",
+        "detail": "UPW carries away reaction products and chemicals."
+      },
+      {
+        "glyph": "test",
+        "label": "Contamination control",
+        "detail": "Monitoring verifies that cleaning did not add new impurities."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Wet chemicals"
+    }
+  },
+  {
+    "section": "ultrapure-water",
+    "family": "apparatus",
+    "title": "Water purification removes several impurity classes",
+    "caption": "Ionic, organic, particulate and microbial control require complementary treatment stages; resistivity alone does not measure every contaminant. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "clean",
+        "label": "Bulk purification",
+        "detail": "Remove major dissolved and suspended loads."
+      },
+      {
+        "glyph": "gas",
+        "label": "Fine polishing",
+        "detail": "Control residual ions, organics and gases."
+      },
+      {
+        "glyph": "queue",
+        "label": "Distribution loop",
+        "detail": "Keep the treated water clean during circulation."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Point of use",
+        "detail": "Final delivery supplies the process rinse.",
+        "variant": "round"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Ultrapure water"
+    }
+  },
+  {
+    "section": "cmp-slurries-and-pads",
+    "family": "cycle",
+    "title": "Chemistry and contact work together in CMP",
+    "caption": "Slurry changes the surface while abrasive particles and pad contact remove it; the coupled process smooths topography. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Reactive slurry",
+        "detail": "Chemistry modifies the exposed material."
+      },
+      {
+        "glyph": "film",
+        "label": "Reacted surface",
+        "detail": "A removable layer forms preferentially under process conditions."
+      },
+      {
+        "glyph": "material",
+        "label": "Pad and abrasive",
+        "detail": "Contact shears or removes the softened material."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Flatter surface",
+        "detail": "Removal reduces protruding topography before the next layer."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "CMP slurries and pads"
+    }
+  },
+  {
+    "section": "sputter-targets",
+    "family": "apparatus",
+    "title": "Move atoms from a solid target to the wafer",
+    "caption": "Argon ions strike the target; ejected target atoms travel to the substrate and form a film. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Argon plasma",
+        "detail": "Ions are produced in the chamber."
+      },
+      {
+        "glyph": "material",
+        "label": "Sputter target",
+        "detail": "Ion impact knocks atoms out of the solid."
+      },
+      {
+        "glyph": "film",
+        "label": "Traveling atoms",
+        "detail": "Ejected species cross the low-pressure space.",
+        "variant": "pvd"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Deposited film",
+        "detail": "Atoms accumulate on the wafer surface."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Sputter targets"
+    }
+  },
+  {
+    "section": "precursors-for-ald-and-cvd",
+    "family": "apparatus",
+    "title": "A precursor must be deliverable and reactive",
+    "caption": "The useful molecule must reach the chamber without decomposing prematurely, then react under the wafer process conditions. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "Source container",
+        "detail": "A stable precursor is stored under controlled conditions."
+      },
+      {
+        "glyph": "heat",
+        "label": "Vapor delivery",
+        "detail": "Temperature and plumbing support reliable transport.",
+        "variant": "thermal"
+      },
+      {
+        "glyph": "furnace",
+        "label": "Reaction region",
+        "detail": "Surface chemistry creates the intended film.",
+        "variant": "cvd"
+      },
+      {
+        "glyph": "gas",
+        "label": "Exhaust removal",
+        "detail": "Volatile by-products leave the chamber."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Precursors for ALD and CVD"
+    }
+  },
+  {
+    "section": "quartzware-and-sic-furnace-parts",
+    "family": "branch",
+    "title": "Hot-zone consumables shape contamination risk",
+    "caption": "Quartz, silicon and SiC parts face heat and reactive chemistry; erosion and replacement are part of process control. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "Quartzware",
+        "detail": "Tubes and boats support selected furnace processes."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Silicon parts",
+        "detail": "Rings and other parts face process environments."
+      },
+      {
+        "glyph": "heat",
+        "label": "SiC parts",
+        "detail": "Thermally demanding roles use specialized materials."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Stable process chamber",
+        "detail": "Part condition influences contamination and repeatability."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Quartzware and SiC furnace parts"
+    }
+  },
+  {
+    "section": "photomasks-the-supply-chain-in-depth",
+    "family": "flow",
+    "title": "A reticle has its own precision manufacturing chain",
+    "caption": "A defect in the master can repeat across many dies, so blank preparation, writing and inspection all matter. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Qualified mask blank",
+        "detail": "The substrate and coating establish the starting quality."
+      },
+      {
+        "glyph": "design",
+        "label": "Pattern writing",
+        "detail": "A mask writer defines the master geometry.",
+        "variant": "electron"
+      },
+      {
+        "glyph": "etch",
+        "label": "Pattern transfer",
+        "detail": "Processing turns the written image into the mask structure.",
+        "variant": "anisotropic"
+      },
+      {
+        "glyph": "test",
+        "label": "Inspection and repair",
+        "detail": "Qualification finds and corrects printable defects.",
+        "variant": "optical"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Photomasks: the supply chain in depth"
+    }
+  },
+  {
+    "section": "why-japan-dominates-materials",
+    "family": "cycle",
+    "title": "Qualification reinforces specialist materials supply",
+    "caption": "Materials know-how accumulates through repeated customer feedback and process qualification; replacing a qualified input can require extensive evidence. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "Specialist formulation",
+        "detail": "Suppliers optimize purity and process behavior."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Customer process",
+        "detail": "The material must perform in a specific manufacturing flow."
+      },
+      {
+        "glyph": "test",
+        "label": "Qualification and feedback",
+        "detail": "Yield and defect results inform acceptance."
+      },
+      {
+        "glyph": "design",
+        "label": "Process learning",
+        "detail": "Repeated improvements deepen application knowledge."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "heading": "Why Japan dominates materials"
+    }
+  }
+]

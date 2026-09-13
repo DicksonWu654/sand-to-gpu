@@ -1,0 +1,443 @@
+[
+  {
+    "section": "1-film-metrology-measuring-thickness-without-touching",
+    "family": "apparatus",
+    "title": "Infer a film from its interaction with a probe",
+    "caption": "Film metrology uses a measured physical response to infer thickness or other properties. The interpretation depends on the measurement model.",
+    "nodes": [
+      {
+        "label": "Incident light",
+        "glyph": "light",
+        "detail": "Illuminates the film at a controlled geometry",
+        "variant": "incident"
+      },
+      {
+        "label": "Film and substrate",
+        "glyph": "film",
+        "detail": "Modify the reflected polarization and spectrum",
+        "variant": "thin"
+      },
+      {
+        "label": "Detector",
+        "glyph": "test",
+        "detail": "Measures the returning signal",
+        "variant": "optical"
+      },
+      {
+        "label": "Film model",
+        "glyph": "design",
+        "detail": "Relates that signal to material properties"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "1. Film Metrology: Measuring Thickness Without Touching"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "2-cd-metrology-measuring-the-width-of-a-line",
+    "family": "compare",
+    "title": "Several probes describe a patterned feature",
+    "caption": "A line width is not the entire three-dimensional profile. Different techniques reveal different dimensions and trade sampling speed for detail.",
+    "nodes": [
+      {
+        "label": "CD-SEM",
+        "glyph": "test",
+        "detail": "Images top-down critical dimensions with electrons",
+        "variant": "electron"
+      },
+      {
+        "label": "Scatterometry",
+        "glyph": "light",
+        "detail": "Infers profile parameters from scattered light",
+        "variant": "scatter"
+      },
+      {
+        "label": "Cross-section microscopy",
+        "glyph": "film",
+        "detail": "Reveals buried shape and interfaces",
+        "variant": "cross-section"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "2. CD Metrology: Measuring the Width of a Line"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "3-overlay-aligning-one-layer-to-the-next",
+    "family": "compare",
+    "title": "Correct size is not correct alignment",
+    "caption": "Overlay compares the positions of successive patterns. A correctly sized feature can still miss the layer beneath it.",
+    "nodes": [
+      {
+        "label": "First-layer target",
+        "glyph": "mask",
+        "detail": "Establishes the reference position",
+        "variant": "reference"
+      },
+      {
+        "label": "Aligned next layer",
+        "glyph": "mask",
+        "detail": "Places the second pattern over that reference",
+        "variant": "aligned"
+      },
+      {
+        "label": "Offset next layer",
+        "glyph": "mask",
+        "detail": "Moves the second pattern relative to the first",
+        "variant": "offset"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "3. Overlay: Aligning One Layer to the Next"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "4-defect-inspection-finding-something-you-do-not-know-is-the",
+    "family": "compare",
+    "title": "Illumination determines which defects stand out",
+    "caption": "Inspection finds suspicious features across a surface. Bright-field, dark-field and electron methods obtain contrast in different ways.",
+    "nodes": [
+      {
+        "label": "Bright-field",
+        "glyph": "light",
+        "detail": "Compare returned images to reveal pattern differences",
+        "variant": "bright-field"
+      },
+      {
+        "label": "Dark-field",
+        "glyph": "light",
+        "detail": "Collect scattered light from particles or defects",
+        "variant": "dark-field"
+      },
+      {
+        "label": "Electron inspection",
+        "glyph": "test",
+        "detail": "Use electrons for sensitive high-resolution inspection",
+        "variant": "electron"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "4. Defect Inspection: Finding Something You Do Not Know Is There"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "5-defect-review-and-classification",
+    "family": "flow",
+    "title": "Turn a suspicious spot into a useful diagnosis",
+    "caption": "An inspection coordinate is a starting point. Review identifies the defect and decides whether it threatens the circuit.",
+    "nodes": [
+      {
+        "label": "Flagged coordinate",
+        "glyph": "wafer",
+        "detail": "Inspection locates a suspicious feature",
+        "variant": "defect"
+      },
+      {
+        "label": "Detailed review",
+        "glyph": "test",
+        "detail": "Re-image the feature at higher resolution",
+        "variant": "electron"
+      },
+      {
+        "label": "Classification",
+        "glyph": "design",
+        "detail": "Separate defect type and likely mechanism"
+      },
+      {
+        "label": "Disposition",
+        "glyph": "chip",
+        "detail": "Assess whether the defect can kill a device"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "5. Defect Review and Classification"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "6-reading-a-wafer-map",
+    "family": "compare",
+    "title": "A wafer map preserves spatial clues",
+    "caption": "Clusters, rings and edge signatures point toward different process mechanisms. Shape is evidence to investigate, not proof of a unique cause.",
+    "nodes": [
+      {
+        "label": "Random distribution",
+        "glyph": "wafer",
+        "detail": "Scattered failures suggest a different pattern from a systematic signature",
+        "variant": "random"
+      },
+      {
+        "label": "Edge signature",
+        "glyph": "wafer",
+        "detail": "Failures concentrate near the wafer boundary",
+        "variant": "edge"
+      },
+      {
+        "label": "Localized cluster",
+        "glyph": "wafer",
+        "detail": "Nearby failures suggest a shared local influence",
+        "variant": "cluster"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "6. Reading a Wafer Map"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "7-in-line-electrical-test-pcm-and-wat",
+    "family": "apparatus",
+    "title": "Test the process using dedicated structures",
+    "caption": "Process control monitors and wafer acceptance structures measure fabrication behavior alongside product dies.",
+    "nodes": [
+      {
+        "label": "Test structure",
+        "glyph": "wires",
+        "detail": "Uses a known geometry for a specific parameter",
+        "variant": "comb"
+      },
+      {
+        "label": "Probe contact",
+        "glyph": "test",
+        "detail": "Connects the structure to the instrument",
+        "variant": "probe"
+      },
+      {
+        "label": "Electrical stimulus",
+        "glyph": "test",
+        "detail": "Applies controlled voltage or current",
+        "variant": "instrument"
+      },
+      {
+        "label": "Parameter result",
+        "glyph": "design",
+        "detail": "Supports a process-health decision"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "7. In-Line Electrical Test: PCM and WAT"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "8-spc-apc-fdc-and-the-excursion",
+    "family": "cycle",
+    "title": "Measurement closes the process-control loop",
+    "caption": "SPC, APC and FDC act on different evidence but contribute to detecting and controlling excursions.",
+    "nodes": [
+      {
+        "label": "Tool and process",
+        "glyph": "furnace",
+        "detail": "Execute the manufacturing step"
+      },
+      {
+        "label": "Sensor and wafer data",
+        "glyph": "test",
+        "detail": "Record tool behavior and product measurements"
+      },
+      {
+        "label": "Detect deviation",
+        "glyph": "design",
+        "detail": "Compare observations with expected behavior"
+      },
+      {
+        "label": "Correct and contain",
+        "glyph": "queue",
+        "detail": "Adjust processing or hold affected material"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "8. SPC, APC, FDC, and the Excursion"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "9-yield-theory",
+    "family": "compare",
+    "title": "Area changes exposure to random defects",
+    "caption": "At a given defect density, a larger critical area encounters more potential defects. The yield model and defect assumptions must be stated.",
+    "nodes": [
+      {
+        "label": "Smaller die",
+        "glyph": "chip",
+        "detail": "Exposes less critical area to random defects",
+        "variant": "small"
+      },
+      {
+        "label": "Larger die",
+        "glyph": "chip",
+        "detail": "Exposes more critical area to the same defect population",
+        "variant": "large"
+      },
+      {
+        "label": "Wafer defect field",
+        "glyph": "wafer",
+        "detail": "Contains the defect distribution assumed by the model",
+        "variant": "random"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "9. Yield Theory"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "10-redundancy-repair-harvesting-and-binning",
+    "family": "branch",
+    "title": "Different outcomes can recover useful product",
+    "caption": "Repair replaces defective elements, harvesting disables unusable resources, and binning groups remaining performance. These are distinct responses to measured behavior.",
+    "nodes": [
+      {
+        "label": "Repair",
+        "glyph": "memory",
+        "detail": "Use spare elements to replace failing ones",
+        "variant": "repair"
+      },
+      {
+        "label": "Harvesting",
+        "glyph": "chip",
+        "detail": "Disable defective circuit resources where supported",
+        "variant": "harvest"
+      },
+      {
+        "label": "Binning",
+        "glyph": "test",
+        "detail": "Classify parts by measured capability",
+        "variant": "instrument"
+      },
+      {
+        "label": "Useful product",
+        "glyph": "package",
+        "detail": "Ship only the functionality supported by the tested result"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "10. Redundancy, Repair, Harvesting, and Binning"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "11-the-economics-of-process-control",
+    "family": "cycle",
+    "title": "Better information can prevent expensive scrap",
+    "caption": "Measurement consumes resources, but identifying a drifting process early can prevent more wafers from receiving the same error.",
+    "nodes": [
+      {
+        "label": "Measurement effort",
+        "glyph": "test",
+        "detail": "Spend tool time on useful observations"
+      },
+      {
+        "label": "Earlier detection",
+        "glyph": "design",
+        "detail": "Recognize a harmful deviation"
+      },
+      {
+        "label": "Containment",
+        "glyph": "queue",
+        "detail": "Stop the problem spreading to more material"
+      },
+      {
+        "label": "Yield learning",
+        "glyph": "wafer",
+        "detail": "Use results to improve later processing"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "11. The Economics of Process Control"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "12-metrology-and-inspection-for-euv",
+    "family": "compare",
+    "title": "EUV defects can occur on the mask or wafer",
+    "caption": "Mask inspection and wafer inspection examine different parts of the patterning chain. Random printed failures also require wafer-level evidence.",
+    "nodes": [
+      {
+        "label": "Reflective mask",
+        "glyph": "mask",
+        "detail": "Check the patterned multilayer reticle",
+        "variant": "euv"
+      },
+      {
+        "label": "Printed resist",
+        "glyph": "film",
+        "detail": "Look for stochastic missing or bridging features",
+        "variant": "stochastic"
+      },
+      {
+        "label": "Defect review",
+        "glyph": "test",
+        "detail": "Connect observed failures with the relevant process evidence",
+        "variant": "electron"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "12. Metrology and Inspection for EUV"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "13-wafer-level-reliability",
+    "family": "flow",
+    "title": "Accelerate stress to study a failure mechanism",
+    "caption": "Wafer-level reliability measures changes under controlled stress. The stress condition and extrapolation model determine what the result can support.",
+    "nodes": [
+      {
+        "label": "Dedicated structure",
+        "glyph": "transistor",
+        "detail": "Choose a structure sensitive to the mechanism"
+      },
+      {
+        "label": "Controlled stress",
+        "glyph": "heat",
+        "detail": "Apply electrical or thermal stress"
+      },
+      {
+        "label": "Repeated measurement",
+        "glyph": "test",
+        "detail": "Track degradation with time"
+      },
+      {
+        "label": "Reliability interpretation",
+        "glyph": "design",
+        "detail": "Relate the measured behavior to stated model assumptions"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "heading": "13. Wafer-Level Reliability"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  }
+]

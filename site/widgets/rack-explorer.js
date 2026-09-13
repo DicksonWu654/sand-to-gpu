@@ -143,6 +143,25 @@
         const g = svg('g');
         stage.append(g);
         DRAW[step](g);
+        // On a narrow screen the surrounding HTML carries the long title and specification sentence.
+        // Keep component labels in the drawing and size them for the available physical geometry.
+        if (el.clientWidth < 460) {
+          const shapes = [...g.querySelectorAll('rect')].map(r => r.getBBox());
+          const left = Math.min(...shapes.map(r => r.x)), right = Math.max(...shapes.map(r => r.x + r.width));
+          const top = Math.min(...shapes.map(r => r.y)), bottom = Math.max(...shapes.map(r => r.y + r.height));
+          const style = getComputedStyle(el);
+          const contentWidth = el.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+          const fontSize = Math.max(12, 12 * (right - left + 28) / Math.max(240, contentWidth));
+          const short = { 'Blackwell GPU': 'GPU', 'Grace CPU': 'CPU', '18 compute trays': '18 trays', '72 GPUs + 36 Grace': '72 GPUs', '18 chips, 130 TB/s': '18 chips', '6–8 power shelves': 'Power', 'NVLink spine': 'NVLink', 'Cooling plant': 'Cooling', 'Network': 'Fabric' };
+          for (const t of g.querySelectorAll('text')) {
+            const y = +t.getAttribute('y');
+            if (y < top || y > bottom) t.style.display = 'none';
+            else { t.textContent = short[t.textContent] || t.textContent; t.setAttribute('font-size', fontSize); }
+          }
+        }
+        // Frame the actual assembly rather than leaving a fixed 700-unit canvas around it.
+        const bounds = g.getBBox();
+        stage.setAttribute('viewBox', `${bounds.x - 14} ${bounds.y - 12} ${bounds.width + 28} ${bounds.height + 24}`);
       }
 
       // ---------- step controls ----------
@@ -205,20 +224,26 @@
         rGpus.textContent = fmt(racks * 72, 0);
         rHbm.textContent = fmt(racks * 13.4, 1) + ' TB';
         rCopper.textContent = fmt(racks * 2, 0) + ' mi';
-        rUsd.textContent = '$' + fmt(racks * 3.5, 1) + ' B';
+        rUsd.textContent = '$' + fmt(racks * 3.5 / 1000, 2) + ' B';
         if (step === LEVELS.length - 1) drawStage();
       }
       [inPower, inRackP, inPue].forEach(i => i.addEventListener('input', updateHall));
 
-      el.append(
-        h('div', { class: 'w-steps' },
-          h('div', { class: 'w-step-nav' }, prevBtn, ...dots, nextBtn, counter),
-          stepTitle, stepDesc, stage,
-          h('div', { style: { overflowX: 'auto' } }, specTable)),
-        hallPanel);
-
+      const shortcuts = h('div', { class: 'w-stage-strip', style: { display: 'flex', flexWrap: 'wrap', gap: '6px', margin: '10px 0' } },
+        ...['Package', 'Superchip', 'Tray', 'Rack', 'Pod', 'Hall'].map((name, i) => h('button', { class: 'w-btn', on: { click: () => goto(i) } }, name)));
+      el.append(h('div', { class: 'w-steps' }, stepTitle,
+        h('div', { class: 'w-studio', style: { maxWidth: '700px', margin: '0 auto' } }, stage),
+        h('div', { class: 'w-insight', 'aria-live': 'polite' }, stepDesc),
+        h('div', { class: 'w-console' }, h('div', { class: 'w-step-nav' }, prevBtn, ...dots, nextBtn, counter), shortcuts)),
+        hallPanel,
+        h('div', { class: 'w-note' }, 'Schematics are not to scale. Module 19 mixes published system specifications with labeled cost and configuration estimates; the pod is an illustrative grouping.'),
+        h('details', { class: 'w-reference' }, h('summary', null, 'System specifications & estimates'), h('div', { style: { overflowX: 'auto' } }, specTable)));
       updateHall();
       goto(0);
+      let narrow = el.clientWidth < 460;
+      const responsive = new ResizeObserver(() => { const next = el.clientWidth < 460; if (next !== narrow) { narrow = next; drawStage(); } });
+      responsive.observe(el);
+      return () => responsive.disconnect();
     }
   });
 })();

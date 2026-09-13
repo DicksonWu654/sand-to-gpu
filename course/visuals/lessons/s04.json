@@ -1,0 +1,184 @@
+[
+  {
+    "family": "flow",
+    "title": "Light creates a temporary chemical stencil",
+    "caption": "The resist pattern protects selected regions during a later operation. Which regions remain depends on the resist system.",
+    "nodes": [
+      {
+        "label": "Coat",
+        "detail": "Apply photoresist to the prepared surface.",
+        "glyph": "film"
+      },
+      {
+        "label": "Expose",
+        "detail": "Projected light changes local resist chemistry.",
+        "glyph": "light"
+      },
+      {
+        "label": "Develop",
+        "detail": "Remove the selected resist regions.",
+        "glyph": "mask"
+      },
+      {
+        "label": "Transfer",
+        "detail": "Use the openings to modify the underlying layer.",
+        "glyph": "etch"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "1-making-a-temporary-pattern-in-chemistry"
+  },
+  {
+    "family": "branch",
+    "title": "Resolution depends on more than wavelength",
+    "caption": "Wavelength, collection angle and process behavior jointly affect what can be printed. A node name is not a direct measure of any one of these.",
+    "nodes": [
+      {
+        "label": "Wavelength",
+        "detail": "The light\u2019s spatial oscillation scale matters.",
+        "glyph": "light"
+      },
+      {
+        "label": "Numerical aperture",
+        "detail": "The optics collect and focus a range of angles.",
+        "glyph": "light"
+      },
+      {
+        "label": "Process",
+        "detail": "Mask design and resist behavior shape the result.",
+        "glyph": "mask"
+      },
+      {
+        "label": "Printed feature",
+        "detail": "The developed structure is the combined outcome.",
+        "glyph": "etch"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "2-why-the-wavelength-matters-without-setting-every-dimension"
+  },
+  {
+    "family": "apparatus",
+    "title": "Immersion changes the last optical gap",
+    "caption": "An immersion system uses water between the final optical element and wafer to support a larger numerical aperture. The projected pattern still acts through resist chemistry.",
+    "nodes": [
+      {
+        "label": "DUV illumination",
+        "detail": "A laser supplies the lithography wavelength.",
+        "glyph": "light"
+      },
+      {
+        "label": "Projection optics",
+        "detail": "Form the image from the mask pattern.",
+        "glyph": "mask"
+      },
+      {
+        "label": "Immersion gap",
+        "detail": "Water changes the optical conditions near the wafer.",
+        "glyph": "film"
+      },
+      {
+        "label": "Resist surface",
+        "detail": "Receives the image and is developed afterward.",
+        "glyph": "wafer"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "3-deep-ultraviolet-remains-a-major-manufacturing-tool"
+  },
+  {
+    "family": "apparatus",
+    "title": "EUV travels through a reflective optical chain",
+    "caption": "Tin plasma emits usable EUV. Reflective optics transport and pattern it in vacuum because ordinary transparent optics and air absorb too much.",
+    "nodes": [
+      {
+        "label": "Tin plasma",
+        "detail": "Laser energy drives emission from the prepared tin target.",
+        "glyph": "heat"
+      },
+      {
+        "label": "Collector",
+        "detail": "Captures part of the useful emitted light.",
+        "glyph": "light"
+      },
+      {
+        "label": "Reflective mask",
+        "detail": "Encodes the circuit pattern by reflection.",
+        "glyph": "mask"
+      },
+      {
+        "label": "Projection mirrors",
+        "detail": "Deliver the image to the resist-coated wafer.",
+        "glyph": "light"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "4-extreme-ultraviolet-requires-a-different-machine"
+  },
+  {
+    "family": "flow",
+    "title": "Individual events become a developed edge",
+    "caption": "Photon arrival and absorption are statistical. Resist chemistry must turn these discrete events into a sufficiently reliable shape.",
+    "nodes": [
+      {
+        "label": "Incident photons",
+        "detail": "Energy arrives in individual quanta.",
+        "glyph": "light"
+      },
+      {
+        "label": "Absorbed events",
+        "detail": "Only a fraction of arriving photons initiate useful activity.",
+        "glyph": "film"
+      },
+      {
+        "label": "Chemical response",
+        "detail": "Local reactions change solubility.",
+        "glyph": "gas"
+      },
+      {
+        "label": "Developed pattern",
+        "detail": "Randomness can contribute to roughness or missing features.",
+        "glyph": "etch"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "5-small-patterns-expose-the-randomness-of-individual-events"
+  },
+  {
+    "family": "cycle",
+    "title": "Measure, correct and print in registration",
+    "caption": "A correctly sized contact is useful only if it lands on its intended connection. Alignment and height measurements support corrective settings.",
+    "nodes": [
+      {
+        "label": "Measure marks",
+        "detail": "Locate existing structures on the wafer.",
+        "glyph": "test",
+        "variant": "optical"
+      },
+      {
+        "label": "Correct position",
+        "detail": "Account for measured placement and distortion.",
+        "glyph": "design"
+      },
+      {
+        "label": "Expose layer",
+        "detail": "Print the next pattern in the corrected frame.",
+        "glyph": "light"
+      },
+      {
+        "label": "Check overlay",
+        "detail": "Assess how the new and previous layers align.",
+        "glyph": "test",
+        "variant": "electron"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "6-alignment-and-throughput-determine-whether-the-pattern-is-"
+  }
+]

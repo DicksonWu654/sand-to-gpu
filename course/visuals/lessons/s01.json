@@ -1,0 +1,206 @@
+[
+  {
+    "family": "layers",
+    "title": "A circuit is more than its switches",
+    "caption": "Metal levels and insulating films are interleaved above the devices; contacts join the wiring to the transistors. The schematic groups each wiring tier with its surrounding dielectric.",
+    "nodes": [
+      {
+        "label": "Upper wiring and dielectric",
+        "detail": "Metal routes carry signals and power within insulating films.",
+        "glyph": "wires"
+      },
+      {
+        "label": "Local wiring and contacts",
+        "detail": "Short routes connect to the transistor terminals; dielectric separates neighboring paths.",
+        "glyph": "wires",
+        "variant": "via"
+      },
+      {
+        "label": "Transistors",
+        "detail": "Control current near the silicon surface.",
+        "glyph": "transistor",
+        "variant": "planar"
+      },
+      {
+        "label": "Silicon foundation",
+        "detail": "Provides the crystalline material beneath the circuit.",
+        "glyph": "wafer"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "1-what-a-chip-actually-is"
+  },
+  {
+    "family": "branch",
+    "title": "Four branches converge on fabrication",
+    "caption": "The wafer is only one input. Designs, specialized materials and equipment must be ready together.",
+    "nodes": [
+      {
+        "label": "Prepared wafer",
+        "detail": "A controlled crystal with a clean, flat surface.",
+        "glyph": "wafer"
+      },
+      {
+        "label": "Circuit design",
+        "detail": "Defines the structures to manufacture.",
+        "glyph": "design"
+      },
+      {
+        "label": "Process materials",
+        "detail": "Gases, chemicals and films support repeated changes.",
+        "glyph": "gas"
+      },
+      {
+        "label": "Equipment",
+        "detail": "Tools control where and how each change happens.",
+        "glyph": "test"
+      },
+      {
+        "label": "Fabricated circuit",
+        "detail": "The branches meet in a qualified manufacturing flow.",
+        "glyph": "chip"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "2-several-branches-meet-in-the-factory"
+  },
+  {
+    "family": "cycle",
+    "title": "The circuit grows through repeated changes",
+    "caption": "A processed surface becomes the starting point for the next sequence. Measurement helps catch accumulated errors.",
+    "nodes": [
+      {
+        "label": "Deposit",
+        "detail": "Add material with the required electrical or process role.",
+        "glyph": "film"
+      },
+      {
+        "label": "Pattern",
+        "detail": "Create temporary openings in a protective material.",
+        "glyph": "mask"
+      },
+      {
+        "label": "Modify",
+        "detail": "Remove material or alter selected regions.",
+        "glyph": "etch"
+      },
+      {
+        "label": "Measure",
+        "detail": "Check the resulting structures before continuing.",
+        "glyph": "test",
+        "variant": "optical"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "3-build-a-circuit-by-repeating-controlled-changes"
+  },
+  {
+    "family": "compare",
+    "title": "Local precision and wafer-scale control",
+    "caption": "A small contact must land on its target, while the wafer must stay within the geometry the tool can handle. Neither task replaces the other.",
+    "nodes": [
+      {
+        "label": "Local feature",
+        "detail": "A dimensional error changes one device or connection.",
+        "glyph": "transistor",
+        "variant": "planar"
+      },
+      {
+        "label": "Layer registration",
+        "detail": "An accurately shaped contact still fails if it misses its target.",
+        "glyph": "wires",
+        "variant": "via"
+      },
+      {
+        "label": "Whole wafer",
+        "detail": "Flatness and distortion affect imaging across many dies.",
+        "glyph": "wafer"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "4-why-scale-creates-difficulty-in-opposite-directions"
+  },
+  {
+    "family": "network",
+    "title": "Compute, memory and package work together",
+    "caption": "The package provides short, dense connections between the GPU and HBM. Bandwidth, capacity and latency remain distinct properties.",
+    "nodes": [
+      {
+        "label": "GPU",
+        "detail": "Consumes inputs and produces results.",
+        "glyph": "chip"
+      },
+      {
+        "label": "HBM stack",
+        "detail": "Holds working data in stacked DRAM dies.",
+        "glyph": "memory",
+        "variant": "hbm"
+      },
+      {
+        "label": "Fine wiring",
+        "detail": "Carries many signals between neighboring dies.",
+        "glyph": "wires"
+      },
+      {
+        "label": "Package substrate",
+        "detail": "Connects the assembly to power and the board.",
+        "glyph": "package",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 2,
+        "label": "requests and results"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "memory data"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "external connections"
+      }
+    ],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "5-why-memory-and-packaging-belong-in-the-same-story"
+  },
+  {
+    "family": "cycle",
+    "title": "A substitute must work inside the whole process",
+    "caption": "Qualification tests compatibility and reliability in context. A nominally similar material can require recipe changes and another evaluation loop.",
+    "nodes": [
+      {
+        "label": "Candidate input",
+        "detail": "Choose a possible replacement material or tool.",
+        "glyph": "material"
+      },
+      {
+        "label": "Process integration",
+        "detail": "Run it with the other steps and interfaces.",
+        "glyph": "film"
+      },
+      {
+        "label": "Device evidence",
+        "detail": "Measure behavior and evaluate reliability.",
+        "glyph": "test",
+        "variant": "probe"
+      },
+      {
+        "label": "Qualified flow",
+        "detail": "Accept the input only for the demonstrated conditions.",
+        "glyph": "chip"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "6-why-no-company-can-replace-the-chain-overnight"
+  }
+]

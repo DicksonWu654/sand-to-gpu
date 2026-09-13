@@ -7,6 +7,7 @@ An in-depth, self-study course following silicon from quartz to an NVIDIA GPU ra
 - **Deep dive:** 22 modules, roughly 512,000 words, covering materials, wafer fabrication, transistors, memory, packaging, testing, GPU systems, and economics.
 - **Survey:** ten shorter chapters connecting the whole supply chain, with links into the deep modules.
 - **Interactive learning:** 46 widget implementations, eight-question module quizzes, search, a glossary, and browser-local progress and theme preferences.
+- **Illustrated atlas:** 352 authored figures across the substantive teaching sections, chapter opening illustrations, and responsive light and dark layouts. Physical structures, process flows, comparisons, and networks complement the interactive labs.
 
 | Part | Modules |
 |---|---|
@@ -26,7 +27,7 @@ node build.js
 node serve.js
 ```
 
-Open [the local course](http://localhost:8790). Use `PORT` to select a different server port. Re-run `node build.js` after editing modules, surveys, quizzes, or widget placements. Progress and quiz scores stay in your browser.
+Open [the local course](http://127.0.0.1:8790). Use `PORT` to select a different server port. Re-run `node build.js` after editing modules, surveys, quizzes, section figures, or widget placements. Progress and quiz scores stay in your browser.
 
 ## Check changes
 
@@ -36,6 +37,8 @@ With the local server running:
 npm run build
 npm run check
 node qa/shell.js
+node qa/refactor-pages.js
+node qa/flagship-refactor.js
 npm run qa:sweep -- widgets
 npm run qa:sweep -- pages
 ```
@@ -50,9 +53,11 @@ Browser checks require Chrome or Chromium. The harness uses Puppeteer's browser,
 course/modules/           Deep modules (the source of truth)
 course/survey/            Survey chapters
 course/quizzes/           Module quiz data
+course/visuals/           Authored figure data, renderer, schema, and coverage inventory
 course/review/            Historical and second-round review evidence
 course/v1/                Preserved first edition
 site/                     Static learning application and widgets
+site/course-shell.js      Shared chapter and homepage illustration components
 site/content.js           Generated content consumed by the application
 qa/                       Browser harness, interaction scenarios, and QA reports
 build.js                  Generates site/content.js
@@ -62,6 +67,10 @@ CONTINUATION_2026-09-13.md Follow-up work, validation, and remaining limits
 ```
 
 `course/TEACHING_GUIDE.md` defines the intended reader, explanation sequence, and depth standard. `course/SURVEY_GUIDE.md` defines the shorter track. `qa/WIDGET_QA_STANDARD.md` defines visual and interaction checks.
+
+Section figures are authored in `course/visuals/lessons/`, keyed to exact section IDs. Follow `course/visuals/SCHEMA.md` when adding or editing them. The renderer supplies reusable drawing primitives and mechanism variants; each figure supplies its own components, relationships, explanation, and source provenance. Reference sections retain appropriate tables and lists. The build places teaching figures and labs inside their owning sections, after an opening paragraph where one exists.
+
+`npm run check` includes strict figure coverage and source-preservation checks. The [visual refactor record](DESIGN_REFACTOR_2026-09-13.md) describes the implementation and validation evidence.
 
 ## Accuracy and review scope
 

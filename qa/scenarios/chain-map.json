@@ -1,22 +1,71 @@
 [
-  {"hover": "#box svg[aria-label^='Map of'] g.cards g[data-id=feol]"},
-  {"wait": 300},
-  {"shot": "hover-feol"},
-  {"click": "#box svg[aria-label^='Map of'] g.cards g[data-id=ingot]"},
-  {"wait": 300},
-  {"shot": "click-ingot"},
-  {"click": "#box svg[aria-label^='Map of'] g.cards g[data-id=cowos]"},
-  {"wait": 300},
-  {"shot": "click-cowos"},
-  {"click": "#box svg[aria-label^='Map of'] g.cards g[data-id=hbm]"},
-  {"wait": 300},
-  {"shot": "click-hbm"},
-  {"click": "#box svg[aria-label^='Map of'] g.cards g[data-id=dc]"},
-  {"wait": 300},
-  {"shot": "click-datacenter"},
-  {"hover": "#box svg[aria-label^='Map of'] g.cards g[data-id=beol]"},
-  {"wait": 300},
-  {"shot": "hover-beol-while-dc-selected"},
-  {"hover": "#box .w-legend"},
-  {"wait": 200}
+  {
+    "set": "#box select[aria-label=\"Manufacturing stage\"]",
+    "value": "feol"
+  },
+  {
+    "wait": 180
+  },
+  {
+    "shot": "select-feol"
+  },
+  {
+    "set": "#box select[aria-label=\"Manufacturing stage\"]",
+    "value": "ingot"
+  },
+  {
+    "wait": 180
+  },
+  {
+    "shot": "select-ingot"
+  },
+  {
+    "set": "#box select[aria-label=\"Manufacturing stage\"]",
+    "value": "cowos"
+  },
+  {
+    "wait": 180
+  },
+  {
+    "shot": "select-cowos"
+  },
+  {
+    "set": "#box select[aria-label=\"Manufacturing stage\"]",
+    "value": "hbm"
+  },
+  {
+    "wait": 180
+  },
+  {
+    "shot": "select-hbm"
+  },
+  {
+    "set": "#box select[aria-label=\"Manufacturing stage\"]",
+    "value": "dc"
+  },
+  {
+    "wait": 180
+  },
+  {
+    "shot": "select-dc"
+  },
+  {
+    "set": "#box select[aria-label=\"Manufacturing stage\"]",
+    "value": "beol"
+  },
+  {
+    "wait": 180
+  },
+  {
+    "shot": "select-beol"
+  },
+  {
+    "click": "#box button[data-phase=\"pkg\"]"
+  },
+  {
+    "hover": "#box button[data-phase=\"pkg\"]"
+  },
+  {
+    "shot": "selected-packaging-phase"
+  }
 ]

@@ -75,11 +75,11 @@
 
   window.registerWidget('euv-source', {
     title: 'Inside an EUV Scanner',
-    caption: 'Left: one 20 µs source cycle, from tin droplet to light at the intermediate focus. Right: the 11 mirrors from there to the wafer. Hover or focus any part; drag the source power and watch the wafer power and exposure time follow.',
+    caption: 'Turn a tin droplet into a patterned beam of light. Explore the source, follow the scanner’s mirrors, then inspect how much power survives the journey.',
     mount(el, ctx) {
       const { h, svg, fmt } = ctx;
       const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const st = { playing: !reduced, slow: false, P0: 500, wph: 220 };
+      const st = { playing: false, slow: false, P0: 500, wph: 220 };
       let raf = 0, visible = true, last = 0, phase = 0.47, curPhase = -1, curStage = -2;
       const uid = 'euvs' + Math.random().toString(36).slice(2, 7);
 
@@ -190,16 +190,16 @@
       Bs.append(txt(196, 266, 'scan'), txt(270, 306, 'Wafer on mag-lev stage', { anchor: 'middle' }));
 
       // ================= hotspots (shaped to their parts) =================
-      const infoStack = h('div', { style: { display: 'grid' } });
+      const infoStack = h('div');
       const infoViews = {};
       function addInfo(key, name, keyNum, body) {
-        const v = h('div', { style: { gridArea: '1 / 1', visibility: 'hidden' } }, h('div', null, h('b', null, name + '  —  ' + keyNum)), h('div', { style: { color: 'var(--muted)', marginTop: '2px' } }, body));
+        const v = h('div', { hidden: true }, h('div', null, h('b', null, name + '  —  ' + keyNum)), h('div', { style: { color: 'var(--muted)', marginTop: '2px' } }, body));
         infoStack.append(v); infoViews[key] = v; return v;
       }
       const idleView = addInfo('_idle', 'Hover, focus or tap a part of either drawing', '', 'Each labelled component reveals what it does and a key number.');
       Object.keys(COMPONENTS).forEach(k => addInfo(k, COMPONENTS[k].name, COMPONENTS[k].key, COMPONENTS[k].info));
-      let shown = idleView; idleView.style.visibility = 'visible';
-      const setInfo = key => { const v = infoViews[key] || idleView; if (v === shown) return; shown.style.visibility = 'hidden'; v.style.visibility = 'visible'; shown = v; };
+      let shown = infoViews.collector; shown.hidden = false;
+      const setInfo = key => { const v = infoViews[key] || idleView; if (v === shown) return; shown.hidden = true; v.hidden = false; shown = v; };
       const info = h('div', { style: { border: '1px solid var(--line)', borderRadius: '6px', padding: '8px 12px', margin: '10px 0', fontSize: '13px' } }, infoStack);
 
       function hotspot(parent, key, shapes) {
@@ -235,22 +235,22 @@
       hotspot(Bs, 'wafer', [rect(226, 262, 90, 30)]);
 
       // ================= phase status =================
-      const chips = PHASES.map((p, i) => h('span', { style: { padding: '2px 9px', borderRadius: '12px', border: '1px solid var(--line)', color: 'var(--muted)', fontSize: '12.5px', whiteSpace: 'nowrap' } }, (i + 1) + '  ' + p[0]));
-      const notes = PHASES.map(p => h('div', { style: { gridArea: '1 / 1', visibility: 'hidden' } }, p[1]));
+      const chips = PHASES.map((p, i) => h('button', { class: 'w-btn', on: { click: () => { st.playing = false; playBtn.textContent = 'Play'; phase = [.15, .35, .43, .58, .8][i]; render(phase); selectView(i === 4 ? 1 : 0); } }, style: { padding: '2px 9px', borderRadius: '12px', border: '1px solid var(--line)', color: 'var(--muted)', fontSize: '12.5px', whiteSpace: 'nowrap' } }, (i + 1) + '  ' + p[0]));
+      const notes = PHASES.map(p => h('div', { hidden: true }, p[1]));
       const phaseRow = h('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '6px', margin: '10px 0 6px' } }, ...chips);
       const phaseNote = h('div', { class: 'w-note', style: { display: 'grid', marginTop: '0' } }, ...notes);
       function setPhase(i) {
         if (i === curPhase) return;
         chips.forEach((c, k) => { c.style.borderColor = k === i ? 'var(--accent)' : 'var(--line)'; c.style.color = k === i ? 'var(--ink)' : 'var(--muted)'; c.style.fontWeight = k === i ? 600 : 400; });
-        notes.forEach((n, k) => n.style.visibility = k === i ? 'visible' : 'hidden');
+        notes.forEach((n, k) => n.hidden = k !== i);
         curPhase = i;
       }
 
       // ================= controls =================
-      const playBtn = h('button', { class: 'w-btn primary', on: { click: () => { st.playing = !st.playing; playBtn.textContent = st.playing ? 'Pause' : 'Play'; if (st.playing) start(); } } }, st.playing ? 'Pause' : 'Play');
-      const slowBtn = h('button', { class: 'w-btn', on: { click: () => { st.slow = !st.slow; slowBtn.textContent = st.slow ? 'Slow motion: on' : 'Slow motion: off'; } } }, 'Slow motion: off');
-      const p0In = h('input', { type: 'range', min: 250, max: 600, step: 10, value: st.P0, style: { minWidth: '0' } });
-      const wphIn = h('input', { type: 'range', min: 150, max: 350, step: 5, value: st.wph, style: { minWidth: '0' } });
+      const playBtn = h('button', { class: 'w-btn primary', 'aria-label': 'Play or pause EUV cycle', on: { click: () => { st.playing = !st.playing; playBtn.textContent = st.playing ? 'Pause' : 'Play'; if (st.playing) start(); } } }, st.playing ? 'Pause' : 'Play');
+      const slowBtn = h('button', { class: 'w-btn', 'aria-label': 'Toggle slow motion', on: { click: () => { st.slow = !st.slow; slowBtn.textContent = st.slow ? 'Slow motion: on' : 'Slow motion: off'; } } }, 'Slow motion: off');
+      const p0In = h('input', { type: 'range', 'aria-label': 'Power at intermediate focus', min: 250, max: 600, step: 10, value: st.P0, style: { minWidth: '0' } });
+      const wphIn = h('input', { type: 'range', 'aria-label': 'Wafer throughput', min: 150, max: 350, step: 5, value: st.wph, style: { minWidth: '0' } });
       const p0Out = h('output'), wphOut = h('output');
       const controls = h('div', { class: 'w-controls' },
         h('div', { style: { flexBasis: '100%', display: 'flex', gap: '8px', flexWrap: 'wrap' } }, playBtn, slowBtn),
@@ -292,11 +292,13 @@
         h('div', { class: 'w-stat' }, stPerW, stPerWLbl));
       const formula = h('div', { class: 'w-formula', html: 'P<sub>wafer</sub> = P<sub>IF</sub> · 0.67⁴ (illuminator) · 0.65 (reticle) · 0.67⁶ (M1–M6) ≈ 0.012 · P<sub>IF</sub><br>t<sub>exposure</sub> = 707 cm² · 30 mJ/cm² ÷ P<sub>wafer</sub> = 21 J ÷ P<sub>wafer</sub>' });
 
+      const energySummary = h('div', { class: 'w-insight', 'aria-live': 'polite' });
       function update() {
         st.P0 = +p0In.value; p0Out.textContent = st.P0 + ' W';
         st.wph = +wphIn.value; wphOut.textContent = st.wph + ' wph';
         const pW = pWafer(st.P0), pRet = st.P0 * Math.pow(R_MIRROR, N_ILLUM) * R_RETICLE;
         const tExp = WAFER_J / pW, tWafer = 3600 / st.wph;
+        energySummary.replaceChildren(h('b', null, `${st.P0} W at the intermediate focus → ${f1(pW)} W at the wafer. `), 'Eleven reflections pass about 1.2% of the incoming in-band power in this illustrative model.');
         stDrops.textContent = fmt(DROPLET_HZ, 0);
         stPerWafer.textContent = fmt(DROPLET_HZ * tWafer, 0);
         stTin.textContent = fmt(DROPLET_HZ * DROPLET_NG * 1e-9 * 86400 / 1000, 2) + ' kg';
@@ -357,15 +359,60 @@
       const io = new IntersectionObserver(es => { visible = es.some(e => e.isIntersecting); if (visible) start(); });
       io.observe(el);
 
-      el.append(controls,
-        h('div', { class: 'w-grid2' }, A, Bs),
-        phaseRow, phaseNote, info,
-        h('div', { class: 'w-grid2' }, readout, h('div', null, PB, formula)),
-        h('div', { class: 'w-note' }, 'Photon budget after the IF: each Mo/Si mirror keeps ~67% (the grazing folds do better, counted at 0.67 to be conservative) and the patterned reticle ~65%. A pellicle (×0.81, crossed twice) and hydrogen absorption are not modelled; with them the ~6 W here becomes the module\'s ~5 W. The animation shows one droplet, pre-pulse, main pulse and EUV pulse per cycle — the real source repeats this 50,000 times a second.'));
+      const viewNames = ['01 · Create EUV light', '02 · Pattern & focus', '03 · Count the losses'];
+      const viewDescriptions = [
+        'A laser hits tin droplets. The resulting plasma emits EUV light; a curved collector gathers part of that light at the intermediate focus.',
+        'The same light enters the scanner. Mirrors shape it, a reflective mask supplies the pattern, and six projection mirrors image that pattern on the wafer.',
+        'Every reflection costs photons. This logarithmic chart follows the in-band power from the intermediate focus through eleven reflections to the wafer.'
+      ];
+      const viewNav = h('div', { class: 'w-stage-strip', style: { display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '0' } });
+      const viewDescription = h('div', { class: 'w-note', style: { margin: '0' } });
+      const views = [A, Bs, PB].map(d => h('div', { hidden: true, style: { maxWidth: '600px', margin: '0 auto' } }, d));
+      const viewButtons = viewNames.map((name, i) => h('button', { class: 'w-btn', 'data-view': i, on: { click: () => selectView(i) } }, name));
+      viewNav.append(...viewButtons);
+      function selectView(i) {
+        views.forEach((v, k) => v.hidden = i !== k);
+        viewButtons.forEach((v, k) => { v.classList.toggle('primary', i === k); v.setAttribute('aria-pressed', i === k); });
+        viewDescription.textContent = viewDescriptions[i];
+        info.hidden = i === 2; phaseRow.hidden = i === 2; phaseNote.hidden = i === 2;
+        if (i < 2) setInfo(i === 0 ? 'collector' : 'wafer');
+      }
+      el.append(energySummary,
+        h('div', { class: 'w-studio', style: { gap: '12px' } }, viewNav, viewDescription, ...views, info),
+        h('div', { class: 'w-console' }, controls, phaseRow, phaseNote),
+        h('div', { class: 'w-note' }, 'Simplified photon budget: pellicle losses and hydrogen absorption are omitted; grazing mirrors use a conservative common reflectivity. The slowed animation shows one cycle; the source repeats 50,000 cycles per second.'),
+        h('details', { class: 'w-reference' }, h('summary', null, 'Exposure, tin consumption & calculation'), readout, formula,
+          h('div', { class: 'w-note' }, 'Each Mo/Si mirror keeps approximately 67% of in-band power; the patterned reticle keeps approximately 65%. The exposure calculation assumes a 300 mm wafer and 30 mJ/cm². These idealized values do not include all scanner losses or overheads.')));
+      // Keep the optical geometry on a phone, but move recipe detail into the live component description.
+      const sourceTexts = [...A.querySelectorAll('text')], scannerTexts = [...Bs.querySelectorAll('text')];
+      const compactLabels = (drawing, labels) => {
+        const group = svg('g', { 'aria-hidden': 'true', style: { display: 'none' } });
+        labels.forEach(([x, y, label, anchor]) => group.append(txt(x, y, label, { size: 15, bold: true, fill: 'var(--ink)', anchor: anchor || 'start' })));
+        drawing.append(group); return group;
+      };
+      const compactA = compactLabels(A, [[10, 72, 'Collector'], [170, 35, 'Tin droplets'], [8, 156, 'Laser'], [125, 229, 'Plasma'], [274, 156, 'Focus']]);
+      const compactB = compactLabels(Bs, [[12, 24, 'Illumination'], [157, 29, 'Mask'], [212, 94, 'Projection'], [270, 306, 'Wafer', 'middle'], [12, 196, 'Focus']]);
+      const budgetTexts = [...PB.querySelectorAll('text')];
+      const originalFonts = budgetTexts.map(t => t.getAttribute('font-size'));
+      let compact = null;
+      const fitDiagrams = () => {
+        const next = el.clientWidth < 460;
+        if (compact === next) return; compact = next;
+        [...sourceTexts, ...scannerTexts].forEach(t => t.style.display = compact ? 'none' : '');
+        compactA.style.display = compact ? '' : 'none'; compactB.style.display = compact ? '' : 'none';
+        budgetTexts.forEach((t, i) => {
+          const keep = /^(1|10|100|500) W$|^(IF|ret|M6)$/.test(t.textContent);
+          t.style.display = compact && !keep ? 'none' : '';
+          t.setAttribute('font-size', compact ? 14 : originalFonts[i]);
+        });
+        wafBox.style.display = compact ? 'none' : '';
+      };
+      const responsive = new ResizeObserver(fitDiagrams); responsive.observe(el); fitDiagrams();
+      selectView(0);
       update();
       render(phase);
       start();
-      return () => { if (raf) cancelAnimationFrame(raf); raf = 0; st.playing = false; io.disconnect(); };
+      return () => { if (raf) cancelAnimationFrame(raf); raf = 0; st.playing = false; io.disconnect(); responsive.disconnect(); };
     }
   });
 })();

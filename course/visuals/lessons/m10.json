@@ -1,0 +1,406 @@
+[
+  {
+    "section": "1-the-physics-of-doping",
+    "family": "compare",
+    "title": "Donors and acceptors shift carrier populations",
+    "caption": "Doping changes silicon's electrical behavior by introducing controlled atoms into the lattice; chemical presence alone is not sufficient activation. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "transistor",
+        "label": "Donor doping",
+        "detail": "Suitable impurities contribute mobile electrons."
+      },
+      {
+        "glyph": "transistor",
+        "label": "Acceptor doping",
+        "detail": "Suitable impurities increase the hole population."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Substitutional lattice sites",
+        "detail": "Electrically useful dopants occupy appropriate crystal positions."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/10-doping.md",
+      "heading": "1. The Physics of Doping"
+    }
+  },
+  {
+    "section": "2-thermal-diffusion-the-original-method",
+    "family": "flow",
+    "title": "Heat spreads dopant from a surface source",
+    "caption": "Diffusion creates a depth profile through thermally activated atomic movement; time and temperature couple dose distribution and junction depth. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Surface dopant supply",
+        "detail": "A source establishes dopant at the wafer surface."
+      },
+      {
+        "glyph": "heat",
+        "label": "Thermal exposure",
+        "detail": "Heating allows atoms to move through silicon.",
+        "variant": "tube-furnace"
+      },
+      {
+        "glyph": "film",
+        "label": "Depth profile",
+        "detail": "Concentration changes with distance from the surface.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "transistor",
+        "label": "Doped region",
+        "detail": "The resulting profile affects the device's electrical behavior.",
+        "variant": "planar"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/10-doping.md",
+      "heading": "2. Thermal Diffusion: The Original Method"
+    }
+  },
+  {
+    "section": "3-inside-an-ion-implanter",
+    "family": "apparatus",
+    "title": "Select ions, set their energy, count their delivery",
+    "caption": "An implanter separates species before delivering a controlled beam to the wafer; dose and energy serve different controls. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Ion source",
+        "detail": "The source creates charged dopant species.",
+        "variant": "plasma-chamber"
+      },
+      {
+        "glyph": "wires",
+        "label": "Mass analysis",
+        "detail": "Magnetic selection separates the desired beam species.",
+        "variant": "mass-analyzer"
+      },
+      {
+        "glyph": "heat",
+        "label": "Beam-energy control",
+        "detail": "Acceleration or deceleration sets implantation energy."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Wafer exposure",
+        "detail": "Beam current and scan control determine delivered dose."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/10-doping.md",
+      "heading": "3. Inside an Ion Implanter"
+    }
+  },
+  {
+    "section": "4-implanter-classes-tools-and-special-modes",
+    "family": "compare",
+    "title": "One beamline cannot optimize every implant",
+    "caption": "High current, high energy and precision dose control impose different engineering demands. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wires",
+        "label": "High-current implant",
+        "detail": "Beam delivery prioritizes large ion flux."
+      },
+      {
+        "glyph": "heat",
+        "label": "High-energy implant",
+        "detail": "Acceleration enables deeper implantation.",
+        "variant": "thermal"
+      },
+      {
+        "glyph": "test",
+        "label": "Medium-current precision",
+        "detail": "Selected applications favor tightly controlled beam quality and dose.",
+        "variant": "instrument"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/10-doping.md",
+      "heading": "4. Implanter Classes, Tools and Special Modes"
+    }
+  },
+  {
+    "section": "5-where-the-ions-stop-range-statistics",
+    "family": "compare",
+    "title": "Ions stop through statistical collision histories",
+    "caption": "Nuclear and electronic stopping contribute differently with ion species and energy; an implanted profile is a distribution, not a single depth. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "Nuclear collisions",
+        "detail": "Momentum transfer deflects ions and displaces silicon atoms."
+      },
+      {
+        "glyph": "light",
+        "label": "Electronic stopping",
+        "detail": "Energy transfers to the electronic system."
+      },
+      {
+        "glyph": "film",
+        "label": "Range distribution",
+        "detail": "Different trajectories finish at different depths.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "crystal",
+        "label": "Channeling paths",
+        "detail": "Crystal alignment can let some ions travel farther."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/10-doping.md",
+      "heading": "5. Where the Ions Stop: Range Statistics"
+    }
+  },
+  {
+    "section": "6-damage-amorphisation-and-transient-enhanced-diffusion",
+    "family": "flow",
+    "title": "Implant damage changes the later anneal response",
+    "caption": "A primary collision can launch a cascade; the resulting defects influence repair and dopant redistribution. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "Incoming ion",
+        "detail": "The projectile transfers energy to lattice atoms."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Collision cascade",
+        "detail": "Displaced atoms trigger further local collisions."
+      },
+      {
+        "glyph": "film",
+        "label": "Damaged or amorphous region",
+        "detail": "Disorder accumulates in the implanted layer.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "heat",
+        "label": "Anneal response",
+        "detail": "Defect evolution affects activation and transient diffusion.",
+        "variant": "thermal"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/10-doping.md",
+      "heading": "6. Damage, Amorphisation and Transient Enhanced Diffusion"
+    }
+  },
+  {
+    "section": "7-the-annealing-zoo",
+    "family": "compare",
+    "title": "Annealing balances repair against unwanted diffusion",
+    "caption": "More thermal exposure can repair and activate the lattice while also spreading the dopant profile. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Lattice repair",
+        "detail": "Heat helps restore crystalline order."
+      },
+      {
+        "glyph": "transistor",
+        "label": "Electrical activation",
+        "detail": "Dopants move into electrically useful sites.",
+        "variant": "planar"
+      },
+      {
+        "glyph": "film",
+        "label": "Profile spreading",
+        "detail": "Atomic motion can blur the intended junction.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "heat",
+        "label": "Time-temperature choice",
+        "detail": "The recipe balances the competing requirements.",
+        "variant": "thermal"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/10-doping.md",
+      "heading": "7. The Annealing Zoo"
+    }
+  },
+  {
+    "section": "8-implants-in-a-modern-finfet-and-gaa-flow",
+    "family": "branch",
+    "title": "Modern logic uses implants in several supporting roles",
+    "caption": "Device architecture changes where implants are useful; in-situ doped epitaxy complements rather than simply duplicates beam implantation. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wafer",
+        "label": "Wells and isolation",
+        "detail": "Implants define selected substrate regions."
+      },
+      {
+        "glyph": "transistor",
+        "label": "Device adjustments",
+        "detail": "Selected implant steps tune electrical behavior.",
+        "variant": "finfet"
+      },
+      {
+        "glyph": "film",
+        "label": "Source/drain epitaxy",
+        "detail": "Growth can introduce dopant during crystal formation.",
+        "variant": "source-drain"
+      },
+      {
+        "glyph": "chip",
+        "label": "Integrated transistor flow",
+        "detail": "The process combines several methods of placing dopants.",
+        "variant": "gaa"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/10-doping.md",
+      "heading": "8. Implants in a Modern FinFET and GAA Flow"
+    }
+  },
+  {
+    "section": "9-implants-beyond-logic",
+    "family": "compare",
+    "title": "Doping requirements extend beyond logic gates",
+    "caption": "Image sensors, memory and power devices need different profiles because they collect, store or block charge differently. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Image-sensor photodiode",
+        "detail": "A doped junction collects charge generated by light.",
+        "variant": "optical"
+      },
+      {
+        "glyph": "memory",
+        "label": "Memory structures",
+        "detail": "Selected profiles support storage-device operation.",
+        "variant": "dram"
+      },
+      {
+        "glyph": "heat",
+        "label": "Power devices",
+        "detail": "Depth and concentration shape voltage and current behavior.",
+        "variant": "planar"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/10-doping.md",
+      "heading": "9. Implants Beyond Logic"
+    }
+  },
+  {
+    "section": "10-metrology",
+    "family": "branch",
+    "title": "Measure the chemical profile and the electrical result",
+    "caption": "Dose monitoring, depth analysis and post-anneal electrical measurements answer different questions about the implant. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "test",
+        "label": "Fast process monitor",
+        "detail": "Indirect signals reveal implant consistency.",
+        "variant": "instrument"
+      },
+      {
+        "glyph": "film",
+        "label": "Depth-profile analysis",
+        "detail": "Destructive measurements locate dopant concentration with depth.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "transistor",
+        "label": "Electrical measurement",
+        "detail": "Activated carriers determine the post-anneal response.",
+        "variant": "planar"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Qualified implant",
+        "detail": "Combined evidence checks delivery and functional outcome."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/10-doping.md",
+      "heading": "10. Metrology"
+    }
+  },
+  {
+    "section": "11-safety",
+    "family": "branch",
+    "title": "Containment and interlocks interrupt distinct hazard paths",
+    "caption": "Implant equipment combines toxic source materials, high voltage and radiation hazards; this is a conceptual protection map, not an operating procedure. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Gas containment",
+        "detail": "Engineered enclosures and exhaust isolate hazardous source materials."
+      },
+      {
+        "glyph": "wires",
+        "label": "Electrical interlocks",
+        "detail": "Controlled access limits exposure to energized equipment."
+      },
+      {
+        "glyph": "light",
+        "label": "Radiation shielding",
+        "detail": "Enclosures and monitoring address generated radiation."
+      },
+      {
+        "glyph": "clean",
+        "label": "Protected operation",
+        "detail": "Qualified procedures and equipment safeguards work together."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/10-doping.md",
+      "heading": "11. Safety"
+    }
+  },
+  {
+    "section": "12-market-cost-and-throughput",
+    "family": "compare",
+    "title": "Dose, beam current and handling jointly set throughput",
+    "caption": "A stronger beam helps only within process and equipment limits; wafer exchange and qualification also consume time. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wires",
+        "label": "Available beam current",
+        "detail": "Ion delivery rate constrains exposure time."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Required dose",
+        "detail": "More ions per area require more delivery work."
+      },
+      {
+        "glyph": "queue",
+        "label": "Handling and setup",
+        "detail": "Loading, tuning and recipe changes add non-exposure time."
+      },
+      {
+        "glyph": "test",
+        "label": "Qualified output",
+        "detail": "Useful throughput counts wafers meeting the implant requirements.",
+        "variant": "instrument"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/10-doping.md",
+      "heading": "12. Market, Cost and Throughput"
+    }
+  }
+]

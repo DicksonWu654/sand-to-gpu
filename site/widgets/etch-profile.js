@@ -335,7 +335,10 @@
         note.textContent = `Qualitative model tuned to the ranges Module 09 quotes, not a predictive simulator. ${scaleTxt} Both openings see the same plasma for the same time; only their width differs — which is exactly what makes ARDE show up.`;
       }
 
-      el.append(presetRow, controls, mechNote, D, readout, formula, legend, note);
+      mechNote.classList.add('w-insight');
+      el.append(h('div', { class: 'w-studio' }, h('div', { class: 'w-figure-title' }, 'Same plasma. Different opening widths.'), D),
+        mechNote, h('div', { class: 'w-console' }, presetRow, controls), readout, note,
+        h('details', { class: 'w-reference' }, h('summary', null, 'Model equations & material key'), formula, legend));
       Lay = layoutFor(el.clientWidth || 700);
       render();
       const ro = new ResizeObserver(() => { const l = layoutFor(el.clientWidth || 700); if (l.W !== Lay.W || l.fs !== Lay.fs) { Lay = l; render(); } });

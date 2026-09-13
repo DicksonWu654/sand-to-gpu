@@ -1,0 +1,375 @@
+[
+  {
+    "section": "what-a-litho-layer-has-to-achieve",
+    "family": "branch",
+    "title": "A printed layer must satisfy several constraints at once",
+    "caption": "Small dimensions alone are insufficient: placement, shape and defect control must also hold across the wafer. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "mask",
+        "label": "Feature dimensions",
+        "detail": "The pattern must print to the intended size and shape.",
+        "variant": "grid"
+      },
+      {
+        "glyph": "wires",
+        "label": "Overlay",
+        "detail": "New geometry must align with earlier layers.",
+        "variant": "aligned"
+      },
+      {
+        "glyph": "test",
+        "label": "Defect control",
+        "detail": "Missing, bridged or malformed features threaten yield.",
+        "variant": "random"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Usable layer",
+        "detail": "The process must meet all requirements together.",
+        "variant": "round"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/07-lithography-duv.md",
+      "heading": "What a Litho Layer Has to Achieve"
+    }
+  },
+  {
+    "section": "the-litho-cell-at-a-glance",
+    "family": "flow",
+    "title": "The track and scanner form one connected cell",
+    "caption": "A controlled interface moves the wafer from film preparation to exposure and development. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Coat and bake",
+        "detail": "The track establishes the resist film."
+      },
+      {
+        "glyph": "light",
+        "label": "Expose in scanner",
+        "detail": "The reticle image modifies the resist.",
+        "variant": "optical"
+      },
+      {
+        "glyph": "heat",
+        "label": "Post-exposure process",
+        "detail": "Controlled baking develops the chemical change.",
+        "variant": "thermal"
+      },
+      {
+        "glyph": "clean",
+        "label": "Develop",
+        "detail": "The track converts solubility differences into a pattern."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/07-lithography-duv.md",
+      "heading": "The Litho Cell at a Glance"
+    }
+  },
+  {
+    "section": "photoresist-chemistry",
+    "family": "compare",
+    "title": "Resist tone decides which regions remain",
+    "caption": "Exposure changes solubility; the developer removes the soluble material rather than cutting the pattern mechanically. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Positive tone",
+        "detail": "Exposed regions become more soluble and are removed."
+      },
+      {
+        "glyph": "mask",
+        "label": "Negative tone",
+        "detail": "Exposed regions become less soluble and remain."
+      },
+      {
+        "glyph": "clean",
+        "label": "Development",
+        "detail": "The liquid reveals the chemical contrast as geometry."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/07-lithography-duv.md",
+      "heading": "Photoresist Chemistry"
+    }
+  },
+  {
+    "section": "the-track-recipes-step-by-step",
+    "family": "flow",
+    "title": "Each track step controls a different part of the film",
+    "caption": "Surface preparation, solvent removal, reaction control and development cooperate to make a reproducible resist pattern. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "clean",
+        "label": "Prepare the surface",
+        "detail": "Prime for reliable resist adhesion."
+      },
+      {
+        "glyph": "film",
+        "label": "Coat and soft bake",
+        "detail": "Set thickness and remove excess solvent."
+      },
+      {
+        "glyph": "heat",
+        "label": "Post-exposure bake",
+        "detail": "Control reaction extent and molecular movement.",
+        "variant": "thermal"
+      },
+      {
+        "glyph": "mask",
+        "label": "Develop and inspect",
+        "detail": "Reveal and check the resulting pattern.",
+        "variant": "grid"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/07-lithography-duv.md",
+      "heading": "The Track Recipes, Step by Step"
+    }
+  },
+  {
+    "section": "the-optics-resolution-depth-of-focus-and-the-wavelength-marc",
+    "family": "compare",
+    "title": "Resolution and focus tolerance compete",
+    "caption": "Shorter wavelength and larger aperture improve imaging capability, while a larger aperture reduces depth of focus. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Wavelength",
+        "detail": "The light's wavelength sets a fundamental imaging scale.",
+        "variant": "incident"
+      },
+      {
+        "glyph": "mask",
+        "label": "Numerical aperture",
+        "detail": "A wider accepted cone carries more pattern information.",
+        "variant": "optical"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Focus tolerance",
+        "detail": "The wafer surface must stay within the usable image plane range.",
+        "variant": "thin"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/07-lithography-duv.md",
+      "heading": "The Optics: Resolution, Depth of Focus, and the Wavelength March"
+    }
+  },
+  {
+    "section": "anatomy-of-a-193-nm-immersion-scanner",
+    "family": "apparatus",
+    "title": "An immersion scanner synchronizes optics and motion",
+    "caption": "The reticle and wafer move under coordinated control while the immersion liquid changes the final optical interface. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "mask",
+        "label": "Reticle stage",
+        "detail": "The master pattern is scanned through illumination.",
+        "variant": "grid"
+      },
+      {
+        "glyph": "light",
+        "label": "Projection optics",
+        "detail": "The optical system forms a reduced image.",
+        "variant": "optical"
+      },
+      {
+        "glyph": "clean",
+        "label": "Immersion interface",
+        "detail": "Liquid lies between the final lens and wafer.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Wafer stage",
+        "detail": "Position and height control align the moving surface.",
+        "variant": "aligned"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/07-lithography-duv.md",
+      "heading": "Anatomy of a 193 nm Immersion Scanner"
+    }
+  },
+  {
+    "section": "process-windows-bossung-plots-and-the-focus-exposure-matrix",
+    "family": "compare",
+    "title": "A process window is a region, not one perfect setting",
+    "caption": "Dose and focus interact; acceptable dimensions must survive realistic variation around the nominal recipe. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Dose variation",
+        "detail": "Changing exposure energy shifts the printed response.",
+        "variant": "incident"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Focus variation",
+        "detail": "Surface height and optical focus alter the image.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "test",
+        "label": "Acceptable overlap",
+        "detail": "Only combinations meeting the feature limits are usable.",
+        "variant": "instrument"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/07-lithography-duv.md",
+      "heading": "Process Windows: Bossung Plots and the Focus-Exposure Matrix"
+    }
+  },
+  {
+    "section": "resolution-enhancement-techniques",
+    "family": "flow",
+    "title": "Pre-distort the mask to improve the printed result",
+    "caption": "Optical proximity correction compensates for imaging effects; the best mask geometry may look unlike the intended wafer geometry. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "design",
+        "label": "Target layout",
+        "detail": "The designer specifies the desired wafer features.",
+        "variant": "grid"
+      },
+      {
+        "glyph": "mask",
+        "label": "Corrected mask",
+        "detail": "OPC modifies shapes to compensate for the process.",
+        "variant": "grid"
+      },
+      {
+        "glyph": "light",
+        "label": "Optical image",
+        "detail": "Finite imaging capability transforms the mask pattern.",
+        "variant": "optical"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Printed result",
+        "detail": "The goal is fidelity on the wafer, not on the mask.",
+        "variant": "grid"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/07-lithography-duv.md",
+      "heading": "Resolution Enhancement Techniques"
+    }
+  },
+  {
+    "section": "multi-patterning",
+    "family": "compare",
+    "title": "Dense patterns can be built through different sequences",
+    "caption": "Splitting exposures and creating sidewall spacers solve density limits through different mechanisms and error sources. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "mask",
+        "label": "LELE splitting",
+        "detail": "Separate sparse masks combine into a denser result.",
+        "variant": "grid"
+      },
+      {
+        "glyph": "film",
+        "label": "SADP spacers",
+        "detail": "Sidewalls around a mandrel define new narrow features.",
+        "variant": "ald"
+      },
+      {
+        "glyph": "wires",
+        "label": "SAQP repetition",
+        "detail": "Another spacer sequence further multiplies pattern density.",
+        "variant": "ald"
+      },
+      {
+        "glyph": "etch",
+        "label": "Cut or block masks",
+        "detail": "Additional patterning removes unwanted connections.",
+        "variant": "anisotropic"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/07-lithography-duv.md",
+      "heading": "Multi-Patterning"
+    }
+  },
+  {
+    "section": "the-lithography-roadmap-by-layer-as-of-2026",
+    "family": "compare",
+    "title": "A node uses more than one lithography method",
+    "caption": "Layer geometry and cost determine the exposure route; a process node does not replace every layer with its most advanced scanner. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Critical fine layers",
+        "detail": "The tightest geometries use the strongest available patterning methods.",
+        "variant": "reflective"
+      },
+      {
+        "glyph": "mask",
+        "label": "Less demanding layers",
+        "detail": "DUV remains useful where its capability is sufficient.",
+        "variant": "optical"
+      },
+      {
+        "glyph": "wires",
+        "label": "Multiple-patterned layers",
+        "detail": "Some layouts require extra patterning steps.",
+        "variant": "grid"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/07-lithography-duv.md",
+      "heading": "The Lithography Roadmap by Layer (as of 2026)"
+    }
+  },
+  {
+    "section": "the-tool-market-and-geography",
+    "family": "branch",
+    "title": "The scanner depends on specialized supply chains",
+    "caption": "The lithography tool integrates optical, source, motion and control capabilities; market concentration reflects a system-level dependency. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Optical and source systems",
+        "detail": "Specialists supply demanding illumination and imaging components.",
+        "variant": "optical"
+      },
+      {
+        "glyph": "queue",
+        "label": "Precision motion",
+        "detail": "Stages and metrology synchronize position at speed."
+      },
+      {
+        "glyph": "design",
+        "label": "Control and integration",
+        "detail": "Software and system engineering coordinate the components."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Qualified scanner",
+        "detail": "Integrated capability must work reliably in a fab."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/07-lithography-duv.md",
+      "heading": "The Tool Market and Geography"
+    }
+  }
+]

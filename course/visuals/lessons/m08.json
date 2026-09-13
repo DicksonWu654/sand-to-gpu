@@ -1,0 +1,402 @@
+[
+  {
+    "section": "why-13-5-nm",
+    "family": "compare",
+    "title": "EUV forces a different optical architecture",
+    "caption": "Strong absorption prevents ordinary transmissive lenses and air paths from serving the same role they do in longer-wavelength optics. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Short-wavelength photons",
+        "detail": "EUV photons carry more energy than DUV photons.",
+        "variant": "incident"
+      },
+      {
+        "glyph": "material",
+        "label": "Absorbing materials",
+        "detail": "Most ordinary optical media strongly absorb EUV."
+      },
+      {
+        "glyph": "mask",
+        "label": "Reflective multilayers",
+        "detail": "Mirrors replace transmissive lens elements.",
+        "variant": "reflective"
+      },
+      {
+        "glyph": "furnace",
+        "label": "Vacuum path",
+        "detail": "The beam travels through a controlled low-pressure environment."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/08-euv-lithography.md",
+      "heading": "Why 13.5 nm"
+    }
+  },
+  {
+    "section": "the-laser-produced-plasma-source",
+    "family": "apparatus",
+    "title": "A laser turns tin into a light source",
+    "caption": "The source creates plasma, then collects a small usable part of its emission for the scanner. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "Tin droplet",
+        "detail": "A prepared droplet becomes the source target."
+      },
+      {
+        "glyph": "heat",
+        "label": "Laser interaction",
+        "detail": "Laser energy creates a hot emitting plasma."
+      },
+      {
+        "glyph": "light",
+        "label": "Collector mirror",
+        "detail": "The collector directs useful EUV toward the intermediate focus.",
+        "variant": "reflective"
+      },
+      {
+        "glyph": "gas",
+        "label": "Debris management",
+        "detail": "Source protection limits contamination of sensitive optics."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/08-euv-lithography.md",
+      "heading": "The Laser-Produced Plasma Source"
+    }
+  },
+  {
+    "section": "the-optics",
+    "family": "flow",
+    "title": "Every reflection performs a job and loses some light",
+    "caption": "Illumination shapes the beam at the reticle; projection optics form the image on the wafer. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Illuminator",
+        "detail": "Set intensity and angular distribution at the mask.",
+        "variant": "reflective"
+      },
+      {
+        "glyph": "mask",
+        "label": "Reflective reticle",
+        "detail": "The master pattern modulates the reflected beam.",
+        "variant": "reflective"
+      },
+      {
+        "glyph": "light",
+        "label": "Projection mirrors",
+        "detail": "A sequence of mirrors forms the reduced image.",
+        "variant": "reflective"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Exposure slit",
+        "detail": "The scanned image reaches the resist-coated wafer.",
+        "variant": "grid"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/08-euv-lithography.md",
+      "heading": "The Optics"
+    }
+  },
+  {
+    "section": "the-reflective-reticle",
+    "family": "layers",
+    "title": "An EUV mask is a patterned reflector",
+    "caption": "Absorber geometry sits above a reflective multilayer on a stable substrate; it does not work like a transparent DUV mask. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "mask",
+        "label": "Patterned absorber",
+        "detail": "Selected regions suppress reflected light."
+      },
+      {
+        "glyph": "film",
+        "label": "Protective cap",
+        "detail": "A thin surface layer protects the mirror stack."
+      },
+      {
+        "glyph": "film",
+        "label": "Reflective multilayer",
+        "detail": "Alternating layers reinforce the useful reflection."
+      },
+      {
+        "glyph": "material",
+        "label": "Low-expansion substrate",
+        "detail": "The reticle base maintains geometric stability."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/08-euv-lithography.md",
+      "heading": "The Reflective Reticle"
+    }
+  },
+  {
+    "section": "the-wafer-side",
+    "family": "apparatus",
+    "title": "Move and measure a wafer without breaking vacuum",
+    "caption": "Load locks, wafer stages and thermal control support imaging in the scanner's vacuum environment. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "queue",
+        "label": "Load lock",
+        "detail": "A small chamber transfers wafers across the pressure boundary."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Wafer stage",
+        "detail": "Motion and height control place the resist surface.",
+        "variant": "aligned"
+      },
+      {
+        "glyph": "test",
+        "label": "Position metrology",
+        "detail": "Feedback measures where the wafer is during scanning.",
+        "variant": "instrument"
+      },
+      {
+        "glyph": "heat",
+        "label": "Thermal control",
+        "detail": "Heat management limits shape and position changes.",
+        "variant": "thermal"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/08-euv-lithography.md",
+      "heading": "The Wafer Side"
+    }
+  },
+  {
+    "section": "photon-physics-and-stochastics",
+    "family": "flow",
+    "title": "Random photon arrivals become feature variation",
+    "caption": "Photon counting noise is only the start: electrons and resist chemistry spread and amplify the local response. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Photon arrivals",
+        "detail": "Individual absorption events occur at random locations.",
+        "variant": "incident"
+      },
+      {
+        "glyph": "material",
+        "label": "Secondary electrons",
+        "detail": "Energy spreads through nearby molecular interactions."
+      },
+      {
+        "glyph": "film",
+        "label": "Chemical response",
+        "detail": "Local reactions change development behavior."
+      },
+      {
+        "glyph": "mask",
+        "label": "Printed feature",
+        "detail": "Variability can produce roughness or missing and bridged features.",
+        "variant": "stochastic"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/08-euv-lithography.md",
+      "heading": "Photon Physics and Stochastics"
+    }
+  },
+  {
+    "section": "euv-resists",
+    "family": "compare",
+    "title": "Resist platforms balance different mechanisms",
+    "caption": "Chemically amplified and metal-containing resists translate EUV absorption differently; sensitivity, resolution and defects remain coupled. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Chemically amplified resist",
+        "detail": "Absorption ultimately triggers catalytic chemical change."
+      },
+      {
+        "glyph": "material",
+        "label": "Metal-containing resist",
+        "detail": "A different molecular structure changes absorption and reaction pathways."
+      },
+      {
+        "glyph": "test",
+        "label": "Process qualification",
+        "detail": "Dose, pattern quality and defect behavior decide usefulness."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/08-euv-lithography.md",
+      "heading": "EUV Resists"
+    }
+  },
+  {
+    "section": "resolution-limits-and-multipatterning",
+    "family": "compare",
+    "title": "Single exposure has a finite density range",
+    "caption": "Projection capability, resist behavior and required yield jointly determine whether a layer needs additional patterning. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Optical resolution",
+        "detail": "Wavelength and aperture bound the image information.",
+        "variant": "optical"
+      },
+      {
+        "glyph": "film",
+        "label": "Resist response",
+        "detail": "The material must translate the image into stable geometry.",
+        "variant": "stochastic"
+      },
+      {
+        "glyph": "mask",
+        "label": "Multiple patterning",
+        "detail": "Additional passes divide a difficult pattern into manageable pieces.",
+        "variant": "grid"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/08-euv-lithography.md",
+      "heading": "Resolution Limits and Multipatterning"
+    }
+  },
+  {
+    "section": "high-na-and-hyper-na",
+    "family": "compare",
+    "title": "Higher aperture changes more than resolution",
+    "caption": "Increasing NA improves the optical resolution scale while tightening focus control and changing the mask-to-wafer imaging geometry. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Wider optical cone",
+        "detail": "Larger aperture captures finer pattern information.",
+        "variant": "optical"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Shallower focus range",
+        "detail": "Wafer flatness and focus control become more demanding.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "mask",
+        "label": "Anamorphic field",
+        "detail": "Unequal reduction in two directions changes exposure-field geometry.",
+        "variant": "grid"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/08-euv-lithography.md",
+      "heading": "High-NA and Hyper-NA"
+    }
+  },
+  {
+    "section": "the-machine-its-supply-chain-and-its-economics",
+    "family": "flow",
+    "title": "A scanner is qualified twice before production use",
+    "caption": "Supplier integration, shipment and installation all precede customer process qualification; delivery alone is not usable capacity. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "furnace",
+        "label": "System integration",
+        "detail": "Specialist modules are assembled and tested."
+      },
+      {
+        "glyph": "package",
+        "label": "Modular shipment",
+        "detail": "The machine is transported in major subassemblies."
+      },
+      {
+        "glyph": "clean",
+        "label": "Customer installation",
+        "detail": "Reassembly aligns and conditions the equipment."
+      },
+      {
+        "glyph": "test",
+        "label": "Process qualification",
+        "detail": "The fab verifies performance before production use.",
+        "variant": "instrument"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/08-euv-lithography.md",
+      "heading": "The Machine, Its Supply Chain, and Its Economics"
+    }
+  },
+  {
+    "section": "who-has-euv-and-who-is-not-allowed-to",
+    "family": "branch",
+    "title": "Technical capability and permission are separate gates",
+    "caption": "The section's dated discussion concerns access restrictions; this conceptual diagram is not a statement of current legal eligibility. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "furnace",
+        "label": "Manufacturing capability",
+        "detail": "A supplier must build the required system."
+      },
+      {
+        "glyph": "design",
+        "label": "Export authorization",
+        "detail": "Applicable rules govern whether delivery may occur."
+      },
+      {
+        "glyph": "clean",
+        "label": "Installation and support",
+        "detail": "Sustained operation depends on service capability."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Operational access",
+        "detail": "Usable capacity requires the relevant gates to be satisfied."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/08-euv-lithography.md",
+      "heading": "Who Has EUV, and Who Is Not Allowed To"
+    }
+  },
+  {
+    "section": "history",
+    "family": "flow",
+    "title": "EUV matured through several coupled bottlenecks",
+    "caption": "Reflective imaging, adequate source power and reliable production operation had to mature together over time. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Reflective imaging proof",
+        "detail": "Early demonstrations establish the optical principle."
+      },
+      {
+        "glyph": "heat",
+        "label": "Source development",
+        "detail": "Useful light output must become stable and sufficient."
+      },
+      {
+        "glyph": "mask",
+        "label": "Mask and process ecosystem",
+        "detail": "Resists, reticles and metrology develop together."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Production reliability",
+        "detail": "The complete system must sustain manufacturing workloads."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/08-euv-lithography.md",
+      "heading": "History"
+    }
+  }
+]

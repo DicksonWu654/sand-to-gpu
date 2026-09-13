@@ -116,7 +116,7 @@
 
   window.registerWidget('scale-ladder', {
     title: 'A Sense of Scale',
-    caption: 'A log₁₀ ladder from a two-metre rack down to a silicon atom. Click two items (or use the menus) to see how many of the smaller one fit in the larger.',
+    caption: 'Compare two physical dimensions, then see the powers of ten between them. Change either object or open the full scale atlas to explore the complete journey.',
     mount(el, ctx) {
       const { h, svg, fmt } = ctx;
       const size = it => it.disp || fmtLen(it.m, fmt);
@@ -141,11 +141,18 @@
         h('div', { class: 'w-stat' }, stSmall, lbSmall),
         h('div', { class: 'w-stat' }, stRatio, h('span', null, 'larger ÷ smaller')),
         h('div', { class: 'w-stat' }, stDec, h('span', null, 'decades apart = log₁₀(ratio)')));
-      const sentence = h('div', { class: 'w-note', style: { color: 'var(--ink)' } });
+      const sentence = h('div', { class: 'w-insight', 'aria-live': 'polite' });
+      const pair = h('div', { style: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' } });
+      const context = svg('svg', { class: 'w-svg', role: 'img', 'aria-label': 'Selected dimensions on a logarithmic scale' });
       const noteA = h('div'), noteB = h('div');
       const formula = h('div', { class: 'w-formula' }, 'ratio = larger ÷ smaller = 10^(log₁₀ larger − log₁₀ smaller)', h('br'), 'decades apart = log₁₀(ratio)');
-      el.append(ctl, ladder, readout, ratioSvg, sentence, h('div', { class: 'w-note' }, noteA, noteB), formula,
-        h('div', { class: 'w-note' }, 'Each rung of the ladder is ×10 and every item sits at its true log₁₀ position. Click an item to set A, click another to set B (shift-click sets B directly); hover an item for its note. Sizes from the Module 21 scale table.'));
+      const studio = h('div', { class: 'w-studio' }, h('div', { class: 'w-figure-title' }, 'From the familiar to the almost invisible'), pair, sentence, context);
+      const reference = h('details', { class: 'w-reference', 'data-reference': 'atlas' }, h('summary', null, 'Open the complete scale atlas · all 31 dimensions'),
+        h('div', { class: 'w-note' }, 'Each rung is ×10. Click a dimension to set A, then another to set B; shift-click sets B directly. Every marker uses its true logarithmic position.'), ladder);
+      el.append(studio, h('div', { class: 'w-console' }, ctl), h('div', { class: 'w-note' }, noteA, noteB),
+        h('details', { class: 'w-reference' }, h('summary', null, 'How the comparison is calculated'), readout, ratioSvg, formula),
+        reference, h('div', { class: 'w-note' }, 'Dimensions are representative values from Module 21. Object illustrations identify the structure; they are not drawn to a shared physical scale.'));
+      reference.addEventListener('toggle', () => { if (reference.open) { build(); update(); } });
 
       // ---------- ladder (rebuilt whenever the container width changes) ----------
       let W = 0, wide = false, AX = 64, rows = [], selLayer = null, bandEl = null, nextSlot = 'A';
@@ -290,6 +297,27 @@
         }
         noteA.replaceChildren(h('b', null, 'A — '), `${a.label} (${size(a)}): ${a.note}${modStr(a)}`);
         noteB.replaceChildren(h('b', null, 'B — '), `${b.label} (${size(b)}): ${b.note}${modStr(b)}`);
+        pair.replaceChildren(...[a, b].map((it, index) => {
+          const drawing = svg('svg', { viewBox: '0 0 28 28', width: '100%', height: '112', 'aria-hidden': 'true', style: { display: 'block', maxWidth: '160px', margin: '10px auto' } });
+          const ig = svg('g', { transform: 'translate(2 2)', stroke: 'var(--ink)', 'stroke-width': .9, fill: 'none', 'stroke-linejoin': 'round', 'stroke-linecap': 'round' });
+          ICONS[it.icon]((tag, attrs) => ig.append(svg(tag, attrs))); drawing.append(ig);
+          return h('div', { style: { minWidth: '0', padding: '12px', border: '1px solid var(--line)', background: 'var(--panel)', borderRadius: '8px' } },
+            h('div', { class: 'w-figure-title' }, index ? 'B · Compare with' : 'A · Start here'), drawing,
+            h('b', { style: { display: 'block', fontFamily: 'var(--mono)', fontSize: '23px', color: index ? 'var(--si)' : 'var(--accent)' } }, size(it)),
+            h('span', { style: { display: 'block', marginTop: '5px' } }, it.label));
+        }));
+        // Uniform log axis preserves the actual distance between selected dimensions.
+        const cw = Math.max(240, W - 36), x0 = 18, x1 = cw - 18, mapX = m => x0 + (Math.log10(m) + 10) / 11 * (x1 - x0);
+        context.setAttribute('viewBox', `0 0 ${cw} 104`); context.replaceChildren();
+        context.append(svg('line', { x1: x0, x2: x1, y1: 44, y2: 44, stroke: 'var(--line)', 'stroke-width': 2 }));
+        for (let e = -10; e <= 1; e++) context.append(svg('line', { x1: mapX(10 ** e), x2: mapX(10 ** e), y1: 40, y2: 50, stroke: 'var(--muted)' }));
+        for (const [value, text, anchor] of [[1e-10, '0.1 nm', 'start'], [1e-4, '100 µm', 'middle'], [10, '10 m', 'end']]) context.append(svg('text', { x: mapX(value), y: 72, 'font-size': 12, 'font-family': 'var(--mono)', fill: 'var(--muted)', 'text-anchor': anchor }, text));
+        context.append(svg('line', { x1: mapX(a.m), x2: mapX(b.m), y1: 44, y2: 44, stroke: 'var(--accent)', 'stroke-width': 5 }));
+        [a, b].forEach((it, index) => {
+          const x = mapX(it.m), y = index ? 90 : 20;
+          context.append(svg('circle', { cx: x, cy: 44, r: 5, fill: index ? 'var(--si)' : 'var(--accent)', stroke: 'var(--panel)', 'stroke-width': 2 }),
+            svg('text', { x, y, 'font-family': 'var(--mono)', 'font-size': 13, 'font-weight': 700, 'text-anchor': 'middle', fill: index ? 'var(--si)' : 'var(--accent)' }, index ? 'B' : 'A'));
+        });
         drawRatio(big, small, ratio, same);
       }
       function update() { paintSel(); paintReadout(); }

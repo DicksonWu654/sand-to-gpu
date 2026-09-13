@@ -1,0 +1,339 @@
+[
+  {
+    "section": "what-an-etch-has-to-deliver",
+    "family": "layers",
+    "title": "The mask, target film and stop layer have different jobs",
+    "caption": "A successful etch transfers geometry through the target while preserving enough mask and underlying material. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "mask",
+        "label": "Patterned mask",
+        "detail": "Protects the regions intended to remain.",
+        "variant": "grid"
+      },
+      {
+        "glyph": "film",
+        "label": "Target film",
+        "detail": "Exposed regions must be removed to the intended depth."
+      },
+      {
+        "glyph": "film",
+        "label": "Etch-stop layer",
+        "detail": "The underlying layer should survive the removal step."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Substrate",
+        "detail": "The retained structure supports subsequent fabrication."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/09-etch.md",
+      "heading": "What an Etch Has to Deliver"
+    }
+  },
+  {
+    "section": "wet-etch-still-the-workhorse-for-selectivity",
+    "family": "compare",
+    "title": "Chemical selectivity and directionality are different properties",
+    "caption": "Wet chemistry can strongly distinguish materials while also attacking laterally beneath a mask. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "mask",
+        "label": "Protected top surface",
+        "detail": "The mask limits access from above.",
+        "variant": "grid"
+      },
+      {
+        "glyph": "etch",
+        "label": "Lateral chemical attack",
+        "detail": "An isotropic etchant also reaches exposed sidewalls.",
+        "variant": "isotropic"
+      },
+      {
+        "glyph": "film",
+        "label": "Material selectivity",
+        "detail": "Different reaction rates can preserve an underlying material.",
+        "variant": "thin"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/09-etch.md",
+      "heading": "Wet Etch: Still the Workhorse for Selectivity"
+    }
+  },
+  {
+    "section": "plasma-physics-for-engineers",
+    "family": "apparatus",
+    "title": "The plasma creates reactive species and directed ions",
+    "caption": "Electrons sustain the discharge; the sheath near the wafer accelerates ions toward the surface. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Feed gas and electrons",
+        "detail": "Electron collisions create ions and reactive fragments.",
+        "variant": "plasma-chamber"
+      },
+      {
+        "glyph": "light",
+        "label": "Plasma bulk",
+        "detail": "Charged and neutral reactive species coexist."
+      },
+      {
+        "glyph": "wires",
+        "label": "Sheath electric field",
+        "detail": "The near-surface field accelerates positive ions."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Biased wafer",
+        "detail": "Ion arrival helps make removal directional.",
+        "variant": "anisotropic"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/09-etch.md",
+      "heading": "Plasma Physics for Engineers"
+    }
+  },
+  {
+    "section": "etch-mechanisms-chemical-physical-and-the-synergy-between-th",
+    "family": "compare",
+    "title": "Ion assistance changes what radicals can remove",
+    "caption": "Chemical reaction and physical bombardment can reinforce each other; the combined process is not merely their independent sum. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Chemical radicals",
+        "detail": "Reactive neutrals form volatile products at exposed material.",
+        "variant": "isotropic"
+      },
+      {
+        "glyph": "material",
+        "label": "Physical ions",
+        "detail": "Energetic impact transfers momentum and breaks bonds.",
+        "variant": "anisotropic"
+      },
+      {
+        "glyph": "etch",
+        "label": "Ion-assisted reaction",
+        "detail": "Bombardment enables or accelerates directed surface chemistry.",
+        "variant": "anisotropic"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/09-etch.md",
+      "heading": "Etch Mechanisms: Chemical, Physical, and the Synergy Between Them"
+    }
+  },
+  {
+    "section": "hardmasks-mask-erosion-and-strip",
+    "family": "flow",
+    "title": "Transfer a thin resist image into a tougher mask",
+    "caption": "A hardmask preserves the pattern during a deeper etch, then is stripped when its job is finished. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Thin resist pattern",
+        "detail": "Lithography defines the initial image.",
+        "variant": "grid"
+      },
+      {
+        "glyph": "mask",
+        "label": "Hardmask transfer",
+        "detail": "The image is etched into a more durable film.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "etch",
+        "label": "Target etch",
+        "detail": "The hardmask protects selected regions during removal.",
+        "variant": "anisotropic"
+      },
+      {
+        "glyph": "clean",
+        "label": "Strip remaining mask",
+        "detail": "Remove temporary masking material without harming the device."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/09-etch.md",
+      "heading": "Hardmasks, Mask Erosion, and Strip"
+    }
+  },
+  {
+    "section": "the-critical-etches-in-a-modern-flow",
+    "family": "compare",
+    "title": "Different features expose different etch constraints",
+    "caption": "Isolation trenches, gate structures and deep memory holes ask for different depth, profile and selectivity combinations. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wafer",
+        "label": "Isolation trench",
+        "detail": "Profile and silicon surface quality affect device isolation.",
+        "variant": "anisotropic"
+      },
+      {
+        "glyph": "transistor",
+        "label": "Gate or channel feature",
+        "detail": "Tiny dimensions require tight selectivity and damage control.",
+        "variant": "gaa"
+      },
+      {
+        "glyph": "memory",
+        "label": "Deep memory opening",
+        "detail": "High aspect ratio makes transport and profile control difficult.",
+        "variant": "deep-hole"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/09-etch.md",
+      "heading": "The Critical Etches in a Modern Flow"
+    }
+  },
+  {
+    "section": "atomic-layer-etching-and-selective-removal",
+    "family": "cycle",
+    "title": "Modify one surface layer, then remove it",
+    "caption": "ALE separates a saturating surface reaction from removal, limiting how much material a cycle can consume. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Surface modification",
+        "detail": "Reactant changes the accessible top layer."
+      },
+      {
+        "glyph": "clean",
+        "label": "Purge",
+        "detail": "Remove excess reactant before the next step."
+      },
+      {
+        "glyph": "etch",
+        "label": "Activated removal",
+        "detail": "A controlled step removes the modified material.",
+        "variant": "anisotropic"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Renewed surface",
+        "detail": "The exposed surface is ready for another cycle."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/09-etch.md",
+      "heading": "Atomic Layer Etching and Selective Removal"
+    }
+  },
+  {
+    "section": "running-an-etch-in-production-endpoint-chamber-matching-cons",
+    "family": "cycle",
+    "title": "The chamber is part of the process state",
+    "caption": "Endpoint signals and chamber condition must be interpreted together to keep removal repeatable. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "furnace",
+        "label": "Conditioned chamber",
+        "detail": "Walls and consumables establish a starting state.",
+        "variant": "plasma-chamber"
+      },
+      {
+        "glyph": "etch",
+        "label": "Run the etch",
+        "detail": "The wafer and chamber surfaces change during processing.",
+        "variant": "anisotropic"
+      },
+      {
+        "glyph": "test",
+        "label": "Monitor endpoint",
+        "detail": "Signals indicate progress toward clearing the film.",
+        "variant": "instrument"
+      },
+      {
+        "glyph": "clean",
+        "label": "Clean and match",
+        "detail": "Maintenance restores conditions and aligns chamber behavior."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/09-etch.md",
+      "heading": "Running an Etch in Production: Endpoint, Chamber Matching, Consumables"
+    }
+  },
+  {
+    "section": "plasma-damage-and-its-mitigation",
+    "family": "branch",
+    "title": "Several plasma effects can damage a device",
+    "caption": "Electrical charging, energetic collisions and radiation act through different paths; mitigation must address the relevant mechanism. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wires",
+        "label": "Charging imbalance",
+        "detail": "Unequal currents can stress connected gate dielectrics."
+      },
+      {
+        "glyph": "material",
+        "label": "Ion impact",
+        "detail": "Collisions disturb lattice or surface structure."
+      },
+      {
+        "glyph": "light",
+        "label": "Plasma radiation",
+        "detail": "Photons can alter sensitive materials.",
+        "variant": "incident"
+      },
+      {
+        "glyph": "transistor",
+        "label": "Device reliability",
+        "detail": "Unintended changes can reduce yield or lifetime.",
+        "variant": "planar"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/09-etch.md",
+      "heading": "Plasma Damage and Its Mitigation"
+    }
+  },
+  {
+    "section": "tools-vendors-and-the-market",
+    "family": "apparatus",
+    "title": "A cluster tool shares vacuum transport among chambers",
+    "caption": "Load locks isolate the vacuum hub while a robot routes wafers to qualified process chambers. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "package",
+        "label": "Atmospheric load port",
+        "detail": "A carrier supplies wafers to the tool."
+      },
+      {
+        "glyph": "queue",
+        "label": "Load lock",
+        "detail": "The transfer chamber changes pressure without venting the hub."
+      },
+      {
+        "glyph": "queue",
+        "label": "Vacuum robot",
+        "detail": "Central handling selects the next chamber."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Process chamber",
+        "detail": "A dedicated module performs the qualified etch recipe.",
+        "variant": "plasma-chamber"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/09-etch.md",
+      "heading": "Tools, Vendors, and the Market"
+    }
+  }
+]

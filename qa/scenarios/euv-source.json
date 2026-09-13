@@ -1,42 +1,233 @@
 [
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 2730},
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"shot": "anim-droplet-falling"},
-
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 966},
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"shot": "anim-prepulse-pancake"},
-
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 966},
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"shot": "anim-collector-to-if"},
-
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 504},
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"shot": "anim-euv-packet-illuminator"},
-
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 714},
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"shot": "anim-euv-packet-projection"},
-
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 420},
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"shot": "anim-wafer-flash"},
-
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"wait": 3000}, {"shot": "play-3s"},
-
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(2)"}, {"wait": 1200}, {"shot": "slow-motion-on"},
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(2)"},
-  {"click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"}, {"shot": "paused"},
-
-  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 250}, {"shot": "power-min-250"},
-  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 600}, {"shot": "power-max-600"},
-  {"set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]", "value": 500},
-  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 150}, {"shot": "wph-min-150"},
-  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 350}, {"shot": "wph-max-350"},
-  {"set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]", "value": 220},
-
-  {"hover": "#box svg [aria-label=\"Collector\"]"}, {"wait": 200}, {"shot": "hover-collector"},
-  {"hover": "#box svg [aria-label=\"Tin droplet → plasma\"]"}, {"wait": 200}, {"shot": "hover-plasma"},
-  {"hover": "#box svg [aria-label=\"CO₂ drive laser (Trumpf)\"]"}, {"wait": 200}, {"shot": "hover-laser"},
-  {"hover": "#box svg [aria-label=\"Hydrogen buffer gas\"]"}, {"wait": 200}, {"shot": "hover-h2"},
-  {"hover": "#box svg rect[aria-label=\"Intermediate focus (IF)\"]"}, {"wait": 200}, {"shot": "hover-if"},
-  {"hover": "#box svg [aria-label=\"Grazing-incidence fold mirrors\"]"}, {"wait": 200}, {"shot": "hover-fold"},
-  {"hover": "#box svg [aria-label=\"Reflective reticle\"]"}, {"wait": 200}, {"shot": "hover-reticle"},
-  {"hover": "#box svg [aria-label=\"Projection mirror M3\"]"}, {"wait": 200}, {"shot": "hover-m3"},
-  {"hover": "#box svg [aria-label=\"Wafer on scanning stage\"]"}, {"wait": 200}, {"shot": "hover-wafer"}
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "wait": 2730
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "shot": "anim-droplet-falling"
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "wait": 966
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "shot": "anim-prepulse-pancake"
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "wait": 966
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "shot": "anim-collector-to-if"
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "wait": 504
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "shot": "anim-euv-packet-illuminator"
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "wait": 714
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "shot": "anim-euv-packet-projection"
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "wait": 420
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "shot": "anim-wafer-flash"
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "wait": 3000
+  },
+  {
+    "shot": "play-3s"
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(2)"
+  },
+  {
+    "wait": 1200
+  },
+  {
+    "shot": "slow-motion-on"
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(2)"
+  },
+  {
+    "click": "#box .w-controls > div > button.w-btn:nth-of-type(1)"
+  },
+  {
+    "shot": "paused"
+  },
+  {
+    "set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]",
+    "value": 250
+  },
+  {
+    "shot": "power-min-250"
+  },
+  {
+    "set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]",
+    "value": 600
+  },
+  {
+    "shot": "power-max-600"
+  },
+  {
+    "set": "#box .w-controls label.w-ctl:nth-of-type(1) input[type=range]",
+    "value": 500
+  },
+  {
+    "set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]",
+    "value": 150
+  },
+  {
+    "shot": "wph-min-150"
+  },
+  {
+    "set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]",
+    "value": 350
+  },
+  {
+    "shot": "wph-max-350"
+  },
+  {
+    "set": "#box .w-controls label.w-ctl:nth-of-type(2) input[type=range]",
+    "value": 220
+  },
+  {
+    "hover": "#box svg [aria-label=\"Collector\"]"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "shot": "hover-collector"
+  },
+  {
+    "hover": "#box svg [aria-label=\"Tin droplet \u2192 plasma\"]"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "shot": "hover-plasma"
+  },
+  {
+    "hover": "#box svg [aria-label=\"CO\u2082 drive laser (Trumpf)\"]"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "shot": "hover-laser"
+  },
+  {
+    "hover": "#box svg [aria-label=\"Hydrogen buffer gas\"]"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "shot": "hover-h2"
+  },
+  {
+    "hover": "#box svg rect[aria-label=\"Intermediate focus (IF)\"]"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "shot": "hover-if"
+  },
+  {
+    "click": "#box button[data-view=\"1\"]"
+  },
+  {
+    "wait": 150
+  },
+  {
+    "hover": "#box svg [aria-label=\"Grazing-incidence fold mirrors\"]"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "shot": "hover-fold"
+  },
+  {
+    "hover": "#box svg [aria-label=\"Reflective reticle\"]"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "shot": "hover-reticle"
+  },
+  {
+    "hover": "#box svg [aria-label=\"Projection mirror M3\"]"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "shot": "hover-m3"
+  },
+  {
+    "hover": "#box svg [aria-label=\"Wafer on scanning stage\"]"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "shot": "hover-wafer"
+  },
+  {
+    "click": "#box button[data-view=\"2\"]"
+  },
+  {
+    "shot": "photon-budget-panel"
+  },
+  {
+    "click": "#box button[data-view=\"0\"]"
+  }
 ]

@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node serve.js",
     "build": "node build.js",
-    "check": "node qa/check.js",
+    "check": "node qa/check.js && node course/visuals/render.js --strict && node qa/section-figures.js",
     "qa:widget": "node qa/render.js widget",
     "qa:page": "node qa/render.js page",
     "qa:sweep": "node qa/sweep.js"

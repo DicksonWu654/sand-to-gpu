@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-13T23:10:07.459Z",
+  "checks": [
+    "Same-page anchors preserve mounted widget identity and state",
+    "Invalid module routes fall back to home",
+    "Browser back to invalid route remains stable",
+    "Track controls update route and active sidebar",
+    "Section navigation updates active heading",
+    "Changing scale comparison survives same-page anchor navigation"
+  ],
+  "errors": [],
+  "widgetState": {
+    "before": "hgx",
+    "after": "hgx",
+    "sameMountedControl": true
+  }
+}

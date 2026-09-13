@@ -21,15 +21,15 @@
     caption: 'Step through the twelve unit processes that turn a bare interposer wafer and known-good dies into a tested CoWoS package.',
     mount(el, ctx) {
       const { h, svg, fmt } = ctx;
-      const st = { i: 0, ipY: 0.98, gpuY: 0.999, hbmY: 0.999, asmY: 0.97, n: 8 };
+      const st = { i: 2, ipY: 0.98, gpuY: 0.999, hbmY: 0.999, asmY: 0.97, n: 8 };
 
       // ---------- step nav ----------
       const dotsWrap = h('div', { class: 'w-step-nav', role: 'tablist' });
       const count = h('span', { class: 'count' });
-      const prevBtn = h('button', { class: 'w-btn', on: { click: () => go(st.i - 1) } }, '← Prev');
-      const nextBtn = h('button', { class: 'w-btn primary', on: { click: () => go(st.i + 1) } }, 'Next →');
+      const prevBtn = h('button', { class: 'w-btn', 'aria-label': 'Previous assembly step', on: { click: () => go(st.i - 1) } }, '← Prev');
+      const nextBtn = h('button', { class: 'w-btn primary', 'aria-label': 'Next assembly step', on: { click: () => go(st.i + 1) } }, 'Next →');
       const nav = h('div', { class: 'w-step-nav' }, prevBtn, nextBtn, count);
-      STEPS.forEach((s, i) => dotsWrap.append(h('button', { class: 'w-step-dot', 'aria-label': s.title, on: { click: () => go(i) } })));
+      STEPS.forEach((s, i) => dotsWrap.append(h('button', { class: 'w-step-dot', 'data-step': i, 'aria-label': s.title, on: { click: () => go(i) } })));
 
       const stepTitle = h('div', { class: 'w-step-title' });
       const stepDesc = h('div', { class: 'w-step-desc' });
@@ -68,7 +68,7 @@
 
       // ---------- drawing ----------
       function waferView(flags) {
-        const g = svg('svg', { class: 'w-svg', viewBox: '0 0 320 205', role: 'img', 'aria-label': 'Interposer wafer' });
+        const g = svg('svg', { class: 'w-svg', viewBox: '0 0 320 188', role: 'img', 'aria-label': 'Interposer wafer' });
         const cx = 90, cy = 88, r = 72;
         g.append(svg('circle', { cx, cy, r, fill: 'var(--panel2)', stroke: 'var(--line2)' }));
         const n = 7, cell = (2 * r) / n;
@@ -99,6 +99,8 @@
         }
         g.append(svg('text', { x: ix + iw / 2, y: iy + ih + 14, 'text-anchor': 'middle', 'font-size': 11, 'font-family': 'var(--sans)', fill: 'var(--muted)' }, 'one site, enlarged'));
         g.append(svg('text', { x: cx, y: cy + r + 16, 'text-anchor': 'middle', 'font-size': 11, 'font-family': 'var(--sans)', fill: 'var(--muted)' }, '300 mm interposer wafer'));
+        g.append(svg('text', { x: 255, y: 51, 'text-anchor': 'middle', 'font-size': 11.5, 'font-family': 'var(--sans)', fill: 'var(--ink)' }, 'Wiring layers'),
+          svg('text', { x: 255, y: 104, 'text-anchor': 'middle', 'font-size': 11.5, 'font-family': 'var(--sans)', fill: 'var(--panel)' }, 'Si + copper vias'));
         return g;
       }
 
@@ -113,7 +115,7 @@
         rows.push({ key: 'sub', h: flags.substrate ? 22 : 0 });
         rows.push({ key: 'balls', h: flags.balls ? 12 : 0 });
         const order = ['balls', 'sub', 'ip', 'ubump', 'die', 'mold', 'top'];
-        const TOPM = 10, BOTM = 16;
+        const TOPM = 24, BOTM = 16;
         const H = order.reduce((a, k) => a + rows.find(r => r.key === k).h, 0) + TOPM + BOTM;
         const g = svg('svg', { class: 'w-svg', viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'CoW module cross-section' });
         const cx = W / 2;
@@ -121,18 +123,18 @@
         // Every label is drawn INSIDE its own block (never in the gap above/below, which a
         // later-drawn neighbouring block would paint over) so nothing ever gets covered.
         const R = (x, y, w, hh, fill, op) => { const r = svg('rect', { x, y, width: w, height: Math.max(1, hh - 1), fill, 'fill-opacity': op == null ? 0.9 : op, stroke: 'var(--panel)', 'stroke-width': 0.6 }); g.append(r); return r; };
-        const T = (x, y, s, opt) => g.append(svg('text', Object.assign({ x, y, 'font-family': 'var(--sans)', 'font-size': 10, fill: 'var(--muted)' }, opt || {}), s));
+        const T = (x, y, s, opt) => g.append(svg('text', Object.assign({ x, y, 'font-family': 'var(--sans)', 'font-size': 13, fill: 'var(--muted)' }, opt || {}), s));
         const mid = (y, hh) => y + hh / 2 + 3.5;
         order.forEach(key => {
           const row = rows.find(r => r.key === key); if (!row.h) return;
           cy -= row.h;
-          if (key === 'balls') { R(cx - 100, cy, 200, row.h, 'var(--cu)'); T(cx, mid(cy, row.h), 'BGA balls, ~1 mm pitch', { 'text-anchor': 'middle', fill: 'var(--panel)', 'font-weight': 600 }); }
-          else if (key === 'sub') { R(cx - 110, cy, 220, row.h, 'var(--accent)', 0.3); T(cx, mid(cy, row.h), 'ABF build-up substrate', { 'text-anchor': 'middle' }); }
+          if (key === 'balls') { R(cx - 100, cy, 200, row.h, 'var(--cu)'); T(cx, mid(cy, row.h), 'BGA balls', { 'text-anchor': 'middle', fill: 'var(--panel)', 'font-weight': 600 }); }
+          else if (key === 'sub') { R(cx - 110, cy, 220, row.h, 'var(--accent)', 0.3); T(cx, mid(cy, row.h), 'ABF substrate', { 'text-anchor': 'middle' }); }
           else if (key === 'ip') {
             const w = 170;
             R(cx - w / 2, cy, w, row.h, 'var(--si)');
             if (flags.tsv) for (let k = 1; k <= 5; k++) { const tx = cx - w / 2 + (k * w) / 6; g.append(svg('line', { x1: tx, y1: cy + row.h * 0.15, x2: tx, y2: cy + row.h * 0.85, stroke: 'var(--cu)', 'stroke-width': 1.6 })); }
-            T(cx, mid(cy, row.h), flags.grind ? 'interposer, ground to ~100 µm' : 'Si interposer', { 'text-anchor': 'middle', fill: 'var(--panel)', 'font-weight': 600 });
+            T(cx, mid(cy, row.h), flags.grind ? 'Thin Si interposer' : 'Si interposer', { 'text-anchor': 'middle', fill: 'var(--panel)', 'font-weight': 600 });
             if (flags.c4) { const c4h = 6; R(cx - w / 2 + 10, cy + row.h, w - 20, c4h, 'var(--warn)'); T(cx + w / 2 + 10, cy + row.h + c4h / 2 + 3, 'C4 bumps', { 'text-anchor': 'start' }); }
           }
           else if (key === 'ubump') { R(cx - 95, cy, 190, row.h, 'var(--warn)', 0.85); }
@@ -144,12 +146,13 @@
             T(x + gpuW / 2, mid(cy, row.h), 'GPU', { 'text-anchor': 'middle', fill: 'var(--panel)', 'font-weight': 600 });
             x += gpuW + gap;
             for (let k = 0; k < n; k++) { R(x, cy - 4, hbmW, row.h + 4, 'var(--si)'); x += hbmW + gap; }
+            if (!flags.mold && !flags.carrier && !flags.lid) T(cx + 35, cy - 9, 'HBM stacks', { 'text-anchor': 'middle', fill: 'var(--ink)' });
             if (flags.underfill) R(cx - totalW / 2 - 4, cy + row.h - 5, totalW + 8, 5, 'var(--ok)', 0.6);
           }
-          else if (key === 'mold') { R(cx - 105, cy - 8, 210, row.h + 8, 'var(--panel2)', 0.92); T(cx, mid(cy, row.h) + 2, 'epoxy mold compound', { 'text-anchor': 'middle' }); }
+          else if (key === 'mold') { R(cx - 105, cy - 8, 210, row.h + 8, 'var(--panel2)', 0.92); T(cx, mid(cy, row.h) + 2, 'Mold compound', { 'text-anchor': 'middle' }); }
           else if (key === 'top') {
-            if (flags.carrier) { R(cx - 105, cy, 210, row.h, 'var(--line2)'); T(cx, mid(cy, row.h), 'temporary glass carrier', { 'text-anchor': 'middle' }); }
-            else if (flags.lid) { R(cx - 115, cy, 230, row.h, 'var(--muted)', 0.55); T(cx, mid(cy, row.h), 'stiffener + lid (TIM1)', { 'text-anchor': 'middle', fill: 'var(--panel)' }); }
+            if (flags.carrier) { R(cx - 105, cy, 210, row.h, 'var(--line2)'); T(cx, mid(cy, row.h), 'Glass carrier', { 'text-anchor': 'middle' }); }
+            else if (flags.lid) { R(cx - 115, cy, 230, row.h, 'var(--muted)', 0.55); T(cx, mid(cy, row.h), 'Stiffener + lid', { 'text-anchor': 'middle', fill: 'var(--panel)' }); }
           }
         });
         if (flags.singulated) g.append(svg('rect', { x: 4, y: 4, width: W - 8, height: H - 8, fill: 'none', stroke: 'var(--bad)', 'stroke-dasharray': '5 4', 'stroke-width': 1.4 }));
@@ -173,10 +176,14 @@
 
       const legend = h('div', { class: 'w-legend' },
         ...[['var(--accent2)', 'GPU die'], ['var(--si)', 'HBM stack / Si interposer'], ['var(--cu)', 'TSV / BGA balls'], ['var(--warn)', 'µbumps / C4'], ['var(--ok)', 'underfill'], ['var(--panel2)', 'mold compound'], ['var(--line2)', 'temp. carrier'], ['var(--muted)', 'lid'], ['var(--accent)', 'ABF substrate']].map(([c, t]) => h('span', { class: 'w-legend-item' }, h('i', { style: { background: c } }), t)));
-      el.append(h('div', { class: 'w-steps' }, nav, dotsWrap, h('div', null, stepTitle, stepDesc), stepEquip, xsecHolder, legend),
-        h('h5', { style: { margin: '18px 0 4px', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--muted)' } }, 'Yield stack: probability this package is good'),
-        yieldCtl, yieldReadout, yieldFormula,
-        h('div', { class: 'w-note' }, 'Illustrative 2025 Blackwell-class cost model, not a disclosed BOM: two GPU dies at ~$450 each, 24 GB HBM3E stacks at ~$400 each, interposer/assembly ~$1,000. Default eight-stack package: ~$5,100 at risk. Post-screen soundness is residual known-good-die quality, not raw wafer yield; independent failures are assumed. Once dies are placed and molded there is no rework, so every failure downstream of step 3 scraps everything built into the module so far.'));
+      const drawing = h('div', { class: 'w-studio', style: { maxWidth: '640px', margin: '0 auto' } }, xsecHolder);
+      el.append(h('div', { class: 'w-steps' }, h('div', { class: 'w-figure-title' }, stepTitle), drawing,
+        h('div', { class: 'w-insight', 'aria-live': 'polite' }, stepDesc), h('div', { class: 'w-console' }, nav, dotsWrap)),
+        yieldReadout,
+        h('div', { class: 'w-note' }, 'Illustrative assembly and independent-yield model. The 2025 Blackwell-class example uses estimated costs, not a disclosed bill of materials. Once dies are placed and molded, a late failure can scrap the whole assembly.'),
+        h('details', { class: 'w-reference' }, h('summary', null, 'Experiment with package yield'), yieldCtl, yieldFormula,
+          h('div', { class: 'w-note' }, 'Two GPU dies at ~$450 each, 24 GB HBM3E stacks at ~$400 each, interposer and assembly ~$1,000. The default eight-stack example has ~$5,100 at risk. Soundness after screening means residual known-good-die quality, not raw wafer yield.')),
+        h('details', { class: 'w-reference' }, h('summary', null, 'Process tools & material key'), stepEquip, legend));
       renderWrap();
       updateYield();
     }

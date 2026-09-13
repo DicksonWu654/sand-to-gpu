@@ -1,0 +1,252 @@
+[
+  {
+    "section": "glossary",
+    "family": "network",
+    "title": "Connect vocabulary to the object and operation",
+    "caption": "A term becomes useful when it has a place in the manufacturing chain. Materials, processes, devices and systems describe different kinds of thing.",
+    "nodes": [
+      {
+        "label": "Materials",
+        "glyph": "material",
+        "detail": "Name substances that make or support the chip"
+      },
+      {
+        "label": "Processes",
+        "glyph": "furnace",
+        "detail": "Name operations that change those materials"
+      },
+      {
+        "label": "Devices",
+        "glyph": "transistor",
+        "detail": "Name structures that perform electrical functions",
+        "variant": "gaa"
+      },
+      {
+        "label": "Systems",
+        "glyph": "rack",
+        "detail": "Name assemblies built from the devices"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "processed by"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "creates"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "integrated into"
+      }
+    ],
+    "source": {
+      "file": "course/modules/21-glossary-and-reference.md",
+      "heading": "Glossary"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "units-conventions-and-a-sense-of-scale",
+    "family": "scale",
+    "title": "The object changes as the scale changes",
+    "caption": "A transistor, die, wafer, package and rack are different physical objects. Their dimensions cannot be substituted for one another.",
+    "nodes": [
+      {
+        "label": "Transistor",
+        "glyph": "transistor",
+        "detail": "A local switching structure",
+        "variant": "gaa"
+      },
+      {
+        "label": "Die",
+        "glyph": "chip",
+        "detail": "One fabricated circuit",
+        "variant": "logic"
+      },
+      {
+        "label": "Wafer",
+        "glyph": "wafer",
+        "detail": "The manufacturing surface containing many dies",
+        "variant": "grid"
+      },
+      {
+        "label": "Rack",
+        "glyph": "rack",
+        "detail": "A system assembly containing packaged electronics",
+        "variant": "rack"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/21-glossary-and-reference.md",
+      "heading": "Units, Conventions, and a Sense of Scale"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "node-table",
+    "family": "compare",
+    "title": "A node label is not a universal physical measurement",
+    "caption": "The node reference should be read alongside actual pitches, architecture and manufacturer conventions.",
+    "nodes": [
+      {
+        "label": "Commercial node",
+        "glyph": "design",
+        "detail": "Names a process generation"
+      },
+      {
+        "label": "Device architecture",
+        "glyph": "transistor",
+        "detail": "Describes planar, fin or wrapped-channel geometry",
+        "variant": "gaa"
+      },
+      {
+        "label": "Physical pitches",
+        "glyph": "wires",
+        "detail": "Measure specified repeated features",
+        "variant": "parallel"
+      },
+      {
+        "label": "Circuit density",
+        "glyph": "chip",
+        "detail": "Depends on the implemented cell and routing design"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/21-glossary-and-reference.md",
+      "heading": "Node Table"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "master-process-flow",
+    "family": "branch",
+    "title": "Several manufacturing branches meet in assembly",
+    "caption": "The master flow includes parallel logic, memory and substrate work. It is not one wafer passing through every operation in the course.",
+    "nodes": [
+      {
+        "label": "Logic wafer and die",
+        "glyph": "wafer",
+        "detail": "Runs through front end, wiring and sort",
+        "variant": "grid"
+      },
+      {
+        "label": "HBM stack",
+        "glyph": "memory",
+        "detail": "Is made on a separate memory-manufacturing branch",
+        "variant": "hbm"
+      },
+      {
+        "label": "Package substrate",
+        "glyph": "wires",
+        "detail": "Is manufactured as a separate connecting structure",
+        "variant": "substrate"
+      },
+      {
+        "label": "GPU assembly and system",
+        "glyph": "package",
+        "detail": "Combines the prepared branches and proceeds toward the rack",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/21-glossary-and-reference.md",
+      "heading": "Master Process Flow"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "who-buys-from-whom",
+    "family": "network",
+    "title": "Follow the supplied object through each purchase",
+    "caption": "The buyer-supplier view identifies what crosses an organizational boundary: materials, equipment, design services or manufactured components.",
+    "nodes": [
+      {
+        "label": "Materials and equipment",
+        "glyph": "furnace",
+        "detail": "Supply the means of manufacturing"
+      },
+      {
+        "label": "Foundry and memory",
+        "glyph": "wafer",
+        "detail": "Supply fabricated logic and memory",
+        "variant": "grid"
+      },
+      {
+        "label": "Assembly and test",
+        "glyph": "package",
+        "detail": "Supply integrated and screened components",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "System manufacturer",
+        "glyph": "rack",
+        "detail": "Supplies finished boards, servers and racks",
+        "variant": "server"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "production inputs"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "dies and stacks"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "qualified components"
+      }
+    ],
+    "source": {
+      "file": "course/modules/21-glossary-and-reference.md",
+      "heading": "Who Buys From Whom"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "what-to-learn-next",
+    "family": "branch",
+    "title": "Use different learning sources for different questions",
+    "caption": "Textbooks explain foundations, technical literature develops mechanisms, and current industry sources track changing products and capacity.",
+    "nodes": [
+      {
+        "label": "Textbooks",
+        "glyph": "design",
+        "detail": "Build a systematic foundation"
+      },
+      {
+        "label": "Papers and conferences",
+        "glyph": "test",
+        "detail": "Develop technical mechanisms and evidence"
+      },
+      {
+        "label": "Industry sources",
+        "glyph": "rack",
+        "detail": "Track products, suppliers and changing context"
+      },
+      {
+        "label": "Deeper understanding",
+        "glyph": "chip",
+        "detail": "Connect foundational models with real manufacturing practice"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/21-glossary-and-reference.md",
+      "heading": "What to Learn Next"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  }
+]

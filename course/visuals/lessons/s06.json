@@ -1,0 +1,185 @@
+[
+  {
+    "family": "network",
+    "title": "An insulated gate controls the channel",
+    "caption": "The gate acts through an electric field. It is separated from the conducting channel by an insulator rather than inserted into the source\u2013drain current path.",
+    "nodes": [
+      {
+        "label": "Source",
+        "detail": "Supplies carriers to the channel.",
+        "glyph": "transistor",
+        "variant": "source"
+      },
+      {
+        "label": "Gate",
+        "detail": "Changes channel conduction through the dielectric.",
+        "glyph": "transistor",
+        "variant": "gate"
+      },
+      {
+        "label": "Channel",
+        "detail": "Its conduction depends on the gate condition.",
+        "glyph": "transistor",
+        "variant": "channel"
+      },
+      {
+        "label": "Drain",
+        "detail": "Collects carriers passing through the channel.",
+        "glyph": "transistor",
+        "variant": "drain"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 2,
+        "label": "carriers enter"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "electric-field control"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "carriers leave"
+      }
+    ],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "1-a-switch-built-from-an-electric-field"
+  },
+  {
+    "family": "compare",
+    "title": "A fin gives the gate more access to the channel",
+    "caption": "Raising the channel into a fin lets the gate act from more sides than in a planar structure. These sections emphasize geometry rather than a particular commercial process.",
+    "nodes": [
+      {
+        "label": "Planar",
+        "detail": "The main gate lies above the channel region.",
+        "glyph": "transistor",
+        "variant": "planar"
+      },
+      {
+        "label": "FinFET",
+        "detail": "The gate wraps across the top and sides of a fin.",
+        "glyph": "transistor",
+        "variant": "finfet"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "2-why-flat-transistors-became-fins"
+  },
+  {
+    "family": "compare",
+    "title": "Gate-all-around changes the channel geometry",
+    "caption": "Released sheets allow the gate to surround the channel. Access, isolation and contacts must still fit around the switching structure.",
+    "nodes": [
+      {
+        "label": "Fin channel",
+        "detail": "A vertical fin exposes multiple sides to the gate.",
+        "glyph": "transistor",
+        "variant": "finfet"
+      },
+      {
+        "label": "Released sheets",
+        "detail": "Separated horizontal channels allow surrounding gate material.",
+        "glyph": "transistor",
+        "variant": "gaa"
+      },
+      {
+        "label": "Circuit contacts",
+        "detail": "Terminals still need connections to useful wiring.",
+        "glyph": "wires",
+        "variant": "via"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "3-surrounding-the-channel-without-losing-the-circuit"
+  },
+  {
+    "family": "layers",
+    "title": "Connections climb through insulating levels",
+    "caption": "Vias join wiring levels, while the surrounding insulator keeps separate routes apart. Upper levels often support longer routes and power distribution.",
+    "nodes": [
+      {
+        "label": "Upper metal",
+        "detail": "Longer-distance signals and power.",
+        "glyph": "wires",
+        "variant": "wide"
+      },
+      {
+        "label": "Intermediate metal",
+        "detail": "Routes between blocks of circuitry.",
+        "glyph": "wires"
+      },
+      {
+        "label": "Local wiring",
+        "detail": "Short connections close to the transistors.",
+        "glyph": "wires",
+        "variant": "narrow"
+      },
+      {
+        "label": "Device contacts",
+        "detail": "Connect transistor terminals to the wiring system.",
+        "glyph": "wires",
+        "variant": "via"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "4-making-wiring-inside-an-insulating-stack"
+  },
+  {
+    "family": "compare",
+    "title": "Smaller wires can cost more signal delay",
+    "caption": "A narrower conducting cross-section raises resistance; surfaces and grain boundaries can add another penalty. Nearby conductors also create capacitance.",
+    "nodes": [
+      {
+        "label": "Wide conductor",
+        "detail": "More cross-section is available for current.",
+        "glyph": "wires",
+        "variant": "wide"
+      },
+      {
+        "label": "Narrow conductor",
+        "detail": "Reduced cross-section raises resistance.",
+        "glyph": "wires",
+        "variant": "narrow"
+      },
+      {
+        "label": "Neighboring wires",
+        "detail": "Their electrical coupling contributes capacitance.",
+        "glyph": "wires",
+        "variant": "comb"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "5-the-wire-can-become-the-slow-part"
+  },
+  {
+    "family": "compare",
+    "title": "Separate the power route from signal wiring",
+    "caption": "Backside power delivery moves selected power connections to the opposite face. The implementation must still control resistance, alignment and thermal behavior.",
+    "nodes": [
+      {
+        "label": "Frontside routing",
+        "detail": "Signals and power compete for wiring resources above devices.",
+        "glyph": "wires",
+        "variant": "frontside"
+      },
+      {
+        "label": "Backside power",
+        "detail": "Power arrives through dedicated connections below the device layer.",
+        "glyph": "transistor",
+        "variant": "backside-power"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "6-supplying-power-from-another-side"
+  }
+]

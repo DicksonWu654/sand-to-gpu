@@ -1,0 +1,633 @@
+[
+  {
+    "section": "why-test-exists-the-rule-of-ten",
+    "family": "flow",
+    "title": "A defect becomes more expensive downstream",
+    "caption": "The rule of ten is an intuition about accumulating value, not a universal numeric law. Earlier detection can avoid spending more on a defective part.",
+    "nodes": [
+      {
+        "label": "Bare die",
+        "glyph": "chip",
+        "detail": "The fabricated die already contains substantial value"
+      },
+      {
+        "label": "Assembled package",
+        "glyph": "package",
+        "detail": "Packaging adds components and processing"
+      },
+      {
+        "label": "Completed system",
+        "glyph": "rack",
+        "detail": "Boards and systems add further value"
+      },
+      {
+        "label": "Field failure",
+        "glyph": "test",
+        "detail": "Diagnosis and replacement occur after shipment"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "Why Test Exists: The Rule of Ten"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-test-flow-in-order",
+    "family": "flow",
+    "title": "Test follows the product as it changes form",
+    "caption": "Different checkpoints can access different structures and expose different problems.",
+    "nodes": [
+      {
+        "label": "Process acceptance",
+        "glyph": "wafer",
+        "detail": "WAT characterizes dedicated process structures",
+        "variant": "test"
+      },
+      {
+        "label": "Wafer sort",
+        "glyph": "test",
+        "detail": "Tests product dies before singulation",
+        "variant": "probe"
+      },
+      {
+        "label": "Package test",
+        "glyph": "package",
+        "detail": "Tests the assembled component",
+        "variant": "flip-chip"
+      },
+      {
+        "label": "System-level test",
+        "glyph": "rack",
+        "detail": "Exercises behavior in a system-like environment"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "The Test Flow, in Order"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "wafer-sort-the-prober",
+    "family": "apparatus",
+    "title": "Bring a wafer into repeatable electrical contact",
+    "caption": "The prober positions and conditions the wafer while the probe card makes many electrical connections.",
+    "nodes": [
+      {
+        "label": "Temperature-controlled chuck",
+        "glyph": "heat",
+        "detail": "Supports the wafer at the test condition"
+      },
+      {
+        "label": "Wafer alignment",
+        "glyph": "wafer",
+        "detail": "Locates each die relative to the contact pattern",
+        "variant": "grid"
+      },
+      {
+        "label": "Probe card",
+        "glyph": "test",
+        "detail": "Touches the selected pads or bumps",
+        "variant": "probe"
+      },
+      {
+        "label": "Tester",
+        "glyph": "test",
+        "detail": "Applies signals and records the response",
+        "variant": "instrument"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "Wafer Sort: The Prober"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "probe-cards",
+    "family": "compare",
+    "title": "Probe structures trade pitch, mechanics and cost",
+    "caption": "Different probe-card architectures make contact in different ways. Fine-pitch testing also depends on pad damage, cleaning and stable contact resistance.",
+    "nodes": [
+      {
+        "label": "Cantilever probes",
+        "glyph": "test",
+        "detail": "Angled needles make contact with pads",
+        "variant": "cantilever"
+      },
+      {
+        "label": "Vertical probes",
+        "glyph": "test",
+        "detail": "Contacts approach along the vertical direction",
+        "variant": "vertical"
+      },
+      {
+        "label": "MEMS probes",
+        "glyph": "test",
+        "detail": "Microfabricated contact structures support dense arrays",
+        "variant": "mems"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "Probe Cards"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-ate",
+    "family": "apparatus",
+    "title": "An ATE turns a program into physical measurements",
+    "caption": "The tester supplies controlled electrical conditions and compares returned signals with the test program's expectations.",
+    "nodes": [
+      {
+        "label": "Pattern and timing",
+        "glyph": "design",
+        "detail": "Defines the sequence of digital operations"
+      },
+      {
+        "label": "Power supplies",
+        "glyph": "wires",
+        "detail": "Apply controlled voltages and currents"
+      },
+      {
+        "label": "Pin electronics",
+        "glyph": "test",
+        "detail": "Drive and sense device connections",
+        "variant": "instrument"
+      },
+      {
+        "label": "Device under test",
+        "glyph": "chip",
+        "detail": "Responds to the applied conditions"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "The ATE"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "what-a-test-program-contains",
+    "family": "flow",
+    "title": "A program builds evidence in stages",
+    "caption": "Continuity, functional patterns and parametric measurements answer different questions about the die.",
+    "nodes": [
+      {
+        "label": "Contact checks",
+        "glyph": "test",
+        "detail": "Verify basic electrical access and continuity"
+      },
+      {
+        "label": "Structural tests",
+        "glyph": "transistor",
+        "detail": "Exercise internal logic and memory structures"
+      },
+      {
+        "label": "Parametric checks",
+        "glyph": "wires",
+        "detail": "Measure electrical limits and leakage"
+      },
+      {
+        "label": "Performance classification",
+        "glyph": "chip",
+        "detail": "Determine a supported operating bin"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "What a Test Program Contains"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "design-for-test",
+    "family": "network",
+    "title": "DFT provides access to otherwise hidden logic",
+    "caption": "Scan structures shift controlled state into the circuit and shift observed state out. Test logic is designed into the chip.",
+    "nodes": [
+      {
+        "label": "Test pattern input",
+        "glyph": "design",
+        "detail": "Supplies the intended internal state"
+      },
+      {
+        "label": "Scan chain",
+        "glyph": "wires",
+        "detail": "Links internal state elements for shifting",
+        "variant": "scan-chain"
+      },
+      {
+        "label": "Functional logic",
+        "glyph": "transistor",
+        "detail": "Responds when the pattern is applied",
+        "variant": "logic"
+      },
+      {
+        "label": "Observed output",
+        "glyph": "test",
+        "detail": "Returns data for comparison with expectations",
+        "variant": "instrument"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "shift in"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "apply state"
+      },
+      {
+        "from": 2,
+        "to": 1,
+        "label": "capture response"
+      },
+      {
+        "from": 1,
+        "to": 3,
+        "label": "shift out"
+      }
+    ],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "Design for Test"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "multi-site-testing-and-the-economics-of-tester-time",
+    "family": "compare",
+    "title": "Parallel sites share tester resources",
+    "caption": "Multi-site testing can test several devices together, but contact, power, instrument and timing limits constrain the benefit.",
+    "nodes": [
+      {
+        "label": "Single-site test",
+        "glyph": "test",
+        "detail": "One device occupies a test interval",
+        "variant": "single-site"
+      },
+      {
+        "label": "Multi-site test",
+        "glyph": "wafer",
+        "detail": "Several sites are connected and exercised together",
+        "variant": "multi-site"
+      },
+      {
+        "label": "Shared resources",
+        "glyph": "wires",
+        "detail": "Power and instruments can limit parallel efficiency",
+        "variant": "fanout"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "Multi-Site Testing and the Economics of Tester Time"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "coverage-escapes-and-dppm",
+    "family": "flow",
+    "title": "Passing a test is evidence with defined coverage",
+    "caption": "A test suite can miss defects it does not exercise or distinguish. Escapes are defective parts that survive the screening process.",
+    "nodes": [
+      {
+        "label": "Defect population",
+        "glyph": "chip",
+        "detail": "Includes possible physical and functional failures",
+        "variant": "defect"
+      },
+      {
+        "label": "Test coverage",
+        "glyph": "test",
+        "detail": "Targets a defined set of failures and conditions",
+        "variant": "instrument"
+      },
+      {
+        "label": "Detected failures",
+        "glyph": "queue",
+        "detail": "Remove parts that fail those checks"
+      },
+      {
+        "label": "Escaped defects",
+        "glyph": "package",
+        "detail": "Some remaining defects can appear after shipment"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "Coverage, Escapes, and DPPM"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "binning-at-sort",
+    "family": "branch",
+    "title": "One wafer can yield several sellable bins",
+    "caption": "Sort classifies measured capability rather than assuming that every functioning die is identical.",
+    "nodes": [
+      {
+        "label": "Functionality",
+        "glyph": "transistor",
+        "detail": "Checks which resources work"
+      },
+      {
+        "label": "Frequency and power",
+        "glyph": "wires",
+        "detail": "Measures supported operating behavior"
+      },
+      {
+        "label": "Repair or harvesting",
+        "glyph": "memory",
+        "detail": "Accounts for supported recovery mechanisms"
+      },
+      {
+        "label": "Bin assignment",
+        "glyph": "chip",
+        "detail": "Assigns the tested die to a defined product class"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "Binning at Sort"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "known-good-die",
+    "family": "flow",
+    "title": "Screen the die before risking its neighbors",
+    "caption": "Known-good-die is a screening objective, not a guarantee of perfection. Its value grows when several expensive dies share one package.",
+    "nodes": [
+      {
+        "label": "Wafer test",
+        "glyph": "test",
+        "detail": "Collect evidence before die assembly",
+        "variant": "probe"
+      },
+      {
+        "label": "Die selection",
+        "glyph": "chip",
+        "detail": "Choose dies that meet the screening requirement"
+      },
+      {
+        "label": "Multi-die assembly",
+        "glyph": "package",
+        "detail": "Combine selected components",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "Residual package risk",
+        "glyph": "test",
+        "detail": "Later tests still check faults the earlier screen could miss"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "Known-Good-Die"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "test-at-temperature-the-hot-and-cold-split",
+    "family": "compare",
+    "title": "Temperature can expose different weak points",
+    "caption": "Hot and cold tests probe the device under different operating conditions. The selected conditions depend on the product and failure mechanisms.",
+    "nodes": [
+      {
+        "label": "Cold condition",
+        "glyph": "chip",
+        "detail": "Exercise behavior at the low-temperature test point"
+      },
+      {
+        "label": "Hot condition",
+        "glyph": "heat",
+        "detail": "Exercise behavior at the high-temperature test point"
+      },
+      {
+        "label": "Combined evidence",
+        "glyph": "test",
+        "detail": "Compare results against the product's specified limits"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "Test at Temperature: The Hot and Cold Split"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "adaptive-test-and-data-analytics",
+    "family": "cycle",
+    "title": "Use test evidence to focus later testing",
+    "caption": "Adaptive test changes sampling or sequences based on data. The decision must preserve the required outgoing quality.",
+    "nodes": [
+      {
+        "label": "Test results",
+        "glyph": "test",
+        "detail": "Collect device and lot behavior"
+      },
+      {
+        "label": "Analysis",
+        "glyph": "design",
+        "detail": "Find relevant patterns and correlations"
+      },
+      {
+        "label": "Test adjustment",
+        "glyph": "queue",
+        "detail": "Modify the permitted sampling or sequence"
+      },
+      {
+        "label": "New evidence",
+        "glyph": "wafer",
+        "detail": "Check how the adjusted test performs"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "Adaptive Test and Data Analytics"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "test-data-stdf-and-the-loop-back-to-the-fab",
+    "family": "cycle",
+    "title": "Return electrical results to manufacturing",
+    "caption": "A test record connects failures with wafer location and manufacturing history, enabling investigation and process correction.",
+    "nodes": [
+      {
+        "label": "Recorded results",
+        "glyph": "test",
+        "detail": "Store measurements and bin outcomes"
+      },
+      {
+        "label": "Wafer and lot identity",
+        "glyph": "wafer",
+        "detail": "Preserve where the result came from"
+      },
+      {
+        "label": "Correlation",
+        "glyph": "design",
+        "detail": "Compare failures with process history"
+      },
+      {
+        "label": "Fab feedback",
+        "glyph": "furnace",
+        "detail": "Investigate and correct the implicated process"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "Test Data: STDF and the Loop Back to the Fab"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "gpu-specific-test-challenges",
+    "family": "branch",
+    "title": "A GPU stresses several tester limits together",
+    "caption": "Large logic, memory interfaces and high current create distinct test demands. Their combination determines the practical test strategy.",
+    "nodes": [
+      {
+        "label": "Logic patterns",
+        "glyph": "transistor",
+        "detail": "Exercise extensive digital circuitry",
+        "variant": "logic"
+      },
+      {
+        "label": "Memory interfaces",
+        "glyph": "memory",
+        "detail": "Test wide and fast connections",
+        "variant": "hbm"
+      },
+      {
+        "label": "Power and heat",
+        "glyph": "heat",
+        "detail": "Maintain controlled electrical and thermal conditions",
+        "variant": "thermal"
+      },
+      {
+        "label": "GPU test strategy",
+        "glyph": "test",
+        "detail": "Combine access, coverage and throughput constraints"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "GPU-Specific Test Challenges"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "who-does-the-testing",
+    "family": "network",
+    "title": "The product owner and service providers share test work",
+    "caption": "Who executes a test and who defines its requirements can be different organizations.",
+    "nodes": [
+      {
+        "label": "Product owner",
+        "glyph": "design",
+        "detail": "Defines the product and test requirements"
+      },
+      {
+        "label": "Foundry",
+        "glyph": "wafer",
+        "detail": "Provides process and wafer-manufacturing context"
+      },
+      {
+        "label": "Test service provider",
+        "glyph": "test",
+        "detail": "Runs agreed test operations"
+      },
+      {
+        "label": "Assembly provider",
+        "glyph": "package",
+        "detail": "Coordinates testing around packaging steps"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 2,
+        "label": "test requirements"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "wafer handoff"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "screened die and data"
+      },
+      {
+        "from": 3,
+        "to": 2,
+        "label": "packaged parts for test"
+      }
+    ],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "Who Does the Testing"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-equipment-market",
+    "family": "branch",
+    "title": "A test cell combines specialized equipment",
+    "caption": "Tester capability alone is insufficient: probe contact, mechanical handling and thermal control also determine usable throughput.",
+    "nodes": [
+      {
+        "label": "ATE",
+        "glyph": "test",
+        "detail": "Supplies stimulus and measurement",
+        "variant": "instrument"
+      },
+      {
+        "label": "Prober and handler",
+        "glyph": "wafer",
+        "detail": "Positions wafers or packaged devices",
+        "variant": "grid"
+      },
+      {
+        "label": "Contact hardware",
+        "glyph": "wires",
+        "detail": "Connects the device to tester channels",
+        "variant": "fanout"
+      },
+      {
+        "label": "Qualified test cell",
+        "glyph": "test",
+        "detail": "Combines compatible tools for the required product"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "heading": "The Equipment Market"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  }
+]

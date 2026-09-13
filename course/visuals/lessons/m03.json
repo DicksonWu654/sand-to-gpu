@@ -1,0 +1,658 @@
+[
+  {
+    "section": "the-process-flow-at-a-glance",
+    "family": "flow",
+    "title": "From cylinder to device-ready surface",
+    "caption": "Mechanical steps create the shape; chemical steps remove damage and contamination before final qualification. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Crop and size",
+        "detail": "Prepare a controlled cylindrical crystal body."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Slice and flatten",
+        "detail": "Create discs and correct their geometry."
+      },
+      {
+        "glyph": "clean",
+        "label": "Etch, polish and clean",
+        "detail": "Remove damaged material and finish the surface."
+      },
+      {
+        "glyph": "test",
+        "label": "Inspect and pack",
+        "detail": "Qualify geometry, defects and cleanliness."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "The Process Flow at a Glance"
+    }
+  },
+  {
+    "section": "why-775-m-wafer-thickness-and-mechanics",
+    "family": "compare",
+    "title": "Thickness is a mechanical design variable",
+    "caption": "A larger or thinner wafer bends more easily under load; handling strength and usable material must be balanced. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wafer",
+        "label": "Diameter",
+        "detail": "A larger unsupported span increases bending sensitivity.",
+        "variant": "round"
+      },
+      {
+        "glyph": "film",
+        "label": "Thickness",
+        "detail": "A thicker plate resists bending more strongly.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "queue",
+        "label": "Support geometry",
+        "detail": "Pins, rings and chucks change how the load is carried."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Why 775 µm: Wafer Thickness and Mechanics"
+    }
+  },
+  {
+    "section": "cropping-sectioning-and-ingot-qc",
+    "family": "flow",
+    "title": "Separate growth transitions from usable crystal",
+    "caption": "Cropping removes crown and tail while ingot quality checks locate acceptable material along the body. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "As-grown ingot",
+        "detail": "Neck, shoulder, body and tail have different geometries."
+      },
+      {
+        "glyph": "test",
+        "label": "Inspect the body",
+        "detail": "Electrical and defect measurements locate usable regions."
+      },
+      {
+        "glyph": "etch",
+        "label": "Crop and section",
+        "detail": "Cut away transition and rejected regions."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Qualified blocks",
+        "detail": "Accepted cylinders proceed to diameter finishing."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Cropping, Sectioning, and Ingot QC"
+    }
+  },
+  {
+    "section": "cylindrical-grinding-to-diameter",
+    "family": "apparatus",
+    "title": "Grind beneath the deepest surface ripple",
+    "caption": "Rotating the ingot against an abrasive wheel creates a consistent diameter, rather than merely smoothing the highest ridges. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "As-grown surface",
+        "detail": "Growth leaves diameter variation and ripples."
+      },
+      {
+        "glyph": "material",
+        "label": "Grinding wheel",
+        "detail": "Abrasive contact removes the outer material."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Sized cylinder",
+        "detail": "The finished diameter fits wafering and handling specifications."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Cylindrical Grinding to Diameter"
+    }
+  },
+  {
+    "section": "orientation-and-the-notch",
+    "family": "flow",
+    "title": "Transfer crystal orientation into a visible reference",
+    "caption": "Diffraction identifies the lattice orientation; the notch lets subsequent tools orient the wafer consistently. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Determine lattice direction",
+        "detail": "X-ray measurements locate crystal orientation.",
+        "variant": "optical"
+      },
+      {
+        "glyph": "etch",
+        "label": "Machine the notch",
+        "detail": "A physical reference is cut into the crystal.",
+        "variant": "edge"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Align in the fab",
+        "detail": "Tools use the notch to orient the wafer.",
+        "variant": "aligned"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Orientation and the Notch"
+    }
+  },
+  {
+    "section": "multi-wire-slicing",
+    "family": "apparatus",
+    "title": "One moving wire becomes a parallel cutting web",
+    "caption": "A wire wound over grooved guides creates many adjacent cuts; material between finished slices becomes kerf. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wires",
+        "label": "Wire web",
+        "detail": "Repeated spans form closely spaced cutting paths."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Ingot feed",
+        "detail": "The block advances into the moving wire."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Separated slices",
+        "detail": "Discs emerge between neighboring cuts."
+      },
+      {
+        "glyph": "material",
+        "label": "Kerf loss",
+        "detail": "Silicon removed by the cuts cannot remain in the slices."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Multi-Wire Slicing"
+    }
+  },
+  {
+    "section": "lapping-and-double-disk-grinding",
+    "family": "layers",
+    "title": "Work both wafer faces together",
+    "caption": "Opposing tools remove stock while carriers distribute contact across the wafer; flatness control is different from final mirror polishing. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "Upper tool surface",
+        "detail": "The upper plate or wheel removes material."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Wafer in carrier",
+        "detail": "Controlled motion distributes abrasion over the faces."
+      },
+      {
+        "glyph": "material",
+        "label": "Lower tool surface",
+        "detail": "The opposing tool constrains and processes the other side."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Lapping and Double-Disk Grinding"
+    }
+  },
+  {
+    "section": "edge-profiling",
+    "family": "compare",
+    "title": "A rounded edge removes a crack-prone corner",
+    "caption": "The edge profile reduces stress concentration and particle shedding during later thermal processing and handling. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wafer",
+        "label": "Sharp as-cut corner",
+        "detail": "A fragile edge can chip and start a crack."
+      },
+      {
+        "glyph": "etch",
+        "label": "Profiled edge",
+        "detail": "Controlled rounding removes the vulnerable geometry."
+      },
+      {
+        "glyph": "heat",
+        "label": "Later thermal cycle",
+        "detail": "The finished edge must survive stress during processing."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Edge Profiling"
+    }
+  },
+  {
+    "section": "etching-to-remove-damage",
+    "family": "layers",
+    "title": "Chemical removal must reach below the damage",
+    "caption": "Before the damage-removal etch, cracks occupy a surface region rather than a separate material film. Chemistry removes that entire affected region without introducing new abrasive damage. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Damaged surface region",
+        "detail": "The etch removes the region containing abrasive damage."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Sound underlying silicon",
+        "detail": "Undisturbed crystal remains after sufficient material is removed."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Etching to Remove Damage"
+    }
+  },
+  {
+    "section": "laser-marking",
+    "family": "flow",
+    "title": "A mark connects the wafer to its process history",
+    "caption": "Wafer identity links later problems to earlier crystal and finishing conditions. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Write the identity",
+        "detail": "A controlled laser mark labels the wafer."
+      },
+      {
+        "glyph": "test",
+        "label": "Read the mark",
+        "detail": "Tools associate the physical disc with its record."
+      },
+      {
+        "glyph": "design",
+        "label": "Trace the history",
+        "detail": "Records connect the wafer to ingot and process equipment."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Laser Marking"
+    }
+  },
+  {
+    "section": "polishing-i-double-side-polishing-dsp",
+    "family": "cycle",
+    "title": "CMP alternates surface chemistry and mechanical removal",
+    "caption": "The pad does not simply grind bare silicon: chemistry modifies the surface and particles shear the softened material away. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Reactive liquid",
+        "detail": "The slurry hydrates and modifies the surface."
+      },
+      {
+        "glyph": "film",
+        "label": "Softened surface layer",
+        "detail": "A thin chemically altered region forms.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "material",
+        "label": "Pad and particles",
+        "detail": "Contact removes the reacted material."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Fresh surface",
+        "detail": "Newly exposed silicon repeats the polishing cycle."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Polishing I: Double-Side Polishing (DSP)"
+    }
+  },
+  {
+    "section": "polishing-ii-final-front-side-mirror-polish-and-the-edge",
+    "family": "flow",
+    "title": "Finish roughness after establishing flatness",
+    "caption": "Touch polishing removes the remaining haze and fine scratches with gentler conditions; edge cleanliness still matters. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wafer",
+        "label": "Double-side polished wafer",
+        "detail": "The overall flat geometry is already established."
+      },
+      {
+        "glyph": "material",
+        "label": "Soft pad and fine slurry",
+        "detail": "A gentler final pass reduces fine surface texture."
+      },
+      {
+        "glyph": "light",
+        "label": "Mirror surface",
+        "detail": "Lower scattering reveals the smoother finish."
+      },
+      {
+        "glyph": "clean",
+        "label": "Clean edge and surface",
+        "detail": "Remove residues before qualification."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Polishing II: Final Front-Side Mirror Polish and the Edge"
+    }
+  },
+  {
+    "section": "capstone-where-the-115-m-went",
+    "family": "flow",
+    "title": "Thickness removal is a planned budget",
+    "caption": "The section's worked example assigns material removal across grinding, damage etch and final polish; this drawing intentionally does not scale those amounts. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wafer",
+        "label": "Raw slice",
+        "detail": "The starting disc includes finishing allowance."
+      },
+      {
+        "glyph": "etch",
+        "label": "Grinding stock",
+        "detail": "Mechanical removal establishes flatter geometry."
+      },
+      {
+        "glyph": "clean",
+        "label": "Damage-removal etch",
+        "detail": "Chemistry consumes the disturbed surface."
+      },
+      {
+        "glyph": "material",
+        "label": "Final polish allowance",
+        "detail": "Finishing reaches the target thickness and surface quality."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Capstone: Where the 115 µm Went"
+    }
+  },
+  {
+    "section": "cleaning-the-rca-sequence-and-drying",
+    "family": "flow",
+    "title": "Different cleaning steps remove different contaminants",
+    "caption": "The cleaning sequence combines particle, organic and metallic contamination control before controlled rinsing and drying. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "clean",
+        "label": "Organic and particle clean",
+        "detail": "Surface chemistry loosens common polishing residues."
+      },
+      {
+        "glyph": "gas",
+        "label": "Oxide and metal control",
+        "detail": "Selected chemistries remove unwanted surface species."
+      },
+      {
+        "glyph": "clean",
+        "label": "Ultrapure rinse",
+        "detail": "Clean water removes remaining process chemicals."
+      },
+      {
+        "glyph": "heat",
+        "label": "Controlled drying",
+        "detail": "Dry without leaving spots or new contamination."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Cleaning: The RCA Sequence and Drying"
+    }
+  },
+  {
+    "section": "flatness-metrology",
+    "family": "compare",
+    "title": "Flatness has several meanings",
+    "caption": "Whole-wafer shape and local thickness variation can affect lithography differently; the reference plane matters when interpreting a specification. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wafer",
+        "label": "Thickness variation",
+        "detail": "Compare the thickest and thinnest local regions.",
+        "variant": "thin"
+      },
+      {
+        "glyph": "film",
+        "label": "Bow and warp",
+        "detail": "The free wafer departs from a reference shape.",
+        "variant": "warped"
+      },
+      {
+        "glyph": "light",
+        "label": "Local site flatness",
+        "detail": "Exposure fields must remain within a usable focus range.",
+        "variant": "optical"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Flatness Metrology"
+    }
+  },
+  {
+    "section": "particle-and-defect-inspection",
+    "family": "apparatus",
+    "title": "Turn scattered light into a defect map",
+    "caption": "A scanning laser and collection optics locate surface scatterers; the signal is interpreted rather than being a direct photograph of every defect. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "Illumination spot",
+        "detail": "The moving beam samples the wafer surface.",
+        "variant": "incident"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Surface scatterer",
+        "detail": "Particles or defects redirect part of the light.",
+        "variant": "random"
+      },
+      {
+        "glyph": "test",
+        "label": "Collection and detection",
+        "detail": "Sensors record the scattered signal.",
+        "variant": "dark-field"
+      },
+      {
+        "glyph": "design",
+        "label": "Wafer defect map",
+        "detail": "Positions and signal classes support qualification.",
+        "variant": "grid"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Particle and Defect Inspection"
+    }
+  },
+  {
+    "section": "beyond-polished-epitaxial-annealed-and-soi-wafers",
+    "family": "compare",
+    "title": "Three ways to add substrate value",
+    "caption": "Epitaxy, annealing and SOI processing modify different aspects of the starting wafer rather than representing interchangeable grades. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Epitaxial wafer",
+        "detail": "A controlled crystalline surface layer is grown."
+      },
+      {
+        "glyph": "heat",
+        "label": "Annealed wafer",
+        "detail": "Thermal treatment alters near-surface defect behavior."
+      },
+      {
+        "glyph": "film",
+        "label": "SOI wafer",
+        "detail": "A buried insulating layer separates device silicon from the handle."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Beyond Polished: Epitaxial, Annealed, and SOI Wafers"
+    }
+  },
+  {
+    "section": "test-monitor-and-reclaim-wafers",
+    "family": "cycle",
+    "title": "A monitor wafer can return to service",
+    "caption": "Monitor and dummy wafers support process control without becoming shipped circuits; reclamation restores only suitable wafers. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wafer",
+        "label": "Monitor the process",
+        "detail": "Use a wafer to assess tool contamination or film behavior."
+      },
+      {
+        "glyph": "test",
+        "label": "Read the result",
+        "detail": "Measurements qualify the process or reveal drift."
+      },
+      {
+        "glyph": "clean",
+        "label": "Strip and reclaim",
+        "detail": "Remove films and restore usable surface conditions."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Reuse when qualified",
+        "detail": "Return the wafer to an appropriate non-product role."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Test, Monitor, and Reclaim Wafers"
+    }
+  },
+  {
+    "section": "packaging-and-shipping",
+    "family": "flow",
+    "title": "Protect the surface across the shipping boundary",
+    "caption": "A shipping container and a fab carrier solve different transport problems; cleanliness must survive the handoff. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wafer",
+        "label": "Qualified wafers",
+        "detail": "Accepted surfaces are ready for protected handling."
+      },
+      {
+        "glyph": "package",
+        "label": "Shipping container",
+        "detail": "A FOSB protects wafers during transportation."
+      },
+      {
+        "glyph": "queue",
+        "label": "Incoming handling",
+        "detail": "The fab receives and checks the shipment."
+      },
+      {
+        "glyph": "clean",
+        "label": "Fab carrier",
+        "detail": "A FOUP supports controlled movement and tool docking."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Packaging and Shipping"
+    }
+  },
+  {
+    "section": "a-representative-300-mm-prime-wafer-specification",
+    "family": "branch",
+    "title": "A wafer specification joins several measurements",
+    "caption": "No single surface measurement certifies a prime wafer: geometry, electrical properties and defect limits must all satisfy the intended process. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wafer",
+        "label": "Geometry",
+        "detail": "Diameter, thickness and flatness constrain tool compatibility."
+      },
+      {
+        "glyph": "transistor",
+        "label": "Electrical properties",
+        "detail": "Doping and resistivity suit the device design."
+      },
+      {
+        "glyph": "test",
+        "label": "Surface quality",
+        "detail": "Particles and defects must meet acceptance limits."
+      },
+      {
+        "glyph": "design",
+        "label": "Customer specification",
+        "detail": "Together the requirements define a qualified product."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "A Representative 300 mm Prime Wafer Specification"
+    }
+  },
+  {
+    "section": "economics-and-market-structure",
+    "family": "cycle",
+    "title": "Wafer demand follows fab loading and inventory",
+    "caption": "The wafer supplier's shipments depend on customer usage and inventory decisions; capacity and qualification make adjustments slow. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "furnace",
+        "label": "Fab production",
+        "detail": "Process starts consume fresh wafers."
+      },
+      {
+        "glyph": "queue",
+        "label": "Customer inventory",
+        "detail": "Stocks buffer differences between orders and usage."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Supplier shipments",
+        "detail": "Orders draw on qualified wafer capacity."
+      },
+      {
+        "glyph": "design",
+        "label": "Capacity decisions",
+        "detail": "Investment responds to expectations with a delay."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "heading": "Economics and Market Structure"
+    }
+  }
+]

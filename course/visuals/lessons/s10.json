@@ -1,0 +1,201 @@
+[
+  {
+    "family": "flow",
+    "title": "Hardware behavior becomes physical geometry",
+    "caption": "Architecture and RTL describe intended behavior. Implementation must satisfy timing, power and manufacturing rules before the layout is released.",
+    "nodes": [
+      {
+        "label": "Architecture",
+        "detail": "Choose computing blocks for the intended workloads.",
+        "glyph": "chip"
+      },
+      {
+        "label": "RTL",
+        "detail": "Describe concurrent state and operations.",
+        "glyph": "design"
+      },
+      {
+        "label": "Implementation",
+        "detail": "Map, place and connect the circuit.",
+        "glyph": "wires"
+      },
+      {
+        "label": "Manufacturable layout",
+        "detail": "Check geometry against the process requirements.",
+        "glyph": "mask"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "1-turn-behavior-into-a-manufacturable-circuit"
+  },
+  {
+    "family": "branch",
+    "title": "Different verification methods provide complementary evidence",
+    "caption": "A perfectly fabricated design can still be logically wrong. These methods examine the design before manufacturing but retain model and coverage limits.",
+    "nodes": [
+      {
+        "label": "Simulation",
+        "detail": "Exercise a software model with selected tests.",
+        "glyph": "design"
+      },
+      {
+        "label": "Formal checks",
+        "detail": "Prove specified properties within a defined model.",
+        "glyph": "test"
+      },
+      {
+        "label": "Emulation",
+        "detail": "Run longer behavior on a hardware-based representation.",
+        "glyph": "chip"
+      },
+      {
+        "label": "Verification evidence",
+        "detail": "Judge coverage against the intended function and risks.",
+        "glyph": "design"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "2-find-mistakes-before-they-become-silicon"
+  },
+  {
+    "family": "branch",
+    "title": "A GPU product joins several manufacturing streams",
+    "caption": "The design company coordinates process, package, test and system requirements across the organizations that supply the physical product.",
+    "nodes": [
+      {
+        "label": "Design team",
+        "detail": "Defines architecture and implementation requirements.",
+        "glyph": "design"
+      },
+      {
+        "label": "Foundry",
+        "detail": "Fabricates the logic dies in a qualified process.",
+        "glyph": "wafer"
+      },
+      {
+        "label": "Memory maker",
+        "detail": "Supplies DRAM dies and tested HBM stacks.",
+        "glyph": "memory",
+        "variant": "hbm"
+      },
+      {
+        "label": "Package integration",
+        "detail": "Combines the required pieces and interfaces.",
+        "glyph": "package",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "3-follow-one-product-through-several-companies"
+  },
+  {
+    "family": "scale",
+    "title": "A package is only one level of the system",
+    "caption": "Board support, power conversion, networking and cooling appear as the product grows into a complete rack. Quantities at one level do not automatically describe another.",
+    "nodes": [
+      {
+        "label": "GPU package",
+        "detail": "Compute and nearby memory form a component.",
+        "glyph": "package",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "Module",
+        "detail": "Adds board support and local power conversion.",
+        "glyph": "chip"
+      },
+      {
+        "label": "Server",
+        "detail": "Combines modules with host and network resources.",
+        "glyph": "rack"
+      },
+      {
+        "label": "Rack",
+        "detail": "Adds shared infrastructure and system-scale connections.",
+        "glyph": "rack"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "4-a-package-becomes-a-board-a-server-and-a-rack"
+  },
+  {
+    "family": "network",
+    "title": "Communication connects multiple compute islands",
+    "caption": "A fabric\u2019s topology and software behavior affect how well processors cooperate. Local memory, GPU links and the external network are separate constraints.",
+    "nodes": [
+      {
+        "label": "GPU and HBM",
+        "detail": "Compute has nearby working data.",
+        "glyph": "chip"
+      },
+      {
+        "label": "Peer GPU",
+        "detail": "A neighboring processor holds other data and work.",
+        "glyph": "chip"
+      },
+      {
+        "label": "Local switching",
+        "detail": "Routes traffic inside the linked group.",
+        "glyph": "wires"
+      },
+      {
+        "label": "Network",
+        "detail": "Connects servers or larger groups.",
+        "glyph": "rack"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 2,
+        "label": "local fabric traffic"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "peer communication"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "traffic beyond the local group"
+      }
+    ],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "5-communication-determines-how-much-the-system-can-cooperate"
+  },
+  {
+    "family": "compare",
+    "title": "Cost share and bottleneck are different questions",
+    "caption": "A cheap unavailable input can limit an expensive system. Capacity, utilization and allocation must be stated for the relevant process or product.",
+    "nodes": [
+      {
+        "label": "Capacity",
+        "detail": "How much qualified output is available under stated conditions?",
+        "glyph": "rack"
+      },
+      {
+        "label": "Utilization",
+        "detail": "How much of that capability is being used?",
+        "glyph": "queue"
+      },
+      {
+        "label": "Allocation",
+        "detail": "Which products or customers can access it?",
+        "glyph": "design"
+      },
+      {
+        "label": "Cost accounting",
+        "detail": "Which expenses are counted at this stage and unit?",
+        "glyph": "chip"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "6-read-the-industry-through-constraints-and-accounting"
+  }
+]

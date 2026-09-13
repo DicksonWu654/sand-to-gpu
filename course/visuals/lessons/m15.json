@@ -1,0 +1,957 @@
+[
+  {
+    "section": "1-why-memory-is-a-different-business-from-logic",
+    "family": "compare",
+    "title": "Logic computes; memory repeats a storage cell",
+    "caption": "Memory economics emphasize dense, repeated arrays and useful bits. Logic combines more varied circuits to perform computation.",
+    "nodes": [
+      {
+        "label": "Logic die",
+        "glyph": "chip",
+        "detail": "Different blocks implement compute and control functions",
+        "variant": "logic"
+      },
+      {
+        "label": "Memory array",
+        "glyph": "memory",
+        "detail": "A repeated cell stores each bit",
+        "variant": "dram"
+      },
+      {
+        "label": "Peripheral circuits",
+        "glyph": "transistor",
+        "detail": "Select, sense and connect the stored information",
+        "variant": "cmos"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "1. Why memory is a different business from logic"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "2-the-1t1c-cell-and-the-sense-amplifier",
+    "family": "cycle",
+    "title": "Read a small charge, then restore it",
+    "caption": "A DRAM read shares the cell's charge with a bit line. The sense amplifier resolves the small difference and restores the stored state.",
+    "nodes": [
+      {
+        "label": "Charged capacitor",
+        "glyph": "memory",
+        "detail": "Represents the stored bit as electrical charge",
+        "variant": "capacitor"
+      },
+      {
+        "label": "Access transistor",
+        "glyph": "transistor",
+        "detail": "Connects the cell when its word line is selected",
+        "variant": "access"
+      },
+      {
+        "label": "Sense amplifier",
+        "glyph": "test",
+        "detail": "Resolves the small bit-line voltage difference",
+        "variant": "sense-amplifier"
+      },
+      {
+        "label": "Restore and refresh",
+        "glyph": "memory",
+        "detail": "Replenish the charge needed to retain the state",
+        "variant": "dram"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "2. The 1T1C cell and the sense amplifier"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "3-the-buried-word-line-and-the-6f-cell",
+    "family": "network",
+    "title": "A word line selects; a bit line carries the response",
+    "caption": "The buried word line controls the access transistor, while the bit line connects the selected cell to sensing circuitry.",
+    "nodes": [
+      {
+        "label": "Word line",
+        "glyph": "wires",
+        "detail": "Controls which access transistors turn on",
+        "variant": "word-line"
+      },
+      {
+        "label": "Access transistor",
+        "glyph": "transistor",
+        "detail": "Connects the selected storage node",
+        "variant": "access"
+      },
+      {
+        "label": "Storage capacitor",
+        "glyph": "memory",
+        "detail": "Holds the bit's charge",
+        "variant": "capacitor"
+      },
+      {
+        "label": "Bit line",
+        "glyph": "wires",
+        "detail": "Carries the electrical response toward sensing",
+        "variant": "bit-line"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "gate control"
+      },
+      {
+        "from": 2,
+        "to": 1,
+        "label": "stored charge"
+      },
+      {
+        "from": 1,
+        "to": 3,
+        "label": "selected connection"
+      }
+    ],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "3. The buried word line and the 6F² cell"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "4-the-storage-capacitor",
+    "family": "layers",
+    "title": "A dielectric separates the capacitor electrodes",
+    "caption": "DRAM stores charge on a capacitor. Its three-dimensional shape provides surface area within a small cell footprint.",
+    "nodes": [
+      {
+        "label": "Upper electrode",
+        "glyph": "wires",
+        "detail": "Forms one conducting surface",
+        "variant": "electrode"
+      },
+      {
+        "label": "High-k dielectric",
+        "glyph": "film",
+        "detail": "Separates the electrodes while allowing capacitive coupling",
+        "variant": "dielectric"
+      },
+      {
+        "label": "Storage electrode",
+        "glyph": "wires",
+        "detail": "Connects the capacitor to the cell's storage node",
+        "variant": "electrode"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "4. The storage capacitor"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "5-periphery-beol-and-the-die",
+    "family": "branch",
+    "title": "The repeated array needs supporting circuits",
+    "caption": "Storage cells alone do not form an addressable memory product. Decoding, sensing and interfaces make the array usable.",
+    "nodes": [
+      {
+        "label": "Cell array",
+        "glyph": "memory",
+        "detail": "Contains the repeated storage elements",
+        "variant": "dram"
+      },
+      {
+        "label": "Decoders and sensing",
+        "glyph": "transistor",
+        "detail": "Select rows and interpret bit-line signals",
+        "variant": "sense-amplifier"
+      },
+      {
+        "label": "BEOL and I/O",
+        "glyph": "wires",
+        "detail": "Connect circuits and communicate beyond the die",
+        "variant": "fanout"
+      },
+      {
+        "label": "Completed DRAM die",
+        "glyph": "chip",
+        "detail": "Combines storage with its supporting circuitry"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "5. Periphery, BEOL and the die"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "6-node-naming-and-where-euv-is-used",
+    "family": "compare",
+    "title": "A DRAM generation and a logic node are different labels",
+    "caption": "DRAM process names do not translate directly into logic-node dimensions. EUV use also depends on which particular layers benefit.",
+    "nodes": [
+      {
+        "label": "DRAM node label",
+        "glyph": "memory",
+        "detail": "Names a manufacturer's DRAM process generation",
+        "variant": "dram"
+      },
+      {
+        "label": "Physical cell geometry",
+        "glyph": "transistor",
+        "detail": "Determines the repeated cell footprint",
+        "variant": "access"
+      },
+      {
+        "label": "Selected EUV layers",
+        "glyph": "mask",
+        "detail": "Use EUV where the process flow calls for it",
+        "variant": "euv"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "6. Node naming and where EUV is used"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "7-the-roadmap-4f-vct-and-3d-dram",
+    "family": "compare",
+    "title": "Change cell geometry or build additional tiers",
+    "caption": "Vertical-channel transistors and three-dimensional DRAM explore different ways to improve density. Roadmap concepts are not all established production processes.",
+    "nodes": [
+      {
+        "label": "Planar cell layout",
+        "glyph": "memory",
+        "detail": "Arranges repeated cells across the wafer surface",
+        "variant": "dram"
+      },
+      {
+        "label": "Vertical-channel cell",
+        "glyph": "transistor",
+        "detail": "Reorients the access transistor to change cell area",
+        "variant": "vertical-channel"
+      },
+      {
+        "label": "Three-dimensional DRAM",
+        "glyph": "memory",
+        "detail": "Explores additional vertical integration of memory",
+        "variant": "3d-dram"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "7. The roadmap: 4F² VCT and 3D DRAM"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "8-dram-players-and-capacity",
+    "family": "branch",
+    "title": "Useful capacity depends on more than wafer starts",
+    "caption": "Installed capacity, product allocation and manufacturing yield all influence delivered memory bits.",
+    "nodes": [
+      {
+        "label": "Wafer capacity",
+        "glyph": "wafer",
+        "detail": "Sets the available manufacturing input",
+        "variant": "grid"
+      },
+      {
+        "label": "Process and density",
+        "glyph": "memory",
+        "detail": "Determine potential bits on each wafer",
+        "variant": "dram"
+      },
+      {
+        "label": "Yield and allocation",
+        "glyph": "test",
+        "detail": "Determine which products emerge in usable form"
+      },
+      {
+        "label": "Delivered memory",
+        "glyph": "chip",
+        "detail": "The resulting saleable bits serve different markets"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "8. DRAM players and capacity"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "9-the-nand-cell-floating-gate-to-charge-trap",
+    "family": "compare",
+    "title": "Two structures trap charge to change a transistor",
+    "caption": "NAND retains information through stored charge that shifts transistor behavior. Floating-gate and charge-trap cells store that charge in different structures.",
+    "nodes": [
+      {
+        "label": "Floating gate",
+        "glyph": "transistor",
+        "detail": "Stores charge in an isolated conductive region",
+        "variant": "floating-gate"
+      },
+      {
+        "label": "Charge trap",
+        "glyph": "film",
+        "detail": "Stores charge in an insulating trapping layer",
+        "variant": "charge-trap"
+      },
+      {
+        "label": "Read transistor",
+        "glyph": "test",
+        "detail": "Senses the resulting change in conduction threshold",
+        "variant": "sense-amplifier"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "9. The NAND cell: floating gate to charge trap"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "10-the-3d-nand-architecture",
+    "family": "network",
+    "title": "A vertical channel passes through many gate levels",
+    "caption": "Three-dimensional NAND repeats gate structures along a vertical string. Peripheral circuits address and sense the selected cells.",
+    "nodes": [
+      {
+        "label": "Stacked word lines",
+        "glyph": "wires",
+        "detail": "Surround the channel at successive heights",
+        "variant": "word-lines"
+      },
+      {
+        "label": "Vertical channel",
+        "glyph": "transistor",
+        "detail": "Connects cells along the string",
+        "variant": "vertical-channel"
+      },
+      {
+        "label": "Select devices",
+        "glyph": "transistor",
+        "detail": "Control access to the string",
+        "variant": "select"
+      },
+      {
+        "label": "Peripheral circuitry",
+        "glyph": "chip",
+        "detail": "Addresses and senses the memory",
+        "variant": "logic"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "gate control at each level"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "string conduction"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "selected access"
+      }
+    ],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "10. The 3D NAND architecture"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "11-the-gate-replacement-flow-step-by-step",
+    "family": "flow",
+    "title": "Replace the sacrificial layers with word-line metal",
+    "caption": "The replacement-gate flow creates the channel structure before selectively removing sacrificial layers and filling the resulting spaces.",
+    "nodes": [
+      {
+        "label": "Alternating stack",
+        "glyph": "film",
+        "detail": "Deposit structural and sacrificial layers",
+        "variant": "superlattice"
+      },
+      {
+        "label": "Channel-hole etch",
+        "glyph": "etch",
+        "detail": "Cut through the multilayer stack",
+        "variant": "deep-hole"
+      },
+      {
+        "label": "Channel formation",
+        "glyph": "transistor",
+        "detail": "Build the vertical memory structure",
+        "variant": "vertical-channel"
+      },
+      {
+        "label": "Gate replacement",
+        "glyph": "wires",
+        "detail": "Replace sacrificial material with conducting word lines",
+        "variant": "word-lines"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "11. The gate-replacement flow step by step"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "12-string-stacking-and-the-layer-race",
+    "family": "compare",
+    "title": "One very deep hole or several joined tiers",
+    "caption": "String stacking divides vertical fabrication into tiers. More layers therefore introduce joining and alignment questions as well as deeper etch challenges.",
+    "nodes": [
+      {
+        "label": "Single tier",
+        "glyph": "memory",
+        "detail": "A channel passes through one fabricated stack",
+        "variant": "3d-nand"
+      },
+      {
+        "label": "Joined tiers",
+        "glyph": "memory",
+        "detail": "Successive stacks extend the vertical string",
+        "variant": "3d-nand-stacked"
+      },
+      {
+        "label": "Tier interface",
+        "glyph": "film",
+        "detail": "The connection between tiers becomes an integration challenge",
+        "variant": "tier-interface"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "12. String stacking and the layer race"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "13-nand-players",
+    "family": "branch",
+    "title": "NAND supply combines design, fabrication and packaging",
+    "caption": "A vendor's useful output depends on how its cell architecture, manufacturing and product assembly fit together.",
+    "nodes": [
+      {
+        "label": "Cell and array design",
+        "glyph": "design",
+        "detail": "Defines the memory architecture"
+      },
+      {
+        "label": "Wafer manufacturing",
+        "glyph": "wafer",
+        "detail": "Builds and yields the repeated array"
+      },
+      {
+        "label": "Product assembly",
+        "glyph": "package",
+        "detail": "Combines dies into usable products"
+      },
+      {
+        "label": "NAND output",
+        "glyph": "memory",
+        "detail": "Serves storage products with different requirements",
+        "variant": "3d-nand"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "13. NAND players"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "14-hbm-and-the-bandwidth-wall",
+    "family": "compare",
+    "title": "Bandwidth depends on width as well as pin rate",
+    "caption": "HBM places a wide interface near the processor. This trades package complexity for many short parallel connections.",
+    "nodes": [
+      {
+        "label": "Narrower external interface",
+        "glyph": "wires",
+        "detail": "Carries data through fewer connections at higher per-pin demands",
+        "variant": "narrow-interface"
+      },
+      {
+        "label": "Wide HBM interface",
+        "glyph": "memory",
+        "detail": "Uses many parallel connections beside the processor",
+        "variant": "hbm"
+      },
+      {
+        "label": "Fine package wiring",
+        "glyph": "package",
+        "detail": "Connects the processor and memory across the interposer",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "14. HBM and the bandwidth wall"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "15-anatomy-of-an-hbm-stack",
+    "family": "layers",
+    "title": "The stack contains memory dies and a base die",
+    "caption": "The repeated DRAM-and-bond stack sits above a base die. Vertical connections pass through the repeated interfaces to the base and then into the package interposer.",
+    "nodes": [
+      {
+        "label": "DRAM dies and bonded interfaces",
+        "glyph": "memory",
+        "detail": "Memory dies repeat vertically, with a bonded connection between each adjacent pair",
+        "variant": "hbm"
+      },
+      {
+        "label": "Base die",
+        "glyph": "chip",
+        "detail": "Provides the stack's lower interface and supporting functions",
+        "variant": "logic"
+      },
+      {
+        "label": "Interposer",
+        "glyph": "wires",
+        "detail": "Connects the HBM stack to the processor",
+        "variant": "interposer"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "15. Anatomy of an HBM stack"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "16-the-core-die-tsv-formation",
+    "family": "flow",
+    "title": "Make a conductive path through silicon",
+    "caption": "TSV fabrication forms an insulated, metal-filled vertical opening. Later thinning exposes its back side for connection.",
+    "nodes": [
+      {
+        "label": "Via opening",
+        "glyph": "etch",
+        "detail": "Etch a vertical hole into silicon",
+        "variant": "via"
+      },
+      {
+        "label": "Insulating liner",
+        "glyph": "film",
+        "detail": "Separate the conductor from surrounding silicon",
+        "variant": "liner"
+      },
+      {
+        "label": "Barrier and copper",
+        "glyph": "wires",
+        "detail": "Line and fill the opening",
+        "variant": "via"
+      },
+      {
+        "label": "Prepared TSV",
+        "glyph": "wafer",
+        "detail": "Retain the vertical conductor for later backside access",
+        "variant": "tsv"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "16. The core die: TSV formation"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "17-thinning-backside-reveal-and-microbumps",
+    "family": "flow",
+    "title": "Reveal the TSVs from the back of a thin die",
+    "caption": "The frontside structure is protected while silicon is removed from behind. Backside connections then reach the exposed vertical vias.",
+    "nodes": [
+      {
+        "label": "Temporary support",
+        "glyph": "wafer",
+        "detail": "Support the wafer during thinning",
+        "variant": "carrier"
+      },
+      {
+        "label": "Backgrinding and thinning",
+        "glyph": "etch",
+        "detail": "Remove silicon from the back surface",
+        "variant": "backgrind"
+      },
+      {
+        "label": "TSV reveal",
+        "glyph": "wires",
+        "detail": "Expose the vertical conductor ends",
+        "variant": "tsv"
+      },
+      {
+        "label": "Backside connections",
+        "glyph": "package",
+        "detail": "Form the pads or microbumps for stacking",
+        "variant": "microbump"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "17. Thinning, backside reveal and microbumps"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "18-stacking-tc-ncf-versus-mr-muf",
+    "family": "compare",
+    "title": "Join one die at a time or reflow the stack together",
+    "caption": "TC-NCF and MR-MUF organize joint formation and gap filling differently. The difference is a process sequence, not simply a material name.",
+    "nodes": [
+      {
+        "label": "TC-NCF",
+        "glyph": "package",
+        "detail": "Place non-conductive film and thermocompression-bond successive dies",
+        "variant": "tc-ncf"
+      },
+      {
+        "label": "MR-MUF",
+        "glyph": "package",
+        "detail": "Place the stack, reflow joints and then fill with molded underfill",
+        "variant": "mr-muf"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "18. Stacking: TC-NCF versus MR-MUF"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "19-hybrid-bonding-the-16-high-and-hbm4e-question",
+    "family": "compare",
+    "title": "Removing solder changes the interface budget",
+    "caption": "Hybrid bonding directly joins prepared dielectric and copper surfaces. It reduces the solder-related interface but raises surface and alignment requirements.",
+    "nodes": [
+      {
+        "label": "Microbump interface",
+        "glyph": "package",
+        "detail": "Solder joints and surrounding material separate the dies",
+        "variant": "microbump"
+      },
+      {
+        "label": "Hybrid interface",
+        "glyph": "film",
+        "detail": "Prepared dielectric surfaces bond with aligned copper pads",
+        "variant": "hybrid-bond"
+      },
+      {
+        "label": "Height budget",
+        "glyph": "memory",
+        "detail": "Thinner interfaces change how much room remains for silicon",
+        "variant": "hbm"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "19. Hybrid bonding: the 16-high and HBM4E question"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "20-the-base-die-moves-to-a-logic-foundry",
+    "family": "network",
+    "title": "The base die connects two manufacturing specialties",
+    "caption": "A more capable base die links the memory stack with logic-foundry technology and the processor's package interface.",
+    "nodes": [
+      {
+        "label": "DRAM core dies",
+        "glyph": "memory",
+        "detail": "Provide the stored bits",
+        "variant": "dram"
+      },
+      {
+        "label": "Logic-foundry base die",
+        "glyph": "chip",
+        "detail": "Implements the stack's base circuitry",
+        "variant": "logic"
+      },
+      {
+        "label": "Stack assembly",
+        "glyph": "package",
+        "detail": "Joins core and base dies",
+        "variant": "hbm"
+      },
+      {
+        "label": "Processor interface",
+        "glyph": "wires",
+        "detail": "Connects the completed HBM stack outward",
+        "variant": "wide-interface"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 2,
+        "label": "memory dies"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "base die"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "stack interface"
+      }
+    ],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "20. The base die moves to a logic foundry"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "21-testing-and-known-good-stacks",
+    "family": "flow",
+    "title": "A good die must survive becoming a stack",
+    "caption": "Screening at successive stages limits the chance that one weak component spoils the completed stack.",
+    "nodes": [
+      {
+        "label": "Core-die screening",
+        "glyph": "test",
+        "detail": "Test DRAM dies before expensive assembly",
+        "variant": "probe"
+      },
+      {
+        "label": "Base-die screening",
+        "glyph": "chip",
+        "detail": "Establish useful functionality at the base",
+        "variant": "logic"
+      },
+      {
+        "label": "Stack testing",
+        "glyph": "memory",
+        "detail": "Exercise assembled vertical connections and memory",
+        "variant": "hbm"
+      },
+      {
+        "label": "Known-good stack",
+        "glyph": "package",
+        "detail": "Provide screened HBM for package integration",
+        "variant": "hbm"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "21. Testing and known-good stacks"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "22-thermal-issues",
+    "family": "network",
+    "title": "Every active layer contributes to a thermal path",
+    "caption": "Heat originates within the stack and must cross material interfaces to reach the package's cooling path.",
+    "nodes": [
+      {
+        "label": "DRAM layers",
+        "glyph": "memory",
+        "detail": "Generate heat during memory activity",
+        "variant": "hbm"
+      },
+      {
+        "label": "Die and bond interfaces",
+        "glyph": "film",
+        "detail": "Form the path between stacked layers",
+        "variant": "interface"
+      },
+      {
+        "label": "Package heat path",
+        "glyph": "package",
+        "detail": "Transfers heat beyond the memory stack",
+        "variant": "flip-chip"
+      },
+      {
+        "label": "Cooling system",
+        "glyph": "heat",
+        "detail": "Removes the heat from the assembly"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "heat conduction"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "heat conduction"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "heat removal"
+      }
+    ],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "22. Thermal issues"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "23-economics-price-wafer-consumption-and-the-shortage",
+    "family": "branch",
+    "title": "HBM supply needs more than memory wafers",
+    "caption": "Wafer consumption, usable dies, stacking and package demand jointly determine delivered HBM supply.",
+    "nodes": [
+      {
+        "label": "DRAM wafer input",
+        "glyph": "wafer",
+        "detail": "Consumes fabrication capacity",
+        "variant": "grid"
+      },
+      {
+        "label": "Die and stack yield",
+        "glyph": "test",
+        "detail": "Determine how much input becomes useful memory"
+      },
+      {
+        "label": "Stacking capacity",
+        "glyph": "package",
+        "detail": "Limits completed stacks",
+        "variant": "hbm"
+      },
+      {
+        "label": "Available HBM",
+        "glyph": "memory",
+        "detail": "Must match the needs of the processor package",
+        "variant": "hbm"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "23. Economics: price, wafer consumption and the shortage"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "24-who-supplies-whom",
+    "family": "network",
+    "title": "The memory-to-processor chain crosses company boundaries",
+    "caption": "Core dies, base dies and package integration can involve different organizations. Qualification connects their interfaces.",
+    "nodes": [
+      {
+        "label": "Memory supplier",
+        "glyph": "memory",
+        "detail": "Provides qualified DRAM technology and stacks",
+        "variant": "hbm"
+      },
+      {
+        "label": "Base-die supplier",
+        "glyph": "chip",
+        "detail": "Provides the required base circuitry",
+        "variant": "logic"
+      },
+      {
+        "label": "Package integrator",
+        "glyph": "package",
+        "detail": "Combines processor and HBM",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "Processor product owner",
+        "glyph": "design",
+        "detail": "Defines the required memory and system behavior"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 2,
+        "label": "qualified memory"
+      },
+      {
+        "from": 1,
+        "to": 0,
+        "label": "base-die integration"
+      },
+      {
+        "from": 3,
+        "to": 2,
+        "label": "product requirements"
+      }
+    ],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "24. Who supplies whom"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "25-handoff-to-cowos",
+    "family": "branch",
+    "title": "HBM and the logic die meet at CoWoS",
+    "caption": "The memory stack is a parallel manufacturing branch, not something grown on the GPU die.",
+    "nodes": [
+      {
+        "label": "Known-good HBM",
+        "glyph": "memory",
+        "detail": "Arrives as a screened memory stack",
+        "variant": "hbm"
+      },
+      {
+        "label": "Screened logic die",
+        "glyph": "chip",
+        "detail": "Arrives from logic fabrication and test",
+        "variant": "logic"
+      },
+      {
+        "label": "Interposer and substrate",
+        "glyph": "wires",
+        "detail": "Provide the package's connecting structures",
+        "variant": "interposer"
+      },
+      {
+        "label": "CoWoS assembly",
+        "glyph": "package",
+        "detail": "Brings logic and memory together",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "heading": "25. Handoff to CoWoS"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  }
+]

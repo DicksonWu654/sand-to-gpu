@@ -1,0 +1,332 @@
+[
+  {
+    "section": "what-a-package-must-do",
+    "family": "branch",
+    "title": "A package solves several physical problems at once",
+    "caption": "Electrical connection, protection and heat removal all act on the same fragile die.",
+    "nodes": [
+      {
+        "label": "Electrical fan-out",
+        "glyph": "wires",
+        "detail": "Connect fine die pads to larger system wiring",
+        "variant": "fanout"
+      },
+      {
+        "label": "Mechanical protection",
+        "glyph": "material",
+        "detail": "Support and protect the silicon"
+      },
+      {
+        "label": "Thermal path",
+        "glyph": "heat",
+        "detail": "Carry dissipated heat toward cooling"
+      },
+      {
+        "label": "Usable component",
+        "glyph": "package",
+        "detail": "Combine those functions in one package",
+        "variant": "flip-chip"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/16-packaging-fundamentals.md",
+      "heading": "What a Package Must Do"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-back-end-flow-in-order",
+    "family": "flow",
+    "title": "Change a wafer into individually connected components",
+    "caption": "The back end handles thinning, separation and attachment before the package is finished and tested.",
+    "nodes": [
+      {
+        "label": "Wafer preparation",
+        "glyph": "wafer",
+        "detail": "Form required connections and reduce thickness",
+        "variant": "bump"
+      },
+      {
+        "label": "Dicing",
+        "glyph": "etch",
+        "detail": "Separate individual dies",
+        "variant": "dicing"
+      },
+      {
+        "label": "Die attachment",
+        "glyph": "chip",
+        "detail": "Place the die on its package support"
+      },
+      {
+        "label": "Electrical connection",
+        "glyph": "wires",
+        "detail": "Join the die by wire bonding or flip chip",
+        "variant": "wire-bond"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/16-packaging-fundamentals.md",
+      "heading": "The Back-End Flow in Order"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-substrate-in-depth",
+    "family": "layers",
+    "title": "The substrate expands fine connections outward",
+    "caption": "A multilayer organic substrate redistributes connections through copper layers and vertical vias.",
+    "nodes": [
+      {
+        "label": "Die-side connections",
+        "glyph": "package",
+        "detail": "Receive the die's fine-pitch contacts",
+        "variant": "microbump"
+      },
+      {
+        "label": "Build-up wiring",
+        "glyph": "wires",
+        "detail": "Routes signals through fine copper and dielectric layers",
+        "variant": "substrate"
+      },
+      {
+        "label": "Core structure",
+        "glyph": "material",
+        "detail": "Supports the substrate and vertical connections",
+        "variant": "core"
+      },
+      {
+        "label": "Board-side terminals",
+        "glyph": "wires",
+        "detail": "Connect the package to the printed circuit board",
+        "variant": "bga"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/16-packaging-fundamentals.md",
+      "heading": "The Substrate in Depth"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "leadframes-and-the-mass-market",
+    "family": "layers",
+    "title": "A leadframe carries and connects the die",
+    "caption": "A metal frame can supply both die support and external leads, with molding protecting the assembly.",
+    "nodes": [
+      {
+        "label": "Mold compound",
+        "glyph": "material",
+        "detail": "Encapsulates the die and internal connections",
+        "variant": "mold"
+      },
+      {
+        "label": "Die and bond wires",
+        "glyph": "chip",
+        "detail": "Implement the circuit and connect it to leads",
+        "variant": "wire-bond"
+      },
+      {
+        "label": "Metal leadframe",
+        "glyph": "wires",
+        "detail": "Supports the die and forms the external connections",
+        "variant": "leadframe"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/16-packaging-fundamentals.md",
+      "heading": "Leadframes and the Mass Market"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "molding-marking-ball-attach-lids-singulation",
+    "family": "flow",
+    "title": "Finish the package before separating finished units",
+    "caption": "The exact finishing sequence depends on package type. Protection, external terminals and identification prepare it for final test and shipment.",
+    "nodes": [
+      {
+        "label": "Protect the assembly",
+        "glyph": "material",
+        "detail": "Apply molding or a lid as the package requires",
+        "variant": "mold"
+      },
+      {
+        "label": "Form external terminals",
+        "glyph": "wires",
+        "detail": "Attach balls or prepare land-grid contacts",
+        "variant": "bga"
+      },
+      {
+        "label": "Mark and identify",
+        "glyph": "design",
+        "detail": "Preserve package identification and traceability"
+      },
+      {
+        "label": "Singulate",
+        "glyph": "etch",
+        "detail": "Separate finished package units",
+        "variant": "dicing"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/16-packaging-fundamentals.md",
+      "heading": "Molding, Marking, Ball Attach, Lids, Singulation"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "wafer-level-and-fan-out-packaging",
+    "family": "compare",
+    "title": "Redistribution can stay within the die or extend beyond it",
+    "caption": "Wafer-level and fan-out packaging organize redistribution differently. Fan-out creates additional routing area outside the die footprint.",
+    "nodes": [
+      {
+        "label": "Wafer-level package",
+        "glyph": "wafer",
+        "detail": "Build package connections while dies remain in wafer form",
+        "variant": "wafer-level"
+      },
+      {
+        "label": "Fan-out structure",
+        "glyph": "package",
+        "detail": "Embed separated dies and extend redistribution beyond their edges",
+        "variant": "fan-out"
+      },
+      {
+        "label": "Redistribution wiring",
+        "glyph": "wires",
+        "detail": "Connect small die contacts to larger external terminals",
+        "variant": "fanout"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/16-packaging-fundamentals.md",
+      "heading": "Wafer-Level and Fan-Out Packaging"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-package-taxonomy",
+    "family": "compare",
+    "title": "Connection style and integration level are separate choices",
+    "caption": "A package taxonomy describes how a die connects and how many components are integrated. These categories overlap rather than forming one ladder.",
+    "nodes": [
+      {
+        "label": "Wire-bond package",
+        "glyph": "package",
+        "detail": "Connects die pads with fine wires",
+        "variant": "wire-bond"
+      },
+      {
+        "label": "Flip-chip package",
+        "glyph": "package",
+        "detail": "Connects face-down die pads directly to the support",
+        "variant": "flip-chip"
+      },
+      {
+        "label": "Multi-die package",
+        "glyph": "package",
+        "detail": "Integrates several separately fabricated dies",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/16-packaging-fundamentals.md",
+      "heading": "The Package Taxonomy"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "package-reliability-and-qualification",
+    "family": "cycle",
+    "title": "Stress the interfaces, inspect the consequence",
+    "caption": "Package qualification examines how materials and connections respond to environmental and operating stress.",
+    "nodes": [
+      {
+        "label": "Material interfaces",
+        "glyph": "film",
+        "detail": "Join materials with different physical behavior",
+        "variant": "interface"
+      },
+      {
+        "label": "Thermal or mechanical stress",
+        "glyph": "heat",
+        "detail": "Exercise the package under controlled conditions"
+      },
+      {
+        "label": "Failure inspection",
+        "glyph": "test",
+        "detail": "Identify changes in joints, surfaces or continuity"
+      },
+      {
+        "label": "Qualification decision",
+        "glyph": "design",
+        "detail": "Compare the evidence with the required criteria"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/16-packaging-fundamentals.md",
+      "heading": "Package Reliability and Qualification"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-industry-osats-foundry-back-ends-and-equipment",
+    "family": "network",
+    "title": "Assembly depends on an ecosystem of specialists",
+    "caption": "OSATs, foundry back ends and equipment suppliers occupy different roles in turning tested dies into packages.",
+    "nodes": [
+      {
+        "label": "Product owner",
+        "glyph": "design",
+        "detail": "Defines the component requirements"
+      },
+      {
+        "label": "Assembly provider",
+        "glyph": "package",
+        "detail": "Integrates the dies and package materials",
+        "variant": "flip-chip"
+      },
+      {
+        "label": "Equipment suppliers",
+        "glyph": "furnace",
+        "detail": "Provide bonding, molding and processing tools"
+      },
+      {
+        "label": "Test provider",
+        "glyph": "test",
+        "detail": "Checks the assembled product"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "package requirements"
+      },
+      {
+        "from": 2,
+        "to": 1,
+        "label": "production tools"
+      },
+      {
+        "from": 1,
+        "to": 3,
+        "label": "assembled components"
+      }
+    ],
+    "source": {
+      "file": "course/modules/16-packaging-fundamentals.md",
+      "heading": "The Industry: OSATs, Foundry Back Ends, and Equipment"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  }
+]

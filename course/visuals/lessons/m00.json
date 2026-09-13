@@ -1,0 +1,241 @@
+[
+  {
+    "section": "what-a-chip-is-physically",
+    "family": "layers",
+    "title": "A die's device and wiring layers",
+    "caption": "Metal interconnect sits above the device layer and silicon substrate in this die-oriented view. Packaging is a separate assembly around the die, not another on-chip film. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "wires",
+        "label": "Metal wiring",
+        "detail": "Multiple patterned layers route signals and power.",
+        "variant": "via"
+      },
+      {
+        "glyph": "transistor",
+        "label": "Device layer",
+        "detail": "Gates control current near the silicon surface.",
+        "variant": "planar"
+      },
+      {
+        "glyph": "wafer",
+        "label": "Silicon foundation",
+        "detail": "A single crystal supports the devices."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/00-overview.md",
+      "heading": "What a chip is, physically"
+    }
+  },
+  {
+    "section": "the-chain-in-one-table",
+    "family": "flow",
+    "title": "Follow the changing physical object",
+    "caption": "Each stage passes a different object to the next specialist; value and elapsed time accumulate along that path. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Purified crystal",
+        "detail": "Quartz becomes polysilicon, then a single crystal."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Patterned wafer",
+        "detail": "Fab processes repeat across many die sites.",
+        "variant": "grid"
+      },
+      {
+        "glyph": "package",
+        "label": "Connected assembly",
+        "detail": "Tested dies join memory and package wiring.",
+        "variant": "cowos-s"
+      },
+      {
+        "glyph": "rack",
+        "label": "Computing system",
+        "detail": "Boards, cooling and networking make the chip useful.",
+        "variant": "rack"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/00-overview.md",
+      "heading": "The Chain in One Table"
+    }
+  },
+  {
+    "section": "stage-by-stage",
+    "family": "branch",
+    "title": "Three streams meet in the package",
+    "caption": "Logic, memory and package interconnect follow different manufacturing paths before assembly joins them. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "chip",
+        "label": "Logic die",
+        "detail": "The foundry builds the processor circuit.",
+        "variant": "gpu"
+      },
+      {
+        "glyph": "memory",
+        "label": "Memory stacks",
+        "detail": "Memory manufacturers build and test DRAM dies.",
+        "variant": "hbm"
+      },
+      {
+        "glyph": "wires",
+        "label": "Interposer and substrate",
+        "detail": "Separate manufacturing creates the connections.",
+        "variant": "fan-out"
+      },
+      {
+        "glyph": "package",
+        "label": "Accelerator package",
+        "detail": "Assembly joins these streams into one system.",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/00-overview.md",
+      "heading": "Stage by Stage"
+    }
+  },
+  {
+    "section": "money-flow-and-industry-structure",
+    "family": "branch",
+    "title": "Who enables a chip designer?",
+    "caption": "A fabless designer depends on several specialist capabilities; no single purchasing relationship explains the whole chain. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "design",
+        "label": "EDA and IP",
+        "detail": "Tools and reusable blocks help define the circuit."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Foundry",
+        "detail": "The manufacturing process turns a layout into devices."
+      },
+      {
+        "glyph": "package",
+        "label": "Assembly and test",
+        "detail": "Partners connect dies and screen finished parts."
+      },
+      {
+        "glyph": "chip",
+        "label": "Fabless product",
+        "detail": "The designer coordinates the resulting chip product."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/00-overview.md",
+      "heading": "Money Flow and Industry Structure"
+    }
+  },
+  {
+    "section": "the-three-chokepoints",
+    "family": "branch",
+    "title": "Capacity depends on complementary capabilities",
+    "caption": "The course highlights lithography, advanced packaging and HBM as interdependent constraints; these are not interchangeable capacity pools. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "light",
+        "label": "EUV patterning",
+        "detail": "Leading logic needs scarce patterning capability.",
+        "variant": "reflective"
+      },
+      {
+        "glyph": "memory",
+        "label": "HBM supply",
+        "detail": "Memory dies must also be manufactured and stacked.",
+        "variant": "hbm"
+      },
+      {
+        "glyph": "package",
+        "label": "Advanced assembly",
+        "detail": "Logic and memory need dense package connections.",
+        "variant": "cowos-s"
+      },
+      {
+        "glyph": "rack",
+        "label": "Shippable accelerator",
+        "detail": "All required inputs must arrive and pass their checks.",
+        "variant": "gpu"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/00-overview.md",
+      "heading": "The Three Chokepoints"
+    }
+  },
+  {
+    "section": "master-process-flow-sand-to-rack-in-60-steps",
+    "family": "cycle",
+    "title": "The fab loop inside the longer journey",
+    "caption": "Deposition, patterning, removal and measurement recur many times before a wafer is complete; this cycle is nested inside the sand-to-rack flow. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "film",
+        "label": "Add material",
+        "detail": "Grow or deposit the next useful layer."
+      },
+      {
+        "glyph": "mask",
+        "label": "Define a pattern",
+        "detail": "Resist and lithography locate the features."
+      },
+      {
+        "glyph": "etch",
+        "label": "Transfer the pattern",
+        "detail": "Etch or other processing modifies exposed regions."
+      },
+      {
+        "glyph": "test",
+        "label": "Measure and control",
+        "detail": "Check the result before subsequent layers."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/00-overview.md",
+      "heading": "Master Process Flow: Sand to Rack in ~60 Steps"
+    }
+  },
+  {
+    "section": "how-to-read-this-course",
+    "family": "flow",
+    "title": "Use the physical flow as your index",
+    "caption": "Read the chain in sequence or enter at the process that interests you; the glossary supplies vocabulary across every stage. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Start with matter",
+        "detail": "Understand purity, crystal growth and wafers."
+      },
+      {
+        "glyph": "transistor",
+        "label": "Follow the mechanism",
+        "detail": "Connect unit processes to the device they make."
+      },
+      {
+        "glyph": "package",
+        "label": "Connect the system",
+        "detail": "Trace packaging, testing and use."
+      },
+      {
+        "glyph": "design",
+        "label": "Return to the map",
+        "detail": "Use references and glossary to resolve unfamiliar terms."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/00-overview.md",
+      "heading": "How to Read This Course"
+    }
+  }
+]

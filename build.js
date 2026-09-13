@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { marked } = require('marked');
+const sectionFigures = require('./course/visuals/render');
 
 const ROOT = __dirname;
 const MOD_DIR = path.join(ROOT, 'course', 'modules');
@@ -102,7 +103,8 @@ function extractKeyNumbers(md) {
 }
 
 function insertWidgets(html, placements) {
-  // placements: [{widget, before: 'heading id or text regex', or: 'after-intro'}]
+  // Legacy 'before' is the heading selector; place within that section after its opening paragraph.
+  // placements: [{widget, before: 'heading text regex'}] or [{widget, at: 'after-intro'}]
   for (const p of placements || []) {
     const tag = `<div class="widget" data-widget="${p.widget}"${p.title ? ` data-title="${p.title}"` : ''}></div>\n`;
     if (p.at === 'after-intro') {
@@ -113,7 +115,13 @@ function insertWidgets(html, placements) {
     if (p.before) {
       const re = new RegExp(`<h[23] id="[^"]*">[^<]*(?:${p.before})`, 'i');
       const m = html.match(re);
-      if (m) { html = html.slice(0, m.index) + tag + html.slice(m.index); continue; }
+      if (m) {
+        const headingEnd = html.indexOf('</h', m.index);
+        const end = html.indexOf('>', headingEnd) + 1;
+        const next = html.slice(end).search(/<h[23]\b/);
+        html = sectionFigures.insertAfterOpening(html, end, next < 0 ? html.length : end + next, tag);
+        continue;
+      }
     }
     if (p.before) console.warn('Widget heading not found:', p.widget, p.before);
     // fallback: after intro
@@ -123,7 +131,7 @@ function insertWidgets(html, placements) {
   return html;
 }
 
-function buildOne(md, n, slug, placement, quizPath) {
+function buildOne(md, n, slug, placement, quizPath, track = 'm') {
   md = md.replace(/\r\n/g, '\n');
   const titleM = md.match(/^#\s+(?:Module|Survey)\s+\d+:\s*(.+)$/m) || md.match(/^#\s+(.+)$/m);
   const title = titleM ? titleM[1].trim() : slug;
@@ -142,13 +150,14 @@ function buildOne(md, n, slug, placement, quizPath) {
   const idSet = new Set();
   marked.use({ gfm: true, renderer: makeRenderer(toc, idSet) });
   let html = marked.parse(md);
-  html = insertWidgets(html, placement);
+  const illustrated = sectionFigures.apply(html, track, n);
+  html = insertWidgets(illustrated.html, placement);
   const words = md.split(/\s+/).filter(Boolean).length;
   let quiz = null;
   if (quizPath && fs.existsSync(quizPath)) {
     try { quiz = JSON.parse(fs.readFileSync(quizPath, 'utf8').replace(/^﻿/, '')); } catch (e) { console.warn('bad quiz json', quizPath, e.message); }
   }
-  return { n, slug, title, html, toc, words, quiz, keyNumbers };
+  return { n, slug, title, html, toc, words, quiz, keyNumbers, figureCount: illustrated.count };
 }
 
 function build() {
@@ -169,12 +178,15 @@ function build() {
     for (const f of fs.readdirSync(SURVEY_DIR).filter(f => /^S\d\d-.*\.md$/.test(f)).sort()) {
       const n = parseInt(f.slice(1, 3), 10);
       const slug = f.slice(4, -3);
-      const s = buildOne(fs.readFileSync(path.join(SURVEY_DIR, f), 'utf8'), n, slug, null, null);
+      const s = buildOne(fs.readFileSync(path.join(SURVEY_DIR, f), 'utf8'), n, slug, null, null, 's');
       survey.push(s);
       console.log(`survey ${String(n).padStart(2, '0')}  ${String(s.words).padStart(6)} words  ${s.toc.length} headings  ${s.title}`);
     }
   }
   fs.writeFileSync(path.join(ROOT, 'course', 'SAND_TO_GPU_full_course.md'), '# Sand to GPU — Complete Deep-Dive Course\n\nGenerated from course/modules by node build.js. Edit individual modules and rebuild.\n\n' + files.map(f => fs.readFileSync(path.join(MOD_DIR, f), 'utf8').trim()).join('\n\n---\n\n') + '\n');
+  const figureCoverage = sectionFigures.coverage();
+  fs.writeFileSync(path.join(ROOT, 'course', 'visuals', 'coverage.json'), JSON.stringify(figureCoverage, null, 2) + '\n');
+  console.log(`Authored section figures: ${figureCoverage.actual}/${figureCoverage.expected}`);
   const payload = { parts: PARTS, modules, survey, built: new Date().toISOString() };
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, 'window.COURSE = ' + JSON.stringify(payload) + ';\n');

@@ -1,0 +1,4199 @@
+{
+  "timestamp": "2026-09-13T23:24:08.691Z",
+  "cases": 132,
+  "failures": 0,
+  "results": [
+    {
+      "route": "#/home",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 0,
+      "expectedWidgets": 0,
+      "labFonts": [],
+      "controlFonts": [],
+      "controlsChecked": 0,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 0,
+      "widgets": 0,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/00",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 7,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 64,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 7,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/01",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 10,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [],
+      "controlsChecked": 0,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 10,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/02",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 14,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 14,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/03",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 21,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 1,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 21,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/04",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 19,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 2,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 19,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/05",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 13,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 65,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 13,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/06",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 10,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 11,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 10,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/07",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 11,
+      "expectedWidgets": 4,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 33,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 11,
+      "widgets": 4,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/08",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 12,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 20,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 12,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/09",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 10,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 9,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 10,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/10",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 12,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 7,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 12,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/11",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 8,
+      "expectedWidgets": 4,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 16,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 8,
+      "widgets": 4,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/12",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 13,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 19,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 13,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/13",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 13,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 13,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/14",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 17,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 17,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/15",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 25,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 26,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 25,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/16",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 9,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 17,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 9,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/17",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 13,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 24,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 13,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/18",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 15,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [],
+      "controlsChecked": 0,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 15,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/19",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 20,
+      "expectedWidgets": 4,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 29,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 20,
+      "widgets": 4,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/20",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 14,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 15,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 14,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/21",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 13,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/01",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/02",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/03",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 1,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/04",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 10,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/05",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/06",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/07",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/08",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 3,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/09",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 14,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/10",
+      "width": 1280,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 14,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/home",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 0,
+      "expectedWidgets": 0,
+      "labFonts": [],
+      "controlFonts": [],
+      "controlsChecked": 0,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 0,
+      "widgets": 0,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/00",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 7,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 64,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 7,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/01",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 10,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [],
+      "controlsChecked": 0,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 10,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/02",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 14,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 14,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/03",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 21,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 1,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 21,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/04",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 19,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 2,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 19,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/05",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 13,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 65,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 13,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/06",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 10,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 11,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 10,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/07",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 11,
+      "expectedWidgets": 4,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 33,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 11,
+      "widgets": 4,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/08",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 12,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 20,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 12,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/09",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 10,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 9,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 10,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/10",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 12,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 7,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 12,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/11",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 8,
+      "expectedWidgets": 4,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 16,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 8,
+      "widgets": 4,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/12",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 13,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 19,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 13,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/13",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 13,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 13,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/14",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 17,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 17,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/15",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 25,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 26,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 25,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/16",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 9,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 17,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 9,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/17",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 13,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 24,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 13,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/18",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 15,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [],
+      "controlsChecked": 0,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 15,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/19",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 20,
+      "expectedWidgets": 4,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 29,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 20,
+      "widgets": 4,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/20",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 14,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 15,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 14,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/21",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 13,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/01",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/02",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/03",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 1,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/04",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 10,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/05",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/06",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/07",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/08",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 3,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/09",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 14,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/10",
+      "width": 1280,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 14,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 1280,
+      "viewport": 1280,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/home",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 0,
+      "expectedWidgets": 0,
+      "labFonts": [],
+      "controlFonts": [],
+      "controlsChecked": 0,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 0,
+      "widgets": 0,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/00",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 7,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 64,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 7,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/01",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 10,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [],
+      "controlsChecked": 0,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 10,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/02",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 14,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 14,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/03",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 21,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 1,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 21,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/04",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 19,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 2,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 19,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/05",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 13,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 65,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 13,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/06",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 10,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 11,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 10,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/07",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 11,
+      "expectedWidgets": 4,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 33,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 11,
+      "widgets": 4,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/08",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 12,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 20,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 12,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/09",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 10,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 9,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 10,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/10",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 12,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 7,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 12,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/11",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 8,
+      "expectedWidgets": 4,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 16,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 8,
+      "widgets": 4,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/12",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 13,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 19,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 13,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/13",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 13,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 13,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/14",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 17,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 17,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/15",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 25,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 26,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 25,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/16",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 9,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 17,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 9,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/17",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 13,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 24,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 13,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/18",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 15,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [],
+      "controlsChecked": 0,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 15,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/19",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 20,
+      "expectedWidgets": 4,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 29,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 20,
+      "widgets": 4,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/20",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 14,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 15,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 14,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/21",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 13,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/01",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/02",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/03",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 1,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/04",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 10,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/05",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/06",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/07",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/08",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 3,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/09",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 14,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/10",
+      "width": 375,
+      "theme": "light",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 14,
+      "tokens": {
+        "ground": "#f5f3ed",
+        "panel": "#fdfcf8",
+        "ink": "#242d2a",
+        "accent": "#a54c30",
+        "si": "#43777b",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/home",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 0,
+      "expectedWidgets": 0,
+      "labFonts": [],
+      "controlFonts": [],
+      "controlsChecked": 0,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 0,
+      "widgets": 0,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/00",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 7,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 64,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 7,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/01",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 10,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [],
+      "controlsChecked": 0,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 10,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/02",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 14,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 14,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/03",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 21,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 1,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 21,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/04",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 19,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 2,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 19,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/05",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 13,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 65,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 13,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/06",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 10,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 11,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 10,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/07",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 11,
+      "expectedWidgets": 4,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 33,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 11,
+      "widgets": 4,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/08",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 12,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 20,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 12,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/09",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 10,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 9,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 10,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/10",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 12,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 7,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 12,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/11",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 8,
+      "expectedWidgets": 4,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 16,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 8,
+      "widgets": 4,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/12",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 13,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 19,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 13,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/13",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 13,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 13,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/14",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 17,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 17,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/15",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 25,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 26,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 25,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/16",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 9,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 17,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 9,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/17",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 13,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 24,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 13,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/18",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 15,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [],
+      "controlsChecked": 0,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 15,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/19",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 20,
+      "expectedWidgets": 4,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 29,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 20,
+      "widgets": 4,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/20",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 14,
+      "expectedWidgets": 3,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 15,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 14,
+      "widgets": 3,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/m/21",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 2,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 13,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 2,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/01",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/02",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/03",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 1,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/04",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 10,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/05",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/06",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 8,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/07",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 6,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/08",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 3,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/09",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 14,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "route": "#/s/10",
+      "width": 375,
+      "theme": "dark",
+      "expectedFigures": 6,
+      "expectedWidgets": 1,
+      "labFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlFonts": [
+        "\"Bricolage Grotesque\", \"Segoe UI\", system-ui, sans-serif"
+      ],
+      "controlsChecked": 14,
+      "tokens": {
+        "ground": "#171d1b",
+        "panel": "#1e2723",
+        "ink": "#e8ece2",
+        "accent": "#e9a07d",
+        "si": "#8bbdc1",
+        "sans": "\"Bricolage Grotesque\",\"Segoe UI\",system-ui,sans-serif"
+      },
+      "documentWidth": 375,
+      "viewport": 375,
+      "figures": 6,
+      "widgets": 1,
+      "widgetErrors": [],
+      "missingHeadings": [],
+      "missingFigureLabels": 0,
+      "badLinks": [],
+      "errors": [],
+      "failures": []
+    }
+  ]
+}

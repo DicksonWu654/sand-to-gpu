@@ -1,0 +1,182 @@
+[
+  {
+    "family": "compare",
+    "title": "A film\u2019s role determines its requirements",
+    "caption": "Permanent conductors and insulators serve the circuit; temporary masks and sacrificial films serve the manufacturing sequence.",
+    "nodes": [
+      {
+        "label": "Conductor",
+        "detail": "Carries electrical current in the finished device.",
+        "glyph": "wires",
+        "variant": "wide"
+      },
+      {
+        "label": "Insulator",
+        "detail": "Separates paths that must not conduct together.",
+        "glyph": "film"
+      },
+      {
+        "label": "Hardmask",
+        "detail": "Protects selected material during pattern transfer.",
+        "glyph": "mask"
+      },
+      {
+        "label": "Sacrificial film",
+        "detail": "Creates a useful shape or space when removed later.",
+        "glyph": "etch"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "1-every-film-has-a-job-in-the-device"
+  },
+  {
+    "family": "compare",
+    "title": "Transport and reaction determine coverage",
+    "caption": "Directional arrival can leave shadowed regions; gas-phase transport and surface chemistry offer other ways to coat complex structures. Actual coverage depends on the specific process.",
+    "nodes": [
+      {
+        "label": "PVD",
+        "detail": "Material travels from a physical source toward surfaces.",
+        "glyph": "film",
+        "variant": "pvd"
+      },
+      {
+        "label": "CVD",
+        "detail": "Reacting gases form a film on accessible surfaces.",
+        "glyph": "film",
+        "variant": "cvd"
+      },
+      {
+        "label": "ALD",
+        "detail": "Alternating surface reactions build material cycle by cycle.",
+        "glyph": "film",
+        "variant": "ald"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "2-different-deposition-methods-reach-different-surfaces"
+  },
+  {
+    "family": "cycle",
+    "title": "ALD separates the two reactants in time",
+    "caption": "A surface reaction stops when available sites are consumed. Purges separate precursor exposures; the complete sequence is repeated to build the film.",
+    "nodes": [
+      {
+        "label": "Precursor A",
+        "detail": "React with available surface sites.",
+        "glyph": "gas"
+      },
+      {
+        "label": "Purge",
+        "detail": "Remove excess precursor and reaction products.",
+        "glyph": "clean"
+      },
+      {
+        "label": "Precursor B",
+        "detail": "React with the surface left by A.",
+        "glyph": "gas"
+      },
+      {
+        "label": "Purge again",
+        "detail": "Prepare for the next cycle without mixing feeds.",
+        "glyph": "clean"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "3-atomic-layer-deposition-controls-the-reaction-sequence"
+  },
+  {
+    "family": "compare",
+    "title": "The stencil becomes a material profile",
+    "caption": "Directional removal preserves a different shape from removal that proceeds sideways as well. Mask behavior and surface chemistry influence the final profile.",
+    "nodes": [
+      {
+        "label": "Protected surface",
+        "detail": "Openings identify the regions to remove.",
+        "glyph": "mask"
+      },
+      {
+        "label": "Directional etch",
+        "detail": "Removal proceeds mainly downward through the openings.",
+        "glyph": "etch",
+        "variant": "anisotropic"
+      },
+      {
+        "label": "Lateral removal",
+        "detail": "Sideways attack can undercut the mask.",
+        "glyph": "etch",
+        "variant": "isotropic"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "4-etching-turns-the-stencil-into-a-shape"
+  },
+  {
+    "family": "branch",
+    "title": "Stop at the right material and depth",
+    "caption": "Selectivity, endpoint evidence and surface protection work together. Removing the desired layer is not enough if the underlying structure is damaged.",
+    "nodes": [
+      {
+        "label": "Material selectivity",
+        "detail": "Prefer removal of the target over exposed alternatives.",
+        "glyph": "film"
+      },
+      {
+        "label": "Endpoint signal",
+        "detail": "Observe evidence that the intended endpoint is reached.",
+        "glyph": "test",
+        "variant": "optical"
+      },
+      {
+        "label": "Profile control",
+        "detail": "Manage sidewalls and unwanted lateral attack.",
+        "glyph": "etch",
+        "variant": "anisotropic"
+      },
+      {
+        "label": "Intended structure",
+        "detail": "Reach the target depth while preserving its surroundings.",
+        "glyph": "transistor",
+        "variant": "planar"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "5-precise-removal-requires-knowing-when-and-where-to-stop"
+  },
+  {
+    "family": "flow",
+    "title": "Place dopants, then make them electrically useful",
+    "caption": "Implantation introduces selected atoms and damages the lattice. A controlled heat treatment repairs damage and activates dopants within the thermal budget.",
+    "nodes": [
+      {
+        "label": "Ion beam",
+        "detail": "Introduce selected dopant species into exposed regions.",
+        "glyph": "gas"
+      },
+      {
+        "label": "Modified crystal",
+        "detail": "The implant profile and crystal damage need control.",
+        "glyph": "crystal"
+      },
+      {
+        "label": "Anneal",
+        "detail": "Use heat to repair and activate without excessive redistribution.",
+        "glyph": "heat"
+      },
+      {
+        "label": "Electrical region",
+        "detail": "The resulting carrier behavior supports the device.",
+        "glyph": "transistor",
+        "variant": "planar"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "6-doping-changes-electrical-behavior-and-heat-completes-the-"
+  }
+]

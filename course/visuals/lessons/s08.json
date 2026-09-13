@@ -1,0 +1,214 @@
+[
+  {
+    "family": "network",
+    "title": "Useful computation depends on data movement",
+    "caption": "Capacity, bandwidth and latency answer different questions. Storage holding a dataset does not guarantee fast delivery to the arithmetic units.",
+    "nodes": [
+      {
+        "label": "Storage",
+        "detail": "Holds information beyond the immediate working set.",
+        "glyph": "memory",
+        "variant": "nand"
+      },
+      {
+        "label": "Working memory",
+        "detail": "Supplies data needed by active computations.",
+        "glyph": "memory",
+        "variant": "dram"
+      },
+      {
+        "label": "Compute",
+        "detail": "Uses inputs and produces results.",
+        "glyph": "chip"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "load data into the working set"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "deliver operands"
+      },
+      {
+        "from": 2,
+        "to": 1,
+        "label": "store results"
+      }
+    ],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "1-computing-needs-somewhere-to-put-things"
+  },
+  {
+    "family": "network",
+    "title": "A DRAM read senses and restores a small charge",
+    "caption": "The selected cell shares charge with the bit line. The sense amplifier resolves the small signal and restores the value while the cell remains connected.",
+    "nodes": [
+      {
+        "label": "Cell capacitor",
+        "detail": "Stores the bit as a small charge.",
+        "glyph": "memory",
+        "variant": "capacitor"
+      },
+      {
+        "label": "Access transistor",
+        "detail": "A selected word line connects the cell.",
+        "glyph": "transistor",
+        "variant": "access"
+      },
+      {
+        "label": "Bit line",
+        "detail": "Carries the small voltage change.",
+        "glyph": "wires",
+        "variant": "line"
+      },
+      {
+        "label": "Sense amplifier",
+        "detail": "Resolves and restores the electrical state.",
+        "glyph": "test",
+        "variant": "sense-amplifier"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "stored charge"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "selected connection"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "small signal"
+      },
+      {
+        "from": 3,
+        "to": 0,
+        "label": "restore through the selected path"
+      }
+    ],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "2-a-dram-bit-is-a-very-small-stored-charge"
+  },
+  {
+    "family": "flow",
+    "title": "Retained charge changes a NAND cell\u2019s threshold",
+    "caption": "The stored information is inferred from transistor behavior. The storage region is electrically isolated rather than connected like a DRAM capacitor.",
+    "nodes": [
+      {
+        "label": "Program",
+        "detail": "Place charge in the storage region.",
+        "glyph": "memory",
+        "variant": "nand"
+      },
+      {
+        "label": "Retain",
+        "detail": "Electrical isolation helps preserve charge without power.",
+        "glyph": "film"
+      },
+      {
+        "label": "Read",
+        "detail": "Determine which threshold range the cell occupies.",
+        "glyph": "transistor",
+        "variant": "planar"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "3-nand-remembers-by-changing-a-transistor"
+  },
+  {
+    "family": "compare",
+    "title": "Two different ways of building memory upward",
+    "caption": "3D NAND builds cells through deposited layers around vertical channels. HBM connects separately fabricated DRAM dies into a stack.",
+    "nodes": [
+      {
+        "label": "3D NAND",
+        "detail": "A vertical channel passes through multiple cell layers.",
+        "glyph": "memory",
+        "variant": "3d-nand"
+      },
+      {
+        "label": "HBM",
+        "detail": "TSVs and joints connect distinct DRAM dies.",
+        "glyph": "memory",
+        "variant": "hbm"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "4-building-memory-upward"
+  },
+  {
+    "family": "layers",
+    "title": "An HBM stack connects down to the package",
+    "caption": "TSVs and joints link the thinned dies. The base provides interfaces to the fine wiring that connects memory to the neighboring processor.",
+    "nodes": [
+      {
+        "label": "DRAM dies",
+        "detail": "Several separately fabricated memory dies form the stack.",
+        "glyph": "memory",
+        "variant": "hbm"
+      },
+      {
+        "label": "Base die",
+        "detail": "Supports stack interfaces and test access.",
+        "glyph": "chip"
+      },
+      {
+        "label": "Fine wiring",
+        "detail": "Connects the HBM stack and neighboring GPU.",
+        "glyph": "wires"
+      },
+      {
+        "label": "Substrate",
+        "detail": "Redistributes connections toward the board.",
+        "glyph": "package",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "5-hbm-puts-a-wide-road-beside-the-processor"
+  },
+  {
+    "family": "flow",
+    "title": "Screen at the die, stack and package stages",
+    "caption": "Undetected die defects and assembly defects can both reduce useful output. A tested stack still needs evaluation in its final package context.",
+    "nodes": [
+      {
+        "label": "Incoming dies",
+        "detail": "Screen before committing them to a stack.",
+        "glyph": "test",
+        "variant": "probe"
+      },
+      {
+        "label": "Stack assembly",
+        "detail": "Create vertical connections between the dies.",
+        "glyph": "memory",
+        "variant": "hbm"
+      },
+      {
+        "label": "Stack test",
+        "detail": "Exercise memory through available internal access.",
+        "glyph": "test"
+      },
+      {
+        "label": "GPU integration",
+        "detail": "Check the stack with the package and cooling conditions.",
+        "glyph": "package",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "6-stack-yield-and-the-cost-of-a-useful-bit"
+  }
+]

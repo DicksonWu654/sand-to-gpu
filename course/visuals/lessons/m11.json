@@ -1,0 +1,307 @@
+[
+  {
+    "section": "1-mosfet-operation-refresher",
+    "family": "network",
+    "title": "A gate controls a conducting path",
+    "caption": "The gate changes the channel electrically; it is separated from the channel by an insulator rather than joined to it as a current-carrying contact.",
+    "nodes": [
+      {
+        "label": "Source",
+        "glyph": "transistor",
+        "detail": "Supplies carriers to the channel",
+        "variant": "source"
+      },
+      {
+        "label": "Gate",
+        "glyph": "film",
+        "detail": "Its electric field controls the channel through the dielectric",
+        "variant": "gate"
+      },
+      {
+        "label": "Channel",
+        "glyph": "transistor",
+        "detail": "Conduction depends on the gate state",
+        "variant": "channel"
+      },
+      {
+        "label": "Drain",
+        "glyph": "transistor",
+        "detail": "Collects carriers that cross the channel",
+        "variant": "drain"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 2,
+        "label": "carriers enter"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "electric field through dielectric"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "carriers leave"
+      }
+    ],
+    "source": {
+      "file": "course/modules/11-transistor-architectures.md",
+      "heading": "1. MOSFET Operation Refresher"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "2-cmos-basics-and-what-a-node-actually-measures",
+    "family": "compare",
+    "title": "Different meanings hidden by a node name",
+    "caption": "Circuit organization and physical pitches describe different aspects of a technology. A commercial node label does not substitute for those measurements.",
+    "nodes": [
+      {
+        "label": "CMOS inverter",
+        "glyph": "transistor",
+        "detail": "Complementary NMOS and PMOS devices implement a logic function",
+        "variant": "cmos"
+      },
+      {
+        "label": "Contacted gate pitch",
+        "glyph": "transistor",
+        "detail": "Spacing includes the gate and its contact arrangement",
+        "variant": "finfet"
+      },
+      {
+        "label": "Metal pitch",
+        "glyph": "wires",
+        "detail": "Wire width and separation constrain routing",
+        "variant": "line"
+      },
+      {
+        "label": "Standard cell",
+        "glyph": "chip",
+        "detail": "Cell dimensions combine devices and local connections"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/11-transistor-architectures.md",
+      "heading": "2. CMOS Basics and What a \"Node\" Actually Measures"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "3-the-planar-era-strain-and-hkmg",
+    "family": "compare",
+    "title": "Improve the channel, then the gate stack",
+    "caption": "Strain changes transport in the channel; a high-k dielectric improves the gate stack. Replacement-gate processing changes how the final gate is installed.",
+    "nodes": [
+      {
+        "label": "Strained channel",
+        "glyph": "crystal",
+        "detail": "Crystal strain changes carrier transport",
+        "variant": "strained"
+      },
+      {
+        "label": "High-k dielectric",
+        "glyph": "film",
+        "detail": "The dielectric separates metal gate from silicon",
+        "variant": "high-k"
+      },
+      {
+        "label": "Replacement gate",
+        "glyph": "etch",
+        "detail": "A temporary gate is removed before the final stack is formed",
+        "variant": "replacement-gate"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/11-transistor-architectures.md",
+      "heading": "3. The Planar Era: Strain and HKMG"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "4-finfet",
+    "family": "flow",
+    "title": "Raise the channel into a fin",
+    "caption": "The exposed silicon fin allows the gate to act on the top and both sidewalls. Isolation remains between neighboring devices.",
+    "nodes": [
+      {
+        "label": "Pattern fins",
+        "glyph": "mask",
+        "detail": "A hardmask defines narrow silicon features",
+        "variant": "finfet"
+      },
+      {
+        "label": "Etch silicon",
+        "glyph": "etch",
+        "detail": "Directional removal leaves the fins standing",
+        "variant": "finfet"
+      },
+      {
+        "label": "Fill isolation",
+        "glyph": "film",
+        "detail": "Insulating material separates neighboring fins",
+        "variant": "isolation"
+      },
+      {
+        "label": "Reveal and gate",
+        "glyph": "transistor",
+        "detail": "The exposed fin is surrounded on three sides by the gate stack",
+        "variant": "finfet"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/11-transistor-architectures.md",
+      "heading": "4. FinFET"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "5-a-complete-finfet-feol-mol-process-flow",
+    "family": "flow",
+    "title": "Build devices before connecting them",
+    "caption": "The FEOL forms working transistors; the MOL adds the contacts that connect those devices into the wiring system.",
+    "nodes": [
+      {
+        "label": "Fins and isolation",
+        "glyph": "etch",
+        "detail": "Define channels and separate neighboring devices",
+        "variant": "finfet"
+      },
+      {
+        "label": "Gate and spacers",
+        "glyph": "film",
+        "detail": "Establish gate geometry and protect its sides",
+        "variant": "gate"
+      },
+      {
+        "label": "Source and drain",
+        "glyph": "crystal",
+        "detail": "Form conducting regions at the channel ends",
+        "variant": "source-drain"
+      },
+      {
+        "label": "Final gate and contacts",
+        "glyph": "transistor",
+        "detail": "Complete the gate and connect the device terminals",
+        "variant": "finfet"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/11-transistor-architectures.md",
+      "heading": "5. A Complete FinFET FEOL/MOL Process Flow"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "6-gate-all-around-nanosheets",
+    "family": "flow",
+    "title": "Release silicon sheets inside the gate region",
+    "caption": "Alternating silicon and silicon-germanium layers provide a removable scaffold. Selective removal opens space for the gate around the surviving channels.",
+    "nodes": [
+      {
+        "label": "Alternating epitaxy",
+        "glyph": "crystal",
+        "detail": "Grow the silicon and silicon-germanium stack",
+        "variant": "superlattice"
+      },
+      {
+        "label": "Define and protect",
+        "glyph": "mask",
+        "detail": "Pattern the stack and form inner spacers",
+        "variant": "gaa"
+      },
+      {
+        "label": "Release the channels",
+        "glyph": "etch",
+        "detail": "Remove sacrificial silicon-germanium selectively",
+        "variant": "selective-release"
+      },
+      {
+        "label": "Wrap the sheets",
+        "glyph": "transistor",
+        "detail": "Form dielectric and metal around each silicon channel",
+        "variant": "gaa"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/11-transistor-architectures.md",
+      "heading": "6. Gate-All-Around Nanosheets"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "7-forksheet-cfet-and-the-roadmap-beyond",
+    "family": "compare",
+    "title": "Change device placement and power access",
+    "caption": "These directions address different geometric constraints and should not be read as a single interchangeable transistor design.",
+    "nodes": [
+      {
+        "label": "Forksheet",
+        "glyph": "transistor",
+        "detail": "A dielectric wall separates closely placed complementary devices",
+        "variant": "forksheet"
+      },
+      {
+        "label": "CFET",
+        "glyph": "transistor",
+        "detail": "Complementary devices are stacked vertically",
+        "variant": "cfet"
+      },
+      {
+        "label": "Backside power",
+        "glyph": "wires",
+        "detail": "Power reaches devices from the opposite wafer surface",
+        "variant": "backside"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/11-transistor-architectures.md",
+      "heading": "7. Forksheet, CFET, and the Roadmap Beyond"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "8-node-timeline-sram-and-design-co-optimization",
+    "family": "cycle",
+    "title": "Co-optimize the device and the circuit",
+    "caption": "A smaller device does not guarantee a proportionally smaller SRAM cell or routed circuit. Design and process choices feed back into one another.",
+    "nodes": [
+      {
+        "label": "Device geometry",
+        "glyph": "transistor",
+        "detail": "Defines available channel and terminal structures",
+        "variant": "gaa"
+      },
+      {
+        "label": "Cell layout",
+        "glyph": "chip",
+        "detail": "Arranges transistors under design rules"
+      },
+      {
+        "label": "Routing and SRAM",
+        "glyph": "wires",
+        "detail": "Expose density and connection limits",
+        "variant": "sram"
+      },
+      {
+        "label": "Process choices",
+        "glyph": "design",
+        "detail": "Adjust the technology for useful circuit-level results"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/11-transistor-architectures.md",
+      "heading": "8. Node Timeline, SRAM, and Design Co-Optimization"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  }
+]

@@ -1,0 +1,476 @@
+[
+  {
+    "section": "why-the-package-became-the-chip",
+    "family": "branch",
+    "title": "Package integration answers several scaling limits",
+    "caption": "A large processor faces die-area, yield and memory-connectivity constraints. Multi-die packaging combines components without making them one monolithic die.",
+    "nodes": [
+      {
+        "label": "Logic dies",
+        "glyph": "chip",
+        "detail": "Divide or combine computing functions",
+        "variant": "logic"
+      },
+      {
+        "label": "HBM stacks",
+        "glyph": "memory",
+        "detail": "Supply nearby wide-interface memory",
+        "variant": "hbm"
+      },
+      {
+        "label": "Fine interconnect",
+        "glyph": "wires",
+        "detail": "Provides many short connections",
+        "variant": "interposer"
+      },
+      {
+        "label": "Integrated package",
+        "glyph": "package",
+        "detail": "Combines the components within shared mechanical and thermal limits",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "Why the Package Became the Chip"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "anatomy-of-a-cowos-package-top-to-bottom",
+    "family": "layers",
+    "title": "CoWoS connects two very different wiring scales",
+    "caption": "Fine wiring joins processor and memory at the interposer; the substrate carries the assembly to board-level connections.",
+    "nodes": [
+      {
+        "label": "GPU and HBM",
+        "glyph": "chip",
+        "detail": "Separately manufactured logic and memory components",
+        "variant": "logic-hbm"
+      },
+      {
+        "label": "Fine die connections",
+        "glyph": "wires",
+        "detail": "Join component pads to the interposer",
+        "variant": "microbump"
+      },
+      {
+        "label": "Interposer",
+        "glyph": "wafer",
+        "detail": "Provides fine lateral wiring and vertical access",
+        "variant": "interposer"
+      },
+      {
+        "label": "Organic substrate",
+        "glyph": "package",
+        "detail": "Redistributes connections to the board",
+        "variant": "substrate"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "Anatomy of a CoWoS Package, Top to Bottom"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "cowos-a-short-history",
+    "family": "flow",
+    "title": "A packaging method expands with its applications",
+    "caption": "The section traces the growth of interposer-based integration into larger logic-and-memory assemblies. This is a conceptual progression, not a scale drawing or dated market chart.",
+    "nodes": [
+      {
+        "label": "Silicon interposer",
+        "glyph": "wafer",
+        "detail": "Provides dense wiring under multiple dies",
+        "variant": "interposer"
+      },
+      {
+        "label": "Logic and HBM integration",
+        "glyph": "memory",
+        "detail": "Places wide memory beside the processor",
+        "variant": "hbm"
+      },
+      {
+        "label": "Larger assemblies",
+        "glyph": "package",
+        "detail": "Increase the integration area and component count",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "More integration variants",
+        "glyph": "design",
+        "detail": "Adapt the structure to cost and routing needs"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "CoWoS: A Short History"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-three-cowos-variants",
+    "family": "compare",
+    "title": "Three CoWoS variants organize the interposer differently",
+    "caption": "The distinction is the fine-wiring structure beneath the dies: full silicon, organic redistribution, or localized silicon bridges.",
+    "nodes": [
+      {
+        "label": "CoWoS-S",
+        "glyph": "package",
+        "detail": "Uses a silicon interposer",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "CoWoS-R",
+        "glyph": "package",
+        "detail": "Uses an organic redistribution-layer interposer",
+        "variant": "cowos-r"
+      },
+      {
+        "label": "CoWoS-L",
+        "glyph": "package",
+        "detail": "Combines local silicon bridges with an organic interposer",
+        "variant": "cowos-l"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "The Three CoWoS Variants"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-cowos-process-flow-step-by-step",
+    "family": "flow",
+    "title": "Chip-on-Wafer comes before Wafer-on-Substrate",
+    "caption": "Build and populate the interposer structure, expose backside access, then join the singulated assembly to its package substrate.",
+    "nodes": [
+      {
+        "label": "Interposer fabrication",
+        "glyph": "wafer",
+        "detail": "Form fine wiring and required vertical connections",
+        "variant": "interposer"
+      },
+      {
+        "label": "Chip-on-Wafer",
+        "glyph": "chip",
+        "detail": "Attach logic and memory on the interposer wafer",
+        "variant": "logic-hbm"
+      },
+      {
+        "label": "Backside access and singulation",
+        "glyph": "etch",
+        "detail": "Reveal connections and separate assemblies",
+        "variant": "tsv"
+      },
+      {
+        "label": "Wafer-on-Substrate finish",
+        "glyph": "package",
+        "detail": "Attach the assembly to substrate and finish the package",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "The CoWoS Process Flow, Step by Step"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "what-goes-wrong-the-hard-problems",
+    "family": "branch",
+    "title": "A larger assembly combines mechanical and electrical risks",
+    "caption": "Warpage, joint quality and component screening can each limit an otherwise well-designed package.",
+    "nodes": [
+      {
+        "label": "Warpage",
+        "glyph": "wafer",
+        "detail": "Different materials and thermal cycles bend the assembly",
+        "variant": "warped"
+      },
+      {
+        "label": "Joint coplanarity",
+        "glyph": "wires",
+        "detail": "Connections must meet reliably across the area",
+        "variant": "microbump"
+      },
+      {
+        "label": "Known-good components",
+        "glyph": "test",
+        "detail": "Residual die failures can waste the combined assembly"
+      },
+      {
+        "label": "Package yield",
+        "glyph": "package",
+        "detail": "Depends on all of these requirements being met"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "What Goes Wrong: The Hard Problems"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "capacity-the-bottleneck-of-the-ai-era",
+    "family": "branch",
+    "title": "Expansion must coordinate tools, people and materials",
+    "caption": "Adding one tool does not create qualified packaging output by itself. Capacity depends on the complete production flow.",
+    "nodes": [
+      {
+        "label": "Assembly equipment",
+        "glyph": "furnace",
+        "detail": "Provides processing and bonding capability"
+      },
+      {
+        "label": "Interposers and substrates",
+        "glyph": "wafer",
+        "detail": "Supply the required connecting structures",
+        "variant": "interposer"
+      },
+      {
+        "label": "Qualified operation",
+        "glyph": "test",
+        "detail": "Establishes repeatability and acceptable yield"
+      },
+      {
+        "label": "Usable packaging capacity",
+        "glyph": "package",
+        "detail": "Produces assemblies that meet the product requirements",
+        "variant": "cowos-s"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "Capacity: The Bottleneck of the AI Era"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "soic-hybrid-bonding-and-true-3d",
+    "family": "flow",
+    "title": "Bond prepared surfaces without solder bumps",
+    "caption": "Hybrid bonding depends on matching smooth dielectric surfaces and aligned copper pads, followed by the required bonding treatment.",
+    "nodes": [
+      {
+        "label": "Surface preparation",
+        "glyph": "clean",
+        "detail": "Clean and planarize the bonding faces",
+        "variant": "planar"
+      },
+      {
+        "label": "Pad alignment",
+        "glyph": "wires",
+        "detail": "Register the copper connections on both dies",
+        "variant": "hybrid-pads"
+      },
+      {
+        "label": "Dielectric contact",
+        "glyph": "film",
+        "detail": "Bring prepared surfaces together",
+        "variant": "hybrid-bond"
+      },
+      {
+        "label": "Completed hybrid bond",
+        "glyph": "package",
+        "detail": "Connect dielectric surfaces and copper interfaces",
+        "variant": "hybrid-bond"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "SoIC: Hybrid Bonding and True 3D"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-competitors-intel-samsung-and-the-osats",
+    "family": "compare",
+    "title": "Different integration technologies solve related problems",
+    "caption": "Bridge, interposer and vertical-stacking approaches place fine connections in different locations. Brand families also cover multiple implementations.",
+    "nodes": [
+      {
+        "label": "Silicon bridge",
+        "glyph": "wires",
+        "detail": "Localizes fine wiring between neighboring dies",
+        "variant": "bridge"
+      },
+      {
+        "label": "Full interposer",
+        "glyph": "wafer",
+        "detail": "Places a shared fine-wiring structure under multiple dies",
+        "variant": "interposer"
+      },
+      {
+        "label": "Vertical stacking",
+        "glyph": "package",
+        "detail": "Connects dies across facing surfaces",
+        "variant": "hybrid-bond"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "The Competitors: Intel, Samsung, and the OSATs"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "fan-out-and-the-move-to-panels",
+    "family": "compare",
+    "title": "Change the carrier while controlling redistribution",
+    "caption": "Moving fan-out processing toward panels changes handling and area utilization. It also introduces alignment and warpage challenges.",
+    "nodes": [
+      {
+        "label": "Wafer-shaped carrier",
+        "glyph": "wafer",
+        "detail": "Processes reconstituted dies in a round format",
+        "variant": "round"
+      },
+      {
+        "label": "Panel-shaped carrier",
+        "glyph": "package",
+        "detail": "Processes a larger rectangular format",
+        "variant": "panel"
+      },
+      {
+        "label": "Redistribution and alignment",
+        "glyph": "wires",
+        "detail": "Must maintain accurate connections despite movement and warpage",
+        "variant": "fanout"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "Fan-Out and the Move to Panels"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-chiplet-paradigm",
+    "family": "network",
+    "title": "Chiplets need a shared connection contract",
+    "caption": "Separately manufactured dies must agree on electrical signaling and package-level connectivity. Modularity adds interfaces that a monolithic die does not need.",
+    "nodes": [
+      {
+        "label": "Compute chiplet",
+        "glyph": "chip",
+        "detail": "Implements part of the processor",
+        "variant": "logic"
+      },
+      {
+        "label": "Companion chiplet",
+        "glyph": "chip",
+        "detail": "Implements another functional block",
+        "variant": "logic"
+      },
+      {
+        "label": "Die-to-die link",
+        "glyph": "wires",
+        "detail": "Defines communication across the package",
+        "variant": "die-to-die"
+      },
+      {
+        "label": "Package integration",
+        "glyph": "package",
+        "detail": "Provides placement, routing and power",
+        "variant": "cowos-l"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 2,
+        "label": "transmit and receive"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "transmit and receive"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "physical interconnect"
+      }
+    ],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "The Chiplet Paradigm"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "two-handoffs-heat-to-the-rack-light-to-the-fibre",
+    "family": "compare",
+    "title": "Heat and information leave by different paths",
+    "caption": "The thermal path removes energy; the optical path carries data beyond the local electrical interconnect. Their packaging requirements differ.",
+    "nodes": [
+      {
+        "label": "Heat to cooling",
+        "glyph": "heat",
+        "detail": "Conduction transfers dissipated energy toward the rack cooling system",
+        "variant": "thermal"
+      },
+      {
+        "label": "Signals to optics",
+        "glyph": "light",
+        "detail": "Optical interfaces transfer information toward fiber links",
+        "variant": "fiber"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "Two Handoffs: Heat to the Rack, Light to the Fibre"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "equipment-who-makes-the-tools",
+    "family": "flow",
+    "title": "Each assembly step depends on a different tool capability",
+    "caption": "Alignment, surface preparation and bond formation must work together to produce reliable high-density connections.",
+    "nodes": [
+      {
+        "label": "Prepare surfaces",
+        "glyph": "clean",
+        "detail": "Planarize and clean the materials to be joined",
+        "variant": "planar"
+      },
+      {
+        "label": "Align and place",
+        "glyph": "chip",
+        "detail": "Position dies accurately on the support",
+        "variant": "logic"
+      },
+      {
+        "label": "Bond and fill",
+        "glyph": "package",
+        "detail": "Form joints and manage gaps or encapsulation",
+        "variant": "hybrid-bond"
+      },
+      {
+        "label": "Inspect and test",
+        "glyph": "test",
+        "detail": "Check geometry and electrical continuity"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "heading": "Equipment: Who Makes the Tools"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  }
+]

@@ -1,0 +1,169 @@
+[
+  {
+    "family": "apparatus",
+    "title": "Separate silicon from oxygen",
+    "caption": "The furnace changes chemistry. Carbon-bearing inputs help carry oxygen away in gaseous products; the recovered silicon still needs purification.",
+    "nodes": [
+      {
+        "label": "Quartz-rich feed",
+        "detail": "Silicon is chemically bound to oxygen in silica.",
+        "glyph": "material"
+      },
+      {
+        "label": "Submerged-arc furnace",
+        "detail": "Electrical heating drives reduction with carbon.",
+        "glyph": "furnace"
+      },
+      {
+        "label": "Recovered silicon",
+        "detail": "Metallurgical silicon remains too contaminated for a chip wafer.",
+        "glyph": "crystal"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "1-the-useful-ingredient-in-the-rock"
+  },
+  {
+    "family": "flow",
+    "title": "Purify silicon by changing its form",
+    "caption": "Fluid compounds can be separated by distillation before silicon is deposited again as a solid.",
+    "nodes": [
+      {
+        "label": "Metallurgical silicon",
+        "detail": "The starting solid contains unwanted impurities.",
+        "glyph": "material"
+      },
+      {
+        "label": "Volatile compound",
+        "detail": "Convert silicon to a processable chemical such as trichlorosilane.",
+        "glyph": "gas"
+      },
+      {
+        "label": "Distillation",
+        "detail": "Separate fluid species through repeated evaporation and condensation.",
+        "glyph": "gas"
+      },
+      {
+        "label": "Polysilicon",
+        "detail": "Deposit purified silicon onto a solid growth surface.",
+        "glyph": "crystal"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "2-purification-works-by-changing-the-form-of-silicon"
+  },
+  {
+    "family": "apparatus",
+    "title": "A seed guides the growing crystal",
+    "caption": "During CZ growth, the seed contacts the melt and is withdrawn as silicon solidifies in its crystal orientation.",
+    "nodes": [
+      {
+        "label": "Crucible and melt",
+        "detail": "Quartz contains the molten silicon.",
+        "glyph": "furnace"
+      },
+      {
+        "label": "Seed contact",
+        "detail": "An existing ordered crystal establishes the orientation.",
+        "glyph": "crystal"
+      },
+      {
+        "label": "Growing ingot",
+        "detail": "Pulling and thermal control maintain controlled solidification.",
+        "glyph": "crystal"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "3-growing-one-crystal-instead-of-freezing-a-lump"
+  },
+  {
+    "family": "layers",
+    "title": "One internal-gettering arrangement",
+    "caption": "In an internal-gettering arrangement, a device-compatible region near the surface is separated from impurity collection sites in the bulk. This is one strategy, not a universal wafer specification; oxygen and heat treatments must suit the device.",
+    "nodes": [
+      {
+        "label": "Device region",
+        "detail": "Contamination here can disturb electrical behavior.",
+        "glyph": "transistor",
+        "variant": "planar"
+      },
+      {
+        "label": "Near-surface crystal",
+        "detail": "The intended device region is kept suitable for fabrication.",
+        "glyph": "crystal"
+      },
+      {
+        "label": "Bulk collection sites",
+        "detail": "Selected sites collect unwanted impurities away from the devices.",
+        "glyph": "material"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "4-some-impurities-are-managed-rather-than-eliminated"
+  },
+  {
+    "family": "flow",
+    "title": "A sliced disc needs several finishing steps",
+    "caption": "Cutting creates kerf loss and damage. Subsequent processing removes damaged material and brings geometry and surface quality into specification.",
+    "nodes": [
+      {
+        "label": "Slice",
+        "detail": "Divide the ingot; the cutting gap consumes silicon.",
+        "glyph": "crystal"
+      },
+      {
+        "label": "Correct geometry",
+        "detail": "Remove damage and improve the wafer shape.",
+        "glyph": "wafer"
+      },
+      {
+        "label": "Polish",
+        "detail": "Produce the required smooth, flat surface.",
+        "glyph": "film"
+      },
+      {
+        "label": "Clean",
+        "detail": "Remove residues left by finishing.",
+        "glyph": "clean"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "5-a-saw-cut-is-only-the-beginning-of-a-wafer"
+  },
+  {
+    "family": "flow",
+    "title": "Protect the surface through the last handoff",
+    "caption": "Cleaning is a sequence of chemical removal, rinsing, drying and inspection. The final surface must survive handling and shipment.",
+    "nodes": [
+      {
+        "label": "Remove residues",
+        "detail": "Select chemistry for the contamination and surface.",
+        "glyph": "gas"
+      },
+      {
+        "label": "Rinse and dry",
+        "detail": "Remove dissolved contaminants without leaving new residues.",
+        "glyph": "clean"
+      },
+      {
+        "label": "Inspect",
+        "detail": "Check the wafer against acceptance requirements.",
+        "glyph": "test",
+        "variant": "optical"
+      },
+      {
+        "label": "Protect",
+        "detail": "Maintain cleanliness during storage and delivery.",
+        "glyph": "wafer"
+      }
+    ],
+    "edges": [],
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "section": "6-cleaning-and-inspection-preserve-the-starting-point"
+  }
+]

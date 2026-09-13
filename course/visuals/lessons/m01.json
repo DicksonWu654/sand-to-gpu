@@ -1,0 +1,323 @@
+[
+  {
+    "section": "1-why-purity-is-the-whole-game",
+    "family": "compare",
+    "title": "Impurity count is not electrical impact",
+    "caption": "Unwanted impurities and deliberate dopants both occur in small quantities, but their electrical roles differ. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Ideal silicon lattice",
+        "detail": "A regular bonding network provides the starting material.",
+        "variant": "lattice"
+      },
+      {
+        "glyph": "crystal",
+        "label": "Intentional dopants",
+        "detail": "Selected atoms create controlled carrier populations.",
+        "variant": "dopant"
+      },
+      {
+        "glyph": "crystal",
+        "label": "Unwanted impurities",
+        "detail": "Other atoms can change resistivity or introduce traps.",
+        "variant": "impurity"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "heading": "1. Why Purity Is the Whole Game"
+    }
+  },
+  {
+    "section": "2-the-rock-quartz-and-quartzite",
+    "family": "compare",
+    "title": "The furnace needs a permeable charge",
+    "caption": "Selected lump quartz and carbon form a bed through which reaction gas can escape; loose beach sand is not equivalent feedstock. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "Selected quartz",
+        "detail": "Rock chemistry and mechanical strength matter."
+      },
+      {
+        "glyph": "material",
+        "label": "Carbon charge",
+        "detail": "Carbon participates in the reduction reaction.",
+        "variant": "carbon"
+      },
+      {
+        "glyph": "material",
+        "label": "Open gas paths",
+        "detail": "The packed bed must allow evolved gas to leave.",
+        "variant": "packed-bed"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "heading": "2. The Rock: Quartz and Quartzite"
+    }
+  },
+  {
+    "section": "3-carbothermic-reduction-the-submerged-arc-furnace",
+    "family": "apparatus",
+    "title": "Break the silicon\u2013oxygen bond with heat and carbon",
+    "caption": "Electrical energy drives the overall reduction; silicon and gaseous carbon monoxide leave through different paths. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Quartz and carbon",
+        "detail": "The charge supplies silicon oxide and reducing carbon."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Submerged-arc furnace",
+        "detail": "Electrodes deliver intense heat inside the bed."
+      },
+      {
+        "glyph": "material",
+        "label": "Molten silicon",
+        "detail": "Reduced silicon collects for tapping."
+      },
+      {
+        "glyph": "gas",
+        "label": "Reaction gas",
+        "detail": "Carbon monoxide escapes through the charge."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "heading": "3. Carbothermic Reduction: The Submerged-Arc Furnace"
+    }
+  },
+  {
+    "section": "4-the-siemens-process",
+    "family": "cycle",
+    "title": "Purify a volatile intermediate, then rebuild silicon",
+    "caption": "The Siemens route separates chemical purification from deposition; gas recovery closes the supporting recycle loops. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Make chlorosilanes",
+        "detail": "Metallurgical silicon reacts to form volatile compounds."
+      },
+      {
+        "glyph": "clean",
+        "label": "Distill the feed",
+        "detail": "Fractionation separates trace contaminants."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Deposit on hot rods",
+        "detail": "Purified feed decomposes to solid silicon."
+      },
+      {
+        "glyph": "gas",
+        "label": "Recover and recycle",
+        "detail": "Chlorine and hydrogen-bearing streams return to the process."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "heading": "4. The Siemens Process"
+    }
+  },
+  {
+    "section": "5-fbr-granular-polysilicon-the-silane-route",
+    "family": "apparatus",
+    "title": "A growing bed of silicon granules",
+    "caption": "Upward gas flow suspends seeds while decomposition adds silicon to their surfaces; product can be withdrawn continuously. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "gas",
+        "label": "Silane feed",
+        "detail": "Purified precursor enters from below."
+      },
+      {
+        "glyph": "material",
+        "label": "Fluidized seed bed",
+        "detail": "Gas supports particles and exposes their surfaces.",
+        "variant": "fbr"
+      },
+      {
+        "glyph": "furnace",
+        "label": "Heated growth region",
+        "detail": "Precursor decomposition deposits silicon on seeds."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Granular product",
+        "detail": "Larger particles leave as silicon feedstock."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "heading": "5. FBR Granular Polysilicon: the Silane Route"
+    }
+  },
+  {
+    "section": "6-grades-electronic-grade-vs-solar-grade",
+    "family": "compare",
+    "title": "The grade follows the device requirement",
+    "caption": "Purity labels alone do not capture all quality requirements; electronic and solar buyers qualify different electrical and contamination specifications. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "memory",
+        "label": "Electronic devices",
+        "detail": "Tight contaminant and resistivity control protects circuit behavior."
+      },
+      {
+        "glyph": "light",
+        "label": "Solar cells",
+        "detail": "Carrier lifetime and photovoltaic performance guide feedstock limits."
+      },
+      {
+        "glyph": "test",
+        "label": "Customer qualification",
+        "detail": "Measurements establish whether a lot fits its intended process."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "heading": "6. Grades: Electronic Grade vs Solar Grade"
+    }
+  },
+  {
+    "section": "7-how-purity-is-measured",
+    "family": "branch",
+    "title": "Build a purity picture from complementary measurements",
+    "caption": "No single assay proves every impurity limit; analytical and electrical methods observe different consequences of contamination. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "test",
+        "label": "Chemical analysis",
+        "detail": "Spectrometry identifies selected trace species."
+      },
+      {
+        "glyph": "light",
+        "label": "Optical measurements",
+        "detail": "Absorption reveals particular impurities or bonds."
+      },
+      {
+        "glyph": "transistor",
+        "label": "Electrical measurements",
+        "detail": "Resistivity and lifetime expose electrical effects."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Qualified polysilicon",
+        "detail": "The combined evidence supports a feedstock specification."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "heading": "7. How Purity Is Measured"
+    }
+  },
+  {
+    "section": "8-how-much-polysilicon-a-wafer-needs",
+    "family": "flow",
+    "title": "Charged silicon exceeds shipped wafer mass",
+    "caption": "Growth scrap, sawing kerf and surface finishing all separate material from the eventual wafer. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Charge the puller",
+        "detail": "The starting polysilicon mass enters the melt."
+      },
+      {
+        "glyph": "crystal",
+        "label": "Crop the crystal",
+        "detail": "Unusable ends and residual melt reduce output."
+      },
+      {
+        "glyph": "wafer",
+        "label": "Slice the body",
+        "detail": "Saw kerf consumes silicon between slices."
+      },
+      {
+        "glyph": "clean",
+        "label": "Finish the surface",
+        "detail": "Grinding, etching and polishing remove more material."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "heading": "8. How Much Polysilicon a Wafer Needs"
+    }
+  },
+  {
+    "section": "9-economics-the-china-boom-and-xinjiang",
+    "family": "cycle",
+    "title": "Capacity and price move on different clocks",
+    "caption": "A price rise can encourage investment, but new plants arrive later; the figure is a qualitative commodity-cycle mechanism, not a price forecast. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "material",
+        "label": "Tight available supply",
+        "detail": "Buyers compete for current output."
+      },
+      {
+        "glyph": "design",
+        "label": "Investment decisions",
+        "detail": "Producers plan additional manufacturing capacity."
+      },
+      {
+        "glyph": "furnace",
+        "label": "New capacity arrives",
+        "detail": "Construction and qualification delay the supply response."
+      },
+      {
+        "glyph": "queue",
+        "label": "Inventory pressure",
+        "detail": "Excess output can pressure prices and future investment."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "heading": "9. Economics, the China Boom, and Xinjiang"
+    }
+  },
+  {
+    "section": "10-the-other-ultra-pure-feedstocks-crucibles-and-graphite",
+    "family": "branch",
+    "title": "The hot zone is another contamination path",
+    "caption": "The melt contacts a crucible and sits near hot structural materials; purity must extend beyond the silicon charge. Schematic, not to scale.",
+    "nodes": [
+      {
+        "glyph": "crystal",
+        "label": "Polysilicon charge",
+        "detail": "Provides the silicon being crystallized."
+      },
+      {
+        "glyph": "material",
+        "label": "Quartz crucible",
+        "detail": "Holds the melt and can contribute oxygen."
+      },
+      {
+        "glyph": "heat",
+        "label": "Graphite hot zone",
+        "detail": "Heats and supports the vessel nearby."
+      },
+      {
+        "glyph": "furnace",
+        "label": "Controlled melt",
+        "detail": "All surrounding materials influence the crystal environment."
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "heading": "10. The Other Ultra-Pure Feedstocks: Crucibles and Graphite"
+    }
+  }
+]

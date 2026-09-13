@@ -34,7 +34,7 @@
       Object.keys(GEN).forEach(g => selGen.append(h('option', { value: g }, g)));
       const selHeight = h('select', { 'aria-label': 'Stack height' });
       const selDie = h('select', { 'aria-label': 'Per-die capacity' });
-      const inRate = h('input', { type: 'range' });
+      const inRate = h('input', { type: 'range', 'aria-label': 'Pin data rate' });
       const outRate = h('output');
       const inN = h('input', { type: 'range', min: 4, max: 12, step: 1, value: st.nStacks, 'aria-label': 'Stacks per GPU' });
       const outN = h('output');
@@ -45,9 +45,10 @@
         h('label', { class: 'w-ctl' }, h('span', null, 'Pin data rate'), inRate, outRate),
         h('label', { class: 'w-ctl' }, h('span', null, 'Stacks on GPU'), inN, outN));
 
-      const bondTC = h('input', { type: 'radio', name: 'bond', value: 'tcncf' });
-      const bondMR = h('input', { type: 'radio', name: 'bond', value: 'mrmuf', checked: true });
-      const hybridBox = h('input', { type: 'checkbox' });
+      const bondName = 'hbm-bond-' + Math.random().toString(36).slice(2);
+      const bondTC = h('input', { type: 'radio', name: bondName, value: 'tcncf' });
+      const bondMR = h('input', { type: 'radio', name: bondName, value: 'mrmuf', checked: true });
+      const hybridBox = h('input', { type: 'checkbox', 'aria-label': 'Hybrid bonding' });
       const bondRow = h('div', { class: 'w-controls' },
         h('label', { class: 'w-ctl', style: { minWidth: '140px', flex: '0 0 auto' } }, h('span', null, 'TC-NCF'), bondTC, h('output')),
         h('label', { class: 'w-ctl', style: { minWidth: '140px', flex: '0 0 auto' } }, h('span', null, 'MR-MUF'), bondMR, h('output')),
@@ -61,12 +62,13 @@
         h('div', { class: 'w-stat' }, rCap, h('span', null, 'capacity / stack')),
         h('div', { class: 'w-stat' }, rTotBw, h('span', null, 'total GPU bandwidth')),
         h('div', { class: 'w-stat' }, rTotCap, h('span', null, 'total GPU HBM capacity')),
-        h('div', { class: 'w-stat' }, rThk, h('span', null, 'die thickness needed')),
+        h('div', { class: 'w-stat' }, rThk, h('span', null, 'fixed die thickness in this model')),
         h('div', { class: 'w-stat' }, rHeight, h('span', null, 'stack height vs. JEDEC ceiling')));
       const formula = h('div', { class: 'w-formula', html: 'BW/stack = width × rate ÷ 8 &nbsp;·&nbsp; capacity/stack = height × die_Gb ÷ 8 &nbsp;·&nbsp; height_stack = N·(t<sub>die</sub> + t<sub>gap</sub>) + t<sub>base</sub>' });
 
       // ---------- cross-section SVG ----------
-      const VBW = 300, VBH = 300;
+      const VBW = 300, VBH = 310;
+      const takeaway = h('div', { class: 'w-insight', 'aria-live': 'polite' });
       const xsec = svg('svg', { class: 'w-svg', viewBox: `0 0 ${VBW} ${VBH}`, role: 'img', 'aria-label': 'HBM stack cross-section' });
       const legend = h('div', { class: 'w-legend' },
         ...[['var(--si)', 'core DRAM die'], ['var(--accent2)', 'base / logic die'], ['var(--cu)', 'TSV'], ['var(--warn)', 'microbump + underfill'], ['var(--ok)', 'hybrid Cu-Cu bond'], ['var(--line2)', 'Si interposer']]
@@ -74,59 +76,35 @@
 
       function drawStack(g) {
         const dt = dieThk(st.height), gap = gapThk(st.hybrid, st.bond, st.height);
-        const totalUm = st.height * (dt + gap) + BASE_DIE;
-        const ceiling = GEN[st.gen].ceiling;
-        const scaleRef = 900; // µm mapped to drawH px, generous headroom
-        const drawH = 230, baseY = 270;
-        const px = um => um * drawH / scaleRef;
-        const stackW = 108, cx = 110;
-        // fixed caption, away from the dynamic lines so it never collides
-        g.append(svg('text', { x: 6, y: 16, 'font-size': 13, 'font-family': 'var(--mono)', 'font-weight': 600, fill: 'var(--bad)' }, `JEDEC ceiling: ${ceiling} µm`));
-        // interposer (decorative, fixed size — not part of the height budget)
-        const interW = stackW + 40, interH = 14;
-        g.append(svg('rect', { x: cx - 20, y: baseY, width: interW, height: interH, fill: 'var(--line2)' }));
-        g.append(svg('text', { x: cx - 20 + interW / 2, y: baseY + interH + 12, 'text-anchor': 'middle', 'font-size': 13, 'font-family': 'var(--sans)', fill: 'var(--muted)' }, 'Si interposer (CoWoS)'));
-        let y = baseY;
-        // base die
-        const baseH = Math.max(4, px(BASE_DIE));
-        y -= baseH;
-        g.append(svg('rect', { x: cx, y, width: stackW, height: baseH, fill: 'var(--accent2)', stroke: 'var(--panel)', 'stroke-width': 0.6 }));
-        if (baseH >= 9) g.append(svg('text', { x: cx + stackW / 2, y: y + baseH / 2 + 3.5, 'text-anchor': 'middle', 'font-size': 13, 'font-family': 'var(--sans)', fill: 'var(--panel)', 'font-weight': 600 }, 'base die'));
-        // core dies, bottom to top
-        const dieH = Math.max(3, px(dt)), gapH = st.hybrid ? Math.max(1, px(gap)) : Math.max(2.2, px(gap));
-        let midDieY = null, midGapY = null;
-        for (let i = 0; i < st.height; i++) {
-          y -= gapH;
-          if (st.hybrid) g.append(svg('rect', { x: cx, y, width: stackW, height: gapH, fill: 'var(--ok)' }));
-          else g.append(svg('rect', { x: cx, y, width: stackW, height: gapH, fill: 'var(--warn)', opacity: 0.85 }));
-          if (i === Math.floor(st.height / 2)) midGapY = y + gapH / 2;
-          y -= dieH;
-          g.append(svg('rect', { x: cx, y, width: stackW, height: dieH, fill: 'var(--si)', stroke: 'var(--panel)', 'stroke-width': 0.6 }));
-          // TSV ticks
-          for (let k = 1; k <= 4; k++) {
-            const tx = cx + (stackW * k) / 5;
-            g.append(svg('line', { x1: tx, y1: y + dieH * 0.12, x2: tx, y2: y + dieH * 0.88, stroke: 'var(--cu)', 'stroke-width': Math.max(0.8, dieH * 0.12) }));
-          }
-          if (i === Math.floor(st.height / 2)) midDieY = y + dieH / 2;
-        }
-        const topY = y;
-        // ceiling dashed line (measured from top of interposer, i.e. baseY) — no inline label, see fixed caption above
-        const ceilY = baseY - px(ceiling);
-        g.append(svg('line', { x1: cx - 30, y1: ceilY, x2: cx + stackW + 30, y2: ceilY, stroke: 'var(--bad)', 'stroke-dasharray': '4 3', 'stroke-width': 1.4 }));
-        // total-height marker line, labeled on the right, close to its own line
+        const totalUm = st.height * (dt + gap) + BASE_DIE, ceiling = GEN[st.gen].ceiling;
+        const px = um => um * 230 / 900, baseY = 270, x = 104, width = 92;
         const over = totalUm > ceiling;
-        g.append(svg('line', { x1: cx - 10, y1: topY, x2: cx + stackW + 10, y2: topY, stroke: over ? 'var(--bad)' : 'var(--ok)', 'stroke-width': 2 }));
-        const farFromCeil = Math.abs(topY - ceilY) > 14;
-        g.append(svg('text', { x: cx + stackW + 14, y: topY + (farFromCeil ? -6 : 11), 'font-size': 13, 'font-family': 'var(--mono)', 'font-weight': 600, fill: over ? 'var(--bad)' : 'var(--ok)' }, `${fmt(totalUm, 0)} µm`));
-        // leader labels on the left: die thickness + gap
-        if (midDieY != null) {
-          g.append(svg('line', { x1: cx, y1: midDieY, x2: cx - 20, y2: midDieY - 12, stroke: 'var(--muted)', 'stroke-width': 0.8, 'stroke-dasharray': '2 2' }));
-          g.append(svg('text', { x: cx - 22, y: midDieY - 9, 'text-anchor': 'end', 'font-size': 13, 'font-family': 'var(--sans)', fill: 'var(--muted)' }, `die ≈ ${fmt(dt, 0)} µm`));
+        const label = (lx, ly, text, color = 'var(--muted)', anchor = 'start') => svg('text', { x: lx, y: ly, 'font-size': 14, 'font-family': 'var(--sans)', fill: color, 'text-anchor': anchor }, text);
+        const line = (x1, y1, x2, y2, color = 'var(--muted)') => svg('line', { x1, y1, x2, y2, stroke: color, 'stroke-width': 1 });
+        const ceilY = baseY - px(ceiling);
+        const top = Math.min(ceilY, baseY - px(totalUm)) - 42;
+        xsec.setAttribute('viewBox', `0 ${top} 300 ${316 - top}`);
+        g.append(label(8, ceilY - 22, `${ceiling} µm height budget`));
+        g.append(svg('rect', { x: x - 14, y: baseY, width: width + 28, height: 14, fill: 'var(--line2)' }), label(150, 303, 'Silicon interposer', 'var(--muted)', 'middle'));
+        let y = baseY - px(BASE_DIE);
+        g.append(svg('rect', { x, y, width, height: px(BASE_DIE), fill: 'var(--accent2)' }),
+          line(50, baseY - 3, x - 3, baseY - 5), label(8, baseY - 9, 'Base die'));
+        let middle = 0;
+        for (let i = 0; i < st.height; i++) {
+          y -= px(gap);
+          g.append(svg('rect', { x, y, width, height: px(gap), fill: st.hybrid ? 'var(--ok)' : 'var(--warn)' }));
+          y -= px(dt);
+          g.append(svg('rect', { x, y, width, height: px(dt), fill: 'var(--si)' }));
+          for (let k = 1; k <= 4; k++) g.append(line(x + width * k / 5, y + 1, x + width * k / 5, y + px(dt) - 1, 'var(--cu)'));
+          if (i === Math.floor(st.height / 2)) middle = y + px(dt) / 2;
         }
-        if (midGapY != null) {
-          g.append(svg('line', { x1: cx, y1: midGapY, x2: cx - 20, y2: midGapY + 14, stroke: 'var(--muted)', 'stroke-width': 0.8, 'stroke-dasharray': '2 2' }));
-          g.append(svg('text', { x: cx - 22, y: midGapY + 17, 'text-anchor': 'end', 'font-size': 13, 'font-family': 'var(--sans)', fill: 'var(--muted)' }, st.hybrid ? 'bond ≈ 2 µm' : `gap ≈ ${fmt(gap, 0)} µm`));
-        }
+        g.append(svg('line', { x1: x - 18, y1: ceilY, x2: x + width + 18, y2: ceilY, stroke: 'var(--bad)', 'stroke-dasharray': '4 3', 'stroke-width': 1.4 }),
+          svg('line', { x1: x - 6, y1: y, x2: x + width + 6, y2: y, stroke: over ? 'var(--bad)' : 'var(--ok)', 'stroke-width': 2 }),
+          label(208, y + 12, `${fmt(totalUm, 0)} µm`, over ? 'var(--bad)' : 'var(--ok)'));
+        g.append(line(92, middle - 20, x, middle), label(90, middle - 24, `Die ${fmt(dt, 0)} µm`, 'var(--muted)', 'end'),
+          line(92, middle + 14, x, middle + px(dt) / 2), label(90, middle + 29, `${st.hybrid ? 'Bond' : 'Gap'} ${fmt(gap, 0)} µm`, 'var(--muted)', 'end'));
+        const viaY = Math.min(baseY - 60, y + 60);
+        g.append(line(x + width * .8, viaY, 220, viaY + 15, 'var(--cu)'), label(210, viaY + 34, 'Copper vias', 'var(--ink)'), label(210, viaY + 51, '(TSVs)'));
         return { totalUm, ceiling, over };
       }
 
@@ -175,7 +153,7 @@
         const g = GEN[st.gen];
         const bwPerStack = g.width * st.rate / 8; // GB/s
         const capPerStack = st.height * st.dieGb / 8; // GB
-        outRate.textContent = fmt(st.rate, st.rate < 10 ? 1 : 0) + ' Gbps';
+        outRate.textContent = fmt(st.rate, GEN[st.gen].rate.step < 1 ? 1 : 0) + ' Gbps';
         outN.textContent = st.nStacks;
 
         rBw.textContent = bwPerStack >= 1000 ? fmt(bwPerStack / 1000, 2) + ' TB/s' : fmt(bwPerStack, 0) + ' GB/s';
@@ -189,14 +167,21 @@
         rThk.textContent = fmt(dieThk(st.height), 0) + ' µm/die';
         rHeight.innerHTML = `${fmt(info.totalUm, 0)} / ${info.ceiling} µm` + (info.over ? ' <span style="color:var(--bad)">over</span>' : '');
         bondNote.textContent = bondText();
+        takeaway.replaceChildren(h('b', null, rCap.textContent + ' per stack. '),
+          `${st.height} memory dies share vertical copper connections. `,
+          h('span', { style: { color: info.over ? 'var(--bad)' : 'var(--ink)' } }, info.over ? `This bonding choice exceeds the height budget by ${fmt(info.totalUm - info.ceiling, 0)} µm.` : `${fmt(info.ceiling - info.totalUm, 0)} µm remains inside the ${info.ceiling} µm height budget.`));
         buildTable();
       }
-      [selGen].forEach(i => i.addEventListener('change', () => { refreshOptions(); update(); }));
+      [selGen].forEach(i => i.addEventListener('change', () => { st.gen = selGen.value; refreshOptions(); update(); }));
       [selHeight, selDie, inRate, inN, bondTC, bondMR, hybridBox].forEach(i => i.addEventListener('input', update));
 
-      el.append(controls, bondRow, bondNote, readout, formula,
-        h('div', { class: 'w-grid2', style: { gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))' } }, h('div', null, xsec, legend), h('div', null, tableWrap)),
-        h('div', { class: 'w-note' }, 'Die thickness and bond-line gap are fixed by industry practice at each stack height (Module 15 §4.4–4.5), not user-chosen; the widget solves the height budget so you can see when a bonding choice pushes a stack over the JEDEC ceiling — the real reason Samsung\'s 12-high TC-NCF took until September 2025 to qualify.'));
+      const figure = h('div', { class: 'w-studio', style: { maxWidth: '470px', margin: '0 auto', width: '100%' } }, h('div', { class: 'w-figure-title' }, 'A vertical memory system'), xsec,
+        h('div', { class: 'w-note' }, 'Copper vias run through each DRAM die. Bonded interfaces connect those vias down to the base die and the interposer. Thin interfaces leave room for more memory.'));
+      el.append(h('div', { class: 'w-workbench' }, figure, h('div', { class: 'w-console' }, h('div', { class: 'w-figure-title' }, 'Configure the stack'), controls, bondRow)),
+        takeaway, readout,
+        h('div', { class: 'w-note' }, 'Illustrative height-budget model. Die and bond thicknesses are fixed by the selected process; some capacity combinations are theoretical. Hybrid bonding is a forward-looking option, not production HBM in this course’s baseline.'),
+        h('details', { class: 'w-reference' }, h('summary', null, 'Bonding method & material key'), bondNote, legend),
+        h('details', { class: 'w-reference' }, h('summary', null, 'Generation reference & calculation'), tableWrap, formula));
       selGen.value = st.gen;
       refreshOptions();
       update();

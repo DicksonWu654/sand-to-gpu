@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-09-13T23:25:47.852Z",
+  "cases": 4,
+  "results": [
+    {
+      "width": 1280,
+      "theme": "light",
+      "overflow": false,
+      "figures": 14,
+      "firstTitle": "A continuous lattice avoids grain-boundary interruptions",
+      "accessibleObjects": true,
+      "errors": []
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "overflow": false,
+      "figures": 14,
+      "firstTitle": "A continuous lattice avoids grain-boundary interruptions",
+      "accessibleObjects": true,
+      "errors": []
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "overflow": false,
+      "figures": 14,
+      "firstTitle": "A continuous lattice avoids grain-boundary interruptions",
+      "accessibleObjects": true,
+      "errors": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "overflow": false,
+      "figures": 14,
+      "firstTitle": "A continuous lattice avoids grain-boundary interruptions",
+      "accessibleObjects": true,
+      "errors": []
+    }
+  ]
+}

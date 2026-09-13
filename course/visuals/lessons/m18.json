@@ -1,0 +1,534 @@
+[
+  {
+    "section": "why-package-test-exists-what-sort-could-not-see",
+    "family": "compare",
+    "title": "Packaging introduces connections that sort could not test",
+    "caption": "A die can pass wafer sort and still develop a fault during thinning, assembly or connection to its package.",
+    "nodes": [
+      {
+        "label": "Before packaging",
+        "glyph": "chip",
+        "detail": "Wafer sort tests the accessible bare-die behavior",
+        "variant": "logic"
+      },
+      {
+        "label": "New joints and materials",
+        "glyph": "package",
+        "detail": "Assembly adds connections and mechanical stress",
+        "variant": "flip-chip"
+      },
+      {
+        "label": "After packaging",
+        "glyph": "test",
+        "detail": "Package test checks the resulting component"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "Why Package Test Exists: What Sort Could Not See"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-post-packaging-flow",
+    "family": "flow",
+    "title": "The screening flow changes with product requirements",
+    "caption": "Final test, burn-in, retest and system-level test answer different questions. Not every product uses every optional stage.",
+    "nodes": [
+      {
+        "label": "Final test",
+        "glyph": "test",
+        "detail": "Screen the packaged component electrically",
+        "variant": "instrument"
+      },
+      {
+        "label": "Burn-in when required",
+        "glyph": "heat",
+        "detail": "Apply controlled operating stress"
+      },
+      {
+        "label": "Retest",
+        "glyph": "test",
+        "detail": "Measure whether stress revealed a failure",
+        "variant": "instrument"
+      },
+      {
+        "label": "System-level test",
+        "glyph": "rack",
+        "detail": "Exercise the part in a system-like workload",
+        "variant": "server"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "The Post-Packaging Flow"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-test-cell-handlers-sockets-and-thermal-control",
+    "family": "apparatus",
+    "title": "The test cell must place, contact and cool the device",
+    "caption": "Mechanical handling and thermal control support the electrical test rather than merely surrounding it.",
+    "nodes": [
+      {
+        "label": "Handler",
+        "glyph": "package",
+        "detail": "Presents packaged devices to the test position"
+      },
+      {
+        "label": "Socket",
+        "glyph": "wires",
+        "detail": "Makes removable electrical contact",
+        "variant": "socket"
+      },
+      {
+        "label": "Thermal control",
+        "glyph": "heat",
+        "detail": "Holds the intended device temperature"
+      },
+      {
+        "label": "ATE",
+        "glyph": "test",
+        "detail": "Applies patterns and measures the response",
+        "variant": "instrument"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "The Test Cell: Handlers, Sockets and Thermal Control"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "final-test-what-the-program-does-and-what-it-costs",
+    "family": "branch",
+    "title": "Coverage and throughput compete for test resources",
+    "caption": "Longer or more demanding tests can improve particular coverage while consuming tester time and thermal capacity.",
+    "nodes": [
+      {
+        "label": "Test patterns",
+        "glyph": "design",
+        "detail": "Exercise targeted functionality"
+      },
+      {
+        "label": "Instrument time",
+        "glyph": "test",
+        "detail": "Consumes measurement and pattern resources",
+        "variant": "instrument"
+      },
+      {
+        "label": "Thermal settling",
+        "glyph": "heat",
+        "detail": "Establishes the required operating condition"
+      },
+      {
+        "label": "Final-test decision",
+        "glyph": "chip",
+        "detail": "Combines the required evidence within production constraints"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "Final Test: What the Program Does and What It Costs"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "burn-in-physics-and-practice",
+    "family": "flow",
+    "title": "Stress can expose weak parts before shipment",
+    "caption": "Burn-in accelerates selected failure mechanisms under controlled conditions. It cannot guarantee the absence of every future failure.",
+    "nodes": [
+      {
+        "label": "Assembled devices",
+        "glyph": "package",
+        "detail": "Enter with a distribution of latent weaknesses"
+      },
+      {
+        "label": "Controlled stress",
+        "glyph": "heat",
+        "detail": "Applies the chosen temperature and operating conditions"
+      },
+      {
+        "label": "Failure manifestation",
+        "glyph": "transistor",
+        "detail": "Some weak structures degrade or fail",
+        "variant": "defect"
+      },
+      {
+        "label": "Post-stress screen",
+        "glyph": "test",
+        "detail": "Identifies parts that no longer meet requirements"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "Burn-in: Physics and Practice"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "ft2-measuring-what-burn-in-changed",
+    "family": "compare",
+    "title": "The same specification can be checked before and after stress",
+    "caption": "FT2 looks for changes produced or exposed by burn-in. A post-stress failure can reveal weakness that was not visible at the earlier test.",
+    "nodes": [
+      {
+        "label": "Pre-stress result",
+        "glyph": "test",
+        "detail": "Records the earlier electrical behavior",
+        "variant": "instrument"
+      },
+      {
+        "label": "Burn-in exposure",
+        "glyph": "heat",
+        "detail": "Applies the selected stress"
+      },
+      {
+        "label": "Post-stress result",
+        "glyph": "test",
+        "detail": "Checks whether behavior still meets the limits",
+        "variant": "instrument"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "FT2: Measuring What Burn-in Changed"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "system-level-test-testing-the-product-not-the-circuit",
+    "family": "compare",
+    "title": "Structural patterns and workloads observe different behavior",
+    "caption": "System-level testing complements circuit-level test by exercising combinations of hardware and software activity.",
+    "nodes": [
+      {
+        "label": "ATE pattern test",
+        "glyph": "test",
+        "detail": "Targets electrical and structural behavior through tester interfaces",
+        "variant": "instrument"
+      },
+      {
+        "label": "System-like workload",
+        "glyph": "rack",
+        "detail": "Exercises the product under realistic interacting activity",
+        "variant": "server"
+      },
+      {
+        "label": "Combined evidence",
+        "glyph": "design",
+        "detail": "Uses both views to improve the screening decision"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "System-Level Test: Testing the Product, Not the Circuit"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "outgoing-qa-and-shipment",
+    "family": "flow",
+    "title": "Release requires evidence and traceability",
+    "caption": "Outgoing quality checks and identification connect the shipped component to the work that established its status.",
+    "nodes": [
+      {
+        "label": "Final acceptance",
+        "glyph": "test",
+        "detail": "Confirm the specified release conditions"
+      },
+      {
+        "label": "Traceability record",
+        "glyph": "design",
+        "detail": "Preserve lot and test identity"
+      },
+      {
+        "label": "Shipment preparation",
+        "glyph": "package",
+        "detail": "Protect and identify the component"
+      },
+      {
+        "label": "Customer handoff",
+        "glyph": "rack",
+        "detail": "Deliver the qualified product and required information"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "Outgoing QA and Shipment"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "reliability-qualification-jesd47-and-aec-q100",
+    "family": "compare",
+    "title": "Qualification and production screening answer different questions",
+    "caption": "Qualification evaluates the design and process under a defined plan. Production screening selects individual units for shipment.",
+    "nodes": [
+      {
+        "label": "Qualification samples",
+        "glyph": "chip",
+        "detail": "Represent the product and process in stress testing"
+      },
+      {
+        "label": "Qualification stress plan",
+        "glyph": "heat",
+        "detail": "Exercises the required reliability conditions"
+      },
+      {
+        "label": "Production screen",
+        "glyph": "test",
+        "detail": "Checks manufactured units under the chosen test flow",
+        "variant": "instrument"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "Reliability Qualification: JESD47 and AEC-Q100"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "hbm-known-good-die-known-good-stack-and-the-2-5d-problem",
+    "family": "branch",
+    "title": "A good stack and a good die can still form a bad package",
+    "caption": "The multi-component package adds interfaces and stresses after each input has been screened separately.",
+    "nodes": [
+      {
+        "label": "Known-good logic",
+        "glyph": "chip",
+        "detail": "Provides tested processor dies",
+        "variant": "logic"
+      },
+      {
+        "label": "Known-good HBM",
+        "glyph": "memory",
+        "detail": "Provides screened memory stacks",
+        "variant": "hbm"
+      },
+      {
+        "label": "Package assembly",
+        "glyph": "package",
+        "detail": "Adds joints and shared integration stresses",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "Final assembly screen",
+        "glyph": "test",
+        "detail": "Checks the completed logic-and-memory component"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "HBM: Known-Good Die, Known-Good Stack and the 2.5D Problem"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "yield-fallout-along-the-chain",
+    "family": "flow",
+    "title": "Yield losses occur at different accumulated values",
+    "caption": "A failure late in the chain discards more combined material and processing than a failure before assembly. Independent-stage multiplication is a model assumption.",
+    "nodes": [
+      {
+        "label": "Wafer yield",
+        "glyph": "wafer",
+        "detail": "Determines useful fabricated dies",
+        "variant": "grid"
+      },
+      {
+        "label": "Assembly yield",
+        "glyph": "package",
+        "detail": "Determines useful packaged combinations",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "Final-test yield",
+        "glyph": "test",
+        "detail": "Removes remaining detectable failures"
+      },
+      {
+        "label": "Shippable product",
+        "glyph": "chip",
+        "detail": "Retains the value that survives all required stages"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "Yield Fallout Along the Chain"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "dppm-and-what-the-field-actually-sees",
+    "family": "flow",
+    "title": "Field quality includes what screening missed",
+    "caption": "A measured outgoing defect rate depends on the population and evidence used. Field results provide information that factory screens cannot fully reproduce.",
+    "nodes": [
+      {
+        "label": "Screened population",
+        "glyph": "package",
+        "detail": "Contains parts accepted by the factory",
+        "variant": "flip-chip"
+      },
+      {
+        "label": "Residual defects",
+        "glyph": "chip",
+        "detail": "Include failures not detected by the screen"
+      },
+      {
+        "label": "Field conditions",
+        "glyph": "rack",
+        "detail": "Expose the product to actual operating environments",
+        "variant": "server"
+      },
+      {
+        "label": "Returned evidence",
+        "glyph": "test",
+        "detail": "Informs the estimate of outgoing and field quality"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "DPPM and What the Field Actually Sees"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "failure-analysis-from-field-return-to-root-cause",
+    "family": "flow",
+    "title": "Start with the symptom, then localize the physical cause",
+    "caption": "Failure analysis narrows from system behavior to a failing circuit, location and mechanism before proposing a corrective action.",
+    "nodes": [
+      {
+        "label": "Reproduce the symptom",
+        "glyph": "test",
+        "detail": "Establish the observed failure behavior"
+      },
+      {
+        "label": "Localize electrically",
+        "glyph": "transistor",
+        "detail": "Identify the implicated circuit or connection",
+        "variant": "logic"
+      },
+      {
+        "label": "Inspect physically",
+        "glyph": "film",
+        "detail": "Examine the relevant material structure",
+        "variant": "cross-section"
+      },
+      {
+        "label": "Correct the cause",
+        "glyph": "design",
+        "detail": "Change the implicated process or design"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "Failure Analysis: From Field Return to Root Cause"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "where-back-end-test-happens-and-what-it-costs",
+    "family": "network",
+    "title": "Test capacity spans product owners and service providers",
+    "caption": "Location, equipment access and the agreed test plan affect where a device is screened and how much that operation costs.",
+    "nodes": [
+      {
+        "label": "Product owner",
+        "glyph": "design",
+        "detail": "Sets the required quality and test coverage"
+      },
+      {
+        "label": "Assembly site",
+        "glyph": "package",
+        "detail": "Hands packaged material into test"
+      },
+      {
+        "label": "Test service site",
+        "glyph": "test",
+        "detail": "Provides equipment and production execution"
+      },
+      {
+        "label": "Shipment decision",
+        "glyph": "chip",
+        "detail": "Uses the agreed acceptance evidence"
+      }
+    ],
+    "edges": [
+      {
+        "from": 0,
+        "to": 2,
+        "label": "test plan"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "packaged devices"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "results and screened product"
+      }
+    ],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "Where Back-End Test Happens and What It Costs"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  },
+  {
+    "section": "the-gpu-flow-end-to-end-and-rack-level-triage",
+    "family": "flow",
+    "title": "Triage follows the hardware hierarchy",
+    "caption": "A rack symptom can originate at package, board, server or interconnect level. Investigation moves through those boundaries instead of assuming the GPU die is at fault.",
+    "nodes": [
+      {
+        "label": "Package and module",
+        "glyph": "package",
+        "detail": "Provide the individual accelerator components",
+        "variant": "cowos-s"
+      },
+      {
+        "label": "Board and server",
+        "glyph": "chip",
+        "detail": "Add power, firmware and local connections",
+        "variant": "board"
+      },
+      {
+        "label": "Rack integration",
+        "glyph": "rack",
+        "detail": "Adds shared networking and cooling",
+        "variant": "rack"
+      },
+      {
+        "label": "Fault localization",
+        "glyph": "test",
+        "detail": "Identify the layer responsible for the observed symptom"
+      }
+    ],
+    "edges": [],
+    "source": {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "heading": "The GPU Flow End to End, and Rack-Level Triage"
+    },
+    "note": "Conceptual schematic; geometry is not to scale."
+  }
+]
