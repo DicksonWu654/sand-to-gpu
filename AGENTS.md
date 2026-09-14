@@ -7,9 +7,13 @@
 - Delegate independent research, audits, implementation, and testing to subagents; coordinate ownership to avoid overlapping edits.
 - Keep builds reproducible: install dependencies with `npm ci`, rebuild course content with `node build.js`, and follow `qa/WIDGET_QA_STANDARD.md` for affected widgets. Record actual validation and unresolved limitations.
 - Keep secrets, credentials, private keys, `node_modules`, and generated screenshots out of Git. Inspect staged changes before committing.
-- Use the user’s configured identity and GPG key to sign commits. Commit and push completed changes to the private GitHub repository; keep the repository private unless explicitly instructed otherwise.
+- Use the contributor's own configured Git identity and signing key; never copy another person's credentials into the project. In maintainer-authorized sessions, sign, commit and push completed changes. Keep the repository private until the owner explicitly authorizes a visibility change.
 
 ## Lessons from the continuation
+
+- Start with `README.md` and `CONTRIBUTING.md` for current setup. The dated handoffs and review logs are historical evidence, not current installation instructions. See `docs/DEVELOPMENT_HISTORY.md` for their sequence and `docs/PUBLISHING.md` for release preparation.
+- Keep new reports portable: use repository-relative paths and descriptive placeholders for excluded local artifacts. Do not add personal workstation paths, private session URLs, or credentials to review evidence. Current-tree sanitation does not remove earlier Git history.
+- The proposed licenses in `docs/licenses/` are drafts until the owner chooses a license; see `docs/LICENSING.md`. Do not claim that public visibility alone grants open-source reuse rights.
 
 - Page QA must assert the rendered theme, not just the requested theme or localStorage value. Hash navigation can retain the current document and its startup state.
 - Interaction scenarios must assert which item was selected, not only that a click produced no browser error. Dense SVG hit regions can select a neighboring event on phones despite clean geometry reports; verify actual pointer coordinates, hover and keyboard paths.

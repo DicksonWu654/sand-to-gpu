@@ -33,7 +33,7 @@ verified by agents, delivered as an interactive teaching website. Iteration 2 as
 4. The site "well built": they saw visual errors in demos and text.
 5. NEW: a shorter, higher-level **survey** version of the course.
 6. NEW: more diagrams and interactive elements.
-The user hits their spend limit often; they say "continue when it resets, multiple iterations are fine".
+The project was developed through repeated implementation and review rounds.
 
 ## 2. Layout of this folder
 ```
@@ -66,19 +66,13 @@ serve.js                             static server: `node serve.js` -> http://lo
 .claude/launch.json                  preview config "site" for the Browser pane
 README.md                            user-facing readme (partly stale: mentions 28 visuals, 6-q quizzes)
 ```
-Published artifact (hosted copy of the site, private to the user): https://claude.ai/code/artifact/b8b564c2-cd8f-4ba6-bd26-da49d895800d
-It currently holds the v1 site. Republish by calling the Artifact tool with `url` = that URL, file_path
-site/index.html and the same `files` map (styles.css, app.js, content.js, widgets/*.js). Do NOT pass a
-favicon on republish.
+An early private hosted artifact held the v1 site. Its session-specific URL and republishing instructions have been removed from this public-facing archive; they are not required to build or publish the current project.
 
-## 3. State of the three Workflow runs (resume with Workflow({scriptPath, resumeFromRunId}))
-Script files are in
-`C:\Users\dicks\.claude\projects\C--Users-dicks-AppData-Roaming-Claude-scratch-workspaces-0825c556-cb7b-4de6-85c1-ff4865168fc7-185ad3f3-7d78-4eb8-a01f-fae74ee79efb-scratch-2026-09-13-9d51cd\a23f2f25-2035-41e8-a17f-3abd88f264e9\workflows\scripts\`
-and journals in `...\a23f2f25-2035-41e8-a17f-3abd88f264e9\subagents\workflows\<runId>\journal.jsonl`.
-(If those paths are unavailable in the new session, re-author from the descriptions below; the prompts
-are also in this session's transcript. Cached results are lost in that case but files on disk stand.)
+## 3. State of the three original workflow runs
 
-### A. course-content-v2  (runId wf_e4d87fff-51a, script course-content-v2-wf_e4d87fff-51a.js)
+The original workflow scripts and journals lived in a private local session and are not included in this repository. The pipeline descriptions below preserve how the iteration was organized; use the current build and QA commands to continue the work.
+
+### A. course-content-v2
 Per module pipeline: audit -> rewrite -> reader test/polish loop (max 2) -> round-2 fact check
 (web) -> 2 adversarial refuters x 6 load-bearing claims -> corrector -> quiz (8 q). Then 3 cross-module
 consistency agents. Done: 22 audits, 22 rewrites, reader tests for ~20 modules, ~19 polish r1 passes.
@@ -87,7 +81,7 @@ NOT done: reader r2 for most, ALL round-2 fact checks, ALL refutation, quizzes f
 Resume = re-run only the failed/absent agents. Note the rewritten modules are 18-25k words; the user
 likes the depth ("super detailed which is amazing").
 
-### B. site-visual-qa  (runId wf_17c57619-b11, script site-visual-qa-wf_17c57619-b11.js)
+### B. site-visual-qa
 Per widget: critic (renders, grades, writes scenario) -> fixer -> verifier loop (max 3). Then shell-qa
 agent (index/app/styles/build) and final-sweep agent (renders every page). Done: 28 critiques, 15 fixes
 (scale-ladder chain-map deal-grove purity fab-flow upw-mask-cost rayleigh wafer-slicing
@@ -97,7 +91,7 @@ yield-calculator transistor-evolution test-cost hbm-stack cowos-flow package-xse
 wafer-price yield-cascade rack-explorer; verifies for almost everything; shell-qa; final-sweep.
 The critiques (cached, in the journal) are detailed and good; the chain-map redraw is a model result.
 
-### C. new-widgets-wave2  (runId wf_962a90b4-da5, script new-widgets-wave2-wf_962a90b4-da5.js)
+### C. new-widgets-wave2
 Build -> verify -> fix loop for the 18 widgets in qa/NEW_WIDGETS.md. Done: all 18 built (files exist,
 syntax OK), 16 verified: only heat-path PASSED; 15 failed round 1 with issue lists in the journal;
 amhs-sim fix r2 done. NOT done: fix rounds for the 15 failures and re-verification; dram-cell and

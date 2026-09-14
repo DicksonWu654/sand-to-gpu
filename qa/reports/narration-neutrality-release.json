@@ -221,7 +221,7 @@
     "pid": 1490796,
     "status": "complete",
     "updatedAt": "2026-09-14T04:37:46.274Z",
-    "output": "/home/artemis/.cache/sand-to-gpu/static-export",
+    "output": "<home>/.cache/sand-to-gpu/static-export",
     "format": "mp3",
     "bitrate": 64000,
     "compressedClips": 6556,
@@ -253,15 +253,15 @@
   "promotion": {
     "status": "passed",
     "timestamp": "2026-09-14T04:40:25.952353+00:00",
-    "canonical": "/home/artemis/.cache/sand-to-gpu/static-export",
-    "backup": "/home/artemis/.cache/sand-to-gpu/static-export-before-neutrality-2026-09-14",
+    "canonical": "<home>/.cache/sand-to-gpu/static-export",
+    "backup": "<home>/.cache/sand-to-gpu/static-export-before-neutrality-2026-09-14",
     "previousSourceHash": "64e8ef1d873c14b154d064f3d211992b4c10ed8b8ab36d85ab4dd101d8108a18",
     "sourceHash": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
     "livePort": 8790,
     "serverRestartRequired": false
   },
   "package": {
-    "archive": "/mnt/c/Users/dicks/Downloads/sand-to-gpu-static-2026-09-13.zip",
+    "archive": "<windows-home>/Downloads/sand-to-gpu-static-2026-09-13.zip",
     "files": 6647,
     "bytes": 1649782775,
     "sha256": "448723454c9882c833d8022600f43c18d7326803f75575452f81ae38069aef3f"

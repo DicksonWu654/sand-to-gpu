@@ -1,6 +1,6 @@
 # Back-half reader follow-up, 2026-09-13
 
-Historical evidence: the recovered Claude content workflow `wf_e4d87fff-51a/journal.jsonl`, matching result keys to its started labels. This is cached feedback, not fresh factual verification or a newly executed independent reader agent. Reader results and r1 polish summaries exist for11–19 (13 also has reader-r2);21 has a reader critique without a cached polish result. No reader result for20 was found in this workflow.
+Historical evidence: the recovered Claude content workflow journal (private session identifier removed), matching result keys to its started labels. This is cached feedback, not fresh factual verification or a newly executed independent reader agent. Reader results and r1 polish summaries exist for11–19 (13 also has reader-r2);21 has a reader critique without a cached polish result. No reader result for20 was found in this workflow.
 
 ## Module 11
 

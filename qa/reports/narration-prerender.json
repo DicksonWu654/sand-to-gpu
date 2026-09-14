@@ -99,7 +99,7 @@
     "wavBytes": 9791756380,
     "compressionFailures": 0
   },
-  "exportDirectory": "/home/artemis/.cache/sand-to-gpu/static-export",
+  "exportDirectory": "<home>/.cache/sand-to-gpu/static-export",
   "scope": "Complete Heart narration using the existing reader extraction; diagrams, tables, code and references excluded as in the player. Independent final coverage and native playback are recorded separately.",
   "validation": {
     "coverage": "qa/reports/narration-coverage.json",

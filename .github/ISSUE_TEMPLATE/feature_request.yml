@@ -1,0 +1,17 @@
+name: Feature request
+description: Suggest a way to make the course easier to learn from.
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What learning problem would this solve?
+      description: Describe the situation where you needed something the course does not provide.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: Describe the behavior or teaching aid you have in mind.
+    validations:
+      required: true

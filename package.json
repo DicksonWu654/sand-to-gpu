@@ -1,9 +1,22 @@
 {
+  "name": "sand-to-gpu",
+  "version": "0.1.0",
+  "description": "An interactive course through the semiconductor supply chain, from raw materials to GPU systems.",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DicksonWu654/sand-to-gpu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DicksonWu654/sand-to-gpu/issues"
+  },
   "dependencies": {
     "marked": "^14.1.4",
-    "puppeteer": "^23.11.1"
+    "puppeteer": "25.11.0"
   },
-  "private": true,
   "scripts": {
     "start": "node serve.js",
     "build": "node build.js",
@@ -16,6 +29,7 @@
     "narration:inventory": "node tools/narration/inventory.js",
     "narration:prerender": "node tools/narration/prerender.js",
     "narration:export": "node tools/narration/finish-export.js",
-    "qa:narration": "node qa/narration.js && node qa/narration-static.js && node qa/narration-paragraph.js"
+    "qa:narration": "node qa/narration.js && node qa/narration-static.js && node qa/narration-paragraph.js",
+    "check:markdown": "node qa/page-markdown.js"
   }
 }

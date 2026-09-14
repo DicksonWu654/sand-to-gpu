@@ -3092,7 +3092,7 @@
         },
         {
           "severity": "minor",
-          "what": "hms() rounds the small unit independently of the large one, so it prints \"4 h 60 min\" (Chiplet preset, 8 sites, Test time = 103 s) and \"9 h 60 min\" (207 s), and can print \"N min 60 s\"; the elapsed-time line in the progress text passes through the same states while animating. Found by sweeping the test-time slider 1\u2013300 s via puppeteer (C:\\Users\\dicks\\AppData\\Local\\Temp\\claude\\...\\scratchpad\\wss-probe.js).",
+          "what": "hms() rounds the small unit independently of the large one, so it prints \"4 h 60 min\" (Chiplet preset, 8 sites, Test time = 103 s) and \"9 h 60 min\" (207 s), and can print \"N min 60 s\"; the elapsed-time line in the progress text passes through the same states while animating. Found by sweeping the test-time slider 1–300 s via puppeteer (<local-scratch>/wss-probe.js).",
           "fix": "Line 39: round to the smallest displayed unit first, then carry: `const hms = s => { s = Math.round(s); if (s >= 3600) { const m = Math.round(s / 60); return Math.floor(m / 60) + ' h ' + String(m % 60).padStart(2, '0') + ' min'; } if (s >= 60) return Math.floor(s / 60) + ' min ' + String(s % 60).padStart(2, '0') + ' s'; return s + ' s'; };`"
         },
         {

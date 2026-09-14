@@ -1,0 +1,27 @@
+name: Content correction
+description: Improve an explanation, diagram, calculation, or source.
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Lesson and section
+      description: Include the track and a heading or quoted passage.
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What needs correcting or explaining better?
+      description: Explain what a reader might misunderstand.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested correction
+      description: A short explanation, revised wording, or diagram description is welcome.
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and uncertainty
+      description: For factual changes, link primary sources where possible. Include dates for changing market or supplier claims; distinguish measurements, estimates, and examples.

@@ -1,0 +1,47 @@
+name: Course checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Node ${{ matrix.node }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24]
+    steps:
+      - name: Check out source and course history
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0 # The course contract checks a historical baseline.
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - name: Install locked dependencies and browser
+        run: npm ci
+      - name: Check dependency advisories
+        run: npm audit --audit-level=high
+      - name: Build course and Markdown exports
+        run: npm run build
+      - name: Check content, figures, and historical contracts
+        run: npm run check
+      - name: Check complete Markdown exports
+        run: npm run check:markdown
+      - name: Verify generated course assets are current
+        run: git diff --exit-code -- site/content.js site/ai-content.js course/visuals/coverage.json course/SAND_TO_GPU_full_course.md

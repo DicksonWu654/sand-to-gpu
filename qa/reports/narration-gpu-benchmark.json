@@ -1,7 +1,7 @@
 {
   "timestamp": "2026-09-14T02:47:47Z",
   "runtime": "torch 2.14.0+cu130",
-  "python": "/home/artemis/.cache/sand-to-gpu/narration-gpu-py312/bin/python",
+  "python": "<home>/.cache/sand-to-gpu/narration-gpu-py312/bin/python",
   "device": "NVIDIA GeForce RTX 5070",
   "dependencyCheck": "uv pip check passed on Python 3.12.3",
   "source": "Exact inventory passages nearest 100, 500 and 1000 characters; isolated cache per worker; warmup excluded",

@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a broken interaction, layout problem, or listening issue.
+body:
+  - type: markdown
+    attributes:
+      value: "For security concerns, please read SECURITY.md before posting details publicly."
+  - type: input
+    id: page
+    attributes:
+      label: Lesson or page
+      description: Include the track, chapter, and section heading or URL.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: What did you click or change, and what happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      placeholder: "Firefox on Windows, Safari on iPhone, etc."
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or additional context
+      description: Crop or redact personal information before sharing.

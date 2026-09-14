@@ -4,7 +4,7 @@ The publishing edition uses saved Heart recordings for every passage narrated by
 
 **Current edition, September 14:** all 6,556 unique MP3 clips and 6,739 passage placements passed the final audit. The recordings total approximately 56.76 hours and 1.639 GB of MP3 audio. The supplier and geography revisions required 99 new recordings; 6,457 unchanged recordings were reused. Generation/cache assembly took 101 seconds and MP3 export took 39 seconds, with zero failures.
 
-The verified archive on this computer is `C:\Users\dicks\Downloads\sand-to-gpu-static-2026-09-13.zip` (1,651,026,247 bytes; 6,650 files). Its CRC, source snapshot and SHA-256 checks passed; see `qa/reports/narration-package.json` for the checksum. The preview on port 8790 now serves the completed static edition, with the local speech API disabled.
+The verified archive on this computer is `<downloads>/sand-to-gpu-static-2026-09-13.zip` (1,651,026,247 bytes; 6,650 files). Its CRC, source snapshot and SHA-256 checks passed; see `qa/reports/narration-package.json` for the checksum. The preview on port 8790 now serves the completed static edition, with the local speech API disabled.
 
 Archive SHA-256: `366814437675a88f54ad76272acc41000b47077e44d745fd2236e481b3d07593`.
 

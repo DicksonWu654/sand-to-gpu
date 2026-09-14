@@ -140,7 +140,7 @@
       "Four isolated negative tests already prove contract failures; their recorded input SHA refers to the earlier build, before the final wording-only edits. No negative test touched the live preview."
     ]
   },
-  "liveContentFile": "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/site/content.js",
+  "liveContentFile": "site/content.js",
   "livePreviewUntouched": true,
   "finalStatus": "frozen",
   "negativeTestBaseContentSha256": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",

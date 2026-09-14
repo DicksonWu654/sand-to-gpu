@@ -41,3 +41,12 @@ narration-model/
 narration-audio/
 narration-venv/
 __pycache__/
+
+# Local exports and package archives
+dist/
+static-export/
+*.zip
+*.tar.gz
+*.tgz
+.cache/
+.npm/
