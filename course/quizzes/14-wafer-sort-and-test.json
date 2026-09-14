@@ -2,7 +2,7 @@
   "module": 14,
   "questions": [
     {
-      "q": "A large die yields Y = 0.70 at sort and the scan program achieves T = 0.99 fault coverage. Using the Williams-Brown model DL = 1 - Y^(1-T), roughly how many defective parts per million escape, and what happens if coverage is raised to 0.999?",
+      "q": "Assume a large die has true good-die yield Y = 0.70 in the model and the scan program achieves T = 0.99 fault coverage. Using the Williams-Brown model DL = 1 - Y^(1-T), roughly how many defective parts per million escape, and what happens if coverage is raised to 0.999?",
       "options": [
         "About 300 DPPM; raising coverage to 0.999 has almost no effect because yield dominates",
         "About 3,560 DPPM; raising coverage to 0.999 cuts escapes roughly tenfold to about 360 DPPM",

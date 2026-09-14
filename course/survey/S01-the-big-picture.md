@@ -13,7 +13,7 @@ The semiconductor supply chain turns mineral feedstock, specialized materials an
 
 ## 1. What a chip actually is
 
-An electronic circuit directs electrical signals to perform a function. A **transistor** is a device in which a control signal changes a conducting path. Arranged together, transistors can implement logic, store information, amplify signals or control power. The digital circuits familiar to programmers use physical voltage ranges to represent logical states.
+An electronic circuit uses electrical signals to do a job. A **transistor** controls how easily current can pass along a path. For digital computing, think of it as a switch controlled by another electrical signal rather than by a finger. Connected switches can implement **logic**: rules that turn input states into output states. The states are represented by voltage ranges, such as a low range for one state and a high range for the other. The same device family can also store information, amplify signals or control power; the switch picture is a starting point for digital logic, not a description of every transistor application.
 
 The manufactured object is much more than an array of switches. It also contains contacts, wiring, insulating materials and structures that help deliver power and protect the circuit. A transistor produces no useful computation on its own unless the rest of the circuit can provide inputs, carry its outputs and maintain the required operating conditions.
 
@@ -49,7 +49,7 @@ A fab does not carve an entire processor from a block in one operation. It repea
 
 **Deposition** adds a film. Depending on the process, that film may be a conductor, an insulator or a semiconductor. It must have the intended composition and thickness, and it may need to coat the inside of extremely narrow structures rather than only a flat exposed surface.
 
-**Lithography** defines a pattern in a light-sensitive material called **photoresist**. A **mask** carries the pattern information used by the exposure system. Development then changes the resist into a temporary patterned layer. The image in the resist is usually a tool for the next operation, not the final working transistor or wire.
+**Lithography** defines a pattern in a light-sensitive material called **photoresist**. A **mask** carries the pattern information used by the exposure system. A liquid called the **developer** dissolves selected regions of the resist after exposure, leaving openings and protected areas. Think of that remaining film as a temporary stencil for the next operation. The image in the resist is usually a tool for the next operation, not the final working transistor or wire.
 
 **Etching** removes material from selected regions. The process must control how far it cuts, the shape of its sidewalls and which materials it preserves. **Doping** intentionally introduces suitable impurity atoms to change silicon's electrical behavior. Heating steps can alter crystal damage, chemical reactions and the electrical activity of dopants.
 
@@ -79,7 +79,7 @@ Large dies face another challenge: they offer more area in which a harmful defec
 
 A powerful computing circuit needs data. **DRAM**, or dynamic random-access memory, stores working information in cells whose charge must be periodically restored. **High-bandwidth memory**, or **HBM**, assembles DRAM dies into stacks placed close to a processor, using a wide connection to deliver data rapidly.
 
-**Bandwidth** means data transferred per unit time. It differs from **capacity**, how much data is stored, and **latency**, how long a particular request takes. A system can have plenty of memory capacity while still leaving computing circuits idle because the necessary data cannot arrive quickly enough.
+**Bandwidth** means data transferred per unit time. It differs from **capacity**, how much data is stored, and **latency**, how long a particular request takes. Imagine a warehouse making deliveries: capacity is how much it stores, bandwidth is how much it can ship per unit time, and latency is how long a particular delivery takes. A large warehouse can still have a slow loading dock. Likewise, ample memory capacity does not keep computing circuits busy if data cannot arrive quickly enough. The analogy compares storage and delivery; data transfers are electrical signals, not physical parcels.
 
 To connect nearby compute and memory, advanced packages use a fine-wiring intermediate structure called an **interposer**. It routes dense connections before they fan out through a larger substrate and toward the circuit board. Different technologies build that intermediate structure from silicon, redistribution layers or combinations including local silicon bridges.
 

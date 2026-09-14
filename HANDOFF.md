@@ -3,6 +3,8 @@
 > **Diagram corrections:** See [DIAGRAM_AUDIT_2026-09-13.md](DIAGRAM_AUDIT_2026-09-13.md) for the subsequent visual and semantic audit. Earlier passing layout checks missed internal clipping and misleading physical geometry.
 >
 > **Further refinement:** See [QUALITY_REFINEMENT_2026-09-13.md](QUALITY_REFINEMENT_2026-09-13.md) for navigation/progress fixes, phone tables, visual polish, and the fresh materials/crystal/wafer diagram review.
+>
+> **Language and explanation:** See [LANGUAGE_REVIEW_2026-09-13.md](LANGUAGE_REVIEW_2026-09-13.md) for the novice-oriented editorial pass across both tracks, reviewed definition corrections, and the updated source-to-build preservation contract.
 
 # HANDOFF: "Sand to GPU" semiconductor course + interactive site
 

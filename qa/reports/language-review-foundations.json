@@ -1,0 +1,765 @@
+{
+  "date": "2026-09-13",
+  "baseline_commit": "3f3b9cb5f953a4f9a4c8ed41ae33cf73c24eff9b",
+  "purpose": "Novice-friendly explanations with preserved technical depth. Focused editorial pass with a bounded primary-source verification follow-up for three identified Module 04 technical assertions and a directly contradictory UPW table phrase. Not a general scientific or current-market audit.",
+  "scope": {
+    "deep_modules": 8,
+    "survey_chapters": 3,
+    "edit_operations": 62,
+    "edited_prose_files": 11,
+    "full_deep_module_line_edit": false,
+    "headings_links_widget_placements_preserved": true,
+    "quiz_and_diagram_files_changed": false,
+    "build_or_browser_tests_run": false
+  },
+  "files": [
+    {
+      "file": "course/modules/00-overview.md",
+      "reviewed_scope": [
+        "Opening: GPU, wafer, die, package and example inventory",
+        "Before you start: power equation, optical resolution, yield versus throughput"
+      ],
+      "review_method": "Read opening and prerequisite/gist material, then targeted contextual reading of listed explanations and changed transitions. Survey bodies were read through their six main sections. Not an exhaustive line edit of each deep module.",
+      "edit_operations": 5,
+      "words_before": 22575,
+      "words_after": 22681,
+      "preserved_contracts": {
+        "headings": true,
+        "widgets": true,
+        "links": true
+      },
+      "numeric_token_delta": {
+        "removed": {},
+        "added": {}
+      }
+    },
+    {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "reviewed_scope": [
+        "Opening: goal, doping, metal contamination and polysilicon structure",
+        "Before you start: free energy versus reaction rate",
+        "4. The Siemens Process: reaction sequence, unit operations and recycle accounting"
+      ],
+      "review_method": "Read opening and prerequisite/gist material, then targeted contextual reading of listed explanations and changed transitions. Survey bodies were read through their six main sections. Not an exhaustive line edit of each deep module.",
+      "edit_operations": 3,
+      "words_before": 22222,
+      "words_after": 22304,
+      "preserved_contracts": {
+        "headings": true,
+        "widgets": true,
+        "links": true
+      },
+      "numeric_token_delta": {
+        "removed": {},
+        "added": {}
+      }
+    },
+    {
+      "file": "course/modules/02-crystal-growth.md",
+      "reviewed_scope": [
+        "Opening: grain boundaries and predictable conduction",
+        "The CZ Recipe, Step by Step: segregation coefficient and Dash neck analogy",
+        "Point Defects, v/G, and the Voronkov Theory: pull speed versus spatial gradient"
+      ],
+      "review_method": "Read opening and prerequisite/gist material, then targeted contextual reading of listed explanations and changed transitions. Survey bodies were read through their six main sections. Not an exhaustive line edit of each deep module.",
+      "edit_operations": 4,
+      "words_before": 21310,
+      "words_after": 21462,
+      "preserved_contracts": {
+        "headings": true,
+        "widgets": true,
+        "links": true
+      },
+      "numeric_token_delta": {
+        "removed": {},
+        "added": {}
+      }
+    },
+    {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "reviewed_scope": [
+        "Opening: physical shaping goal and roughness versus flatness",
+        "Gravitational sag worked example: physical meaning of quantities",
+        "Polishing: Preston equation output and empirical coefficient"
+      ],
+      "review_method": "Read opening and prerequisite/gist material, then targeted contextual reading of listed explanations and changed transitions. Survey bodies were read through their six main sections. Not an exhaustive line edit of each deep module.",
+      "edit_operations": 5,
+      "words_before": 25216,
+      "words_after": 25388,
+      "preserved_contracts": {
+        "headings": true,
+        "widgets": true,
+        "links": true
+      },
+      "numeric_token_delta": {
+        "removed": {},
+        "added": {}
+      }
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reviewed_scope": [
+        "Opening and Before you start: device/manufacturing roles, terminology and qualification",
+        "Silicon carbide: drift-region field gradient",
+        "Gallium nitride: polarization and electron confinement",
+        "Ultrapure water: resistivity measurement and limits",
+        "Bounded technical follow-up: specific resistance, IGBT choice, silicon/InP laser assertions and repeated summary/table claims; nearby UPW table."
+      ],
+      "review_method": "Read opening and prerequisite/gist material, then targeted contextual reading of listed explanations and changed transitions. Survey bodies were read through their six main sections. Not an exhaustive line edit of each deep module.",
+      "edit_operations": 20,
+      "words_before": 27385,
+      "words_after": 27707,
+      "preserved_contracts": {
+        "headings": true,
+        "widgets": true,
+        "links": true
+      },
+      "numeric_token_delta": {
+        "removed": {
+          "03": 1,
+          "200": 1,
+          "75–100": 1,
+          "18.18,": 1
+        },
+        "added": {
+          "2": 1,
+          "08": 1,
+          "4": 1,
+          "3": 2,
+          "7": 5,
+          "8": 3,
+          "2021": 1,
+          "18.18": 1,
+          "301": 1,
+          "120": 1,
+          "4205": 1,
+          "01": 1,
+          "00": 1,
+          "5546": 1,
+          "4626": 1,
+          "016": 1,
+          "47919": 1,
+          "788": 1,
+          "2005": 1,
+          "20050217": 1
+        }
+      },
+      "link_additions": 7
+    },
+    {
+      "file": "course/modules/05-inside-a-fab.md",
+      "reviewed_scope": [
+        "Opening: recurring process and depreciation incentive",
+        "Cycle time: backlog, utilization and variation notation",
+        "Little’s law: averaging, common counting boundary and units"
+      ],
+      "review_method": "Read opening and prerequisite/gist material, then targeted contextual reading of listed explanations and changed transitions. Survey bodies were read through their six main sections. Not an exhaustive line edit of each deep module.",
+      "edit_operations": 5,
+      "words_before": 23998,
+      "words_after": 24102,
+      "preserved_contracts": {
+        "headings": true,
+        "widgets": true,
+        "links": true
+      },
+      "numeric_token_delta": {
+        "removed": {
+          "0": 1
+        },
+        "added": {}
+      }
+    },
+    {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "reviewed_scope": [
+        "Opening and prerequisites: electrical film roles and thermal constraints",
+        "Deal–Grove: equation reading guide and transition",
+        "ALD: saturation and purges before chemical notation"
+      ],
+      "review_method": "Read opening and prerequisite/gist material, then targeted contextual reading of listed explanations and changed transitions. Survey bodies were read through their six main sections. Not an exhaustive line edit of each deep module.",
+      "edit_operations": 5,
+      "words_before": 24285,
+      "words_after": 24503,
+      "preserved_contracts": {
+        "headings": true,
+        "widgets": true,
+        "links": true
+      },
+      "numeric_token_delta": {
+        "removed": {},
+        "added": {}
+      }
+    },
+    {
+      "file": "course/modules/07-lithography-duv.md",
+      "reviewed_scope": [
+        "Opening and prerequisites: resist, development, pitch, width and placement",
+        "Prerequisites: ALD cycle growth and directional etching",
+        "Optics: equation quantities and resolution/focus tradeoff",
+        "Bossung plot: flatness only useful with correct CD and profile"
+      ],
+      "review_method": "Read opening and prerequisite/gist material, then targeted contextual reading of listed explanations and changed transitions. Survey bodies were read through their six main sections. Not an exhaustive line edit of each deep module.",
+      "edit_operations": 6,
+      "words_before": 21750,
+      "words_after": 21902,
+      "preserved_contracts": {
+        "headings": true,
+        "widgets": true,
+        "links": true
+      },
+      "numeric_token_delta": {
+        "removed": {},
+        "added": {}
+      }
+    },
+    {
+      "file": "course/survey/S01-the-big-picture.md",
+      "reviewed_scope": [
+        "Opening retained after review",
+        "1. What a chip actually is: physical switch and logic states",
+        "3. Build a circuit: developer removal and temporary stencil",
+        "5. Memory: bandwidth, capacity and latency"
+      ],
+      "review_method": "Read opening and prerequisite/gist material, then targeted contextual reading of listed explanations and changed transitions. Survey bodies were read through their six main sections. Not an exhaustive line edit of each deep module.",
+      "edit_operations": 3,
+      "words_before": 2728,
+      "words_after": 2851,
+      "preserved_contracts": {
+        "headings": true,
+        "widgets": true,
+        "links": true
+      },
+      "numeric_token_delta": {
+        "removed": {},
+        "added": {}
+      }
+    },
+    {
+      "file": "course/survey/S02-from-sand-to-a-mirror.md",
+      "reviewed_scope": [
+        "Opening retained after review",
+        "2. Purification: distillation and composition versus order",
+        "4. Impurities: gettering relocates/traps contamination rather than removing it"
+      ],
+      "review_method": "Read opening and prerequisite/gist material, then targeted contextual reading of listed explanations and changed transitions. Survey bodies were read through their six main sections. Not an exhaustive line edit of each deep module.",
+      "edit_operations": 3,
+      "words_before": 2580,
+      "words_after": 2657,
+      "preserved_contracts": {
+        "headings": true,
+        "widgets": true,
+        "links": true
+      },
+      "numeric_token_delta": {
+        "removed": {},
+        "added": {}
+      }
+    },
+    {
+      "file": "course/survey/S03-inside-the-fab.md",
+      "reviewed_scope": [
+        "Opening retained after review",
+        "1. Cleanroom: first-use deposition definition",
+        "3. Wafers travel: route, identity and recipe prerequisites",
+        "5. Waiting: checkout analogy and qualified tool capacity"
+      ],
+      "review_method": "Read opening and prerequisite/gist material, then targeted contextual reading of listed explanations and changed transitions. Survey bodies were read through their six main sections. Not an exhaustive line edit of each deep module.",
+      "edit_operations": 3,
+      "words_before": 2576,
+      "words_after": 2628,
+      "preserved_contracts": {
+        "headings": true,
+        "widgets": true,
+        "links": true
+      },
+      "numeric_token_delta": {
+        "removed": {},
+        "added": {}
+      }
+    }
+  ],
+  "numeric_and_source_notes": [
+    "No numerical parameter values, equations, worked-example calculations, source URLs, citation lists or date-qualified market estimates were updated.",
+    "Numeric-token deltas are wording/reference changes only: Module 04 removes one opening reference to Module 03; Module 05 spells prerequisite coefficient zero as a word.",
+    "First-use 2D remains written alongside its expansion. All other original numeric-token counts match.",
+    "Conceptual qualifiers changed deliberately: ALD grows a calibrated fraction per cycle rather than a full atomic layer per pulse; anisotropy is directional preference rather than zero sideways etching; a coefficient of variation of one does not define all randomness; Little’s law uses averages. These align with existing deeper explanations, equations or the ALD quiz.",
+    "Removed broad rhetorical universal claims from selected openings (all important chips, every inverter/link, no transistor across any grain boundary, accounting regardless of demand). No replacement market-share claims were introduced.",
+    "Bounded follow-up corrects specific-resistance normalization and categorical application claims; all equations and worked examples remain unchanged. Repeated 75–100 mm and Module 19/GB200 assertions were removed with the invalid every-link claim, while the wafer size remains elsewhere and in the summary. Added primary-source URLs include digits that are citations, not new parameter values. Ω·cm² is stated explicitly alongside the existing mΩ·cm²."
+  ],
+  "dependency_review": [
+    "Read the Module 06 ALD quiz question/explanation and section figure. Both already use saturation and sub-monolayer/cycle growth; revised Module 07 prerequisite resolves the previous contradiction.",
+    "Searched assigned quiz/figure data for exact old downward-only, built-in-battery and ion-absence wording. No direct dependent text match required a correction. This is a targeted consistency check, not a full audit of all diagrams or quizzes.",
+    "Initial pending concerns are now resolved by the bounded follow-up. Existing headings, widget placements and original links remain; seven primary-source links were appended in Further Reading."
+  ],
+  "changes_in_application_order": [
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Separate device materials from manufacturing consumables; introduce abbreviations by purpose; remove rhetorical importance and universal application claims while preserving numbers and estimate caveats.",
+      "before": "Silicon is the substrate of almost every chip that matters, but it is not the only semiconductor in the box, and the polished wafer that arrived at the end of Module 03 is only the beginning of the fab's shopping list. Every one of the ~1,000+ process steps a leading-edge wafer goes through (a **process step** is one pass through one tool: one film deposited, one pattern exposed, one clean) consumes something: a resist, a gas, an acid, a slurry, a sputter target, a precursor, a quartz tube, a photomask. A 300 mm wafer that leaves TSMC N2 at ~$25,000–30,000 (industry estimates; TSMC does not publish) has had thousands of dollars of consumables poured over it and pumped through it, and most of those consumables came from a small number of companies, many of them Japanese, that most people have never heard of.\n\nThis module has two halves. **Half A** covers the semiconductors that are not silicon, or not plain silicon: strained SiGe inside every modern transistor, silicon carbide in every 800 V electric-vehicle inverter, gallium nitride in the charger on your desk, gallium arsenide in your phone's radio, indium phosphide in the lasers that carry every bit between GPUs (graphics processing units, the accelerator chips that do AI arithmetic) in an AI cluster, and the 2D materials being tested as the channel material for the 2030s. **Half B** is the consumables supply chain: what a fab burns through, at what purity, from whom, and why a single Japanese chemical plant or one Ukrainian gas purifier can ripple across the world's semiconductor output.\n\nThe hard problem in both halves is the same: making something at **part-per-trillion (ppt)** purity (one foreign atom in a million million, the same ratio as one second in 32,000 years) and atomic-scale perfection, reproducibly, at industrial scale, with a **qualification** lock-in so severe that switching vendors mid-node can take a year. Qualification is the 6–18 month campaign of running a new material through a fab's full process flow and proving that yield does not move before it is allowed anywhere near product wafers; once a material is qualified, nobody wants to repeat the campaign.\n\nBy the end you should be able to explain why a SiC wafer costs tens of times more than a silicon one, why a GaN charger has no GaN wafer in it, what 18.2 MΩ·cm water is and why a fab needs six cubic metres of it per wafer, why an EUV mask is a mirror, and why one Japanese plant can stop the world's memory output with a customs form.\n",
+      "after": "A chip factory needs two kinds of materials: materials that become part of the finished device, and **consumables** used to manufacture it. Silicon is the main starting surface, or **substrate**, for most chips in this course. Other semiconductors can make better power switches, radio components or light sources. Consumables do different jobs: gases supply atoms for a film, acids clean a surface, and polishing mixtures remove material. Some supply atoms that remain in the chip; much of what enters the factory is removed or recycled after doing its job.\n\nThis module follows both groups. **Half A** explains why a designer would choose something other than plain silicon: silicon-germanium (SiGe) to improve a transistor, silicon carbide (SiC) for an 800 V electric-vehicle inverter, gallium nitride (GaN) for a compact charger, gallium arsenide (GaAs) for a phone's radio, or indium phosphide (InP) for a laser in an optical link. Those links carry data between **GPUs**, graphics processing units used as accelerator chips for AI arithmetic. We also look at the 2D materials being tested as transistor channels for the 2030s. The aim is to understand each material's advantage and what it costs to manufacture, rather than to memorize the list.\n\n**Half B** follows the fab's shopping list. A **fab** is a chip factory; a **process step** is one pass through a tool, such as depositing a film, exposing a pattern or cleaning a wafer. A leading-edge wafer goes through ~1,000+ such steps. A 300 mm wafer that leaves TSMC N2 at ~$25,000–30,000 (industry estimates; TSMC does not publish) has had thousands of dollars of consumables poured over it and pumped through it. We will connect each material to its job before asking who supplies it and why replacing that supplier is difficult.\n\nThe common challenge is control: the right composition, the right atomic structure, and impurities kept low enough for the particular job. Some impurity limits reach **part-per-trillion (ppt)** levels: one foreign atom in a million million, the same ratio as one second in 32,000 years. The requirement is not identical for every material. A fab must also prove that a new supply works reliably in its process. That **qualification** can mean a 6–18 month campaign through the full manufacturing sequence, checking that the fraction of working chips, or **yield**, does not fall. This is why switching vendors mid-node can take a year even when the replacement has the same chemical name.\n\nBy the end you should be able to explain why a SiC wafer costs tens of times more than a silicon one, how a GaN charger can be made from material grown on a silicon wafer, what 18.2 MΩ·cm water means and why a fab needs six cubic metres per wafer, why an EUV mask is a mirror, and how a disruption at one chemical supplier can reach a distant chip factory.\n"
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Replace misleading perpetual-battery analogy with charge separation and explain both dimensionality and electron source limitation.",
+      "before": "> **Intuition: a built-in battery in every unit cell.** In GaN every unit cell is a tiny battery: the Ga and N atoms are arranged so that the centres of positive and negative charge do not coincide (**spontaneous polarization**). Stack a different battery on top, AlGaN, which is also stretched to fit GaN's lattice and so adds a strain-induced (**piezoelectric**) term, and the mismatch between the two leaves a sheet of net positive charge at the interface. That sheet pulls in electrons from wherever it can find them, and they pile up in a layer a few nanometres thick right at the interface, free to move sideways but trapped vertically: a two-dimensional electron gas.",
+      "after": "> **Intuition: charge gathers at a boundary.** In GaN, the centres of positive and negative charge within the crystal do not quite coincide. This built-in separation is called **spontaneous polarization**. Aluminium gallium nitride (AlGaN) has a different polarization, and stretching it to fit GaN changes that separation further; this strain effect is **piezoelectric polarization**. At the boundary, the two arrangements do not cancel, leaving a net positive sheet of charge. It attracts electrons into a layer a few nanometres thick. They can move along the boundary but are confined across its thickness. That is what “two-dimensional electron gas” means: mobile electrons inside a solid, not a pocket of gaseous material. The polarization creates the attraction; it does not create electrons or supply energy like a battery."
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Explain measurement purpose, unit and limit without implying all ions are absent.",
+      "before": "> **Intuition: resistivity is a live ion meter.** Pure water conducts electricity only through the tiny fraction of its own molecules that split into H+ and OH- ions (about one in ten million). Any dissolved salt adds ions, and every ion carries current, so the resistivity drops. Resistivity is therefore a continuous meter of ion content: 18.2 MΩ·cm means the ions are essentially gone. It says nothing about neutral organic molecules, dissolved silica, bacteria or particles, none of which carry current, and that is why those need their own meters.",
+      "after": "> **Intuition: resistivity is a live ion meter.** Dissolved salts supply **ions**, atoms or groups of atoms with an electrical charge. Those ions carry current through water, so adding salt lowers its **resistivity**, the material's resistance to current flow after allowing for the measuring cell's size. Even pure water conducts a little: a tiny fraction of its molecules split into H+ and OH- ions (about one in ten million). The target of 18.2 MΩ·cm means the water is close to that pure-water limit, not that every ion has vanished. The unit reads “megohm-centimetres.” This measurement mainly answers “how much ionic contamination is present?” It cannot certify the absence of neutral organic molecules, dissolved silica, bacteria or particles; those need separate measurements."
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Replace an ambiguous voltage-absorption analogy with field as voltage change per distance, establishing the causal bridge to the formula.",
+      "before": "The voltage is held by a **drift region**, a thick, lightly doped layer that absorbs the electric field the way a long insulator absorbs voltage.",
+      "after": "When the switch is off, a **drift region** spreads the voltage drop through a thick, lightly doped layer. **Electric field** describes how quickly voltage changes with distance: forcing the same voltage drop into a shorter distance means a stronger field. The layer does not use up voltage; it provides enough distance to keep the field below the level that would cause breakdown."
+    },
+    {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "reason": "Break the opening into goal, intentional doping, unwanted metals and product; remove a misleading single-sentence transistor definition.",
+      "before": "The problem this stage solves is brutally simple to state and brutally hard to do: take silicon dioxide, the most abundant compound in the Earth's crust, and turn it into elemental silicon in which fewer than one atom in a billion is anything other than silicon. A leading-edge transistor does not care that silicon is common. It cares about which foreign atoms sit in the crystal around it. A **dopant** is an impurity added on purpose: boron has one electron fewer than silicon and makes **p-type** silicon, in which current is carried by mobile electron vacancies called holes; phosphorus has one electron more and makes **n-type** silicon, in which current is carried by the spare electrons. A transistor is a switch built from adjacent p-type and n-type regions, so the wafer maker introduces a controlled dopant concentration of perhaps 10^15 atoms per cm³ and needs any residual, uncontrolled boron and phosphorus to be at least a thousand times lower than that. Boron and phosphorus are dangerous precisely because they are dopants: a stray one changes the switch's behaviour. Metals are dangerous for a different reason: an atom of iron, copper, or nickel lodged in the lattice acts as a trap that swallows the free electrons the switch relies on, or as a short through the **gate oxide**, the insulating layer only a few atoms thick that separates the silicon from the transistor's control electrode (its **gate**, the terminal whose voltage turns the switch on and off). The product of this stage is **polycrystalline silicon (polysilicon)**: a solid made of millions of small silicon crystals in random orientations, which is what you get when silicon deposits everywhere at once on a hot rod. A wafer needs one continuous crystal; turning polysilicon into that is Module 02's job.",
+      "after": "This stage has a clear goal: take silicon dioxide, the most abundant compound in the Earth's crust, and turn it into elemental silicon in which fewer than one atom in a billion is anything other than silicon.\n\nThe amount of silicon is not the difficulty. The difficulty is controlling which foreign atoms remain among its atoms, because different impurities change electrical behaviour in different ways. A **dopant** is an impurity added on purpose: boron has one electron fewer than silicon and makes **p-type** silicon, in which current is carried by mobile electron vacancies called holes; phosphorus has one electron more and makes **n-type** silicon, in which current is carried by the spare electrons. A transistor uses carefully arranged regions of semiconductor to control current, so the wafer maker introduces a controlled dopant concentration of perhaps 10^15 atoms per cm³ and needs any residual, uncontrolled boron and phosphorus to be at least a thousand times lower than that. Boron and phosphorus are dangerous precisely because they are dopants: a stray one changes the switch's behaviour.\n\nMetals cause a different problem: an atom of iron, copper, or nickel lodged in the lattice acts as a trap that swallows the free electrons the switch relies on, or as a short through the **gate oxide**, the insulating layer only a few atoms thick that separates the silicon from the transistor's control electrode (its **gate**, the terminal whose voltage turns the switch on and off).\n\nThe product of this stage is **polycrystalline silicon (polysilicon)**: a solid made of millions of small silicon crystals in random orientations, which is what you get when silicon deposits everywhere at once on a hot rod. A wafer needs one continuous crystal; turning polysilicon into that is Module 02's job."
+    },
+    {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "reason": "Name all prerequisite equation quantities and separate thermodynamic favourability from speed.",
+      "before": "- **Heat of reaction.** A reaction's enthalpy change ΔH is the heat it absorbs (positive) or releases (negative). Reactions that turn solids into gases become favourable at high temperature because gas has far more entropy (disorder); the deciding quantity is ΔG = ΔH − TΔS, and the reaction goes when ΔG is negative.",
+      "after": "- **Heat of reaction.** A reaction's enthalpy change ΔH is the heat it absorbs (positive) or releases (negative). Its entropy change ΔS describes the change in how widely matter and energy can be distributed; producing gas often increases it. The balance is ΔG = ΔH − TΔS, where T is absolute temperature in kelvin and ΔG is the Gibbs free-energy change. A negative ΔG says the reaction is thermodynamically favoured under the stated conditions. It does not say how fast it happens; temperature must also make the reaction fast enough to be useful."
+    },
+    {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "reason": "Turn industrial shorthand into a physical sequence and explain the recycle-loop purpose.",
+      "before": "The Siemens process is three unit operations wrapped in a recycle loop: make **trichlorosilane (TCS, SiHCl₃)** from MG-Si and HCl, distill it to extreme purity, then decompose it on hot silicon rods. Everything else, the vent-gas recovery, the silicon tetrachloride converter, the HCl absorber, exists to close the mass balance so that chlorine and hydrogen circulate and only silicon leaves. The loop, in the order the silicon experiences it:",
+      "after": "The Siemens process changes silicon's form so it can be separated from its contaminants, then changes it back. First, **metallurgical-grade silicon (MG-Si)** reacts with hydrogen chloride (HCl) to make **trichlorosilane (TCS, SiHCl₃)**. Next, distillation separates this volatile compound from other compounds. Finally, it decomposes on hot silicon rods, leaving purified solid silicon behind. These are the three **unit operations**, meaning the main kinds of processing, in the plant.\n\nThe plant also recovers and reuses chemicals. Vent-gas recovery, the silicon tetrachloride converter and the HCl absorber close the **mass balance**: accounting for where each input goes, so chlorine and hydrogen can circulate rather than being discarded after one pass. The loop, in the order the silicon experiences it:"
+    },
+    {
+      "file": "course/modules/02-crystal-growth.md",
+      "reason": "Explain why grain boundaries matter instead of treating polycrystalline material as universally useless.",
+      "before": "chemically about as pure as any bulk material humans make, and structurally useless. Polysilicon is a jumble of millimetre-sized grains, each a perfect little crystal pointing in a random direction. A transistor cannot be built across a grain boundary.",
+      "after": "chemically extremely pure but not yet the structure needed for the wafers in this course. Polysilicon is a jumble of millimetre-sized grains, each a little crystal pointing in a different direction. Where grains meet, the atomic pattern is interrupted. Such **grain boundaries** can trap charge and interfere with predictable current flow, so the active silicon of these wafers must be one continuous crystal."
+    },
+    {
+      "file": "course/modules/02-crystal-growth.md",
+      "reason": "Define concentration symbols and prevent interpreting the partition coefficient as a batch removal percentage.",
+      "before": "Each dopant partitions between solid and liquid according to its **equilibrium segregation coefficient** k₀ = C_solid / C_liquid at the interface:",
+      "after": "Each dopant partitions between solid and liquid according to its **equilibrium segregation coefficient** k₀ = C_solid / C_liquid at the interface. C_solid is its concentration in the newly frozen solid, and C_liquid is its concentration in the liquid touching that solid. The ratio compares concentrations, not the fraction of all dopant atoms that have entered the ingot. A value below one means the growing crystal takes a less concentrated share, so the remaining melt becomes enriched as growth continues:"
+    },
+    {
+      "file": "course/modules/02-crystal-growth.md",
+      "reason": "Distinguish pull speed, spatial temperature gradient and cooling rate before the defect transport model.",
+      "before": "**Vladimir Voronkov** (1982) showed that which species survives is governed by that single ratio: the growth rate v divided by the axial temperature gradient at the interface G. Made precise, the flux picture is this.",
+      "after": "**Vladimir Voronkov** (1982) showed that which species survives is governed by that single ratio: the growth rate v divided by the axial temperature gradient at the interface G. Here v says how quickly new crystal moves away from the melt; G says how much its temperature changes per unit distance along that direction. Increasing v and increasing G therefore push the ratio in opposite directions. G is a spatial temperature gradient, not the number of degrees the furnace cools per minute. Made precise, the flux picture is this."
+    },
+    {
+      "file": "course/modules/02-crystal-growth.md",
+      "reason": "Bound the filter analogy and distinguish structural defect control from chemical purification.",
+      "before": "The neck is a filter with nothing for the wrinkle to hide behind: make the rod thin, grow it fast, and every dislocation reaches the surface and leaves.",
+      "after": "The thin neck gives a dislocation a short route to a free surface, where the line defect can end. It is a geometric filter, not a sieve that removes foreign atoms: this step repairs the continuity of the crystal, while feedstock purification controlled its chemistry."
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Clarify that materials can serve both manufacturing and device roles.",
+      "before": "A chip factory needs two kinds of materials: materials that become part of the finished device, and **consumables** used to manufacture it.",
+      "after": "Materials play two roles in a chip factory: they become part of the finished device, or they help manufacture it. Some do both. **Consumables** are the materials used up or regularly replaced during manufacturing."
+    },
+    {
+      "file": "course/modules/00-overview.md",
+      "reason": "Lead with GPU/die/wafer/package relationships before the example inventory; avoid implying every mask transmits light.",
+      "before": "A single NVIDIA Blackwell GPU package contains two **dies** (a die is one rectangular chip cut from a round silicon wafer) of roughly 800 mm² each, about 208 billion transistors, eight stacks of **high-bandwidth memory (HBM)** (DRAM memory chips stacked on top of one another and placed beside the GPU), and a silicon-and-organic **substrate** (the layered carrier that connects the dies to a circuit board), assembled by more than a dozen companies on three continents. The **package** is the whole assembly of dies, memory, substrate, lid and solder balls: the object that gets soldered to a board. Its silicon was quartz in a mine in Norway, Brazil, or North Carolina roughly a year before the GPU booted. In between, the material passed through something like 1,500 discrete process steps, a **mask set** (the ~100 stencils through which each layer of the chip is printed) that cost tens of millions of dollars, machines that individually sell for $200–400 million, and a **fab** (a chip factory) that cost more than an aircraft carrier. No single person understands every step at the level of the engineers who own it. That is the problem this module solves: you need a map of the whole territory before you walk any part of it, so that when Module 08 spends 7,000 words on tin droplets you know why they matter and where they sit.",
+      "after": "Start with the object this course follows: a **GPU**, or graphics processing unit, used here to perform the arithmetic for AI. It is built from silicon chips and supporting parts. A **die** is one rectangular chip cut from a round silicon **wafer**, the shared surface on which many chips are made. The **package** joins dies, memory, a supporting carrier, a lid and solder balls into the object that gets soldered to a circuit board.\n\nA single NVIDIA Blackwell GPU package contains two dies of roughly 800 mm² each, about 208 billion **transistors** (electrically controlled switches), and eight stacks of **high-bandwidth memory (HBM)**. HBM stacks DRAM memory chips, which hold working data, beside the GPU so data can move between them rapidly. A silicon-and-organic **substrate**, the layered carrier, connects the dies to the circuit board. More than a dozen companies on three continents assemble the parts.\n\nIts silicon was quartz in a mine in Norway, Brazil, or North Carolina roughly a year before the GPU booted. In between, the material passed through something like 1,500 discrete process steps, a **mask set** (the ~100 master patterns used to print the chip's layers) that cost tens of millions of dollars, machines that individually sell for $200–400 million, and a **fab** (a chip factory) that cost more than an aircraft carrier. No single person understands every step at the level of the engineers who own it. That is the problem this module solves: you need a map of the whole territory before you walk any part of it, so that when Module 08 spends 7,000 words on tin droplets you know why they matter and where they sit."
+    },
+    {
+      "file": "course/modules/00-overview.md",
+      "reason": "Name power equation quantities and connect high current to physical manufacturing.",
+      "before": "- **Voltage, current, power.** P = V × I. A GPU runs its transistors at about 1 V, so a 1,000 W chip draws ~1,000 A, which is why power delivery is a manufacturing problem and not only an electrical one. (Module 19)",
+      "after": "- **Voltage, current, power.** Voltage V is the electrical push, current I is the rate of charge flow, and power P is the rate of energy transfer: P = V × I. A GPU runs its transistors at about 1 V, so a 1,000 W chip draws ~1,000 A. Delivering that much current requires substantial connections even though the switches themselves are tiny. (Module 19)"
+    },
+    {
+      "file": "course/modules/00-overview.md",
+      "reason": "Replace an apparent wavelength cutoff with the blur mechanism and preserve the path to DUV sub-wavelength imaging.",
+      "before": "- **Light and resolution.** You cannot print a feature much smaller than the wavelength of the light you print it with; shorter wavelength → smaller features. (Module 07)",
+      "after": "- **Light and resolution.** Light spreads as it passes a patterned mask, so the image on the wafer is blurred rather than a perfect shadow. Shorter wavelengths help resolve finer detail. Lens design, illumination and chemistry also matter: features can be smaller than the wavelength, as Module 07 explains."
+    },
+    {
+      "file": "course/modules/00-overview.md",
+      "reason": "Separate production volume from usable output before cost and supply-chain discussion.",
+      "before": "**Yield** is the fraction of parts that work. **Wafer starts per month (wpm)** is how many wafers a fab begins processing each month.",
+      "after": "**Yield** is the fraction of parts that work. It measures success, not production speed: a fast factory can still produce many unusable chips. **Wafer starts per month (wpm)** is how many wafers a fab begins processing each month."
+    },
+    {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "reason": "Establish the shaping problem before the specification list and distinguish flatness from roughness.",
+      "before": "A finished Czochralski ingot is a 300 mm diameter, roughly 2 m long, 300+ kg cylinder of single-crystal silicon with a domed crown on one end and a conical tail on the other. What a fab wants is about 1,500 to 2,000 discs cut from it, each 775 µm thick, with a front surface whose height varies by less than ~20 nm across any 26 mm × 8 mm **lithography site** (the strip of wafer that a lithography scanner images in one sweep of its light slit; Modules 07–08). Scale the wafer up to a football field 100 m across and the allowed bump height within a site is ~7 µm, a tenth of a human hair. The surface must also have roughness below 0.1 nm RMS (**root-mean-square (RMS) roughness** is the typical height of the bumps on a surface; 0.1 nm is less than one atomic layer of silicon, which is 0.136 nm high), fewer than a handful of particles larger than 26 nm across the whole surface, metal contamination below ~10^10 atoms/cm² (a (100) silicon surface holds ~6.8 × 10^14 atoms/cm², so that is one foreign atom per ~70,000 surface silicon atoms), and edges that will not chip during a thousand process steps. Each of these is a specification you will be able to explain by the end of this module.",
+      "after": "The crystal grower delivers a solid cylinder; the fab needs thin discs that stay in focus when a pattern is projected onto them. Slicing creates the discs, but sawing alone cannot make the smooth, undamaged surface the fab needs.\n\nA finished Czochralski **ingot**, the cylinder grown from molten silicon, is a 300 mm diameter, roughly 2 m long, 300+ kg cylinder of single-crystal silicon with a domed crown on one end and a conical tail on the other. What a fab wants is about 1,500 to 2,000 discs cut from it, each 775 µm thick, with a front surface whose height varies by less than ~20 nm across any 26 mm × 8 mm **lithography site** (the strip of wafer that a lithography scanner images in one sweep of its light slit; Modules 07–08). Scale the wafer up to a football field 100 m across and the allowed bump height within a site is ~7 µm, a tenth of a human hair.\n\nFlatness and roughness describe different problems. Flatness asks whether a patch of wafer rises or falls across the area being printed. Roughness asks how bumpy the surface is at much smaller scales. A surface can be smoothly curved, like a polished lens, yet fail the wafer's flatness requirement. The surface must also have roughness below 0.1 nm RMS (**root-mean-square (RMS) roughness** is the typical height of the bumps on a surface; 0.1 nm is less than one atomic layer of silicon, which is 0.136 nm high), fewer than a handful of particles larger than 26 nm across the whole surface, metal contamination below ~10^10 atoms/cm² (a (100) silicon surface holds ~6.8 × 10^14 atoms/cm², so that is one foreign atom per ~70,000 surface silicon atoms), and edges that will not chip during a thousand process steps. Each of these is a specification you will be able to explain by the end of this module."
+    },
+    {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "reason": "Define the output quantity in the polishing equation.",
+      "before": "Removal rate follows **Preston's equation**: RR = k_p × P × v, where P is the pressure",
+      "after": "Removal rate follows **Preston's equation**: RR = k_p × P × v, where RR is thickness removed per unit time, P is the pressure"
+    },
+    {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "reason": "Explain the empirical model and its range rather than implying unlimited pressure scaling.",
+      "before": "In words: removal is proportional to how hard you press and how fast you rub, and everything else is in k_p.",
+      "after": "In words: within a calibrated polishing process, pressing harder or moving the pad faster raises the removal rate. The coefficient k_p packages the effects of the slurry chemistry and the condition of the pad. It is not a universal constant: changing either can change the rate even if pressure and speed stay the same."
+    },
+    {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "reason": "Name previously implicit plate-model quantities without changing calculation.",
+      "before": "Uniform load q = ρ g t = 2,330 kg/m³",
+      "after": "Uniform load q = ρ g t, where ρ is silicon density and g is gravitational acceleration: q = 2,330 kg/m³"
+    },
+    {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "reason": "Explain bending stiffness and name material constants before the sag arithmetic.",
+      "before": "Flexural rigidity D = E t³ / [12 (1 − ν²)]; with E ≈ 150 GPa",
+      "after": "The resistance to bending is the **flexural rigidity** D = E t³ / [12 (1 − ν²)]. Here E is Young's modulus, the material's stiffness under stretching, and ν is Poisson's ratio, which describes its sideways contraction when stretched; with E ≈ 150 GPa"
+    },
+    {
+      "file": "course/modules/05-inside-a-fab.md",
+      "reason": "Replace exceptionalism with the actual scheduling problem and define fab immediately.",
+      "before": "A leading-edge logic fab has to do something no other factory does. It runs every one of ~100,000 wafers per month through 1,000–1,500 sequential process steps, on tools that cost more than airliners.",
+      "after": "A leading-edge logic **fab**, a factory that builds computing circuits, must coordinate repeated work on the same wafers. At the scale considered here, it runs ~100,000 wafers per month through 1,000–1,500 sequential process steps, on tools that cost more than airliners."
+    },
+    {
+      "file": "course/modules/05-inside-a-fab.md",
+      "reason": "Explain the economic incentive without implying accounting eliminates demand constraints.",
+      "before": "And why the fab runs every hour of the year because of accounting, not because of demand: five-year depreciation turns a $20–30 billion purchase into a fixed daily charge that only wafers can pay for.",
+      "after": "And why accounting creates strong pressure to use the fab continuously when there is demand: five-year depreciation spreads a $20–30 billion purchase into a fixed daily charge, and producing more working wafers spreads that charge across more output."
+    },
+    {
+      "file": "course/modules/05-inside-a-fab.md",
+      "reason": "Introduce the backlog mechanism before the queue equation and distinguish waiting from processing.",
+      "before": "Queueing theory explains why. For a tool with **utilization** u (the fraction of time it is busy processing), the **Kingman approximation** for the average waiting time in front of it is",
+      "after": "Queueing theory connects those waits to uneven arrivals and uneven processing times. A tool needs spare time to catch up after a burst of arrivals or a slow job. If almost all of its time is already committed, a small disruption can leave a long queue. For a single tool with **utilization** u (the fraction of time it is busy processing), the **Kingman approximation** estimates the average wait before processing begins:"
+    },
+    {
+      "file": "course/modules/05-inside-a-fab.md",
+      "reason": "Unpack variation notation and avoid treating a coefficient of one as the definition of all randomness.",
+      "before": "where W is the mean waiting time, tₑ is the mean process time per lot, and cₐ and cₑ are the **coefficients of variation** of the arrival intervals and of the process times (a coefficient of variation is the standard deviation divided by the mean; 1 means fully random, 0 means perfectly regular).",
+      "after": "where W is the mean waiting time and tₑ is the mean process time per lot. The quantities cₐ and cₑ describe how uneven the gaps between arrivals and the processing times are. Each is a **coefficient of variation**: standard deviation, a measure of spread, divided by the mean. Zero means perfectly regular; 1 means the spread equals the mean, as in the random-arrival example below."
+    },
+    {
+      "file": "course/modules/05-inside-a-fab.md",
+      "reason": "Explain inventory accumulation and the averaging assumptions before using the WIP calculation.",
+      "before": "**Little's law** connects the three quantities every fab reports: WIP = throughput × cycle time, where **WIP (work in process)** is the number of wafers in the fab at any moment, throughput is wafers finished per day, and cycle time is in days. It holds for any stable system regardless of the details, which is why it is the first thing an industrial engineer computes.",
+      "after": "If wafers arrive steadily but spend a long time inside, many must be inside at once. **Little's law** makes that relationship precise: WIP = throughput × cycle time. **WIP (work in process)** is the average number of wafers inside the fab, throughput is the average number finished per day, and cycle time is their average time inside, in days. The units cancel to leave wafers. For a stable system, use the same counting boundary and time period for all three quantities; the formula relates long-run averages, not an exact inventory at every instant. That is why it is the first thing an industrial engineer computes."
+    },
+    {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "reason": "Explain conductor and insulator roles in the opening.",
+      "before": "Some conduct as well as a copper wire; some must hold a volt across a single nanometre without breaking down.",
+      "after": "Some carry current as well as a copper wire; others must block current even when a volt is applied across a single nanometre. Those are different jobs, so making a film starts with choosing the electrical behaviour it must provide."
+    },
+    {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "reason": "Explain cumulative thermal constraints with a bounded familiar analogy.",
+      "before": "The **thermal budget** is the total time-at-temperature a wafer can still tolerate after a given point in the flow.",
+      "after": "The **thermal budget** is the allowable combination of temperature and time after a given point in the flow. Think of heating a dish whose ingredients cook at different speeds: a step that finishes one ingredient can overcook another. Here the “ingredients” are existing films, doped regions and strained crystals. The analogy explains why earlier work constrains later steps; the actual limit comes from how each material changes with temperature and time."
+    },
+    {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "reason": "Provide a reader route through the oxidation equation before its coefficient definitions and solution.",
+      "before": "x² + A x = B (t + τ)",
+      "after": "x² + A x = B (t + τ)\n\nRead this first as a relationship between oxide thickness x and growth time t. The constants A and B summarize the reaction and transport conditions; A has units of length and B has units of length squared per time. The offset τ accounts for the starting oxide. At small x the A x term is more important, so thickness grows roughly with time. At large x the x² term dominates, so further growth slows: the reacting molecules must travel through more oxide to reach the silicon."
+    },
+    {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "reason": "Explain saturation and purge before chemical notation; preserve fractional growth and chemical detail below.",
+      "before": "**Atomic layer deposition** (ALD) is CVD broken into two self-limiting halves that never meet in the gas phase.",
+      "after": "**Atomic layer deposition (ALD)** separates film growth into successive surface reactions. “Self-limiting” means the first reactant stops adding material once it has used the available reactive sites, even if more of that reactant arrives. The chamber is purged before the next reactant changes the surface and makes the next part of the cycle possible. Separating the reactants prevents them from reacting together in the gas phase; the film forms through their ordered reactions at the surface."
+    },
+    {
+      "file": "course/modules/07-lithography-duv.md",
+      "reason": "Explain temporary pattern transfer before resist vocabulary and split pitch, width and placement into digestible ideas.",
+      "before": "Every layer of a chip begins as a pattern that has to be transferred onto the wafer, and **lithography** is the step that does it: the only process in the fab that *creates* geometry rather than modifying a film already there. Its working material is **photoresist**, a light-sensitive polymer film spun onto the wafer whose solubility in a developer changes wherever light hits it, so that after development the wafer carries a stencil of the design. A chip is a stack of ~60–80+ such patterned **layers**, each needing its own lithography pass. A repeating line pattern is described by its **pitch**, the centre-to-centre distance between neighbouring lines, and its **half-pitch**, half of that, which equals the line width when lines and spaces are equal, so \"40 nm half-pitch\" and \"40 nm lines at 80 nm pitch\" are the same statement; the printed width of the smallest feature on a layer is its **critical dimension (CD)**; and **overlay** is how accurately one layer's pattern sits on the layer beneath it. In those words the job is brutal: print 40 nm half-pitch (80 nm pitch) in one exposure and, with multi-patterning, pitches down to ~30–40 nm in production, across a 300 mm wafer, placed within ~1.5–2 nm of the layer underneath, at ~275–300 wafers per hour, 60–80+ times per wafer.",
+      "after": "To build a circuit, the fab must decide where material will stay and where it will be removed or changed. **Lithography** writes that location information as a temporary pattern on the wafer. Later processing transfers the pattern into a more durable material. Its working material is **photoresist**, a light-sensitive polymer film spun onto the wafer whose ability to dissolve changes after exposure to light. A liquid called the **developer** removes the soluble regions, leaving a temporary stencil of the design.\n\nA chip is a stack of ~60–80+ such patterned **layers**, each needing its own lithography pass.\n\nA repeating line pattern is described by its **pitch**, the centre-to-centre distance between neighbouring lines, and its **half-pitch**, half of that, which equals the line width when lines and spaces are equal, so \"40 nm half-pitch\" and \"40 nm lines at 80 nm pitch\" are the same statement. The printed width of the smallest feature on a layer is its **critical dimension (CD)**. **Overlay** is how accurately one layer's pattern sits on the layer beneath it. These measure different things: a line can have the right width but be in the wrong place. The production task is to print 40 nm half-pitch (80 nm pitch) in one exposure and, with multi-patterning, pitches down to ~30–40 nm in production, across a 300 mm wafer, placed within ~1.5–2 nm of the layer underneath, at ~275–300 wafers per hour, 60–80+ times per wafer."
+    },
+    {
+      "file": "course/modules/07-lithography-duv.md",
+      "reason": "Align introductory ALD explanation with the existing fractional-growth mechanism in Module 06.",
+      "before": "ALD lays down one atomic layer per gas pulse, so film thickness is counted rather than guessed",
+      "after": "ALD uses separated, self-limiting surface reactions; each complete cycle adds a controlled amount, often less than a full atomic layer, so counting calibrated cycles controls thickness"
+    },
+    {
+      "file": "course/modules/07-lithography-duv.md",
+      "reason": "Define plasma and avoid equating anisotropy with zero sideways removal.",
+      "before": "A plasma removes material **anisotropically** (downward only, not sideways), and every material etches at its own rate;",
+      "after": "A **plasma**, a gas containing charged particles and reactive fragments, can help etch material **anisotropically**: much faster in one direction, usually downward, than sideways. Every material etches at its own rate;"
+    },
+    {
+      "file": "course/modules/07-lithography-duv.md",
+      "reason": "Name equation outputs locally and explain why better resolution makes flatness harder.",
+      "before": "k1 and k2 are dimensionless process factors:",
+      "after": "Here λ is the light's wavelength, NA is the numerical aperture defined above, CD is the resolvable half-pitch for this line pattern, and DOF is the acceptable range of focus positions. The equations expose a tradeoff: increasing NA improves resolution, but reduces the available focus range more strongly because NA is squared in the DOF formula. A lens that prints finer detail therefore demands tighter control of wafer height.\n\nk1 and k2 are dimensionless process factors:"
+    },
+    {
+      "file": "course/modules/07-lithography-duv.md",
+      "reason": "Explain how to read a Bossung curve without implying flatness alone establishes a usable process.",
+      "before": "At the right dose the curve is flat across a wide range of focus; at the wrong dose it bends. The flattest curve wins.",
+      "after": "A flatter curve means that small focus errors cause less change in line width. It is useful only if that width is also near the target and the resist profile is acceptable. The aim is a forgiving range of settings that meets all the requirements, not merely the flattest curve on the graph."
+    },
+    {
+      "file": "course/survey/S01-the-big-picture.md",
+      "reason": "Give the novice a physical switch and logic model, and state the analogy boundary.",
+      "before": "An electronic circuit directs electrical signals to perform a function. A **transistor** is a device in which a control signal changes a conducting path. Arranged together, transistors can implement logic, store information, amplify signals or control power. The digital circuits familiar to programmers use physical voltage ranges to represent logical states.",
+      "after": "An electronic circuit uses electrical signals to do a job. A **transistor** controls how easily current can pass along a path. For digital computing, think of it as a switch controlled by another electrical signal rather than by a finger. Connected switches can implement **logic**: rules that turn input states into output states. The states are represented by voltage ranges, such as a low range for one state and a high range for the other. The same device family can also store information, amplify signals or control power; the switch picture is a starting point for digital logic, not a description of every transistor application."
+    },
+    {
+      "file": "course/survey/S01-the-big-picture.md",
+      "reason": "Explain what development physically removes instead of naming an unexplained step.",
+      "before": "Development then changes the resist into a temporary patterned layer.",
+      "after": "A liquid called the **developer** dissolves selected regions of the resist after exposure, leaving openings and protected areas. Think of that remaining film as a temporary stencil for the next operation."
+    },
+    {
+      "file": "course/survey/S01-the-big-picture.md",
+      "reason": "Differentiate capacity, bandwidth and latency with a bounded warehouse analogy.",
+      "before": "A system can have plenty of memory capacity while still leaving computing circuits idle because the necessary data cannot arrive quickly enough.",
+      "after": "Imagine a warehouse making deliveries: capacity is how much it stores, bandwidth is how much it can ship per unit time, and latency is how long a particular delivery takes. A large warehouse can still have a slow loading dock. Likewise, ample memory capacity does not keep computing circuits busy if data cannot arrive quickly enough. The analogy compares storage and delivery; data transfers are electrical signals, not physical parcels."
+    },
+    {
+      "file": "course/survey/S02-from-sand-to-a-mirror.md",
+      "reason": "Explain repeated vapour/liquid separation without assuming prior distillation knowledge.",
+      "before": "**Distillation** separates substances using differences in their tendency to evaporate and condense. One separation is rarely sufficient when the desired contamination level is extremely low.",
+      "after": "**Distillation** separates substances using differences in their tendency to evaporate and condense. When a mixture partially evaporates, the vapour contains more of the components that evaporate readily. Condensing and separating repeatedly improves the separation. It is not a filter that catches individual impurity atoms, and one separation is rarely sufficient when the desired contamination level is extremely low."
+    },
+    {
+      "file": "course/survey/S02-from-sand-to-a-mirror.md",
+      "reason": "Replace a remote software analogy with a direct composition-versus-arrangement distinction and bound the tile model.",
+      "before": "An analogy is refining a programming-language library before assembling a complete application. You can make the input dependable without yet establishing the final structure in which it will be used. Chemical purification establishes a clean starting population of atoms. Crystal growth will establish how those atoms fit together over the entire wafer.",
+      "after": "Purity and crystal order answer different questions. Purity asks “which atoms are present?” Crystal order asks “how are those atoms arranged?” Imagine clean tiles scattered in differently oriented patches: cleaning the tiles does not align the patches into a continuous pattern. Likewise, chemically pure polysilicon can still consist of many differently oriented crystals. In silicon manufacture, the next stage melts and regrows the material so a seed sets the common arrangement."
+    },
+    {
+      "file": "course/survey/S02-from-sand-to-a-mirror.md",
+      "reason": "Clarify gettering relocation/trapping versus removing impurities from the wafer.",
+      "before": "One useful technique is **gettering**, the deliberate collection of unwanted impurities in locations where they will do less harm. The analogy is putting a drain away from a work surface: the goal is to direct contamination away from the region where it would damage the product. This does not mean that more oxygen is always better. The amount, distribution and later heat treatments must suit the device being made.",
+      "after": "One useful technique is **gettering**, deliberately collecting unwanted impurities away from the region where devices will be built. Suitable sites inside the wafer can trap stray metals during later heat treatments. Think of a designated place that holds contamination away from a work surface, rather than a drain that washes it out of the material. The impurities may still be inside the wafer; their location changes how much harm they do. This does not mean that more oxygen is always better. The amount, distribution and later heat treatments must suit the device being made."
+    },
+    {
+      "file": "course/survey/S03-inside-the-fab.md",
+      "reason": "Define deposition at first use, before utility dependence.",
+      "before": "A deposition chamber cannot make a consistent film if its gas delivery or temperature control is inconsistent.",
+      "after": "A **deposition** chamber adds a thin layer of material to a wafer. It cannot make that layer consistently if the incoming gas or the wafer temperature changes unexpectedly."
+    },
+    {
+      "file": "course/survey/S03-inside-the-fab.md",
+      "reason": "Replace unexplained workflow-engine/state-transition language with identity, prerequisites and irreversible consequences.",
+      "before": "This resembles a workflow engine with strict state transitions. A task should not run merely because a worker is free; its prerequisites must be satisfied, and its input must be correct. In the fab, an invalid transition can damage physical material that cannot simply be restored from a backup. Identity, authorization and traceability are therefore essential parts of throughput, not obstacles added after the engineering is done.",
+      "after": "A lot's record works a little like a passport with an itinerary: its identity says what it is, its history says where it has been, and its approved route says where it may go next. A free machine is not enough reason to send it there. The wafer must have completed the required earlier steps, and the machine must be approved for the next recipe. Unlike a paperwork mistake, a wrong physical operation may be impossible to undo. These checks protect finished output rather than merely slowing the journey."
+    },
+    {
+      "file": "course/survey/S03-inside-the-fab.md",
+      "reason": "Use an everyday queue analogy and connect it to tool qualification rather than unexplained software workers.",
+      "before": "Imagine a shared software worker that usually finishes requests faster than they arrive. A long request causes a temporary backlog. If arrivals already consume nearly all the worker's capacity, the same unusual request leaves a backlog that takes much longer to clear. The fab has this problem across many connected tool groups, with maintenance and qualification adding further constraints.",
+      "after": "Imagine one checkout serving a stream of customers. If it usually finishes faster than customers arrive, it can catch up after someone needs extra help. If customers already arrive almost as fast as they can be served, the same delay leaves a queue with little chance to shrink. The fab has this problem across many connected tool groups. A wafer can use only a machine approved for its next operation, so spare capacity elsewhere is not always helpful."
+    },
+    {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "reason": "Repair the sentence transition after the new equation reading guide.",
+      "before": "with A = 2D (1/ks + 1/h), B = 2 D C* / N1, and τ a time offset",
+      "after": "More precisely, A = 2D (1/ks + 1/h), B = 2 D C* / N1, and τ is a time offset"
+    },
+    {
+      "file": "course/modules/00-overview.md",
+      "reason": "Expand DRAM on its first use.",
+      "before": "HBM stacks DRAM memory chips, which hold working data,",
+      "after": "HBM stacks **dynamic random-access memory (DRAM)** chips, which hold working data,"
+    },
+    {
+      "file": "course/modules/07-lithography-duv.md",
+      "reason": "Define polymer and avoid a nested first-use definition.",
+      "before": "a light-sensitive polymer film spun onto the wafer whose ability to dissolve changes after exposure to light.",
+      "after": "a light-sensitive film spun onto the wafer. It contains a **polymer**, a material made of long chains of linked molecular units, whose ability to dissolve changes after exposure to light."
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Keep the two-role framing consistent.",
+      "before": "This module follows both groups.",
+      "after": "This module follows both sides of that story."
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Define the first-use 2D label.",
+      "before": "the 2D materials being tested as transistor channels for the 2030s",
+      "after": "the **two-dimensional (2D) materials**, atomically thin sheets being tested as transistor channels for the 2030s"
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Expand EUV before the mask sections.",
+      "before": "why an EUV mask is a mirror, and how a disruption",
+      "after": "why an **extreme ultraviolet (EUV)** mask is a mirror, and how a disruption"
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Replace an absolute prohibition with the specific limitation of indirect-bandgap emission and a compact Raman exception.",
+      "before": "is **indirect**: an electron falling back across the gap must also hand off momentum to a lattice vibration, so the energy comes out as heat rather than as a photon, and silicon cannot emit light efficiently or lase.",
+      "after": "is **indirect**: emitting a photon when an electron and hole recombine also requires a lattice vibration to balance momentum. That makes this light-emission route inefficient, so ordinary silicon is a poor material for an electrically driven laser diode. This does not forbid every kind of silicon laser: optically pumped Raman lasers use a different amplification mechanism.",
+      "sources": [
+        "https://www.intel.com/pressroom/archive/releases/2005/20050217tech.htm",
+        "https://www.nature.com/articles/nature03346"
+      ]
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Scope the Baliga equations to the drift-region model rather than all complete devices.",
+      "before": "Two relations make the consequence exact.",
+      "after": "Two relations describe the consequence in an idealized drift-region model.",
+      "sources": [
+        "https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/company/technical-review/pdf/ISPSD2021_4_en.pdf",
+        "https://www.infineon.com/dgdl/Infineon-SiC_MOSFETs_for_Bridge_Topologies_Power_Electronics_Europe-Article-v01_00-EN.pdf?fileId=5546d4626eab8fbf016ef47919fc788e"
+      ]
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Correct the direction of area normalization and explain why it enables comparison.",
+      "before": "The **specific on-resistance** (on-resistance per unit die area, in mΩ·cm²) of that layer is",
+      "after": "The **specific on-resistance** is resistance multiplied by active area, expressed in Ω·cm² or mΩ·cm². Multiplication removes the simple advantage of making a device wider: more area gives more parallel current paths and lowers resistance. For the idealized drift layer it is",
+      "sources": [
+        "https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/company/technical-review/pdf/ISPSD2021_4_en.pdf"
+      ]
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Keep the existing calculated factor while preventing application to total packaged-device resistance.",
+      "before": "and a specific on-resistance hundreds of times lower than a silicon device of the same rating.",
+      "after": "and an ideal drift-region specific on-resistance hundreds of times lower than silicon at the same rating. A complete MOSFET also has channel, contact and other resistances, so this model is not a prediction of the full device-resistance ratio.",
+      "sources": [
+        "https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/company/technical-review/pdf/ISPSD2021_4_en.pdf"
+      ]
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Replace mandatory IGBT selection with the scoped carrier-storage tradeoff and acknowledge silicon MOSFET existence.",
+      "before": "silicon at 1,200 V must be an IGBT with its tail-current loss, whereas SiC can still be a fast unipolar MOSFET.",
+      "after": "at 1,200 V, a silicon IGBT reduces conduction loss by filling its drift region with carriers, but those stored carriers cause a turn-off tail. SiC can provide a low-resistance unipolar MOSFET without that IGBT tail. Silicon MOSFETs also exist at this voltage; the comparison is about losses and suitable applications, not a prohibition on building them.",
+      "sources": [
+        "https://www.littelfuse.com/assetdocs/littelfuse-discrete-mosfets-ixt-08n120p-datasheet?assetguid=301fbdbd-7c2d-4205-a7d8-3f7d7ab7a8fc",
+        "https://www.infineon.com/dgdl/Infineon-SiC_MOSFETs_for_Bridge_Topologies_Power_Electronics_Europe-Article-v01_00-EN.pdf?fileId=5546d4626eab8fbf016ef47919fc788e"
+      ]
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Remove unsupported all-distance/all-lane assertion while keeping the relevant InP source examples.",
+      "before": "Each lane at those rates over any distance beyond a few meters is driven by an InP **electro-absorption modulated laser (EML)**",
+      "after": "For many single-mode fibre links at these rates, the source is an InP **electro-absorption modulated laser (EML)**",
+      "sources": [
+        "https://www.coherent.com/news/press-releases/high-efficiency-lasers-for-silicon-photonics-transceivers",
+        "https://www.coherent.com/news/press-releases/coherent-introduces-100g-pam4-vcsel-and-photodiode-arrays"
+      ]
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Explain mixed-material photonics without claiming every silicon-photonics device uses the same source architecture.",
+      "before": "even silicon-photonics transceivers, which do the modulation and detection in silicon, still need an InP continuous-wave laser as the light source, because silicon cannot lase.",
+      "after": "silicon-photonics transceivers commonly pair their silicon optical circuits with an InP continuous-wave laser source. “Silicon photonics” describes the optical circuit platform, not a promise that every component is made of silicon.",
+      "sources": [
+        "https://www.coherent.com/news/press-releases/high-efficiency-lasers-for-silicon-photonics-transceivers",
+        "https://www.intel.com/content/dam/www/public/us/en/documents/technology-briefs/intel-labs-hybrid-silicon-laser-capabilities-paper.pdf"
+      ]
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Replace universal supply-chain count with architecture-dependent source selection and retain the conceptual downstream connection.",
+      "before": "> **Why it matters downstream:** The first section said silicon's bandgap is indirect, so an electron falling back across it releases heat rather than light. The consequence lands in Module 19: no silicon laser exists, so every optical link in an AI cluster, including the silicon-photonics kind, contains an InP laser die grown on a 75–100 mm wafer from one of four suppliers. When the module counts the transceivers in a GB200 rack, it is counting InP.",
+      "after": "> **Why it matters downstream:** InP is an important light-source material for the single-mode data links discussed here, including many silicon-photonics designs. But counting every optical link as an InP laser would be wrong: short-reach links can instead use GaAs VCSELs. The connection to Module 19 is therefore an architecture question: which source does each kind of link use? Silicon’s inefficient direct light emission explains the demand for other source materials; it does not mean no silicon laser has ever existed.",
+      "sources": [
+        "https://www.coherent.com/datacenter-communications",
+        "https://www.coherent.com/news/press-releases/coherent-introduces-100g-pam4-vcsel-and-photodiode-arrays",
+        "https://www.coherent.com/news/press-releases/high-efficiency-lasers-for-silicon-photonics-transceivers",
+        "https://www.intel.com/pressroom/archive/releases/2005/20050217tech.htm"
+      ]
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Align summary with the corrected scoped source-selection explanation.",
+      "before": "- GaAs (LEC/VGF, 150 mm) is the phone's RF front end; InP (75–100 mm, high-pressure LEC) is the laser in every 800G/1.6T link in an AI cluster because silicon's indirect gap cannot lase.",
+      "after": "- GaAs (LEC/VGF, 150 mm) serves RF devices and VCSELs; InP (75–100 mm, high-pressure LEC) supplies lasers for many single-mode 800G/1.6T links, including silicon-photonics designs. Source choice depends on the link; an indirect bandgap limits ordinary silicon light emission rather than forbidding all silicon lasers.",
+      "sources": [
+        "https://www.coherent.com/datacenter-communications",
+        "https://www.coherent.com/news/press-releases/high-efficiency-lasers-for-silicon-photonics-transceivers",
+        "https://www.intel.com/pressroom/archive/releases/2005/20050217tech.htm"
+      ]
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Make the table preserve the ideal-model boundary of the unchanged calculation.",
+      "before": "| Si vs 4H-SiC specific on-resistance at equal blocking voltage | ~300× lower for SiC (E_c³ term ≈ 580, µ and ε corrections ≈ 0.5) | The Baliga arithmetic behind SiC inverters |",
+      "after": "| Si vs 4H-SiC ideal drift-region specific on-resistance at equal blocking voltage | ~300× lower for SiC (E_c³ term ≈ 580, µ and ε corrections ≈ 0.5) | Baliga model comparison; excludes other device resistances |",
+      "sources": [
+        "https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/company/technical-review/pdf/ISPSD2021_4_en.pdf"
+      ]
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Remove direct contradiction between UPW table and intrinsic-ion explanation; preserve all values.",
+      "before": "18.2 MΩ·cm at 25 °C (the theoretical maximum, 18.18, for water with zero ions)",
+      "after": "18.2 MΩ·cm at 25 °C (rounded from 18.18 for pure water, which still contains equilibrium H+ and OH- ions)",
+      "sources": [
+        "https://www.merckmillipore.com/GW/en/technical-documents/technical-article/water-purification/water-quality-monitoring"
+      ]
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "reason": "Add primary-source references for bounded technical corrections without changing existing citations.",
+      "before": "",
+      "after": "\nAdditional sources for the definitions above: [Toshiba on area-specific resistance](https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/company/technical-review/pdf/ISPSD2021_4_en.pdf), [Littelfuse silicon MOSFET datasheet](https://www.littelfuse.com/assetdocs/littelfuse-discrete-mosfets-ixt-08n120p-datasheet?assetguid=301fbdbd-7c2d-4205-a7d8-3f7d7ab7a8fc), [Infineon on the SiC MOSFET/IGBT tradeoff](https://www.infineon.com/dgdl/Infineon-SiC_MOSFETs_for_Bridge_Topologies_Power_Electronics_Europe-Article-v01_00-EN.pdf?fileId=5546d4626eab8fbf016ef47919fc788e), [Intel on silicon Raman lasing](https://www.intel.com/pressroom/archive/releases/2005/20050217tech.htm), [Coherent on GaAs and InP optical devices](https://www.coherent.com/datacenter-communications), [Coherent on InP sources for silicon photonics](https://www.coherent.com/news/press-releases/high-efficiency-lasers-for-silicon-photonics-transceivers), and [Millipore on pure-water ions and resistivity](https://www.merckmillipore.com/GW/en/technical-documents/technical-article/water-purification/water-quality-monitoring).\n",
+      "sources": [
+        "https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/company/technical-review/pdf/ISPSD2021_4_en.pdf",
+        "https://www.littelfuse.com/assetdocs/littelfuse-discrete-mosfets-ixt-08n120p-datasheet?assetguid=301fbdbd-7c2d-4205-a7d8-3f7d7ab7a8fc",
+        "https://www.infineon.com/dgdl/Infineon-SiC_MOSFETs_for_Bridge_Topologies_Power_Electronics_Europe-Article-v01_00-EN.pdf?fileId=5546d4626eab8fbf016ef47919fc788e",
+        "https://www.intel.com/pressroom/archive/releases/2005/20050217tech.htm",
+        "https://www.nature.com/articles/nature03346",
+        "https://www.coherent.com/datacenter-communications",
+        "https://www.coherent.com/news/press-releases/coherent-introduces-100g-pam4-vcsel-and-photodiode-arrays",
+        "https://www.coherent.com/news/press-releases/high-efficiency-lasers-for-silicon-photonics-transceivers",
+        "https://www.intel.com/content/dam/www/public/us/en/documents/technology-briefs/intel-labs-hybrid-silicon-laser-capabilities-paper.pdf",
+        "https://www.merckmillipore.com/GW/en/technical-documents/technical-article/water-purification/water-quality-monitoring"
+      ]
+    }
+  ],
+  "bounded_technical_followup": {
+    "status": "resolved",
+    "scope": [
+      "Specific on-resistance area normalization and ideal-model boundary",
+      "Indirect-gap emission versus Raman lasing; InP source selection varies by optical-link architecture",
+      "IGBT versus SiC MOSFET tradeoff does not prohibit high-voltage silicon MOSFETs",
+      "Pure-water equilibrium ions in UPW table"
+    ],
+    "source_links": {
+      "specific": "https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/company/technical-review/pdf/ISPSD2021_4_en.pdf",
+      "silicon_mosfet": "https://www.littelfuse.com/assetdocs/littelfuse-discrete-mosfets-ixt-08n120p-datasheet?assetguid=301fbdbd-7c2d-4205-a7d8-3f7d7ab7a8fc",
+      "igbt_compare": "https://www.infineon.com/dgdl/Infineon-SiC_MOSFETs_for_Bridge_Topologies_Power_Electronics_Europe-Article-v01_00-EN.pdf?fileId=5546d4626eab8fbf016ef47919fc788e",
+      "raman": "https://www.intel.com/pressroom/archive/releases/2005/20050217tech.htm",
+      "raman_paper": "https://www.nature.com/articles/nature03346",
+      "vcsel": "https://www.coherent.com/datacenter-communications",
+      "vcsel_link": "https://www.coherent.com/news/press-releases/coherent-introduces-100g-pam4-vcsel-and-photodiode-arrays",
+      "inp": "https://www.coherent.com/news/press-releases/high-efficiency-lasers-for-silicon-photonics-transceivers",
+      "hybrid": "https://www.intel.com/content/dam/www/public/us/en/documents/technology-briefs/intel-labs-hybrid-silicon-laser-capabilities-paper.pdf",
+      "upw": "https://www.merckmillipore.com/GW/en/technical-documents/technical-article/water-purification/water-quality-monitoring"
+    },
+    "formulas_and_worked_examples_changed": false,
+    "new_numerical_estimates_added": false,
+    "old_citations_removed": false
+  },
+  "resolved_source_concerns": [
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "passage": "Silicon carbide: specific on-resistance definition",
+      "concern": "Existing text says on-resistance per unit die area while displaying mΩ·cm²; the equation and units need a separate technical correction/review of the area normalization. Left outside this language edit."
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "passage": "Gallium arsenide and indium phosphide: silicon laser and every optical-link assertions",
+      "concern": "Existing universal statements about silicon being unable to lase and every optical link containing InP deserve a qualified technical review; this edit removes the universal implication from the opening, but does not claim to resolve every later application assertion."
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "passage": "Why EVs: silicon at 1,200 V must be an IGBT",
+      "concern": "Existing categorical device-selection statement needs technical qualification; numerical/application fact verification was outside the delegated scope."
+    }
+  ],
+  "unresolved_source_concerns": []
+}

@@ -18,7 +18,7 @@ A bare die is not a robust replacement for a finished component. Its surface has
 
 **Redistribution** means routing an electrical connection from one location or spacing to another. The concept appears at several scales. On a wafer or molded assembly, thin-film **redistribution layers**, or **RDLs**, can move contacts outward. In a substrate, multiple wiring layers guide signals and power toward the external connection pattern. The same word does not imply the same manufacturing dimensions in each location.
 
-The package must also survive materials that expand differently with temperature. Silicon, copper, solder and polymer do not change size by the same amount when heated. The **coefficient of thermal expansion**, or **CTE**, describes that fractional size change per temperature change. When joined materials want to expand differently, stress appears in their interfaces and connections.
+The package must also survive materials that expand differently with temperature. Silicon, copper, solder and polymer do not change size by the same amount when heated. The **coefficient of thermal expansion**, or **CTE**, describes that fractional size change per temperature change. When joined materials want to expand differently, one cannot simply slide past the other. Their attachment forces them to deform together, loading the interfaces and connections. Repeated heating and cooling repeats that load. This is why the choice of glue, solder and supporting material affects whether a package survives in use.
 
 A **thermal interface material**, or **TIM**, fills the imperfect contact between heat-transfer surfaces. Even flat-looking solids touch at microscopic high points unless the gap is filled. The material must conduct heat while accommodating the practical surface geometry. Its thickness, uniformity and long-term condition can matter as much as its advertised conductivity.
 
@@ -48,7 +48,7 @@ In **wire bonding**, fine wires connect pads on the die to surrounding package c
 
 The distinction between a bump's pitch and its size matters. Pitch is the spacing between repeated connection centers; diameter is the size of an individual connection. Both influence how many contacts fit and how much alignment tolerance remains. Smaller joints also leave less margin for contamination, height variation and incomplete joining.
 
-**Reflow** heats solder through the required melting and joining sequence. The surfaces must be prepared so solder can wet them properly, and the assembled geometry must allow the intended contacts to meet. A joint may appear connected while containing a void or an inadequate contact area, creating electrical resistance or reliability concerns.
+**Reflow** heats solder through the required melting and joining sequence. The surfaces must be prepared so molten solder can **wet** them: spread onto the intended metal and form intimate contact rather than bead up or leave an unjoined patch. The assembled geometry must also let the intended contacts meet. A joint may appear connected while containing a void or an inadequate contact area, creating electrical resistance or reliability concerns.
 
 **Underfill** places an insulating supporting material between the die and receiving structure. It shares mechanical loads and helps reduce strain concentrated in small joints. It must fill the intended spaces without harmful voids and remain compatible with the other materials. Underfill also makes later replacement of a failed die much more difficult.
 
@@ -64,7 +64,7 @@ This side-by-side arrangement is often called **2.5D packaging**. The term disti
 
 **Chip-on-wafer-on-substrate**, or **CoWoS**, is TSMC's family of advanced packaging technologies. The name describes the assembly relationship, but the family includes several types of interposer. In **CoWoS-S**, the interposer is silicon with fine wiring and vertical connections. **CoWoS-R** uses a redistribution-layer interposer. **CoWoS-L** combines redistribution layers with local silicon interconnect structures where especially dense routing is needed.
 
-The distinction prevents a common misconception. Moving to CoWoS-L does not remove all silicon interconnect from the package, and it does not mean that every wire is carried through a full-size solid silicon interposer. Local bridges and broader redistribution wiring perform complementary jobs.
+Why use local bridges? The tightest bundles of connections need especially fine wiring, but the whole package does not need that same density. CoWoS-L puts silicon interconnect where those dense links cross between dies and uses broader redistribution wiring elsewhere. It therefore keeps some silicon interconnect without requiring every wire to travel through a full-size solid silicon interposer.
 
 Use the flow diagram below to follow when each expensive component enters the assembly. The cost settings, if shown, are illustrative inputs. The lesson is how a failure late in the sequence can put already-good components at risk, not that a manufacturer has disclosed the exact displayed costs or yields.
 
@@ -94,7 +94,7 @@ Packaging therefore becomes an architectural choice with manufacturing consequen
 
 **Hybrid bonding** joins prepared dielectric surfaces and corresponding metal connections directly, commonly using copper for the electrical contacts. It can provide much finer connection spacing than conventional solder microbumps, making closely integrated stacked dies possible. TSMC's **System on Integrated Chips**, or **SoIC**, is one family of technologies using this approach.
 
-The word “hybrid” refers to joining both dielectric and metal regions. This requires surfaces that are exceptionally clean, flat and correctly aligned. A particle can prevent surrounding areas from meeting, creating a void much larger than the particle itself. Tiny differences in surface height can interfere with electrical contact formation.
+The word “hybrid” refers to joining both dielectric and metal regions. The **dielectric** is the insulating surface around the contacts: it bonds the faces together while corresponding metal contacts provide electrical paths. Both kinds of surface must meet in the right places. This requires surfaces that are exceptionally clean, flat and correctly aligned. A particle can prevent surrounding areas from meeting, creating a void much larger than the particle itself. Tiny differences in surface height can interfere with electrical contact formation.
 
 Direct bonding removes some of the spacing and geometry imposed by solder joints, but it is not automatically easier to manufacture. Surface preparation, alignment, thermal treatment and defect control become especially demanding. Testing must also anticipate that a permanently bonded interface is difficult to inspect or repair afterward.
 

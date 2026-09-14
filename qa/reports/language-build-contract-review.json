@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-09-14T01:32:20.343Z",
+  "importHasNoBuildSideEffects": true,
+  "repeatedRenderResetsHeadingState": true,
+  "artifactsUnchangedOnImport": [
+    "site/content.js",
+    "course/SAND_TO_GPU_full_course.md",
+    "course/visuals/coverage.json"
+  ],
+  "review": "Rendering extraction preserves H1 stripping, math/tilde transforms, heading IDs, word count and key-number extraction. Key-number regex starts at its H2, so moving extraction before H1 stripping does not change it. CLI build remains guarded by require.main.",
+  "negativeTests": [
+    {
+      "case": "prose-corruption",
+      "input": "/tmp/sand-to-gpu-language-negative-PFdAQ6/prose-corruption.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-PFdAQ6/prose-corruption.json",
+      "exitCode": 1,
+      "expected": "m/4 built prose differs from current authored source",
+      "errors": [
+        "m/4 built prose differs from current authored source"
+      ],
+      "detected": true
+    },
+    {
+      "case": "quiz-wording-corruption",
+      "input": "/tmp/sand-to-gpu-language-negative-PFdAQ6/quiz-wording-corruption.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-PFdAQ6/quiz-wording-corruption.json",
+      "exitCode": 1,
+      "expected": "m/14 built quiz differs from current authored quiz",
+      "errors": [
+        "m/14 built quiz differs from current authored quiz"
+      ],
+      "detected": true
+    },
+    {
+      "case": "quiz-option-corruption",
+      "input": "/tmp/sand-to-gpu-language-negative-PFdAQ6/quiz-option-corruption.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-PFdAQ6/quiz-option-corruption.json",
+      "exitCode": 1,
+      "expected": "m/14 historical quiz structure changed",
+      "errors": [
+        "m/14 built quiz differs from current authored quiz",
+        "m/14 historical quiz structure changed"
+      ],
+      "detected": true
+    },
+    {
+      "case": "missing-lesson",
+      "input": "/tmp/sand-to-gpu-language-negative-PFdAQ6/missing-lesson.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-PFdAQ6/missing-lesson.json",
+      "exitCode": 1,
+      "expected": "historical lesson identity contract changed",
+      "errors": [
+        "historical lesson identity contract changed",
+        "built lesson identities differ from authored sources"
+      ],
+      "detected": true
+    }
+  ],
+  "finalBuild": {
+    "status": "passed",
+    "command": "npm run build",
+    "contentSha256": "64e8ef1d873c14b154d064f3d211992b4c10ed8b8ab36d85ab4dd101d8108a18",
+    "sourceChecks": "node qa/section-figures.js passed after the last m04 wording edit; all 32 authored prose/heading/quiz contracts pass",
+    "fullCheck": "npm run check passed before the final two wording-only m04 edits; source checks rerun after each",
+    "notes": [
+      "Root clarified permittivity as the material constant describing response to applied field; no numerical/formula/citation change.",
+      "Root removed the unsupported one-in-ten-million molecule-fraction parenthesis in the UPW analogy. No replacement quantity was introduced.",
+      "Four isolated negative tests already prove contract failures; their recorded input SHA refers to the earlier build, before the final wording-only edits. No negative test touched the live preview."
+    ]
+  },
+  "liveContentFile": "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/site/content.js",
+  "livePreviewUntouched": true,
+  "finalStatus": "frozen",
+  "negativeTestBaseContentSha256": "20f80a795c2ade7c72dfb8fe241b3ae396da69d52bf1292f16665f1f66e8f23b",
+  "finalContentSha256": "64e8ef1d873c14b154d064f3d211992b4c10ed8b8ab36d85ab4dd101d8108a18",
+  "hashScope": "Negative tests used an earlier isolated snapshot; finalContentSha256 identifies the rebuilt publication candidate after the final wording edits."
+}

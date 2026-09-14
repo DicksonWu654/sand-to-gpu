@@ -1,0 +1,368 @@
+{
+  "date": "2026-09-13",
+  "scope": "Bounded novice-comprehension pass: openings/prerequisites and selected causal bottlenecks in deep modules 08\u201314; selected mechanism passages in survey 04\u201307. Not an exhaustive line edit or new fact audit.",
+  "edits": [
+    {
+      "file": "course/modules/08-euv-lithography.md",
+      "change": "Open with patterning purpose; unpack DUV/ArF and NA; separate multipatterning burden."
+    },
+    {
+      "file": "course/modules/08-euv-lithography.md",
+      "change": "Remove unexplained inevitability from learning objective."
+    },
+    {
+      "file": "course/modules/08-euv-lithography.md",
+      "change": "Bridge energy dose to photon count before statistics."
+    },
+    {
+      "file": "course/modules/08-euv-lithography.md",
+      "change": "Explain why more photons improve relative consistency."
+    },
+    {
+      "file": "course/modules/08-euv-lithography.md",
+      "change": "Make distribution condition explicit using module 13 statistics definition."
+    },
+    {
+      "file": "course/modules/08-euv-lithography.md",
+      "change": "Explain sequential optical losses before system efficiency."
+    },
+    {
+      "file": "course/modules/09-etch.md",
+      "change": "Replace opening material avalanche with stencil-to-device goal, then purposeful inventory."
+    },
+    {
+      "file": "course/modules/09-etch.md",
+      "change": "Bridge sheath picture to ion-energy/flux mathematics."
+    },
+    {
+      "file": "course/modules/09-etch.md",
+      "change": "Correct ALE analogy that previously removed only added paint, not substrate."
+    },
+    {
+      "file": "course/modules/09-etch.md",
+      "change": "Replace combustion analogy with explicit cooperative surface mechanism and limits."
+    },
+    {
+      "file": "course/modules/10-doping.md",
+      "change": "Motivate deliberate electrical regions before impurity concentrations; split long opening."
+    },
+    {
+      "file": "course/modules/10-doping.md",
+      "change": "Give purpose and nonliteral mental model before quantum band description."
+    },
+    {
+      "file": "course/modules/10-doping.md",
+      "change": "State Fermi-level analogy limit and connect charge redistribution to band bending."
+    },
+    {
+      "file": "course/modules/10-doping.md",
+      "change": "Explain area-to-volume conversion and name profile quantities before equation."
+    },
+    {
+      "file": "course/modules/10-doping.md",
+      "change": "Frame counterintuitive anneal result as competing rates and duration before detailed argument."
+    },
+    {
+      "file": "course/modules/11-transistor-architectures.md",
+      "change": "Keep first transistor picture free of nested current/capacitance arithmetic."
+    },
+    {
+      "file": "course/modules/11-transistor-architectures.md",
+      "change": "Move preserved on/off numerical budget after operation and current definitions."
+    },
+    {
+      "file": "course/modules/11-transistor-architectures.md",
+      "change": "Align ALD refresher with existing module 06/survey 05 caveats."
+    },
+    {
+      "file": "course/modules/11-transistor-architectures.md",
+      "change": "Align EUV optics definition with module 08; no transmissive lens."
+    },
+    {
+      "file": "course/modules/11-transistor-architectures.md",
+      "change": "Bridge one transistor to complementary logic with both input states."
+    },
+    {
+      "file": "course/modules/11-transistor-architectures.md",
+      "change": "Disambiguate decade/swing from time before equation."
+    },
+    {
+      "file": "course/modules/12-interconnect-beol.md",
+      "change": "Introduce stacked routing picture and split opening before scale."
+    },
+    {
+      "file": "course/modules/12-interconnect-beol.md",
+      "change": "Align ALD refresher with existing process explanation instead of universal coverage guarantee."
+    },
+    {
+      "file": "course/modules/12-interconnect-beol.md",
+      "change": "Explain what delay measures and limit bucket analogy before lumped/distributed models."
+    },
+    {
+      "file": "course/modules/12-interconnect-beol.md",
+      "change": "Map long recipe to trench/via/fill/polish causal sequence."
+    },
+    {
+      "file": "course/modules/12-interconnect-beol.md",
+      "change": "Separate useful charge motion from material damage and motivate current density."
+    },
+    {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "change": "Replace beginner-error admonition with concrete comparison for measure/search/classify."
+    },
+    {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "change": "Give purpose of ellipsometry complex expression before symbols."
+    },
+    {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "change": "Define model question and fractional expected counts before Poisson yield."
+    },
+    {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "change": "Explain yield product and prevent double-counting overlapping losses."
+    },
+    {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "change": "Distinguish prior process evidence from per-die test without dismissing earlier metrology."
+    },
+    {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "change": "Distinguish insufficient coverage from claiming functional software is never a test."
+    },
+    {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "change": "Correct overclaim that any defect changes a scanned bit; explain control and observation."
+    },
+    {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "change": "Preserve derivation while clarifying true yield versus measured pass rate."
+    },
+    {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "change": "Align worked-example input label with its own derivation; preserve every number."
+    },
+    {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "change": "Explain units and denominator of test-escape calculation before derivation."
+    },
+    {
+      "file": "course/survey/S04-drawing-with-light.md",
+      "change": "Replace chemical-species abstraction with acid/polymer mechanism and spatial tradeoff."
+    },
+    {
+      "file": "course/survey/S04-drawing-with-light.md",
+      "change": "Interpret Rayleigh direction and meaning instead of unexplained better-optics shorthand."
+    },
+    {
+      "file": "course/survey/S04-drawing-with-light.md",
+      "change": "Explain what interferes and why layer spacing matters; bound swing analogy."
+    },
+    {
+      "file": "course/survey/S05-adding-and-removing-layers.md",
+      "change": "Explain neutral chemistry and charged-ion direction rather than unnamed species interaction."
+    },
+    {
+      "file": "course/survey/S05-adding-and-removing-layers.md",
+      "change": "Explain mobile vacancy mechanism without assuming valence-band vocabulary."
+    },
+    {
+      "file": "course/survey/S05-adding-and-removing-layers.md",
+      "change": "Explain why delivered dose differs from active carrier contribution."
+    },
+    {
+      "file": "course/survey/S06-transistor-and-wiring.md",
+      "change": "Clarify valve analogy does not imply physically widening channel."
+    },
+    {
+      "file": "course/survey/S06-transistor-and-wiring.md",
+      "change": "Walk both inverter states rather than just naming opposite behavior."
+    },
+    {
+      "file": "course/survey/S06-transistor-and-wiring.md",
+      "change": "Separate geometric distance from electrical gate coupling before EOT."
+    },
+    {
+      "file": "course/survey/S06-transistor-and-wiring.md",
+      "change": "Resolve apparent contradiction between high-k gate and low-k wiring."
+    },
+    {
+      "file": "course/survey/S07-knowing-it-works.md",
+      "change": "Unpack inverse measurement as prediction/comparison/adjustment before accuracy distinction."
+    },
+    {
+      "file": "course/survey/S07-knowing-it-works.md",
+      "change": "Use stuck-wire counterexample to teach both activating and observing a fault."
+    },
+    {
+      "file": "course/survey/S07-knowing-it-works.md",
+      "change": "Define escape at first use in decision section."
+    },
+    {
+      "file": "course/survey/S07-knowing-it-works.md",
+      "change": "Explain table acronym by function instead of unexplained initials."
+    },
+    {
+      "file": "course/modules/11-transistor-architectures.md",
+      "change": "Split relocated on/off current budget and replace switching-speed wording with voltage/current steepness for subthreshold swing."
+    }
+  ],
+  "preservation_review": [
+    {
+      "file": "course/modules/08-euv-lithography.md",
+      "headings_preserved": true,
+      "links_preserved": true,
+      "widget_markup_preserved": true,
+      "numeric_tokens_added": {},
+      "numeric_tokens_removed": {}
+    },
+    {
+      "file": "course/modules/09-etch.md",
+      "headings_preserved": true,
+      "links_preserved": true,
+      "widget_markup_preserved": true,
+      "numeric_tokens_added": {
+        "55": 1
+      },
+      "numeric_tokens_removed": {}
+    },
+    {
+      "file": "course/modules/10-doping.md",
+      "headings_preserved": true,
+      "links_preserved": true,
+      "widget_markup_preserved": true,
+      "numeric_tokens_added": {},
+      "numeric_tokens_removed": {}
+    },
+    {
+      "file": "course/modules/11-transistor-architectures.md",
+      "headings_preserved": true,
+      "links_preserved": true,
+      "widget_markup_preserved": true,
+      "numeric_tokens_added": {},
+      "numeric_tokens_removed": {}
+    },
+    {
+      "file": "course/modules/12-interconnect-beol.md",
+      "headings_preserved": true,
+      "links_preserved": true,
+      "widget_markup_preserved": true,
+      "numeric_tokens_added": {},
+      "numeric_tokens_removed": {}
+    },
+    {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "headings_preserved": true,
+      "links_preserved": true,
+      "widget_markup_preserved": true,
+      "numeric_tokens_added": {},
+      "numeric_tokens_removed": {}
+    },
+    {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "headings_preserved": true,
+      "links_preserved": true,
+      "widget_markup_preserved": true,
+      "numeric_tokens_added": {},
+      "numeric_tokens_removed": {}
+    },
+    {
+      "file": "course/survey/S04-drawing-with-light.md",
+      "headings_preserved": true,
+      "links_preserved": true,
+      "widget_markup_preserved": true,
+      "numeric_tokens_added": {
+        "07": 1
+      },
+      "numeric_tokens_removed": {}
+    },
+    {
+      "file": "course/survey/S05-adding-and-removing-layers.md",
+      "headings_preserved": true,
+      "links_preserved": true,
+      "widget_markup_preserved": true,
+      "numeric_tokens_added": {},
+      "numeric_tokens_removed": {}
+    },
+    {
+      "file": "course/survey/S06-transistor-and-wiring.md",
+      "headings_preserved": true,
+      "links_preserved": true,
+      "widget_markup_preserved": true,
+      "numeric_tokens_added": {},
+      "numeric_tokens_removed": {}
+    },
+    {
+      "file": "course/survey/S07-knowing-it-works.md",
+      "headings_preserved": true,
+      "links_preserved": true,
+      "widget_markup_preserved": true,
+      "numeric_tokens_added": {},
+      "numeric_tokens_removed": {}
+    }
+  ],
+  "status": "content frozen; integration QA assigned separately",
+  "review_method": "Read all assigned openings/prerequisites and selected full sections around the listed bottlenecks. Reviewed edited passages in surrounding prose and inspected targeted quiz/figure labels. No exhaustive line edit and no new external fact verification.",
+  "corrections_grounded_in_course": [
+    {
+      "issue": "NA definition omitted medium refractive index despite using NA 1.35.",
+      "basis": "Module 07: The Optics, NA = n \u00b7 sin \u03b8; survey 04 immersion explanation.",
+      "result": "Definition now includes refractive index; NA values unchanged."
+    },
+    {
+      "issue": "ALE paint analogy removed deposited paint without removing the original solid.",
+      "basis": "Module 09 Cl2/Ar ALE cycle modifies silicon then removes the chlorinated surface; m09 figure and quiz09 agree.",
+      "result": "Analogy now treats and removes the original surface skin."
+    },
+    {
+      "issue": "Module 11/12 ALD refreshers promised exactly one atomic layer and unlimited conformality.",
+      "basis": "Module 06 ALD discussion, quiz06 question 5, and survey05 distinguish calibrated growth from a complete atomic plane and require reactant access.",
+      "result": "Refreshers now agree; representative 0.1 nm unchanged."
+    },
+    {
+      "issue": "Module 11 called High-NA EUV aperture a lens.",
+      "basis": "Module 08 reflective optics and survey04.",
+      "result": "Wording now refers to collected light angles and reflective optics."
+    },
+    {
+      "issue": "Module 08 treated 99.7% within 3\u03c3 as unconditional for photon counts.",
+      "basis": "Module 13 prerequisite defines the normal-distribution condition; module08 later uses Gaussian approximation.",
+      "result": "Normal-distribution condition explicit; 99.7% unchanged."
+    },
+    {
+      "issue": "Scan analogy claimed every defect necessarily changes a captured bit.",
+      "basis": "Module 14 ATPG/fault coverage passage and survey07 distinguish control/observation and untested faults.",
+      "result": "New analogy requires the pattern to activate a fault and propagate it to a checked bit."
+    },
+    {
+      "issue": "Williams-Brown prose called Y sort yield, while its derivation distinguishes true yield Y and test pass fraction Y^T.",
+      "basis": "Module 14 existing derivation, not a newly substituted model.",
+      "result": "Clarified model input and denominator in prose and approved quiz question label; all arithmetic, options, answers, explanations unchanged."
+    }
+  ],
+  "numerical_and_citation_accounting": [
+    "All original numeric tokens preserved across the eleven lessons; no numerical values replaced or removed.",
+    "Module09 repeats the existing 55 \u00c5/min experimental result once in the revised explanation; no new measured claim.",
+    "Survey04 adds a Module 07 reference, counted as one additional 07 numeric token.",
+    "Module11 moves the original on/off current, capacitance, time and power budget from the introduction to operation section 1.1, after the necessary terms, and separates on/off paragraphs.",
+    "No citation URLs changed or removed. All headings, heading order, links and widget markup preserved.",
+    "Quiz14 question 1 label alone was corrected with root authorization. Options, numerical inputs, answer index and explanation remain unchanged."
+  ],
+  "representative_before_after": [
+    {
+      "file": "course/modules/09-etch.md",
+      "before": "Paint sticks only to bare wood; cloth removes only paint and never wood.",
+      "after": "Treat and remove the outer skin of the original solid; explicitly distinguish substrate removal from adding/removing a coating."
+    },
+    {
+      "file": "course/survey/S06-transistor-and-wiring.md",
+      "before": "A low-k dielectric reduces unwanted capacitive coupling compared with a more strongly polarizable material.",
+      "after": "At the gate we want strong coupling to control the channel; between wires we want weak coupling to reduce neighbor disturbance and required charge. Define low-k after the contrasting jobs."
+    }
+  ],
+  "limits": [
+    "Selected passages rather than all approximately 4,350 source lines were edited. Deep recipes, market claims and numerical assumptions retain prior evidence limits.",
+    "Targeted nearby figures and quiz explanations were source-reviewed for contradiction, not rerendered in this language subtask.",
+    "Module13 opening still contains broad claims about optical invisibility of a 20 nm defect and yield fixed before design; these deserve separate precision/fact review and were not expanded into new claims here."
+  ]
+}

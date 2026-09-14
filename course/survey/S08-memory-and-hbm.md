@@ -28,7 +28,7 @@ A programmer may see these choices as cache misses, memory stalls or slow storag
 
 A conventional DRAM cell contains a transistor and a capacitor. The **capacitor** stores electrical charge. The transistor acts as an access switch that connects the cell to a shared wire when that location is selected. A **word line** controls access transistors along a row, while a **bit line** carries the tiny signal toward the sensing circuitry.
 
-The cell's charge is small compared with the capacitance of the shared bit line. When they are connected, charge redistributes and creates only a slight voltage difference. A **sense amplifier** detects that difference and drives the result toward a clear electrical state. It also restores the stored value while the cell remains connected.
+The shared bit line is much larger electrically than one cell: changing its voltage requires more charge than changing the cell's voltage by the same amount. When the access transistor connects them, the cell therefore shifts the bit-line voltage only slightly. This is charge sharing, and the small shift is the signal the memory must recover. A **sense amplifier** detects that difference and drives the result toward a clear electrical state. It also restores the stored value while the cell remains connected.
 
 The disturbance is why DRAM reading is often described as destructive. This does not mean the computer loses the data whenever it reads memory. It means the internal activation and sensing operation must restore the affected cells as part of normal operation. The externally visible read is supported by a more delicate internal sequence.
 
@@ -46,7 +46,7 @@ NAND flash solves a different problem: keeping information when power is removed
 
 Early structures commonly used a **floating gate**, a conductive storage region surrounded by insulation. Many modern structures use **charge-trap storage**, where charge is held in localized states within an insulating material. In both cases the useful information is the effect of retained charge on transistor behavior, rather than the freely accessible charge of a DRAM capacitor.
 
-A cell can represent more than a binary choice by using several threshold ranges. **Triple-level cell**, or **TLC**, stores several bits in each physical cell, while **quad-level cell**, or **QLC**, uses more distinguishable states. More states increase stored bits for a given number of cells, but the voltage windows become more demanding to distinguish and maintain.
+A cell can represent more than a binary choice by using several threshold ranges. Think of marking several allowed positions on the same ruler: each position can stand for a different pattern of bits. **Triple-level cell**, or **TLC**, stores 3 bits by distinguishing 8 threshold states; **quad-level cell**, or **QLC**, stores 4 bits using 16 states. The names count bits per cell, not the number of physical voltage states. More states put the allowed ranges closer together, so a small voltage shift is more likely to be mistaken for a neighboring state. The ruler is only a picture of the spacing; the real device reads the transistor's electrical response.
 
 Programming moves charge into the storage region under controlled electrical stress. Erasing removes or redistributes it so the cells can be reused. These operations are physically different from a simple low-stress read. Repeated program and erase cycles can degrade the insulating structures, which is one reason flash has a finite **endurance**, a limit on repeated rewriting under specified conditions.
 
@@ -76,7 +76,7 @@ The broad trend remains clear: vertical construction creates more storage in a g
 
 **Through-silicon vias**, or **TSVs**, are conductive paths passing through a die's silicon. They help connect the stacked layers. The dies are thinned so the stack can fit within the package's mechanical limits, and fine joints connect corresponding electrical points. The whole assembly is a memory stack with its own manufacturing yield and test history.
 
-HBM's key bandwidth strategy is width. A very wide interface carries many data bits in parallel. Keeping the path short helps make that width practical without the same board-routing and energy burden as a distant connection. It is like adding many nearby lanes rather than relying entirely on making each vehicle travel faster.
+HBM's key bandwidth strategy is width. A very wide interface carries many data bits in parallel. Think of several checkout lanes serving customers at once: adding lanes raises the total number served without making each cashier faster. Here the lanes are physical data connections. Keeping them short makes it practical to fit many of them into the package and reduces the energy spent changing their voltages. Stacking supplies more memory in a small footprint; the wide nearby connection is what lets that memory feed the processor quickly.
 
 Bandwidth is not the same as eliminating latency. Data still passes through memory arrays, sensing circuits, interfaces and scheduling. HBM is valuable because it offers high aggregate transfer capacity near the processor with suitable energy behavior, not because every memory access becomes instantaneous.
 

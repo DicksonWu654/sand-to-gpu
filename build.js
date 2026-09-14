@@ -131,12 +131,11 @@ function insertWidgets(html, placements) {
   return html;
 }
 
-function buildOne(md, n, slug, placement, quizPath, track = 'm') {
+// Render authored prose independently of figure/widget insertion, so QA can verify
+// that the generated course preserves the current, intentionally edited source.
+function renderLessonMarkdown(md) {
   md = md.replace(/\r\n/g, '\n');
-  const titleM = md.match(/^#\s+(?:Module|Survey)\s+\d+:\s*(.+)$/m) || md.match(/^#\s+(.+)$/m);
-  const title = titleM ? titleM[1].trim() : slug;
   md = md.replace(/^#\s+.+\n/, ''); // strip H1, rendered by shell
-  const keyNumbers = extractKeyNumbers(md);
   md = convertMath(md);
   // Authors use "~" for "approximately"; stop GFM treating single tildes as strikethrough.
   let fence = null;
@@ -149,10 +148,20 @@ function buildOne(md, n, slug, placement, quizPath, track = 'm') {
   const toc = [];
   const idSet = new Set();
   marked.use({ gfm: true, renderer: makeRenderer(toc, idSet) });
-  let html = marked.parse(md);
+  const html = marked.parse(md);
+  return { html, toc, words: md.split(/\s+/).filter(Boolean).length };
+}
+
+function buildOne(md, n, slug, placement, quizPath, track = 'm') {
+  md = md.replace(/\r\n/g, '\n');
+  const titleM = md.match(/^#\s+(?:Module|Survey)\s+\d+:\s*(.+)$/m) || md.match(/^#\s+(.+)$/m);
+  const title = titleM ? titleM[1].trim() : slug;
+  const keyNumbers = extractKeyNumbers(md);
+  const rendered = renderLessonMarkdown(md);
+  const { toc, words } = rendered;
+  let html = rendered.html;
   const illustrated = sectionFigures.apply(html, track, n);
   html = insertWidgets(illustrated.html, placement);
-  const words = md.split(/\s+/).filter(Boolean).length;
   let quiz = null;
   if (quizPath && fs.existsSync(quizPath)) {
     try { quiz = JSON.parse(fs.readFileSync(quizPath, 'utf8').replace(/^﻿/, '')); } catch (e) { console.warn('bad quiz json', quizPath, e.message); }
@@ -192,4 +201,5 @@ function build() {
   fs.writeFileSync(OUT, 'window.COURSE = ' + JSON.stringify(payload) + ';\n');
   console.log(`wrote ${OUT} (${(fs.statSync(OUT).size / 1024).toFixed(0)} KB), total words ${modules.reduce((a, m) => a + m.words, 0)} + survey ${survey.reduce((a, m) => a + m.words, 0)}`);
 }
-build();
+if (require.main === module) build();
+module.exports = { renderLessonMarkdown };

@@ -1,0 +1,604 @@
+{
+  "checkedAt": "2026-09-14T01:37:14.467Z",
+  "baseline": "3f3b9cb",
+  "purpose": "Identify editorial source changes for human review. Token deltas do not prove preservation or correctness of factual claims, units, context, or spelled-out quantities. Repeated/moved values can change counts without changing a claim; unchanged counts can still hide changed meanings.",
+  "lessonCount": 32,
+  "changedLessons": 32,
+  "headingChanges": 0,
+  "lessonsWithLinkDeltas": 1,
+  "lessonsWithNumericTokenDeltas": 10,
+  "quizCount": 22,
+  "quizStructureChanges": 0,
+  "lessons": [
+    {
+      "file": "course/modules/00-overview.md",
+      "changed": true,
+      "sourceSha256": "e6c399eff6554ab0c0d50d8e03279deb78d8a4dd8ef233dbafc592b93cf4a3b0",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/01-sand-to-polysilicon.md",
+      "changed": true,
+      "sourceSha256": "2a77dde3c9ab4f64aac7d0df5a2aead86dcb9c1bc820adbd35a1e0dcae275e2b",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/02-crystal-growth.md",
+      "changed": true,
+      "sourceSha256": "17df65e17ae723918a97c809b2f9c29910bb47515e1431b1c3540abd4cabaf89",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/03-ingot-to-wafer.md",
+      "changed": true,
+      "sourceSha256": "4d262622ff2607eacd1ae82522d76670f1821fba496e23c108cc1bd886cb432c",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "changed": true,
+      "sourceSha256": "b9e70e3d7bfef3e661b45a67dc4023b7ddcaec64208317bfcd1c3634890c0687",
+      "headingsPreserved": true,
+      "linksAdded": {
+        "https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/company/technical-review/pdf/ISPSD2021_4_en.pdf": 1,
+        "https://www.littelfuse.com/assetdocs/littelfuse-discrete-mosfets-ixt-08n120p-datasheet?assetguid=301fbdbd-7c2d-4205-a7d8-3f7d7ab7a8fc": 1,
+        "https://www.infineon.com/dgdl/Infineon-SiC_MOSFETs_for_Bridge_Topologies_Power_Electronics_Europe-Article-v01_00-EN.pdf?fileId=5546d4626eab8fbf016ef47919fc788e": 1,
+        "https://www.intel.com/pressroom/archive/releases/2005/20050217tech.htm": 1,
+        "https://www.coherent.com/datacenter-communications": 1,
+        "https://www.coherent.com/news/press-releases/high-efficiency-lasers-for-silicon-photonics-transceivers": 1,
+        "https://www.merckmillipore.com/GW/en/technical-documents/technical-article/water-purification/water-quality-monitoring": 1
+      },
+      "linksRemoved": {},
+      "numericTokensAdded": {
+        "2": 1,
+        "3": 2,
+        "4": 1,
+        "7": 5,
+        "8": 3,
+        "120": 1,
+        "301": 1,
+        "788": 1,
+        "2005": 1,
+        "2021": 1,
+        "4205": 1,
+        "4626": 1,
+        "5546": 1,
+        "47919": 1,
+        "20050217": 1,
+        "08": 1,
+        "01": 1,
+        "00": 1,
+        "016": 1
+      },
+      "numericTokensRemoved": {
+        "75": 1,
+        "100": 1,
+        "200": 1,
+        "03": 1
+      }
+    },
+    {
+      "file": "course/modules/05-inside-a-fab.md",
+      "changed": true,
+      "sourceSha256": "53f14927c6fe76728df3493ca5248ee904cb95a448e6c567671be6d47ee618c3",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {
+        "0": 1
+      }
+    },
+    {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "changed": true,
+      "sourceSha256": "830286efb22ba53737d33675107e379a9b5866bcab1d7ba899be881c96da8949",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/07-lithography-duv.md",
+      "changed": true,
+      "sourceSha256": "2606cfdc7a5af1b47929f359374a34f3f66f238d51050f87eb4408543c2fa3e9",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/08-euv-lithography.md",
+      "changed": true,
+      "sourceSha256": "09d202df3e902e3f31f09f0e67b5c5f36ea800d8bd710a0511a8277f0afbb3e7",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/09-etch.md",
+      "changed": true,
+      "sourceSha256": "3978b11d7e0a31942118117fbed9ea4c6ce876ca8eebf063acede6a58fe9ad9b",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {
+        "55": 1
+      },
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/10-doping.md",
+      "changed": true,
+      "sourceSha256": "fb3857f82c89b98977f6cc18cebd5c2ab3cebf390f4f5cdf235e129355bd90fd",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/11-transistor-architectures.md",
+      "changed": true,
+      "sourceSha256": "dbae5872ab29ae2093c26a10f24fa1c17889d82c341b689d8453d23005990411",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/12-interconnect-beol.md",
+      "changed": true,
+      "sourceSha256": "7b6dbecb4df90c7db1d0b5a047cf9afa848897a701fab62406254e58d59ae916",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/13-metrology-inspection-yield.md",
+      "changed": true,
+      "sourceSha256": "4a89f28c92eff39c2c67ea0f3c4dd082ba1079dd5230dd21c24e05961bdcd87b",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/14-wafer-sort-and-test.md",
+      "changed": true,
+      "sourceSha256": "bf2d4c3ab5274844d802f559ec3d847ec22c21ae8ae7d87405ec9a5a94819f85",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "changed": true,
+      "sourceSha256": "8244714cefa5b72dcd7115d1be85e0271cf919bdf563faf6b9ecbd10beb533cf",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {
+        "8": 1
+      },
+      "numericTokensRemoved": {
+        "0": 1,
+        "1": 1
+      }
+    },
+    {
+      "file": "course/modules/16-packaging-fundamentals.md",
+      "changed": true,
+      "sourceSha256": "7686f1788eaf07ed825ef489988ef22bd72c9779c4cd8b4e7c3f98be696f4ad2",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "changed": true,
+      "sourceSha256": "4895ab1f29b600a3ca48158ddf4581170eab012d63e1de15db4fde85e52ea66d",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {
+        "0": 1
+      },
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "changed": true,
+      "sourceSha256": "72b1dbe9af9b6795b4ca3e08e7b9d8f71b7081463f8ffad09c702ccd5b2cbfa5",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {
+        "5": 1,
+        "8": 1
+      }
+    },
+    {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "changed": true,
+      "sourceSha256": "1c96935b80002dd64f2f09214265f2ca681952a4df9cbc1fe779b2e6b14d6df7",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {
+        "0.55": 1
+      }
+    },
+    {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "changed": true,
+      "sourceSha256": "6ed428a570955b85db145cdd3396d2bc1e3a404e4db4ea245c6d9ad5bf69a4a8",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/modules/21-glossary-and-reference.md",
+      "changed": true,
+      "sourceSha256": "a9e68c9851b58a9d6b6904ab98b2b8b1c5b8520a56466ee7ee42ee78bae485bb",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {
+        "15": 1,
+        "18": 1,
+        "19": 1
+      },
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/survey/S01-the-big-picture.md",
+      "changed": true,
+      "sourceSha256": "f0a6d8374295bfae8fbbfceeb640a5a48caae1b1813229145a1415f0ed39ab20",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/survey/S02-from-sand-to-a-mirror.md",
+      "changed": true,
+      "sourceSha256": "ce59bce59e0b654a531d238051045e26bd13405cd8c0e5fd3d42b3ed3f24b84f",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/survey/S03-inside-the-fab.md",
+      "changed": true,
+      "sourceSha256": "2bfe86a9148ad2b7321fc45eff14d24d3c1ef0b58f16a7338363ba4490f2edc5",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/survey/S04-drawing-with-light.md",
+      "changed": true,
+      "sourceSha256": "1f242bef5d4dabf8d0def1edf09315e6adfbfd56085b14b5950e0bf09208950d",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {
+        "07": 1
+      },
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/survey/S05-adding-and-removing-layers.md",
+      "changed": true,
+      "sourceSha256": "7e7e86773ddd45a3e7302b380e5a63cebd7a123fddbcee451eb523c3d5b6b559",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/survey/S06-transistor-and-wiring.md",
+      "changed": true,
+      "sourceSha256": "8156d6d3eb8e9160bb526d7a48570c830062b646a2b04cd436863f99176db6c8",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/survey/S07-knowing-it-works.md",
+      "changed": true,
+      "sourceSha256": "e1563afec5c57604e001bce310133173738fb0a2180f095d740c90b48c9bd10e",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/survey/S08-memory-and-hbm.md",
+      "changed": true,
+      "sourceSha256": "179041074f83f7c086f0f150fed4e5930c2b8b9c8ba016c31adf859c6f0b37a2",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {
+        "3": 1,
+        "4": 1,
+        "8": 1,
+        "16": 1
+      },
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/survey/S09-packaging-a-gpu.md",
+      "changed": true,
+      "sourceSha256": "81b0618886e7a3e1716f821a4d07c04b97ac2416a94c094b43bbed7ed63c0583",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    },
+    {
+      "file": "course/survey/S10-becoming-a-gpu.md",
+      "changed": true,
+      "sourceSha256": "4419811fe0157a272126168087524f3d740f279445074799ccfbaf4c523fc4eb",
+      "headingsPreserved": true,
+      "linksAdded": {},
+      "linksRemoved": {},
+      "numericTokensAdded": {},
+      "numericTokensRemoved": {}
+    }
+  ],
+  "quizzes": [
+    {
+      "file": "course/quizzes/00-overview.json",
+      "changed": false,
+      "sourceSha256": "6c25d3cd7893526a8bcb78a93e14bbaa49c6255f18e3032df78110a3281fab18",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/01-sand-to-polysilicon.json",
+      "changed": false,
+      "sourceSha256": "5ac3e42cd8a159c882b8e51ef0d43d549845ea26e2f9ca1baff546a99f70b51a",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/02-crystal-growth.json",
+      "changed": false,
+      "sourceSha256": "cba1cc09cb5ecf6f073c866ed8cad11f4aeaf9f39d99730231381f74e854db86",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/03-ingot-to-wafer.json",
+      "changed": false,
+      "sourceSha256": "21461f5d791c73079c1adac8ec5320c02627378704f27b16da9176def02b01f5",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/04-materials-and-consumables.json",
+      "changed": false,
+      "sourceSha256": "6e2a8957fb47cc55a8785db22ebeddefc36ad79d7bee6561284a99543461e541",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/05-inside-a-fab.json",
+      "changed": false,
+      "sourceSha256": "d587e0454dea1a8e0eef28b3e280fd8cc0ec1e93ba72e0d871aa7f4fdab62e01",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/06-oxidation-and-deposition.json",
+      "changed": false,
+      "sourceSha256": "5d81689fef0c5e292bd532347298da9a1327b144a2f2abd351b42feeed9baa57",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/07-lithography-duv.json",
+      "changed": false,
+      "sourceSha256": "b553d9260b379210c63a0cc256ecd51ac997e85072920d7e0efc2deb29f48cb0",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/08-euv-lithography.json",
+      "changed": false,
+      "sourceSha256": "f07de51f6a61e47d6e769ca4dd28492c8e9d24b40c03fd167b25f0430876f809",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/09-etch.json",
+      "changed": false,
+      "sourceSha256": "7a2734ceea73a996286a89c8a2fa54ea2e0f600fde41f392be754d6d2366c541",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/10-doping.json",
+      "changed": false,
+      "sourceSha256": "c57314b9f1bf2345f6ab71bfdb51dbc064edcab11be74168a44f97412a8a525b",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/11-transistor-architectures.json",
+      "changed": false,
+      "sourceSha256": "a8c1f3d04e55c561b0bc9c3324e5983aa3d3fb45406ccf43aca1861f67596199",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/12-interconnect-beol.json",
+      "changed": false,
+      "sourceSha256": "d1dc524e76f6ce1dcf1fb5a8d7bdf64d404f0267f5c731b2a990d40b28d5c2ec",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/13-metrology-inspection-yield.json",
+      "changed": false,
+      "sourceSha256": "c1cf5772c8e2588412848fcb93b070673015440c8b900675bf72c2f306d784fa",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/14-wafer-sort-and-test.json",
+      "changed": true,
+      "sourceSha256": "4b23b65019520d54d8f0acdacf15800a7431bc7a5e759507daf5871be0e83aa7",
+      "structurePreserved": true,
+      "wordingChanges": [
+        {
+          "question": 1,
+          "field": "q",
+          "before": "A large die yields Y = 0.70 at sort and the scan program achieves T = 0.99 fault coverage. Using the Williams-Brown model DL = 1 - Y^(1-T), roughly how many defective parts per million escape, and what happens if coverage is raised to 0.999?",
+          "after": "Assume a large die has true good-die yield Y = 0.70 in the model and the scan program achieves T = 0.99 fault coverage. Using the Williams-Brown model DL = 1 - Y^(1-T), roughly how many defective parts per million escape, and what happens if coverage is raised to 0.999?"
+        }
+      ]
+    },
+    {
+      "file": "course/quizzes/15-memory-dram-nand-hbm.json",
+      "changed": false,
+      "sourceSha256": "598edbdf7f2c450022fe51081e29c9b2c58a5eeeec56cc26bd68c7831513afa0",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/16-packaging-fundamentals.json",
+      "changed": false,
+      "sourceSha256": "59b34980331d83994a020c8cdbf8ff996ea114b9995fd10509afd3e04fd70926",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/17-advanced-packaging-cowos.json",
+      "changed": false,
+      "sourceSha256": "7c2e041c9c188555d1e6d8fca0a1b9b499cc1b79d54c94f34fac6ecdee883f3a",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/18-final-test-burn-in-slt.json",
+      "changed": false,
+      "sourceSha256": "78826160659aa1cd354ef19bf890e712a9eb48072f2314b4ca9459da792fa1d8",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/19-building-an-nvidia-gpu.json",
+      "changed": false,
+      "sourceSha256": "363652eec96d685803bb5f5f58aaea3b7ee257a949aad0d666125cf8eada5006",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/20-economics-and-geopolitics.json",
+      "changed": false,
+      "sourceSha256": "0eed6efff479216c3960d4dba1b0e03fc34c3880e4a2e0fedf29dbd1d148065a",
+      "structurePreserved": true,
+      "wordingChanges": []
+    },
+    {
+      "file": "course/quizzes/21-glossary-and-reference.json",
+      "changed": false,
+      "sourceSha256": "1331b19333f598f66b8debf5d053315087d7b65726b5325dccf7a0fad77381ab",
+      "structurePreserved": true,
+      "wordingChanges": []
+    }
+  ],
+  "manualDeltaReview": {
+    "status": "accounted for through author ledgers and root corrections; not independent numerical fact verification",
+    "entries": [
+      {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "notes": "Earlier Module03 cross-reference removed. Seven primary-source URLs added, producing most added numeric tokens. Repetition of 75–100 mm removed with a universal InP claim; blanket above-200 V IGBT boundary removed. Remaining occurrences/specifications retained. Root also removed a spelled-out unsupported molecule fraction, which numeric-token auditing alone cannot detect."
+      },
+      {
+        "file": "course/modules/05-inside-a-fab.md",
+        "notes": "Coefficient zero spelled out in words instead of digit."
+      },
+      {
+        "file": "course/modules/09-etch.md",
+        "notes": "55 Å/min repeats the immediately preceding experimental result."
+      },
+      {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "notes": "Literal 1/0 full/empty-bucket labels replaced by distinguishable charge states. Added division by 8 explains existing bandwidth conversion."
+      },
+      {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "notes": "Added zero is part of the repeated symbol D0, not a new numerical value."
+      },
+      {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "notes": "Unsupported 5–8% annual GPU failure inference removed; existing snapshot counts and source retained."
+      },
+      {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "notes": "Removed one repeated 0.55 ns in a clock analogy; original calculation remains."
+      },
+      {
+        "file": "course/modules/21-glossary-and-reference.md",
+        "notes": "Added references to Modules15,18,19."
+      },
+      {
+        "file": "course/survey/S04-drawing-with-light.md",
+        "notes": "Added Module07 reference."
+      },
+      {
+        "file": "course/survey/S08-memory-and-hbm.md",
+        "notes": "TLC3bits/8states and QLC4bits/16states copied from module15 explanation."
+      }
+    ],
+    "quiz": "Only question1 wording in module14 changed. Corrected assumed true-good-die yield label; all original question counts/options/answer indices and numerical inputs preserved.",
+    "links": "All original links retained; seven additional primary-source links in module04."
+  }
+}

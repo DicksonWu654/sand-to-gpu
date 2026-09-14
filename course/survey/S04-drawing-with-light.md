@@ -17,7 +17,7 @@ The wafer first receives a thin coating called **photoresist**, a material whose
 
 Think of photographic printing combined with a stencil. The projected light changes where the coating can be dissolved. The resulting shape is temporary, but it can protect the underlying surface while another operation acts through its openings. The fab later removes the remaining resist and continues building the device.
 
-The resist is part of the imaging system, not merely a passive screen. Its thickness, chemistry and subsequent treatment influence the final edge position. Many modern resists are **chemically amplified**: a small amount of light-generated chemical species drives additional reactions during heating. This makes useful exposure doses possible, but the reactions can also spread the image or introduce variations.
+The resist is part of the imaging system, not merely a passive screen. Its thickness, chemistry and subsequent treatment influence the final edge position. Many modern resists are **chemically amplified**: light starts a chemical change that is multiplied during heating. In the acid-based example developed in Module 07, exposure creates acid, and that acid helps change many nearby polymer molecules so they dissolve differently. The benefit is less light needed to create a useful chemical pattern. The tradeoff is that chemistry acting beyond its intended neighborhood can blur an edge.
 
 The heating step after exposure is the **post-exposure bake**. It helps turn the latent chemical image into the contrast needed for development. **Contrast** here means how sharply the material distinguishes regions that should remain from regions that should dissolve. A good optical image can still produce poor features if the chemistry or temperature is not controlled.
 
@@ -31,7 +31,7 @@ Light behaves as a wave. When it passes through or reflects from a patterned obj
 
 The **wavelength** is the spatial length of one oscillation of the light wave. **Numerical aperture**, or **NA**, describes the range of light angles the optics can collect and focus in the medium near the wafer. Shorter wavelength and higher NA can support smaller printed features, although actual performance also depends on the process.
 
-The useful compact relationship is **resolution ≈ k₁ × wavelength / NA**. The symbol k₁ represents how effectively the imaging and resist process use the optical system. This is the chapter's one equation to remember. It says that better optics, shorter light and improved process techniques all contribute; none makes the rest irrelevant.
+The useful compact relationship is **resolution ≈ k₁ × wavelength / NA**. The symbol k₁ represents how effectively the imaging and resist process use the optical system. This is the chapter's one equation to remember. Read “resolution” here as the size of a detail the system can distinguish: a smaller value is better. Shorter wavelength lowers that size; larger NA lowers it by collecting more of the light needed to form the image. The factor k₁ accounts for the imaging and resist process. These improvements work together; none makes the rest irrelevant.
 
 **Pitch** is the distance between repeating features, such as the centers of adjacent lines. **Half-pitch** is half that repeating distance for the pattern being discussed. A 40 nm line alternating with a 40 nm space has an 80 nm pitch. Confusing these quantities produces a factor-of-two error before any complicated physics is involved.
 
@@ -63,7 +63,7 @@ The source begins with tiny droplets of molten tin. A laser pulse reshapes a dro
 
 Use the source diagram to distinguish the laser that supplies energy from the EUV light that exposes the wafer. They are not the same beam continuing unchanged through the system. The laser creates the emitting plasma; the optics collect and guide a selected part of its emission.
 
-The light travels through a vacuum environment and reflects from specialized mirrors. Each mirror contains alternating thin layers whose reflected waves reinforce one another in the desired wavelength range. This is **interference**, the addition of waves that can strengthen or weaken the combined result depending on their relative timing.
+The light travels through a vacuum environment and reflects from specialized mirrors. Each mirror contains alternating thin layers. Every interface reflects a small part of the light. The spacing makes those reflected waves return in step for the desired wavelength, so their effects add. This is **interference**, the addition of waves that can strengthen or weaken the combined result depending on their relative timing. Like timed pushes on a swing, timing matters as much as the number of pushes; unlike a swing, the mirror combines light waves and also absorbs some of their energy.
 
 An EUV reticle is reflective too. The light reaches the patterned mask and reflects toward the projection optics. A **pellicle**, a thin protective membrane above the mask, can keep particles from lying directly in the sharply imaged mask plane. It must transmit EUV light and tolerate the demanding environment. Because light crosses it toward the mask and again afterward, its optical losses occur twice.
 

@@ -1,0 +1,574 @@
+{
+  "date": "2026-09-13",
+  "baseline_commit": "3f3b9cb5f953a4f9a4c8ed41ae33cf73c24eff9b",
+  "status": "source frozen for integration",
+  "purpose": "Improve explanations for a curious adult without semiconductor expertise while retaining depth and the existing course structure.",
+  "scope_summary": {
+    "lessons": 10,
+    "deep_modules": "15–21",
+    "survey_chapters": "S08–S10",
+    "edit_operations": 54,
+    "count_caveat": "Operations are replacement actions, not independent passages; several refine the same paragraph. This was a bounded pass through openings, prerequisites and selected difficult concepts, not an exhaustive line edit of the complete deep modules."
+  },
+  "editorial_approach": [
+    "State the problem before specifications or jargon.",
+    "Explain the physical or logical correspondence in analogies and their limits.",
+    "Name equation symbols and explain why the operations follow the mechanism.",
+    "Separate easily confused measurements and meanings.",
+    "Break nested architecture prose into a readable hierarchy without deleting its numerical example."
+  ],
+  "numerical_and_citation_audit": {
+    "method": "Compared whole-file numerical token inventories against baseline and reviewed the deltas in context; root handles integrated structural/build checks. This is preservation review, not an independent fact check.",
+    "preserved": "Original equations, dimensions, units, prices, dated estimates and reference links are retained except the explicitly identified stale inference. No citation links were changed.",
+    "explicit_changes": [
+      {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "change": "Removed literal 1/0 full/empty-bucket wording in favor of two distinguishable charge states. Other 1/0 definitions and the charge-sharing numerical model remain."
+      },
+      {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "change": "Corrected spacing in roughly6–10 fF, At3 fF and about43 mV. Numeric-token extraction now recognizes 6–10, 3 and 43; the values did not change."
+      },
+      {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "change": "Explained division by 8 for bits-to-bytes before the existing bandwidth examples, which already use that divisor."
+      },
+      {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "change": "Removed the unsupported “~5–8% of GPUs per year on this arithmetic” inference and final annual-rate characterization. They directly contradicted the preceding source-linked warning that 419 interruptions in a 54-day snapshot do not establish annual GPU failure probability. Preserved that source, its numbers and the valid interruption calculation; no new replacement failure rate is supplied."
+      },
+      {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "change": "Moved the GH100 numerical hierarchy and FLOPS derivation into separate blocks, retaining original specifications. Removed one duplicate occurrence of 0.55 ns in the metronome analogy while retaining 1.8 GHz/0.55 ns and distinguishing pipeline stages from complete computations."
+      },
+      {
+        "file": "course/modules/21-glossary-and-reference.md",
+        "change": "New bandwidth entry references Modules 15 and 19; yield/reliability entry also references Module 18. These are added cross-reference module numbers, not new device specifications."
+      },
+      {
+        "file": "course/survey/S08-memory-and-hbm.md",
+        "change": "Added TLC = 3 bits/8 threshold states and QLC = 4 bits/16 states, copied from Module 15 §9 Multi-level cells to resolve the naming ambiguity."
+      }
+    ]
+  },
+  "limitations": [
+    "Not an exhaustive rewrite of every paragraph in these long deep modules.",
+    "No new external factual, product, market or policy research was performed; dated claims and earlier evidence gaps remain subject to the existing fact-review ledger.",
+    "Definition clarifications are identified separately from pure wording changes in each file record.",
+    "No build, browser test, quiz edit, figure edit or Git mutation was performed by this editor."
+  ],
+  "files": [
+    {
+      "file": "course/modules/15-memory-dram-nand-hbm.md",
+      "reviewed_scope": [
+        "Opening and prerequisite list",
+        "Section 2: DRAM storage, read/restore and charge-sharing equation",
+        "Section 9: floating-gate analogy and multi-level definitions",
+        "Section 14: interface bandwidth arithmetic"
+      ],
+      "review_method": "Source reading of named passages and adjacent context; manual after-edit continuity review. No browser or independent technical validation.",
+      "words_before": 23907,
+      "words_after": 24130,
+      "edit_operations": 12,
+      "changes": [
+        {
+          "focus": "Opening: data supply before memory-stack vocabulary",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "DRAM destructive read: disturbance rather than emptying",
+          "kind": "definition clarification; removes misleading bucket/emptying wording, no numerical model changed"
+        },
+        {
+          "focus": "Charge-sharing equation: physical picture and named symbols",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Charge-sharing equation: explain both sides before rearranging",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Worked example spacing: roughly 6–10 fF",
+          "kind": "typographic only"
+        },
+        {
+          "focus": "Worked example spacing: 3 fF and 43 mV",
+          "kind": "typographic only"
+        },
+        {
+          "focus": "Opening: define DRAM at its first mention",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Opening: remove repeated inline definition",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "NAND: connect isolated charge to threshold sensing and bound the jar analogy",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "HBM bandwidth: explain parallel multiplication and bits versus bytes",
+          "kind": "equation clarification; divisor 8 already present in section examples"
+        },
+        {
+          "focus": "Opening continuity: describe stalls without implying every workload is bandwidth-limited",
+          "kind": "language continuity"
+        },
+        {
+          "focus": "Opening continuity: give the first-use definition its own sentence",
+          "kind": "language continuity"
+        }
+      ],
+      "representative_before_after": [
+        {
+          "file": "course/modules/15-memory-dram-nand-hbm.md",
+          "focus": "Opening: data supply before memory-stack vocabulary",
+          "kind": "language and causal explanation",
+          "before": "A Blackwell B200 GPU can chew through roughly 8 TB/s of data (8 terabytes, 8 × 10¹² bytes, every second). No DRAM chip on a circuit board can feed that. A **DIMM (dual in-line memory module)**, the stick of memory chips that plugs into a server board, delivers ~50–70 GB/s as **DDR5** (the fifth generation of the standard DRAM interface); you would need well over a hundred of them, and the power spent just moving bits across the board would exceed the power of the GPU itself. The reason an AI accelerator works at all is that ~180–290 GB of DRAM sits within a few millimetres of the compute die, stacked eight, twelve or sixteen dies high and wired through with thousands of vertical copper **vias** (a via is a hole through a chip filled with copper, so that a signal can travel vertically through the silicon instead of out to the chip's edge). That product, **HBM (High Bandwidth Memory)**, is the single most supply-constrained component of the AI build-out after **CoWoS** packaging (TSMC's process for placing a GPU and its memory stacks side by side on a slab of silicon, Module 17), and it is made by a manufacturing flow that starts as ordinary DRAM and then becomes something closer to advanced packaging than to chipmaking.",
+          "after": "A GPU can calculate only as fast as it receives the data those calculations need. A Blackwell B200 GPU can move roughly 8 TB/s of data (8 terabytes, 8 × 10¹² bytes, every second). No DRAM chip on a circuit board can feed that. A **DIMM (dual in-line memory module)**, the stick of memory chips that plugs into a server board, delivers ~50–70 GB/s as **DDR5** (the fifth generation of the standard DRAM interface); you would need well over a hundred of them, and the power spent just moving bits across the board would exceed the power of the GPU itself.\n\nTo supply that stream, ~180–290 GB of **DRAM (dynamic random-access memory)**, the working memory used while a computer is running, sits within a few millimetres of the compute die, stacked eight, twelve or sixteen dies high and wired through with thousands of vertical copper **vias** (a via is a hole through a chip filled with copper, so that a signal can travel vertically through the silicon instead of out to the chip's edge). That product, **HBM (High Bandwidth Memory)**, is the single most supply-constrained component of the AI build-out after **CoWoS** packaging (TSMC's process for placing a GPU and its memory stacks side by side on a slab of silicon, Module 17), and it is made by a manufacturing flow that starts as ordinary DRAM and then becomes something closer to advanced packaging than to chipmaking."
+        },
+        {
+          "file": "course/modules/15-memory-dram-nand-hbm.md",
+          "focus": "DRAM destructive read: disturbance rather than emptying",
+          "kind": "definition clarification; removes misleading bucket/emptying wording, no numerical model changed",
+          "before": "The cheapest conceivable bit is a charge on a capacitor: a full capacitor is a 1, an empty one a 0, and one transistor acting as a switch is all it takes to connect the capacitor to the outside world. The price is twofold. The charge leaks away through the switch and through the insulator within a fraction of a second, so it must be periodically topped up; and reading the charge means sharing it with a wire, which empties the capacitor. Almost everything in DRAM design exists to manage those two problems.",
+          "after": "A compact way to store a bit is to use two distinguishable charge states of a capacitor. One transistor acts as the switch that connects it to the outside world. The familiar picture of a full or empty bucket is useful, but the real cell is read by detecting a voltage difference, not by counting out its electrons. There are two problems to solve. Charge leaks through the switch and the insulator, so the state must be periodically restored. Reading also shares charge with a wire and disturbs the original state; it does not simply empty the capacitor. The sensing circuit must recover the bit and restore it before disconnecting the cell. Almost everything in DRAM design exists to manage those two problems."
+        }
+      ]
+    },
+    {
+      "file": "course/modules/16-packaging-fundamentals.md",
+      "reviewed_scope": [
+        "Opening and prerequisite list",
+        "What a Package Must Do: fan-out, power delivery, heat flow",
+        "CTE analogy and nearby worked-example context"
+      ],
+      "review_method": "Source reading of named passages and adjacent context; manual after-edit continuity review. No browser or independent technical validation.",
+      "words_before": 24251,
+      "words_after": 24403,
+      "edit_operations": 5,
+      "changes": [
+        {
+          "focus": "Opening: usable circuit versus installable component",
+          "kind": "language; removes rhetorical absolute, specifications retained"
+        },
+        {
+          "focus": "Fan-out: state the purpose before geometry",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Power delivery: distinguish steady current from changing current",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Heat path: why a strong cooler is insufficient",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Thermal equation: relate each factor to the physical path",
+          "kind": "language and causal explanation"
+        }
+      ],
+      "representative_before_after": [
+        {
+          "file": "course/modules/16-packaging-fundamentals.md",
+          "focus": "Opening: usable circuit versus installable component",
+          "kind": "language; removes rhetorical absolute, specifications retained",
+          "before": "A finished 300 mm wafer leaving the fab is useless to anyone. The transistors on it switch in picoseconds, but their terminals are aluminum or copper pads roughly 50 µm across (a **micrometer (µm)** is one-thousandth of a millimeter; a human hair is ~70 µm wide), spaced 100–150 µm apart, on a slab of silicon 775 µm thick that will shatter if you drop it, corrode if you breathe on it, and cook itself if you run it without a path for its heat to escape. A **printed circuit board (PCB)**, the green fiberglass board that carries the chips in every product, can by contrast reliably solder to features no finer than ~0.4–1.0 mm and can only pull heat away through a few square centimeters of copper and a heatsink. **Packaging** is the discipline that bridges that gap: it takes a bare **die** (one rectangle cut from the wafer, carrying one chip) with thousands of micrometer-scale terminals and turns it into a component with millimeter-scale terminals that survives 20 years in a car engine bay or 5 years at 700 W in a data center, whether the chip is an 8-pin voltage regulator or a **system-on-chip (SoC)**, a single die that integrates processor cores, graphics, memory controllers and radios.",
+          "after": "A finished 300 mm wafer contains working circuits, but it is not yet a component you can install in a product. The transistors on it switch in picoseconds, but their terminals are aluminum or copper pads roughly 50 µm across (a **micrometer (µm)** is one-thousandth of a millimeter; a human hair is ~70 µm wide), spaced 100–150 µm apart, on a slab of silicon 775 µm thick that will shatter if you drop it, corrode if you breathe on it, and cook itself if you run it without a path for its heat to escape.\n\nA **printed circuit board (PCB)**, the green fiberglass board that carries the chips in every product, can by contrast reliably solder to features no finer than ~0.4–1.0 mm and can only pull heat away through a few square centimeters of copper and a heatsink. **Packaging** is the discipline that bridges that gap: it takes a bare **die** (one rectangle cut from the wafer, carrying one chip) with thousands of micrometer-scale terminals and turns it into a component with millimeter-scale terminals that survives 20 years in a car engine bay or 5 years at 700 W in a data center, whether the chip is an 8-pin voltage regulator or a **system-on-chip (SoC)**, a single die that integrates processor cores, graphics, memory controllers and radios."
+        },
+        {
+          "file": "course/modules/16-packaging-fundamentals.md",
+          "focus": "Fan-out: state the purpose before geometry",
+          "kind": "language and causal explanation",
+          "before": "**1. Electrical fan-out.** The die's terminals",
+          "after": "**1. Electrical fan-out.** The package acts as a wiring adapter: it takes tightly spaced contacts on the die and spreads them into a pattern the board can accept. This is a change in connection spacing, not an amplification of the signals. The die's terminals"
+        }
+      ]
+    },
+    {
+      "file": "course/modules/17-advanced-packaging-cowos.md",
+      "reviewed_scope": [
+        "Opening and prerequisite list",
+        "Why the Package Became the Chip: yield and selection",
+        "Why the Package Became the Chip: wire capacitance and energy",
+        "Nearby package anatomy and interface table context"
+      ],
+      "review_method": "Source reading of named passages and adjacent context; manual after-edit continuity review. No browser or independent technical validation.",
+      "words_before": 19361,
+      "words_after": 19524,
+      "edit_operations": 4,
+      "changes": [
+        {
+          "focus": "Opening: purpose before package inventory",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Yield equation: probability, assumptions, and exp notation",
+          "kind": "model interpretation; existing values and formula unchanged"
+        },
+        {
+          "focus": "Chiplet yield: explain selection, not multiplication magic",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Interconnect energy: explain capacitance before C·V²",
+          "kind": "language and causal explanation"
+        }
+      ],
+      "representative_before_after": [
+        {
+          "file": "course/modules/17-advanced-packaging-cowos.md",
+          "focus": "Opening: purpose before package inventory",
+          "kind": "language and causal explanation",
+          "before": "Pick up an NVIDIA Blackwell **GPU** package (a graphics processing unit, the chip that does the arithmetic of AI training; the B200 is the Blackwell data-centre part) and you are holding five kinds of object glued into one. On top, under a copper lid, sit two ~800 mm² logic **dies** (a die is one rectangular chip cut from a 300 mm wafer) and eight stacks of **high bandwidth memory (HBM)**, the memory that feeds the GPU. Under them lies a slab of silicon carrying wiring but no transistors, the **interposer**. Under that is a 20-layer **organic** laminate (a polymer-and-glass-fibre board, the green material of a circuit board, as opposed to silicon), and under that a grid of solder balls. The assembly exists because chip-making ran into three walls at once. A lithography scanner cannot print a die larger than 26 × 33 mm, so the biggest GPU must be two dies. Defects fall on a wafer at random, so the fraction of dies that survive falls exponentially with area. And each HBM stack needs ~1,600 signal wires entering the GPU through ~12 mm of its edge, which no organic board can route: its wires are ~10 µm wide and its **vias** (plated holes that join one wiring layer to the next) ~50 µm across, while HBM's contacts sit only 55 µm apart. Joining several chips on a wire-only silicon slab and then on a laminate is TSMC's **CoWoS (Chip-on-Wafer-on-Substrate)**, the subject of this module.",
+          "after": "A large GPU needs more than a powerful compute die: it needs a way to connect that die to nearby memory. Pick up an NVIDIA Blackwell **GPU** package (a graphics processing unit, the chip that does the arithmetic of AI training; the B200 is the Blackwell data-centre part) and you are holding five kinds of object glued into one. On top, under a copper lid, sit two ~800 mm² logic **dies** (a die is one rectangular chip cut from a 300 mm wafer) and eight stacks of **high bandwidth memory (HBM)**, the memory that feeds the GPU. Under them lies a slab of silicon carrying wiring but no transistors, the **interposer**. Under that is a 20-layer **organic** laminate (a polymer-and-glass-fibre board, the green material of a circuit board, as opposed to silicon), and under that a grid of solder balls.\n\nThe assembly exists because chip-making ran into three walls at once. A lithography scanner cannot print a die larger than 26 × 33 mm, so the biggest GPU must be two dies. Defects fall on a wafer at random, so the fraction of dies that survive falls exponentially with area. And each HBM stack needs ~1,600 signal wires entering the GPU through ~12 mm of its edge, which no organic board can route: its wires are ~10 µm wide and its **vias** (plated holes that join one wiring layer to the next) ~50 µm across, while HBM's contacts sit only 55 µm apart. Joining several chips on a wire-only silicon slab and then on a laminate is TSMC's **CoWoS (Chip-on-Wafer-on-Substrate)**, the subject of this module."
+        },
+        {
+          "file": "course/modules/17-advanced-packaging-cowos.md",
+          "focus": "Yield equation: probability, assumptions, and exp notation",
+          "kind": "model interpretation; existing values and formula unchanged",
+          "before": "The second reason is statistical. Defects land on a wafer like raindrops, at random, at some average **defect density D0** per unit area. The chance that no raindrop lands inside an area A is the Poisson probability of zero events, Y = exp(−A·D0), and that is the yield of a die of area A.",
+          "after": "The second reason is statistical. A larger die gives a defect more area to hit. In the simple model used here, defects land independently like raindrops, at an average **defect density D0** per unit area, and any counted defect makes the die fail. This is a model for the calculation, not a claim that every physical imperfection destroys a real chip.\n\nLet A be die area and Y the fraction of dies that survive. A·D0 is the average number of counted defects per die. The **Poisson model** gives Y = exp(−A·D0), the probability of receiving none; exp(x) means e raised to the power x. As the expected defect count rises, the surviving fraction falls."
+        }
+      ]
+    },
+    {
+      "file": "course/modules/18-final-test-burn-in-slt.md",
+      "reviewed_scope": [
+        "Opening and prerequisite list",
+        "Burn-in: acceleration explanation, equation and worked-example context",
+        "System-Level Test: fault coverage versus realistic behavior",
+        "DPPM and What the Field Actually Sees: interruption versus device-failure inference"
+      ],
+      "review_method": "Source reading of named passages and adjacent context; manual after-edit continuity review. No browser or independent technical validation.",
+      "words_before": 20536,
+      "words_after": 20685,
+      "edit_operations": 6,
+      "changes": [
+        {
+          "focus": "Opening: separate package anatomy, earlier tests, and assembly damage",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Burn-in: purpose and scope before reaction-rate jargon",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Acceleration factor: named temperatures and limits of equivalent hours",
+          "kind": "clarifies existing mechanism-specific caveat; numerical claims retained"
+        },
+        {
+          "focus": "Worked example: bind equivalent time to its model",
+          "kind": "clarification; same numerical example"
+        },
+        {
+          "focus": "SLT: distinguish fault-model coverage from behavior coverage",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Fleet telemetry: remove annual-failure inference contradicted by adjacent evidence",
+          "kind": "numerical correction: removes unsupported ~5–8% of GPUs per year; aligns with existing sourced caveat, no new rate calculated"
+        }
+      ],
+      "representative_before_after": [
+        {
+          "file": "course/modules/18-final-test-burn-in-slt.md",
+          "focus": "SLT: distinguish fault-model coverage from behavior coverage",
+          "kind": "language and causal explanation",
+          "before": "**System-level test (SLT)** addresses a different gap. Structural test measures a fault model, not a product; a scan program with 99% stuck-at and 90% transition-fault coverage still leaves untested every behaviour no fault model describes:",
+          "after": "**System-level test (SLT)** asks whether the assembled product can carry out realistic sequences of work. Earlier structural tests look for specific modeled circuit faults, such as a signal stuck at one value or a transition that arrives too late. A scan program with 99% stuck-at and 90% transition-fault coverage has covered those fractions of its modeled fault lists; it has not checked those fractions of all possible programs. SLT adds evidence about interactions that are difficult to represent in those lists:"
+        },
+        {
+          "file": "course/modules/18-final-test-burn-in-slt.md",
+          "focus": "Fleet telemetry: remove annual-failure inference contradicted by adjacent evidence",
+          "kind": "numerical correction: removes unsupported ~5–8% of GPUs per year; aligns with existing sourced caveat, no new rate calculated",
+          "before": "Those rates, ~5–8% of GPUs per year on this arithmetic, are why hyperscalers now demand extended burn-in, SLT and telemetry-based screening at module and rack level, and why **silent data corruption (SDC)**, a GPU producing wrong arithmetic without raising any error flag, has become its own test category. SDC cannot be caught by an error counter, because there is none; it is caught by **arithmetic self-checks**, in which a workload computes the same result two ways (a matrix product and its checksum, or the same kernel on two GPUs) and compares them, at SLT, at rack burn-in and periodically in the fleet. Keep the two units apart: DPPM counts defective parts per million shipped, measured once; the fleet number is a rate per year, dominated by parts that were good when shipped.",
+          "after": "Fleet interruptions motivate extended burn-in, SLT and telemetry-based screening at module and rack level, even though this report does not establish a per-GPU annual failure rate. Another concern is **silent data corruption (SDC)**, a GPU producing wrong arithmetic without raising any error flag, which has become its own test category. SDC cannot be caught by an error counter, because there is none; it is caught by **arithmetic self-checks**, in which a workload computes the same result two ways (a matrix product and its checksum, or the same kernel on two GPUs) and compares them, at SLT, at rack burn-in and periodically in the fleet. Keep the measurements apart: DPPM counts defective parts relative to parts shipped under a stated quality definition; the fleet report counts interruptions during an observed period. A repeated or recoverable interruption is not another uniquely failed GPU."
+        }
+      ]
+    },
+    {
+      "file": "course/modules/19-building-an-nvidia-gpu.md",
+      "reviewed_scope": [
+        "Opening and prerequisite list",
+        "What the die has to be: GH100 hierarchy and throughput calculation",
+        "RTL: clock/metronome analogy and pipeline timing",
+        "Adjacent verification context"
+      ],
+      "review_method": "Source reading of named passages and adjacent context; manual after-edit continuity review. No browser or independent technical validation.",
+      "words_before": 23877,
+      "words_after": 23955,
+      "edit_operations": 4,
+      "changes": [
+        {
+          "focus": "Opening: code-to-rack question before specifications",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Clock prerequisite: one stage versus complete computation",
+          "kind": "definition clarification; clock figures preserved"
+        },
+        {
+          "focus": "GH100 hierarchy: break nested inventory into blocks and explain throughput arithmetic",
+          "kind": "language and definition expansion; all original numerical specifications retained"
+        },
+        {
+          "focus": "RTL intuition: explain pipelines rather than forcing every computation into one tick",
+          "kind": "definition clarification; 1.8 GHz and 0.55 ns retained"
+        }
+      ],
+      "representative_before_after": [
+        {
+          "file": "course/modules/19-building-an-nvidia-gpu.md",
+          "focus": "GH100 hierarchy: break nested inventory into blocks and explain throughput arithmetic",
+          "kind": "language and definition expansion; all original numerical specifications retained",
+          "before": "On the full GH100 die (the silicon behind H100) the hierarchy is 8 **GPCs** (Graphics Processing Clusters), each holding 9 **TPCs** (Texture Processing Clusters) of 2 SMs, for 144 SMs on the die. Each SM contains 128 FP32 **CUDA cores** (CUDA is NVIDIA's programming platform, and a CUDA core is its name for one arithmetic unit), 4 fourth-generation Tensor Cores (each executing 8 × 4 × 16 FP16 **multiply-accumulate** operations per clock, a multiply-accumulate being one multiplication whose result is added to a running total; the three numbers are matrix-tile dimensions, an 8 × 16 output tile computed from 8 × 4 and 4 × 16 inputs, which is 8 × 4 × 16 = 512 multiply-accumulates per clock per Tensor Core, and the total checks against the datasheet: 132 enabled SMs × 4 = 528 Tensor Cores × 512 × 2 FLOP per multiply-accumulate × 1.83 GHz ≈ 989 TFLOPS, which is the **dense** FP16 figure NVIDIA publishes for H100, dense meaning every weight is multiplied, as opposed to the doubled \"sparse\" figure NVIDIA also quotes for models in which half the weights have been pruned to zero and the hardware skips them; plus FP8 with per-tensor scaling from the **Transformer Engine**, NVIDIA's name for the combination of Tensor Core hardware and library software that picks FP8 or FP16 for each layer of a neural network and rescales each block of numbers so that 8 bits are enough), a 256 KB **register file** (the fastest memory on the chip, holding the values the arithmetic units are working on right now), and 256 KB of combined L1 cache / shared memory. A **cache** exists because HBM is hundreds of nanoseconds away: it is a copy of recently used data kept on the die so the SMs do not wait, and L1 is the small one inside each SM. Around the GPCs sits a 50 MB **L2 cache** split into two partitions with a **crossbar** (a switch that lets any SM reach any L2 slice) between them, then 12 512-bit HBM3 memory controllers (512-bit meaning 512 wires carrying data in parallel; six stacks, each with two 512-bit **pseudo-channel** groups, a pseudo-channel being an independently addressed half of a memory channel), 18 fourth-generation **NVLink** ports at 50 GB/s each (900 GB/s bidirectional total; NVLink is NVIDIA's proprietary GPU-to-GPU connection), a **PCIe** Gen5 x16 host interface (the standard connection to the host CPU, 16 lanes wide), and the copy engines (units that move data between memories without occupying an SM), video decoders, and the logic that lets one GPU be partitioned into several smaller virtual ones. Every memory and link interface has two halves: the **PHY** (physical layer), the analog circuit at the die edge that drives and receives signals over the package wires, and the **controller**, the digital logic behind it that schedules requests. Roughly speaking: the SMs are ~60% of the die area, L2 and memory PHYs ~25%, and the rest is I/O and glue.",
+          "after": "On the full GH100 die (the silicon behind H100) the hierarchy is 8 **GPCs** (Graphics Processing Clusters), each holding 9 **TPCs** (Texture Processing Clusters) of 2 SMs, for 144 SMs on the die.\n\nInside each SM, the main blocks are:\n\n- 128 FP32 **CUDA cores** (CUDA is NVIDIA's programming platform, and a CUDA core is its name for one arithmetic unit).\n- 4 fourth-generation Tensor Cores.\n- A 256 KB **register file** (the fastest memory on the chip, holding the values the arithmetic units are working on right now), and 256 KB of combined L1 cache / shared memory.\n\nThe Tensor Core numbers need one calculation. Each executes 8 × 4 × 16 FP16 **multiply-accumulate** operations per clock. A multiply-accumulate multiplies two values and adds the product to a running total. The three dimensions describe matrix tiles: an 8 × 4 input multiplied by a 4 × 16 input gives an 8 × 16 output. That requires 8 × 4 × 16 = 512 multiply-accumulates per clock per Tensor Core.\n\nTo check the published total, count the units, their work per tick, and the ticks per second: 132 enabled SMs × 4 = 528 Tensor Cores × 512 × 2 FLOP per multiply-accumulate × 1.83 GHz ≈ 989 TFLOPS. **FLOP** means floating-point operation, and **TFLOPS** means trillions of those operations per second. This is NVIDIA's **dense** FP16 H100 figure: every weight is multiplied. The doubled **sparse** figure assumes half the weights have been pruned to zero and the hardware skips them. Dense and sparse figures therefore describe different amounts of work, not two speeds for the same calculation.\n\nThe **Transformer Engine** adds FP8 with per-tensor scaling. This is NVIDIA's combination of Tensor Core hardware and library software that chooses FP8 or FP16 for each neural-network layer and rescales each block of numbers so that 8 bits are enough. It is a separate idea from skipping zero weights: scaling changes number representation; sparsity changes which multiplications are performed.\n\nA **cache** exists because HBM is hundreds of nanoseconds away: it is a copy of recently used data kept on the die so the SMs do not wait, and L1 is the small one inside each SM.\n\nAround the GPCs sits a 50 MB **L2 cache** split into two partitions with a **crossbar** (a switch that lets any SM reach any L2 slice) between them, then 12 512-bit HBM3 memory controllers (512-bit meaning 512 wires carrying data in parallel; six stacks, each with two 512-bit **pseudo-channel** groups, a pseudo-channel being an independently addressed half of a memory channel), 18 fourth-generation **NVLink** ports at 50 GB/s each (900 GB/s bidirectional total; NVLink is NVIDIA's proprietary GPU-to-GPU connection), a **PCIe** Gen5 x16 host interface (the standard connection to the host CPU, 16 lanes wide), and the copy engines (units that move data between memories without occupying an SM), video decoders, and the logic that lets one GPU be partitioned into several smaller virtual ones.\n\nEvery memory and link interface has two halves: the **PHY** (physical layer), the analog circuit at the die edge that drives and receives signals over the package wires, and the **controller**, the digital logic behind it that schedules requests. Roughly speaking: the SMs are ~60% of the die area, L2 and memory PHYs ~25%, and the rest is I/O and glue."
+        }
+      ]
+    },
+    {
+      "file": "course/modules/20-economics-and-geopolitics.md",
+      "reviewed_scope": [
+        "Opening and prerequisite list",
+        "The Economics Toolkit: depreciation, utilization and gross-margin context"
+      ],
+      "review_method": "Source reading of named passages and adjacent context; manual after-edit continuity review. No browser or independent technical validation.",
+      "words_before": 20506,
+      "words_after": 20547,
+      "edit_operations": 3,
+      "changes": [
+        {
+          "focus": "Opening: physical constraints before policy and accounting vocabulary",
+          "kind": "language; original numerical claims preserved, no current-policy verification"
+        },
+        {
+          "focus": "Utilization: make the denominator and cost allocation explicit",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Depreciation versus cash: explain the accounting boundary",
+          "kind": "definition clarification; example unchanged"
+        }
+      ],
+      "representative_before_after": [
+        {
+          "file": "course/modules/20-economics-and-geopolitics.md",
+          "focus": "Opening: physical constraints before policy and accounting vocabulary",
+          "kind": "language; original numerical claims preserved, no current-policy verification",
+          "before": "Every module before this one described a process that only a handful of companies on earth can perform. This module answers the question that follows from that: what happens to an industry when each of its critical steps is a natural monopoly or an **oligopoly** (a market with only a handful of sellers), when the factories cost $20–30 billion and **depreciate** in five years (depreciation spreads a purchase over its useful life as a yearly expense, so a $20 billion fab becomes a ~$3–4 billion-a-year bill whether or not it runs), and when 90% of the most advanced output comes from an island 130 km from a country that claims it? The problem is not abstract. The price of a 2 nm wafer, the size of a **hyperscaler**'s **capital expenditure (capex)** budget (hyperscalers are Amazon, Microsoft, Google and Meta, the operators of the world's largest data centers; capex is money spent on long-lived assets such as buildings and tools), the wording of a **Bureau of Industry and Security (BIS)** rule (the US Commerce Department office that writes export controls), and the **yield** (the fraction of dies on a wafer that work) of the 7 nm process at **SMIC** (Semiconductor Manufacturing International Corporation, China's largest foundry) are all coupled through the same set of balance sheets, and you cannot understand any one of them without the others.",
+          "after": "The earlier modules followed how chips are made. This one asks why that physical chain produces high prices, shortages and concentrated economic power. Several critical steps have only one major supplier or an **oligopoly**, a market with only a handful of sellers. Factories cost $20–30 billion, and equipment can **depreciate** over five years: accounting spreads the purchase over its useful life, so a $20 billion fab becomes a ~$3–4 billion-a-year expense whether or not it runs. Geography adds another concentration: 90% of the most advanced output comes from an island 130 km from a country that claims it.\n\nThese constraints connect decisions that can initially seem unrelated. The price of a 2 nm wafer, the size of a **hyperscaler**'s **capital expenditure (capex)** budget (hyperscalers are Amazon, Microsoft, Google and Meta, the operators of the world's largest data centers; capex is money spent on long-lived assets such as buildings and tools), the wording of a **Bureau of Industry and Security (BIS)** rule (the US Commerce Department office that writes export controls), and the **yield** (the fraction of dies on a wafer that work) of the 7 nm process at **SMIC** (Semiconductor Manufacturing International Corporation, China's largest foundry) are all coupled through the same set of balance sheets, and you cannot understand any one of them without the others."
+        },
+        {
+          "file": "course/modules/20-economics-and-geopolitics.md",
+          "focus": "Utilization: make the denominator and cost allocation explicit",
+          "kind": "language and causal explanation",
+          "before": "**Utilization** is wafers actually started divided by capacity. Because the depreciation bill is fixed, every wafer not started still carries its share of it, so cost per wafer rises as utilization falls and profit swings far more than volume. That sensitivity of profit to volume is **operating leverage**.",
+          "after": "**Utilization** is wafers actually started divided by the number the fab could start in the same period. When utilization falls, the fixed depreciation expense is spread over fewer wafers. Each wafer that is made must therefore cover a larger share of that expense. Cost per wafer rises, and profit can swing far more than production volume. That sensitivity of profit to volume is **operating leverage**."
+        }
+      ]
+    },
+    {
+      "file": "course/modules/21-glossary-and-reference.md",
+      "reviewed_scope": [
+        "Opening and prerequisite list",
+        "Glossary introduction",
+        "Targeted entries: bandwidth/capacity/latency, RC delay, threshold voltage, yield; neighboring alphabetical entries"
+      ],
+      "review_method": "Source reading of named passages and adjacent context; manual after-edit continuity review. No browser or independent technical validation.",
+      "words_before": 32560,
+      "words_after": 32839,
+      "edit_operations": 8,
+      "changes": [
+        {
+          "focus": "Glossary reading strategy: distinguish lookup from prerequisites",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Glossary: bandwidth, capacity and latency distinction",
+          "kind": "new definition entry; no new numbers"
+        },
+        {
+          "focus": "RC delay: causal explanation before product of quantities",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Threshold: explain reference voltage and non-ideal switching",
+          "kind": "definition clarification; numerical range retained"
+        },
+        {
+          "focus": "Yield: denominators and distinction from reliability",
+          "kind": "definition clarification; removes ambiguous good-dies-per-wafer wording, no numerical claims changed"
+        },
+        {
+          "focus": "Remove Bandwidth entry from incorrect alphabetical position",
+          "kind": "entry move only"
+        },
+        {
+          "focus": "Place Bandwidth entry before Barrier",
+          "kind": "entry move only"
+        },
+        {
+          "focus": "Glossary introduction: separate transfer rate and response time",
+          "kind": "language and causal explanation"
+        }
+      ],
+      "representative_before_after": [
+        {
+          "file": "course/modules/21-glossary-and-reference.md",
+          "focus": "Glossary reading strategy: distinguish lookup from prerequisites",
+          "kind": "language and causal explanation",
+          "before": "Terms are alphabetized by their usual name or acronym. Cross-references link related entries; worked examples show how the main formulas are used.",
+          "after": "Terms are alphabetized by their usual name or acronym. Start with the first sentence for the plain-language meaning, then use the mechanism and example to go deeper. Cross-references name related entries; the module number points to the fuller explanation. Keep three questions separate when comparing a device: how much it holds, how quickly it moves data, and whether it keeps working."
+        },
+        {
+          "file": "course/modules/21-glossary-and-reference.md",
+          "focus": "Glossary: bandwidth, capacity and latency distinction",
+          "kind": "new definition entry; no new numbers",
+          "before": "- **Bathtub curve**",
+          "after": "- **Bandwidth, capacity and latency** — Three different memory properties. **Capacity** is how much information fits; **bandwidth** is how much can move per second; **latency** is how long a particular request takes to produce its response. Picture a warehouse: capacity is its storage space, bandwidth is the loading rate, and latency is the wait for your requested box. More loading bays can raise total throughput without making that particular box arrive sooner. The analogy leaves out the electrical details, but explains why HBM's high bandwidth does not make every access instantaneous. (Modules 15, 19)\n- **Bathtub curve**"
+        }
+      ]
+    },
+    {
+      "file": "course/survey/S08-memory-and-hbm.md",
+      "reviewed_scope": [
+        "Opening and gist",
+        "All six body sections, with edits to DRAM charge sharing, NAND state spacing and HBM bandwidth",
+        "Numbers table and deep-module cross-check for TLC/QLC states"
+      ],
+      "review_method": "Source reading of named passages and adjacent context; manual after-edit continuity review. No browser or independent technical validation.",
+      "words_before": 2666,
+      "words_after": 2782,
+      "edit_operations": 4,
+      "changes": [
+        {
+          "focus": "Survey DRAM: avoid comparing charge with capacitance",
+          "kind": "definition clarification; fixes dimensionally confusing explanation"
+        },
+        {
+          "focus": "Survey NAND: why more stored states reduce margin",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Survey HBM: separate stack capacity from interface bandwidth",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Survey TLC and QLC: resolve naming trap",
+          "kind": "numerical clarification copied from m15 §9 Multi-level cells: TLC 8 levels/3 bits; QLC 16 levels/4 bits"
+        }
+      ],
+      "representative_before_after": [
+        {
+          "file": "course/survey/S08-memory-and-hbm.md",
+          "focus": "Survey DRAM: avoid comparing charge with capacitance",
+          "kind": "definition clarification; fixes dimensionally confusing explanation",
+          "before": "The cell's charge is small compared with the capacitance of the shared bit line. When they are connected, charge redistributes and creates only a slight voltage difference.",
+          "after": "The shared bit line is much larger electrically than one cell: changing its voltage requires more charge than changing the cell's voltage by the same amount. When the access transistor connects them, the cell therefore shifts the bit-line voltage only slightly. This is charge sharing, and the small shift is the signal the memory must recover."
+        },
+        {
+          "file": "course/survey/S08-memory-and-hbm.md",
+          "focus": "Survey TLC and QLC: resolve naming trap",
+          "kind": "numerical clarification copied from m15 §9 Multi-level cells: TLC 8 levels/3 bits; QLC 16 levels/4 bits",
+          "before": "**Triple-level cell**, or **TLC**, stores several bits in each physical cell, while **quad-level cell**, or **QLC**, uses more distinguishable states.",
+          "after": "**Triple-level cell**, or **TLC**, stores 3 bits by distinguishing 8 threshold states; **quad-level cell**, or **QLC**, stores 4 bits using 16 states. The names count bits per cell, not the number of physical voltage states."
+        }
+      ]
+    },
+    {
+      "file": "course/survey/S09-packaging-a-gpu.md",
+      "reviewed_scope": [
+        "Opening and gist",
+        "All six body sections, with edits to thermal expansion, wetting, CoWoS-L and hybrid bonding",
+        "Numbers table context"
+      ],
+      "review_method": "Source reading of named passages and adjacent context; manual after-edit continuity review. No browser or independent technical validation.",
+      "words_before": 2686,
+      "words_after": 2786,
+      "edit_operations": 4,
+      "changes": [
+        {
+          "focus": "Survey CTE: explain how mismatch creates stress",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Survey reflow: define wetting concretely",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Survey CoWoS-L: motivation before variant caveat",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Survey hybrid bonding: distinguish structural bond and electrical path",
+          "kind": "language and causal explanation"
+        }
+      ],
+      "representative_before_after": [
+        {
+          "file": "course/survey/S09-packaging-a-gpu.md",
+          "focus": "Survey CTE: explain how mismatch creates stress",
+          "kind": "language and causal explanation",
+          "before": "When joined materials want to expand differently, stress appears in their interfaces and connections.",
+          "after": "When joined materials want to expand differently, one cannot simply slide past the other. Their attachment forces them to deform together, loading the interfaces and connections. Repeated heating and cooling repeats that load. This is why the choice of glue, solder and supporting material affects whether a package survives in use."
+        },
+        {
+          "file": "course/survey/S09-packaging-a-gpu.md",
+          "focus": "Survey reflow: define wetting concretely",
+          "kind": "language and causal explanation",
+          "before": "The surfaces must be prepared so solder can wet them properly, and the assembled geometry must allow the intended contacts to meet.",
+          "after": "The surfaces must be prepared so molten solder can **wet** them: spread onto the intended metal and form intimate contact rather than bead up or leave an unjoined patch. The assembled geometry must also let the intended contacts meet."
+        }
+      ]
+    },
+    {
+      "file": "course/survey/S10-becoming-a-gpu.md",
+      "reviewed_scope": [
+        "Opening and gist",
+        "All six body sections, with edits to RTL, timing, scale-up/scale-out and accounting",
+        "Numbers table context"
+      ],
+      "review_method": "Source reading of named passages and adjacent context; manual after-edit continuity review. No browser or independent technical validation.",
+      "words_before": 2683,
+      "words_after": 2838,
+      "edit_operations": 4,
+      "changes": [
+        {
+          "focus": "Survey RTL: programming familiarity without sequential-code misconception",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Survey timing: explain why logically correct hardware can fail",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Survey communication: unpack local compute domain",
+          "kind": "language and causal explanation"
+        },
+        {
+          "focus": "Survey accounting: explain COGS and gross margin in ordinary language",
+          "kind": "language and causal explanation"
+        }
+      ],
+      "representative_before_after": [
+        {
+          "file": "course/survey/S10-becoming-a-gpu.md",
+          "focus": "Survey RTL: programming familiarity without sequential-code misconception",
+          "kind": "language and causal explanation",
+          "before": "It resembles programming, but it describes hardware that operates concurrently. Assigning a computation to a circuit means providing gates, storage, connections and timing conditions that can implement it physically.",
+          "after": "It resembles programming, but it describes hardware that operates concurrently. Picture several small circuits working at the same time, each using stored inputs to calculate what should be stored next. An RTL statement specifies part of that behavior; it is not necessarily the next instruction for one processor to execute. Assigning a computation to a circuit means providing gates, storage, connections and timing conditions that can implement it physically."
+        },
+        {
+          "file": "course/survey/S10-becoming-a-gpu.md",
+          "focus": "Survey timing: explain why logically correct hardware can fail",
+          "kind": "language and causal explanation",
+          "before": "The **clock** coordinates state updates. Signals must arrive within the allowed timing window, including margins for variation and uncertainty. **Timing closure** is the process of finding an implementation that satisfies those requirements.",
+          "after": "The **clock** coordinates when storage elements accept new values. Between updates, signals travel through logic and wiring to prepare those values. They must settle before the next required update, including margins for variation and uncertainty; otherwise a storage element can capture the wrong result even when the logic itself is correct. **Timing closure** is the process of finding a physical implementation that meets those timing requirements."
+        }
+      ]
+    }
+  ]
+}

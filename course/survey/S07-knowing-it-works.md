@@ -18,7 +18,7 @@ A completed transistor is the result of many earlier operations. If an etch begi
 
 These methods complement each other. A perfectly measured line width does not prove that a hidden contact is connected. An electrical failure does not immediately reveal which manufacturing step caused it. A defect image may show something visually unusual that has no effect on the product. Engineers combine measurements rather than treating any single instrument as a universal judge.
 
-Many measurements are indirect. **Ellipsometry**, for example, examines how a film changes reflected light's polarization, the direction and form of the light's electric-field oscillation. Software compares the response with an optical model to infer thickness and material properties. The instrument can repeat its result extremely closely even when the model uses the wrong material assumptions.
+Many measurements work backward from an effect to a likely cause. A film changes reflected light in ways that depend on its thickness and material. **Ellipsometry** measures some of those changes, including **polarization**, the direction and form of the light's electric-field oscillation. Software predicts the reflection from a proposed film stack, compares that prediction with the measured light, and adjusts the proposed thicknesses to improve the match. A good match is useful evidence, but the wrong material assumptions can still produce a repeatable, wrong thickness.
 
 That is the difference between **precision**, repeatability of a result, and **accuracy**, closeness to the correct value. A bathroom scale that always reads high is precise without being accurate. In a fab, the mismatch can come from model assumptions, calibration, target geometry or changes induced by the measurement itself.
 
@@ -66,7 +66,7 @@ The electrical instrument is **automatic test equipment**, or **ATE**. It applie
 
 Testing a modern chip solely by running ordinary software would miss too many internal conditions. **Design for test**, or **DFT**, adds structures that make the circuit easier to control and observe. A **scan chain** connects internal storage elements into a path that allows a tester to load a state and read back a response. **Built-in self-test**, or **BIST**, puts some pattern generation and checking inside the device itself.
 
-A test pattern targets a **fault model**, a simplified description of how something might be wrong. One model might assume a signal is permanently stuck high or low; another might look for a path that switches too slowly. Coverage tells you how thoroughly a test addresses that model. It is not a percentage of every conceivable real-world failure mechanism.
+A test pattern targets a **fault model**, a simplified description of how something might be wrong. Suppose a wire is permanently stuck high. A test that also expects it to be high cannot reveal the fault. The test must create a state where that wire should be low, then carry the resulting difference to something the tester can read. Another model checks whether a path changes too slowly. **Coverage** tells you how thoroughly the patterns address the chosen model; it is not a percentage of every conceivable real-world failure mechanism.
 
 Temperature makes testing more complicated. The wafer and probe card change shape as they heat, and the device's behavior changes too. Alignment and contact conditions must remain suitable, while the program checks the conditions relevant to the product. A die that works under one comfortable operating point may fail at the hot, cold, fast or low-voltage edge of its specification.
 
@@ -88,7 +88,7 @@ The sequence can include testing before and after stress. Comparing a device wit
 
 ## 6. Decide what evidence is enough
 
-Testing is an economic decision grounded in physics. More coverage takes time, equipment, energy and sometimes device lifetime. Too little coverage allows expensive escapes. The right balance depends on the product and on what happens if a failure reaches a customer.
+Testing is an economic decision grounded in physics. More coverage takes time, equipment, energy and sometimes device lifetime. Too little coverage allows expensive **test escapes**: defective units that pass the test and move to the next stage. The right balance depends on the product and on what happens if a failure reaches a customer.
 
 The expected loss from an escape depends both on its probability and on what it damages or idles. A weak memory stack placed in an expensive accelerator package puts the neighboring good components and assembly work at risk. A failed accelerator in a tightly coupled computing job can waste more than the cost of replacing that accelerator. This makes early screening and intermediate test valuable even when the test itself is expensive.
 
@@ -109,7 +109,7 @@ The calculations below retain the assumptions of Modules 13, 14 and 18.
 | Example GPU die area | 800 mm² | Large area is exposed to more potential killer defects. |
 | Example effective defect density | 0.1 per cm² | An illustrative model input, not a disclosed foundry yield. |
 | Perfect-die yield for that example | About 45% Poisson; about 51% negative binomial at α = 2 | Clustering assumptions change the prediction. |
-| GH100 resources versus H100 SXM | 144 physical SMs; 132 enabled | Spare compute blocks support harvesting. |
+| GH100 resources versus H100 SXM | 144 physical SMs; 132 enabled | SMs are streaming multiprocessors, groups of GPU execution resources. Spare blocks support harvesting. |
 | Fine e-beam sampling example | About 2.8 × 10¹⁵ pixels over a 300 mm wafer at 5 nm pixels | Resolution carries a severe coverage-time cost. |
 | Thermal acceleration example | About 78× at 125 °C versus 55 °C, activation energy 0.7 eV | Applies to the assumed mechanism, not all failures. |
 

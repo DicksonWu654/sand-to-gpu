@@ -19,7 +19,7 @@ A **subfab** is the supporting level beneath the processing floor. It helps deli
 
 <div class="widget" data-widget="fab-anatomy"></div>
 
-Follow the utilities in the diagram as well as the wafer route. The manufacturing tool is where an operation happens, but its performance depends on everything arriving at it in the right condition. A deposition chamber cannot make a consistent film if its gas delivery or temperature control is inconsistent. The supporting building therefore participates directly in the process.
+Follow the utilities in the diagram as well as the wafer route. The manufacturing tool is where an operation happens, but its performance depends on everything arriving at it in the right condition. A **deposition** chamber adds a thin layer of material to a wafer. It cannot make that layer consistently if the incoming gas or the wafer temperature changes unexpectedly. The supporting building therefore participates directly in the process.
 
 **Vibration** is unwanted motion transmitted through floors or equipment. It matters because some tools must position or measure a wafer with extraordinary precision. Structural supports and local isolation help prevent surrounding activity from disturbing the process. Temperature control matters for a related reason: materials expand and contract. A measurement or patterning operation needs a stable relationship between the tool's coordinate system and the wafer.
 
@@ -53,7 +53,7 @@ A tool's **equipment front-end module**, or **EFEM**, transfers wafers from the 
 
 The software coordinating production is commonly called a **manufacturing execution system**, or **MES**. It manages routes, approved recipes, material status and process records. A **recipe** is the specified set of tool operations and conditions for a process step. A recipe is permitted only where the necessary combination of tool capability and qualification exists.
 
-This resembles a workflow engine with strict state transitions. A task should not run merely because a worker is free; its prerequisites must be satisfied, and its input must be correct. In the fab, an invalid transition can damage physical material that cannot simply be restored from a backup. Identity, authorization and traceability are therefore essential parts of throughput, not obstacles added after the engineering is done.
+A lot's record works a little like a passport with an itinerary: its identity says what it is, its history says where it has been, and its approved route says where it may go next. A free machine is not enough reason to send it there. The wafer must have completed the required earlier steps, and the machine must be approved for the next recipe. Unlike a paperwork mistake, a wrong physical operation may be impossible to undo. These checks protect finished output rather than merely slowing the journey.
 
 ## 4. The wafer revisits operations as the chip grows
 
@@ -79,7 +79,7 @@ Large WIP is not automatically evidence of strong output. It may mean that wafer
 
 **Utilization** is the share of available time that equipment is busy. It seems obvious that higher utilization should always be better, but variable arrivals and processing times complicate that intuition. At moderate loading, spare capacity can clear a delay. Near saturation, a small disruption can produce a queue that persists because there is little time available to recover.
 
-Imagine a shared software worker that usually finishes requests faster than they arrive. A long request causes a temporary backlog. If arrivals already consume nearly all the worker's capacity, the same unusual request leaves a backlog that takes much longer to clear. The fab has this problem across many connected tool groups, with maintenance and qualification adding further constraints.
+Imagine one checkout serving a stream of customers. If it usually finishes faster than customers arrive, it can catch up after someone needs extra help. If customers already arrive almost as fast as they can be served, the same delay leaves a queue with little chance to shrink. The fab has this problem across many connected tool groups. A wafer can use only a machine approved for its next operation, so spare capacity elsewhere is not always helpful.
 
 Engineers therefore distinguish a **bottleneck**, the resource limiting the relevant flow, from other resources with spare capacity. Improving a non-bottleneck may increase local utilization without increasing finished output. Good scheduling keeps the bottleneck productively supplied while limiting unnecessary queues elsewhere. The objective is a reliable flow of good wafers, not a dashboard in which every tool is busy all the time.
 

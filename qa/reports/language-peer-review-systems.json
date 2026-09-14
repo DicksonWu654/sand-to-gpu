@@ -1,0 +1,79 @@
+{
+  "date": "2026-09-13",
+  "reviewer": "language_systems",
+  "scope": "Independent review of eight changed passage groups in foundations/fab source, comparing the working-tree diff with adjacent source context. S06 group includes both EOT and high-k/low-k explanation.",
+  "findings": [],
+  "reviewed_passages": [
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "passage": "Electric field and drift-region thickness",
+      "reviewed_paragraph": "When the switch is off, a **drift region** spreads the voltage drop through a thick, lightly doped layer. **Electric field** describes how quickly voltage changes with distance: forcing the same voltage drop into a shorter distance means a stronger field. The layer does not use up voltage; it provides enough distance to keep the field below the level that would cause breakdown. The higher the field a material can stand before avalanche (its critical field), the thinner that layer can be for a given **blocking voltage** (the voltage the device holds when off), and the thinner and more heavily doped the layer, the lower its on-resistance (the switch's resistance when on, from the first section). Silicon's ~0.3 MV/cm is the reason a silicon switch rated for 1,200 V is thick and lossy.",
+      "file_sha256_at_recording": "9e2aeb0bb45896b031c1524a002fd24c2689a329a7b50baa87bb69ffdaaeb140",
+      "assessment": "No material defect found in changed prose.",
+      "evidence": "Defines field through voltage change per distance, explains why distance prevents breakdown, and connects permissible field to on-resistance without treating voltage as a substance consumed by a layer."
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "passage": "GaN polarization and 2DEG",
+      "reviewed_paragraph": "> **Intuition: charge gathers at a boundary.** In GaN, the centres of positive and negative charge within the crystal do not quite coincide. This built-in separation is called **spontaneous polarization**. Aluminium gallium nitride (AlGaN) has a different polarization, and stretching it to fit GaN changes that separation further; this strain effect is **piezoelectric polarization**. At the boundary, the two arrangements do not cancel, leaving a net positive sheet of charge. It attracts electrons into a layer a few nanometres thick. They can move along the boundary but are confined across its thickness. That is what “two-dimensional electron gas” means: mobile electrons inside a solid, not a pocket of gaseous material. The polarization creates the attraction; it does not create electrons or supply energy like a battery.",
+      "file_sha256_at_recording": "9e2aeb0bb45896b031c1524a002fd24c2689a329a7b50baa87bb69ffdaaeb140",
+      "assessment": "No material defect found in changed prose.",
+      "evidence": "Explains fixed polarization mismatch, attraction of existing electrons, and confinement versus sideways motion. Explicitly bounds the earlier battery picture."
+    },
+    {
+      "file": "course/modules/04-materials-and-consumables.md",
+      "passage": "Ultrapure-water resistivity",
+      "reviewed_paragraph": "> **Intuition: resistivity is a live ion meter.** Dissolved salts supply **ions**, atoms or groups of atoms with an electrical charge. Those ions carry current through water, so adding salt lowers its **resistivity**, the material's resistance to current flow after allowing for the measuring cell's size. Even pure water conducts a little: a tiny fraction of its molecules split into H+ and OH- ions (about one in ten million). The target of 18.2 MΩ·cm means the water is close to that pure-water limit, not that every ion has vanished. The unit reads “megohm-centimetres.” This measurement mainly answers “how much ionic contamination is present?” It cannot certify the absence of neutral organic molecules, dissolved silica, bacteria or particles; those need separate measurements.",
+      "file_sha256_at_recording": "9e2aeb0bb45896b031c1524a002fd24c2689a329a7b50baa87bb69ffdaaeb140",
+      "assessment": "No material defect found in changed prose.",
+      "evidence": "Defines ions and resistivity, retains water intrinsic ionization, and distinguishes ionic measurement from certification of neutral contamination."
+    },
+    {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "passage": "Deal–Grove equation reading guide",
+      "reviewed_paragraph": "Read this first as a relationship between oxide thickness x and growth time t. The constants A and B summarize the reaction and transport conditions; A has units of length and B has units of length squared per time. The offset τ accounts for the starting oxide. At small x the A x term is more important, so thickness grows roughly with time. At large x the x² term dominates, so further growth slows: the reacting molecules must travel through more oxide to reach the silicon.",
+      "file_sha256_at_recording": "830286efb22ba53737d33675107e379a9b5866bcab1d7ba899be881c96da8949",
+      "assessment": "No material defect found in changed prose.",
+      "evidence": "Names thickness/time and constant units; ties linear/parabolic behavior to transport through growing oxide. Adjacent text supplies model validity, relative limits x versus A, and precise constants."
+    },
+    {
+      "file": "course/modules/06-oxidation-and-deposition.md",
+      "passage": "ALD self-limitation",
+      "reviewed_paragraph": "**Atomic layer deposition (ALD)** separates film growth into successive surface reactions. “Self-limiting” means the first reactant stops adding material once it has used the available reactive sites, even if more of that reactant arrives. The chamber is purged before the next reactant changes the surface and makes the next part of the cycle possible. Separating the reactants prevents them from reacting together in the gas phase; the film forms through their ordered reactions at the surface. The canonical example, trimethylaluminum and water depositing Al2O3, uses a surface that always ends in **hydroxyl** groups (–OH, an oxygen with a hydrogen attached, dangling off the surface). In the notation below ‖ stands for the solid surface, and the methyl groups (–CH3) on the aluminium are its **ligands**: the disposable arms on the precursor molecule that make it volatile and that fall off, one per reaction, at the surface.",
+      "file_sha256_at_recording": "830286efb22ba53737d33675107e379a9b5866bcab1d7ba899be881c96da8949",
+      "assessment": "No material defect found in changed prose.",
+      "evidence": "Connects site saturation to growth stopping and purge to separation of reactants. Adjacent half-reaction sequence shows the surface changes behind those words."
+    },
+    {
+      "file": "course/modules/09-etch.md",
+      "passage": "ALE surface-removal analogy",
+      "reviewed_paragraph": "> **Intuition: weaken the surface, then lift it away.** Imagine treating only the outer skin of a solid so that it becomes easier to remove, then using a removal step gentle enough to take off that altered skin while leaving the untreated material beneath. Repeat, and each cycle exposes a fresh surface for the next treatment. The crucial point is that the removed layer was part of the original solid: ALE does not merely deposit and wipe away a coating. The analogy assumes both steps stop where intended; the chemical and energy limits that make that possible are the subject of the cycle below.",
+      "file_sha256_at_recording": "3978b11d7e0a31942118117fbed9ea4c6ce876ca8eebf063acede6a58fe9ad9b",
+      "assessment": "No material defect found in changed prose.",
+      "evidence": "Makes removal of original solid explicit, with fresh material exposed next cycle. Limits are stated and connected to the subsequent chemical/ion-energy sequence."
+    },
+    {
+      "file": "course/modules/11-transistor-architectures.md",
+      "passage": "Subthreshold swing",
+      "reviewed_paragraph": "Electrons in the source have a **Boltzmann energy distribution**, the exponential tail just described, and the fraction that can surmount the source-to-channel barrier falls exponentially with the barrier height. The gate lowers that barrier only through the capacitive divider: a change ΔV_GS at the gate moves the surface potential by only ΔV_GS × C_ox / (C_ox + C_dep), where **C_dep** is the capacitance of the depletion layer under the channel. The result is the **subthreshold swing** (SS), the gate voltage needed to change I_D, the drain current, by a factor of ten. A **decade** here means a tenfold change in current, not a period of time. A smaller swing means the gate can change the current more sharply with voltage; it does not directly specify a switching time. The equation expresses that voltage requirement:",
+      "file_sha256_at_recording": "dbae5872ab29ae2093c26a10f24fa1c17889d82c341b689d8453d23005990411",
+      "assessment": "No material defect found in changed prose.",
+      "evidence": "Defines decade as a tenfold current change and distinguishes voltage sensitivity from switching time; reviewed following equation and worked example."
+    },
+    {
+      "file": "course/survey/S06-transistor-and-wiring.md",
+      "passage": "EOT and high-k versus low-k",
+      "reviewed_paragraph": "The physical film thickness answers “how far apart are the gate and channel?” Its electrical behavior answers “how strongly can the gate control charge across that separation?” A high-k material lets those answers differ. **Equivalent oxide thickness**, or **EOT**, describes the thickness of silicon dioxide that would provide the same electrical capacitance. It is an electrical comparison, not a microscope measurement of the actual film. The distinction matters because saying “the oxide is this thin” can otherwise confuse electrical behavior with physical geometry.",
+      "file_sha256_at_recording": "8156d6d3eb8e9160bb526d7a48570c830062b646a2b04cd436863f99176db6c8",
+      "assessment": "No material defect found in changed prose.",
+      "evidence": "Separates geometric thickness from capacitance equivalence. Reviewed neighboring high-k definition and low-k paragraph explaining why strong coupling helps gates but unwanted coupling hurts interconnects."
+    }
+  ],
+  "limits": [
+    "Not an exhaustive editorial review of those modules.",
+    "No independent research or general numerical/factual audit.",
+    "No browser review or build/test execution.",
+    "Other owners may make later changes; paragraph snapshots and hashes identify the reviewed version."
+  ],
+  "edits_to_other_owners_files": false
+}
