@@ -5,6 +5,8 @@
 > **Further refinement:** See [QUALITY_REFINEMENT_2026-09-13.md](QUALITY_REFINEMENT_2026-09-13.md) for navigation/progress fixes, phone tables, visual polish, and the fresh materials/crystal/wafer diagram review.
 >
 > **Language and explanation:** See [LANGUAGE_REVIEW_2026-09-13.md](LANGUAGE_REVIEW_2026-09-13.md) for the novice-oriented editorial pass across both tracks, reviewed definition corrections, and the updated source-to-build preservation contract.
+>
+> **Local narration:** See [NARRATION_2026-09-13.md](NARRATION_2026-09-13.md) for downloadable Kokoro voices, cached audio, synchronized highlights, setup and validation limits.
 
 # HANDOFF: "Sand to GPU" semiconductor course + interactive site
 

@@ -1,0 +1,924 @@
+{
+  "timestamp": "2026-09-14T02:21:11.986Z",
+  "status": "passed",
+  "scope": "Deterministic browser interaction and DOM mapping. Voice quality is not established by mocks.",
+  "results": [
+    {
+      "name": "DOM extraction preserves inline text and exact UTF-16 ranges",
+      "status": "passed",
+      "detail": {
+        "passages": 8,
+        "crossNodeWord": "SiO2"
+      }
+    },
+    {
+      "name": "Play highlights model-timed word across markup",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Pause/resume preserves position and playback rate avoids regeneration",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Time seek updates position and word selection",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Passage next/back, cached reuse and voice selection",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Manual scrolling suspends following; explicit follow restores it",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Close stops media and clears highlights; cleanup removes player",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Delayed render cannot restart after route cleanup, even if abort is ignored",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Same-chapter anchor preserves playback and suspends automatic following",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Render failure and unavailable local setup remain actionable",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Pause during generation, end progression and keyboard close",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Reduced motion following never requests smooth animation",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Player layout and labels 1280px light",
+      "status": "passed",
+      "detail": {
+        "compact": {
+          "actualTheme": "light",
+          "documentOverflow": false,
+          "left": 345,
+          "right": 935,
+          "top": 834,
+          "bottom": 978,
+          "innerWidth": 1280,
+          "innerHeight": 1000,
+          "controls": [
+            {
+              "tag": "BUTTON",
+              "name": "Close audio player",
+              "disabled": false,
+              "left": 893.09375,
+              "right": 916
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Previous passage",
+              "disabled": true,
+              "left": 364,
+              "right": 396.0625
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Pause narration",
+              "disabled": false,
+              "left": 403.0625,
+              "right": 473.0625
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Next passage",
+              "disabled": false,
+              "left": 480.0625,
+              "right": 512.125
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Follow the spoken word",
+              "disabled": false,
+              "left": 519.125,
+              "right": 596.984375
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Voice and playback settings",
+              "disabled": false,
+              "left": 880.234375,
+              "right": 916
+            },
+            {
+              "tag": "INPUT",
+              "name": "Seek within this passage",
+              "disabled": false,
+              "left": 366,
+              "right": 836
+            }
+          ]
+        },
+        "expanded": {
+          "top": 688.109375,
+          "bottom": 978,
+          "left": 345,
+          "right": 935,
+          "voiceWidth": 269,
+          "voiceLabel": "Heart",
+          "controls": [
+            {
+              "name": "Close audio player",
+              "left": 893.09375,
+              "right": 916,
+              "top": 701.109375,
+              "bottom": 727.109375
+            },
+            {
+              "name": "Previous passage",
+              "left": 364,
+              "right": 396.0625,
+              "top": 755.109375,
+              "bottom": 789.109375
+            },
+            {
+              "name": "Pause narration",
+              "left": 403.0625,
+              "right": 473.0625,
+              "top": 755.109375,
+              "bottom": 789.109375
+            },
+            {
+              "name": "Next passage",
+              "left": 480.0625,
+              "right": 512.125,
+              "top": 755.109375,
+              "bottom": 789.109375
+            },
+            {
+              "name": "Follow the spoken word",
+              "left": 519.125,
+              "right": 596.984375,
+              "top": 755.109375,
+              "bottom": 789.109375
+            },
+            {
+              "name": "Voice and playback settings",
+              "left": 880.234375,
+              "right": 916,
+              "top": 755.109375,
+              "bottom": 789.109375
+            },
+            {
+              "name": "Seek within this passage",
+              "left": 366,
+              "right": 836,
+              "top": 797.109375,
+              "bottom": 817.109375
+            },
+            {
+              "name": "Narration voice",
+              "left": 364,
+              "right": 633,
+              "top": 858.5,
+              "bottom": 894.5
+            },
+            {
+              "name": "Playback speed",
+              "left": 647,
+              "right": 916,
+              "top": 858.5,
+              "bottom": 894.5
+            },
+            {
+              "name": "Start at the passage currently on screen",
+              "left": 364,
+              "right": 916,
+              "top": 904.5,
+              "bottom": 938.5
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Player layout and labels 1280px dark",
+      "status": "passed",
+      "detail": {
+        "compact": {
+          "actualTheme": "dark",
+          "documentOverflow": false,
+          "left": 345,
+          "right": 935,
+          "top": 834,
+          "bottom": 978,
+          "innerWidth": 1280,
+          "innerHeight": 1000,
+          "controls": [
+            {
+              "tag": "BUTTON",
+              "name": "Close audio player",
+              "disabled": false,
+              "left": 893.09375,
+              "right": 916
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Previous passage",
+              "disabled": true,
+              "left": 364,
+              "right": 396.0625
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Pause narration",
+              "disabled": false,
+              "left": 403.0625,
+              "right": 473.0625
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Next passage",
+              "disabled": false,
+              "left": 480.0625,
+              "right": 512.125
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Follow the spoken word",
+              "disabled": false,
+              "left": 519.125,
+              "right": 596.984375
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Voice and playback settings",
+              "disabled": false,
+              "left": 880.234375,
+              "right": 916
+            },
+            {
+              "tag": "INPUT",
+              "name": "Seek within this passage",
+              "disabled": false,
+              "left": 366,
+              "right": 836
+            }
+          ]
+        },
+        "expanded": {
+          "top": 688.109375,
+          "bottom": 978,
+          "left": 345,
+          "right": 935,
+          "voiceWidth": 269,
+          "voiceLabel": "Heart",
+          "controls": [
+            {
+              "name": "Close audio player",
+              "left": 893.09375,
+              "right": 916,
+              "top": 701.109375,
+              "bottom": 727.109375
+            },
+            {
+              "name": "Previous passage",
+              "left": 364,
+              "right": 396.0625,
+              "top": 755.109375,
+              "bottom": 789.109375
+            },
+            {
+              "name": "Pause narration",
+              "left": 403.0625,
+              "right": 473.0625,
+              "top": 755.109375,
+              "bottom": 789.109375
+            },
+            {
+              "name": "Next passage",
+              "left": 480.0625,
+              "right": 512.125,
+              "top": 755.109375,
+              "bottom": 789.109375
+            },
+            {
+              "name": "Follow the spoken word",
+              "left": 519.125,
+              "right": 596.984375,
+              "top": 755.109375,
+              "bottom": 789.109375
+            },
+            {
+              "name": "Voice and playback settings",
+              "left": 880.234375,
+              "right": 916,
+              "top": 755.109375,
+              "bottom": 789.109375
+            },
+            {
+              "name": "Seek within this passage",
+              "left": 366,
+              "right": 836,
+              "top": 797.109375,
+              "bottom": 817.109375
+            },
+            {
+              "name": "Narration voice",
+              "left": 364,
+              "right": 633,
+              "top": 858.5,
+              "bottom": 894.5
+            },
+            {
+              "name": "Playback speed",
+              "left": 647,
+              "right": 916,
+              "top": 858.5,
+              "bottom": 894.5
+            },
+            {
+              "name": "Start at the passage currently on screen",
+              "left": 364,
+              "right": 916,
+              "top": 904.5,
+              "bottom": 938.5
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Player layout and labels 375px light",
+      "status": "passed",
+      "detail": {
+        "compact": {
+          "actualTheme": "light",
+          "documentOverflow": false,
+          "left": 10,
+          "right": 365,
+          "top": 519,
+          "bottom": 659,
+          "innerWidth": 375,
+          "innerHeight": 667,
+          "controls": [
+            {
+              "tag": "BUTTON",
+              "name": "Close audio player",
+              "disabled": false,
+              "left": 329.09375,
+              "right": 352
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Previous passage",
+              "disabled": true,
+              "left": 23,
+              "right": 51.0625
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Pause narration",
+              "disabled": false,
+              "left": 56.0625,
+              "right": 120.0625
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Next passage",
+              "disabled": false,
+              "left": 125.0625,
+              "right": 153.125
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Follow the spoken word",
+              "disabled": false,
+              "left": 158.125,
+              "right": 227.328125
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Voice and playback settings",
+              "disabled": false,
+              "left": 324.234375,
+              "right": 352
+            },
+            {
+              "tag": "INPUT",
+              "name": "Seek within this passage",
+              "disabled": false,
+              "left": 25,
+              "right": 272
+            }
+          ]
+        },
+        "expanded": {
+          "top": 356.609375,
+          "bottom": 659,
+          "left": 10,
+          "right": 365,
+          "voiceWidth": 157.5,
+          "voiceLabel": "Heart",
+          "controls": [
+            {
+              "name": "Close audio player",
+              "left": 329.09375,
+              "right": 352,
+              "top": 367.609375,
+              "bottom": 393.609375
+            },
+            {
+              "name": "Previous passage",
+              "left": 23,
+              "right": 51.0625,
+              "top": 421.609375,
+              "bottom": 455.609375
+            },
+            {
+              "name": "Pause narration",
+              "left": 56.0625,
+              "right": 120.0625,
+              "top": 421.609375,
+              "bottom": 455.609375
+            },
+            {
+              "name": "Next passage",
+              "left": 125.0625,
+              "right": 153.125,
+              "top": 421.609375,
+              "bottom": 455.609375
+            },
+            {
+              "name": "Follow the spoken word",
+              "left": 158.125,
+              "right": 227.328125,
+              "top": 421.609375,
+              "bottom": 455.609375
+            },
+            {
+              "name": "Voice and playback settings",
+              "left": 324.234375,
+              "right": 352,
+              "top": 421.609375,
+              "bottom": 455.609375
+            },
+            {
+              "name": "Seek within this passage",
+              "left": 25,
+              "right": 272,
+              "top": 463.609375,
+              "bottom": 483.609375
+            },
+            {
+              "name": "Narration voice",
+              "left": 23,
+              "right": 180.5,
+              "top": 525,
+              "bottom": 561
+            },
+            {
+              "name": "Playback speed",
+              "left": 194.5,
+              "right": 352,
+              "top": 525,
+              "bottom": 561
+            },
+            {
+              "name": "Start at the passage currently on screen",
+              "left": 23,
+              "right": 352,
+              "top": 571,
+              "bottom": 605
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Player layout and labels 375px dark",
+      "status": "passed",
+      "detail": {
+        "compact": {
+          "actualTheme": "dark",
+          "documentOverflow": false,
+          "left": 10,
+          "right": 365,
+          "top": 519,
+          "bottom": 659,
+          "innerWidth": 375,
+          "innerHeight": 667,
+          "controls": [
+            {
+              "tag": "BUTTON",
+              "name": "Close audio player",
+              "disabled": false,
+              "left": 329.09375,
+              "right": 352
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Previous passage",
+              "disabled": true,
+              "left": 23,
+              "right": 51.0625
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Pause narration",
+              "disabled": false,
+              "left": 56.0625,
+              "right": 120.0625
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Next passage",
+              "disabled": false,
+              "left": 125.0625,
+              "right": 153.125
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Follow the spoken word",
+              "disabled": false,
+              "left": 158.125,
+              "right": 227.328125
+            },
+            {
+              "tag": "BUTTON",
+              "name": "Voice and playback settings",
+              "disabled": false,
+              "left": 324.234375,
+              "right": 352
+            },
+            {
+              "tag": "INPUT",
+              "name": "Seek within this passage",
+              "disabled": false,
+              "left": 25,
+              "right": 272
+            }
+          ]
+        },
+        "expanded": {
+          "top": 356.609375,
+          "bottom": 659,
+          "left": 10,
+          "right": 365,
+          "voiceWidth": 157.5,
+          "voiceLabel": "Heart",
+          "controls": [
+            {
+              "name": "Close audio player",
+              "left": 329.09375,
+              "right": 352,
+              "top": 367.609375,
+              "bottom": 393.609375
+            },
+            {
+              "name": "Previous passage",
+              "left": 23,
+              "right": 51.0625,
+              "top": 421.609375,
+              "bottom": 455.609375
+            },
+            {
+              "name": "Pause narration",
+              "left": 56.0625,
+              "right": 120.0625,
+              "top": 421.609375,
+              "bottom": 455.609375
+            },
+            {
+              "name": "Next passage",
+              "left": 125.0625,
+              "right": 153.125,
+              "top": 421.609375,
+              "bottom": 455.609375
+            },
+            {
+              "name": "Follow the spoken word",
+              "left": 158.125,
+              "right": 227.328125,
+              "top": 421.609375,
+              "bottom": 455.609375
+            },
+            {
+              "name": "Voice and playback settings",
+              "left": 324.234375,
+              "right": 352,
+              "top": 421.609375,
+              "bottom": 455.609375
+            },
+            {
+              "name": "Seek within this passage",
+              "left": 25,
+              "right": 272,
+              "top": 463.609375,
+              "bottom": 483.609375
+            },
+            {
+              "name": "Narration voice",
+              "left": 23,
+              "right": 180.5,
+              "top": 525,
+              "bottom": 561
+            },
+            {
+              "name": "Playback speed",
+              "left": 194.5,
+              "right": 352,
+              "top": 525,
+              "bottom": 561
+            },
+            {
+              "name": "Start at the passage currently on screen",
+              "left": 23,
+              "right": 352,
+              "top": 571,
+              "bottom": 605
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "pageErrors": [],
+  "screenshots": [
+    "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/narration-1280-light.png",
+    "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/narration-1280-light-expanded.png",
+    "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/narration-1280-dark.png",
+    "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/narration-1280-dark-expanded.png",
+    "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/narration-375-light.png",
+    "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/narration-375-light-expanded.png",
+    "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/narration-375-dark.png",
+    "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/narration-375-dark-expanded.png"
+  ],
+  "realBackend": {
+    "status": "passed",
+    "timestamp": "2026-09-14T02:24:45.913Z",
+    "base": "http://127.0.0.1:8790",
+    "route": "#/s/01",
+    "voice": "af_heart",
+    "passagesWarmed": 6,
+    "source": "Exact first six CourseNarration.extract(prose) passages from the running survey page",
+    "checks": [
+      {
+        "name": "Empty text rejected",
+        "status": 400
+      },
+      {
+        "name": "Unknown voice rejected",
+        "status": 400
+      },
+      {
+        "name": "Oversized passage rejected",
+        "status": 400
+      }
+    ],
+    "generations": [
+      {
+        "index": 0,
+        "characters": 550,
+        "words": 84,
+        "duration": 34.45,
+        "cachedAtStart": true,
+        "renderRequestMs": 7,
+        "repeatCacheMs": 5,
+        "totalCheckMs": 186,
+        "audioUrl": "/api/narration/audio/fd37d2f7daab36524d9f56b0f64792e21be2c4060091372c0aaa5ea05408a001.wav",
+        "decoded": {
+          "duration": 34.44997732426304,
+          "sampleRate": 44100,
+          "channels": 1,
+          "samples": 1519244
+        },
+        "timing": "model-derived"
+      },
+      {
+        "index": 1,
+        "characters": 8,
+        "words": 2,
+        "duration": 1.425,
+        "cachedAtStart": false,
+        "renderRequestMs": 700,
+        "repeatCacheMs": 2,
+        "totalCheckMs": 720,
+        "audioUrl": "/api/narration/audio/f701d346965b51c1b9a01f55cded72bce9f08d89abe042c73ef90fbf10a79e73.wav",
+        "decoded": {
+          "duration": 1.4249886621315193,
+          "sampleRate": 44100,
+          "channels": 1,
+          "samples": 62842
+        },
+        "timing": "model-derived"
+      },
+      {
+        "index": 2,
+        "characters": 100,
+        "words": 15,
+        "duration": 7.25,
+        "cachedAtStart": false,
+        "renderRequestMs": 3659,
+        "repeatCacheMs": 2,
+        "totalCheckMs": 3681,
+        "audioUrl": "/api/narration/audio/e5a2bf5f665e7b78a213ec6253bb2202f33e2beb60315560e840e9825dff98e6.wav",
+        "decoded": {
+          "duration": 7.25,
+          "sampleRate": 44100,
+          "channels": 1,
+          "samples": 319725
+        },
+        "timing": "model-derived"
+      },
+      {
+        "index": 3,
+        "characters": 146,
+        "words": 28,
+        "duration": 10.325,
+        "cachedAtStart": false,
+        "renderRequestMs": 5190,
+        "repeatCacheMs": 2,
+        "totalCheckMs": 5221,
+        "audioUrl": "/api/narration/audio/58865feb57df96f25f43048dce53a95a2b295b7ddba327a822279826f85081e4.wav",
+        "decoded": {
+          "duration": 10.324988662131519,
+          "sampleRate": 44100,
+          "channels": 1,
+          "samples": 455332
+        },
+        "timing": "model-derived"
+      },
+      {
+        "index": 4,
+        "characters": 96,
+        "words": 14,
+        "duration": 6.6,
+        "cachedAtStart": false,
+        "renderRequestMs": 2749,
+        "repeatCacheMs": 3,
+        "totalCheckMs": 2775,
+        "audioUrl": "/api/narration/audio/db44bc8979e909ba5172718bec1311e552ad28169228212161bea670721ccc1e.wav",
+        "decoded": {
+          "duration": 6.6,
+          "sampleRate": 44100,
+          "channels": 1,
+          "samples": 291060
+        },
+        "timing": "model-derived"
+      },
+      {
+        "index": 5,
+        "characters": 134,
+        "words": 15,
+        "duration": 8.425,
+        "cachedAtStart": false,
+        "renderRequestMs": 3734,
+        "repeatCacheMs": 2,
+        "totalCheckMs": 3759,
+        "audioUrl": "/api/narration/audio/5f22e694adeaae626860a8a4d8f5c72cac2683d19ea8c476ab914e4791bacde2.wav",
+        "decoded": {
+          "duration": 8.424988662131518,
+          "sampleRate": 44100,
+          "channels": 1,
+          "samples": 371542
+        },
+        "timing": "model-derived"
+      }
+    ],
+    "limitations": [
+      "Audio decoding and model-derived timing metadata validated. Audible voice quality and actual spoken-word alignment were not independently graded."
+    ],
+    "technicalUnicode": {
+      "status": "passed",
+      "text": "A 2 nm gate uses SiO\u2082; the wafer is 300 mm across.",
+      "words": [
+        {
+          "text": "A",
+          "start": 0.275,
+          "end": 0.3625
+        },
+        {
+          "text": "2",
+          "start": 0.3625,
+          "end": 0.575
+        },
+        {
+          "text": "nm",
+          "start": 0.575,
+          "end": 1.15
+        },
+        {
+          "text": "gate",
+          "start": 1.15,
+          "end": 1.45
+        },
+        {
+          "text": "uses",
+          "start": 1.45,
+          "end": 1.7625
+        },
+        {
+          "text": "SiO\u2082",
+          "start": 1.7625,
+          "end": 3.225
+        },
+        {
+          "text": "the",
+          "start": 3.35,
+          "end": 3.475
+        },
+        {
+          "text": "wafer",
+          "start": 3.475,
+          "end": 3.875
+        },
+        {
+          "text": "is",
+          "start": 3.875,
+          "end": 4.075
+        },
+        {
+          "text": "300",
+          "start": 4.075,
+          "end": 4.6375
+        },
+        {
+          "text": "mm",
+          "start": 4.6375,
+          "end": 4.6875
+        },
+        {
+          "text": "across",
+          "start": 4.6875,
+          "end": 5.425
+        }
+      ],
+      "duration": 5.7,
+      "timing": "model-derived",
+      "audiblePronunciationAssessed": false
+    }
+  },
+  "backendReview": {
+    "status": "completed",
+    "method": "Read-only inspection of tools/narration/backend.js, worker.py, config.js, setup.js, setup_model.py and serve.js; benign live request validation and cached audio reads. Not an exhaustive security audit.",
+    "checks": [
+      "Narration requests require loopback peer, recognized localhost Host and same-origin browser context; server binds loopback by default.",
+      "Only exact SHA256-style audio filenames enter the fixed local cache directory; incoming text is passed through JSON stdin to a shell-free child process.",
+      "Request bytes, character count, voice allowlist, pending queue and worker duration are bounded.",
+      "Ordinary inference forces local/offline model use; setup pins the upstream model revision and checks the main weight checksum.",
+      "Cache key includes engine version, model revision, voice and exact text; playback speed does not trigger synthesis.",
+      "WAV and metadata are written to temporary names and renamed; both cache-read paths now validate metadata and PCM header/length before reuse."
+    ],
+    "findings": [
+      {
+        "issue": "Corrupt metadata or truncated audio could become a permanently failing cache entry.",
+        "status": "fixed",
+        "files": [
+          "tools/narration/backend.js:readCache",
+          "tools/narration/worker.py:read_cache"
+        ],
+        "validation": "Backend agent ran tools/narration/check-cache.js: valid hit; corrupt JSON regenerated; truncated WAV regenerated; invalid offsets regenerated; recovered cache reused. QA independently reviewed both validators and verified normal actual cache reuse."
+      }
+    ],
+    "limitations": [
+      "No audible naturalness grading or independent forced alignment of synthesized speech was performed.",
+      "The backend may finish and cache an already-started job after the listener leaves; UI cancellation prevents it from restarting playback."
+    ]
+  },
+  "limitations": [
+    "Mocked browser media validates controls and highlighting, not audible naturalness.",
+    "Real source-text synthesis, WAV decoding, cache reuse and model-derived timing metadata passed; actual spoken-word timing was not independently aligned or graded.",
+    "Coverage is focused on narration and its route/layout contracts; a complete device/browser compatibility matrix was not run."
+  ],
+  "integrationCheck": {
+    "command": "npm run check",
+    "status": "passed",
+    "staticErrors": 0,
+    "staticWarnings": 0,
+    "figures": 352,
+    "sourceHeadingQuizContractErrors": 0
+  },
+  "visualReview": {
+    "status": "completed",
+    "reviewed": [
+      "375px light compact at667px height",
+      "375px dark expanded at667px height",
+      "1280px dark expanded",
+      "earlier375px cramped settings before correction"
+    ],
+    "result": "Phone compact player leaves a useful reading area; expanded settings show the full Heart name; active-word geometry remains above the actual player in all four theme/width cases, compact and expanded. Root also reviewed and approved refreshed375px light compact/expanded screenshots."
+  }
+}

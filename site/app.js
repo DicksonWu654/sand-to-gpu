@@ -291,6 +291,7 @@
     renderChapterRail(m, base, n, isSurvey);
     prepareTables(prose);
     mountWidgets(main);
+    if (window.CourseNarration) activeCleanups.push(CourseNarration.mount({ prose, toolbar: chapterTools, title: m.title, lessonKey: base + pad(n) }));
     // intra-module anchors
     $$('a[href^="#"]', prose).forEach(a => { const h = a.getAttribute('href'); if (!h.startsWith('#/')) a.setAttribute('href', base + pad(n) + '/' + h.slice(1)); });
     if (anchor) scrollToAnchor(anchor);

@@ -33,3 +33,11 @@ secrets.json
 Thumbs.db
 .vscode/
 .idea/
+
+# Local neural narration assets and isolated runtimes
+.venv/
+.narration/
+narration-model/
+narration-audio/
+narration-venv/
+__pycache__/

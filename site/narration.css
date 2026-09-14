@@ -1,0 +1,60 @@
+/* Keep the player small enough to read alongside. Voice settings expand on demand. */
+.narration-launch {
+  border: 1px solid var(--accent); border-radius: 99px; padding: 8px 14px;
+  background: var(--accent-soft); color: var(--accent);
+  font: 600 13px var(--sans); cursor: pointer; white-space: nowrap;
+}
+.narration-launch::before { content: '◖))'; margin-right: 8px; letter-spacing: -2px; }
+.narration-player[hidden], .narration-settings[hidden] { display: none; }
+.narration-player {
+  position: fixed; z-index: 80; bottom: 22px; left: 50%; transform: translateX(-50%);
+  width: min(590px, calc(100vw - 32px)); padding: 12px 18px;
+  background: var(--panel); color: var(--ink); border: 1px solid var(--line2);
+  border-radius: 14px; box-shadow: 0 8px 44px #0003; font: 14px/1.4 var(--sans);
+  max-height: calc(100dvh - 100px); overflow-y: auto;
+}
+.narration-top { display: flex; align-items: center; gap: 12px; justify-content: space-between; }
+.narration-identity { min-width: 0; }
+.narration-title { display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; font-size: 14px; }
+.narration-player button {
+  font: 600 12px var(--sans); cursor: pointer; color: var(--ink);
+  border: 1px solid var(--line); background: var(--panel2); border-radius: 7px;
+  min-height: 34px; padding: 6px 10px; white-space: nowrap;
+}
+.narration-player button:hover { border-color: var(--accent); }
+.narration-player button:disabled { opacity: .4; cursor: default; }
+.narration-player [data-action=close] { background: transparent; border: 0; font-size: 21px; min-height: 26px; padding: 0 6px; }
+.narration-player [data-action=play] { min-width: 70px; background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.narration-player [data-action=settings] { background: transparent; border-color: transparent; letter-spacing: 1px; }
+.narration-player [aria-pressed=true] { color: var(--accent); background: var(--accent-soft); border-color: var(--accent); }
+.narration-status { margin: 3px 0 8px; font-size: 12px; color: var(--muted); min-height: 17px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.narration-player[data-state=error] .narration-status { white-space: normal; color: var(--bad); }
+.narration-transport { display: flex; gap: 7px; align-items: center; }
+.narration-position { font: 10px var(--mono); color: var(--muted); margin-left: auto; white-space: nowrap; }
+.narration-timeline { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
+.narration-seek { min-width: 0; flex: 1; accent-color: var(--accent); height: 20px; cursor: pointer; }
+.narration-elapsed { font: 10px var(--mono); color: var(--muted); white-space: nowrap; }
+.narration-settings { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px 14px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+.narration-settings label { min-width: 0; font-size: 11px; color: var(--muted); }
+.narration-settings select { display: block; width: 100%; margin-top: 3px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 6px; padding: 7px 8px; height: 36px; font: 12px var(--sans); }
+.narration-settings [data-action=here], .narration-note { grid-column: 1 / -1; }
+.narration-note { font-size: 11px; line-height: 1.5; color: var(--muted); margin: 0; }
+::highlight(narration-word) { background-color: var(--accent); color: var(--on-accent); }
+.narration-current-passage { outline: 2px solid var(--accent-soft); outline-offset: 7px; border-radius: 2px; }
+body.narration-open { padding-bottom: 200px; }
+@media (max-width: 700px) {
+  .chapter-tools { flex-wrap: wrap; }
+  .narration-player { bottom: max(8px, env(safe-area-inset-bottom)); padding: 10px 12px; width: calc(100vw - 20px); border-radius: 12px; }
+  .narration-transport { gap: 5px; }
+  .narration-player button { padding: 6px 8px; }
+  .narration-player [data-action=play] { min-width: 64px; }
+  .narration-player [data-action=follow] { font-size: 11px; }
+  .narration-player [data-action=settings] { padding-inline: 6px; }
+  .narration-title { font-size: 13px; }
+  .narration-status { font-size: 11px; }
+  .narration-position { font-size: 9px; }
+  .narration-launch { padding: 8px 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .narration-player, .narration-current-passage { scroll-behavior: auto; }
+}
