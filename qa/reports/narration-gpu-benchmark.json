@@ -1,0 +1,114 @@
+{
+  "timestamp": "2026-09-14T02:47:47Z",
+  "runtime": "torch 2.14.0+cu130",
+  "python": "/home/artemis/.cache/sand-to-gpu/narration-gpu-py312/bin/python",
+  "device": "NVIDIA GeForce RTX 5070",
+  "dependencyCheck": "uv pip check passed on Python 3.12.3",
+  "source": "Exact inventory passages nearest 100, 500 and 1000 characters; isolated cache per worker; warmup excluded",
+  "results": [
+    {
+      "workers": 1,
+      "threadsEach": 2,
+      "startupSeconds": [
+        34.28
+      ],
+      "wallSeconds": 4.444,
+      "audioSeconds": 128.75,
+      "results": [
+        [
+          {
+            "characters": 100,
+            "wallSeconds": 0.461,
+            "generationSeconds": 0.449,
+            "audioSeconds": 7.25,
+            "words": 15
+          },
+          {
+            "characters": 500,
+            "wallSeconds": 1.13,
+            "generationSeconds": 1.095,
+            "audioSeconds": 32.975,
+            "words": 71
+          },
+          {
+            "characters": 1000,
+            "wallSeconds": 2.834,
+            "generationSeconds": 2.782,
+            "audioSeconds": 88.525,
+            "words": 177
+          }
+        ]
+      ],
+      "gpuAfterBatch": "5493 MiB, 12227 MiB, 5 %",
+      "audioSecondsPerWallSecond": 28.97
+    },
+    {
+      "workers": 2,
+      "threadsEach": 2,
+      "startupSeconds": [
+        19.411,
+        12.787
+      ],
+      "wallSeconds": 3.983,
+      "audioSeconds": 257.5,
+      "results": [
+        [
+          {
+            "characters": 100,
+            "wallSeconds": 0.324,
+            "generationSeconds": 0.318,
+            "audioSeconds": 7.25,
+            "words": 15
+          },
+          {
+            "characters": 500,
+            "wallSeconds": 0.938,
+            "generationSeconds": 0.926,
+            "audioSeconds": 32.975,
+            "words": 71
+          },
+          {
+            "characters": 1000,
+            "wallSeconds": 2.498,
+            "generationSeconds": 2.462,
+            "audioSeconds": 88.525,
+            "words": 177
+          }
+        ],
+        [
+          {
+            "characters": 100,
+            "wallSeconds": 0.343,
+            "generationSeconds": 0.32,
+            "audioSeconds": 7.25,
+            "words": 15
+          },
+          {
+            "characters": 500,
+            "wallSeconds": 0.956,
+            "generationSeconds": 0.944,
+            "audioSeconds": 32.975,
+            "words": 71
+          },
+          {
+            "characters": 1000,
+            "wallSeconds": 2.647,
+            "generationSeconds": 2.616,
+            "audioSeconds": 88.525,
+            "words": 177
+          }
+        ]
+      ],
+      "gpuAfterBatch": "7089 MiB, 12227 MiB, 74 %",
+      "audioSecondsPerWallSecond": 64.65
+    }
+  ],
+  "primarySources": [
+    "https://pytorch.org/blog/pytorch-2-7/",
+    "https://pytorch.org/blog/pytorch-2-12-release-blog/"
+  ],
+  "limitations": [
+    "Small throughput sample; full-course rates depend on phoneme splitting, punctuation and disk export overhead.",
+    "Does not grade audible voice quality or independently align spoken words."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-09-14T03:00:30.644Z",
+  "status": "partial",
+  "inventory": {
+    "lessons": 32,
+    "passages": 6728,
+    "uniqueClips": 6545,
+    "sourceHash": "64e8ef1d873c14b154d064f3d211992b4c10ed8b8ab36d85ab4dd101d8108a18",
+    "extractorHash": "351feff3ad368046e031df3d1812efad6ba2963b05357b702ecc7ba7300b77f1"
+  },
+  "clipsChecked": 1700,
+  "bytes": 378850480,
+  "audioSeconds": 47204.9007083333,
+  "errors": [],
+  "limitations": [
+    "Technical integrity and exact text coverage do not grade audible pronunciation or naturalness.",
+    "MP3 duration uses the fixed export codec, frame count and encoder delay/padding; representative browser decode is recorded separately."
+  ],
+  "primarySources": [
+    "https://www.ffmpeg.org/doxygen/trunk/mp3enc_8c_source.html",
+    "https://www.ffmpeg.org/doxygen/trunk/mp3dec_8c_source.html"
+  ],
+  "remainingClips": 4845,
+  "indexPublished": false
+}

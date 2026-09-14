@@ -49,10 +49,11 @@
     for (const [key,value] of Object.entries(attrs || {})) node.setAttribute(key,value);
     if (text) node.textContent = text; return node;
   }
-  function mount({ prose, toolbar, title }) {
+  function mount({ prose, toolbar, title, lessonKey }) {
     let destroyed = false, passages = null, index = 0, generation = 0, frame = 0, lastWord = -1;
     let wantsPlay = false, follow = true, ready = false, opened = false, current = null, highlighted = null;
     let mainAbort = null, statusAbort = null, statusTimer = null, lastScrollAt = 0;
+    let recorded = null, recordingRoot = null;
     const cache = new Map(), pending = new Map(), prefetchControllers = new Set(), audio = new Audio();
     audio.preload = 'auto';
     const launch = el('button',{type:'button',class:'narration-launch','aria-expanded':'false'},'Listen to this chapter');
@@ -133,11 +134,18 @@
       if (cache.has(key)) return cache.get(key);
       if (pending.has(key) && !pending.get(key).signal.aborted) return pending.get(key).promise;
       const request=(async()=>{
-        const response=await fetch('/api/narration/render',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:passage.text,voice:selectedVoice}),signal});
-        const data=await response.json();
-        if (!response.ok) throw new Error(data.error || data.message || 'Narration could not be generated.');
-        if (!Array.isArray(data.words) || !data.words.length || typeof data.audioUrl!=='string' || !Number.isFinite(data.duration) || data.duration<=0 || data.words.some(w=>!Number.isFinite(w.start)||!Number.isFinite(w.end)||w.start<0||w.end<=w.start||!Number.isInteger(w.textOffset)||!Number.isInteger(w.length)||w.textOffset<0||w.length<1||w.textOffset+w.length>passage.text.length)) throw new Error('The narration response was incomplete. Please retry.');
-        const url=new URL(data.audioUrl,location.href); if(url.origin!==location.origin) throw new Error('Audio must come from this computer.');
+        let data;
+        if(recorded) {
+          const entry=recorded.get(passage.text);
+          if(!entry)throw new Error('This passage is missing from the recorded edition.');
+          data={...entry,audioUrl:new URL(entry.audioUrl,recordingRoot).href};
+        } else {
+          const response=await fetch('/api/narration/render',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:passage.text,voice:selectedVoice}),signal});
+          data=await response.json();
+          if (!response.ok) throw new Error(data.error || data.message || 'Narration could not be generated.');
+        }
+        if (!Array.isArray(data.words) || !data.words.length || typeof data.audioUrl!=='string' || !Number.isFinite(data.duration) || data.duration<=0 || data.words.some((w,i)=>!w||!Number.isFinite(w.start)||!Number.isFinite(w.end)||w.start<0||w.end<=w.start||w.end>data.duration||(i>0&&w.start<data.words[i-1].start)||!Number.isInteger(w.textOffset)||!Number.isInteger(w.length)||w.textOffset<0||w.length<1||w.textOffset+w.length>passage.text.length)) throw new Error('The narration response was incomplete. Please retry.');
+        const url=new URL(data.audioUrl,location.href); if(url.origin!==location.origin) throw new Error('The recording must come from this website.');
         cache.set(key,data); if(cache.size>12) cache.delete(cache.keys().next().value); return data;
       })();
       pending.set(key,{promise:request,signal});
@@ -146,7 +154,13 @@
     function prefetch() {
       if (!passages[index+1] || destroyed || !opened) return;
       const controller=new AbortController(); prefetchControllers.add(controller);
-      Promise.allSettled(passages.slice(index+1,index+3).map(p=>getAudio(p,voice.value,controller.signal)))
+      Promise.allSettled(passages.slice(index+1,index+3).map(async p=>{
+        const data=await getAudio(p,voice.value,controller.signal);
+        if(recorded) {
+          const response=await fetch(data.audioUrl,{signal:controller.signal,cache:'force-cache'});
+          if(response.ok)await response.arrayBuffer();
+        }
+      }))
         .finally(()=>prefetchControllers.delete(controller));
     }
     async function start(target) {
@@ -155,7 +169,7 @@
       mainAbort?.abort(); mainAbort=new AbortController();
       audio.pause(); cancelAnimationFrame(frame); clearHighlight(); current=null; updateTime();
       index=Math.max(0,Math.min(target,passages.length-1));
-      setState('loading',cache.has(keyFor(passages[index],voice.value))?'Loading saved audio…':'Preparing this passage… The first reading takes a little longer.');
+      setState('loading',recorded||cache.has(keyFor(passages[index],voice.value))?'Loading saved audio…':'Preparing this passage… The first reading takes a little longer.');
       try {
         const data=await getAudio(passages[index],voice.value,mainAbort.signal);
         if(destroyed || !opened || ticket!==generation)return;
@@ -167,14 +181,44 @@
       }catch(error){
         if(destroyed || !opened || ticket!==generation)return;
         wantsPlay=false; if(error.name==='AbortError'){setState('paused','Paused. Press Play to continue.');return;}
-        setState('error',error.name==='NotAllowedError'?'Audio is ready. Press Play to start listening.':error.message);
+        setState('error',error.name==='NotAllowedError'?'Audio is ready. Press Play to start listening.':error.name==='NotSupportedError'?'Saved audio could not be played. Try another passage or retry.':error.message);
       }
     }
+    async function findRecording(signal) {
+      const root=new URL('narration/',document.baseURI);
+      const response=await fetch(new URL('index.json',root),{signal,cache:'no-cache'});
+      if(response.status===404)return null;
+      if(!response.ok)throw new Error('The recorded edition could not be loaded. Please retry.');
+      let index;
+      try{index=await response.json();}catch{throw new Error('The recorded edition is unavailable. Please retry later.');}
+      if(index.version!==1 || index.complete!==true || !['af_heart','af_bella'].includes(index.voice))throw new Error('This recorded edition is not complete yet.');
+      const spec=index.lessons?.[lessonKey];
+      if(!spec?.manifest)throw new Error('This chapter is missing from the recorded edition.');
+      const manifestUrl=new URL(spec.manifest,root);
+      if(manifestUrl.origin!==location.origin || !manifestUrl.pathname.startsWith(root.pathname))throw new Error('The recording manifest is invalid.');
+      const chapterResponse=await fetch(manifestUrl,{signal,cache:'no-cache'});
+      if(!chapterResponse.ok)throw new Error('This chapter’s recordings are unavailable. Please retry.');
+      let chapter;
+      try{chapter=await chapterResponse.json();}catch{throw new Error('This chapter’s recordings could not be loaded. Please retry.');}
+      if(chapter.complete!==true || chapter.voice!==index.voice || !Array.isArray(chapter.passages) || chapter.passages.length!==passages.length || chapter.passages.some((entry,i)=>entry.text!==passages[i].text))throw new Error('The recordings do not match this edition of the lesson. Updated audio is needed.');
+      if(signal.aborted)throw new DOMException('Canceled','AbortError');
+      recorded=new Map(chapter.passages.map(entry=>[entry.text,entry])); recordingRoot=root;
+      note.textContent='Recorded AI voice · Plays from saved audio. Diagrams, tables, code blocks and references are skipped.';
+      if(!supportsHighlight)note.textContent+=' This browser highlights the current passage.';
+      return {ready:true,voices:[{id:index.voice,name:index.voice==='af_heart'?'Heart':index.voice}]};
+    }
     async function checkStatus() {
-      statusAbort?.abort(); statusAbort=new AbortController(); setState('loading','Connecting to the local narrator…');
+      statusAbort?.abort(); statusAbort=new AbortController(); const signal=statusAbort.signal; setState('loading','Loading this chapter’s audio…');
       try {
-        const response=await fetch('/api/narration/status',{signal:statusAbort.signal}), data=await response.json();
-        if(destroyed || !opened)return;
+        let data=await findRecording(signal);
+        if(signal.aborted)return;
+        if(!data) {
+          if(document.querySelector('meta[name="narration-mode"][content="static"]') || !['localhost','127.0.0.1','[::1]'].includes(location.hostname))throw new Error('The recorded audio has not been included with this website.');
+          const response=await fetch('/api/narration/status',{signal});
+          if(!response.ok)throw new Error('Audio is unavailable here. Include the recorded audio files, or start the local narrator.');
+          try{data=await response.json();}catch{throw new Error('Audio is unavailable here. Include the recorded audio files, or start the local narrator.');}
+        }
+        if(destroyed || !opened || signal.aborted)return;
         ready=!!data.ready;
         if(Array.isArray(data.voices) && data.voices.length){ const selected=voice.value; voice.replaceChildren(...data.voices.map(v=>el('option',{value:v.id,title:v.name||v.id},(v.name||v.id).split(' · ')[0]))); if(data.voices.some(v=>v.id===selected))voice.value=selected; }
         if(!ready){
@@ -182,7 +226,7 @@
           wantsPlay=false;setState('error',data.message || 'The natural voice is not ready yet. Start the local narrator, then press Retry.');return;
         }
         await start(index);
-      }catch(error){if(destroyed || !opened || error.name==='AbortError')return; wantsPlay=false;setState('error','The local narrator is unavailable. Start it, then press Retry.');}
+      }catch(error){if(destroyed || !opened || error.name==='AbortError')return; wantsPlay=false;setState('error',error.message || 'Narration is unavailable. Please retry.');}
     }
     function visibleIndex() {
       const bottom=opened?player.getBoundingClientRect().top:innerHeight;

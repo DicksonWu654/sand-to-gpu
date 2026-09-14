@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "timestamp": "2026-09-14T02:55:39.968Z",
+  "wavDuration": 34.45,
+  "mp3Duration": 34.45,
+  "wavFrames": 826800,
+  "mp3Frames": 826800,
+  "sampleRate": 24000,
+  "wavChannels": 1,
+  "mp3Channels": 1,
+  "lagSamples": 0,
+  "correlation": 0.9973531007107651,
+  "wavBytes": 1653644,
+  "mp3Bytes": 276332,
+  "fixture": "Actual first S01 Heart passage",
+  "encoder": "libmp3lame64kbps24kmono write_xing1 via FFmpeg7.0.2",
+  "limitations": [
+    "Waveform correlation detects encoder shift, not subjective audible quality.",
+    "One representative clip; full bundle still requires file-level coverage and metadata validation."
+  ]
+}

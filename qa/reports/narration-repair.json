@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "timestamp": "2026-09-14T03:03:42Z",
+  "key": "bb6f9bfa6782b6e9262bbbc41b3a02f724cf8bf5a45b8d5b0153fd8b66b70f48",
+  "lesson": "#/m/01",
+  "sourceCharacters": 1126,
+  "sourceTextSha256": "7b1670e8894e9e67c153a0f896013a217d0798448a5050fbfc3633c36bd3ce90",
+  "originalPhonemeChunkLengths": [
+    59,
+    465,
+    484,
+    511
+  ],
+  "repairedPhonemeChunkLengths": [
+    391,
+    383,
+    382,
+    362
+  ],
+  "originalTokenIdentityAndOrderPreserved": true,
+  "duration": 92.35,
+  "generationWallSeconds": 118.044,
+  "wordTimings": 187,
+  "cacheReadValidated": true,
+  "device": "cpu",
+  "limitations": [
+    "Validates complete token batching and timestamp bounds; does not grade audible pronunciation."
+  ]
+}

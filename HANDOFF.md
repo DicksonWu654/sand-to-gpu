@@ -7,6 +7,8 @@
 > **Language and explanation:** See [LANGUAGE_REVIEW_2026-09-13.md](LANGUAGE_REVIEW_2026-09-13.md) for the novice-oriented editorial pass across both tracks, reviewed definition corrections, and the updated source-to-build preservation contract.
 >
 > **Local narration:** See [NARRATION_2026-09-13.md](NARRATION_2026-09-13.md) for downloadable Kokoro voices, cached audio, synchronized highlights, setup and validation limits.
+>
+> **Publishing with audio:** See [PRERENDER_2026-09-13.md](PRERENDER_2026-09-13.md) for the full Heart recording inventory, resumable GPU rendering, MP3 export and static hosting.
 
 # HANDOFF: "Sand to GPU" semiconductor course + interactive site
 

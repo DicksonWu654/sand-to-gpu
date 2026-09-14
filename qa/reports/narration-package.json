@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-09-14T03:45:08.835480+00:00",
+  "archive": "/mnt/c/Users/dicks/Downloads/sand-to-gpu-static-2026-09-13.zip",
+  "bytes": 1647038564,
+  "sha256": "c255405c7c0900c490b92a75d07fc45cf1111098e3ecc69af05d6484a4b6ba5e",
+  "files": 6636,
+  "lessons": 32,
+  "audioClips": 6545,
+  "checks": {
+    "bothProgressStatusesComplete": true,
+    "sourceAndManifestValidation": true,
+    "noSymlinksOrUnexpectedArtifacts": true,
+    "sourceSnapshotUnchangedDuringPackaging": true,
+    "zipCrcIntegrity": true,
+    "sha256Computed": true,
+    "atomicNoOverwritePublication": true
+  },
+  "compression": {
+    "mp3": "ZIP_STORED",
+    "text": "ZIP_DEFLATED, level 6"
+  }
+}

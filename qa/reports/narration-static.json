@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-09-14T03:06:02.413Z",
+  "status": "passed",
+  "results": [
+    {
+      "name": "Recorded edition loads under / with zero local API calls",
+      "status": "passed",
+      "detail": {
+        "crossInlineHighlight": "SiO2",
+        "requests": 8,
+        "apiRequests": 0
+      }
+    },
+    {
+      "name": "Recorded edition loads under /course/ with zero local API calls",
+      "status": "passed",
+      "detail": {
+        "crossInlineHighlight": "SiO2",
+        "requests": 7,
+        "apiRequests": 0
+      }
+    },
+    {
+      "name": "Static WAV decodes and plays using native browser media",
+      "status": "passed",
+      "detail": {
+        "duration": 9.999977324263039,
+        "channels": 1
+      }
+    },
+    {
+      "name": "Actionable bad-json recording state",
+      "status": "passed",
+      "detail": {
+        "message": "This chapter’s recordings could not be loaded. Please retry."
+      }
+    },
+    {
+      "name": "Actionable stale recording state",
+      "status": "passed",
+      "detail": {
+        "message": "The recordings do not match this edition of the lesson. Updated audio is needed."
+      }
+    },
+    {
+      "name": "Actionable missing-chapter recording state",
+      "status": "passed",
+      "detail": {
+        "message": "This chapter is missing from the recorded edition."
+      }
+    },
+    {
+      "name": "Actionable incomplete recording state",
+      "status": "passed",
+      "detail": {
+        "message": "This recorded edition is not complete yet."
+      }
+    },
+    {
+      "name": "Actionable missing-audio recording state",
+      "status": "passed",
+      "detail": {
+        "message": "Saved audio could not be played. Try another passage or retry."
+      }
+    },
+    {
+      "name": "Actionable bad-timing recording state",
+      "status": "passed",
+      "detail": {
+        "message": "The narration response was incomplete. Please retry."
+      }
+    },
+    {
+      "name": "Late static chapter response cannot restart a closed player",
+      "status": "passed",
+      "detail": {
+        "lateAudioStarted": false
+      }
+    },
+    {
+      "name": "Absent bundle on local static server explains missing audio",
+      "status": "passed",
+      "detail": {
+        "message": "The recorded audio has not been included with this website."
+      }
+    }
+  ],
+  "pageErrors": [],
+  "limitations": [
+    "Fixture is silent PCM; these checks validate transport, mapping and UI, not voice quality.",
+    "Full-course manifest and audio coverage require a separate completed-bundle audit."
+  ]
+}

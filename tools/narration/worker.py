@@ -26,7 +26,12 @@ import spacy
 if not spacy.util.is_package('en_core_web_sm'):
     raise RuntimeError('Local English language assets missing. Run npm run narration:setup.')
 torch.set_num_threads(max(1, min(4, int(os.environ.get('NARRATION_THREADS', '4')))))
-model = KModel(repo_id='hexgrad/Kokoro-82M', config=str(MODEL / 'config.json'), model=str(MODEL / 'kokoro-v1_0.pth')).to('cpu').eval()
+device = os.environ.get('NARRATION_DEVICE', 'cpu')
+if device not in ('cpu', 'cuda'):
+    raise ValueError('NARRATION_DEVICE must be cpu or cuda.')
+if device == 'cuda' and not torch.cuda.is_available():
+    raise RuntimeError('CUDA was requested but is unavailable in this runtime.')
+model = KModel(repo_id='hexgrad/Kokoro-82M', config=str(MODEL / 'config.json'), model=str(MODEL / 'kokoro-v1_0.pth')).to(device).eval()
 pipeline = KPipeline(lang_code='a', repo_id='hexgrad/Kokoro-82M', model=model)
 for voice in VOICES:
     pipeline.voices[voice] = torch.load(MODEL / 'voices' / (voice + '.pt'), map_location='cpu', weights_only=True)
@@ -75,6 +80,25 @@ def prepare_tokens(text):
             raise ValueError('A word is too long to narrate safely. Choose a shorter passage.')
     return tokens, locations
 
+def speech_batches(tokens):
+    # Numeric/unit expansion can overflow an upstream chunk. Keep the original
+    # tokens (and their source offsets), but give such passages a smaller budget.
+    if all(len(phonemes) <= 510 for _, phonemes, _ in pipeline.en_tokenize(tokens)):
+        return [tokens]
+    batches, current, size = [], [], 0
+    for token in tokens:
+        cost = len(token.phonemes or '') + 1
+        if current and size + cost > 400:
+            batches.append(current)
+            current, size = [], 0
+        current.append(token)
+        size += cost
+    if current:
+        batches.append(current)
+    if any(len(phonemes) > 510 for batch in batches for _, phonemes, _ in pipeline.en_tokenize(batch)):
+        raise ValueError('Passage exceeds the local model chunk limit.')
+    return batches
+
 def read_cache(key, text, voice):
     """A damaged/interrupted cache entry is a miss, never a permanent error."""
     try:
@@ -120,12 +144,10 @@ def render(text, voice):
         return cached
     began = time.monotonic()
     tokens, locations = prepare_tokens(text)
-    # Fail before inference if upstream would silently truncate an oversized chunk.
-    if any(len(phonemes) > 510 for _, phonemes, _ in pipeline.en_tokenize(tokens)):
-        raise ValueError('Passage exceeds the local model chunk limit.')
+    batches = speech_batches(tokens)
     words, chunks, offset = [], [], 0.0
     with torch.inference_mode():
-        for result in pipeline.generate_from_tokens(tokens, voice=voice, speed=1):
+        for result in (result for batch in batches for result in pipeline.generate_from_tokens(batch, voice=voice, speed=1)):
             if len(result.phonemes) > 510:
                 raise ValueError('Passage exceeds the local model chunk limit.')
             audio = result.audio.detach().cpu().numpy()

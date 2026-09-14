@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-09-14T03:39:53.302Z",
+  "status": "passed",
+  "voice": "af_heart",
+  "sourceHash": "64e8ef1d873c14b154d064f3d211992b4c10ed8b8ab36d85ab4dd101d8108a18",
+  "extractorHash": "351feff3ad368046e031df3d1812efad6ba2963b05357b702ecc7ba7300b77f1",
+  "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+  "engineVersion": "kokoro-0.9.4-course-1",
+  "firstPass": {
+    "startedAt": "2026-09-14T02:49:16.420Z",
+    "elapsedSeconds": 2674,
+    "completedClips": 6535,
+    "failedClips": 10,
+    "failures": [
+      {
+        "key": "bb6f9bfa6782b6e9262bbbc41b3a02f724cf8bf5a45b8d5b0153fd8b66b70f48",
+        "lessons": [
+          "#/m/01"
+        ],
+        "message": "Passage exceeds the local model chunk limit."
+      },
+      {
+        "key": "961699a20b5c91fd63d043a62811ae735a1fcd5971e045e43ec8ae5175915122",
+        "lessons": [
+          "#/m/04"
+        ],
+        "message": "Passage exceeds the local model chunk limit."
+      },
+      {
+        "key": "ddb12d4bf47761b208ccb0f243955827ca33fcb0f0f12285d3e8f6beade44462",
+        "lessons": [
+          "#/m/05"
+        ],
+        "message": "Passage exceeds the local model chunk limit."
+      },
+      {
+        "key": "a5a4bd11a8174bbfc26be50751f9f8bb462d49ed34302fa6fc9ce4157c597fef",
+        "lessons": [
+          "#/m/07"
+        ],
+        "message": "Passage exceeds the local model chunk limit."
+      },
+      {
+        "key": "a484f65f636fe47a455f360fc68434cb3fd0d2677403242a379c0402ce1f0fc6",
+        "lessons": [
+          "#/m/10"
+        ],
+        "message": "Passage exceeds the local model chunk limit."
+      },
+      {
+        "key": "825e6d5137b1f37ccc8bb044df10b366aa4588f60666a349df433b238e467365",
+        "lessons": [
+          "#/m/11"
+        ],
+        "message": "Passage exceeds the local model chunk limit."
+      },
+      {
+        "key": "aa01187f80d796695f65ae7eeeb862c4bf07d8cf4099ddd88521e0089626d249",
+        "lessons": [
+          "#/m/11"
+        ],
+        "message": "Passage exceeds the local model chunk limit."
+      },
+      {
+        "key": "68d604fbfbb6dc8f1c3510bfe6bd2e6bcd201bba49c617b8703234b1665f48fc",
+        "lessons": [
+          "#/m/13"
+        ],
+        "message": "Passage exceeds the local model chunk limit."
+      },
+      {
+        "key": "6794c7c276adf3d31ef916d75b3fa402b0e4ecfa61dac1bb9afd7b7bd2de304d",
+        "lessons": [
+          "#/m/14"
+        ],
+        "message": "Passage exceeds the local model chunk limit."
+      },
+      {
+        "key": "fdc7061ae19192ebd4e903e3abb4ad1a6584968398115880f450f6db00cad50e",
+        "lessons": [
+          "#/m/17"
+        ],
+        "message": "Passage exceeds the local model chunk limit."
+      }
+    ]
+  },
+  "repairPass": {
+    "elapsedSeconds": 25,
+    "reusedClips": 6536,
+    "newlyGeneratedClips": 9,
+    "failedClips": 0
+  },
+  "completed": {
+    "lessons": 32,
+    "passages": 6728,
+    "uniqueClips": 6545,
+    "audioSeconds": 203988.92499999944,
+    "mp3Bytes": 1636564972,
+    "wavBytes": 9791756380,
+    "compressionFailures": 0
+  },
+  "exportDirectory": "/home/artemis/.cache/sand-to-gpu/static-export",
+  "scope": "Complete Heart narration using the existing reader extraction; diagrams, tables, code and references excluded as in the player. Independent final coverage and native playback are recorded separately.",
+  "validation": {
+    "coverage": "qa/reports/narration-coverage.json",
+    "nativePlayback": "qa/reports/narration-export.json",
+    "uniqueClips": 6545,
+    "passagePlacements": 6728,
+    "lessons": 32,
+    "viewportComparisons": 64,
+    "errors": 0
+  }
+}

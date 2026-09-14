@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-14T02:21:11.986Z",
+  "timestamp": "2026-09-14T02:55:16.530Z",
   "status": "passed",
   "scope": "Deterministic browser interaction and DOM mapping. Voice quality is not established by mocks.",
   "results": [
@@ -899,26 +899,13 @@
     ]
   },
   "limitations": [
-    "Mocked browser media validates controls and highlighting, not audible naturalness.",
-    "Real source-text synthesis, WAV decoding, cache reuse and model-derived timing metadata passed; actual spoken-word timing was not independently aligned or graded.",
-    "Coverage is focused on narration and its route/layout contracts; a complete device/browser compatibility matrix was not run."
+    "Mocked audio validates controls and highlighting, not naturalness or audible pronunciation.",
+    "Actual synthesis/cache checks and backend review are recorded separately."
   ],
   "integrationCheck": {
     "command": "npm run check",
     "status": "passed",
-    "staticErrors": 0,
-    "staticWarnings": 0,
-    "figures": 352,
-    "sourceHeadingQuizContractErrors": 0
-  },
-  "visualReview": {
-    "status": "completed",
-    "reviewed": [
-      "375px light compact at667px height",
-      "375px dark expanded at667px height",
-      "1280px dark expanded",
-      "earlier375px cramped settings before correction"
-    ],
-    "result": "Phone compact player leaves a useful reading area; expanded settings show the full Heart name; active-word geometry remains above the actual player in all four theme/width cases, compact and expanded. Root also reviewed and approved refreshed375px light compact/expanded screenshots."
+    "timestamp": "2026-09-14T03:05:08.017Z",
+    "checks": "32 lessons;352/352 figures;57 widget placements;176 quiz questions; historical structure and current prose contracts; no errors or warnings"
   }
 }

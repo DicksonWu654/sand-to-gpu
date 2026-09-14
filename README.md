@@ -9,6 +9,7 @@ An in-depth, self-study course following silicon from quartz to an NVIDIA GPU ra
 - **Interactive learning:** 46 widget implementations, eight-question module quizzes, search, a glossary, and browser-local progress and theme preferences.
 - **Illustrated atlas:** 352 authored figures across the substantive teaching sections, chapter opening illustrations, and responsive light and dark layouts. Physical structures, process flows, comparisons, and networks complement the interactive labs.
 - **Listen as you learn:** local Kokoro narration, synchronized word highlighting, adjustable playback speed, and optional gentle scrolling. Generated passages are cached for repeat listening; course text is not sent to a speech API. See [local narration setup and limitations](NARRATION_2026-09-13.md).
+- **Publish with recorded audio:** the static export includes Heart recordings and word timings for all 32 lessons. Visitors play saved MP3 files; hosting needs no speech model or API. See [pre-rendering and publication](PRERENDER_2026-09-13.md).
 
 | Part | Modules |
 |---|---|

@@ -1,0 +1,332 @@
+{
+  "status": "passed",
+  "timestamp": "2026-09-14T03:19:04.028Z",
+  "widths": [
+    1280,
+    375
+  ],
+  "lessons": 32,
+  "exactComparisons": 64,
+  "results": [
+    {
+      "width": 1280,
+      "lesson": "#/s/01",
+      "passages": 66
+    },
+    {
+      "width": 1280,
+      "lesson": "#/s/02",
+      "passages": 60
+    },
+    {
+      "width": 1280,
+      "lesson": "#/s/03",
+      "passages": 61
+    },
+    {
+      "width": 1280,
+      "lesson": "#/s/04",
+      "passages": 61
+    },
+    {
+      "width": 1280,
+      "lesson": "#/s/05",
+      "passages": 62
+    },
+    {
+      "width": 1280,
+      "lesson": "#/s/06",
+      "passages": 58
+    },
+    {
+      "width": 1280,
+      "lesson": "#/s/07",
+      "passages": 62
+    },
+    {
+      "width": 1280,
+      "lesson": "#/s/08",
+      "passages": 63
+    },
+    {
+      "width": 1280,
+      "lesson": "#/s/09",
+      "passages": 64
+    },
+    {
+      "width": 1280,
+      "lesson": "#/s/10",
+      "passages": 64
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/00",
+      "passages": 302
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/01",
+      "passages": 277
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/02",
+      "passages": 234
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/03",
+      "passages": 289
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/04",
+      "passages": 269
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/05",
+      "passages": 270
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/06",
+      "passages": 282
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/07",
+      "passages": 268
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/08",
+      "passages": 276
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/09",
+      "passages": 220
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/10",
+      "passages": 242
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/11",
+      "passages": 328
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/12",
+      "passages": 259
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/13",
+      "passages": 292
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/14",
+      "passages": 233
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/15",
+      "passages": 243
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/16",
+      "passages": 290
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/17",
+      "passages": 221
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/18",
+      "passages": 206
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/19",
+      "passages": 241
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/20",
+      "passages": 215
+    },
+    {
+      "width": 1280,
+      "lesson": "#/m/21",
+      "passages": 650
+    },
+    {
+      "width": 375,
+      "lesson": "#/s/01",
+      "passages": 66
+    },
+    {
+      "width": 375,
+      "lesson": "#/s/02",
+      "passages": 60
+    },
+    {
+      "width": 375,
+      "lesson": "#/s/03",
+      "passages": 61
+    },
+    {
+      "width": 375,
+      "lesson": "#/s/04",
+      "passages": 61
+    },
+    {
+      "width": 375,
+      "lesson": "#/s/05",
+      "passages": 62
+    },
+    {
+      "width": 375,
+      "lesson": "#/s/06",
+      "passages": 58
+    },
+    {
+      "width": 375,
+      "lesson": "#/s/07",
+      "passages": 62
+    },
+    {
+      "width": 375,
+      "lesson": "#/s/08",
+      "passages": 63
+    },
+    {
+      "width": 375,
+      "lesson": "#/s/09",
+      "passages": 64
+    },
+    {
+      "width": 375,
+      "lesson": "#/s/10",
+      "passages": 64
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/00",
+      "passages": 302
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/01",
+      "passages": 277
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/02",
+      "passages": 234
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/03",
+      "passages": 289
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/04",
+      "passages": 269
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/05",
+      "passages": 270
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/06",
+      "passages": 282
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/07",
+      "passages": 268
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/08",
+      "passages": 276
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/09",
+      "passages": 220
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/10",
+      "passages": 242
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/11",
+      "passages": 328
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/12",
+      "passages": 259
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/13",
+      "passages": 292
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/14",
+      "passages": 233
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/15",
+      "passages": 243
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/16",
+      "passages": 290
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/17",
+      "passages": 221
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/18",
+      "passages": 206
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/19",
+      "passages": 241
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/20",
+      "passages": 215
+    },
+    {
+      "width": 375,
+      "lesson": "#/m/21",
+      "passages": 650
+    }
+  ]
+}

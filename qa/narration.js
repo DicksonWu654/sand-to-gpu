@@ -71,6 +71,8 @@ function installApiMock() {
   const api = window.__qaApi = { calls: [], delayed: [], delayNext: false, ignoreAbort: false, failNext: false, ready: true, cache: new Set(), manifests: {}, statusCalls: 0 };
   window.fetch = (url, options = {}) => {
     const pathname = new URL(typeof url === 'string' ? url : url.url, location.href).pathname;
+    // Keep local-generation cases isolated even when a recorded bundle is present.
+    if (pathname.endsWith('/narration/index.json')) return Promise.resolve(new Response('', { status: 404 }));
     if (pathname === '/api/narration/status') {
       api.statusCalls++;
       return Promise.resolve(new Response(JSON.stringify({ ready: api.ready, state: api.ready ? 'ready' : 'not-installed', message: api.ready ? 'Ready' : 'Install the local voice to listen.', voices: [{ id: 'af_heart', name: 'Heart · warm American voice' }, { id: 'af_bella', name: 'Bella · clear American voice' }] }), { status: 200 }));

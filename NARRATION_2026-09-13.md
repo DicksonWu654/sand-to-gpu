@@ -1,5 +1,7 @@
 # Local read-aloud narration
 
+For the pre-rendered publishing edition, see [Pre-rendered course audio](PRERENDER_2026-09-13.md). This document describes the local generation service used during development and to create those recordings.
+
 The course uses [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M), a downloadable speech model, to generate narration on this computer. This avoids a speech-service account or per-character API charge. Model and dependency installation require an internet connection; the local speech engine does not send lesson text to a speech service.
 
 ## Setup

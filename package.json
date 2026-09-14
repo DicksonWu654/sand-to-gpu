@@ -11,6 +11,11 @@
     "qa:widget": "node qa/render.js widget",
     "qa:page": "node qa/render.js page",
     "qa:sweep": "node qa/sweep.js",
-    "narration:setup": "node tools/narration/setup.js"
+    "narration:setup": "node tools/narration/setup.js",
+    "narration:setup-gpu": "node tools/narration/setup-gpu.js",
+    "narration:inventory": "node tools/narration/inventory.js",
+    "narration:prerender": "node tools/narration/prerender.js",
+    "narration:export": "node tools/narration/finish-export.js",
+    "qa:narration": "node qa/narration.js && node qa/narration-static.js"
   }
 }

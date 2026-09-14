@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "timestamp": "2026-09-14T03:39:30.759Z",
+  "base": "http://127.0.0.1:8792",
+  "http": {
+    "mime": "audio/mpeg",
+    "headStatus": 200,
+    "headBodyBytes": 0,
+    "audioBytes": 276332,
+    "rangeStatus": 206,
+    "rangeBytes": 64
+  },
+  "playback": {
+    "route": "#/s/01",
+    "passageIndex": 0,
+    "audioStartedAndClockAdvanced": true,
+    "pausedSeekSeconds": 2.49,
+    "highlight": "mineral",
+    "modelWordTime": {
+      "start": 2.2875,
+      "end": 2.6875
+    },
+    "nativeDuration": 34.45,
+    "metadataDuration": 34.45,
+    "resumeClockAdvanced": true,
+    "closeStoppedAudio": true,
+    "narrationApiRequests": 0,
+    "mp3Requests": 3
+  },
+  "pageErrors": [],
+  "limitations": [
+    "Uses native HTMLAudioElement, actual MP3 and real playback time; no clock or audio mocks.",
+    "Confirms playback/mapping transport, not subjective voice quality or independent spoken-word alignment."
+  ]
+}
