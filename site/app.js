@@ -292,7 +292,7 @@
     prepareTables(prose);
     mountWidgets(main);
     if (window.CourseNarration) activeCleanups.push(CourseNarration.mount({ prose, toolbar: chapterTools, title: m.title, lessonKey: base + pad(n) }));
-    if (window.CourseStudyAssist) activeCleanups.push(CourseStudyAssist.mount({ prose, toolbar: chapterTools, title: m.title, lessonKey: base + pad(n) }));
+    if (window.CoursePageCopy) activeCleanups.push(CoursePageCopy.mount({ prose, toolbar: chapterTools, title: m.title, lessonKey: base + pad(n), markdown: window.COURSE_MARKDOWN?.[base + pad(n)] }));
     // intra-module anchors
     $$('a[href^="#"]', prose).forEach(a => { const h = a.getAttribute('href'); if (!h.startsWith('#/')) a.setAttribute('href', base + pad(n) + '/' + h.slice(1)); });
     if (anchor) scrollToAnchor(anchor);

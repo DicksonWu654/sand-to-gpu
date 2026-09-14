@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "timestamp": "2026-09-14T05:50:26.218Z",
+  "baseURL": "http://127.0.0.1:8790",
+  "sourceHash": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
+  "results": [
+    {
+      "name": "Real Clipboard API copies complete #/s/01 without selection or modal",
+      "status": "passed",
+      "detail": {
+        "characters": 19402,
+        "clipboardExactlyMatches": true,
+        "beginning": "# Survey 1: The big picture from sand to GPU\n\nThe semiconductor supply chain turns mineral feedstock",
+        "ending": "eractive controls are not embedded in this Markdown. The complete authored lesson text is included.\n"
+      }
+    },
+    {
+      "name": "Real Clipboard API copies complete #/m/21 without selection or modal",
+      "status": "passed",
+      "detail": {
+        "characters": 201439,
+        "clipboardExactlyMatches": true,
+        "beginning": "# Module 21: Glossary and Reference\n\nThis module is the course's lookup volume. It does not teach a ",
+        "ending": "eractive controls are not embedded in this Markdown. The complete authored lesson text is included.\n"
+      }
+    },
+    {
+      "name": "Actual execCommand fallback copies complete Markdown when modern writeText is unavailable or rejects",
+      "status": "passed",
+      "detail": {
+        "realExecCommandReturnedTrue": true,
+        "clipboardExactlyMatches": true,
+        "unavailableAndRejectedPaths": true
+      }
+    }
+  ],
+  "pageErrors": [],
+  "aiServiceRequests": [],
+  "screenshotsDirectory": "/tmp/sand-to-gpu-page-copy",
+  "limitations": [
+    "Actual clipboard tests use disposable headless Chromium, not the user embedded browser or desktop clipboard.",
+    "A forced dual failure checks the manual fallback; it does not assert every browser exposes identical permission UI.",
+    "Visual screenshots and browser emulation do not replace every mobile or assistive-technology configuration."
+  ]
+}

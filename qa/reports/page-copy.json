@@ -1,0 +1,126 @@
+{
+  "status": "passed",
+  "timestamp": "2026-09-14T05:49:32.154583+00:00",
+  "baseURL": "http://127.0.0.1:8793",
+  "sourceHash": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
+  "results": [
+    {
+      "name": "Real Clipboard API copies complete #/s/01 without selection or modal",
+      "status": "passed",
+      "detail": {
+        "characters": 19402,
+        "clipboardExactlyMatches": true,
+        "beginning": "# Survey 1: The big picture from sand to GPU\n\nThe semiconductor supply chain turns mineral feedstock",
+        "ending": "eractive controls are not embedded in this Markdown. The complete authored lesson text is included.\n"
+      }
+    },
+    {
+      "name": "Real Clipboard API copies complete #/m/06 without selection or modal",
+      "status": "passed",
+      "detail": {
+        "characters": 142828,
+        "clipboardExactlyMatches": true,
+        "beginning": "# Module 06: Thermal Oxidation and Thin-Film Deposition\n\nA finished logic chip is a stack of a few h",
+        "ending": "eractive controls are not embedded in this Markdown. The complete authored lesson text is included.\n"
+      }
+    },
+    {
+      "name": "Actual execCommand fallback copies complete Markdown when modern writeText is unavailable or rejects",
+      "status": "passed",
+      "detail": {
+        "realExecCommandReturnedTrue": true,
+        "clipboardExactlyMatches": true,
+        "unavailableAndRejectedPaths": true
+      }
+    },
+    {
+      "name": "Clipboard denial opens exact selectable manual copy and never reports false success",
+      "status": "passed",
+      "detail": {
+        "selectedCharacters": 19402
+      }
+    },
+    {
+      "name": "Download writes the complete identical Markdown without external navigation",
+      "status": "passed",
+      "detail": {
+        "downloadedFile": "sand-to-gpu-s01.md",
+        "characters": 19402
+      }
+    },
+    {
+      "name": "Keyboard Escape restores control focus and navigation copies the new lesson only",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Real saved narration keeps playing for direct copy and pauses only for the Markdown dialog",
+      "status": "passed",
+      "detail": {
+        "pausedTime": 0.339468,
+        "realAudio": true
+      }
+    },
+    {
+      "name": "Visual toolbar and manual dialog 1280 light",
+      "status": "passed",
+      "detail": {
+        "left": 260,
+        "right": 1020,
+        "top": 124.25,
+        "bottom": 775.75,
+        "overflow": false
+      }
+    },
+    {
+      "name": "Visual toolbar and manual dialog 1280 dark",
+      "status": "passed",
+      "detail": {
+        "left": 260,
+        "right": 1020,
+        "top": 124.25,
+        "bottom": 775.75,
+        "overflow": false
+      }
+    },
+    {
+      "name": "Visual toolbar and manual dialog 375 light",
+      "status": "passed",
+      "detail": {
+        "left": 17,
+        "right": 358,
+        "top": 87.25,
+        "bottom": 812.75,
+        "overflow": false
+      }
+    },
+    {
+      "name": "Visual toolbar and manual dialog 375 dark",
+      "status": "passed",
+      "detail": {
+        "left": 17,
+        "right": 358,
+        "top": 87.25,
+        "bottom": 812.75,
+        "overflow": false
+      }
+    }
+  ],
+  "pageErrors": [],
+  "aiServiceRequests": [],
+  "screenshotsDirectory": "/tmp/sand-to-gpu-page-copy",
+  "limitations": [
+    "Actual clipboard tests use disposable headless Chromium, not the user embedded browser or desktop clipboard.",
+    "A forced dual failure checks the manual fallback; it does not assert every browser exposes identical permission UI.",
+    "Visual screenshots and browser emulation do not replace every mobile or assistive-technology configuration."
+  ],
+  "verificationNotes": [
+    "Initial native pointer fixture was corrected to disable automatic following before clicking reading controls; unchanged playback assertions then passed.",
+    "Focused final reruns verified both real legacy-copy paths and final CSS layout/selection contrast."
+  ],
+  "visualReview": {
+    "screenshotsInspected": 9,
+    "scope": "Desktop1280 and phone375, light/dark toolbar and manual copy. Final phone-dark selection is white on blue and readable.",
+    "finalPhoneDarkScreenshot": "/tmp/sand-to-gpu-page-copy/375-dark-manual.png"
+  }
+}

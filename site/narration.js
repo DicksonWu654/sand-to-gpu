@@ -251,13 +251,13 @@
       opened=true; player.hidden=false; launch.setAttribute('aria-expanded','true');document.body.classList.add('narration-open');
       index=visibleIndex(); wantsPlay=true; setFollow(true); play.focus({preventScroll:true}); checkStatus();
     });
-    function pauseForStudy() {
+    function pausePlayback() {
       clearTimeout(paragraphClickTimer);
       if (!opened || destroyed) return;
       wantsPlay=false; audio.pause(); cancelAnimationFrame(frame);
       setState('paused',current?'Paused. Pick up where you left off.':'Paused. This passage is still being prepared.');
     }
-    prose.addEventListener('course-study-open',pauseForStudy);
+    prose.addEventListener('course-reading-dialog-open',pausePlayback);
     player.addEventListener('click',async event=>{
       clearTimeout(paragraphClickTimer);
       const action=event.target.closest('[data-action]')?.dataset.action;
@@ -267,7 +267,7 @@
       if(action==='previous' || action==='next'){wantsPlay=true;start(index+(action==='next'?1:-1));}
       if(action==='here'){wantsPlay=true;setFollow(true);start(visibleIndex());}
       if(action==='play'){
-        if(wantsPlay)pauseForStudy();
+        if(wantsPlay)pausePlayback();
         else{wantsPlay=true;if(!ready)checkStatus();else if(!current)start(index);else try{await audio.play();if(destroyed || !opened || !wantsPlay)return;setState('playing','Playing · '+(follow?'Following the spoken word.':'Automatic scrolling is paused.'));tick();}catch{if(destroyed || !opened || !wantsPlay)return;wantsPlay=false;setState('error','Audio could not start. Press Retry.');}}
       }
     });
@@ -301,7 +301,7 @@
     prose.addEventListener('click', paragraphClick);
     window.addEventListener('wheel',manual,{passive:true});window.addEventListener('touchmove',manual,{passive:true});window.addEventListener('keydown',key);document.addEventListener('click',anchor);
     setState('idle');
-    return ()=>{stop();destroyed=true;prose.removeEventListener('course-study-open',pauseForStudy);prose.removeEventListener('click',paragraphClick);paragraphStarts.clear();window.removeEventListener('wheel',manual);window.removeEventListener('touchmove',manual);window.removeEventListener('keydown',key);document.removeEventListener('click',anchor);launch.remove();player.remove();cache.clear();};
+    return ()=>{stop();destroyed=true;prose.removeEventListener('course-reading-dialog-open',pausePlayback);prose.removeEventListener('click',paragraphClick);paragraphStarts.clear();window.removeEventListener('wheel',manual);window.removeEventListener('touchmove',manual);window.removeEventListener('keydown',key);document.removeEventListener('click',anchor);launch.remove();player.remove();cache.clear();};
   }
   window.CourseNarration={mount,extract,rangeFor};
 })();

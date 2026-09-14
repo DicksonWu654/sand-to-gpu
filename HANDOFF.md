@@ -1,6 +1,6 @@
 > **Continuation:** See [CONTINUATION_2026-09-13.md](CONTINUATION_2026-09-13.md) for the Git repository, subsequent work, validation, and remaining limits. The original handoff below is preserved as historical context.
 >
-> **Ask about a passage:** See [STUDY_HANDOFF_2026-09-14.md](STUDY_HANDOFF_2026-09-14.md) for the local question composer, bounded passage/context capture, explicit copy-and-paste ChatGPT handoff, narration pause and verification limits.
+> **Copy page for AI:** See [STUDY_HANDOFF_2026-09-14.md](STUDY_HANDOFF_2026-09-14.md) for the full-chapter Markdown copy/download action. It replaces the earlier Ask ChatGPT dialog after reader feedback.
 >
 > **Global supplier coverage:** See [GLOBAL_COVERAGE_REVIEW_2026-09-14.md](GLOBAL_COVERAGE_REVIEW_2026-09-14.md) for the subsequent correction of regional omissions, unsupported capability claims, supplier geography, quiz premises and policy framing, with primary-source review ledgers and updated narration.
 >

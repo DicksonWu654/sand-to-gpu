@@ -1,0 +1,351 @@
+{
+  "checkedAt": "2026-09-14T05:42:02.717Z",
+  "status": "passed",
+  "scope": "All32 whole-lesson authored Markdown exports, including glossary. Exact reversible-source comparison preserves every heading, prose passage, table, equation, code block and source link; only empty widgets become explicit omission notes and line endings/BOM normalize. Generated diagrams, interactive controls and quiz UI are not serialized.",
+  "lessons": 32,
+  "widgetPlaceholders": 10,
+  "assetBytes": 3284449,
+  "largestLesson": {
+    "lesson": "#/m/21",
+    "characters": 201439,
+    "sourceSha256": "09b6ae47fa7aac6de33446866a02664b1c1740bd153f7ca6e1b7b19a2a741861",
+    "markdownSha256": "4dfb6a76931c6895e40b947ec63d73d07962b976720e4395062ca2e93698f80e",
+    "completeSourcePreserved": true,
+    "headings": 42,
+    "tableRows": 195,
+    "fenceLines": 0
+  },
+  "timestampTests": {
+    "identicalDataReusesTimestamp": true,
+    "changedRenderedDataUpdatesOutput": true,
+    "additionalDataFieldUpdatesOutput": true,
+    "invalidPriorOutputReplaced": true
+  },
+  "renderedContentSha256": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
+  "renderedContentBytesAndMtimeUnchanged": true,
+  "narrationExtractorSha256": "351feff3ad368046e031df3d1812efad6ba2963b05357b702ecc7ba7300b77f1",
+  "narrationExtractorUnchanged": true,
+  "codeMathTableLinkFixture": true,
+  "checks": [
+    {
+      "lesson": "#/m/00",
+      "characters": 136965,
+      "sourceSha256": "6b7f6108df34e885d5cf2dfed60072692d3009f3462bca410c0603f09638d176",
+      "markdownSha256": "e19ba7930007e592a2a81f321562a1ce02930df145e4db0f5a63609c6ba9c6b5",
+      "completeSourcePreserved": true,
+      "headings": 27,
+      "tableRows": 89,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/01",
+      "characters": 135066,
+      "sourceSha256": "4ef186719066a0e32d84e6db5398ab4d44910c294ddfa7a0c674b88cdee6df16",
+      "markdownSha256": "db935f3d3b279544cafd1cf3dc75da04afe83da74dd69c9eaec303e67c0fbf3a",
+      "completeSourcePreserved": true,
+      "headings": 38,
+      "tableRows": 93,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/02",
+      "characters": 123471,
+      "sourceSha256": "26c3422c78c23fe623ec607a48b9d07c19e1c984b9ed356d7810c4e6169dcf93",
+      "markdownSha256": "063dab36a31f5815a5d1863abdce2ba1e3f39d899c70e084c09f1058ee3ec19b",
+      "completeSourcePreserved": true,
+      "headings": 41,
+      "tableRows": 61,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/03",
+      "characters": 148712,
+      "sourceSha256": "0d9ef9bc434c1aba207b90e1010a42251eda7c768859f0cae77e13f4973c48b5",
+      "markdownSha256": "d8a8c6510d78f3bd5e8bd0c051b888d48697baeeba66126ea88094e452270878",
+      "completeSourcePreserved": true,
+      "headings": 58,
+      "tableRows": 96,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/04",
+      "characters": 168573,
+      "sourceSha256": "37531381f509ddf54fbd3a713373e0e3e4e19fe1a887b661d0b013bcdb562146",
+      "markdownSha256": "3c074a7ec0d4f5b57bc774fda0eb9f12ca707bce8a591f4065116a8fbbc055f7",
+      "completeSourcePreserved": true,
+      "headings": 27,
+      "tableRows": 172,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/05",
+      "characters": 143413,
+      "sourceSha256": "9dc3fc17e598ec6c08cbfbeaeff9717549933957f81810a994af74d9dd98fe72",
+      "markdownSha256": "ab4af77fa91e2ed953f93978d94c25cfb16dfccd564d3daaeb21d14cab59dce8",
+      "completeSourcePreserved": true,
+      "headings": 50,
+      "tableRows": 135,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/06",
+      "characters": 142828,
+      "sourceSha256": "3e0529a856e17278d26c8f85a5ef627a382b707c7cea0b39d92518a12bb56c50",
+      "markdownSha256": "95d78404075bc570a0211cad6c3f0eb33ade986eeec3c0dc54ee0c47c53c5c7e",
+      "completeSourcePreserved": true,
+      "headings": 52,
+      "tableRows": 84,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/07",
+      "characters": 128319,
+      "sourceSha256": "dfeb4af3b72f12e6cdc9ef9ebb82aeb05b5d3ac2c1457fb2c87c8f90b38079f7",
+      "markdownSha256": "998808d8fa68a2a0759349d53e08f4ecebc49a62ed4c464147a449f08271764d",
+      "completeSourcePreserved": true,
+      "headings": 46,
+      "tableRows": 75,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/08",
+      "characters": 146877,
+      "sourceSha256": "0ade75dbcb6c70b9837edc4fb9ad7f3bac3ab86ea448e12b6b51a55d4d01c239",
+      "markdownSha256": "36f54bfbb038d0da5954ed3c03b37c2b9a07759ef3e15a776bb24732378b31cf",
+      "completeSourcePreserved": true,
+      "headings": 45,
+      "tableRows": 115,
+      "fenceLines": 4
+    },
+    {
+      "lesson": "#/m/09",
+      "characters": 92126,
+      "sourceSha256": "4a59bc789db0f5be7de02896c69ec44a15dc7e2f7976305583b81dcb8090dc9d",
+      "markdownSha256": "715dd6202134bc530df2db47e15943b5cb5c720ed5f65e294d6844e7bfb277fb",
+      "completeSourcePreserved": true,
+      "headings": 48,
+      "tableRows": 54,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/10",
+      "characters": 135814,
+      "sourceSha256": "b274479ac3490f11b639377b9d86024019b0db254d52a23d3713ec7320396918",
+      "markdownSha256": "d43fd23d5c25240c6878f4d23523ff2cf96674ece0d67d0dcac30cd81c9d9794",
+      "completeSourcePreserved": true,
+      "headings": 35,
+      "tableRows": 94,
+      "fenceLines": 2
+    },
+    {
+      "lesson": "#/m/11",
+      "characters": 151665,
+      "sourceSha256": "24e116c3cf9fda3bdcd88451591342af74419252436c3191bfb8f524f9d88be1",
+      "markdownSha256": "a6330b1d8237a3284925df98803d867ade224744effecb3564a9dd4d6c61eea4",
+      "completeSourcePreserved": true,
+      "headings": 48,
+      "tableRows": 94,
+      "fenceLines": 2
+    },
+    {
+      "lesson": "#/m/12",
+      "characters": 133861,
+      "sourceSha256": "45297d069d41485e0b6219ca40ade7ed50e91d4eb6c43beffe6387aaf9f45701",
+      "markdownSha256": "98b2c467dc795d023faa154da385eb6c5302fd8e797e7ac717b64be1522c843a",
+      "completeSourcePreserved": true,
+      "headings": 41,
+      "tableRows": 74,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/13",
+      "characters": 147863,
+      "sourceSha256": "5b6b589d468ffbf3ecba1f853fc7983cc8ccf19dbebc2c2dcf06b67fde876bea",
+      "markdownSha256": "1e55c76bf74e745467c9d8b21347a628a55c7355592e3bf1e8b84f05e97382ed",
+      "completeSourcePreserved": true,
+      "headings": 46,
+      "tableRows": 58,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/14",
+      "characters": 129483,
+      "sourceSha256": "ca4a9c36b3b2b43093e940a69bafec9f438b741aea1fc05458b44ff2db971567",
+      "markdownSha256": "ef3f7ea496e897fc62a96d0fe6c20b8d5b7daa86c461684c7a482c023702f9ae",
+      "completeSourcePreserved": true,
+      "headings": 37,
+      "tableRows": 83,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/15",
+      "characters": 141287,
+      "sourceSha256": "0c47b2fb7fc5c2cbc04e3db8d4285a3478f63be5e7fc4ea7d7259953d0e7400e",
+      "markdownSha256": "91971bee088aad187e75b22b370d5b14059774989578e008f4cc2e634f017f5d",
+      "completeSourcePreserved": true,
+      "headings": 33,
+      "tableRows": 88,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/16",
+      "characters": 144297,
+      "sourceSha256": "b2feb68825ab8c8bb64be72057939b7a84a296580e1807870dfa002ab9a344f1",
+      "markdownSha256": "b601b112ad7f93d3e413bb4247526e818d1d3b1719ca148c8cdb83fb6897a3a3",
+      "completeSourcePreserved": true,
+      "headings": 36,
+      "tableRows": 117,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/17",
+      "characters": 114745,
+      "sourceSha256": "9e8c25fdc32f29961c292dfb02e1d4d644660c9a5a3b61c00dc4514e4eedb69e",
+      "markdownSha256": "b0b24f5b9ba05b4248c7188ff814b9f918edba5f21c597f7772b71b2e6e7b7e0",
+      "completeSourcePreserved": true,
+      "headings": 53,
+      "tableRows": 98,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/18",
+      "characters": 123138,
+      "sourceSha256": "1eadc8f60a03557e4cc2efcbe2842b79004a934ea1316e701a4b943965effeff",
+      "markdownSha256": "7e0f85dd8b87067df2e76a38d56c4bcc3839b0a2763003cf11f587003bdff139",
+      "completeSourcePreserved": true,
+      "headings": 32,
+      "tableRows": 93,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/19",
+      "characters": 141493,
+      "sourceSha256": "f691a4c07f20e45e44dca4a6b6a0a4651c49055ce38f3d2071f162fd81a7c2a6",
+      "markdownSha256": "f76002f63fb1b5603af7d3cc9f1ae256e1d0fc609200f6ce55d5fc68db208857",
+      "completeSourcePreserved": true,
+      "headings": 28,
+      "tableRows": 95,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/20",
+      "characters": 124241,
+      "sourceSha256": "6bf55a5327b98f43d43eb32ced3402c82fbc7b06c7dec46852fa202b50215512",
+      "markdownSha256": "e75862268c7af499489fb9d606e2a99333ca49b3d4ba85018d7418b1b7480562",
+      "completeSourcePreserved": true,
+      "headings": 47,
+      "tableRows": 165,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/m/21",
+      "characters": 201439,
+      "sourceSha256": "09b6ae47fa7aac6de33446866a02664b1c1740bd153f7ca6e1b7b19a2a741861",
+      "markdownSha256": "4dfb6a76931c6895e40b947ec63d73d07962b976720e4395062ca2e93698f80e",
+      "completeSourcePreserved": true,
+      "headings": 42,
+      "tableRows": 195,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/s/01",
+      "characters": 19402,
+      "sourceSha256": "5b9488cc36471122adc4962a61a6d8c3a480228d206c36ff89f5655db133911e",
+      "markdownSha256": "9ebc07ca75090ae8c0bf5b7c43abf1df8a5dc15538e3fd0c8abfcdcb9c7f3e82",
+      "completeSourcePreserved": true,
+      "headings": 11,
+      "tableRows": 9,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/s/02",
+      "characters": 18312,
+      "sourceSha256": "e4cd9dab92d435c7c669e5825f4982a07c393dea0f9edf983f257afd981f7fcd",
+      "markdownSha256": "f21d6f4ecbfc9781d90ec9fac599327ca6abb72f774b87d72edc34bb231c2529",
+      "completeSourcePreserved": true,
+      "headings": 11,
+      "tableRows": 8,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/s/03",
+      "characters": 17750,
+      "sourceSha256": "8cf5df9f0d8123b443c2317baa5965611efced1c33d6d6f358f1072275b17471",
+      "markdownSha256": "595b6549feeadca2ad29f40b79d127b644e3b4a1683e5ca8300f75731cf03b9f",
+      "completeSourcePreserved": true,
+      "headings": 11,
+      "tableRows": 8,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/s/04",
+      "characters": 17826,
+      "sourceSha256": "a907989fb80bc41ebcf05856e22f23d9e6a08eace667b6af3913d9eef71ca72b",
+      "markdownSha256": "255fffff2c2d6ffaf5a13b65d010091f4179dceb31b945f9a0bc1b1bbf00405b",
+      "completeSourcePreserved": true,
+      "headings": 11,
+      "tableRows": 9,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/s/05",
+      "characters": 18365,
+      "sourceSha256": "90ccc51e89ebbe1161b555c244b8a0979b27830c882634f758cb163f1e5abb0d",
+      "markdownSha256": "1cefd403f386b52d1b5bc7819fd42117a7c37ab3035d44306dd44a702b761875",
+      "completeSourcePreserved": true,
+      "headings": 11,
+      "tableRows": 9,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/s/06",
+      "characters": 18831,
+      "sourceSha256": "132b33574182ec5fc54cd08058553e72b5b938eaec1d8807d7f0195f0ef38cc3",
+      "markdownSha256": "df48be3fe91284498c6409f0d4219fa4eeb01e77e0d39f6c79f4e400d80f0a4d",
+      "completeSourcePreserved": true,
+      "headings": 11,
+      "tableRows": 8,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/s/07",
+      "characters": 18254,
+      "sourceSha256": "c311014f774a6e285362e0bcc2a1b056abbd617daae4fdef4fd061c142293437",
+      "markdownSha256": "dddd52f2380421431504c460c14715bfedb921bdabe77577d4b1280ac2fd8a1a",
+      "completeSourcePreserved": true,
+      "headings": 11,
+      "tableRows": 8,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/s/08",
+      "characters": 18618,
+      "sourceSha256": "3220561e48624f716b8614aa7ad9f97401f971a9d9d81f59cd07bd94933533e5",
+      "markdownSha256": "df71ef0785bd62a6782eb13f53952f17f970362e168f9bf4bb93ab9cd09f80f4",
+      "completeSourcePreserved": true,
+      "headings": 11,
+      "tableRows": 9,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/s/09",
+      "characters": 19124,
+      "sourceSha256": "a170e02115e36233dd4a50a2d132e9b0a9afd97793d32d664fe91f32d404a6be",
+      "markdownSha256": "9c4848039585e50cc9552a2295449d7fe0b988208239d46da82e273851684108",
+      "completeSourcePreserved": true,
+      "headings": 11,
+      "tableRows": 8,
+      "fenceLines": 0
+    },
+    {
+      "lesson": "#/s/10",
+      "characters": 19617,
+      "sourceSha256": "d2b3ec3d2336ec95b310af1dc46d95606a4d68dd7a8e1d993e81aa8b743fdf81",
+      "markdownSha256": "ff73190a72e364c497db84e74d063daf899f3e002c6dd656d80a536fd61297b5",
+      "completeSourcePreserved": true,
+      "headings": 11,
+      "tableRows": 9,
+      "fenceLines": 0
+    }
+  ]
+}

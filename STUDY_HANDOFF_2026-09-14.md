@@ -1,31 +1,29 @@
-# Ask about what you are reading
+# Copy page for AI
 
-The reader can prepare a question for ChatGPT without an embedded AI service. Select a passage within a lesson section, then choose **Ask ChatGPT**. The chapter toolbar offers the same action for selected text or a visible paragraph.
+Choose **Copy page for AI** in a lesson to copy its complete Markdown. Paste it into ChatGPT, Claude, another assistant, or a document, and add your own question. The page does not open an AI service, compose a prompt or send anything automatically.
 
-In the dialog, write a question or choose a teaching prompt, decide whether to include nearby prose, and expand **Preview exactly what you’ll copy** to review the draft. **Copy & open ChatGPT** copies the draft and opens ChatGPT in another tab. Paste it there and send it when ready. **Copy** also works for an existing conversation or another assistant.
+This replaces the earlier **Ask ChatGPT** passage dialog following the reader’s report that the handoff did not work. The reference is [Security Alliance’s Copy page for AI action](https://frameworks.securityalliance.dev/intro/introduction/), inspected in a browser: its button copies the full Markdown page directly without a question dialog or external chat window.
 
-The passage, chapter and section travel with the question. Nearby explanation is optional. The prompt asks for clear teaching followed by deeper mechanisms, necessary definitions, and useful analogies with their limits. Course excerpts are explicitly reference material rather than instructions or guaranteed facts. A source link points back to the reader; it does not assume the assistant can access a local or private website.
+The exported chapter includes its title, headings, explanations, tables, equations, code and references. It comes from authored Markdown, not a scrape of the application’s navigation or generated controls. Empty interactive-widget placeholders become explicit omission notes. Diagrams and live simulation state are not represented as if they were included. Copying a page does not truncate it to a selected paragraph or a fixed character limit.
 
-Nothing is submitted automatically. The course calls no model API, requests no AI credentials, stores no questions, and puts no question or course excerpt in the destination URL. Clipboard access happens only after a copy action. If it fails, the exact draft is selected for manual copying; a separate **Open ChatGPT** link remains available. The external service handles anything the reader subsequently pastes or sends under that service’s own terms and settings.
+**Download Markdown** saves the same complete text as a `.md` file. This is useful when an assistant accepts file attachments or a chapter is too long for its message box. Different assistants have their own context limits; the course does not silently shorten the chapter to fit one provider.
 
-## Scope and limits
+## Copy reliability
 
-- Capture is bounded to 6,000 passage characters and 3,000 nearby characters, with truncation disclosed. It is not a whole-course export.
-- Selections must stay within readable prose in one section. Diagrams, interactive controls, code, tables and reference lists are excluded; their visual state is not silently represented as text.
-- Opening the dialog pauses current or pending narration. Closing it restores the reading selection and leaves playback paused.
-- The lesson DOM and narration extraction stay unchanged. Existing recordings require no regeneration for this feature.
-- The clipboard API normally requires HTTPS or localhost. The manual-copy path remains available where it is denied or unsupported. Browser popup policies and ChatGPT sign-in may add a step.
+The Markdown is available locally before the button can be used, so copying does not depend on a network response during the click. The browser clipboard API is attempted directly. If unavailable or denied, the helper attempts the browser’s compatible copy command; if that also fails, it displays selectable text for manual copying. Success is only reported after a copy operation reports success. The download remains available independently.
 
-The implementation uses a plain ChatGPT link and explicit paste. Official research did not establish a supported prompt-prefill URL contract to rely on. The [official ChatGPT web guide](https://learn.chatgpt.com/docs/web) describes starting a chat and supplying a goal and context; it does not establish the app-specific handoff mechanism used here.
+The normal path is one action and does not open a dialog or another tab. The manual-copy fallback is the only dialog. Narration and the reader’s place are preserved by the primary copy action; the fallback pauses listening while the reader handles the text. No AI credentials, model, backend or service connection are needed.
 
 ## Implementation and verification
 
-`site/study-context.js` captures immutable, bounded text snapshots and composes drafts. `site/study-assist.js` and its stylesheet own the selection action and dialog. `site/app.js` mounts and cleans up the feature with the chapter. A scoped event asks `site/narration.js` to pause; it does not alter narration extraction.
+The generated `site/ai-content.js` keeps full Markdown separate from the rendered course data. Rebuild it with the course when authored Markdown changes. The existing `site/content.js`, lesson DOM and narration extraction remain unchanged by this UI replacement, so the saved recordings require no regeneration.
 
-Focused browser checks live in `qa/study-context.js` and `qa/study-assist.js`, with recorded results under `qa/reports/`. External window opening and clipboard operations are intercepted in automated tests: those tests send no questions to ChatGPT and do not establish the behavior of every browser or an authenticated ChatGPT session. The static edition and downloadable package include the feature alongside the existing complete recordings; see [publication details](PRERENDER_2026-09-13.md).
+Focused checks verify all 32 exports against their authored sources and exercise actual clipboard copying in an isolated browser, alongside denied/unavailable paths, download fidelity, navigation cleanup and responsive layout. Browser tests do not submit anything to an AI service or read the user’s desktop clipboard. Results and remaining browser-specific limits are recorded in the QA reports.
 
-Run the focused checks against a source preview with `node qa/study-context.js` and `QA_BASE_URL=http://127.0.0.1:8793 node qa/study-assist.js`. Use `npm run check` and `npm run qa:narration` for course and playback regressions.
+Run the export/source checks with `node qa/page-markdown.js` and the browser checks against a running source preview with `QA_BASE_URL=http://127.0.0.1:8793 node qa/page-copy.js`. Reports are `qa/reports/page-markdown.json` and `qa/reports/page-copy.json`. The glossary is the largest export at 201,439 characters; its complete source passed the comparison. Build checks also verify that a data-identical rebuild preserves the existing narration fingerprint, while real data changes update the rendered output.
 
-The September 14 validation passed all 10 context cases, 17 integrated handoff cases, and 35 existing narration cases; course/figure checks also passed. Nine screenshots were reviewed across both themes and desktop/phone layouts. The integrated tests include clipboard denial, blocked popups, focus/selection restoration, chapter cleanup, pending audio and real error-state paths with intercepted media. The source content and narration extractor fingerprints match the prior published edition. On the long module 06, three selected-passage captures took 17.0–22.3 ms in the test browser; this is a scoped measurement, not a guarantee for every device.
+The September 14 replacement passed all 32 source comparisons, 11 interaction cases and the course/figure checks. Clipboard tests read back actual writes for a survey and a long module, verify the compatible copy command, and compare downloaded bytes. A real saved-MP3 check confirms ordinary copying keeps playback running; manual recovery pauses it and closing recovery leaves it paused. Both themes and desktop/phone layouts were reviewed. These checks exercise an isolated Chromium browser, not every embedded-browser clipboard policy; the user's original failure could not be reproduced there, so its exact cause is not claimed.
 
-A separate native browser check against the complete static preview played an actual saved MP3, opened the dialog, and confirmed audio time stopped at 0.806 seconds and stayed there after closing. It made no speech-API or ChatGPT requests. The reproducible check and result are `qa/study-assist-native.js` and `qa/reports/study-assist-native.json`.
+After promotion, the live static preview also passed actual copy/readback for survey 01 (19,402 characters) and the full glossary (201,439 characters), plus compatible-copy checks for unavailable and rejected clipboard APIs. See `qa/reports/page-copy-live.json`.
+
+The complete static edition and downloadable ZIP include the helper and the existing recordings. See [publication details](PRERENDER_2026-09-13.md).

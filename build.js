@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { marked } = require('marked');
 const sectionFigures = require('./course/visuals/render');
+const { buildMarkdownExports } = require('./tools/page-markdown');
 
 const ROOT = __dirname;
 const MOD_DIR = path.join(ROOT, 'course', 'modules');
@@ -169,6 +170,19 @@ function buildOne(md, n, slug, placement, quizPath, track = 'm') {
   return { n, slug, title, html, toc, words, quiz, keyNumbers, figureCount: illustrated.count };
 }
 
+// Preserve the static-audio fingerprint on a data-identical rebuild. All payload
+// properties except the build timestamp participate in this exact comparison.
+function serializeCoursePayload(payload, previousContent = '') {
+  const next = { ...payload };
+  try {
+    const previous = JSON.parse(previousContent.replace(/^window\.COURSE = /, '').replace(/;\s*$/, ''));
+    const { built: oldTimestamp, ...oldData } = previous;
+    const { built: newTimestamp, ...newData } = payload;
+    if (typeof oldTimestamp === 'string' && JSON.stringify(oldData) === JSON.stringify(newData)) next.built = oldTimestamp;
+  } catch (_) { /* Replace invalid prior output with the current payload. */ }
+  return 'window.COURSE = ' + JSON.stringify(next) + ';\n';
+}
+
 function build() {
   const placements = fs.existsSync(WIDGET_MAP) ? JSON.parse(fs.readFileSync(WIDGET_MAP, 'utf8')) : {};
   const files = fs.readdirSync(MOD_DIR).filter(f => /^\d\d-.*\.md$/.test(f)).sort();
@@ -198,8 +212,11 @@ function build() {
   console.log(`Authored section figures: ${figureCoverage.actual}/${figureCoverage.expected}`);
   const payload = { parts: PARTS, modules, survey, built: new Date().toISOString() };
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
-  fs.writeFileSync(OUT, 'window.COURSE = ' + JSON.stringify(payload) + ';\n');
+  const content = serializeCoursePayload(payload, fs.existsSync(OUT) ? fs.readFileSync(OUT, 'utf8') : '');
+  if (!fs.existsSync(OUT) || fs.readFileSync(OUT, 'utf8') !== content) fs.writeFileSync(OUT, content);
+  const markdownExport = buildMarkdownExports(ROOT);
+  console.log(`Markdown exports: ${markdownExport.lessons} complete lessons (${Math.round(markdownExport.bytes / 1024)} KB)`);
   console.log(`wrote ${OUT} (${(fs.statSync(OUT).size / 1024).toFixed(0)} KB), total words ${modules.reduce((a, m) => a + m.words, 0)} + survey ${survey.reduce((a, m) => a + m.words, 0)}`);
 }
 if (require.main === module) build();
-module.exports = { renderLessonMarkdown };
+module.exports = { renderLessonMarkdown, serializeCoursePayload };
