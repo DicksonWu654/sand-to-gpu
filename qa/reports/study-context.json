@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-09-14T05:17:13.927Z",
+  "status": "passed",
+  "scope": "Isolated DOM/context-builder tests; UI, clipboard and ChatGPT handoff are covered separately.",
+  "results": [
+    {
+      "name": "Exact nested selection and immutable snapshot leave DOM/selection unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "Source uses real subdirectory lesson anchor and excludes all query data",
+      "status": "passed"
+    },
+    {
+      "name": "Nested heading boundary controls adjacent context",
+      "status": "passed"
+    },
+    {
+      "name": "Outside, controls, table, code and reference selections reject without fallback",
+      "status": "passed"
+    },
+    {
+      "name": "Selection crossing a section boundary rejects",
+      "status": "passed"
+    },
+    {
+      "name": "Same-section multi-paragraph selection preserves browser separators",
+      "status": "passed"
+    },
+    {
+      "name": "Collapsed selection uses visible prose or explicit eligible anchor",
+      "status": "passed"
+    },
+    {
+      "name": "Long quote and nearby prose are bounded with explicit notices",
+      "status": "passed"
+    },
+    {
+      "name": "Comprehension intent asks one question and waits for the learner",
+      "status": "passed"
+    },
+    {
+      "name": "Prompt gives the custom question priority, quotes context, and omits only opted-out nearby prose",
+      "status": "passed"
+    }
+  ],
+  "actualModuleLatency": {
+    "measuredAt": "2026-09-14T05:20:54.406Z",
+    "url": "http://127.0.0.1:8793/#/m/06",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "paragraphs": 143,
+    "textCharacters": 149699,
+    "shortSelectionRunsMs": [
+      22.3,
+      17,
+      21.9
+    ],
+    "worstSelectionMs": 22.3,
+    "exactSelectionAllThree": true,
+    "collapsedCaptureMs": 15.5,
+    "nativeToolbarClick": {
+      "open": 86.60000000149012,
+      "frame": 90.39999999850988,
+      "timer": 93.69999999925494,
+      "dialogOpen": true,
+      "questionFocused": true
+    },
+    "note": "Three capture calls on a short real selection; one collapsed capture and one native toolbar click. No browser freeze observed; not a broad performance benchmark."
+  }
+}

@@ -4,9 +4,9 @@ The publishing edition uses saved Heart recordings for every passage narrated by
 
 **Current edition, September 14:** all 6,556 unique MP3 clips and 6,739 passage placements passed the final audit. The recordings total approximately 56.76 hours and 1.639 GB of MP3 audio. The supplier and geography revisions required 99 new recordings; 6,457 unchanged recordings were reused. Generation/cache assembly took 101 seconds and MP3 export took 39 seconds, with zero failures.
 
-The verified archive on this computer is `C:\Users\dicks\Downloads\sand-to-gpu-static-2026-09-13.zip` (1,649,782,775 bytes; 6,647 files). Its CRC, source snapshot and SHA-256 checks passed; see `qa/reports/narration-package.json` for the checksum. The preview on port 8790 now serves the completed static edition, with the local speech API disabled.
+The verified archive on this computer is `C:\Users\dicks\Downloads\sand-to-gpu-static-2026-09-13.zip` (1,649,791,583 bytes; 6,650 files). Its CRC, source snapshot and SHA-256 checks passed; see `qa/reports/narration-package.json` for the checksum. The preview on port 8790 now serves the completed static edition, with the local speech API disabled.
 
-Archive SHA-256: `448723454c9882c833d8022600f43c18d7326803f75575452f81ae38069aef3f`.
+Archive SHA-256: `5115c3a132f24994cbf3bd67dd6255cb249d889b7a765cdb4f05a1a53bce5cbf`.
 
 With Listen open, clicking a paragraph starts playback from that paragraph. **Read from here** starts at the passage currently on screen. The publishing edition includes these controls. Their earlier refresh reused all existing recordings; the September 14 content revision regenerated changed passages. Eight paragraph interaction cases and eleven static-player cases passed. Native browser playback also verified a real pointer click from paused narration: it selected the correct MP3, restarted near the beginning, highlighted the expected text, and made no speech API requests. See `qa/reports/narration-paragraph.json` and `qa/reports/narration-static.json`.
 
@@ -109,3 +109,9 @@ Generation and compression ran in a separate staging directory while port 8790 c
 A native browser check selected the newly recorded S01 supplier-role paragraph with a real pointer click. Its correct 40.975-second MP3 played, the playback clock advanced, the passage and spoken word highlighted, and a byte-range request returned HTTP 206 with the correct audio MIME type. No speech API requests or page errors occurred, on either staging or the promoted preview. This verifies technical playback and mapping, not a subjective pronunciation review.
 
 Current evidence: `qa/reports/narration-neutrality-release.json`, `narration-coverage.json`, `narration-neutrality-native.json`, `narration-neutrality-native-live.json`, and `narration-package.json`. The earlier `narration-prerender.json` and `narration-export.json` retain the initial full-render and player-transport history.
+
+## Local study helper refresh
+
+The publishing bundle also includes **Ask ChatGPT**. It prepares a question and the selected or current prose passage locally, with optional nearby explanation and an exact copy preview. Copy & open opens the plain ChatGPT homepage; the reader pastes the draft themselves. The website does not send a message, place context in a URL, run an AI service, or require an account to prepare a draft.
+
+This refresh updates six website assets while preserving the static-mode marker, all 33 narration manifests, and all 6,556 MP3 files. Course content and the narration extraction fingerprint are unchanged, so no recordings were regenerated. Seventeen integrated study-helper checks and ten context-builder checks passed, alongside the existing 35 narration regression cases. A real MP3 playback check on port 8790 confirmed that opening the study dialog pauses narration and closing it leaves it paused, without speech API or ChatGPT requests. See `qa/reports/study-assist.json`, `study-context.json`, and `study-assist-native.json`.

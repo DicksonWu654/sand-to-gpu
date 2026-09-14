@@ -1,19 +1,23 @@
 {
   "status": "passed",
-  "verifiedAt": "2026-09-14T04:43:57.857658+00:00",
+  "verifiedAt": "2026-09-14T05:29:57.281332+00:00",
   "archive": "/mnt/c/Users/dicks/Downloads/sand-to-gpu-static-2026-09-13.zip",
-  "files": 6647,
+  "files": 6650,
   "lessons": 32,
   "audioClips": 6556,
-  "bytes": 1649782775,
-  "sha256": "448723454c9882c833d8022600f43c18d7326803f75575452f81ae38069aef3f",
-  "previousArchiveSha256": "7bf5b93094207835372af34362ac0bed4bff249bddadb81a227a65349fb6374c",
-  "update": "September14 supplier/geography content revision:99 new recordings,6457 reused,88 retired publishing identities.",
+  "bytes": 1649791583,
+  "sha256": "5115c3a132f24994cbf3bd67dd6255cb249d889b7a765cdb4f05a1a53bce5cbf",
+  "previousArchiveSha256": "448723454c9882c833d8022600f43c18d7326803f75575452f81ae38069aef3f",
+  "update": "Local Ask ChatGPT helper and intentional narration pause; all recordings and timing manifests unchanged.",
   "sourceHashes": {
-    "content.js": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
-    "narration.js": "ff1abe9f1dcce6e570a4c7fd1db47ca7b3241bbef296ff33de715fab87232f99",
-    "narration.css": "b90d6cc7aee23277c38d55f118ec99c0b2b28649105ae3b54bb5c7a14ff18ea5"
+    "app.js": "5d1d6fb86dd7925459e191722cb2c806977e1ceeb547e0e33b5b89b5099dc7d4",
+    "index.html": "b686792221a0c558d4d8736c29c4f0642223fde0eec9a42cff131eef8299b891",
+    "narration.js": "21e381bd0aa98d778b13a3697c8449aaed087a1c52275b73aea807723b79598f",
+    "study-assist.js": "d48c2b849e0f8109a67b152caffa0b6191140c40f86adee08e5e4d72b5efc9bd",
+    "study-assist.css": "282bf7efe55a90f97a4b4713f2b0c572bcd4037182d8e936316d0424732c7fa7",
+    "study-context.js": "ee408c32c417a5986640476d295d0a375737ced4d2268d296bfec5d5d5df80e3"
   },
+  "contentHash": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
   "checks": {
     "bothProgressStatusesComplete": true,
     "sourceAndManifestValidation": true,
@@ -22,10 +26,14 @@
     "zipCrcIntegrity": true,
     "sha256Computed": true,
     "previousArchiveVerifiedBeforeReplacement": true,
-    "atomicKnownArchiveReplacement": true
+    "atomicKnownArchiveReplacement": true,
+    "unchangedNarrationManifests": 33,
+    "unchangedAudioFiles": 6556,
+    "sourcePreviewStopped": true,
+    "livePreviewHealthy": true
   },
   "compression": {
     "mp3": "ZIP_STORED",
-    "text": "ZIP_DEFLATED, level6"
+    "text": "ZIP_DEFLATED, level 6"
   }
 }

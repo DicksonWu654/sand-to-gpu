@@ -176,11 +176,11 @@
         if(destroyed || !opened || ticket!==generation)return;
         current=data; audio.src=data.audioUrl; audio.playbackRate=Number(rate.value); updateTime();
         highlighted=passages[index].element; highlighted.classList.add('narration-current-passage');
-        if(wantsPlay) { await audio.play(); if(ticket!==generation || destroyed)return; setState('playing','Playing · '+(follow?'Following the spoken word.':'Automatic scrolling is paused.')); tick(); }
+        if(wantsPlay) { await audio.play(); if(ticket!==generation || destroyed || !wantsPlay)return; setState('playing','Playing · '+(follow?'Following the spoken word.':'Automatic scrolling is paused.')); tick(); }
         else setState('paused','Ready. Press Play to continue.');
         prefetch();
       }catch(error){
-        if(destroyed || !opened || ticket!==generation)return;
+        if(destroyed || !opened || ticket!==generation || (!wantsPlay && current))return;
         wantsPlay=false; if(error.name==='AbortError'){setState('paused','Paused. Press Play to continue.');return;}
         setState('error',error.name==='NotAllowedError'?'Audio is ready. Press Play to start listening.':error.name==='NotSupportedError'?'Saved audio could not be played. Try another passage or retry.':error.message);
       }
@@ -251,6 +251,13 @@
       opened=true; player.hidden=false; launch.setAttribute('aria-expanded','true');document.body.classList.add('narration-open');
       index=visibleIndex(); wantsPlay=true; setFollow(true); play.focus({preventScroll:true}); checkStatus();
     });
+    function pauseForStudy() {
+      clearTimeout(paragraphClickTimer);
+      if (!opened || destroyed) return;
+      wantsPlay=false; audio.pause(); cancelAnimationFrame(frame);
+      setState('paused',current?'Paused. Pick up where you left off.':'Paused. This passage is still being prepared.');
+    }
+    prose.addEventListener('course-study-open',pauseForStudy);
     player.addEventListener('click',async event=>{
       clearTimeout(paragraphClickTimer);
       const action=event.target.closest('[data-action]')?.dataset.action;
@@ -260,8 +267,8 @@
       if(action==='previous' || action==='next'){wantsPlay=true;start(index+(action==='next'?1:-1));}
       if(action==='here'){wantsPlay=true;setFollow(true);start(visibleIndex());}
       if(action==='play'){
-        if(wantsPlay){wantsPlay=false;audio.pause();cancelAnimationFrame(frame);setState('paused',current?'Paused. Pick up where you left off.':'Paused. This passage is still being prepared.');}
-        else{wantsPlay=true;if(!ready)checkStatus();else if(!current)start(index);else try{await audio.play();setState('playing','Playing · '+(follow?'Following the spoken word.':'Automatic scrolling is paused.'));tick();}catch{wantsPlay=false;setState('error','Audio could not start. Press Retry.');}}
+        if(wantsPlay)pauseForStudy();
+        else{wantsPlay=true;if(!ready)checkStatus();else if(!current)start(index);else try{await audio.play();if(destroyed || !opened || !wantsPlay)return;setState('playing','Playing · '+(follow?'Following the spoken word.':'Automatic scrolling is paused.'));tick();}catch{if(destroyed || !opened || !wantsPlay)return;wantsPlay=false;setState('error','Audio could not start. Press Retry.');}}
       }
     });
     player.addEventListener('keydown',event=>{
@@ -294,7 +301,7 @@
     prose.addEventListener('click', paragraphClick);
     window.addEventListener('wheel',manual,{passive:true});window.addEventListener('touchmove',manual,{passive:true});window.addEventListener('keydown',key);document.addEventListener('click',anchor);
     setState('idle');
-    return ()=>{stop();destroyed=true;prose.removeEventListener('click',paragraphClick);paragraphStarts.clear();window.removeEventListener('wheel',manual);window.removeEventListener('touchmove',manual);window.removeEventListener('keydown',key);document.removeEventListener('click',anchor);launch.remove();player.remove();cache.clear();};
+    return ()=>{stop();destroyed=true;prose.removeEventListener('course-study-open',pauseForStudy);prose.removeEventListener('click',paragraphClick);paragraphStarts.clear();window.removeEventListener('wheel',manual);window.removeEventListener('touchmove',manual);window.removeEventListener('keydown',key);document.removeEventListener('click',anchor);launch.remove();player.remove();cache.clear();};
   }
   window.CourseNarration={mount,extract,rangeFor};
 })();
