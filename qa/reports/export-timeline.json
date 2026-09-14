@@ -24,16 +24,16 @@
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 1458,
-        "boxWidth": 724
+        "boxHeight": 1555,
+        "boxWidth": 700
       },
       "final": {
         "overlaps": [],
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 1282,
-        "boxWidth": 724
+        "boxHeight": 1373,
+        "boxWidth": 700
       }
     },
     {
@@ -58,16 +58,16 @@
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 1458,
-        "boxWidth": 724
+        "boxHeight": 1555,
+        "boxWidth": 700
       },
       "final": {
         "overlaps": [],
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 1282,
-        "boxWidth": 724
+        "boxHeight": 1373,
+        "boxWidth": 700
       }
     },
     {
@@ -92,16 +92,16 @@
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 2585,
-        "boxWidth": 324
+        "boxHeight": 2520,
+        "boxWidth": 320
       },
       "final": {
         "overlaps": [],
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 2145,
-        "boxWidth": 324
+        "boxHeight": 2095,
+        "boxWidth": 320
       }
     },
     {
@@ -126,16 +126,16 @@
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 2585,
-        "boxWidth": 324
+        "boxHeight": 2520,
+        "boxWidth": 320
       },
       "final": {
         "overlaps": [],
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 2145,
-        "boxWidth": 324
+        "boxHeight": 2095,
+        "boxWidth": 320
       }
     }
   ]

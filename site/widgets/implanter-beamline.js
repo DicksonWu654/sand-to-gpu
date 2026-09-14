@@ -347,7 +347,8 @@
 
       const stage = h('div');
       function relayout() {
-        const cw = el.clientWidth || 700;
+        const style = getComputedStyle(el);
+        const cw = Math.floor(el.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight)) || 700;
         const m = cw >= 600 ? 'wide' : 'narrow';
         const fs = m === 'wide' ? Math.min(14, Math.max(12, Math.round(11.2 * 760 / cw * 2) / 2)) : Math.min(16, Math.max(12, Math.round(11.2 * 380 / cw * 2) / 2));
         if (m === mode && fs === fsCur) return;

@@ -37,7 +37,8 @@
       {
         "label": "Carrier and tool",
         "detail": "Local enclosures limit exposure during handling.",
-        "glyph": "clean"
+        "glyph": "clean",
+        "variant": "foup"
       },
       {
         "label": "Cleanroom",
@@ -62,7 +63,8 @@
       {
         "label": "FOUP",
         "detail": "Protects wafers during transport.",
-        "glyph": "wafer"
+        "glyph": "wafer",
+        "variant": "foup"
       },
       {
         "label": "Process tool",
@@ -72,7 +74,8 @@
       {
         "label": "Lot history",
         "detail": "Records the route, completed steps and disposition.",
-        "glyph": "design"
+        "glyph": "design",
+        "variant": "grid"
       },
       {
         "label": "Dispatch decision",
@@ -189,7 +192,7 @@
       },
       {
         "label": "Qualified output",
-        "detail": "Completed wafers share the factory\u2019s fixed costs.",
+        "detail": "Completed wafers share the factory’s fixed costs.",
         "glyph": "chip"
       }
     ],

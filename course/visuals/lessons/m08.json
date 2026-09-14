@@ -48,7 +48,8 @@
       {
         "glyph": "heat",
         "label": "Laser interaction",
-        "detail": "Laser energy creates a hot emitting plasma."
+        "detail": "Laser energy creates a hot emitting plasma.",
+        "variant": "plasma"
       },
       {
         "glyph": "light",

@@ -196,7 +196,10 @@
         g.globalAlpha = 0.14; g.fillStyle = pal.ink; g.beginPath(); g.arc(c, c, m.R * s, 0, 2 * Math.PI); g.arc(c, c, (m.R - RING) * s, 0, 2 * Math.PI, true); g.fill();
         const dens = Math.min(1, Math.sqrt(3 / Math.max(mu, 0.01)));   // keep texture visible when photons are dense
         g.globalAlpha = Math.max(0.4, 0.9 * dens); g.fillStyle = pal.photon; const rad = Math.max(0.7, 0.28 * s * dens); g.beginPath();
-        for (let i = 0; i < n; i++) { const x = S.pts[2 * i] * s, y = S.pts[2 * i + 1] * s; g.moveTo(x + rad, y); g.arc(x, y, rad, 0, 2 * Math.PI); }
+        // Rasterizing tens of thousands of overlapping arcs blocked normal slider input.
+        // Only the decorative photon markers are sampled; counts, dose and development remain exact.
+        const markerStride = Math.max(1, Math.ceil(n / (bigMode ? 1400 : 220)));
+        for (let i = 0; i < n; i += markerStride) { const x = S.pts[2 * i] * s, y = S.pts[2 * i + 1] * s; g.moveTo(x + rad, y); g.arc(x, y, rad, 0, 2 * Math.PI); }
         g.fill(); g.globalAlpha = 1;
         g.setLineDash([5, 4]); g.lineWidth = bigMode ? 1.5 : 1; g.strokeStyle = pal.ink; g.beginPath(); g.arc(c, c, m.R * s, 0, 2 * Math.PI); g.stroke(); g.setLineDash([]);
         const path = () => { g.beginPath(); for (let i = 0; i < D.segs.length; i += 2) { g.moveTo(D.segs[i][0] * s, D.segs[i][1] * s); g.lineTo(D.segs[i + 1][0] * s, D.segs[i + 1][1] * s); } };
@@ -354,7 +357,7 @@
       const head = s => h('h5', { style: { margin: '0 0 6px', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--muted)' } }, s);
       const grid = h('div', { class: 'w-grid2', style: { marginTop: '12px' } },
         h('div', null, head('① What the light does'), xs),
-        h('div', null, head('② What the developer sees (60 × 60 nm)'), bigCv, bigStatus));
+        h('div', null, head('② What the developer sees (60 × 60 nm)'), bigCv, bigStatus, h('p', { class: 'w-note' }, 'Photon dots are sampled for visual clarity. Dose, photon counts and the developed contour use the complete simulated sample.')));
       const chartHost = h('div', { style: { marginTop: '4px' } }, chart);
       el.append(controls, formula, readout, grid, btnRow, stripHead, stripGrid, hoverLine,
         h('h5', { style: { margin: '18px 0 4px', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--muted)' } }, 'The stochastic cliff: push dose down and failures rise exponentially'),

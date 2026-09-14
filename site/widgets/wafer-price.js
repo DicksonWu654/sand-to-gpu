@@ -44,7 +44,7 @@
         const vals = NODES.map(nd => showDensity ? (nd.price * 1000) / (nd.density * USABLE_AREA) : nd.price);
         const maxV = Math.max(...vals) * 1.15;
         const bw = pw / NODES.length;
-        const txt = (x, y, s, o) => svg('text', Object.assign({ x, y, 'font-family': 'var(--sans)', 'font-size': 11.5, fill: 'var(--muted)' }, o || {}), s);
+        const txt = (x, y, s, o) => svg('text', Object.assign({ x, y, 'font-family': 'var(--sans)', 'font-size': 12, fill: 'var(--muted)' }, o || {}), s);
         // axes + gridlines
         ticks(maxV, 5).forEach(v => {
           const y = T + ph - (v / maxV) * ph;
@@ -61,7 +61,7 @@
           const bar = svg('rect', { x, y, width: w, height: bh, fill: 'var(--accent)', rx: 3 });
           bar.append(svg('title', null, `${nd.n}: ${showDensity ? usd(v, 2) : usd(v)} · ${fmt(nd.density, 0)} MTr/mm²`));
           svgA.append(bar);
-          svgA.append(txt(x + w / 2, y - 8, showDensity ? usd(v, 2) : usd(v), { 'text-anchor': 'middle', 'font-family': 'var(--mono)', fill: 'var(--ink)', 'font-size': 11.5 }));
+          svgA.append(txt(x + w / 2, y - 8, showDensity ? usd(v, 2) : usd(v), { 'text-anchor': 'middle', 'font-family': 'var(--mono)', fill: 'var(--ink)', 'font-size': 12 }));
           svgA.append(txt(x + w / 2, T + ph + 18, nd.n, { 'text-anchor': 'middle' }));
         });
       }
@@ -125,10 +125,10 @@
         const prices = us.map(u => breakEven(bst.capex, bst.dep, bst.wspm, u, bst.other, bst.margin).price);
         const maxP = Math.max(...prices) * 1.08, minP = Math.min(...prices) * 0.92;
         const X = u => L + ((u - 50) / 50) * pw, Y = p => T + ph - ((p - minP) / (maxP - minP)) * ph;
-        const txt = (x, y, s, o) => svg('text', Object.assign({ x, y, 'font-family': 'var(--sans)', 'font-size': 11.5, fill: 'var(--muted)' }, o || {}), s);
+        const txt = (x, y, s, o) => svg('text', Object.assign({ x, y, 'font-family': 'var(--sans)', 'font-size': 12, fill: 'var(--muted)' }, o || {}), s);
         const yticks = ticks(maxP, 5).filter(v => v >= minP);
-        yticks.forEach(v => { const y = Y(v); svgB.append(svg('line', { x1: L, y1: y, x2: L + pw, y2: y, stroke: 'var(--line)' })); svgB.append(txt(L - 8, y + 4, usd(v), { 'text-anchor': 'end', 'font-family': 'var(--mono)', 'font-size': 11 })); });
-        [50, 60, 70, 80, 90, 100].forEach(u => { const x = X(u); svgB.append(svg('line', { x1: x, y1: T + ph, x2: x, y2: T + ph + 5, stroke: 'var(--line2)' })); svgB.append(txt(x, T + ph + 18, u + '%', { 'text-anchor': 'middle', 'font-family': 'var(--mono)', 'font-size': 11 })); });
+        yticks.forEach(v => { const y = Y(v); svgB.append(svg('line', { x1: L, y1: y, x2: L + pw, y2: y, stroke: 'var(--line)' })); svgB.append(txt(L - 8, y + 4, usd(v), { 'text-anchor': 'end', 'font-family': 'var(--mono)', 'font-size': 12 })); });
+        [50, 60, 70, 80, 90, 100].forEach(u => { const x = X(u); svgB.append(svg('line', { x1: x, y1: T + ph, x2: x, y2: T + ph + 5, stroke: 'var(--line2)' })); svgB.append(txt(x, T + ph + 18, u + '%', { 'text-anchor': 'middle', 'font-family': 'var(--mono)', 'font-size': 12 })); });
         svgB.append(svg('line', { x1: L, y1: T + ph, x2: L + pw, y2: T + ph, stroke: 'var(--line2)' }));
         svgB.append(txt(L + pw / 2, Hh - 4, 'fab utilization', { 'text-anchor': 'middle' }));
         const pts = us.map((u, i) => `${X(u).toFixed(1)},${Y(prices[i]).toFixed(1)}`).join(' ');
@@ -139,7 +139,7 @@
         const lbl = `${bst.util}% → ${usd(cur.price)}`;
         const lw = lbl.length * 6.4 + 10, lx = Math.min(L + pw - lw, cx + 10);
         svgB.append(svg('rect', { x: lx, y: cy - 24, width: lw, height: 18, rx: 3, fill: 'var(--panel)', stroke: 'var(--accent)' }));
-        svgB.append(txt(lx + 5, cy - 11, lbl, { fill: 'var(--ink)', 'font-family': 'var(--mono)', 'font-size': 11 }));
+        svgB.append(txt(lx + 5, cy - 11, lbl, { fill: 'var(--ink)', 'font-family': 'var(--mono)', 'font-size': 12 }));
       }
       function bUpdate() {
         bst.capex = +inCapex.value; bst.dep = +inDep.value; bst.wspm = +inWspm.value;
@@ -176,7 +176,7 @@
         const totals = YEARS.map((_, i) => HYPER[i] + TSMC_CAPEX[i]);
         const maxV = Math.max(...totals) * 1.1;
         const bw = pw / YEARS.length;
-        const txt = (x, y, s, o) => svg('text', Object.assign({ x, y, 'font-family': 'var(--sans)', 'font-size': 11, fill: 'var(--muted)' }, o || {}), s);
+        const txt = (x, y, s, o) => svg('text', Object.assign({ x, y, 'font-family': 'var(--sans)', 'font-size': 12, fill: 'var(--muted)' }, o || {}), s);
         ticks(maxV, 5).forEach(v => {
           const y = T + ph - (v / maxV) * ph;
           svgC.append(svg('line', { x1: L, y1: y, x2: L + pw, y2: y, stroke: 'var(--line)' }));

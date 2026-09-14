@@ -152,7 +152,8 @@
     "source": {
       "file": "course/modules/06-oxidation-and-deposition.md",
       "heading": "5. Atomic Layer Deposition"
-    }
+    },
+    "returnLabel": "After the final purge, begin the next A/B cycle if more film is required"
   },
   {
     "section": "6-physical-vapor-deposition",

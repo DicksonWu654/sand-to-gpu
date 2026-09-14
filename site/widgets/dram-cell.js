@@ -47,7 +47,7 @@
       const line = (x1, y1, x2, y2, o) => svg('line', Object.assign({ x1, y1, x2, y2, stroke: 'var(--muted)', 'stroke-width': 2 }, o || {}));
 
       // ================= Panel A: the 1T1C cell, bit-line pair and sense amplifier (viewBox 340×350) =================
-      const A = svg('svg', { class: 'w-svg', viewBox: '0 0 340 350', role: 'img', 'aria-label': 'Schematic of a DRAM 1T1C cell: word line, access transistor, storage capacitor to the VDD/2 plate, bit line with its parasitic capacitance, reference bit line, precharge circuit and cross-coupled sense amplifier' });
+      const A = svg('svg', { class: 'w-svg', viewBox: '0 0 360 355', role: 'img', 'aria-label': 'Schematic of a DRAM 1T1C cell: word line, access transistor, storage capacitor to the VDD/2 plate, bit line with its parasitic capacitance, reference bit line, precharge circuit and cross-coupled sense amplifier' });
       A.append(txt(2, 13, '1T1C cell on its bit line', { bold: true, fill: 'var(--ink)' }));
       const BLX = 112, BLBX = 64, SAY = 280, GX = 156;
       const outLbl = txt(336, 13, '', { anchor: 'end', size: 13, bold: true, fill: 'var(--ok)' });
@@ -56,16 +56,16 @@
       // precharge / equalize block across both bit lines
       A.append(svg('rect', { x: 46, y: 24, width: 84, height: 20, rx: 3, fill: 'var(--panel2)', stroke: 'var(--line2)' }));
       A.append(txt(88, 38, 'precharge', { anchor: 'middle', size: 12.5, fill: 'var(--ink)' }));
-      A.append(txt(136, 32, 'equalize BL, /BL → VDD/2,', { size: 12.5 }), txt(136, 46, 'then float', { size: 12.5 }));
+      A.append(txt(136, 32, 'equalize BL, /BL → VDD/2,', { size: 12.5 }), txt(136, 47, 'then float', { size: 12.5 }));
       // bit lines
       const blLine = line(BLX, 44, BLX, 340, { 'stroke-width': 2.5 }), blbLine = line(BLBX, 44, BLBX, 340, { 'stroke-width': 2.5 });
       A.append(blbLine, blLine);
-      A.append(txt(58, 62, '/BL', { anchor: 'end', bold: true, fill: 'var(--ink)' }), txt(58, 76, 'reference', { anchor: 'end', size: 12.5 }), txt(58, 90, 'bit line', { anchor: 'end', size: 12.5 }));
-      A.append(txt(118, 62, 'BL bit line', { bold: true, fill: 'var(--ink)' }));
+      A.append(txt(62, 62, '/BL', { anchor: 'end', bold: true, fill: 'var(--ink)' }), txt(62, 79, 'reference', { anchor: 'end', size: 12.5 }), txt(62, 96, 'bit line', { anchor: 'end', size: 12.5 }));
+      A.append(txt(118, 65, 'BL bit line', { bold: true, fill: 'var(--ink)' }));
       // word line
       const wlLine = line(122, 96, 336, 96, { 'stroke-width': 2.5 });
-      A.append(wlLine, txt(122, 90, 'word line (WL)', { bold: true, fill: 'var(--ink)' }));
-      const wlV = txt(226, 90, '0 V', { mono: true, fill: 'var(--ink)' });
+      A.append(wlLine, txt(122, 86, 'word line (WL)', { bold: true, fill: 'var(--ink)' }));
+      const wlV = txt(226, 86, '0 V', { mono: true, fill: 'var(--ink)' });
       A.append(wlV);
       // access transistor: gate from the WL, channel between the BL (drain) and the storage node (source)
       const gateWire = line(GX, 96, GX, 130, { 'stroke-width': 2 });
@@ -73,7 +73,7 @@
       const chan = line(138, 138, 174, 138, { 'stroke-width': 3.5, stroke: 'var(--si)', 'stroke-linecap': 'round' });
       A.append(gateWire, gate, chan, line(BLX, 138, 138, 138), line(174, 138, 196, 138), line(196, 138, 196, 162), line(196, 162, 204, 162));
       A.append(svg('circle', { cx: BLX, cy: 138, r: 3, fill: 'var(--muted)' }));
-      A.append(txt(GX, 158, 'access', { anchor: 'middle', size: 12.5 }), txt(GX, 172, 'transistor', { anchor: 'middle', size: 12.5 }), txt(GX, 186, '(buried gate)', { anchor: 'middle', size: 12.5 }));
+      A.append(txt(GX, 157, 'access', { anchor: 'middle', size: 12.5 }), txt(GX, 174, 'transistor', { anchor: 'middle', size: 12.5 }), txt(GX, 191, '(buried gate)', { anchor: 'middle', size: 12.5 }));
       const tState = txt(150, 118, 'OFF', { anchor: 'end', mono: true, size: 12.5, bold: true });
       A.append(tState);
       // storage capacitor drawn as a tank: level = storage-node voltage (full = 1, empty = 0); plate at VDD/2
@@ -84,7 +84,7 @@
       A.append(line(CX0, CY0, CX0, CY1, { 'stroke-width': 3.5, stroke: 'var(--ink)' }), line(CX1, CY0, CX1, CY1, { 'stroke-width': 3.5, stroke: 'var(--si)' }));
       A.append(line(CX0 - 6, CY0 + CH / 2, CX1 + 6, CY0 + CH / 2, { 'stroke-width': 1, 'stroke-dasharray': '3 3' }));
       const floorTick = line(CX0 - 6, CY0, CX1 + 6, CY0, { 'stroke-width': 1.2, stroke: 'var(--bad)', 'stroke-dasharray': '2 2' });
-      A.append(floorTick, line(CX1, 162, 250, 162), line(250, 122, 250, 202, { 'stroke-width': 5, stroke: 'var(--si)', 'stroke-linecap': 'round' }));
+      A.append(floorTick, line(CX1, 162, 250, 162), line(250, 133, 250, 202, { 'stroke-width': 5, stroke: 'var(--si)', 'stroke-linecap': 'round' }));
       const csLbl = txt(215, 126, '', { anchor: 'middle', mono: true, size: 12.5, fill: 'var(--ink)' });
       A.append(txt(215, 110, 'storage capacitor', { anchor: 'middle', size: 12.5, fill: 'var(--ink)' }), csLbl);
       A.append(txt(256, 148, 'plate', { size: 12.5, fill: 'var(--ink)' }), txt(256, 164, 'VDD/2', { size: 12.5, mono: true }), txt(256, 180, '0.55 V', { size: 12.5, mono: true }));
@@ -93,8 +93,8 @@
       const eLbl = txt(170, 226, '', { size: 12 });
       A.append(vsnLbl, eLbl);
       // bit-line voltages
-      const blbV = txt(58, 224, '', { anchor: 'end', mono: true, size: 12.5, fill: 'var(--ink)' }), blV = txt(118, 224, '', { mono: true, size: 12.5, fill: 'var(--ink)', bold: true });
-      A.append(txt(58, 206, '/BL', { anchor: 'end', size: 12 }), txt(118, 206, 'BL', { size: 12 }), blbV, blV);
+      const blbV = txt(62, 224, '', { anchor: 'end', mono: true, size: 12.5, fill: 'var(--ink)' }), blV = txt(118, 224, '', { mono: true, size: 12.5, fill: 'var(--ink)', bold: true });
+      A.append(txt(62, 206, '/BL', { anchor: 'end', size: 12 }), txt(118, 206, 'BL', { size: 12 }), blbV, blV);
       // bit-line parasitic capacitance (plate width grows with C_BL)
       const cblTop = line(0, 242, 0, 242, { 'stroke-width': 3, 'stroke-linecap': 'round' }), cblBot = line(0, 250, 0, 250, { 'stroke-width': 3, 'stroke-linecap': 'round' });
       A.append(line(BLX, 242, 148, 242), cblTop, cblBot, line(148, 250, 148, 260), line(138, 260, 158, 260, { 'stroke-width': 1.5 }), line(142, 264, 154, 264, { 'stroke-width': 1.5 }), line(146, 268, 150, 268, { 'stroke-width': 1.5 }));
@@ -112,8 +112,8 @@
       A.append(saBox, line(BLBX, 298, 72, 298, { 'stroke-width': 1.5 }), inv1, svg('circle', { cx: 97, cy: 298, r: 2.5, fill: 'var(--panel)', stroke: 'var(--ink)', 'stroke-width': 1.5 }), line(100, 298, BLX, 298, { 'stroke-width': 1.5 }));
       A.append(line(BLX, 324, 104, 324, { 'stroke-width': 1.5 }), inv2, svg('circle', { cx: 79, cy: 324, r: 2.5, fill: 'var(--panel)', stroke: 'var(--ink)', 'stroke-width': 1.5 }), line(76, 324, BLBX, 324, { 'stroke-width': 1.5 }));
       const dvLbl = txt(134, 290, '', { mono: true, size: 12.5, bold: true, fill: 'var(--accent)' });
-      const saState = txt(336, 334, 'SA off', { anchor: 'end', mono: true, size: 12.5, fill: 'var(--ink)' });
-      A.append(dvLbl, txt(134, 304, 'sense amplifier', { fill: 'var(--ink)', bold: true, size: 12.5 }), txt(134, 318, 'two cross-coupled inverters', { size: 12 }), saState);
+      const saState = txt(336, 343, 'SA off', { anchor: 'end', mono: true, size: 12.5, fill: 'var(--ink)' });
+      A.append(dvLbl, txt(134, 308, 'sense amplifier', { fill: 'var(--ink)', bold: true, size: 12.5 }), txt(134, 325, 'two cross-coupled inverters', { size: 12 }), saState);
 
       // ================= Panel B: retention chart (log time) + the capacitor drawn to scale (viewBox 340×350) =================
       const B = svg('svg', { class: 'w-svg', viewBox: '0 0 340 350', role: 'img', 'aria-label': 'Chart of the storage-node voltage of a stored 1 versus time on a log axis, with the sense floor and the 64 ms refresh line; beside it the storage capacitor drawn to scale' });
@@ -136,7 +136,7 @@
       B.append(floorLine, floorLbl, curve, retDot, retLbl, nowDot);
       // capacitor to scale: 35 nm wide, height from Cs
       const SX = 300, SBOT = 316, PXPERUM = 96;
-      B.append(txt(SX, 13, 'capacitor,', { anchor: 'middle', size: 12.5, fill: 'var(--ink)', bold: true }), txt(SX, 27, 'to scale', { anchor: 'middle', size: 12.5, fill: 'var(--ink)', bold: true }), txt(SX, 44, '35 nm wide', { anchor: 'middle', size: 11.5 }));
+      B.append(txt(SX, 13, 'capacitor,', { anchor: 'middle', size: 12.5, fill: 'var(--ink)', bold: true }), txt(SX, 31, 'to scale', { anchor: 'middle', size: 12.5, fill: 'var(--ink)', bold: true }), txt(SX, 49, '35 nm wide', { anchor: 'middle', size: 11.5 }));
       B.append(line(SX - 34, SBOT, SX + 34, SBOT, { stroke: 'var(--si)', 'stroke-width': 3 }));
       const pillar = svg('rect', { x: SX - 2, y: SBOT, width: 4, height: 0, fill: 'var(--si)' });
       const pillarLbl1 = txt(SX, 330, '', { anchor: 'middle', mono: true, size: 12.5, fill: 'var(--ink)' }), pillarLbl2 = txt(SX, 346, 'cell 25×38 nm', { anchor: 'middle', size: 11.5 });
@@ -330,7 +330,11 @@
       }
       [csIn, cblIn, leakIn].forEach(i => i.addEventListener('input', onInput));
 
-      el.append(controls, h('div', { class: 'w-grid2' }, A, B), phaseRow, phaseNote, readout, formula,
+      // Each schematic needs a readable line length; two cramped columns clipped the labels.
+      A.style.maxWidth = B.style.maxWidth = '460px';
+      A.style.margin = B.style.margin = '0 auto';
+      const figures = h('div', { class: 'w-grid2', style: { gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: '24px' } }, A, B);
+      el.append(controls, figures, phaseRow, phaseNote, readout, formula,
         h('div', { class: 'w-note' }, 'Model: VDD = 1.1 V (DDR5), plate and precharge at VDD/2, a constant leakage current draining a stored 1 toward the plate level (a stored 0 is drawn as stable: its leakage mostly pulls it further down, which is harmless), and a 60 mV sense floor. Holding runs at 20 ms of cell time per second; the nanosecond-scale precharge, sharing and sensing are each drawn over about a second. The Cs and C_BL symbols are not to scale with each other; the pillar on the right is to scale.'));
       // first frame: a read caught at the end of charge sharing, so the ΔV lean is visible before the amplifier fires
       st.vsn = (st.cs * VDD + st.cbl * VH) / (st.cs + st.cbl); st.bl = st.vsn; st.wl = 1; st.t0 = DUR.share; st.queue = ['sense', 'restore', 'hold'];

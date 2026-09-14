@@ -300,15 +300,22 @@
       function start() { if (!raf && st.playing && visible) raf = requestAnimationFrame(frame); }
       const io = new IntersectionObserver(es => { visible = es.some(e => e.isIntersecting); if (visible) start(); });
       io.observe(el);
-      let lastW = 0;
-      const ro = new ResizeObserver(() => { const w = stackWrap.clientWidth; if (w && w !== lastW) { lastW = w; drawStack(); drawChart(); } });
+      let lastW = 0, layoutFrame = 0;
+      const ro = new ResizeObserver(() => {
+        cancelAnimationFrame(layoutFrame);
+        layoutFrame = requestAnimationFrame(() => {
+          layoutFrame = 0;
+          const w = stackWrap.clientWidth;
+          if (w && w !== lastW) { lastW = w; drawStack(); drawChart(); }
+        });
+      });
       ro.observe(el);
 
       el.append(presets, controls, readout, formula,
         h('div', { class: 'w-grid2', style: { marginTop: '10px' } }, stackWrap, chartWrap), legend,
         h('div', { class: 'w-note' }, 'Each Mo/Si interface reflects only ~0.1–0.2 % because every index is ≈ 1 at EUV; a Bragg mirror spaces ~80 interfaces so those reflections add in phase. The standing wave (|E|², s-polarization) shows its antinodes in the transparent Si, its nodes in the absorbing Mo, and fades out after ~20 bilayers, which is why more than ~50 pairs adds nothing and the peak saturates near 74 %. Detune the wavelength, period or angle and the wave leaks through to the substrate. Ideal model: sharp interfaces, no roughness, no Ru cap, constant optical constants. Real stacks interdiffuse into molybdenum-silicide ramps at each interface, softening the index step, so production mirrors reach ~67–70 % with a ~0.5 nm wide peak.'));
       update(true);
-      return () => { st.playing = false; if (raf) cancelAnimationFrame(raf); raf = 0; io.disconnect(); ro.disconnect(); };
+      return () => { cancelAnimationFrame(layoutFrame); st.playing = false; if (raf) cancelAnimationFrame(raf); raf = 0; io.disconnect(); ro.disconnect(); };
     }
   });
 })();

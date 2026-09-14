@@ -79,7 +79,8 @@
       {
         "glyph": "light",
         "label": "Plasma bulk",
-        "detail": "Charged and neutral reactive species coexist."
+        "detail": "Charged and neutral reactive species coexist.",
+        "variant": "plasma"
       },
       {
         "glyph": "wires",
@@ -229,7 +230,8 @@
     "source": {
       "file": "course/modules/09-etch.md",
       "heading": "Atomic Layer Etching and Selective Removal"
-    }
+    },
+    "returnLabel": "Repeat the surface-reaction cycle only until the target removal"
   },
   {
     "section": "running-an-etch-in-production-endpoint-chamber-matching-cons",
@@ -265,7 +267,8 @@
     "source": {
       "file": "course/modules/09-etch.md",
       "heading": "Running an Etch in Production: Endpoint, Chamber Matching, Consumables"
-    }
+    },
+    "returnLabel": "Recondition the chamber before the next production run"
   },
   {
     "section": "plasma-damage-and-its-mitigation",

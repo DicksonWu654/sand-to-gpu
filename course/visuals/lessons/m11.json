@@ -302,6 +302,7 @@
       "file": "course/modules/11-transistor-architectures.md",
       "heading": "8. Node Timeline, SRAM, and Design Co-Optimization"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "returnLabel": "Circuit results feed back into device and process choices"
   }
 ]

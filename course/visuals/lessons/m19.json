@@ -104,7 +104,8 @@
       "file": "course/modules/19-building-an-nvidia-gpu.md",
       "heading": "Verification: why NVIDIA runs more emulators than anyone"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "returnLabel": "Re-run verification after correcting the design"
   },
   {
     "section": "the-pdk-the-libraries-and-4n",
@@ -256,7 +257,7 @@
   },
   {
     "section": "first-silicon-bring-up-and-respins",
-    "family": "cycle",
+    "family": "flow",
     "title": "First silicon closes the loop between model and hardware",
     "caption": "Bring-up compares the manufactured chip's behavior with its intended operation. A required design change can lead to another mask revision and fabrication cycle.",
     "nodes": [
@@ -395,7 +396,8 @@
       {
         "from": 0,
         "to": 1,
-        "label": "mounted on and connected through"
+        "label": "mounted on and connected through",
+        "undirected": true
       },
       {
         "from": 2,
@@ -449,17 +451,20 @@
       {
         "from": 0,
         "to": 1,
-        "label": "GPU-to-GPU communication"
+        "label": "GPU-to-GPU communication",
+        "bidirectional": true
       },
       {
         "from": 1,
         "to": 2,
-        "label": "board-level links"
+        "label": "board-level links",
+        "bidirectional": true
       },
       {
         "from": 2,
         "to": 3,
-        "label": "system integration"
+        "label": "system integration",
+        "undirected": true
       }
     ],
     "source": {
@@ -540,17 +545,20 @@
       {
         "from": 0,
         "to": 2,
-        "label": "CPU communication"
+        "label": "CPU communication",
+        "bidirectional": true
       },
       {
         "from": 1,
         "to": 2,
-        "label": "GPU communication"
+        "label": "GPU communication",
+        "bidirectional": true
       },
       {
         "from": 2,
         "to": 3,
-        "label": "tray integration"
+        "label": "tray integration",
+        "undirected": true
       }
     ],
     "source": {
@@ -631,17 +639,20 @@
       {
         "from": 0,
         "to": 1,
-        "label": "rack boundary"
+        "label": "rack boundary",
+        "bidirectional": true
       },
       {
         "from": 1,
         "to": 2,
-        "label": "network links"
+        "label": "network links",
+        "bidirectional": true
       },
       {
         "from": 2,
         "to": 3,
-        "label": "cluster communication"
+        "label": "cluster communication",
+        "bidirectional": true
       }
     ],
     "source": {

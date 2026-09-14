@@ -61,7 +61,7 @@
 
       // ---------- shared SVG helpers ----------
       const SANS = 'var(--sans)', MONO = 'var(--mono)';
-      const T = (x, y, s, o = {}) => svg('text', Object.assign({ x, y, 'font-family': o.mono ? MONO : SANS, 'font-size': o.size || (o.mono ? 11 : 11.5), fill: o.fill || 'var(--ink)', 'text-anchor': o.anchor || 'start', 'font-weight': o.bold ? 600 : null }, o.attrs || {}), s);
+      const T = (x, y, s, o = {}) => svg('text', Object.assign({ x, y, 'font-family': o.mono ? MONO : SANS, 'font-size': o.size || 12, fill: o.fill || 'var(--ink)', 'text-anchor': o.anchor || 'start', 'font-weight': o.bold ? 600 : null }, o.attrs || {}), s);
       const L = (x1, y1, x2, y2, o = {}) => svg('line', Object.assign({ x1, y1, x2, y2, stroke: o.stroke || 'var(--muted)', 'stroke-width': o.w || 1 }, o.attrs || {}));
       const R = (x, y, w, hh, fill, o = {}) => svg('rect', Object.assign({ x, y, width: Math.max(0, w), height: Math.max(0, hh), fill }, o));
       const C = (cx, cy, r, fill, o = {}) => svg('circle', Object.assign({ cx, cy, r, fill }, o));
@@ -72,7 +72,7 @@
       const dimArrow = (x, y1, y2, color) => svg('g', null, L(x, y1, x, y2, { stroke: color, w: 1.2 }), L(x - 4, y1, x + 4, y1, { stroke: color, w: 1.2 }), L(x - 4, y2, x + 4, y2, { stroke: color, w: 1.2 }));
       function chip(g, x, y, s, o = {}) { // label on a translucent panel-coloured chip so it stays legible over copper / dielectric
         const t = T(x, y, s, Object.assign({ fill: o.fill || 'var(--ink)' }, o));
-        const wEst = s.length * (o.mono ? 6.8 : 6.2) + 8, x0 = o.anchor === 'middle' ? x - wEst / 2 : o.anchor === 'end' ? x - wEst + 4 : x - 4;
+        const wEst = s.length * (o.mono ? 7.3 : 6.8) + 8, x0 = o.anchor === 'middle' ? x - wEst / 2 : o.anchor === 'end' ? x - wEst + 4 : x - 4;
         g.append(svg('rect', { x: x0, y: y - 11, width: wEst, height: 15, rx: 3, fill: 'var(--panel)', 'fill-opacity': .88 }), t);
         return t;
       }
@@ -83,7 +83,7 @@
       let TG = null;
       function buildTool() {
         tool.innerHTML = ''; TG = {};
-        const split = !narrow, SW = split ? Math.round(W * 0.6) : W, HS = 228, TH = 232;
+        const split = W >= 920, SW = split ? Math.round(W * 0.6) : W, HS = 228, TH = 232;
         const HT = split ? Math.max(HS, TH) : HS + TH;
         tool.setAttribute('viewBox', `0 0 ${W} ${HT}`);
         buildSide(SW);
@@ -161,20 +161,20 @@
         wafer.append(C(0, 0, Rw + Rp * .035, 'var(--panel2)', { stroke: 'var(--line2)' }), C(0, 0, Rw, 'var(--si)', { 'fill-opacity': .9 }));
         const spin = L(0, 0, Rw * .92, 0, { stroke: 'var(--panel)', w: 2, attrs: { 'stroke-opacity': .8 } }); wafer.append(spin, C(0, 0, 3, 'var(--panel)'));
         g.append(wafer);
-        const rpmT = T(cx - Rp - 5, wy + 20, '', { anchor: 'end', mono: true, fill: 'var(--muted)' });
-        g.append(T(cx - Rp - 5, wy - 8, 'wafer', { anchor: 'end', bold: true }), T(cx - Rp - 5, wy + 6, '300 mm', { anchor: 'end', fill: 'var(--muted)' }), rpmT);
+        const rpmT = T(Math.max(x0 + 66, cx - Rp - 5), wy + 20, '', { anchor: 'end', mono: true, fill: 'var(--muted)' });
+        g.append(T(Math.max(x0 + 66, cx - Rp - 5), wy - 8, 'wafer', { anchor: 'end', bold: true }), T(Math.max(x0 + 66, cx - Rp - 5), wy + 6, '300 mm', { anchor: 'end', fill: 'var(--muted)' }), rpmT);
         // conditioner: diamond disk on an arm that sweeps the pad radius
         const pvx = cx + Rp * .6, pvy = cy + Rp + 14, Larm = Rp * 1.05;
         const arm = L(pvx, pvy, pvx, pvy - Larm, { stroke: 'var(--muted)', w: 4 }); g.append(arm);
         const disk = svg('g'); disk.append(C(0, 0, Rp * .14, 'var(--line2)', { stroke: 'var(--muted)' }));
         for (let i = 0; i < 6; i++) { const a = i * 60 * D2R; disk.append(C(Rp * .07 * Math.cos(a), Rp * .07 * Math.sin(a), 1.2, 'var(--ink)')); }
         g.append(disk, C(pvx, pvy, 5, 'var(--muted)'));
-        g.append(T(pvx + 10, pvy + 4, 'conditioner', { fill: 'var(--muted)' }));
+        g.append(T(x0 + TW - 8, y0 + TH - 22, 'conditioner', { anchor: 'end', fill: 'var(--muted)' }));
         // slurry arm from the top right to the platen centre
         const sx0 = cx + Rp * .75, sy0 = cy - Rp - 4, sx1 = cx + Rp * .3, sy1 = cy - Rp * .3;
         g.append(L(sx0, sy0, sx1, sy1, { stroke: 'var(--muted)', w: 4 }));
         const drop = C(sx1, sy1 + 4, 3, 'var(--si)'); g.append(drop);
-        g.append(T(sx0 + 6, y0 + 18, 'slurry', { fill: 'var(--si)', bold: true }));
+        g.append(T(x0 + TW - 8, y0 + 18, 'slurry', { anchor: 'end', fill: 'var(--si)', bold: true }));
         const platLab = T(x0 + 4, y0 + TH - 6, '', { fill: 'var(--muted)' }); g.append(platLab);
         TG.top = { cx, cy, Rp, off, Rw, wa, wx, wy, platG, sensor, wafer, spin, rpmT, pvx, pvy, Larm, arm, disk, drop, platLab };
       }
@@ -357,7 +357,8 @@
       // ---------- layout / animation / lifecycle ----------
       let lastW = 0;
       function relayout() {
-        const cw = el.clientWidth || 700;
+        const style = getComputedStyle(el);
+        const cw = Math.floor(el.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight)) || 700;
         if (cw === lastW) return;
         lastW = cw; W = Math.max(300, cw); narrow = W < 520;
         buildTool(); buildXS(); render();

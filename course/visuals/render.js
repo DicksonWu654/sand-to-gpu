@@ -7,12 +7,12 @@ const esc = s => String(s || '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;',
 function glyph(name, variant) {
  const aliases={
  'logic':'planar','power':'planar','defect':'void','contact':'via','floating-gate':'nand','vertical-channel':'3d-nand','select':'access',
- 'gate':'gate','dielectric':'thin','isolation':'thin','charge-trap':'nand','capacitive':'capacitor','breakdown':'void','cross-section':'thin','high-k':'thin','tier-interface':'hybrid-bond','interface':'thin','narrow-interface':'narrow','wide-interface':'wide','superlattice':'superlattice','strained':'strain','source-drain':'source-drain',
- 'line':'wide','bit-line':'wide','word-line':'narrow','word-lines':'comb','electrode':'narrow','interposer':'cowos-s','substrate':'substrate','bump':'microbump','bga':'microbump','bridge':'cowos-l','die-to-die':'cowos-s','fanout':'fan-out','connector':'socket','hybrid-pads':'hybrid-bond','leadframe':'leadframe','netlist':'network','parallel':'comb','scan-chain':'via-chain','switch':'network','sram':'sram','board':'substrate','socket':'socket',
+ 'gate':'gate','dielectric':'thin','isolation':'thin','charge-trap':'trap-film','capacitive':'capacitor','breakdown':'void','cross-section':'thin','high-k':'thin','tier-interface':'hybrid-bond','interface':'thin','narrow-interface':'narrow','wide-interface':'wide','superlattice':'superlattice','strained':'strain','source-drain':'source-drain',
+ 'line':'wide','bit-line':'wide','word-line':'narrow','word-lines':'comb','electrode':'narrow','interposer':'routing-plane','substrate':'substrate','bump':'microbump','bga':'board-balls','bridge':'cowos-l','die-to-die':'cowos-s','fanout':'fan-out','connector':'socket','hybrid-pads':'hybrid-bond','leadframe':'leadframe','netlist':'network','parallel':'comb','scan-chain':'via-chain','switch':'network','sram':'sram','board':'substrate','socket':'socket',
  'backgrind':'thin','tsv':'via','via-trench':'damascene','replacement-gate':'gaa','selective-release':'released','subtractive':'anisotropic','dicing':'grid','finfet':'finfet','gaa':'gaa',
  'aligned':'aligned','offset':'offset','layout':'grid','pattern':'grid','reference':'aligned','reticle':'grid','euv':'reflective',
  'core':'substrate','mold':'mold','hbm':'hbm','panel':'substrate','sxm':'substrate','carrier':'substrate','cluster':'cluster','random':'random','edge':'edge','test':'grid','multi-site':'grid','round':'round','wafer-level':'round','warped':'warped',
- 'instrument':'instrument','single-site':'probe','bright-field':'bright-field','dark-field':'dark-field','fiber':'wide','incident':'incident','scatter':'dark-field','gpu':'gpu','cpu':'cpu','harvest':'grid','large':'large','small':'small','logic-hbm':'cowos-s','3d-nand-stacked':'3d-nand','repair':'repair','thermal':'thermal','rack':'rack','server':'server','tray':'tray',
+ 'instrument':'instrument','single-site':'probe','bright-field':'bright-field','dark-field':'dark-field','fiber':'wide','incident':'incident','scatter':'dark-field','gpu':'gpu','cpu':'cpu','harvest':'grid','large':'large','small':'small','logic-hbm':'cowos-s','3d-nand-stacked':'joined-tiers','repair':'repair','thermal':'thermal','rack':'rack','server':'server','tray':'tray',
  };
  if(name==='clean'&&variant==='planar')variant='thin';
  variant=aliases[variant]||variant;
@@ -27,6 +27,20 @@ function glyph(name, variant) {
   return out;
  }
  const variants={
+ 'ingot-slice':'<path d="M-32-25H29Q44 0 29 25H-32Z"/><ellipse cx="-32" cy="0" rx="10" ry="25"/><path d="M-17-25Q3 0-17 25M-4-25Q16 0-4 25M9-25Q29 0 9 25M22-25Q42 0 22 25" class="sf-fine"/>',
+ 'notch':'<path d="M-5 35A36 36 0 1 1 5 35L0 27Z"/>',
+ 'sharp-edge':'<path d="M-40-21H35V21H-40"/><path d="M35-21 44-30M35 21 44 30" class="sf-fine"/>',
+ 'round-edge':'<path d="M-40-21H14Q39-21 39 0Q39 21 14 21H-40"/>',
+ 'soi':'<path d="M-40-24H40V-8H-40ZM-40-8H40V5H-40ZM-40 5H40V30H-40Z"/><path d="M-39-2H39" class="sf-hot"/>',
+ 'routing-plane':'<path d="M-42-15H42V20H-42Z"/><path d="M-32-7H-5V10H32M-23-15V20M23-15V20" class="sf-hot"/>',
+ 'board-balls':'<path d="M-40-22H40V-7H-40Z"/><circle cx="-26" cy="3" r="10" class="sf-accent"/><circle cx="0" cy="3" r="10" class="sf-accent"/><circle cx="26" cy="3" r="10" class="sf-accent"/>',
+ 'trap-film':'<path d="M-40 21H40V34H-40ZM-23-30H23V-15H-23Z"/><path d="M-27-7H27V7H-27Z" class="sf-accent"/><circle cx="-16" cy="0" r="2"/><circle cx="-3" cy="0" r="2"/><circle cx="13" cy="0" r="2"/><path d="M-34 16H-24V25H-34ZM24 16H34V25H24Z"/>',
+ 'joined-tiers':'<path d="M-35-34H35V-22H-35ZM-35-17H35V-5H-35ZM-35 5H35V17H-35ZM-35 22H35V34H-35Z"/><path d="M-7-40H7V-3H-7ZM-7 3H7V40H-7Z" class="sf-accent"/><path d="M-7-3 7 3M7-3-7 3" class="sf-hot"/>',
+ 'wavelength':'<path d="M-44 0Q-33-30-22 0T0 0T22 0T44 0" class="sf-hot"/><path d="M-33 29H11M-33 23V35M11 23V35" class="sf-fine"/>',
+ 'immersion':'<path d="M-33-27Q0 5 33-27Z"/><path d="M-33-5H33V20H-33Z" class="sf-accent"/><path d="M-40 22H40V32H-40Z"/><path d="M-14-32 0 20 14-32" class="sf-hot"/>',
+ 'plasma':'<circle cx="0" cy="0" r="17" class="sf-accent"/><path d="M-41 0H-23M23 0H41M0-41V-23M0 23V41M-30-30-17-17M17 17 30 30M-30 30-17 17M17-17 30-30" class="sf-hot"/>',
+ 'foup':'<path d="M-33-29H33V33H-33Z"/><path d="M-24-21H24V24H-24ZM-24-10H24M-24 0H24M-24 10H24M-12-29V-38H12V-29" class="sf-fine"/>',
+ 'gettering':'<path d="M-38-28H38V28H-38Z"/><circle cx="-17" cy="14" r="5"/><circle cx="4" cy="18" r="5"/><circle cx="22" cy="10" r="5"/><path d="M-17-20V4M4-20V8M22-20V0" class="sf-hot"/>',
  'tensile':'<path d="M-23-20H23V20H-23Z"/><path d="M-23 0H23M0-20V20" class="sf-fine"/><path d="M-26 0H-44M-37-7-44 0-37 7M26 0H44M37-7 44 0 37 7" class="sf-hot"/>',
  'compressive':'<path d="M-23-20H23V20H-23Z"/><path d="M-23 0H23M0-20V20" class="sf-fine"/><path d="M-44 0H-26M-33-7-26 0-33 7M44 0H26M33-7 26 0 33 7" class="sf-hot"/>',
  'mass-analyzer':'<path d="M-12-32H18V-14H-12ZM-12 14H18V32H-12Z"/><path d="M-42 0H-6Q19 0 26 24L34 42M28 31 34 42 38 31" class="sf-hot"/><path d="M6 0H43" class="sf-fine"/>',
@@ -62,7 +76,7 @@ function glyph(name, variant) {
  'stochastic':'<path d="M-36-25-10-25-15-15-7-3-14 8-9 26H-36ZM9-25H36V26H10L15 12 8 1 14-12Z"/>',
  'via-chain':'<path d="M-40-20H-22V20H-4V-20H14V20H32V-20H42" class="sf-hot"/><path d="M-38-26H-18M-8 26H18M28-26H42"/>',
  'fan-out':'<path d="M-20-28H20V-6H-20Z" class="sf-accent"/><path d="M-15-6V5L-37 23V34M-5-6V13L-14 23V34M5-6V13L14 23V34M15-6V5L37 23V34"/>',
- 'microbump':'<path d="M-40-25H40V-11H-40ZM-40 11H40V25H-40Z"/><circle cx="-25" cy="0" r="7" class="sf-accent"/><circle cx="0" cy="0" r="7" class="sf-accent"/><circle cx="25" cy="0" r="7" class="sf-accent"/>',
+ 'microbump':'<path d="M-40-25H40V-11H-40ZM-40 11H40V25H-40Z"/><circle cx="-25" cy="0" r="11" class="sf-accent"/><circle cx="0" cy="0" r="11" class="sf-accent"/><circle cx="25" cy="0" r="11" class="sf-accent"/>',
  'substrate':'<path d="M-40-20H40V25H-40Z"/><path d="M-40-8H-14V12H16V-8H40M-30-20V-8M30-8V25" class="sf-hot"/>',
  'leadframe':'<path d="M-18-15H18V15H-18Z" class="sf-accent"/><path d="M-40-12H-18M-40 0H-18M-40 12H-18M18-12H40M18 0H40M18 12H40"/>',
  'socket':'<path d="M-36-28H36V28H-36Z"/><path d="M-23-16H23V16H-23Z" class="sf-accent"/><path d="M-30-36V-28M-15-36V-28M0-36V-28M15-36V-28M30-36V-28"/>',
@@ -99,7 +113,7 @@ function glyph(name, variant) {
  'rack':'<path d="M-27-38H27V38H-27ZM-20-28H20V-13H-20ZM-20-7H20V8H-20ZM-20 14H20V29H-20Z"/>',
 
  'planar':'<path d="M-40 14H40V34H-40Z"/><path d="M-12-18H12V8H-12Z" class="sf-accent"/><path d="M-35 9H-16V21H-35ZM16 9H35V21H16Z"/><path d="M-12 10H12" class="sf-hot"/>',
- 'finfet':'<path d="M-40 27H40V36H-40Z"/><path d="M-5-25H8V27H-5Z"/><path d="M-27 17V-15H-10V10H13V-15H30V17Z" class="sf-accent"/>',
+ 'finfet':'<path d="M-40 27H40V36H-40Z"/><path d="M-6-18H6V27H-6Z"/><path d="M-24 20V-35H24V20H13V-25H-13V20Z" class="sf-accent"/>',
  'gaa':'<rect x="-33" y="-32" width="66" height="64" rx="12" class="sf-accent"/><rect x="-24" y="-24" width="48" height="12" rx="5"/><rect x="-24" y="-5" width="48" height="12" rx="5"/><rect x="-24" y="14" width="48" height="12" rx="5"/>',
  'forksheet':'<rect x="-39" y="-30" width="33" height="60" rx="7" class="sf-accent"/><rect x="6" y="-30" width="33" height="60" rx="7" class="sf-accent"/><path d="M-2-38H2V38H-2Z"/><path d="M-33-17H-12V-9H-33ZM12-17H33V-9H12ZM-33 9H-12V17H-33ZM12 9H33V17H12Z"/>',
  'cfet':'<rect x="-32" y="-38" width="64" height="31" rx="7" class="sf-accent"/><rect x="-32" y="7" width="64" height="31" rx="7"/><path d="M-22-27H22V-18H-22ZM-22 18H22V27H-22Z"/><path d="M0-7V7" class="sf-hot"/>',
@@ -113,7 +127,7 @@ function glyph(name, variant) {
  'cowos-s':'<path d="M-43 23H43V34H-43ZM-40 6H40V16H-40Z"/><path d="M-36-15H-4V6H-36ZM10-28H35V6H10Z" class="sf-accent"/><path d="M-30 11H30M-22 16V23M22 16V23" class="sf-hot"/>',
  'cowos-r':'<path d="M-43 23H43V34H-43ZM-40 6H40V16H-40Z"/><path d="M-36-15H-4V6H-36ZM10-28H35V6H10Z" class="sf-accent"/><path d="M-30 8H-10V14H10V8H30M-25 14V23M25 14V23" class="sf-hot"/>',
  'cowos-l':'<path d="M-43 23H43V34H-43ZM-40 6H40V16H-40Z"/><path d="M-36-15H-4V6H-36ZM10-28H35V6H10Z" class="sf-accent"/><path d="M-14 5H20V13H-14Z"/><path d="M-10 9H15M-27 16V23M27 16V23" class="sf-hot"/>',
- 'hybrid-bond':'<path d="M-36-28H36V-2H-36ZM-36 2H36V28H-36Z"/><path d="M-24-7H-14V7H-24ZM-5-7H5V7H-5ZM14-7H24V7H14Z" class="sf-accent"/>',
+ 'hybrid-bond':'<path d="M-36-28H36V0H-36ZM-36 0H36V28H-36Z"/><path d="M-24-12H-14V12H-24ZM-5-12H5V12H-5ZM14-12H24V12H14Z" class="sf-accent"/><path d="M-36 0H36" class="sf-fine"/>',
  'wide':'<path d="M-40-17H40V17H-40Z"/><path d="M-33 0H33" class="sf-hot"/>',
  'narrow':'<path d="M-40-5H40V5H-40Z"/><path d="M-33 0H33" class="sf-hot"/>',
  'via':'<path d="M-40-25H15V-15H-40ZM-15 15H40V25H-15ZM-5-15H5V15H-5Z" class="sf-accent"/>',
@@ -180,9 +194,9 @@ function render(f,key) {
  const legend=`<ol class="sf-legend">${f.nodes.map(n=>`<li><strong>${esc(n.label)}</strong><span>${esc(n.detail)}</span></li>`).join('')}</ol>`;
  const text=(x,y,s)=>{let lines=[''];for(const w of s.split(' ')){if((lines.at(-1)+' '+w).trim().length>22)lines.push(w);else lines[lines.length-1]+=(lines.at(-1)?' ':'')+w;}return `<text x="${x}" y="${y}" class="sf-label">${lines.map((l,i)=>`<tspan x="${x}" dy="${i?24:0}">${esc(l)}</tspan>`).join('')}</text>`;};
  let drawing='',detail='';
- if(f.scene){const result=require('./scenes').scene(f.scene,marker);drawing=svg(result.art,700,result.height);detail=legend;}
+ if(f.scene){const result=require('./scenes').scene(f.scene,marker);drawing=svg(result.art,700,result.height);detail=(result.key?`<ol class="sf-scene-key">${result.key.map((label,i)=>`<li><b>${i+1}</b><span>${esc(label)}</span></li>`).join('')}</ol>`:legend);}
  else if(['compare','apparatus','flow','cycle'].includes(f.family)) {
-  drawing=`<ol class="sf-legend sf-components sf-count-${count} ${['flow','cycle'].includes(f.family)?'sf-process':''}">${f.nodes.map(item).join('')}</ol>${f.family==='cycle'?'<div class="sf-cycle-return"><span>↶</span> Repeat / return path</div>':''}`;
+  drawing=`<ol class="sf-legend sf-components sf-count-${count} ${['flow','cycle'].includes(f.family)?'sf-process':''}">${f.nodes.map(item).join('')}</ol>${f.family==='cycle'?`<div class="sf-cycle-return"><span>↶</span> ${esc(f.returnLabel||'Feedback or repetition as described below')}</div>`:''}`;
  } else if(f.family==='layers') {
   const row=90,height=count*row+16,wiring=f.nodes.filter(n=>n.glyph==='wires').length>=3;
   let art='';
@@ -191,9 +205,12 @@ function render(f,key) {
    const color=`sf-object-${i%4}`;
    // One contiguous, vertically ordered section. Material motifs occupy the layer instead of a stamped icon.
    art+=`<g class="sf-object ${color}"><path d="M12 ${y}H320V${y+row}H12Z"/></g>`;
-   if(['microbump','bga','bump','flip-chip','hybrid-bond','hybrid-pads'].includes(n.variant)){
+   if(n.variant==='gettering'){
+    for(const x of [55,100,148,199,252,285])art+=`<circle cx="${x}" cy="${y+62+(x%3)*5}" r="6" class="sf-melt"/>`;
+    art+=`<path d="M100 ${y+15}V${y+47}M199 ${y+15}V${y+47}" class="sf-hot"/>`;
+   }else if(['microbump','bga','bump','flip-chip','hybrid-bond','hybrid-pads'].includes(n.variant)){
     art+=`<path d="M25 ${y+19}H307M25 ${y+70}H307" class="sf-trace"/>`;
-    for(let x=50;x<303;x+=50)art+=`<path d="M${x} ${y+25}V${y+64}" class="sf-via"/>`;
+    for(let x=50;x<303;x+=50)art+=['hybrid-bond','hybrid-pads'].includes(n.variant)?`<path d="M${x-7} ${y+19}h14v51h-14Z" class="sf-accent"/>`:`<circle cx="${x}" cy="${y+45}" r="24" class="sf-melt"/>`;
    }else if(n.glyph==='mask'){
     for(let x=25;x<300;x+=75)art+=`<path d="M${x} ${y+20}h47v50h-47Z" class="sf-solid"/>`;
    }else if(n.glyph==='clean'){
@@ -202,10 +219,10 @@ function render(f,key) {
     [75,166,257].forEach(x=>{art+=`<g transform="translate(${x},${y+44}) scale(.78)" class="sf-object ${color}">${glyph(n.glyph,n.variant)}</g>`;});
    }else if(n.glyph==='gas'){
     art+=`<path d="M25 ${y+22}H125V${y+63}H303M25 ${y+65}H71V${y+41}H231V${y+17}H303" class="sf-trace"/>`;
-   }else if(n.glyph==='wires'){
+   }else if(n.glyph==='wires'||['substrate','core','interposer'].includes(n.variant)){
     art+=`<path d="M30 ${y+23}H113V${y+60}H285M48 ${y+64}H76V${y+18}H302" class="sf-trace"/>`;
-    if(wiring&&i<count-1)art+=`<path d="M113 ${y+60}V${y+row+23}M285 ${y+60}V${y+row+60}" class="sf-via"/>`;
-   }else if(n.glyph==='crystal'||n.glyph==='wafer'||n.variant==='substrate'){
+    if(wiring&&i<count-1)art+=`<path d="M113 ${y+60}V${y+row+23}M76 ${y+18}V${y+row+64}" class="sf-via"/>`;
+   }else if(n.glyph==='crystal'||n.glyph==='wafer'){
     for(let a=35;a<305;a+=30)for(let b=y+18;b<y+row-8;b+=24)art+=`<circle cx="${a}" cy="${b}" r="2" class="sf-solid sf-grain"/>`;
    }else if(n.glyph==='transistor'){
     art+=`<path d="M22 ${y+61}H310" class="sf-fine"/>`;
@@ -226,16 +243,17 @@ function render(f,key) {
  }else if(f.family==='scale'){
   drawing=`<ol class="sf-legend sf-scale-levels">${f.nodes.map((n,i)=>({n,i})).reverse().map(({n,i},j)=>`<li style="--level:${j}">${icon(n,i)}<div><strong>${esc(n.label)}</strong><span>${esc(n.detail)}</span></div></li>`).join('')}</ol>`;
  }else if(f.family==='network'){
-  const pts=f.nodes.map((n,i)=>({x:380+230*Math.cos(-Math.PI/2+i*2*Math.PI/count),y:190+130*Math.sin(-Math.PI/2+i*2*Math.PI/count)}));let art='';
-  f.edges.forEach(e=>{const a=pts[e.from],b=pts[e.to],d=Math.hypot(b.x-a.x,b.y-a.y),dx=(b.x-a.x)/d,dy=(b.y-a.y)/d;art+=arrow(a.x+dx*53,a.y+dy*53,b.x-dx*58,b.y-dy*58);});
-  pts.forEach((p,i)=>art+=`<g transform="translate(${p.x},${p.y})" class="sf-object sf-object-${i%4}">${glyph(f.nodes[i].glyph,f.nodes[i].variant)}</g>${text(p.x,p.y+62,f.nodes[i].label)}`);
-  drawing=svg(art,760,430);detail=legend;
+  // Each authored connection receives its own lane. This keeps reciprocal actions
+  // separate and prevents a line from passing through another node or its label.
+  const endpoint=(index)=>`<div class="sf-endpoint">${icon(f.nodes[index],index)}<strong>${esc(f.nodes[index].label)}</strong></div>`;
+  drawing=`<ol class="sf-connections">${f.edges.map(e=>`<li>${endpoint(e.from)}<div class="sf-connection"><span>${esc(e.label||'connects')}</span><svg viewBox="0 0 100 24" aria-hidden="true"><path d="M${e.bidirectional?8:0} 12H92${e.undirected?'':'M82 3 92 12 82 21'}${e.bidirectional?'M18 3 8 12 18 21':''}" class="sf-link"/></svg></div>${endpoint(e.to)}</li>`).join('')}</ol>`;detail=legend;
  }
+
  const terminalVariants=f.nodes.map(n=>n.variant);
  if(!f.scene&&['source','gate','channel','drain'].every(v=>terminalVariants.includes(v))) {
-  drawing=svg(`<g class="sf-object"><path d="M70 176H630V296H70Z"/><path d="M105 159H241V225H105ZM459 159H595V225H459Z" class="sf-accent"/><path d="M273 68H427V139H273Z" class="sf-accent"/><path d="M257 148H443V159H257Z"/><path d="M241 179H459V193H241Z" class="sf-accent"/><path d="M172 103V159M527 103V159M350 30V68"/><path d="M173 206H526M509 194 526 206 509 218M295 160V175M350 160V175M405 160V175" class="sf-hot"/></g>${text(172,91,'Source')}${text(350,22,'Gate')}${text(350,264,'Channel')}${text(527,91,'Drain')}`,700,320);detail=legend;
+  drawing=svg(`<g class="sf-object"><path d="M70 176H630V296H70Z"/><path d="M105 159H241V225H105ZM459 159H595V225H459Z" class="sf-accent"/><path d="M273 68H427V139H273Z" class="sf-accent"/><path d="M257 148H443V159H257Z"/><path d="M241 179H459V193H241Z" class="sf-accent"/><path d="M172 103V159M527 103V159M350 30V68"/><path d="M173 206H526M509 194 526 206 509 218M295 160V175M350 160V175M405 160V175" class="sf-hot"/></g>${text(172,91,'Source')}${text(350,22,'Gate')}${text(350,264,'Channel')}${text(527,91,'Drain')}`,700,320).replace('viewBox="0 0 700 320"','viewBox="0 -18 700 338"');detail=legend;
  }
- const relation=(f.edges||[]).filter(e=>e.label).map(e=>`<li><span>${esc(f.nodes[e.from].label)} → ${esc(f.nodes[e.to].label)}</span> ${esc(e.label)}</li>`).join('');
+ const relation=(f.family==='network'&&!terminalVariants.includes('channel')?[]:(f.edges||[])).filter(e=>e.label).map(e=>`<li><span>${esc(f.nodes[e.from].label)} → ${esc(f.nodes[e.to].label)}</span> ${esc(e.label)}</li>`).join('');
  const familyLabel=f.scene?'APPARATUS STUDY':({layers:'CROSS-SECTION',branch:'CONVERGENCE',compare:'SIDE BY SIDE',apparatus:'COMPONENT STUDY',scale:'SYSTEM LEVELS',network:'CONNECTIONS',flow:'PROCESS',cycle:'CYCLE'}[f.family]);
  return `<figure class="section-figure sf-${f.family}${f.scene?' sf-scene sf-scene-'+f.scene:''}" data-section-figure="${esc(f.section)}" aria-labelledby="${id}-title"><div class="sf-eyebrow">VISUAL EXPLANATION <span>·</span> ${familyLabel}</div><h3 id="${id}-title" class="sf-title">${esc(f.title)}</h3><div class="sf-drawing">${drawing}</div>${detail}${relation?`<ul class="sf-relations">${relation}</ul>`:''}<figcaption>${esc(f.caption)}${f.note?` <span class="sf-note">${esc(f.note)}</span>`:''}</figcaption></figure>`;
 }

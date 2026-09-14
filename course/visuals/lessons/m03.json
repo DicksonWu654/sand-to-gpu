@@ -139,7 +139,7 @@
         "glyph": "etch",
         "label": "Machine the notch",
         "detail": "A physical reference is cut into the crystal.",
-        "variant": "edge"
+        "variant": "notch"
       },
       {
         "glyph": "wafer",
@@ -173,7 +173,8 @@
       {
         "glyph": "wafer",
         "label": "Separated slices",
-        "detail": "Discs emerge between neighboring cuts."
+        "detail": "Discs emerge between neighboring cuts.",
+        "variant": "ingot-slice"
       },
       {
         "glyph": "material",
@@ -224,12 +225,14 @@
       {
         "glyph": "wafer",
         "label": "Sharp as-cut corner",
-        "detail": "A fragile edge can chip and start a crack."
+        "detail": "A fragile edge can chip and start a crack.",
+        "variant": "sharp-edge"
       },
       {
         "glyph": "etch",
         "label": "Profiled edge",
-        "detail": "Controlled rounding removes the vulnerable geometry."
+        "detail": "Controlled rounding removes the vulnerable geometry.",
+        "variant": "round-edge"
       },
       {
         "glyph": "heat",
@@ -326,7 +329,8 @@
     "source": {
       "file": "course/modules/03-ingot-to-wafer.md",
       "heading": "Polishing I: Double-Side Polishing (DSP)"
-    }
+    },
+    "returnLabel": "Freshly exposed silicon reacts again while polishing continues"
   },
   {
     "section": "polishing-ii-final-front-side-mirror-polish-and-the-edge",
@@ -514,7 +518,8 @@
       {
         "glyph": "film",
         "label": "SOI wafer",
-        "detail": "A buried insulating layer separates device silicon from the handle."
+        "detail": "A buried insulating layer separates device silicon from the handle.",
+        "variant": "soi"
       }
     ],
     "edges": [],
@@ -554,7 +559,8 @@
     "source": {
       "file": "course/modules/03-ingot-to-wafer.md",
       "heading": "Test, Monitor, and Reclaim Wafers"
-    }
+    },
+    "returnLabel": "Only wafers that pass reclaim qualification return to service"
   },
   {
     "section": "packaging-and-shipping",
@@ -570,7 +576,8 @@
       {
         "glyph": "package",
         "label": "Shipping container",
-        "detail": "A FOSB protects wafers during transportation."
+        "detail": "A FOSB protects wafers during transportation.",
+        "variant": "foup"
       },
       {
         "glyph": "queue",
@@ -580,7 +587,8 @@
       {
         "glyph": "clean",
         "label": "Fab carrier",
-        "detail": "A FOUP supports controlled movement and tool docking."
+        "detail": "A FOUP supports controlled movement and tool docking.",
+        "variant": "foup"
       }
     ],
     "edges": [],
@@ -653,6 +661,7 @@
     "source": {
       "file": "course/modules/03-ingot-to-wafer.md",
       "heading": "Economics and Market Structure"
-    }
+    },
+    "returnLabel": "Capacity and inventory decisions affect later production"
   }
 ]

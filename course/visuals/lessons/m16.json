@@ -140,7 +140,8 @@
       "file": "course/modules/16-packaging-fundamentals.md",
       "heading": "Leadframes and the Mass Market"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "scene": "leadframe-section"
   },
   {
     "section": "molding-marking-ball-attach-lids-singulation",
@@ -245,7 +246,7 @@
   },
   {
     "section": "package-reliability-and-qualification",
-    "family": "cycle",
+    "family": "flow",
     "title": "Stress the interfaces, inspect the consequence",
     "caption": "Package qualification examines how materials and connections respond to environmental and operating stress.",
     "nodes": [

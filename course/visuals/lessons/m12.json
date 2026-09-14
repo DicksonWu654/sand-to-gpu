@@ -72,7 +72,8 @@
       "file": "course/modules/12-interconnect-beol.md",
       "heading": "Anatomy of the Metal Stack"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "scene": "interconnect-section"
   },
   {
     "section": "from-aluminum-to-copper",

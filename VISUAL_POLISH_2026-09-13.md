@@ -1,5 +1,7 @@
 # Second visual refinement
 
+> Historical validation record. The subsequent diagram audit found scientific drawing errors and internal SVG clipping that these passing outer-bound checks did not detect. See `DIAGRAM_AUDIT_2026-09-13.md` for the corrective pass and its review scope.
+
 This pass builds on signed commit `0de5ea2` and the first atlas refactor. It preserves the approved visual identity while improving the drawings, chapter openings, reading details and interactive labs.
 
 ## Delivered

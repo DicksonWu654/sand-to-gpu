@@ -17,12 +17,13 @@
       {
         "label": "Recovered silicon",
         "detail": "Metallurgical silicon remains too contaminated for a chip wafer.",
-        "glyph": "crystal"
+        "glyph": "material"
       }
     ],
     "edges": [],
     "note": "Conceptual schematic; geometry is not to scale.",
-    "section": "1-the-useful-ingredient-in-the-rock"
+    "section": "1-the-useful-ingredient-in-the-rock",
+    "scene": "arc-furnace"
   },
   {
     "family": "flow",
@@ -47,12 +48,14 @@
       {
         "label": "Polysilicon",
         "detail": "Deposit purified silicon onto a solid growth surface.",
-        "glyph": "crystal"
+        "glyph": "crystal",
+        "variant": "polycrystal"
       }
     ],
     "edges": [],
     "note": "Conceptual schematic; geometry is not to scale.",
-    "section": "2-purification-works-by-changing-the-form-of-silicon"
+    "section": "2-purification-works-by-changing-the-form-of-silicon",
+    "scene": "siemens"
   },
   {
     "family": "apparatus",
@@ -62,22 +65,26 @@
       {
         "label": "Crucible and melt",
         "detail": "Quartz contains the molten silicon.",
-        "glyph": "furnace"
+        "glyph": "furnace",
+        "variant": "cz-puller"
       },
       {
         "label": "Seed contact",
         "detail": "An existing ordered crystal establishes the orientation.",
-        "glyph": "crystal"
+        "glyph": "crystal",
+        "variant": "lattice"
       },
       {
         "label": "Growing ingot",
         "detail": "Pulling and thermal control maintain controlled solidification.",
-        "glyph": "crystal"
+        "glyph": "crystal",
+        "variant": "cz-puller"
       }
     ],
     "edges": [],
     "note": "Conceptual schematic; geometry is not to scale.",
-    "section": "3-growing-one-crystal-instead-of-freezing-a-lump"
+    "section": "3-growing-one-crystal-instead-of-freezing-a-lump",
+    "scene": "cz-puller"
   },
   {
     "family": "layers",
@@ -98,7 +105,8 @@
       {
         "label": "Bulk collection sites",
         "detail": "Selected sites collect unwanted impurities away from the devices.",
-        "glyph": "material"
+        "glyph": "material",
+        "variant": "gettering"
       }
     ],
     "edges": [],
@@ -113,7 +121,8 @@
       {
         "label": "Slice",
         "detail": "Divide the ingot; the cutting gap consumes silicon.",
-        "glyph": "crystal"
+        "glyph": "crystal",
+        "variant": "ingot-slice"
       },
       {
         "label": "Correct geometry",
@@ -123,7 +132,8 @@
       {
         "label": "Polish",
         "detail": "Produce the required smooth, flat surface.",
-        "glyph": "film"
+        "glyph": "film",
+        "variant": "thin"
       },
       {
         "label": "Clean",
@@ -159,7 +169,8 @@
       {
         "label": "Protect",
         "detail": "Maintain cleanliness during storage and delivery.",
-        "glyph": "wafer"
+        "glyph": "wafer",
+        "variant": "foup"
       }
     ],
     "edges": [],

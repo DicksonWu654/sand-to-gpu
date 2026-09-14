@@ -465,7 +465,8 @@
       "file": "course/modules/14-wafer-sort-and-test.md",
       "heading": "Adaptive Test and Data Analytics"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "returnLabel": "New evidence updates the next test plan, subject to coverage requirements"
   },
   {
     "section": "test-data-stdf-and-the-loop-back-to-the-fab",
@@ -499,7 +500,8 @@
       "file": "course/modules/14-wafer-sort-and-test.md",
       "heading": "Test Data: STDF and the Loop Back to the Fab"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "returnLabel": "Fab feedback changes later production, not an already tested die"
   },
   {
     "section": "gpu-specific-test-challenges",

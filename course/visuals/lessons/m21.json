@@ -52,7 +52,7 @@
   },
   {
     "section": "units-conventions-and-a-sense-of-scale",
-    "family": "scale",
+    "family": "compare",
     "title": "The object changes as the scale changes",
     "caption": "A transistor, die, wafer, package and rack are different physical objects. Their dimensions cannot be substituted for one another.",
     "nodes": [

@@ -1528,7 +1528,7 @@ input[type=checkbox] {
   max-width: 100%;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  scrollbar-gutter: stable;
+  /* A vertical stable gutter hides the final 15px of a horizontal-only viewport. */
 }
 
 .diagram-scroll>svg {
@@ -2625,3 +2625,8 @@ input[type=checkbox] {
   }
 
 }
+
+/* Preserve complete diagrams when two readable SVG viewports cannot fit side by side. */
+.w-grid2.diagram-grid-stack { grid-template-columns: minmax(0, 1fr) !important; }
+.diagram-grid-stack > svg.w-svg { max-width: 520px; margin-inline: auto; }
+.diagram-grid-stack .diagram-scroll { max-width: 560px; width: 100%; margin-inline: auto; }

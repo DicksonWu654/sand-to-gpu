@@ -41,7 +41,8 @@
       {
         "label": "Selected sites",
         "detail": "Choose locations using signals and a sampling plan.",
-        "glyph": "wafer"
+        "glyph": "wafer",
+        "variant": "random"
       },
       {
         "label": "Detailed review",
@@ -110,12 +111,14 @@
       {
         "label": "ATE",
         "detail": "Apply stimuli and evaluate measured responses.",
-        "glyph": "test"
+        "glyph": "test",
+        "variant": "instrument"
       },
       {
         "label": "Wafer map",
         "detail": "Record pass, fail and product-bin information.",
-        "glyph": "design"
+        "glyph": "wafer",
+        "variant": "grid"
       }
     ],
     "edges": [],
@@ -172,7 +175,8 @@
       {
         "label": "Test cost",
         "detail": "Account for equipment time and usable device lifetime.",
-        "glyph": "test"
+        "glyph": "test",
+        "variant": "instrument"
       },
       {
         "label": "Coverage decision",

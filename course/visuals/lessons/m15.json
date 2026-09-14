@@ -67,7 +67,8 @@
       "file": "course/modules/15-memory-dram-nand-hbm.md",
       "heading": "2. The 1T1C cell and the sense amplifier"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "returnLabel": "Restore cell charge after sensing; later reads repeat the operation"
   },
   {
     "section": "3-the-buried-word-line-and-the-6f-cell",
@@ -109,12 +110,14 @@
       {
         "from": 2,
         "to": 1,
-        "label": "stored charge"
+        "label": "stored charge",
+        "bidirectional": true
       },
       {
         "from": 1,
         "to": 3,
-        "label": "selected connection"
+        "label": "selected connection",
+        "bidirectional": true
       }
     ],
     "source": {
@@ -127,7 +130,7 @@
     "section": "4-the-storage-capacitor",
     "family": "layers",
     "title": "A dielectric separates the capacitor electrodes",
-    "caption": "DRAM stores charge on a capacitor. Its three-dimensional shape provides surface area within a small cell footprint.",
+    "caption": "A planar slice through the capacitor shows two conducting electrodes separated by a dielectric. The actual DRAM capacitor folds this interface into a three-dimensional shape to increase area within the cell footprint.",
     "nodes": [
       {
         "label": "Upper electrode",
@@ -153,7 +156,8 @@
       "file": "course/modules/15-memory-dram-nand-hbm.md",
       "heading": "4. The storage capacitor"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "scene": "capacitor-section"
   },
   {
     "section": "5-periphery-beol-and-the-die",
@@ -545,7 +549,8 @@
       "file": "course/modules/15-memory-dram-nand-hbm.md",
       "heading": "15. Anatomy of an HBM stack"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "scene": "hbm-section"
   },
   {
     "section": "16-the-core-die-tsv-formation",
@@ -557,7 +562,7 @@
         "label": "Via opening",
         "glyph": "etch",
         "detail": "Etch a vertical hole into silicon",
-        "variant": "via"
+        "variant": "deep-hole"
       },
       {
         "label": "Insulating liner",

@@ -31,7 +31,8 @@
       "file": "course/modules/20-economics-and-geopolitics.md",
       "heading": "The Economics Toolkit: Five Ideas That Explain the Industry"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "returnLabel": "Investment changes qualified capacity after a delay"
   },
   {
     "section": "the-money-size-and-shape-of-the-industry",
@@ -228,7 +229,8 @@
       "file": "course/modules/20-economics-and-geopolitics.md",
       "heading": "Cycles: Utilization, Memory and the AI Supercycle"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "returnLabel": "New supply changes utilization and the next investment decision"
   },
   {
     "section": "taiwan-concentration-risk",
@@ -482,7 +484,8 @@
       "file": "course/modules/20-economics-and-geopolitics.md",
       "heading": "Workforce and Talent"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "returnLabel": "Experienced staff transfer operating knowledge to later trainees"
   },
   {
     "section": "how-to-read-industry-data",

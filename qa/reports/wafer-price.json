@@ -25,7 +25,7 @@
         "tinyText": [],
         "emptyArea": null,
         "boxHeight": 1740,
-        "boxWidth": 724
+        "boxWidth": 700
       },
       "final": {
         "overlaps": [],
@@ -33,7 +33,7 @@
         "tinyText": [],
         "emptyArea": null,
         "boxHeight": 1740,
-        "boxWidth": 724
+        "boxWidth": 700
       }
     },
     {
@@ -59,7 +59,7 @@
         "tinyText": [],
         "emptyArea": null,
         "boxHeight": 1740,
-        "boxWidth": 724
+        "boxWidth": 700
       },
       "final": {
         "overlaps": [],
@@ -67,7 +67,7 @@
         "tinyText": [],
         "emptyArea": null,
         "boxHeight": 1740,
-        "boxWidth": 724
+        "boxWidth": 700
       }
     },
     {
@@ -92,16 +92,16 @@
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 2552,
-        "boxWidth": 324
+        "boxHeight": 2386,
+        "boxWidth": 320
       },
       "final": {
         "overlaps": [],
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 2552,
-        "boxWidth": 324
+        "boxHeight": 2386,
+        "boxWidth": 320
       }
     },
     {
@@ -126,16 +126,16 @@
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 2552,
-        "boxWidth": 324
+        "boxHeight": 2386,
+        "boxWidth": 320
       },
       "final": {
         "overlaps": [],
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 2552,
-        "boxWidth": 324
+        "boxHeight": 2386,
+        "boxWidth": 320
       }
     }
   ]

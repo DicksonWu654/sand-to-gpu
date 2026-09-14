@@ -36,13 +36,15 @@
     "nodes": [
       {
         "label": "Wavelength",
-        "detail": "The light\u2019s spatial oscillation scale matters.",
-        "glyph": "light"
+        "detail": "The light’s spatial oscillation scale matters.",
+        "glyph": "light",
+        "variant": "wavelength"
       },
       {
         "label": "Numerical aperture",
         "detail": "The optics collect and focus a range of angles.",
-        "glyph": "light"
+        "glyph": "light",
+        "variant": "optical"
       },
       {
         "label": "Process",
@@ -52,7 +54,8 @@
       {
         "label": "Printed feature",
         "detail": "The developed structure is the combined outcome.",
-        "glyph": "etch"
+        "glyph": "mask",
+        "variant": "pattern"
       }
     ],
     "edges": [],
@@ -72,12 +75,14 @@
       {
         "label": "Projection optics",
         "detail": "Form the image from the mask pattern.",
-        "glyph": "mask"
+        "glyph": "light",
+        "variant": "optical"
       },
       {
         "label": "Immersion gap",
         "detail": "Water changes the optical conditions near the wafer.",
-        "glyph": "film"
+        "glyph": "film",
+        "variant": "immersion"
       },
       {
         "label": "Resist surface",
@@ -97,22 +102,26 @@
       {
         "label": "Tin plasma",
         "detail": "Laser energy drives emission from the prepared tin target.",
-        "glyph": "heat"
+        "glyph": "heat",
+        "variant": "plasma"
       },
       {
         "label": "Collector",
         "detail": "Captures part of the useful emitted light.",
-        "glyph": "light"
+        "glyph": "light",
+        "variant": "reflective"
       },
       {
         "label": "Reflective mask",
         "detail": "Encodes the circuit pattern by reflection.",
-        "glyph": "mask"
+        "glyph": "mask",
+        "variant": "reflective"
       },
       {
         "label": "Projection mirrors",
         "detail": "Deliver the image to the resist-coated wafer.",
-        "glyph": "light"
+        "glyph": "light",
+        "variant": "reflective"
       }
     ],
     "edges": [],
@@ -142,7 +151,8 @@
       {
         "label": "Developed pattern",
         "detail": "Randomness can contribute to roughness or missing features.",
-        "glyph": "etch"
+        "glyph": "etch",
+        "variant": "stochastic"
       }
     ],
     "edges": [],
@@ -158,12 +168,13 @@
         "label": "Measure marks",
         "detail": "Locate existing structures on the wafer.",
         "glyph": "test",
-        "variant": "optical"
+        "variant": "offset"
       },
       {
         "label": "Correct position",
         "detail": "Account for measured placement and distortion.",
-        "glyph": "design"
+        "glyph": "design",
+        "variant": "aligned"
       },
       {
         "label": "Expose layer",
@@ -174,7 +185,7 @@
         "label": "Check overlay",
         "detail": "Assess how the new and previous layers align.",
         "glyph": "test",
-        "variant": "electron"
+        "variant": "aligned"
       }
     ],
     "edges": [],

@@ -147,6 +147,17 @@
               }
               cx += e.die.w + 4;
             });
+          } else if (['balls', 'c4', 'ubump'].includes(row.layer.key)) {
+            // A joint row is an array of discrete connections, not a continuous metal film.
+            const l = row.layer, w = l.spec.wf * (W - 20), x0 = (W - w) / 2;
+            const els = [mkRect(x0, cy, w, l.spec.h, l.spec.color, 0.025)];
+            const pitch = l.key === 'balls' ? 18 : l.key === 'c4' ? 13 : 9;
+            const count = Math.floor(w / pitch), radius = Math.min(l.spec.h * .38, pitch * .3);
+            for (let k = 0; k < count; k++) {
+              const joint = svg('ellipse', { cx: x0 + (k + .5) * w / count, cy: cy + l.spec.h / 2, rx: radius, ry: radius, fill: l.spec.color, stroke: 'var(--panel)', 'stroke-width': .6, style: { cursor: 'pointer' } });
+              xsec.append(joint); els.push(joint);
+            }
+            items.push({ id: l.key, label: l.spec.label, spec: l.spec, els });
           } else if (row.layer.spec === LIB.wirebond) {
             // Draw actual diagonal wire loops (die edge → leadframe finger) instead of a flat block.
             const l = row.layer, w = l.spec.wf * (W - 20), x0 = (W - w) / 2, els = [];
@@ -173,7 +184,7 @@
         btnRow.querySelectorAll('button').forEach(b => b.classList.remove('primary'));
         const bi = btnRow.querySelector(`[data-id="${CSS.escape(item.id)}"]`);
         if (bi) bi.classList.add('primary');
-        xsec.querySelectorAll('rect').forEach(r => r.setAttribute('stroke-width', 0.6));
+        xsec.querySelectorAll('rect,ellipse').forEach(r => r.setAttribute('stroke-width', 0.6));
         xsec.querySelectorAll('path').forEach(p => p.setAttribute('stroke-width', 1.1));
         item.els.forEach(el => el.setAttribute('stroke-width', 2.2));
         const s = item.spec;
@@ -196,7 +207,7 @@
       }
       sel.addEventListener('change', () => { st.pkg = PKGS.find(p => p.id === sel.value); render(); });
 
-      el.append(controls, xsec, btnRow, detail,
+      el.append(controls, h('p', { class: 'w-note' }, 'Exploded layer schematic · thicknesses and spacing are not to scale. Solder and microbump joints are discrete connections.'), xsec, btnRow, detail,
         h('h5', { style: { margin: '18px 0 4px', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--muted)' } }, 'Dimensions'),
         dims,
         h('h5', { style: { margin: '18px 0 4px', fontSize: '12px', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--muted)' } }, 'CTE mini-calculator: corner shear at a flip-chip bump'),

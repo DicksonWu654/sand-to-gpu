@@ -12,7 +12,7 @@
       ],
       "controls": 3,
       "controlValuesExercised": 6,
-      "buttonsClicked": 6,
+      "buttonsClicked": 12,
       "states": [],
       "status": {
         "error": "",
@@ -24,16 +24,16 @@
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 859,
-        "boxWidth": 724
+        "boxHeight": 815,
+        "boxWidth": 700
       },
       "final": {
         "overlaps": [],
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 806,
-        "boxWidth": 724
+        "boxHeight": 989,
+        "boxWidth": 700
       }
     },
     {
@@ -46,7 +46,7 @@
       ],
       "controls": 3,
       "controlValuesExercised": 6,
-      "buttonsClicked": 6,
+      "buttonsClicked": 12,
       "states": [],
       "status": {
         "error": "",
@@ -58,16 +58,16 @@
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 859,
-        "boxWidth": 724
+        "boxHeight": 815,
+        "boxWidth": 700
       },
       "final": {
         "overlaps": [],
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 806,
-        "boxWidth": 724
+        "boxHeight": 989,
+        "boxWidth": 700
       }
     },
     {
@@ -80,7 +80,7 @@
       ],
       "controls": 3,
       "controlValuesExercised": 6,
-      "buttonsClicked": 6,
+      "buttonsClicked": 12,
       "states": [],
       "status": {
         "error": "",
@@ -92,16 +92,16 @@
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 1052,
-        "boxWidth": 324
+        "boxHeight": 922,
+        "boxWidth": 320
       },
       "final": {
         "overlaps": [],
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 1069,
-        "boxWidth": 324
+        "boxHeight": 1056,
+        "boxWidth": 320
       }
     },
     {
@@ -114,7 +114,7 @@
       ],
       "controls": 3,
       "controlValuesExercised": 6,
-      "buttonsClicked": 6,
+      "buttonsClicked": 12,
       "states": [],
       "status": {
         "error": "",
@@ -126,16 +126,16 @@
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 1052,
-        "boxWidth": 324
+        "boxHeight": 922,
+        "boxWidth": 320
       },
       "final": {
         "overlaps": [],
         "overflow": [],
         "tinyText": [],
         "emptyArea": null,
-        "boxHeight": 1069,
-        "boxWidth": 324
+        "boxHeight": 1056,
+        "boxWidth": 320
       }
     }
   ]

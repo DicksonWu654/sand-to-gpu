@@ -14,6 +14,7 @@
           region.replaceWith(...region.childNodes); info.hint.remove(); regions.delete(region);
         }
       }
+      const grids = new Map();
       for (const svg of body.querySelectorAll('svg.w-svg[viewBox]')) {
         const vb = svg.viewBox.baseVal;
         if (!vb.width || !vb.height) continue;
@@ -27,6 +28,14 @@
         }).filter(n => n > 0);
         if (!sizes.length) continue;
         const minWidth = Math.ceil(vb.width * 11.1 / Math.min(...sizes));
+        const grid = svg.closest('.w-grid2');
+        if (grid && body.contains(grid)) {
+          let child = svg;
+          while (child.parentElement !== grid) child = child.parentElement;
+          if (!grids.has(grid)) grids.set(grid, new Map());
+          const columns = grids.get(grid);
+          columns.set(child, Math.max(columns.get(child) || 0, minWidth));
+        }
         const available = info ? info.region.clientWidth : svg.getBoundingClientRect().width;
         if (!info && minWidth <= available + 1) continue;
         if (!info) {
@@ -44,6 +53,16 @@
         const scrolls = minWidth > info.region.clientWidth + 1;
         info.hint.hidden = !scrolls;
         info.region.tabIndex = scrolls ? 0 : -1;
+      }
+      for (const [grid, columns] of grids) {
+        if (columns.size !== 2 || grid.children.length !== 2) continue;
+        const gap = parseFloat(getComputedStyle(grid).columnGap) || 16;
+        const required = [...columns.values()].reduce((a, b) => a + b, 0) + gap;
+        const stack = required > grid.clientWidth + 1;
+        if (grid.classList.contains('diagram-grid-stack') !== stack) {
+          grid.classList.toggle('diagram-grid-stack', stack);
+          schedule();
+        }
       }
     }
     const schedule = () => { if (!frame && !disposed) frame = requestAnimationFrame(update); };

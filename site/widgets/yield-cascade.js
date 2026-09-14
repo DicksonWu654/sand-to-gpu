@@ -54,10 +54,10 @@
         const cum = VALUE_CHAIN.slice(0, i + 1).reduce((a, r) => a + r[1], 0);
         chainTable.append(h('tr', null, h('td', null, label), h('td', null, '$' + fmt(cum, 0) + ' (+$' + fmt(add, 0) + ')')));
       });
-      const falloutTable = h('table');
+      const falloutTable = h('table', { style: { minWidth: '560px' } });
       falloutTable.append(h('tr', null, ...['Stage', 'Yield', 'Lost / 1,000 starts', '$ / unit at risk', '$ scrapped / 1,000 starts'].map(x => h('th', null, x))));
       const falloutRows = {};
-      STAGES.forEach(s => { const tr = h('tr', null, h('td', null, s.label), h('td'), h('td'), h('td', null, '$' + fmt(s.value, 0)), h('td')); falloutTable.append(tr); falloutRows[s.key] = tr; });
+      STAGES.forEach(s => { const tr = h('tr', null, h('td', null, s.label), h('td'), h('td'), h('td', null, '$' + fmt(s.value, 0)), h('td')); [...tr.children].slice(1).forEach(cell => cell.style.whiteSpace = 'nowrap'); falloutTable.append(tr); falloutRows[s.key] = tr; });
       const rTotalScrap = h('b');
 
       // ---------- Arrhenius calculator ----------

@@ -259,7 +259,7 @@
 
       // ================= photon budget chart =================
       const PB = svg('svg', { class: 'w-svg', viewBox: '0 0 340 176', role: 'img', 'aria-label': 'Photon budget: in-band power after each reflection from the IF to the wafer' });
-      const PX0 = 50, PX1 = 330, PY0 = 20, PY1 = 122, LOGMAX = Math.log10(700);
+      const PX0 = 50, PX1 = 324, PY0 = 20, PY1 = 122, LOGMAX = Math.log10(700);
       const xOf = i => PX0 + (PX1 - PX0) * i / (STAGES.length - 1);
       const yOf = w => PY1 - (PY1 - PY0) * Math.log10(Math.max(w, 1)) / LOGMAX;
       [1, 10, 100, 500].forEach(v => {

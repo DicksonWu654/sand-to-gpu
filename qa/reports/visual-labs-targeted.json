@@ -1,0 +1,1270 @@
+{
+  "timestamp": "2026-09-14T00:18:56.221Z",
+  "cases": [
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1747,
+      "boxWidth": 700,
+      "id": "cmp-planarize",
+      "width": 760,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 658 460",
+          "size": [
+            658,
+            460
+          ],
+          "text": "side view | platen, ~750 mm diameter | pad: grooved polyurethane, 1–2 mm thick | v = 1.68 m/s → | slurry | carrier head | down-force 1.5 psi | ↻ 80 rpm | retaining ring (holds the wafer) | membrane, 5 pressure zones | wafer, 300 mm, face-down | eddy-current endpoint sensor: Cu left | Cu 620 nm | signal ∝ remaining Cu; bulk removal stops tens of nm above TaN | top view | sensor track | wafer | 300 mm | ↻ 80 rpm | conditioner | slurry | platen ~750 mm, ↻ 80 rpm"
+        },
+        {
+          "viewBox": "0 0 658 350",
+          "size": [
+            658,
+            350
+          ],
+          "text": "as-plated Cu surface: 600 nm + plating topography | field level = top of dielectric | polishing pad pressed down at P = 1.5 psi | slurry film: H₂O₂ oxidizer + glycine + BTA inhibitor + silica abrasive | v = 1.68 m/s → | vertical ×10, lines 150 nm deep | low-k dielectric (SiOC:H) | TaN barrier (~2 nm, not to scale) | SiCN cap | previous metal level (polished, capped) | Cu overburden: 620 nm left over the field, 40 nm removed in 5 s | dense array: ρ = 50 % copper at 1 µm pitch | wide line, w = 5.0 µm | field"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1747,
+      "boxWidth": 700,
+      "id": "cmp-planarize",
+      "width": 760,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Down-force P5.0 psi",
+          "before": "1.5",
+          "after": "5"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 658 460",
+          "size": [
+            658,
+            460
+          ],
+          "text": "side view | platen, ~750 mm diameter | pad: grooved polyurethane, 1–2 mm thick | v = 1.68 m/s → | slurry | carrier head | down-force 5.0 psi | ↻ 80 rpm | retaining ring (holds the wafer) | membrane, 5 pressure zones | wafer, 300 mm, face-down | eddy-current endpoint sensor: Cu left | Cu 528 nm | signal ∝ remaining Cu; bulk removal stops tens of nm above TaN | top view | sensor track | wafer | 300 mm | ↻ 80 rpm | conditioner | slurry | platen ~750 mm, ↻ 80 rpm"
+        },
+        {
+          "viewBox": "0 0 658 350",
+          "size": [
+            658,
+            350
+          ],
+          "text": "field level = top of dielectric | polishing pad pressed down at P = 5.0 psi | slurry film: H₂O₂ oxidizer + glycine + BTA inhibitor + silica abrasive | v = 1.68 m/s → | vertical ×10, lines 150 nm deep | low-k dielectric (SiOC:H) | TaN barrier (~2 nm, not to scale) | SiCN cap | previous metal level (polished, capped) | Cu overburden: 528 nm left over the field, 132 nm removed in 5 s | dense array: ρ = 50 % copper at 1 µm pitch | wide line, w = 5.0 µm | field"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2377,
+      "boxWidth": 320,
+      "id": "cmp-planarize",
+      "width": 360,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 300 460",
+          "size": [
+            290,
+            444.65625
+          ],
+          "text": "side view | platen | pad (polyurethane) | v = 1.68 m/s → | slurry | carrier head | down-force 1.5 psi | ↻ 80 rpm | retaining ring | membrane | wafer, face-down | eddy sensor: Cu left | Cu 620 nm | signal ∝ Cu thickness; stops above TaN | top view | sensor track | wafer | 300 mm | ↻ 80 rpm | conditioner | slurry | platen ~750 mm, ↻ 80 rpm"
+        },
+        {
+          "viewBox": "0 0 300 300",
+          "size": [
+            290,
+            290
+          ],
+          "text": "as-plated surface | field level | pad, P = 1.5 psi | slurry: H₂O₂ + glycine + BTA | v = 1.68 m/s → | vertical ×17 | low-k dielectric | TaN barrier | SiCN cap | previous level | Cu 620 nm left (40 removed) | dense array, ρ = 50 % | wide, w = 5.0 µm"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2377,
+      "boxWidth": 320,
+      "id": "cmp-planarize",
+      "width": 360,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Down-force P5.0 psi",
+          "before": "1.5",
+          "after": "5"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 300 460",
+          "size": [
+            290,
+            444.65625
+          ],
+          "text": "side view | platen | pad (polyurethane) | v = 1.68 m/s → | slurry | carrier head | down-force 5.0 psi | ↻ 80 rpm | retaining ring | membrane | wafer, face-down | eddy sensor: Cu left | Cu 528 nm | signal ∝ Cu thickness; stops above TaN | top view | sensor track | wafer | 300 mm | ↻ 80 rpm | conditioner | slurry | platen ~750 mm, ↻ 80 rpm"
+        },
+        {
+          "viewBox": "0 0 300 300",
+          "size": [
+            290,
+            290
+          ],
+          "text": "field level | pad, P = 5.0 psi | slurry: H₂O₂ + glycine + BTA | v = 1.68 m/s → | vertical ×18 | low-k dielectric | TaN barrier | SiCN cap | previous level | Cu 528 nm left (132 removed) | dense array, ρ = 50 % | wide, w = 5.0 µm"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1817,
+      "boxWidth": 700,
+      "id": "dram-cell",
+      "width": 760,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 340 350",
+          "size": [
+            460,
+            473.515625
+          ],
+          "text": "1T1C cell on its bit line |  | ns in reality | precharge | equalize BL, /BL → VDD/2, | then float | /BL | reference | bit line | BL bit line | word line (WL) | VPP (boosted) | access | transistor | (buried gate) | ON | storage capacitor | Cs = 12 fF | plate | VDD/2 | 0.55 V | dashed = ½ | red = floor | V_SN 0.69 V | 10 500 e⁻ above plate (a 1) | /BL | BL | 0.55 V | 0.69 V | C_BL = 35 fF | ≈ 2.9× Cs: the wire past | ~1,000 cells + SA input | ΔV = +140 mV ✓ (≥ 60 mV) | sense amplifier | two cross-coupled inverters | SA off"
+        },
+        {
+          "viewBox": "0 0 340 350",
+          "size": [
+            460,
+            473.515625
+          ],
+          "text": "Stored 1 leaking: V_SN vs time | 0 V | 0.55 V | 1.10 V | 1 ms | 10 ms | 100 ms | 1 s | 10 s | time since the write (log scale) | 64 ms refresh | plate level VDD/2 = fully leaked | red dashes: read floor, ΔV = 60 mV | retention 3.8 s ✓ | capacitor, | to scale | 35 nm wide | 12 fF | cell 25×38 nm | 1.01 µm | AR 29:1"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1817,
+      "boxWidth": 700,
+      "id": "dram-cell",
+      "width": 760,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Cell capacitance Cs30 fF",
+          "before": "12",
+          "after": "30"
+        },
+        {
+          "type": "button",
+          "label": "Write 1"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 340 350",
+          "size": [
+            460,
+            473.515625
+          ],
+          "text": "1T1C cell on its bit line |  | ns in reality | precharge | equalize BL, /BL → VDD/2, | then float | /BL | reference | bit line | BL bit line | word line (WL) | 0 V | access | transistor | (buried gate) | OFF | storage capacitor | Cs = 30 fF | plate | VDD/2 | 0.55 V | dashed = ½ | red = floor | V_SN 0.69 V | 26 300 e⁻ above plate (a 1) | /BL | BL | 0.55 V | 0.60 V | C_BL = 35 fF | ≈ 1.2× Cs: the wire past | ~1,000 cells + SA input |  | sense amplifier | two cross-coupled inverters | SA off"
+        },
+        {
+          "viewBox": "0 0 340 350",
+          "size": [
+            460,
+            473.515625
+          ],
+          "text": "Stored 1 leaking: V_SN vs time | 0 V | 0.55 V | 1.10 V | 1 ms | 10 ms | 100 ms | 1 s | 10 s | time since the write (log scale) | 64 ms refresh | plate level VDD/2 = fully leaked | red dashes: read floor, ΔV = 60 mV | retention 13 s ✓ off chart | capacitor, | to scale | 35 nm wide | 30 fF | cell 25×38 nm | 2.54 µm | AR 72:1"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2282,
+      "boxWidth": 320,
+      "id": "dram-cell",
+      "width": 360,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 340 350",
+          "size": [
+            315,
+            324.25
+          ],
+          "text": "1T1C cell on its bit line |  | ns in reality | precharge | equalize BL, /BL → VDD/2, | then float | /BL | reference | bit line | BL bit line | word line (WL) | VPP (boosted) | access | transistor | (buried gate) | ON | storage capacitor | Cs = 12 fF | plate | VDD/2 | 0.55 V | dashed = ½ | red = floor | V_SN 0.69 V | 10 500 e⁻ above plate (a 1) | /BL | BL | 0.55 V | 0.69 V | C_BL = 35 fF | ≈ 2.9× Cs: the wire past | ~1,000 cells + SA input | ΔV = +140 mV ✓ (≥ 60 mV) | sense amplifier | two cross-coupled inverters | SA off"
+        },
+        {
+          "viewBox": "0 0 340 350",
+          "size": [
+            329,
+            338.671875
+          ],
+          "text": "Stored 1 leaking: V_SN vs time | 0 V | 0.55 V | 1.10 V | 1 ms | 10 ms | 100 ms | 1 s | 10 s | time since the write (log scale) | 64 ms refresh | plate level VDD/2 = fully leaked | red dashes: read floor, ΔV = 60 mV | retention 3.8 s ✓ | capacitor, | to scale | 35 nm wide | 12 fF | cell 25×38 nm | 1.01 µm | AR 29:1"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2282,
+      "boxWidth": 320,
+      "id": "dram-cell",
+      "width": 360,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Cell capacitance Cs30 fF",
+          "before": "12",
+          "after": "30"
+        },
+        {
+          "type": "button",
+          "label": "Write 1"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 340 350",
+          "size": [
+            315,
+            324.25
+          ],
+          "text": "1T1C cell on its bit line |  | ns in reality | precharge | equalize BL, /BL → VDD/2, | then float | /BL | reference | bit line | BL bit line | word line (WL) | 0 V | access | transistor | (buried gate) | OFF | storage capacitor | Cs = 30 fF | plate | VDD/2 | 0.55 V | dashed = ½ | red = floor | V_SN 0.69 V | 26 300 e⁻ above plate (a 1) | /BL | BL | 0.55 V | 0.60 V | C_BL = 35 fF | ≈ 1.2× Cs: the wire past | ~1,000 cells + SA input |  | sense amplifier | two cross-coupled inverters | SA off"
+        },
+        {
+          "viewBox": "0 0 340 350",
+          "size": [
+            329,
+            338.671875
+          ],
+          "text": "Stored 1 leaking: V_SN vs time | 0 V | 0.55 V | 1.10 V | 1 ms | 10 ms | 100 ms | 1 s | 10 s | time since the write (log scale) | 64 ms refresh | plate level VDD/2 = fully leaked | red dashes: read floor, ΔV = 60 mV | retention 13 s ✓ off chart | capacitor, | to scale | 35 nm wide | 30 fF | cell 25×38 nm | 2.54 µm | AR 72:1"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1740,
+      "boxWidth": 700,
+      "id": "wafer-price",
+      "width": 760,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 700 260",
+          "size": [
+            658,
+            244.390625
+          ],
+          "text": "0 | 10 000 | 20 000 | 30 000 | $ / 300 mm wafer | $3 000 | 28 nm | $4 000 | 16/12 nm | $9 500 | 7 nm | $16 000 | 5 nm | $19 000 | 3 nm | $30 000 | 2 nm"
+        },
+        {
+          "viewBox": "0 0 700 240",
+          "size": [
+            658,
+            225.59375
+          ],
+          "text": "$15 000 | $20 000 | 50% | 60% | 70% | 80% | 90% | 100% | fab utilization | 90% → $17 019"
+        },
+        {
+          "viewBox": "0 0 700 300",
+          "size": [
+            658,
+            282
+          ],
+          "text": "0 | 200 | 400 | 600 | 800 | $ billion / year | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1740,
+      "boxWidth": 700,
+      "id": "wafer-price",
+      "width": 760,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Fab capex$40B",
+          "before": "20",
+          "after": "40"
+        },
+        {
+          "type": "button",
+          "label": "Show cost per billion transistors"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 700 260",
+          "size": [
+            658,
+            244.390625
+          ],
+          "text": "0 | 1 | 2 | 3 | $ / billion transistors | $3.33 | 28 nm | $2.38 | 16/12 nm | $1.74 | 7 nm | $1.93 | 5 nm | $1.58 | 3 nm | $1.92 | 2 nm"
+        },
+        {
+          "viewBox": "0 0 700 240",
+          "size": [
+            658,
+            225.59375
+          ],
+          "text": "$30 000 | 50% | 60% | 70% | 80% | 90% | 100% | fab utilization | 90% → $24 515"
+        },
+        {
+          "viewBox": "0 0 700 300",
+          "size": [
+            658,
+            282
+          ],
+          "text": "0 | 200 | 400 | 600 | 800 | $ billion / year | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2386,
+      "boxWidth": 320,
+      "id": "wafer-price",
+      "width": 360,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 700 260",
+          "size": [
+            648,
+            240.671875
+          ],
+          "text": "0 | 10 000 | 20 000 | 30 000 | $ / 300 mm wafer | $3 000 | 28 nm | $4 000 | 16/12 nm | $9 500 | 7 nm | $16 000 | 5 nm | $19 000 | 3 nm | $30 000 | 2 nm"
+        },
+        {
+          "viewBox": "0 0 700 240",
+          "size": [
+            648,
+            222.15625
+          ],
+          "text": "$15 000 | $20 000 | 50% | 60% | 70% | 80% | 90% | 100% | fab utilization | 90% → $17 019"
+        },
+        {
+          "viewBox": "0 0 700 300",
+          "size": [
+            648,
+            277.703125
+          ],
+          "text": "0 | 200 | 400 | 600 | 800 | $ billion / year | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2386,
+      "boxWidth": 320,
+      "id": "wafer-price",
+      "width": 360,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Fab capex$40B",
+          "before": "20",
+          "after": "40"
+        },
+        {
+          "type": "button",
+          "label": "Show cost per billion transistors"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 700 260",
+          "size": [
+            648,
+            240.671875
+          ],
+          "text": "0 | 1 | 2 | 3 | $ / billion transistors | $3.33 | 28 nm | $2.38 | 16/12 nm | $1.74 | 7 nm | $1.93 | 5 nm | $1.58 | 3 nm | $1.92 | 2 nm"
+        },
+        {
+          "viewBox": "0 0 700 240",
+          "size": [
+            648,
+            222.15625
+          ],
+          "text": "$30 000 | 50% | 60% | 70% | 80% | 90% | 100% | fab utilization | 90% → $24 515"
+        },
+        {
+          "viewBox": "0 0 700 300",
+          "size": [
+            648,
+            277.703125
+          ],
+          "text": "0 | 200 | 400 | 600 | 800 | $ billion / year | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2510,
+      "boxWidth": 700,
+      "id": "plasma-reactor",
+      "width": 760,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 360 484",
+          "size": [
+            658,
+            884.640625
+          ],
+          "text": "gas in · C₄F₈ / Ar / O₂ | Si showerhead · top electrode | ~ | 60 MHz source | plasma bulk (glow) | n = 1.3×10¹⁰ cm⁻³ | Tₑ = 3.4 eV | Vₚ ≈ +25 V | E | to turbopump | ~ | blocking capacitor | RF bias · 2 MHz | walls grounded | sheath (no glow) | wafer sheath | s = 6.0 mm | 300 mm wafer | edge ring (Si) | ESC chuck | (He-cooled)"
+        },
+        {
+          "viewBox": "0 0 300 238",
+          "size": [
+            643,
+            510.109375
+          ],
+          "text": "Sheath vs. mean free path (log scale) | 0.1 | 1 | 10 | 100 mm | sheath s | free path λ | 6.0 mm | 2.7 mm | λ < s → collisional: ions scatter | 2.2 collisions/crossing · 11% unscattered | Ion angles at the wafer: half-width ±19.5° | −45° | 0° (vertical) | +45°"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2510,
+      "boxWidth": 700,
+      "id": "plasma-reactor",
+      "width": 760,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Bias power1 500 W",
+          "before": "500",
+          "after": "1500"
+        },
+        {
+          "type": "button",
+          "label": "ICP · conductor etch"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 360 484",
+          "size": [
+            658,
+            884.640625
+          ],
+          "text": "gas in · Cl₂ / HBr / Ar | ICP coil · 13.56 MHz | quartz window | plasma bulk (glow) | n = 1.0×10¹¹ cm⁻³ | Tₑ = 4.0 eV | Vₚ ≈ +25 V | E | to turbopump | ~ | blocking capacitor | RF bias · 13.56 MHz | walls grounded | sheath (no glow) | wafer sheath | s = 0.37 mm | 300 mm wafer | edge ring (Si) | ESC chuck | (He-cooled)"
+        },
+        {
+          "viewBox": "0 0 300 238",
+          "size": [
+            643,
+            510.109375
+          ],
+          "text": "Sheath vs. mean free path (log scale) | 0.1 | 1 | 10 | 100 mm | sheath s | free path λ | 0.37 mm | 10.8 mm | λ ≫ s → collisionless: ions fly straight | 0.03 collisions/crossing · 97% unscattered | Ion angles at the wafer: half-width ±5.8° | −45° | 0° (vertical) | +45°"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2742,
+      "boxWidth": 320,
+      "id": "plasma-reactor",
+      "width": 360,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 360 484",
+          "size": [
+            333,
+            447.6875
+          ],
+          "text": "gas in · C₄F₈ / Ar / O₂ | Si showerhead · top electrode | ~ | 60 MHz source | plasma bulk (glow) | n = 1.3×10¹⁰ cm⁻³ | Tₑ = 3.4 eV | Vₚ ≈ +25 V | E | to turbopump | ~ | blocking capacitor | RF bias · 2 MHz | walls grounded | sheath (no glow) | wafer sheath | s = 6.0 mm | 300 mm wafer | edge ring (Si) | ESC chuck | (He-cooled)"
+        },
+        {
+          "viewBox": "0 0 300 238",
+          "size": [
+            278,
+            220.53125
+          ],
+          "text": "Sheath vs. mean free path (log scale) | 0.1 | 1 | 10 | 100 mm | sheath s | free path λ | 6.0 mm | 2.7 mm | λ < s → collisional: ions scatter | 2.2 collisions/crossing · 11% unscattered | Ion angles at the wafer: half-width ±19.5° | −45° | 0° (vertical) | +45°"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2764,
+      "boxWidth": 320,
+      "id": "plasma-reactor",
+      "width": 360,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Bias power1 500 W",
+          "before": "500",
+          "after": "1500"
+        },
+        {
+          "type": "button",
+          "label": "ICP · conductor etch"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 360 484",
+          "size": [
+            333,
+            447.6875
+          ],
+          "text": "gas in · Cl₂ / HBr / Ar | ICP coil · 13.56 MHz | quartz window | plasma bulk (glow) | n = 1.0×10¹¹ cm⁻³ | Tₑ = 4.0 eV | Vₚ ≈ +25 V | E | to turbopump | ~ | blocking capacitor | RF bias · 13.56 MHz | walls grounded | sheath (no glow) | wafer sheath | s = 0.37 mm | 300 mm wafer | edge ring (Si) | ESC chuck | (He-cooled)"
+        },
+        {
+          "viewBox": "0 0 300 238",
+          "size": [
+            278,
+            220.53125
+          ],
+          "text": "Sheath vs. mean free path (log scale) | 0.1 | 1 | 10 | 100 mm | sheath s | free path λ | 0.37 mm | 10.8 mm | λ ≫ s → collisionless: ions fly straight | 0.03 collisions/crossing · 97% unscattered | Ion angles at the wafer: half-width ±5.8° | −45° | 0° (vertical) | +45°"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1393,
+      "boxWidth": 700,
+      "id": "package-xsection",
+      "width": 760,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 320 195",
+          "size": [
+            658,
+            400.96875
+          ],
+          "text": ""
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1362,
+      "boxWidth": 700,
+      "id": "package-xsection",
+      "width": 760,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Die half-diagonal d30 mm",
+          "before": "15",
+          "after": "30"
+        },
+        {
+          "type": "select",
+          "before": "cowos-s",
+          "after": "cowos-l"
+        },
+        {
+          "type": "button",
+          "label": "PCB (system board)"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 320 195",
+          "size": [
+            658,
+            400.96875
+          ],
+          "text": ""
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1754,
+      "boxWidth": 320,
+      "id": "package-xsection",
+      "width": 360,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 320 195",
+          "size": [
+            290,
+            176.71875
+          ],
+          "text": ""
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1744,
+      "boxWidth": 320,
+      "id": "package-xsection",
+      "width": 360,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Die half-diagonal d30 mm",
+          "before": "15",
+          "after": "30"
+        },
+        {
+          "type": "select",
+          "before": "cowos-s",
+          "after": "cowos-l"
+        },
+        {
+          "type": "button",
+          "label": "PCB (system board)"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 320 195",
+          "size": [
+            290,
+            176.71875
+          ],
+          "text": ""
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1745,
+      "boxWidth": 700,
+      "id": "yield-cascade",
+      "width": 760,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 720 240",
+          "size": [
+            800,
+            266.65625
+          ],
+          "text": "−350 | Sort | −13 | Assembly | −32 | FT | −6.1 | BI | −12 | SLT | −5.9 | Module | −2.9 | Rack | 1,000 | 578.3 | shipped"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1745,
+      "boxWidth": 700,
+      "id": "yield-cascade",
+      "width": 760,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Wafer sort95%",
+          "before": "65",
+          "after": "95"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 720 240",
+          "size": [
+            800,
+            266.65625
+          ],
+          "text": "−50 | Sort | −19 | Assembly | −47 | FT | −8.8 | BI | −18 | SLT | −8.6 | Module | −4.2 | Rack | 1,000 | 845.3 | shipped"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2349,
+      "boxWidth": 320,
+      "id": "yield-cascade",
+      "width": 360,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 720 240",
+          "size": [
+            800,
+            266.65625
+          ],
+          "text": "−350 | Sort | −13 | Assembly | −32 | FT | −6.1 | BI | −12 | SLT | −5.9 | Module | −2.9 | Rack | 1,000 | 578.3 | shipped"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2349,
+      "boxWidth": 320,
+      "id": "yield-cascade",
+      "width": 360,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Wafer sort95%",
+          "before": "65",
+          "after": "95"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 720 240",
+          "size": [
+            800,
+            266.65625
+          ],
+          "text": "−50 | Sort | −19 | Assembly | −47 | FT | −8.8 | BI | −18 | SLT | −8.6 | Module | −4.2 | Rack | 1,000 | 845.3 | shipped"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2049,
+      "boxWidth": 700,
+      "id": "litho-track",
+      "width": 760,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 330 200",
+          "size": [
+            545,
+            330.296875
+          ],
+          "text": "Track: coater / developer | Scanner | hot & chill plates | HMDS | Bake | Chill | PEB | Chill | transfer robot | spin cups | BARC | coat | Resist | coat | Develop | Rinse | dry | load port | FOUP | inspect | CD-SEM | overlay | interface | lens | ASML NXT"
+        },
+        {
+          "viewBox": "0 0 330 262",
+          "size": [
+            545,
+            432.6875
+          ],
+          "text": "scanner wafer stage | mask image | (4× reduced) | 193 nm light | dose 20–40 mJ/cm² · ~0.1 s per 26 × 33 mm field | chrome blocks light; clear openings expose the spaces | topcoat 30 nm | resist 100 nm | latent acid image | BARC 60 nm | HMDS monolayer | SiO₂ film to etch | Si wafer"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2050,
+      "boxWidth": 700,
+      "id": "litho-track",
+      "width": 760,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Spin speed5 000 rpm",
+          "before": "2000",
+          "after": "5000"
+        },
+        {
+          "type": "select",
+          "before": "2",
+          "after": "5"
+        },
+        {
+          "type": "button",
+          "label": "Next"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 330 200",
+          "size": [
+            545,
+            330.296875
+          ],
+          "text": "Track: coater / developer | Scanner | hot & chill plates | HMDS | Bake | Chill | PEB | Chill | transfer robot | spin cups | BARC | coat | Resist | coat | Develop | Rinse | dry | load port | FOUP | inspect | CD-SEM | overlay | interface | lens | ASML NXT"
+        },
+        {
+          "viewBox": "0 0 330 262",
+          "size": [
+            545,
+            432.6875
+          ],
+          "text": "PEB plate 90–130 °C · then chill plate 23 °C | acid diffuses 5–20 nm and deprotects hundreds | of sites each: chemical gain 10²–10³ | topcoat 30 nm | resist 100 nm | deprotected: soluble | BARC 60 nm | HMDS monolayer | SiO₂ film to etch | Si wafer"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2770,
+      "boxWidth": 320,
+      "id": "litho-track",
+      "width": 360,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 330 200",
+          "size": [
+            333,
+            201.8125
+          ],
+          "text": "Track: coater / developer | Scanner | hot & chill plates | HMDS | Bake | Chill | PEB | Chill | transfer robot | spin cups | BARC | coat | Resist | coat | Develop | Rinse | dry | load port | FOUP | inspect | CD-SEM | overlay | interface | lens | ASML NXT"
+        },
+        {
+          "viewBox": "0 0 330 262",
+          "size": [
+            333,
+            264.375
+          ],
+          "text": "scanner wafer stage | mask image | (4× reduced) | 193 nm light | dose 20–40 mJ/cm² · ~0.1 s per 26 × 33 mm field | chrome blocks light; clear openings expose the spaces | topcoat 30 nm | resist 100 nm | latent acid image | BARC 60 nm | HMDS monolayer | SiO₂ film to etch | Si wafer"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2840,
+      "boxWidth": 320,
+      "id": "litho-track",
+      "width": 360,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Spin speed5 000 rpm",
+          "before": "2000",
+          "after": "5000"
+        },
+        {
+          "type": "select",
+          "before": "2",
+          "after": "5"
+        },
+        {
+          "type": "button",
+          "label": "Next"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 330 200",
+          "size": [
+            333,
+            201.8125
+          ],
+          "text": "Track: coater / developer | Scanner | hot & chill plates | HMDS | Bake | Chill | PEB | Chill | transfer robot | spin cups | BARC | coat | Resist | coat | Develop | Rinse | dry | load port | FOUP | inspect | CD-SEM | overlay | interface | lens | ASML NXT"
+        },
+        {
+          "viewBox": "0 0 330 262",
+          "size": [
+            333,
+            264.375
+          ],
+          "text": "PEB plate 90–130 °C · then chill plate 23 °C | acid diffuses 5–20 nm and deprotects hundreds | of sites each: chemical gain 10²–10³ | topcoat 30 nm | resist 100 nm | deprotected: soluble | BARC 60 nm | HMDS monolayer | SiO₂ film to etch | Si wafer"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1234,
+      "boxWidth": 700,
+      "id": "implanter-beamline",
+      "width": 760,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 760 358",
+          "size": [
+            675,
+            317.953125
+          ],
+          "text": "BF₃ in | Ion source | arc plasma | cathode | +30 kV | suppression electrode | ground electrode | Analyser magnet | 90° sector, r = 0.35 m | B = 0.50 T for ⁴⁹BF₂⁺ | resolving slit | m/Δm ≈ 80 | acceleration column | +0 kV → 30 keV | scanner | corrector magnet | End station · ~10⁻⁶ torr | Faraday cup | 300 mm wafer on platen | tilt 7° | Where each ion in the BF₃ plasma lands at the slit | ← ¹⁰B⁺, ¹¹B⁺, F⁺, … hit the wall | BF₃⁺ hit the wall → | −40 mm | −20 mm | +20 mm | +40 mm | slit ±3.8 mm | ⁴⁸BF₂⁺ | ⁴⁹BF₂⁺"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1234,
+      "boxWidth": 700,
+      "id": "implanter-beamline",
+      "width": 760,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Extraction V_ext80 kV",
+          "before": "30",
+          "after": "80"
+        },
+        {
+          "type": "select",
+          "before": "BF2",
+          "after": "P"
+        },
+        {
+          "type": "button",
+          "label": "Play ions"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 760 358",
+          "size": [
+            675,
+            317.953125
+          ],
+          "text": "PH₃ in | Ion source | arc plasma | cathode | +80 kV | suppression electrode | ground electrode | Analyser magnet | 90° sector, r = 0.35 m | B = 0.65 T for ³¹P⁺ | resolving slit | m/Δm ≈ 80 | acceleration column | +0 kV → 80 keV | scanner | corrector magnet | End station · ~10⁻⁶ torr | Faraday cup | 300 mm wafer on platen | tilt 7° | Where each ion in the PH₃ plasma lands at the slit | ← H⁺, H₂⁺ hit the wall | P₂⁺ hit the wall → | −40 mm | −20 mm | +20 mm | +40 mm | slit ±3.8 mm | ³¹P⁺ | PH⁺ | PH₂⁺ | PH₃⁺"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2286,
+      "boxWidth": 320,
+      "id": "implanter-beamline",
+      "width": 360,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 380 962",
+          "size": [
+            302,
+            764.53125
+          ],
+          "text": "BF₃ in | Ion source | +30 kV | extraction | electrodes | Analyser magnet | 90° sector, r = 0.35 m | B = 0.50 T for ⁴⁹BF₂⁺ | resolving slit | m/Δm ≈ 80 | acceleration column | +0 kV → 30 keV | scanner | corrector magnet | End station · ~10⁻⁶ torr | Faraday cup | 300 mm wafer on platen | tilt 7° | Where each ion in the BF₃ plasma lands at the slit | ← ¹⁰B⁺, ¹¹B⁺, F⁺, … hit the wall | BF₃⁺ hit the wall → | −40 mm | −20 mm | +20 mm | +40 mm | slit ±3.8 mm | ⁴⁸BF₂⁺ | ⁴⁹BF₂⁺"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 2308,
+      "boxWidth": 320,
+      "id": "implanter-beamline",
+      "width": 360,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Extraction V_ext80 kV",
+          "before": "30",
+          "after": "80"
+        },
+        {
+          "type": "select",
+          "before": "BF2",
+          "after": "P"
+        },
+        {
+          "type": "button",
+          "label": "Play ions"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 380 962",
+          "size": [
+            302,
+            764.53125
+          ],
+          "text": "PH₃ in | Ion source | +80 kV | extraction | electrodes | Analyser magnet | 90° sector, r = 0.35 m | B = 0.65 T for ³¹P⁺ | resolving slit | m/Δm ≈ 80 | acceleration column | +0 kV → 80 keV | scanner | corrector magnet | End station · ~10⁻⁶ torr | Faraday cup | 300 mm wafer on platen | tilt 7° | Where each ion in the PH₃ plasma lands at the slit | ← H⁺, H₂⁺ hit the wall | P₂⁺ hit the wall → | −40 mm | −20 mm | +20 mm | +40 mm | slit ±3.8 mm | ³¹P⁺ | PH⁺ | PH₂⁺ | PH₃⁺"
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1882,
+      "boxWidth": 700,
+      "id": "euv-stochastics",
+      "width": 760,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 360 322",
+          "size": [
+            321,
+            287.109375
+          ],
+          "text": "side view — not to scale | aerial image | clearing threshold | 13.5 nm photons | 92 eV each | ≈ 20 per nm² | contact hole, CD = 30 nm | resist film, 30 nm | absorbs 14 % | underlayer | silicon wafer | edge ring, 3 nm (268 nm²): N ≈ 764 | σ = √N = 28 (3.6 %) — the shot noise | 20 % short = 153 = 5.5 σ → P ≈ 1.6×10⁻⁸"
+        },
+        {
+          "viewBox": "0 0 698 290",
+          "size": [
+            658,
+            273.375
+          ],
+          "text": "1 | 10⁻³ | 10⁻⁶ | 10⁻⁹ | 10⁻¹² | 0 | 50 | 100 | 150 | 200 | 250 | 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | P(fail) per hole | wafers / hour | dose (mJ/cm²) |  | "
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 1904,
+      "boxWidth": 700,
+      "id": "euv-stochastics",
+      "width": 760,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Dose80 mJ/cm²",
+          "before": "30",
+          "after": "80"
+        },
+        {
+          "type": "button",
+          "label": "Resample"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 360 322",
+          "size": [
+            321,
+            287.109375
+          ],
+          "text": "side view — not to scale | aerial image | clearing threshold | 13.5 nm photons | 92 eV each | ≈ 54 per nm² | contact hole, CD = 30 nm | resist film, 30 nm | absorbs 14 % | underlayer | silicon wafer | edge ring, 3 nm (268 nm²): N ≈ 2 036 | σ = √N = 45 (2.2 %) — the shot noise | 20 % short = 407 = 9 σ → P < 10⁻¹²"
+        },
+        {
+          "viewBox": "0 0 698 290",
+          "size": [
+            658,
+            273.375
+          ],
+          "text": "1 | 10⁻³ | 10⁻⁶ | 10⁻⁹ | 10⁻¹² | 0 | 50 | 100 | 150 | 200 | 250 | 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | P(fail) per hole | wafers / hour | dose (mJ/cm²) |  | "
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 3385,
+      "boxWidth": 320,
+      "id": "euv-stochastics",
+      "width": 360,
+      "theme": "light",
+      "tag": "initial",
+      "actions": [],
+      "svg": [
+        {
+          "viewBox": "0 0 360 322",
+          "size": [
+            320,
+            286.21875
+          ],
+          "text": "side view — not to scale | aerial image | clearing threshold | 13.5 nm photons | 92 eV each | ≈ 20 per nm² | contact hole, CD = 30 nm | resist film, 30 nm | absorbs 14 % | underlayer | silicon wafer | edge ring, 3 nm (268 nm²): N ≈ 764 | σ = √N = 28 (3.6 %) — the shot noise | 20 % short = 153 = 5.5 σ → P ≈ 1.6×10⁻⁸"
+        },
+        {
+          "viewBox": "0 0 318 220",
+          "size": [
+            290,
+            200.625
+          ],
+          "text": "1 | 10⁻³ | 10⁻⁶ | 10⁻⁹ | 10⁻¹² | 0 | 50 | 100 | 150 | 200 | 250 | 10 | 30 | 50 | 80 | P(fail) per hole | wafers / hour | dose (mJ/cm²) |  | "
+        }
+      ]
+    },
+    {
+      "overlaps": [],
+      "overflow": [],
+      "tinyText": [],
+      "emptyArea": null,
+      "boxHeight": 3385,
+      "boxWidth": 320,
+      "id": "euv-stochastics",
+      "width": 360,
+      "theme": "light",
+      "tag": "representative",
+      "actions": [
+        {
+          "type": "range",
+          "label": "Dose80 mJ/cm²",
+          "before": "30",
+          "after": "80"
+        },
+        {
+          "type": "button",
+          "label": "Resample"
+        }
+      ],
+      "svg": [
+        {
+          "viewBox": "0 0 360 322",
+          "size": [
+            320,
+            286.21875
+          ],
+          "text": "side view — not to scale | aerial image | clearing threshold | 13.5 nm photons | 92 eV each | ≈ 54 per nm² | contact hole, CD = 30 nm | resist film, 30 nm | absorbs 14 % | underlayer | silicon wafer | edge ring, 3 nm (268 nm²): N ≈ 2 036 | σ = √N = 45 (2.2 %) — the shot noise | 20 % short = 407 = 9 σ → P < 10⁻¹²"
+        },
+        {
+          "viewBox": "0 0 318 220",
+          "size": [
+            290,
+            200.625
+          ],
+          "text": "1 | 10⁻³ | 10⁻⁶ | 10⁻⁹ | 10⁻¹² | 0 | 50 | 100 | 150 | 200 | 250 | 10 | 30 | 50 | 80 | P(fail) per hole | wafers / hour | dose (mJ/cm²) |  | "
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

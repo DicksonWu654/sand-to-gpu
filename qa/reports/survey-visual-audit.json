@@ -1,0 +1,1183 @@
+{
+  "reviewedAt": "2026-09-14T00:11:15.823Z",
+  "scope": "60 survey section figures; semantic and visual review, not a new exhaustive scientific fact check",
+  "figures": [
+    {
+      "lesson": "s01",
+      "section": "1-what-a-chip-actually-is",
+      "title": "A circuit is more than its switches",
+      "source": "course/survey/S01-the-big-picture.md",
+      "sourceSection": 1,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Two identical wiring slabs had no contacts to the device icons. Dedicated die cross-section now shows continuous metal/via/contact relationships.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s01-1-1280-light.png",
+        "qa/shots/survey-audit/s01-1-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations. Also inspected at desktop-dark and phone-light.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s01-1-1280-light.png",
+        "qa/shots/survey-audit/after/s01-1-375-dark.png",
+        "qa/shots/survey-audit/after/s01-1-1280-dark.png",
+        "qa/shots/survey-audit/after/s01-1-375-light.png"
+      ]
+    },
+    {
+      "lesson": "s01",
+      "section": "2-several-branches-meet-in-the-factory",
+      "title": "Four branches converge on fabrication",
+      "source": "course/survey/S01-the-big-picture.md",
+      "sourceSection": 2,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Independent wafer, design, material and equipment inputs converge. This is a functional input diagram, not a process sequence. Labels fit at both inspected widths.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s01-2-1280-light.png",
+        "qa/shots/survey-audit/s01-2-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s01-2-1280-light.png",
+        "qa/shots/survey-audit/after/s01-2-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s01",
+      "section": "3-build-a-circuit-by-repeating-controlled-changes",
+      "title": "The circuit grows through repeated changes",
+      "source": "course/survey/S01-the-big-picture.md",
+      "sourceSection": 3,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Repeated deposition/pattern/modify/measure sequence matches the opening explanation. Icons and step labels remain readable on phone.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s01-3-1280-light.png",
+        "qa/shots/survey-audit/s01-3-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s01-3-1280-light.png",
+        "qa/shots/survey-audit/after/s01-3-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s01",
+      "section": "4-why-scale-creates-difficulty-in-opposite-directions",
+      "title": "Correct size is not enough: position matters",
+      "source": "course/survey/S01-the-big-picture.md",
+      "sourceSection": 4,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Registration was represented by a via symbol, so no error was visible. Now aligned and offset plan views are contrasted with an explicitly separate wafer edge profile.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s01-4-1280-light.png",
+        "qa/shots/survey-audit/s01-4-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s01-4-1280-light.png",
+        "qa/shots/survey-audit/after/s01-4-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s01",
+      "section": "5-why-memory-and-packaging-belong-in-the-same-story",
+      "title": "Compute, memory and package work together",
+      "source": "course/survey/S01-the-big-picture.md",
+      "sourceSection": 5,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Ring topology implied one-way GPU/HBM traffic and labeled an entire assembly as substrate. Replaced with coherent package cutaway and substrate-specific data.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s01-5-1280-light.png",
+        "qa/shots/survey-audit/s01-5-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations. Also inspected at desktop-dark and phone-light.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s01-5-1280-light.png",
+        "qa/shots/survey-audit/after/s01-5-375-dark.png",
+        "qa/shots/survey-audit/after/s01-5-1280-dark.png",
+        "qa/shots/survey-audit/after/s01-5-375-light.png"
+      ]
+    },
+    {
+      "lesson": "s01",
+      "section": "6-why-no-company-can-replace-the-chain-overnight",
+      "title": "A substitute must work inside the whole process",
+      "source": "course/survey/S01-the-big-picture.md",
+      "sourceSection": 6,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Unconditional cycle returned qualified production to candidate selection. Explicit evidence-based pass and revision branches now show the actual decision.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s01-6-1280-light.png",
+        "qa/shots/survey-audit/s01-6-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s01-6-1280-light.png",
+        "qa/shots/survey-audit/after/s01-6-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s02",
+      "section": "1-the-useful-ingredient-in-the-rock",
+      "title": "Separate silicon from oxygen",
+      "source": "course/survey/S02-from-sand-to-a-mirror.md",
+      "sourceSection": 1,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Disconnected furnace/rock icons did not show oxygen-removal output paths. Selected the arc-furnace scene; recovered silicon no longer drawn as finished crystal.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s02-1-1280-light.png",
+        "qa/shots/survey-audit/s02-1-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations. Also inspected at desktop-dark and phone-light.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s02-1-1280-light.png",
+        "qa/shots/survey-audit/after/s02-1-375-dark.png",
+        "qa/shots/survey-audit/after/s02-1-1280-dark.png",
+        "qa/shots/survey-audit/after/s02-1-375-light.png"
+      ]
+    },
+    {
+      "lesson": "s02",
+      "section": "2-purification-works-by-changing-the-form-of-silicon",
+      "title": "Purify silicon by changing its form",
+      "source": "course/survey/S02-from-sand-to-a-mirror.md",
+      "sourceSection": 2,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Distillation and volatile feed had identical gas-bottle icons; polysilicon looked single-crystalline. Selected Siemens apparatus and polycrystal variant.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s02-2-1280-light.png",
+        "qa/shots/survey-audit/s02-2-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations. Also inspected at desktop-dark and phone-light.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s02-2-1280-light.png",
+        "qa/shots/survey-audit/after/s02-2-375-dark.png",
+        "qa/shots/survey-audit/after/s02-2-1280-dark.png",
+        "qa/shots/survey-audit/after/s02-2-375-light.png"
+      ]
+    },
+    {
+      "lesson": "s02",
+      "section": "3-growing-one-crystal-instead-of-freezing-a-lump",
+      "title": "A seed guides the growing crystal",
+      "source": "course/survey/S02-from-sand-to-a-mirror.md",
+      "sourceSection": 3,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "CZ crucible incorrectly looked like arc furnace; seed and ingot were identical faceted rocks. Selected seed/melt/crystal CZ apparatus.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s02-3-1280-light.png",
+        "qa/shots/survey-audit/s02-3-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations. Also inspected at desktop-dark and phone-light.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s02-3-1280-light.png",
+        "qa/shots/survey-audit/after/s02-3-375-dark.png",
+        "qa/shots/survey-audit/after/s02-3-1280-dark.png",
+        "qa/shots/survey-audit/after/s02-3-375-light.png"
+      ]
+    },
+    {
+      "lesson": "s02",
+      "section": "4-some-impurities-are-managed-rather-than-eliminated",
+      "title": "One internal-gettering arrangement",
+      "source": "course/survey/S02-from-sand-to-a-mirror.md",
+      "sourceSection": 4,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Bulk collection sites were drawn as generic horizontal stripes. Gettering-specific bulk marks now show internal collection sites in the common renderer.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s02-4-1280-light.png",
+        "qa/shots/survey-audit/s02-4-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s02-4-1280-light.png",
+        "qa/shots/survey-audit/after/s02-4-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s02",
+      "section": "5-a-saw-cut-is-only-the-beginning-of-a-wafer",
+      "title": "A sliced disc needs several finishing steps",
+      "source": "course/survey/S02-from-sand-to-a-mirror.md",
+      "sourceSection": 5,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Slice looked like an intact faceted crystal and polishing like deposition. A cylindrical ingot with slice cuts and a thin polished surface now support the process labels.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s02-5-1280-light.png",
+        "qa/shots/survey-audit/s02-5-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s02-5-1280-light.png",
+        "qa/shots/survey-audit/after/s02-5-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s02",
+      "section": "6-cleaning-and-inspection-preserve-the-starting-point",
+      "title": "Protect the surface through the last handoff",
+      "source": "course/survey/S02-from-sand-to-a-mirror.md",
+      "sourceSection": 6,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Protected shipping was depicted as a bare exposed wafer. Carrier variant now makes the protective enclosure visible.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s02-6-1280-light.png",
+        "qa/shots/survey-audit/s02-6-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s02-6-1280-light.png",
+        "qa/shots/survey-audit/after/s02-6-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s03",
+      "section": "1-the-cleanroom-is-only-the-visible-part",
+      "title": "The cleanroom is one level of the factory",
+      "source": "course/survey/S03-inside-the-fab.md",
+      "sourceSection": 1,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Functional facility levels are explicitly identified as schematic, not blueprint. Air/tools/services ordering is sensible; no label collision observed.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s03-1-1280-light.png",
+        "qa/shots/survey-audit/s03-1-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s03-1-1280-light.png",
+        "qa/shots/survey-audit/after/s03-1-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s03",
+      "section": "2-cleanliness-is-about-the-wafer-s-environment",
+      "title": "Control the environment closest to the wafer",
+      "source": "course/survey/S03-inside-the-fab.md",
+      "sourceSection": 2,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Carrier/tool enclosure looked identical to cleanroom airflow. Carrier-specific glyph now distinguishes the nearest protective boundary.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s03-2-1280-light.png",
+        "qa/shots/survey-audit/s03-2-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s03-2-1280-light.png",
+        "qa/shots/survey-audit/after/s03-2-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s03",
+      "section": "3-wafers-travel-with-an-identity-and-a-history",
+      "title": "A wafer travels with a process record",
+      "source": "course/survey/S03-inside-the-fab.md",
+      "sourceSection": 3,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "FOUP was depicted as bare wafer; process record resembled circuit layout. Carrier and record grid now distinguish physical material from its history. Network renderer reflows tiny phone labels.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s03-3-1280-light.png",
+        "qa/shots/survey-audit/s03-3-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s03-3-1280-light.png",
+        "qa/shots/survey-audit/after/s03-3-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s03",
+      "section": "4-the-wafer-revisits-operations-as-the-chip-grows",
+      "title": "The same tool types serve many layers",
+      "source": "course/survey/S03-inside-the-fab.md",
+      "sourceSection": 4,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Re-entrant processing is a real cycle; caption states that each operation depends on the current surface. Order and labels are clear.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s03-4-1280-light.png",
+        "qa/shots/survey-audit/s03-4-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s03-4-1280-light.png",
+        "qa/shots/survey-audit/after/s03-4-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s03",
+      "section": "5-waiting-explains-much-of-the-production-time",
+      "title": "Process time sits inside a larger cycle time",
+      "source": "course/survey/S03-inside-the-fab.md",
+      "sourceSection": 5,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Queue/process/transport/hold are visibly separate time components. Equal icon spacing is not presented as a quantitative duration chart.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s03-5-1280-light.png",
+        "qa/shots/survey-audit/s03-5-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s03-5-1280-light.png",
+        "qa/shots/survey-audit/after/s03-5-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s03",
+      "section": "6-expensive-equipment-makes-coordination-valuable",
+      "title": "Several constraints set useful output",
+      "source": "course/survey/S03-inside-the-fab.md",
+      "sourceSection": 6,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Converging availability/material/schedule constraints support qualified output. No implied supplier ordering or number claim.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s03-6-1280-light.png",
+        "qa/shots/survey-audit/s03-6-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s03-6-1280-light.png",
+        "qa/shots/survey-audit/after/s03-6-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s04",
+      "section": "1-making-a-temporary-pattern-in-chemistry",
+      "title": "Light creates a temporary chemical stencil",
+      "source": "course/survey/S04-drawing-with-light.md",
+      "sourceSection": 1,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Coat/expose/develop/transfer sequence correctly distinguishes temporary resist from later etch. Resist polarity caveat retained.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s04-1-1280-light.png",
+        "qa/shots/survey-audit/s04-1-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s04-1-1280-light.png",
+        "qa/shots/survey-audit/after/s04-1-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s04",
+      "section": "2-why-the-wavelength-matters-without-setting-every-dimension",
+      "title": "Resolution depends on more than wavelength",
+      "source": "course/survey/S04-drawing-with-light.md",
+      "sourceSection": 2,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Wavelength and numerical aperture used identical rays; output falsely looked like an etch operation. Distinct wave and optical-angle glyphs plus pattern output now clarify the factors.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s04-2-1280-light.png",
+        "qa/shots/survey-audit/s04-2-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s04-2-1280-light.png",
+        "qa/shots/survey-audit/after/s04-2-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s04",
+      "section": "3-deep-ultraviolet-remains-a-major-manufacturing-tool",
+      "title": "Immersion changes the last optical gap",
+      "source": "course/survey/S04-drawing-with-light.md",
+      "sourceSection": 3,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Projection optics looked like a mask and immersion like floating solid film. Optical and lens/water/wafer variants correct the component meanings.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s04-3-1280-light.png",
+        "qa/shots/survey-audit/s04-3-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s04-3-1280-light.png",
+        "qa/shots/survey-audit/after/s04-3-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s04",
+      "section": "4-extreme-ultraviolet-requires-a-different-machine",
+      "title": "EUV travels through a reflective optical chain",
+      "source": "course/survey/S04-drawing-with-light.md",
+      "sourceSection": 4,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "EUV mirrors showed transmitting lens rays, and plasma showed ordinary heat loss. Reflective-ray and emitting-plasma variants now fit the stated mechanism.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s04-4-1280-light.png",
+        "qa/shots/survey-audit/s04-4-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s04-4-1280-light.png",
+        "qa/shots/survey-audit/after/s04-4-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s04",
+      "section": "5-small-patterns-expose-the-randomness-of-individual-events",
+      "title": "Individual events become a developed edge",
+      "source": "course/survey/S04-drawing-with-light.md",
+      "sourceSection": 5,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Developed randomness was illustrated by a perfectly straight etched trench. Rough developed-edge variant now makes the consequence visible.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s04-5-1280-light.png",
+        "qa/shots/survey-audit/s04-5-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s04-5-1280-light.png",
+        "qa/shots/survey-audit/after/s04-5-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s04",
+      "section": "6-alignment-and-throughput-determine-whether-the-pattern-is-",
+      "title": "Measure, correct and print in registration",
+      "source": "course/survey/S04-drawing-with-light.md",
+      "sourceSection": 6,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Generic layout/electron probe icons hid placement comparison. Alignment-mark and offset variants support measure/correct/check labels.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s04-6-1280-light.png",
+        "qa/shots/survey-audit/s04-6-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s04-6-1280-light.png",
+        "qa/shots/survey-audit/after/s04-6-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s05",
+      "section": "1-every-film-has-a-job-in-the-device",
+      "title": "A film\u2019s role determines its requirements",
+      "source": "course/survey/S05-adding-and-removing-layers.md",
+      "sourceSection": 1,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Sacrificial film showed active etch rather than remaining released structure. Thin dielectric and released-channel variants better distinguish material roles.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s05-1-1280-light.png",
+        "qa/shots/survey-audit/s05-1-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s05-1-1280-light.png",
+        "qa/shots/survey-audit/after/s05-1-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s05",
+      "section": "2-different-deposition-methods-reach-different-surfaces",
+      "title": "Transport and reaction determine coverage",
+      "source": "course/survey/S05-adding-and-removing-layers.md",
+      "sourceSection": 2,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "PVD directional arrival versus gas reaction/conformal surface growth is visibly different. Caption keeps actual coverage conditional on process.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s05-2-1280-light.png",
+        "qa/shots/survey-audit/s05-2-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s05-2-1280-light.png",
+        "qa/shots/survey-audit/after/s05-2-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s05",
+      "section": "3-atomic-layer-deposition-controls-the-reaction-sequence",
+      "title": "ALD separates the two reactants in time",
+      "source": "course/survey/S05-adding-and-removing-layers.md",
+      "sourceSection": 3,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Two precursor exposures are separated by purge stages and cycle repeat. Does not imply exactly one atomic plane grows each cycle.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s05-3-1280-light.png",
+        "qa/shots/survey-audit/s05-3-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s05-3-1280-light.png",
+        "qa/shots/survey-audit/after/s05-3-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s05",
+      "section": "4-etching-turns-the-stencil-into-a-shape",
+      "title": "The stencil becomes a material profile",
+      "source": "course/survey/S05-adding-and-removing-layers.md",
+      "sourceSection": 4,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Directional and lateral removal have distinct visible profiles; isotropic undercut extends beneath mask. No text collision observed.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s05-4-1280-light.png",
+        "qa/shots/survey-audit/s05-4-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s05-4-1280-light.png",
+        "qa/shots/survey-audit/after/s05-4-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s05",
+      "section": "5-precise-removal-requires-knowing-when-and-where-to-stop",
+      "title": "Stop at the right material and depth",
+      "source": "course/survey/S05-adding-and-removing-layers.md",
+      "sourceSection": 5,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Target etched structure was inexplicably a completed transistor. Directional profile now remains the outcome of etch controls.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s05-5-1280-light.png",
+        "qa/shots/survey-audit/s05-5-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s05-5-1280-light.png",
+        "qa/shots/survey-audit/after/s05-5-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s05",
+      "section": "6-doping-changes-electrical-behavior-and-heat-completes-the-",
+      "title": "Place dopants, then make them electrically useful",
+      "source": "course/survey/S05-adding-and-removing-layers.md",
+      "sourceSection": 6,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Ion beam and damaged lattice were gas bottle and faceted rock. Beamline, impurity lattice and dopant lattice now distinguish delivery, disturbance and electrical role.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s05-6-1280-light.png",
+        "qa/shots/survey-audit/s05-6-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s05-6-1280-light.png",
+        "qa/shots/survey-audit/after/s05-6-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s06",
+      "section": "1-a-switch-built-from-an-electric-field",
+      "title": "An insulated gate controls the channel",
+      "source": "course/survey/S06-transistor-and-wiring.md",
+      "sourceSection": 1,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Dedicated transistor drawing separates field-control from source\u2013drain path. Small phone SVG labels were enlarged, and the viewBox extended upward so Gate text remains fully visible. Final recapture accepted at both widths and themes.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s06-1-1280-light.png",
+        "qa/shots/survey-audit/s06-1-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations. Also inspected at desktop-dark and phone-light.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s06-1-1280-light.png",
+        "qa/shots/survey-audit/after/s06-1-375-dark.png",
+        "qa/shots/survey-audit/after/s06-1-1280-dark.png",
+        "qa/shots/survey-audit/after/s06-1-375-light.png"
+      ]
+    },
+    {
+      "lesson": "s06",
+      "section": "2-why-flat-transistors-became-fins",
+      "title": "A fin gives the gate more access to the channel",
+      "source": "course/survey/S06-transistor-and-wiring.md",
+      "sourceSection": 2,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "FinFET glyph wrapped bottom and lower sides while text said top and sides. Shared glyph corrected; caption explicitly distinguishes section directions from planar view.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s06-2-1280-light.png",
+        "qa/shots/survey-audit/s06-2-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s06-2-1280-light.png",
+        "qa/shots/survey-audit/after/s06-2-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s06",
+      "section": "3-surrounding-the-channel-without-losing-the-circuit",
+      "title": "Gate-all-around changes the channel geometry",
+      "source": "course/survey/S06-transistor-and-wiring.md",
+      "sourceSection": 3,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Fully gated nanosheet shape was labeled released sheets. Label now names completed gated nanosheets, and text places sheet release before surrounding gate deposition.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s06-3-1280-light.png",
+        "qa/shots/survey-audit/s06-3-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s06-3-1280-light.png",
+        "qa/shots/survey-audit/after/s06-3-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s06",
+      "section": "4-making-wiring-inside-an-insulating-stack",
+      "title": "Connections climb through insulating levels",
+      "source": "course/survey/S06-transistor-and-wiring.md",
+      "sourceSection": 4,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Repeated wiring slabs showed dangling routes without inter-tier joins. A dedicated interconnect cross-section now shows lateral metal, vertical vias and contacts connected to the device level.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s06-4-1280-light.png",
+        "qa/shots/survey-audit/s06-4-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations. Also inspected at desktop-dark and phone-light.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s06-4-1280-light.png",
+        "qa/shots/survey-audit/after/s06-4-375-dark.png",
+        "qa/shots/survey-audit/after/s06-4-1280-dark.png",
+        "qa/shots/survey-audit/after/s06-4-375-light.png"
+      ]
+    },
+    {
+      "lesson": "s06",
+      "section": "5-the-wire-can-become-the-slow-part",
+      "title": "Smaller wires can cost more signal delay",
+      "source": "course/survey/S06-transistor-and-wiring.md",
+      "sourceSection": 5,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Wide/narrow conductors and neighboring comb structures distinguish resistance and capacitive coupling qualitatively. Not presented as calibrated delay data.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s06-5-1280-light.png",
+        "qa/shots/survey-audit/s06-5-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s06-5-1280-light.png",
+        "qa/shots/survey-audit/after/s06-5-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s06",
+      "section": "6-supplying-power-from-another-side",
+      "title": "Separate the power route from signal wiring",
+      "source": "course/survey/S06-transistor-and-wiring.md",
+      "sourceSection": 6,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Frontside and backside routes appear on opposite sides of device level. Caption correctly limits the latter to selected power connections.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s06-6-1280-light.png",
+        "qa/shots/survey-audit/s06-6-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s06-6-1280-light.png",
+        "qa/shots/survey-audit/after/s06-6-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s07",
+      "section": "1-measure-before-the-mistake-becomes-expensive",
+      "title": "Three kinds of evidence answer different questions",
+      "source": "course/survey/S07-knowing-it-works.md",
+      "sourceSection": 1,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Metrology, inspection and electrical test are parallel evidence classes. No unsupported process order or implied guarantee.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s07-1-1280-light.png",
+        "qa/shots/survey-audit/s07-1-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s07-1-1280-light.png",
+        "qa/shots/survey-audit/after/s07-1-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s07",
+      "section": "2-why-a-fab-cannot-examine-everything-equally",
+      "title": "Inspect broadly, then investigate selectively",
+      "source": "course/survey/S07-knowing-it-works.md",
+      "sourceSection": 2,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Selected review sites looked like ordinary whole-wafer die grid. Sparse selected-site marker variant now conveys sampling.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s07-2-1280-light.png",
+        "qa/shots/survey-audit/s07-2-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s07-2-1280-light.png",
+        "qa/shots/survey-audit/after/s07-2-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s07",
+      "section": "3-yield-connects-physics-to-economics",
+      "title": "Yield is defined at a particular stage",
+      "source": "course/survey/S07-knowing-it-works.md",
+      "sourceSection": 3,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Stage-specific yield sequence separates wafer checks, die sort, assembly and bins. Caption explicitly demands unit and criterion.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s07-3-1280-light.png",
+        "qa/shots/survey-audit/s07-3-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s07-3-1280-light.png",
+        "qa/shots/survey-audit/after/s07-3-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s07",
+      "section": "4-touch-the-wafer-and-ask-electrical-questions",
+      "title": "Temporary contacts connect each die to the tester",
+      "source": "course/survey/S07-knowing-it-works.md",
+      "sourceSection": 4,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "ATE looked like another probe head; wafer map looked like circuit wires. Instrument and grid variants distinguish tester and recorded result.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s07-4-1280-light.png",
+        "qa/shots/survey-audit/s07-4-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s07-4-1280-light.png",
+        "qa/shots/survey-audit/after/s07-4-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s07",
+      "section": "5-a-good-bare-die-is-not-a-finished-product",
+      "title": "Assembly creates new things to test",
+      "source": "course/survey/S07-knowing-it-works.md",
+      "sourceSection": 5,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Incoming die evidence precedes new interfaces, package tests and reliability evidence. Caption preserves specified-test-flow limitation.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s07-5-1280-light.png",
+        "qa/shots/survey-audit/s07-5-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s07-5-1280-light.png",
+        "qa/shots/survey-audit/after/s07-5-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s07",
+      "section": "6-decide-what-evidence-is-enough",
+      "title": "Choose test coverage around the consequences",
+      "source": "course/survey/S07-knowing-it-works.md",
+      "sourceSection": 6,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Test cost illustrated only another probe head. Instrument variant identifies equipment resource alongside failure exposure and downstream value.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s07-6-1280-light.png",
+        "qa/shots/survey-audit/s07-6-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s07-6-1280-light.png",
+        "qa/shots/survey-audit/after/s07-6-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s08",
+      "section": "1-computing-needs-somewhere-to-put-things",
+      "title": "Useful computation depends on data movement",
+      "source": "course/survey/S08-memory-and-hbm.md",
+      "sourceSection": 1,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Reciprocal memory/compute arrows overlaid the same segment and all network labels shrank on phone. Common per-edge layout separates actions and keeps text readable.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s08-1-1280-light.png",
+        "qa/shots/survey-audit/s08-1-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s08-1-1280-light.png",
+        "qa/shots/survey-audit/after/s08-1-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s08",
+      "section": "2-a-dram-bit-is-a-very-small-stored-charge",
+      "title": "A DRAM read senses and restores a small charge",
+      "source": "course/survey/S08-memory-and-hbm.md",
+      "sourceSection": 2,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Restore arrow jumped directly from amplifier to capacitor, bypassing bit line and access device. Three bidirectional path segments now show the same selected electrical route for sensing/restoration. Word-line selection is identified explicitly; restoration follows the same path.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s08-2-1280-light.png",
+        "qa/shots/survey-audit/s08-2-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations. Also inspected at desktop-dark and phone-light.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s08-2-1280-light.png",
+        "qa/shots/survey-audit/after/s08-2-375-dark.png",
+        "qa/shots/survey-audit/after/s08-2-1280-dark.png",
+        "qa/shots/survey-audit/after/s08-2-375-light.png"
+      ]
+    },
+    {
+      "lesson": "s08",
+      "section": "3-nand-remembers-by-changing-a-transistor",
+      "title": "Retained charge changes a NAND cell\u2019s threshold",
+      "source": "course/survey/S08-memory-and-hbm.md",
+      "sourceSection": 3,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Read phase replaced NAND storage device with an ordinary planar transistor, implying charge-storage structure vanished. Read retains NAND geometry.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s08-3-1280-light.png",
+        "qa/shots/survey-audit/s08-3-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s08-3-1280-light.png",
+        "qa/shots/survey-audit/after/s08-3-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s08",
+      "section": "4-building-memory-upward",
+      "title": "Two different ways of building memory upward",
+      "source": "course/survey/S08-memory-and-hbm.md",
+      "sourceSection": 4,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Vertical channel crossing cell layers is distinct from separate DRAM dies connected vertically. Caption makes this important construction distinction explicit.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s08-4-1280-light.png",
+        "qa/shots/survey-audit/s08-4-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s08-4-1280-light.png",
+        "qa/shots/survey-audit/after/s08-4-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s08",
+      "section": "5-hbm-puts-a-wide-road-beside-the-processor",
+      "title": "An HBM stack connects down to the package",
+      "source": "course/survey/S08-memory-and-hbm.md",
+      "sourceSection": 5,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "HBM dies were a naked wire mesh; substrate a second chip with dangling pins. Dedicated HBM section shows discrete dies, interfaces, base and package wiring.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s08-5-1280-light.png",
+        "qa/shots/survey-audit/s08-5-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations. Also inspected at desktop-dark and phone-light.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s08-5-1280-light.png",
+        "qa/shots/survey-audit/after/s08-5-375-dark.png",
+        "qa/shots/survey-audit/after/s08-5-1280-dark.png",
+        "qa/shots/survey-audit/after/s08-5-375-light.png"
+      ]
+    },
+    {
+      "lesson": "s08",
+      "section": "6-stack-yield-and-the-cost-of-a-useful-bit",
+      "title": "Screen at the die, stack and package stages",
+      "source": "course/survey/S08-memory-and-hbm.md",
+      "sourceSection": 6,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Stack test looked like another bare probe operation. Instrument icon now distinguishes electrical evaluation from vertical assembly.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s08-6-1280-light.png",
+        "qa/shots/survey-audit/s08-6-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s08-6-1280-light.png",
+        "qa/shots/survey-audit/after/s08-6-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s09",
+      "section": "1-why-a-chip-needs-an-engineered-home",
+      "title": "A package connects several physical scales",
+      "source": "course/survey/S09-packaging-a-gpu.md",
+      "sourceSection": 1,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Package hierarchy duplicated die/pin motifs and substrate did not show redistribution. A dedicated general package section now connects the die through joints, substrate wiring and underside balls to the board.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s09-1-1280-light.png",
+        "qa/shots/survey-audit/s09-1-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations. Also inspected at desktop-dark and phone-light.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s09-1-1280-light.png",
+        "qa/shots/survey-audit/after/s09-1-375-dark.png",
+        "qa/shots/survey-audit/after/s09-1-1280-dark.png",
+        "qa/shots/survey-audit/after/s09-1-375-light.png"
+      ]
+    },
+    {
+      "lesson": "s09",
+      "section": "2-separate-useful-dies-without-damaging-them",
+      "title": "Prepare a wafer for safe die separation",
+      "source": "course/survey/S09-packaging-a-gpu.md",
+      "sourceSection": 2,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Backgrind looked like unmodified wafer; separated die looked fully packaged. Thin-surface and die-grid variants avoid implying package completion.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s09-2-1280-light.png",
+        "qa/shots/survey-audit/s09-2-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s09-2-1280-light.png",
+        "qa/shots/survey-audit/after/s09-2-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s09",
+      "section": "3-make-reliable-joints-and-fan-them-outward",
+      "title": "Peripheral wires or an area of joints",
+      "source": "course/survey/S09-packaging-a-gpu.md",
+      "sourceSection": 3,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Arcing peripheral wires visibly differ from face-to-face area joints. Caption explains connection orientation.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s09-3-1280-light.png",
+        "qa/shots/survey-audit/s09-3-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s09-3-1280-light.png",
+        "qa/shots/survey-audit/after/s09-3-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s09",
+      "section": "4-put-the-processor-and-memory-on-a-shared-fine-wiring-struc",
+      "title": "Fine wiring can use different constructions",
+      "source": "course/survey/S09-packaging-a-gpu.md",
+      "sourceSection": 4,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Full silicon interposer, RDL route and local embedded bridge are visibly distinguished; captions avoid treating one CoWoS variant as all variants.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s09-4-1280-light.png",
+        "qa/shots/survey-audit/s09-4-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s09-4-1280-light.png",
+        "qa/shots/survey-audit/after/s09-4-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s09",
+      "section": "5-why-larger-integration-raises-the-stakes",
+      "title": "One weak input can threaten the combined assembly",
+      "source": "course/survey/S09-packaging-a-gpu.md",
+      "sourceSection": 5,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Qualified incoming compute, memory and wiring converge into valuable assembly. Source explains rework difficulty; no numeric yield inference added.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s09-5-1280-light.png",
+        "qa/shots/survey-audit/s09-5-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s09-5-1280-light.png",
+        "qa/shots/survey-audit/after/s09-5-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s09",
+      "section": "6-stacking-dies-without-solder",
+      "title": "Hybrid bonding joins surfaces directly",
+      "source": "course/survey/S09-packaging-a-gpu.md",
+      "sourceSection": 6,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Hybrid-bond glyph had raised contacts spanning a gap between dielectric slabs. Shared geometry now has flush copper and dielectric faces meeting at one plane. Solder comparator uses actual bump variant. Final targeted inspection also caught floating solder circles; their radius now touches both die faces.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s09-6-1280-light.png",
+        "qa/shots/survey-audit/s09-6-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations. Also inspected at desktop-dark and phone-light.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s09-6-1280-light.png",
+        "qa/shots/survey-audit/after/s09-6-375-dark.png",
+        "qa/shots/survey-audit/after/s09-6-1280-dark.png",
+        "qa/shots/survey-audit/after/s09-6-375-light.png"
+      ]
+    },
+    {
+      "lesson": "s10",
+      "section": "1-turn-behavior-into-a-manufacturable-circuit",
+      "title": "Hardware behavior becomes physical geometry",
+      "source": "course/survey/S10-becoming-a-gpu.md",
+      "sourceSection": 1,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Manufacturable layout was represented only by a generic mask shape. Pattern layout now appears as the output of implementation.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s10-1-1280-light.png",
+        "qa/shots/survey-audit/s10-1-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s10-1-1280-light.png",
+        "qa/shots/survey-audit/after/s10-1-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s10",
+      "section": "2-find-mistakes-before-they-become-silicon",
+      "title": "Different verification methods provide complementary evidence",
+      "source": "course/survey/S10-becoming-a-gpu.md",
+      "sourceSection": 2,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Formal verification was a wafer-test apparatus, suggesting post-fabrication electrical testing. Design-domain glyph now keeps verification in its intended stage.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s10-2-1280-light.png",
+        "qa/shots/survey-audit/s10-2-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s10-2-1280-light.png",
+        "qa/shots/survey-audit/after/s10-2-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s10",
+      "section": "3-follow-one-product-through-several-companies",
+      "title": "A GPU product joins several manufacturing streams",
+      "source": "course/survey/S10-becoming-a-gpu.md",
+      "sourceSection": 3,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Design, foundry and memory appeared as independent inputs only to packaging; design-to-foundry dependency absent. Authored network now separates design handoff, tested dies, memory and package requirements.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s10-3-1280-light.png",
+        "qa/shots/survey-audit/s10-3-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s10-3-1280-light.png",
+        "qa/shots/survey-audit/after/s10-3-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s10",
+      "section": "4-a-package-becomes-a-board-a-server-and-a-rack",
+      "title": "A package is only one level of the system",
+      "source": "course/survey/S10-becoming-a-gpu.md",
+      "sourceSection": 4,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Server and rack had identical rack icons; module looked like an isolated chip. Board, server and rack variants now distinguish system levels.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s10-4-1280-light.png",
+        "qa/shots/survey-audit/s10-4-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s10-4-1280-light.png",
+        "qa/shots/survey-audit/after/s10-4-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s10",
+      "section": "5-communication-determines-how-much-the-system-can-cooperate",
+      "title": "Communication connects multiple compute islands",
+      "source": "course/survey/S10-becoming-a-gpu.md",
+      "sourceSection": 5,
+      "status": "changed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "One-way traffic into a switch hid cooperation; GPU+HBM showed only single chip. Explicit bidirectional links and package/network variants correct the relationships.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s10-5-1280-light.png",
+        "qa/shots/survey-audit/s10-5-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s10-5-1280-light.png",
+        "qa/shots/survey-audit/after/s10-5-375-dark.png"
+      ]
+    },
+    {
+      "lesson": "s10",
+      "section": "6-read-the-industry-through-constraints-and-accounting",
+      "title": "Cost share and bottleneck are different questions",
+      "source": "course/survey/S10-becoming-a-gpu.md",
+      "sourceSection": 6,
+      "status": "reviewed",
+      "reviewBasis": "Full-resolution figure screenshots at actual course figure width 788px (1280 viewport, light) and 335px (375 viewport, dark); section heading/opening and affected mechanism prose checked.",
+      "finding": "Capacity, utilization, allocation and accounting remain parallel questions; schematic does not imply a quantitative relation or margin estimate.",
+      "beforeScreenshots": [
+        "qa/shots/survey-audit/s10-6-1280-light.png",
+        "qa/shots/survey-audit/s10-6-375-dark.png"
+      ],
+      "afterReview": "Reviewed at full resolution against source heading and applicable mechanism prose; no remaining diagram-label collision, clipping, or misleading relationship found in the inspected configurations.",
+      "afterScreenshots": [
+        "qa/shots/survey-audit/after/s10-6-1280-light.png",
+        "qa/shots/survey-audit/after/s10-6-375-dark.png"
+      ]
+    }
+  ],
+  "completedAt": "2026-09-14T00:25:32.332226+00:00",
+  "summary": {
+    "changed": 40,
+    "reviewed": 20,
+    "needs attention": 0
+  },
+  "manualReviewScope": "All 60 figures reviewed at full resolution before and after changes in desktop-light (1280px viewport, 788px figure) and phone-dark (375px viewport, 335px figure). Eight apparatus/cross-section figures additionally reviewed in opposite themes. Three late corrected figures (s06\u00a71, s08\u00a72, s09\u00a76) recaptured and reviewed in all four width/theme configurations. This is visual and source-grounded semantic review, not an exhaustive independent scientific fact check. The 240-image capture set must not be confused with manual inspection of all 240 configurations.",
+  "integratedPageReview": {
+    "lesson": "s01",
+    "result": "Source heading, paragraph and connected die figure reviewed in the actual page at desktop-light and phone-dark; accepted.",
+    "screenshots": [
+      "qa/shots/survey-audit/after/s01-integrated-1280-light.png",
+      "qa/shots/survey-audit/after/s01-integrated-375-dark.png"
+    ]
+  }
+}

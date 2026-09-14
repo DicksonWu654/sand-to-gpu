@@ -269,7 +269,8 @@
       "file": "course/modules/13-metrology-inspection-yield.md",
       "heading": "8. SPC, APC, FDC, and the Excursion"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "returnLabel": "Apply validated corrections to later process runs"
   },
   {
     "section": "9-yield-theory",
@@ -372,7 +373,8 @@
       "file": "course/modules/13-metrology-inspection-yield.md",
       "heading": "11. The Economics of Process Control"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "returnLabel": "Use yield learning to choose later measurements"
   },
   {
     "section": "12-metrology-and-inspection-for-euv",

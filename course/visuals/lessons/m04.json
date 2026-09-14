@@ -347,7 +347,7 @@
   },
   {
     "section": "wet-chemicals",
-    "family": "cycle",
+    "family": "flow",
     "title": "Cleaning chemistry must not become contamination",
     "caption": "A wet process removes material from the wafer but can also redeposit contaminants unless the chemical and rinse streams are controlled. Schematic, not to scale.",
     "nodes": [
@@ -443,7 +443,8 @@
     "source": {
       "file": "course/modules/04-materials-and-consumables.md",
       "heading": "CMP slurries and pads"
-    }
+    },
+    "returnLabel": "Continue surface reaction and removal until the polishing endpoint"
   },
   {
     "section": "sputter-targets",
@@ -614,6 +615,7 @@
     "source": {
       "file": "course/modules/04-materials-and-consumables.md",
       "heading": "Why Japan dominates materials"
-    }
+    },
+    "returnLabel": "Process feedback informs the next qualified formulation"
   }
 ]

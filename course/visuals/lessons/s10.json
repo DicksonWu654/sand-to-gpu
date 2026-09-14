@@ -22,7 +22,8 @@
       {
         "label": "Manufacturable layout",
         "detail": "Check geometry against the process requirements.",
-        "glyph": "mask"
+        "glyph": "mask",
+        "variant": "layout"
       }
     ],
     "edges": [],
@@ -42,7 +43,7 @@
       {
         "label": "Formal checks",
         "detail": "Prove specified properties within a defined model.",
-        "glyph": "test"
+        "glyph": "design"
       },
       {
         "label": "Emulation",
@@ -60,7 +61,7 @@
     "section": "2-find-mistakes-before-they-become-silicon"
   },
   {
-    "family": "branch",
+    "family": "network",
     "title": "A GPU product joins several manufacturing streams",
     "caption": "The design company coordinates process, package, test and system requirements across the organizations that supply the physical product.",
     "nodes": [
@@ -87,7 +88,28 @@
         "variant": "cowos-s"
       }
     ],
-    "edges": [],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "manufacturable design and process requirements"
+      },
+      {
+        "from": 1,
+        "to": 3,
+        "label": "tested logic dies"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "tested memory stacks"
+      },
+      {
+        "from": 0,
+        "to": 3,
+        "label": "package, test, power and thermal requirements"
+      }
+    ],
     "note": "Conceptual schematic; geometry is not to scale.",
     "section": "3-follow-one-product-through-several-companies"
   },
@@ -105,17 +127,20 @@
       {
         "label": "Module",
         "detail": "Adds board support and local power conversion.",
-        "glyph": "chip"
+        "glyph": "chip",
+        "variant": "board"
       },
       {
         "label": "Server",
         "detail": "Combines modules with host and network resources.",
-        "glyph": "rack"
+        "glyph": "rack",
+        "variant": "server"
       },
       {
         "label": "Rack",
         "detail": "Adds shared infrastructure and system-scale connections.",
-        "glyph": "rack"
+        "glyph": "rack",
+        "variant": "rack"
       }
     ],
     "edges": [],
@@ -125,12 +150,13 @@
   {
     "family": "network",
     "title": "Communication connects multiple compute islands",
-    "caption": "A fabric\u2019s topology and software behavior affect how well processors cooperate. Local memory, GPU links and the external network are separate constraints.",
+    "caption": "A fabric’s topology and software behavior affect how well processors cooperate. Local memory, GPU links and the external network are separate constraints.",
     "nodes": [
       {
         "label": "GPU and HBM",
         "detail": "Compute has nearby working data.",
-        "glyph": "chip"
+        "glyph": "package",
+        "variant": "cowos-s"
       },
       {
         "label": "Peer GPU",
@@ -140,7 +166,8 @@
       {
         "label": "Local switching",
         "detail": "Routes traffic inside the linked group.",
-        "glyph": "wires"
+        "glyph": "wires",
+        "variant": "network"
       },
       {
         "label": "Network",
@@ -152,17 +179,20 @@
       {
         "from": 0,
         "to": 2,
-        "label": "local fabric traffic"
+        "label": "local fabric traffic",
+        "bidirectional": true
       },
       {
         "from": 1,
         "to": 2,
-        "label": "peer communication"
+        "label": "peer communication",
+        "bidirectional": true
       },
       {
         "from": 2,
         "to": 3,
-        "label": "traffic beyond the local group"
+        "label": "traffic beyond the local group",
+        "bidirectional": true
       }
     ],
     "note": "Conceptual schematic; geometry is not to scale.",

@@ -45,7 +45,7 @@
   {
     "family": "network",
     "title": "A DRAM read senses and restores a small charge",
-    "caption": "The selected cell shares charge with the bit line. The sense amplifier resolves the small signal and restores the value while the cell remains connected.",
+    "caption": "The same selected path carries charge sharing and restoration. The sense amplifier acts through the bit line and access transistor; it does not bypass them to reach the capacitor.",
     "nodes": [
       {
         "label": "Cell capacitor",
@@ -76,22 +76,20 @@
       {
         "from": 0,
         "to": 1,
-        "label": "stored charge"
+        "label": "charge sharing and restoration through the selected cell",
+        "bidirectional": true
       },
       {
         "from": 1,
         "to": 2,
-        "label": "selected connection"
+        "label": "word-line selection connects the cell to the bit line",
+        "bidirectional": true
       },
       {
         "from": 2,
         "to": 3,
-        "label": "small signal"
-      },
-      {
-        "from": 3,
-        "to": 0,
-        "label": "restore through the selected path"
+        "label": "sense the small signal; drive the bit line to restore",
+        "bidirectional": true
       }
     ],
     "note": "Conceptual schematic; geometry is not to scale.",
@@ -99,7 +97,7 @@
   },
   {
     "family": "flow",
-    "title": "Retained charge changes a NAND cell\u2019s threshold",
+    "title": "Retained charge changes a NAND cell’s threshold",
     "caption": "The stored information is inferred from transistor behavior. The storage region is electrically isolated rather than connected like a DRAM capacitor.",
     "nodes": [
       {
@@ -116,8 +114,8 @@
       {
         "label": "Read",
         "detail": "Determine which threshold range the cell occupies.",
-        "glyph": "transistor",
-        "variant": "planar"
+        "glyph": "memory",
+        "variant": "nand"
       }
     ],
     "edges": [],
@@ -171,12 +169,13 @@
         "label": "Substrate",
         "detail": "Redistributes connections toward the board.",
         "glyph": "package",
-        "variant": "cowos-s"
+        "variant": "substrate"
       }
     ],
     "edges": [],
     "note": "Conceptual schematic; geometry is not to scale.",
-    "section": "5-hbm-puts-a-wide-road-beside-the-processor"
+    "section": "5-hbm-puts-a-wide-road-beside-the-processor",
+    "scene": "hbm-section"
   },
   {
     "family": "flow",
@@ -198,7 +197,8 @@
       {
         "label": "Stack test",
         "detail": "Exercise memory through available internal access.",
-        "glyph": "test"
+        "glyph": "test",
+        "variant": "instrument"
       },
       {
         "label": "GPU integration",

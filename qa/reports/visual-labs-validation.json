@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-09-14T00:28:55.437Z",
+  "sources": [
+    "visual-labs-full-sweep.json",
+    "visual-labs-targeted-retries.json",
+    "widgets-targeted.json"
+  ],
+  "retried": [
+    "amhs-sim",
+    "dram-cell",
+    "euv-source",
+    "bragg-mirror"
+  ],
+  "widgets": 46,
+  "cases": 184,
+  "controlValues": 2924,
+  "buttonsClicked": 1036,
+  "failures": []
+}

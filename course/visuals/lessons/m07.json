@@ -144,7 +144,7 @@
         "glyph": "light",
         "label": "Wavelength",
         "detail": "The light's wavelength sets a fundamental imaging scale.",
-        "variant": "incident"
+        "variant": "wavelength"
       },
       {
         "glyph": "mask",
@@ -187,7 +187,7 @@
         "glyph": "clean",
         "label": "Immersion interface",
         "detail": "Liquid lies between the final lens and wafer.",
-        "variant": "thin"
+        "variant": "immersion"
       },
       {
         "glyph": "wafer",

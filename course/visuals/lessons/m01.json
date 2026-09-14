@@ -244,7 +244,8 @@
       {
         "glyph": "wafer",
         "label": "Slice the body",
-        "detail": "Saw kerf consumes silicon between slices."
+        "detail": "Saw kerf consumes silicon between slices.",
+        "variant": "ingot-slice"
       },
       {
         "glyph": "clean",
@@ -289,7 +290,8 @@
     "source": {
       "file": "course/modules/01-sand-to-polysilicon.md",
       "heading": "9. Economics, the China Boom, and Xinjiang"
-    }
+    },
+    "returnLabel": "Inventory and prices influence the next investment decision"
   },
   {
     "section": "10-the-other-ultra-pure-feedstocks-crucibles-and-graphite",

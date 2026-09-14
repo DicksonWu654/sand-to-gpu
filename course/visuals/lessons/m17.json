@@ -73,7 +73,8 @@
       "file": "course/modules/17-advanced-packaging-cowos.md",
       "heading": "Anatomy of a CoWoS Package, Top to Bottom"
     },
-    "note": "Conceptual schematic; geometry is not to scale."
+    "note": "Conceptual schematic; geometry is not to scale.",
+    "scene": "package-section"
   },
   {
     "section": "cowos-a-short-history",
@@ -391,17 +392,20 @@
       {
         "from": 0,
         "to": 2,
-        "label": "transmit and receive"
+        "label": "transmit and receive",
+        "bidirectional": true
       },
       {
         "from": 1,
         "to": 2,
-        "label": "transmit and receive"
+        "label": "transmit and receive",
+        "bidirectional": true
       },
       {
         "from": 2,
         "to": 3,
-        "label": "physical interconnect"
+        "label": "physical interconnect",
+        "undirected": true
       }
     ],
     "source": {

@@ -1,7 +1,7 @@
 [
   {
     "family": "compare",
-    "title": "A film\u2019s role determines its requirements",
+    "title": "A film’s role determines its requirements",
     "caption": "Permanent conductors and insulators serve the circuit; temporary masks and sacrificial films serve the manufacturing sequence.",
     "nodes": [
       {
@@ -13,7 +13,8 @@
       {
         "label": "Insulator",
         "detail": "Separates paths that must not conduct together.",
-        "glyph": "film"
+        "glyph": "film",
+        "variant": "thin"
       },
       {
         "label": "Hardmask",
@@ -23,7 +24,8 @@
       {
         "label": "Sacrificial film",
         "detail": "Creates a useful shape or space when removed later.",
-        "glyph": "etch"
+        "glyph": "etch",
+        "variant": "released"
       }
     ],
     "edges": [],
@@ -140,8 +142,8 @@
       {
         "label": "Intended structure",
         "detail": "Reach the target depth while preserving its surroundings.",
-        "glyph": "transistor",
-        "variant": "planar"
+        "glyph": "etch",
+        "variant": "anisotropic"
       }
     ],
     "edges": [],
@@ -156,12 +158,14 @@
       {
         "label": "Ion beam",
         "detail": "Introduce selected dopant species into exposed regions.",
-        "glyph": "gas"
+        "glyph": "gas",
+        "variant": "mass-analyzer"
       },
       {
         "label": "Modified crystal",
         "detail": "The implant profile and crystal damage need control.",
-        "glyph": "crystal"
+        "glyph": "crystal",
+        "variant": "impurity"
       },
       {
         "label": "Anneal",
@@ -171,8 +175,8 @@
       {
         "label": "Electrical region",
         "detail": "The resulting carrier behavior supports the device.",
-        "glyph": "transistor",
-        "variant": "planar"
+        "glyph": "crystal",
+        "variant": "dopant"
       }
     ],
     "edges": [],

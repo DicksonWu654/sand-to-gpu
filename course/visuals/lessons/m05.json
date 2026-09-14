@@ -69,7 +69,8 @@
       {
         "glyph": "package",
         "label": "Closed FOUP",
-        "detail": "A carrier protects wafers between processing steps."
+        "detail": "A carrier protects wafers between processing steps.",
+        "variant": "foup"
       },
       {
         "glyph": "clean",
@@ -97,7 +98,8 @@
       {
         "glyph": "package",
         "label": "FOUP at load port",
-        "detail": "A carrier holds the wafers as one transport unit."
+        "detail": "A carrier holds the wafers as one transport unit.",
+        "variant": "foup"
       },
       {
         "glyph": "queue",
@@ -156,7 +158,8 @@
     "source": {
       "file": "course/modules/05-inside-a-fab.md",
       "heading": "The Process Flow: 1,000–1,500 Steps, Revisited Dozens of Times"
-    }
+    },
+    "returnLabel": "Revisit the tool family when the manufacturing route calls for it"
   },
   {
     "section": "tools-counts-cost-utilization-clustering",

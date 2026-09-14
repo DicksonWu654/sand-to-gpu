@@ -32,7 +32,7 @@ Physical-stack discipline: `layers` must list genuine vertical levels in top-to-
 
 ## Authored apparatus scenes
 
-An optional `scene` property selects a source-authored drawing from `scenes.js`. The figure keeps its original `family`, exact `section`, source provenance, nodes, caption and limitation note. Unknown scene names fail strict validation. The renderer gives the scene an accessible SVG title/description and uses the authored nodes as its explanatory legend.
+An optional `scene` property selects a source-authored drawing from `scenes.js`. The figure keeps its original `family`, exact `section`, source provenance, nodes, caption and limitation note. Unknown scene names fail strict validation. The renderer gives the scene an accessible SVG title/description and uses a scene-authored numbered key for spatial annotations. The authored nodes remain in its accessible description; do not repeat the same information in a second visible legend.
 
 Available scene contracts:
 
@@ -49,3 +49,14 @@ These are conceptual apparatus drawings, not construction specifications. Preser
 For ordinary figures, `apparatus` now presents connected-equipment components without inventing a process order. `flow` retains numbered order; `cycle` has a return indication; branches converge; networks retain explicit edges. Three-part comparisons share a desktop row and become directly labeled rows on phones. Layer geometry and its explanation share matching vertical levels; vertical dimensions remain schematic rather than a scale representation.
 
 Run `node qa/figure-layout.js` after renderer or figure-style changes. It checks all 352 authored figures in both themes at desktop and phone widths (1,408 figure cases), including local overflow, three-way comparison layout and physical-layer label alignment. This complements the source-preservation check and the full routed page sweep; layout checks do not replace scientific review.
+
+
+## Diagram audit contracts (2026-09-14)
+
+- `scene` may also select `die-section`, `interconnect-section`, `package-section`, `generic-package-section`, `hbm-section`, `leadframe-section`, or `capacitor-section`. These draw connected physical structures. `package-section` specifically includes logic plus HBM; use `generic-package-section` for a single die with substrate and board. `capacitor-section` is a planar interface slice, not a claim about the full cylinder geometry of a DRAM capacitor.
+- A scene returns `{art, height, key}`. `key` is an ordered array of plain-language annotations, indexed by visible numbered callouts in `art`. Keep callouts inside the viewBox, outside unrelated geometry, and use a leader when position alone is ambiguous. Keys are HTML so they retain readable text on phones.
+- A `network` edge accepts `bidirectional: true` for signal exchange, or `undirected: true` for physical association/attachment. Omit both for a directed flow. Do not combine them. Direction describes the specific authored relationship, not every possible transaction between the nodes. Separate edges with different labels (for example scan apply versus capture) remain distinct lanes.
+- Networks use separate connection lanes, with endpoint labels outside the SVG and a relationship description spanning the phone row. Do not restore a universal ring with straight connections through labels.
+- `cycle.returnLabel` states the actual return relationship or condition. Qualification acceptance and optional respins must not imply unconditional repetition. Use `flow` or explicitly authored conditional edges where there is no cycle.
+- Bulk silicon remains a silicon region; organic substrates and interposers may carry routing. An enclosing mold cannot be represented faithfully as an unrelated flat slab above the die. Small glyph variants and full scenes must agree: FinFET gates cover fin top and sides, solder joints touch both faces, and hybrid-bond dielectrics meet at the same plane as embedded contacts.
+- Run `node qa/figure-geometry.js` for actual SVG font-size, label-to-label intersection, viewBox clipping, and relationship-label collision checks. It records representative screenshots under ignored `qa/shots/geometry/`. These checks do not establish technical correctness or certify unreviewed geometry. Keep the manual review scope separately in `qa/reports/deep-diagram-audit.json`.

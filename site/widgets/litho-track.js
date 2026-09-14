@@ -248,7 +248,7 @@
           const ym = yTop - 56;
           lines.forEach(([a, b]) => R(a, ym, b - a, 5, 'var(--ink)'));
           spaces.forEach(([a, b]) => { R(a, ym + 5, b - a, yTop - ym - 5, 'var(--accent2)', { 'fill-opacity': .16 }); Ln((a + b) / 2, ym + 5, (a + b) / 2, yTop, { stroke: 'var(--accent2)', 'stroke-width': 1.2 }); });
-          T(X1 + 6, ym + 4, 'mask image', { fill: 'var(--ink)', 'font-size': 11 }); T(X1 + 6, ym + 16, '(4× reduced)', { 'font-size': 11 });
+          T(X1 + 6, ym + 4, 'mask image', { fill: 'var(--ink)', 'font-size': 11 }); T(X1 + 6, ym + 20, '(4× reduced)', { 'font-size': 11 });
           T(X1 + 6, ym + 38, '193 nm light', { fill: 'var(--accent2)', 'font-size': 11 });
           TC(ym - 24, 'dose 20–40 mJ/cm² · ~0.1 s per 26 × 33 mm field', MONO);
           TC(ym - 10, 'chrome blocks light; clear openings expose the spaces');

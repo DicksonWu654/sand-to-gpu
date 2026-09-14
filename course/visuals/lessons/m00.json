@@ -27,7 +27,8 @@
     "source": {
       "file": "course/modules/00-overview.md",
       "heading": "What a chip is, physically"
-    }
+    },
+    "scene": "die-section"
   },
   {
     "section": "the-chain-in-one-table",
@@ -203,7 +204,8 @@
     "source": {
       "file": "course/modules/00-overview.md",
       "heading": "Master Process Flow: Sand to Rack in ~60 Steps"
-    }
+    },
+    "returnLabel": "Repeat only the operations required by the next layer recipe"
   },
   {
     "section": "how-to-read-this-course",

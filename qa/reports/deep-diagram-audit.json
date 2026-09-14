@@ -1,0 +1,4161 @@
+{
+  "checkedAt": "2026-09-14T00:25:42.605Z",
+  "scope": {
+    "deepFigures": 292,
+    "contactSheetTriage": 292,
+    "meaning": "All deep figures were triaged in module contact sheets for representation, obvious layout flaws, and inconsistent glyphs. This is not a full-size or exhaustive scientific review of all292 figures.",
+    "fullSizeTargetedReview": [
+      "m00:what-a-chip-is-physically",
+      "m11:1-mosfet-operation-refresher",
+      "m12:anatomy-of-the-metal-stack",
+      "m15:4-the-storage-capacitor",
+      "m15:15-anatomy-of-an-hbm-stack",
+      "m16:leadframes-and-the-mass-market",
+      "m17:anatomy-of-a-cowos-package-top-to-bottom",
+      "m14:design-for-test"
+    ],
+    "sourceExcerptReview": [
+      "m00:what-a-chip-is-physically",
+      "m11:1-mosfet-operation-refresher",
+      "m12:anatomy-of-the-metal-stack",
+      "m15:4-the-storage-capacitor",
+      "m15:15-anatomy-of-an-hbm-stack",
+      "m16:leadframes-and-the-mass-market",
+      "m17:anatomy-of-a-cowos-package-top-to-bottom",
+      "m17:soic-hybrid-bonding-and-true-3d"
+    ],
+    "rootReview": [
+      "interconnect stack phone dark",
+      "MOSFET phone light",
+      "capacitor phone light",
+      "leadframe phone dark"
+    ],
+    "automatedReport": "figure-geometry.json",
+    "screenshots": "qa/shots/geometry (ignored generated files)",
+    "remainingLimit": "Generic component studies remain schematic icon-and-label teaching aids. No claim that every physical process is exhaustively illustrated or every source factual claim was independently re-verified."
+  },
+  "findings": [
+    {
+      "issue": "Network ring connectors intersected labels and reciprocal edges coincided",
+      "fix": "Separate authored connection lanes; responsive full-width relationship descriptions; explicit bidirectional/undirected flags"
+    },
+    {
+      "issue": "Physical-layer renderer discarded variants and implied disconnected or incorrectly ordered structures",
+      "fix": "Dedicated connected die/interconnect/HBM/package scenes; enclosing leadframe mold; capacitor electrode-dielectric interface slice"
+    },
+    {
+      "issue": "FinFET gate U-shape ran below exposed fin top",
+      "fix": "Gate wraps top and both sides with dielectric separation"
+    },
+    {
+      "issue": "Solder glyphs and new package-scene circles floated between faces",
+      "fix": "Contact geometry touches both faces; hybrid-bond dielectrics and embedded pads meet at a common plane"
+    },
+    {
+      "issue": "Interposer glyph included unrelated completed package; wafer slicing used indistinct crystal/wafer icons",
+      "fix": "Routing-plane glyph, distinct ingot-slice and FOUP icons, distinct notch/edge/SOI variants"
+    },
+    {
+      "issue": "Generic cycles implied unconditional rework after qualification; scale layout implied wafer containment in rack",
+      "fix": "Three cycle-to-flow conversions; explicit return conditions for remaining deep cycles; scale-to-comparison conversion"
+    },
+    {
+      "issue": "SVG labels shrank on phones despite no outer overflow",
+      "fix": "Numbered scene callouts plus responsive HTML keys; larger MOSFET labels and adequate viewBox margin"
+    },
+    {
+      "issue": "New FBR two-line description became overlapping numbered callouts",
+      "fix": "Geometry regression caught collision; merged into one keyed description before final check"
+    }
+  ],
+  "ledger": [
+    {
+      "lesson": "m00",
+      "section": "what-a-chip-is-physically",
+      "title": "A die's device and wiring layers",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": true,
+      "sourceExcerptReviewed": true,
+      "dataChanged": true,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/00-overview.md",
+        "heading": "What a chip is, physically"
+      }
+    },
+    {
+      "lesson": "m00",
+      "section": "the-chain-in-one-table",
+      "title": "Follow the changing physical object",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/00-overview.md",
+        "heading": "The Chain in One Table"
+      }
+    },
+    {
+      "lesson": "m00",
+      "section": "stage-by-stage",
+      "title": "Three streams meet in the package",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/00-overview.md",
+        "heading": "Stage by Stage"
+      }
+    },
+    {
+      "lesson": "m00",
+      "section": "money-flow-and-industry-structure",
+      "title": "Who enables a chip designer?",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/00-overview.md",
+        "heading": "Money Flow and Industry Structure"
+      }
+    },
+    {
+      "lesson": "m00",
+      "section": "the-three-chokepoints",
+      "title": "Capacity depends on complementary capabilities",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/00-overview.md",
+        "heading": "The Three Chokepoints"
+      }
+    },
+    {
+      "lesson": "m00",
+      "section": "master-process-flow-sand-to-rack-in-60-steps",
+      "title": "The fab loop inside the longer journey",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/00-overview.md",
+        "heading": "Master Process Flow: Sand to Rack in ~60 Steps"
+      }
+    },
+    {
+      "lesson": "m00",
+      "section": "how-to-read-this-course",
+      "title": "Use the physical flow as your index",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/00-overview.md",
+        "heading": "How to Read This Course"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "1-why-purity-is-the-whole-game",
+      "title": "Impurity count is not electrical impact",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "1. Why Purity Is the Whole Game"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "2-the-rock-quartz-and-quartzite",
+      "title": "The furnace needs a permeable charge",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "2. The Rock: Quartz and Quartzite"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "3-carbothermic-reduction-the-submerged-arc-furnace",
+      "title": "Break the silicon–oxygen bond with heat and carbon",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "3. Carbothermic Reduction: The Submerged-Arc Furnace"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "4-the-siemens-process",
+      "title": "Purify a volatile intermediate, then rebuild silicon",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "4. The Siemens Process"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "5-fbr-granular-polysilicon-the-silane-route",
+      "title": "A growing bed of silicon granules",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "5. FBR Granular Polysilicon: the Silane Route"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "6-grades-electronic-grade-vs-solar-grade",
+      "title": "The grade follows the device requirement",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "6. Grades: Electronic Grade vs Solar Grade"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "7-how-purity-is-measured",
+      "title": "Build a purity picture from complementary measurements",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "7. How Purity Is Measured"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "8-how-much-polysilicon-a-wafer-needs",
+      "title": "Charged silicon exceeds shipped wafer mass",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "8. How Much Polysilicon a Wafer Needs"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "9-economics-the-china-boom-and-xinjiang",
+      "title": "Capacity and price move on different clocks",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "9. Economics, the China Boom, and Xinjiang"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "10-the-other-ultra-pure-feedstocks-crucibles-and-graphite",
+      "title": "The hot zone is another contamination path",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "10. The Other Ultra-Pure Feedstocks: Crucibles and Graphite"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "why-single-crystal-and-why",
+      "title": "A continuous lattice avoids grain-boundary interruptions",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Why Single Crystal, and Why <100>"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "a-brief-history-in-three-names",
+      "title": "From crystal pulling to semiconductor manufacturing",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "A Brief History in Three Names"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "anatomy-of-a-300-mm-cz-puller",
+      "title": "A seed, a melt and a controlled hot zone",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Anatomy of a 300 mm CZ Puller"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "the-cz-recipe-step-by-step",
+      "title": "Establish a clean crystal before growing the useful body",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "The CZ Recipe, Step by Step"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "point-defects-v-g-and-the-voronkov-theory",
+      "title": "Growth rate and thermal gradient change the defect balance",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Point Defects, v/G, and the Voronkov Theory"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "oxygen-and-carbon",
+      "title": "Trace the impurity path through the hot zone",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Oxygen and Carbon"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "magnetic-czochralski",
+      "title": "A magnetic field calms an electrically conducting melt",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Magnetic Czochralski"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "the-ingot-size-mass-and-time",
+      "title": "One furnace cycle contains more than pulling time",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "The Ingot: Size, Mass, and Time"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "the-heavy-crystal-problem",
+      "title": "A massive body hangs through a narrow neck",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "The Heavy-Crystal Problem"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "yield-what-gets-thrown-away",
+      "title": "Not every kilogram becomes a prime wafer",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Yield: What Gets Thrown Away"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "float-zone",
+      "title": "Float zone removes the crucible from the melt",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Float Zone"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "450-mm-the-diameter-that-did-not-happen",
+      "title": "A larger wafer requires a coordinated equipment transition",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "450 mm: The Diameter That Did Not Happen"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "epi-versus-bulk-what-the-crystal-grower-is-growing-for",
+      "title": "The active layer can differ from the bulk substrate",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Epi Versus Bulk: What the Crystal Grower Is Growing For"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "solar-cz-same-physics-different-economics",
+      "title": "One growth mechanism, different optimization targets",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Solar CZ: Same Physics, Different Economics"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "the-process-flow-at-a-glance",
+      "title": "From cylinder to device-ready surface",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "The Process Flow at a Glance"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "why-775-m-wafer-thickness-and-mechanics",
+      "title": "Thickness is a mechanical design variable",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Why 775 µm: Wafer Thickness and Mechanics"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "cropping-sectioning-and-ingot-qc",
+      "title": "Separate growth transitions from usable crystal",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Cropping, Sectioning, and Ingot QC"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "cylindrical-grinding-to-diameter",
+      "title": "Grind beneath the deepest surface ripple",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Cylindrical Grinding to Diameter"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "orientation-and-the-notch",
+      "title": "Transfer crystal orientation into a visible reference",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Orientation and the Notch"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "multi-wire-slicing",
+      "title": "One moving wire becomes a parallel cutting web",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Multi-Wire Slicing"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "lapping-and-double-disk-grinding",
+      "title": "Work both wafer faces together",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Lapping and Double-Disk Grinding"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "edge-profiling",
+      "title": "A rounded edge removes a crack-prone corner",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Edge Profiling"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "etching-to-remove-damage",
+      "title": "Chemical removal must reach below the damage",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Etching to Remove Damage"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "laser-marking",
+      "title": "A mark connects the wafer to its process history",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Laser Marking"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "polishing-i-double-side-polishing-dsp",
+      "title": "CMP alternates surface chemistry and mechanical removal",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Polishing I: Double-Side Polishing (DSP)"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "polishing-ii-final-front-side-mirror-polish-and-the-edge",
+      "title": "Finish roughness after establishing flatness",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Polishing II: Final Front-Side Mirror Polish and the Edge"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "capstone-where-the-115-m-went",
+      "title": "Thickness removal is a planned budget",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Capstone: Where the 115 µm Went"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "cleaning-the-rca-sequence-and-drying",
+      "title": "Different cleaning steps remove different contaminants",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Cleaning: The RCA Sequence and Drying"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "flatness-metrology",
+      "title": "Flatness has several meanings",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Flatness Metrology"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "particle-and-defect-inspection",
+      "title": "Turn scattered light into a defect map",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Particle and Defect Inspection"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "beyond-polished-epitaxial-annealed-and-soi-wafers",
+      "title": "Three ways to add substrate value",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Beyond Polished: Epitaxial, Annealed, and SOI Wafers"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "test-monitor-and-reclaim-wafers",
+      "title": "A monitor wafer can return to service",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Test, Monitor, and Reclaim Wafers"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "packaging-and-shipping",
+      "title": "Protect the surface across the shipping boundary",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Packaging and Shipping"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "a-representative-300-mm-prime-wafer-specification",
+      "title": "A wafer specification joins several measurements",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "A Representative 300 mm Prime Wafer Specification"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "economics-and-market-structure",
+      "title": "Wafer demand follows fab loading and inventory",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Economics and Market Structure"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "why-silicon-wins-and-where-it-loses",
+      "title": "Choose the material for the job",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Why silicon wins, and where it loses"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "silicon-germanium-the-alloy-inside-every-modern-transistor",
+      "title": "SiGe stressors strain nearby silicon",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Silicon-germanium: the alloy inside every modern transistor"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "strained-silicon-the-idea-that-went-the-other-way",
+      "title": "Grow thin silicon on a larger lattice",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Strained silicon: the idea that went the other way"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "silicon-carbide-the-material-you-cannot-melt",
+      "title": "Grow SiC through vapor transport",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Silicon carbide: the material you cannot melt"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "gallium-nitride-the-heterostructure-material",
+      "title": "The useful channel sits at a heterointerface",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Gallium nitride: the heterostructure material"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "gallium-arsenide-and-indium-phosphide-the-iii-v-workhorses",
+      "title": "Different III–V materials serve different signals",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Gallium arsenide and indium phosphide: the III-V workhorses"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "germanium",
+      "title": "Germanium returns in specialized roles",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Germanium"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "the-periodic-table-at-2-nm-and-below",
+      "title": "Separate production devices from research options",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "The periodic table at 2 nm and below"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "the-scale-of-it",
+      "title": "The fab depends on several material streams",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "The scale of it"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "photoresists",
+      "title": "A temporary film carries the image",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Photoresists"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "gases",
+      "title": "Gas purity must survive the delivery path",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Gases"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "wet-chemicals",
+      "title": "Cleaning chemistry must not become contamination",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Wet chemicals"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "ultrapure-water",
+      "title": "Water purification removes several impurity classes",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Ultrapure water"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "cmp-slurries-and-pads",
+      "title": "Chemistry and contact work together in CMP",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "CMP slurries and pads"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "sputter-targets",
+      "title": "Move atoms from a solid target to the wafer",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Sputter targets"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "precursors-for-ald-and-cvd",
+      "title": "A precursor must be deliverable and reactive",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Precursors for ALD and CVD"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "quartzware-and-sic-furnace-parts",
+      "title": "Hot-zone consumables shape contamination risk",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Quartzware and SiC furnace parts"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "photomasks-the-supply-chain-in-depth",
+      "title": "A reticle has its own precision manufacturing chain",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Photomasks: the supply chain in depth"
+      }
+    },
+    {
+      "lesson": "m04",
+      "section": "why-japan-dominates-materials",
+      "title": "Qualification reinforces specialist materials supply",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/04-materials-and-consumables.md",
+        "heading": "Why Japan dominates materials"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "the-building-why-a-fab-is-a-vertical-sandwich",
+      "title": "The cleanroom sits inside a service stack",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "The Building: Why a Fab Is a Vertical Sandwich"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "cleanroom-classes-and-airflow",
+      "title": "Move particles away from the wafer environment",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "Cleanroom Classes and Airflow"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "the-foup-and-the-mini-environment",
+      "title": "Protection continues through the wafer handoff",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "The FOUP and the Mini-Environment"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "amhs-how-100-000-wafers-a-month-actually-move",
+      "title": "A lot travels between service points",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "AMHS: How 100,000 Wafers a Month Actually Move"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "the-process-flow-1-000-1-500-steps-revisited-dozens-of-times",
+      "title": "A fab route repeatedly revisits tool families",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "The Process Flow: 1,000–1,500 Steps, Revisited Dozens of Times"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "tools-counts-cost-utilization-clustering",
+      "title": "Utilization is limited by more than purchase price",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "Tools: Counts, Cost, Utilization, Clustering"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "the-lot-the-recipe-and-the-software-stack",
+      "title": "A route becomes executable tool instructions",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "The Lot, the Recipe, and the Software Stack"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "people",
+      "title": "Different teams control different sources of variation",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "People"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "utilities-a-fab-is-a-chemical-plant",
+      "title": "Every tool depends on a utility network",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "Utilities: A Fab Is a Chemical Plant"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "contamination-sources-and-gowning",
+      "title": "Contamination reaches the wafer through several routes",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "Contamination Sources and Gowning"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "tsmc-s-fab-organization",
+      "title": "A multi-phase fab shares a site backbone",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "TSMC's Fab Organization"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "bringing-up-a-node",
+      "title": "A new node advances through evidence gates",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "Bringing Up a Node"
+      }
+    },
+    {
+      "lesson": "m05",
+      "section": "fab-economics",
+      "title": "Fixed costs make unused capacity expensive",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/05-inside-a-fab.md",
+        "heading": "Fab Economics"
+      }
+    },
+    {
+      "lesson": "m06",
+      "section": "1-thermal-oxidation-growing-sio2-from-the-wafer-itself",
+      "title": "Thermal oxide consumes the silicon underneath it",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/06-oxidation-and-deposition.md",
+        "heading": "1. Thermal Oxidation: Growing SiO2 from the Wafer Itself"
+      }
+    },
+    {
+      "lesson": "m06",
+      "section": "2-furnaces-and-rapid-thermal-processing",
+      "title": "Choose the heating tool around the thermal budget",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/06-oxidation-and-deposition.md",
+        "heading": "2. Furnaces and Rapid Thermal Processing"
+      }
+    },
+    {
+      "lesson": "m06",
+      "section": "3-chemical-vapor-deposition-fundamentals",
+      "title": "A deposited atom arrives inside a molecule",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/06-oxidation-and-deposition.md",
+        "heading": "3. Chemical Vapor Deposition: Fundamentals"
+      }
+    },
+    {
+      "lesson": "m06",
+      "section": "4-the-cvd-family",
+      "title": "Different CVD families supply reaction energy differently",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/06-oxidation-and-deposition.md",
+        "heading": "4. The CVD Family"
+      }
+    },
+    {
+      "lesson": "m06",
+      "section": "5-atomic-layer-deposition",
+      "title": "Separate two self-limiting surface reactions",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/06-oxidation-and-deposition.md",
+        "heading": "5. Atomic Layer Deposition"
+      }
+    },
+    {
+      "lesson": "m06",
+      "section": "6-physical-vapor-deposition",
+      "title": "Sputtering is physical transport from target to wafer",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/06-oxidation-and-deposition.md",
+        "heading": "6. Physical Vapor Deposition"
+      }
+    },
+    {
+      "lesson": "m06",
+      "section": "7-epitaxy",
+      "title": "Epitaxy copies the crystal while changing composition",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/06-oxidation-and-deposition.md",
+        "heading": "7. Epitaxy"
+      }
+    },
+    {
+      "lesson": "m06",
+      "section": "8-film-stress-engineering",
+      "title": "A stressed film bends its substrate",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/06-oxidation-and-deposition.md",
+        "heading": "8. Film Stress Engineering"
+      }
+    },
+    {
+      "lesson": "m06",
+      "section": "9-film-characterization-briefly",
+      "title": "One film needs several kinds of evidence",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/06-oxidation-and-deposition.md",
+        "heading": "9. Film Characterization, Briefly"
+      }
+    },
+    {
+      "lesson": "m06",
+      "section": "10-the-deposition-equipment-market",
+      "title": "Deposition tools specialize around different film jobs",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/06-oxidation-and-deposition.md",
+        "heading": "10. The Deposition Equipment Market"
+      }
+    },
+    {
+      "lesson": "m07",
+      "section": "what-a-litho-layer-has-to-achieve",
+      "title": "A printed layer must satisfy several constraints at once",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/07-lithography-duv.md",
+        "heading": "What a Litho Layer Has to Achieve"
+      }
+    },
+    {
+      "lesson": "m07",
+      "section": "the-litho-cell-at-a-glance",
+      "title": "The track and scanner form one connected cell",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/07-lithography-duv.md",
+        "heading": "The Litho Cell at a Glance"
+      }
+    },
+    {
+      "lesson": "m07",
+      "section": "photoresist-chemistry",
+      "title": "Resist tone decides which regions remain",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/07-lithography-duv.md",
+        "heading": "Photoresist Chemistry"
+      }
+    },
+    {
+      "lesson": "m07",
+      "section": "the-track-recipes-step-by-step",
+      "title": "Each track step controls a different part of the film",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/07-lithography-duv.md",
+        "heading": "The Track Recipes, Step by Step"
+      }
+    },
+    {
+      "lesson": "m07",
+      "section": "the-optics-resolution-depth-of-focus-and-the-wavelength-marc",
+      "title": "Resolution and focus tolerance compete",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/07-lithography-duv.md",
+        "heading": "The Optics: Resolution, Depth of Focus, and the Wavelength March"
+      }
+    },
+    {
+      "lesson": "m07",
+      "section": "anatomy-of-a-193-nm-immersion-scanner",
+      "title": "An immersion scanner synchronizes optics and motion",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/07-lithography-duv.md",
+        "heading": "Anatomy of a 193 nm Immersion Scanner"
+      }
+    },
+    {
+      "lesson": "m07",
+      "section": "process-windows-bossung-plots-and-the-focus-exposure-matrix",
+      "title": "A process window is a region, not one perfect setting",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/07-lithography-duv.md",
+        "heading": "Process Windows: Bossung Plots and the Focus-Exposure Matrix"
+      }
+    },
+    {
+      "lesson": "m07",
+      "section": "resolution-enhancement-techniques",
+      "title": "Pre-distort the mask to improve the printed result",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/07-lithography-duv.md",
+        "heading": "Resolution Enhancement Techniques"
+      }
+    },
+    {
+      "lesson": "m07",
+      "section": "multi-patterning",
+      "title": "Dense patterns can be built through different sequences",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/07-lithography-duv.md",
+        "heading": "Multi-Patterning"
+      }
+    },
+    {
+      "lesson": "m07",
+      "section": "the-lithography-roadmap-by-layer-as-of-2026",
+      "title": "A node uses more than one lithography method",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/07-lithography-duv.md",
+        "heading": "The Lithography Roadmap by Layer (as of 2026)"
+      }
+    },
+    {
+      "lesson": "m07",
+      "section": "the-tool-market-and-geography",
+      "title": "The scanner depends on specialized supply chains",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/07-lithography-duv.md",
+        "heading": "The Tool Market and Geography"
+      }
+    },
+    {
+      "lesson": "m08",
+      "section": "why-13-5-nm",
+      "title": "EUV forces a different optical architecture",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/08-euv-lithography.md",
+        "heading": "Why 13.5 nm"
+      }
+    },
+    {
+      "lesson": "m08",
+      "section": "the-laser-produced-plasma-source",
+      "title": "A laser turns tin into a light source",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/08-euv-lithography.md",
+        "heading": "The Laser-Produced Plasma Source"
+      }
+    },
+    {
+      "lesson": "m08",
+      "section": "the-optics",
+      "title": "Every reflection performs a job and loses some light",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/08-euv-lithography.md",
+        "heading": "The Optics"
+      }
+    },
+    {
+      "lesson": "m08",
+      "section": "the-reflective-reticle",
+      "title": "An EUV mask is a patterned reflector",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/08-euv-lithography.md",
+        "heading": "The Reflective Reticle"
+      }
+    },
+    {
+      "lesson": "m08",
+      "section": "the-wafer-side",
+      "title": "Move and measure a wafer without breaking vacuum",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/08-euv-lithography.md",
+        "heading": "The Wafer Side"
+      }
+    },
+    {
+      "lesson": "m08",
+      "section": "photon-physics-and-stochastics",
+      "title": "Random photon arrivals become feature variation",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/08-euv-lithography.md",
+        "heading": "Photon Physics and Stochastics"
+      }
+    },
+    {
+      "lesson": "m08",
+      "section": "euv-resists",
+      "title": "Resist platforms balance different mechanisms",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/08-euv-lithography.md",
+        "heading": "EUV Resists"
+      }
+    },
+    {
+      "lesson": "m08",
+      "section": "resolution-limits-and-multipatterning",
+      "title": "Single exposure has a finite density range",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/08-euv-lithography.md",
+        "heading": "Resolution Limits and Multipatterning"
+      }
+    },
+    {
+      "lesson": "m08",
+      "section": "high-na-and-hyper-na",
+      "title": "Higher aperture changes more than resolution",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/08-euv-lithography.md",
+        "heading": "High-NA and Hyper-NA"
+      }
+    },
+    {
+      "lesson": "m08",
+      "section": "the-machine-its-supply-chain-and-its-economics",
+      "title": "A scanner is qualified twice before production use",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/08-euv-lithography.md",
+        "heading": "The Machine, Its Supply Chain, and Its Economics"
+      }
+    },
+    {
+      "lesson": "m08",
+      "section": "who-has-euv-and-who-is-not-allowed-to",
+      "title": "Technical capability and permission are separate gates",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/08-euv-lithography.md",
+        "heading": "Who Has EUV, and Who Is Not Allowed To"
+      }
+    },
+    {
+      "lesson": "m08",
+      "section": "history",
+      "title": "EUV matured through several coupled bottlenecks",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/08-euv-lithography.md",
+        "heading": "History"
+      }
+    },
+    {
+      "lesson": "m09",
+      "section": "what-an-etch-has-to-deliver",
+      "title": "The mask, target film and stop layer have different jobs",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/09-etch.md",
+        "heading": "What an Etch Has to Deliver"
+      }
+    },
+    {
+      "lesson": "m09",
+      "section": "wet-etch-still-the-workhorse-for-selectivity",
+      "title": "Chemical selectivity and directionality are different properties",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/09-etch.md",
+        "heading": "Wet Etch: Still the Workhorse for Selectivity"
+      }
+    },
+    {
+      "lesson": "m09",
+      "section": "plasma-physics-for-engineers",
+      "title": "The plasma creates reactive species and directed ions",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/09-etch.md",
+        "heading": "Plasma Physics for Engineers"
+      }
+    },
+    {
+      "lesson": "m09",
+      "section": "etch-mechanisms-chemical-physical-and-the-synergy-between-th",
+      "title": "Ion assistance changes what radicals can remove",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/09-etch.md",
+        "heading": "Etch Mechanisms: Chemical, Physical, and the Synergy Between Them"
+      }
+    },
+    {
+      "lesson": "m09",
+      "section": "hardmasks-mask-erosion-and-strip",
+      "title": "Transfer a thin resist image into a tougher mask",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/09-etch.md",
+        "heading": "Hardmasks, Mask Erosion, and Strip"
+      }
+    },
+    {
+      "lesson": "m09",
+      "section": "the-critical-etches-in-a-modern-flow",
+      "title": "Different features expose different etch constraints",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/09-etch.md",
+        "heading": "The Critical Etches in a Modern Flow"
+      }
+    },
+    {
+      "lesson": "m09",
+      "section": "atomic-layer-etching-and-selective-removal",
+      "title": "Modify one surface layer, then remove it",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/09-etch.md",
+        "heading": "Atomic Layer Etching and Selective Removal"
+      }
+    },
+    {
+      "lesson": "m09",
+      "section": "running-an-etch-in-production-endpoint-chamber-matching-cons",
+      "title": "The chamber is part of the process state",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/09-etch.md",
+        "heading": "Running an Etch in Production: Endpoint, Chamber Matching, Consumables"
+      }
+    },
+    {
+      "lesson": "m09",
+      "section": "plasma-damage-and-its-mitigation",
+      "title": "Several plasma effects can damage a device",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/09-etch.md",
+        "heading": "Plasma Damage and Its Mitigation"
+      }
+    },
+    {
+      "lesson": "m09",
+      "section": "tools-vendors-and-the-market",
+      "title": "A cluster tool shares vacuum transport among chambers",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/09-etch.md",
+        "heading": "Tools, Vendors, and the Market"
+      }
+    },
+    {
+      "lesson": "m10",
+      "section": "1-the-physics-of-doping",
+      "title": "Donors and acceptors shift carrier populations",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/10-doping.md",
+        "heading": "1. The Physics of Doping"
+      }
+    },
+    {
+      "lesson": "m10",
+      "section": "2-thermal-diffusion-the-original-method",
+      "title": "Heat spreads dopant from a surface source",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/10-doping.md",
+        "heading": "2. Thermal Diffusion: The Original Method"
+      }
+    },
+    {
+      "lesson": "m10",
+      "section": "3-inside-an-ion-implanter",
+      "title": "Select ions, set their energy, count their delivery",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/10-doping.md",
+        "heading": "3. Inside an Ion Implanter"
+      }
+    },
+    {
+      "lesson": "m10",
+      "section": "4-implanter-classes-tools-and-special-modes",
+      "title": "One beamline cannot optimize every implant",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/10-doping.md",
+        "heading": "4. Implanter Classes, Tools and Special Modes"
+      }
+    },
+    {
+      "lesson": "m10",
+      "section": "5-where-the-ions-stop-range-statistics",
+      "title": "Ions stop through statistical collision histories",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/10-doping.md",
+        "heading": "5. Where the Ions Stop: Range Statistics"
+      }
+    },
+    {
+      "lesson": "m10",
+      "section": "6-damage-amorphisation-and-transient-enhanced-diffusion",
+      "title": "Implant damage changes the later anneal response",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/10-doping.md",
+        "heading": "6. Damage, Amorphisation and Transient Enhanced Diffusion"
+      }
+    },
+    {
+      "lesson": "m10",
+      "section": "7-the-annealing-zoo",
+      "title": "Annealing balances repair against unwanted diffusion",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/10-doping.md",
+        "heading": "7. The Annealing Zoo"
+      }
+    },
+    {
+      "lesson": "m10",
+      "section": "8-implants-in-a-modern-finfet-and-gaa-flow",
+      "title": "Modern logic uses implants in several supporting roles",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/10-doping.md",
+        "heading": "8. Implants in a Modern FinFET and GAA Flow"
+      }
+    },
+    {
+      "lesson": "m10",
+      "section": "9-implants-beyond-logic",
+      "title": "Doping requirements extend beyond logic gates",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/10-doping.md",
+        "heading": "9. Implants Beyond Logic"
+      }
+    },
+    {
+      "lesson": "m10",
+      "section": "10-metrology",
+      "title": "Measure the chemical profile and the electrical result",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/10-doping.md",
+        "heading": "10. Metrology"
+      }
+    },
+    {
+      "lesson": "m10",
+      "section": "11-safety",
+      "title": "Containment and interlocks interrupt distinct hazard paths",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/10-doping.md",
+        "heading": "11. Safety"
+      }
+    },
+    {
+      "lesson": "m10",
+      "section": "12-market-cost-and-throughput",
+      "title": "Dose, beam current and handling jointly set throughput",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/10-doping.md",
+        "heading": "12. Market, Cost and Throughput"
+      }
+    },
+    {
+      "lesson": "m11",
+      "section": "1-mosfet-operation-refresher",
+      "title": "A gate controls a conducting path",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": true,
+      "sourceExcerptReviewed": true,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/11-transistor-architectures.md",
+        "heading": "1. MOSFET Operation Refresher"
+      }
+    },
+    {
+      "lesson": "m11",
+      "section": "2-cmos-basics-and-what-a-node-actually-measures",
+      "title": "Different meanings hidden by a node name",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/11-transistor-architectures.md",
+        "heading": "2. CMOS Basics and What a \"Node\" Actually Measures"
+      }
+    },
+    {
+      "lesson": "m11",
+      "section": "3-the-planar-era-strain-and-hkmg",
+      "title": "Improve the channel, then the gate stack",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/11-transistor-architectures.md",
+        "heading": "3. The Planar Era: Strain and HKMG"
+      }
+    },
+    {
+      "lesson": "m11",
+      "section": "4-finfet",
+      "title": "Raise the channel into a fin",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/11-transistor-architectures.md",
+        "heading": "4. FinFET"
+      }
+    },
+    {
+      "lesson": "m11",
+      "section": "5-a-complete-finfet-feol-mol-process-flow",
+      "title": "Build devices before connecting them",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/11-transistor-architectures.md",
+        "heading": "5. A Complete FinFET FEOL/MOL Process Flow"
+      }
+    },
+    {
+      "lesson": "m11",
+      "section": "6-gate-all-around-nanosheets",
+      "title": "Release silicon sheets inside the gate region",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/11-transistor-architectures.md",
+        "heading": "6. Gate-All-Around Nanosheets"
+      }
+    },
+    {
+      "lesson": "m11",
+      "section": "7-forksheet-cfet-and-the-roadmap-beyond",
+      "title": "Change device placement and power access",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/11-transistor-architectures.md",
+        "heading": "7. Forksheet, CFET, and the Roadmap Beyond"
+      }
+    },
+    {
+      "lesson": "m11",
+      "section": "8-node-timeline-sram-and-design-co-optimization",
+      "title": "Co-optimize the device and the circuit",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/11-transistor-architectures.md",
+        "heading": "8. Node Timeline, SRAM, and Design Co-Optimization"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "why-interconnect-became-the-bottleneck",
+      "title": "A narrower wire can cost more delay",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "Why Interconnect Became the Bottleneck"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "anatomy-of-the-metal-stack",
+      "title": "Local connections grow into global routes",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": true,
+      "sourceExcerptReviewed": true,
+      "dataChanged": true,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "Anatomy of the Metal Stack"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "from-aluminum-to-copper",
+      "title": "Two metals lead to different patterning flows",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "From Aluminum to Copper"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "the-dual-damascene-flow-step-by-step",
+      "title": "Shape the empty space before filling the wire",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "The Dual Damascene Flow, Step by Step"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "vias-resistance-and-the-small-dimension-tax",
+      "title": "The liner occupies part of the opening",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "Vias, Resistance and the Small-Dimension Tax"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "electromigration",
+      "title": "Current can gradually move the metal itself",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "Electromigration"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "other-reliability-mechanisms",
+      "title": "Interconnect can fail in more than one way",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "Other Reliability Mechanisms"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "the-new-metals",
+      "title": "Smaller wiring changes the material tradeoff",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "The New Metals"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "the-top-of-the-stack",
+      "title": "The top of the chip meets the package",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "The Top of the Stack"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "backside-power-delivery",
+      "title": "Separate power access from frontside routing",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "Backside Power Delivery"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "interconnect-metrology-and-test-structures",
+      "title": "Measure the wire and its connections",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "Interconnect Metrology and Test Structures"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "design-rules-the-beol-imposes",
+      "title": "Layout must respect manufacturable geometry",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "Design Rules the BEOL Imposes"
+      }
+    },
+    {
+      "lesson": "m12",
+      "section": "tools-materials-and-who-supplies-what",
+      "title": "Different tools finish one wiring level",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/12-interconnect-beol.md",
+        "heading": "Tools, Materials and Who Supplies What"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "1-film-metrology-measuring-thickness-without-touching",
+      "title": "Infer a film from its interaction with a probe",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "1. Film Metrology: Measuring Thickness Without Touching"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "2-cd-metrology-measuring-the-width-of-a-line",
+      "title": "Several probes describe a patterned feature",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "2. CD Metrology: Measuring the Width of a Line"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "3-overlay-aligning-one-layer-to-the-next",
+      "title": "Correct size is not correct alignment",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "3. Overlay: Aligning One Layer to the Next"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "4-defect-inspection-finding-something-you-do-not-know-is-the",
+      "title": "Illumination determines which defects stand out",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "4. Defect Inspection: Finding Something You Do Not Know Is There"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "5-defect-review-and-classification",
+      "title": "Turn a suspicious spot into a useful diagnosis",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "5. Defect Review and Classification"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "6-reading-a-wafer-map",
+      "title": "A wafer map preserves spatial clues",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "6. Reading a Wafer Map"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "7-in-line-electrical-test-pcm-and-wat",
+      "title": "Test the process using dedicated structures",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "7. In-Line Electrical Test: PCM and WAT"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "8-spc-apc-fdc-and-the-excursion",
+      "title": "Measurement closes the process-control loop",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "8. SPC, APC, FDC, and the Excursion"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "9-yield-theory",
+      "title": "Area changes exposure to random defects",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "9. Yield Theory"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "10-redundancy-repair-harvesting-and-binning",
+      "title": "Different outcomes can recover useful product",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "10. Redundancy, Repair, Harvesting, and Binning"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "11-the-economics-of-process-control",
+      "title": "Better information can prevent expensive scrap",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "11. The Economics of Process Control"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "12-metrology-and-inspection-for-euv",
+      "title": "EUV defects can occur on the mask or wafer",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "12. Metrology and Inspection for EUV"
+      }
+    },
+    {
+      "lesson": "m13",
+      "section": "13-wafer-level-reliability",
+      "title": "Accelerate stress to study a failure mechanism",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/13-metrology-inspection-yield.md",
+        "heading": "13. Wafer-Level Reliability"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "why-test-exists-the-rule-of-ten",
+      "title": "A defect becomes more expensive downstream",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "Why Test Exists: The Rule of Ten"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "the-test-flow-in-order",
+      "title": "Test follows the product as it changes form",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "The Test Flow, in Order"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "wafer-sort-the-prober",
+      "title": "Bring a wafer into repeatable electrical contact",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "Wafer Sort: The Prober"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "probe-cards",
+      "title": "Probe structures trade pitch, mechanics and cost",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "Probe Cards"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "the-ate",
+      "title": "An ATE turns a program into physical measurements",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "The ATE"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "what-a-test-program-contains",
+      "title": "A program builds evidence in stages",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "What a Test Program Contains"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "design-for-test",
+      "title": "DFT provides access to otherwise hidden logic",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": true,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "Design for Test"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "multi-site-testing-and-the-economics-of-tester-time",
+      "title": "Parallel sites share tester resources",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "Multi-Site Testing and the Economics of Tester Time"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "coverage-escapes-and-dppm",
+      "title": "Passing a test is evidence with defined coverage",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "Coverage, Escapes, and DPPM"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "binning-at-sort",
+      "title": "One wafer can yield several sellable bins",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "Binning at Sort"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "known-good-die",
+      "title": "Screen the die before risking its neighbors",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "Known-Good-Die"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "test-at-temperature-the-hot-and-cold-split",
+      "title": "Temperature can expose different weak points",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "Test at Temperature: The Hot and Cold Split"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "adaptive-test-and-data-analytics",
+      "title": "Use test evidence to focus later testing",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "Adaptive Test and Data Analytics"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "test-data-stdf-and-the-loop-back-to-the-fab",
+      "title": "Return electrical results to manufacturing",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "Test Data: STDF and the Loop Back to the Fab"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "gpu-specific-test-challenges",
+      "title": "A GPU stresses several tester limits together",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "GPU-Specific Test Challenges"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "who-does-the-testing",
+      "title": "The product owner and service providers share test work",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "Who Does the Testing"
+      }
+    },
+    {
+      "lesson": "m14",
+      "section": "the-equipment-market",
+      "title": "A test cell combines specialized equipment",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/14-wafer-sort-and-test.md",
+        "heading": "The Equipment Market"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "1-why-memory-is-a-different-business-from-logic",
+      "title": "Logic computes; memory repeats a storage cell",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "1. Why memory is a different business from logic"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "2-the-1t1c-cell-and-the-sense-amplifier",
+      "title": "Read a small charge, then restore it",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "2. The 1T1C cell and the sense amplifier"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "3-the-buried-word-line-and-the-6f-cell",
+      "title": "A word line selects; a bit line carries the response",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "3. The buried word line and the 6F² cell"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "4-the-storage-capacitor",
+      "title": "A dielectric separates the capacitor electrodes",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": true,
+      "sourceExcerptReviewed": true,
+      "dataChanged": true,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "4. The storage capacitor"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "5-periphery-beol-and-the-die",
+      "title": "The repeated array needs supporting circuits",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "5. Periphery, BEOL and the die"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "6-node-naming-and-where-euv-is-used",
+      "title": "A DRAM generation and a logic node are different labels",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "6. Node naming and where EUV is used"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "7-the-roadmap-4f-vct-and-3d-dram",
+      "title": "Change cell geometry or build additional tiers",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "7. The roadmap: 4F² VCT and 3D DRAM"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "8-dram-players-and-capacity",
+      "title": "Useful capacity depends on more than wafer starts",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "8. DRAM players and capacity"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "9-the-nand-cell-floating-gate-to-charge-trap",
+      "title": "Two structures trap charge to change a transistor",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "9. The NAND cell: floating gate to charge trap"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "10-the-3d-nand-architecture",
+      "title": "A vertical channel passes through many gate levels",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "10. The 3D NAND architecture"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "11-the-gate-replacement-flow-step-by-step",
+      "title": "Replace the sacrificial layers with word-line metal",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "11. The gate-replacement flow step by step"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "12-string-stacking-and-the-layer-race",
+      "title": "One very deep hole or several joined tiers",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "12. String stacking and the layer race"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "13-nand-players",
+      "title": "NAND supply combines design, fabrication and packaging",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "13. NAND players"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "14-hbm-and-the-bandwidth-wall",
+      "title": "Bandwidth depends on width as well as pin rate",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "14. HBM and the bandwidth wall"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "15-anatomy-of-an-hbm-stack",
+      "title": "The stack contains memory dies and a base die",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": true,
+      "sourceExcerptReviewed": true,
+      "dataChanged": true,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "15. Anatomy of an HBM stack"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "16-the-core-die-tsv-formation",
+      "title": "Make a conductive path through silicon",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "16. The core die: TSV formation"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "17-thinning-backside-reveal-and-microbumps",
+      "title": "Reveal the TSVs from the back of a thin die",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "17. Thinning, backside reveal and microbumps"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "18-stacking-tc-ncf-versus-mr-muf",
+      "title": "Join one die at a time or reflow the stack together",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "18. Stacking: TC-NCF versus MR-MUF"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "19-hybrid-bonding-the-16-high-and-hbm4e-question",
+      "title": "Removing solder changes the interface budget",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "19. Hybrid bonding: the 16-high and HBM4E question"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "20-the-base-die-moves-to-a-logic-foundry",
+      "title": "The base die connects two manufacturing specialties",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "20. The base die moves to a logic foundry"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "21-testing-and-known-good-stacks",
+      "title": "A good die must survive becoming a stack",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "21. Testing and known-good stacks"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "22-thermal-issues",
+      "title": "Every active layer contributes to a thermal path",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "22. Thermal issues"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "23-economics-price-wafer-consumption-and-the-shortage",
+      "title": "HBM supply needs more than memory wafers",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "23. Economics: price, wafer consumption and the shortage"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "24-who-supplies-whom",
+      "title": "The memory-to-processor chain crosses company boundaries",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "24. Who supplies whom"
+      }
+    },
+    {
+      "lesson": "m15",
+      "section": "25-handoff-to-cowos",
+      "title": "HBM and the logic die meet at CoWoS",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/15-memory-dram-nand-hbm.md",
+        "heading": "25. Handoff to CoWoS"
+      }
+    },
+    {
+      "lesson": "m16",
+      "section": "what-a-package-must-do",
+      "title": "A package solves several physical problems at once",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/16-packaging-fundamentals.md",
+        "heading": "What a Package Must Do"
+      }
+    },
+    {
+      "lesson": "m16",
+      "section": "the-back-end-flow-in-order",
+      "title": "Change a wafer into individually connected components",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/16-packaging-fundamentals.md",
+        "heading": "The Back-End Flow in Order"
+      }
+    },
+    {
+      "lesson": "m16",
+      "section": "the-substrate-in-depth",
+      "title": "The substrate expands fine connections outward",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/16-packaging-fundamentals.md",
+        "heading": "The Substrate in Depth"
+      }
+    },
+    {
+      "lesson": "m16",
+      "section": "leadframes-and-the-mass-market",
+      "title": "A leadframe carries and connects the die",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": true,
+      "sourceExcerptReviewed": true,
+      "dataChanged": true,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/16-packaging-fundamentals.md",
+        "heading": "Leadframes and the Mass Market"
+      }
+    },
+    {
+      "lesson": "m16",
+      "section": "molding-marking-ball-attach-lids-singulation",
+      "title": "Finish the package before separating finished units",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/16-packaging-fundamentals.md",
+        "heading": "Molding, Marking, Ball Attach, Lids, Singulation"
+      }
+    },
+    {
+      "lesson": "m16",
+      "section": "wafer-level-and-fan-out-packaging",
+      "title": "Redistribution can stay within the die or extend beyond it",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/16-packaging-fundamentals.md",
+        "heading": "Wafer-Level and Fan-Out Packaging"
+      }
+    },
+    {
+      "lesson": "m16",
+      "section": "the-package-taxonomy",
+      "title": "Connection style and integration level are separate choices",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/16-packaging-fundamentals.md",
+        "heading": "The Package Taxonomy"
+      }
+    },
+    {
+      "lesson": "m16",
+      "section": "package-reliability-and-qualification",
+      "title": "Stress the interfaces, inspect the consequence",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/16-packaging-fundamentals.md",
+        "heading": "Package Reliability and Qualification"
+      }
+    },
+    {
+      "lesson": "m16",
+      "section": "the-industry-osats-foundry-back-ends-and-equipment",
+      "title": "Assembly depends on an ecosystem of specialists",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/16-packaging-fundamentals.md",
+        "heading": "The Industry: OSATs, Foundry Back Ends, and Equipment"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "why-the-package-became-the-chip",
+      "title": "Package integration answers several scaling limits",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "Why the Package Became the Chip"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "anatomy-of-a-cowos-package-top-to-bottom",
+      "title": "CoWoS connects two very different wiring scales",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": true,
+      "sourceExcerptReviewed": true,
+      "dataChanged": true,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "Anatomy of a CoWoS Package, Top to Bottom"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "cowos-a-short-history",
+      "title": "A packaging method expands with its applications",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "CoWoS: A Short History"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "the-three-cowos-variants",
+      "title": "Three CoWoS variants organize the interposer differently",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "The Three CoWoS Variants"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "the-cowos-process-flow-step-by-step",
+      "title": "Chip-on-Wafer comes before Wafer-on-Substrate",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "The CoWoS Process Flow, Step by Step"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "what-goes-wrong-the-hard-problems",
+      "title": "A larger assembly combines mechanical and electrical risks",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "What Goes Wrong: The Hard Problems"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "capacity-the-bottleneck-of-the-ai-era",
+      "title": "Expansion must coordinate tools, people and materials",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "Capacity: The Bottleneck of the AI Era"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "soic-hybrid-bonding-and-true-3d",
+      "title": "Bond prepared surfaces without solder bumps",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": true,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "SoIC: Hybrid Bonding and True 3D"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "the-competitors-intel-samsung-and-the-osats",
+      "title": "Different integration technologies solve related problems",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "The Competitors: Intel, Samsung, and the OSATs"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "fan-out-and-the-move-to-panels",
+      "title": "Change the carrier while controlling redistribution",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "Fan-Out and the Move to Panels"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "the-chiplet-paradigm",
+      "title": "Chiplets need a shared connection contract",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "The Chiplet Paradigm"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "two-handoffs-heat-to-the-rack-light-to-the-fibre",
+      "title": "Heat and information leave by different paths",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "Two Handoffs: Heat to the Rack, Light to the Fibre"
+      }
+    },
+    {
+      "lesson": "m17",
+      "section": "equipment-who-makes-the-tools",
+      "title": "Each assembly step depends on a different tool capability",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/17-advanced-packaging-cowos.md",
+        "heading": "Equipment: Who Makes the Tools"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "why-package-test-exists-what-sort-could-not-see",
+      "title": "Packaging introduces connections that sort could not test",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "Why Package Test Exists: What Sort Could Not See"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "the-post-packaging-flow",
+      "title": "The screening flow changes with product requirements",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "The Post-Packaging Flow"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "the-test-cell-handlers-sockets-and-thermal-control",
+      "title": "The test cell must place, contact and cool the device",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "The Test Cell: Handlers, Sockets and Thermal Control"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "final-test-what-the-program-does-and-what-it-costs",
+      "title": "Coverage and throughput compete for test resources",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "Final Test: What the Program Does and What It Costs"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "burn-in-physics-and-practice",
+      "title": "Stress can expose weak parts before shipment",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "Burn-in: Physics and Practice"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "ft2-measuring-what-burn-in-changed",
+      "title": "The same specification can be checked before and after stress",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "FT2: Measuring What Burn-in Changed"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "system-level-test-testing-the-product-not-the-circuit",
+      "title": "Structural patterns and workloads observe different behavior",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "System-Level Test: Testing the Product, Not the Circuit"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "outgoing-qa-and-shipment",
+      "title": "Release requires evidence and traceability",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "Outgoing QA and Shipment"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "reliability-qualification-jesd47-and-aec-q100",
+      "title": "Qualification and production screening answer different questions",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "Reliability Qualification: JESD47 and AEC-Q100"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "hbm-known-good-die-known-good-stack-and-the-2-5d-problem",
+      "title": "A good stack and a good die can still form a bad package",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "HBM: Known-Good Die, Known-Good Stack and the 2.5D Problem"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "yield-fallout-along-the-chain",
+      "title": "Yield losses occur at different accumulated values",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "Yield Fallout Along the Chain"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "dppm-and-what-the-field-actually-sees",
+      "title": "Field quality includes what screening missed",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "DPPM and What the Field Actually Sees"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "failure-analysis-from-field-return-to-root-cause",
+      "title": "Start with the symptom, then localize the physical cause",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "Failure Analysis: From Field Return to Root Cause"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "where-back-end-test-happens-and-what-it-costs",
+      "title": "Test capacity spans product owners and service providers",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "Where Back-End Test Happens and What It Costs"
+      }
+    },
+    {
+      "lesson": "m18",
+      "section": "the-gpu-flow-end-to-end-and-rack-level-triage",
+      "title": "Triage follows the hardware hierarchy",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/18-final-test-burn-in-slt.md",
+        "heading": "The GPU Flow End to End, and Rack-Level Triage"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "what-the-die-has-to-be",
+      "title": "A GPU combines computation, storage and movement",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "What the die has to be"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "rtl-writing-the-chip",
+      "title": "RTL describes a circuit's behavior and state",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "RTL: writing the chip"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "verification-why-nvidia-runs-more-emulators-than-anyone",
+      "title": "Find errors before committing them to masks",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "Verification: why NVIDIA runs more emulators than anyone"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "the-pdk-the-libraries-and-4n",
+      "title": "A design must fit a particular manufacturing process",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "The PDK, the libraries, and \"4N\""
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "ip-the-blocks-nvidia-does-not-design-from-scratch",
+      "title": "Purchased IP still needs product-level integration",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "IP: the blocks NVIDIA does not design from scratch"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "physical-design-from-netlist-to-polygons",
+      "title": "Place cells and make the connections physical",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "Physical design: from netlist to polygons"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "tape-out-from-polygons-to-masks",
+      "title": "Released layout becomes the mask set",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "Tape-out: from polygons to masks"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "first-silicon-bring-up-and-respins",
+      "title": "First silicon closes the loop between model and hardware",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "First silicon, bring-up, and respins"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "the-dies-in-numbers",
+      "title": "Die area, transistor count and memory describe different things",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "The dies in numbers"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "the-manufacturing-timeline-of-one-gpu",
+      "title": "One GPU travels through several manufacturing stages",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "The manufacturing timeline of one GPU"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "the-sxm-module",
+      "title": "The SXM module connects the GPU package to a system board",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "The SXM module"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "the-hgx-baseboard",
+      "title": "The HGX baseboard joins several accelerator modules",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "The HGX baseboard"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "the-server-dgx-and-its-oem-cousins",
+      "title": "A server adds the infrastructure around accelerators",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "The server: DGX and its OEM cousins"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "gb200-the-superchip-and-the-compute-tray",
+      "title": "A superchip is a connected CPU-and-GPU assembly",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "GB200: the superchip and the compute tray"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "the-nvl72-rack",
+      "title": "A rack integrates compute, communication and utilities",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "The NVL72 rack"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "networking-beyond-the-rack",
+      "title": "Scale-up and scale-out cross different boundaries",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "Networking beyond the rack"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "who-builds-it",
+      "title": "Design ownership and manufacturing execution are different roles",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "Who builds it"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "the-bill-of-materials-of-an-h100-where-the-cost-goes",
+      "title": "A bill of materials adds unlike manufactured components",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "The bill of materials of an H100: where the cost goes"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "nvidia-s-margin-tsmc-s-revenue-and-the-allocation-game",
+      "title": "Revenue belongs to the transaction being counted",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "NVIDIA's margin, TSMC's revenue, and the allocation game"
+      }
+    },
+    {
+      "lesson": "m19",
+      "section": "the-supplier-tree",
+      "title": "Many specialized inputs converge on the GPU product",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/19-building-an-nvidia-gpu.md",
+        "heading": "The supplier tree"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "the-economics-toolkit-five-ideas-that-explain-the-industry",
+      "title": "Capacity decisions create delayed economic feedback",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "The Economics Toolkit: Five Ideas That Explain the Industry"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "the-money-size-and-shape-of-the-industry",
+      "title": "Industry totals depend on the counted boundary",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "The Money: Size and Shape of the Industry"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "the-layers-and-who-owns-them",
+      "title": "The value chain separates design, manufacturing and assembly",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "The Layers and Who Owns Them"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "the-geographic-map",
+      "title": "A geographic map is a map of dependencies",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "The Geographic Map"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "fab-economics-what-a-wafer-costs",
+      "title": "Wafer economics combines fixed and variable costs",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "Fab Economics: What a Wafer Costs"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "cycles-utilization-memory-and-the-ai-supercycle",
+      "title": "Investment can arrive after the demand signal changes",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "Cycles: Utilization, Memory and the AI Supercycle"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "taiwan-concentration-risk",
+      "title": "Concentration links different products to a shared disruption",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "Taiwan Concentration Risk"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "diversification-arizona-kumamoto-dresden-and-the-intel-quest",
+      "title": "A new location must become a qualified production system",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "Diversification: Arizona, Kumamoto, Dresden, and the Intel Question"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "export-controls-in-detail",
+      "title": "A control acts through defined items, destinations and uses",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "Export Controls in Detail"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "china-s-response",
+      "title": "Substitution requires a complete qualified capability",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "China's Response"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "industrial-policy-elsewhere",
+      "title": "Industrial policy supports more than factory construction",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "Industrial Policy Elsewhere"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "what-if-single-points-of-failure",
+      "title": "A small upstream dependency can stop a large downstream flow",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "What If: Single Points of Failure"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "workforce-and-talent",
+      "title": "Operating experience develops the next generation of capability",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "Workforce and Talent"
+      }
+    },
+    {
+      "lesson": "m20",
+      "section": "how-to-read-industry-data",
+      "title": "Check the denominator before comparing an industry chart",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/20-economics-and-geopolitics.md",
+        "heading": "How to Read Industry Data"
+      }
+    },
+    {
+      "lesson": "m21",
+      "section": "glossary",
+      "title": "Connect vocabulary to the object and operation",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/21-glossary-and-reference.md",
+        "heading": "Glossary"
+      }
+    },
+    {
+      "lesson": "m21",
+      "section": "units-conventions-and-a-sense-of-scale",
+      "title": "The object changes as the scale changes",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": true,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/21-glossary-and-reference.md",
+        "heading": "Units, Conventions, and a Sense of Scale"
+      }
+    },
+    {
+      "lesson": "m21",
+      "section": "node-table",
+      "title": "A node label is not a universal physical measurement",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/21-glossary-and-reference.md",
+        "heading": "Node Table"
+      }
+    },
+    {
+      "lesson": "m21",
+      "section": "master-process-flow",
+      "title": "Several manufacturing branches meet in assembly",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/21-glossary-and-reference.md",
+        "heading": "Master Process Flow"
+      }
+    },
+    {
+      "lesson": "m21",
+      "section": "who-buys-from-whom",
+      "title": "Follow the supplied object through each purchase",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": true,
+      "source": {
+        "file": "course/modules/21-glossary-and-reference.md",
+        "heading": "Who Buys From Whom"
+      }
+    },
+    {
+      "lesson": "m21",
+      "section": "what-to-learn-next",
+      "title": "Use different learning sources for different questions",
+      "contactSheetTriage": true,
+      "fullSizeTargetedReview": false,
+      "sourceExcerptReviewed": false,
+      "dataChanged": false,
+      "rendererAffected": false,
+      "source": {
+        "file": "course/modules/21-glossary-and-reference.md",
+        "heading": "What to Learn Next"
+      }
+    }
+  ]
+}

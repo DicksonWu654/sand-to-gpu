@@ -29,7 +29,8 @@
     ],
     "edges": [],
     "note": "Conceptual schematic; geometry is not to scale.",
-    "section": "1-what-a-chip-actually-is"
+    "section": "1-what-a-chip-actually-is",
+    "scene": "die-section"
   },
   {
     "family": "branch",
@@ -99,25 +100,26 @@
   },
   {
     "family": "compare",
-    "title": "Local precision and wafer-scale control",
-    "caption": "A small contact must land on its target, while the wafer must stay within the geometry the tool can handle. Neither task replaces the other.",
+    "title": "Correct size is not enough: position matters",
+    "caption": "The first two drawings compare contact placement in plan view. The third is a wafer edge profile: local alignment and whole-wafer geometry are different controls.",
     "nodes": [
       {
-        "label": "Local feature",
-        "detail": "A dimensional error changes one device or connection.",
-        "glyph": "transistor",
-        "variant": "planar"
+        "label": "Aligned contact",
+        "detail": "In this plan view, the small contact lands inside the larger target.",
+        "glyph": "mask",
+        "variant": "aligned"
       },
       {
-        "label": "Layer registration",
-        "detail": "An accurately shaped contact still fails if it misses its target.",
-        "glyph": "wires",
-        "variant": "via"
+        "label": "Offset contact",
+        "detail": "The same contact shape can miss its target when the layers are displaced.",
+        "glyph": "mask",
+        "variant": "offset"
       },
       {
-        "label": "Whole wafer",
-        "detail": "Flatness and distortion affect imaging across many dies.",
-        "glyph": "wafer"
+        "label": "Wafer distortion",
+        "detail": "Bending across the wafer changes the surface height seen by the imaging tool.",
+        "glyph": "wafer",
+        "variant": "warped"
       }
     ],
     "edges": [],
@@ -125,7 +127,7 @@
     "section": "4-why-scale-creates-difficulty-in-opposite-directions"
   },
   {
-    "family": "network",
+    "family": "apparatus",
     "title": "Compute, memory and package work together",
     "caption": "The package provides short, dense connections between the GPU and HBM. Bandwidth, capacity and latency remain distinct properties.",
     "nodes": [
@@ -149,31 +151,16 @@
         "label": "Package substrate",
         "detail": "Connects the assembly to power and the board.",
         "glyph": "package",
-        "variant": "cowos-s"
+        "variant": "substrate"
       }
     ],
-    "edges": [
-      {
-        "from": 0,
-        "to": 2,
-        "label": "requests and results"
-      },
-      {
-        "from": 1,
-        "to": 2,
-        "label": "memory data"
-      },
-      {
-        "from": 2,
-        "to": 3,
-        "label": "external connections"
-      }
-    ],
+    "edges": [],
     "note": "Conceptual schematic; geometry is not to scale.",
-    "section": "5-why-memory-and-packaging-belong-in-the-same-story"
+    "section": "5-why-memory-and-packaging-belong-in-the-same-story",
+    "scene": "package-section"
   },
   {
-    "family": "cycle",
+    "family": "network",
     "title": "A substitute must work inside the whole process",
     "caption": "Qualification tests compatibility and reliability in context. A nominally similar material can require recipe changes and another evaluation loop.",
     "nodes": [
@@ -199,7 +186,28 @@
         "glyph": "chip"
       }
     ],
-    "edges": [],
+    "edges": [
+      {
+        "from": 0,
+        "to": 1,
+        "label": "try the proposed input in context"
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "label": "collect electrical and reliability evidence"
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "label": "if the demonstrated conditions meet requirements"
+      },
+      {
+        "from": 2,
+        "to": 1,
+        "label": "if requirements are missed: revise the recipe or candidate"
+      }
+    ],
     "note": "Conceptual schematic; geometry is not to scale.",
     "section": "6-why-no-company-can-replace-the-chain-overnight"
   }

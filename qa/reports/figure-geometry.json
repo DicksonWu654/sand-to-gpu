@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-09-14T00:23:16.202Z",
+  "scope": "Rendered typography bounds, label collisions, and relationship-label layout. Scientific correctness is covered only by the separate manual audit ledger.",
+  "cases": [
+    {
+      "width": 1280,
+      "theme": "light",
+      "figures": 352,
+      "minSvgText": 21.14275147928994
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "figures": 352,
+      "minSvgText": 21.14275147928994
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "figures": 352,
+      "minSvgText": 13.105584319526626
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "figures": 352,
+      "minSvgText": 13.105584319526626
+    }
+  ],
+  "errors": []
+}

@@ -1,9 +1,9 @@
 {
   "mode": "widgets",
-  "timestamp": "2026-09-13T21:19:44.714Z",
+  "timestamp": "2026-09-14T00:26:52.622Z",
   "results": [
     {
-      "id": "ald-cycle",
+      "id": "bragg-mirror",
       "errors": [],
       "results": [
         {
@@ -11,12 +11,12 @@
           "theme": "dark",
           "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
           "shots": [
-            "qa/shots/sweep/ald-cycle-760-dark-initial.png",
-            "qa/shots/sweep/ald-cycle-760-dark-interaction.png"
+            "qa/shots/sweep/bragg-mirror-760-dark-initial.png",
+            "qa/shots/sweep/bragg-mirror-760-dark-interaction.png"
           ],
-          "controls": 7,
-          "controlValuesExercised": 14,
-          "buttonsClicked": 6,
+          "controls": 6,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 7,
           "states": [],
           "status": {
             "error": "",
@@ -28,16 +28,16 @@
             "overflow": [],
             "tinyText": [],
             "emptyArea": null,
-            "boxHeight": 1580,
-            "boxWidth": 724
+            "boxHeight": 1744,
+            "boxWidth": 700
           },
           "final": {
             "overlaps": [],
             "overflow": [],
             "tinyText": [],
             "emptyArea": null,
-            "boxHeight": 1580,
-            "boxWidth": 724
+            "boxHeight": 1744,
+            "boxWidth": 700
           }
         },
         {
@@ -45,12 +45,12 @@
           "theme": "light",
           "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
           "shots": [
-            "qa/shots/sweep/ald-cycle-760-light-initial.png",
-            "qa/shots/sweep/ald-cycle-760-light-interaction.png"
+            "qa/shots/sweep/bragg-mirror-760-light-initial.png",
+            "qa/shots/sweep/bragg-mirror-760-light-interaction.png"
           ],
-          "controls": 7,
-          "controlValuesExercised": 14,
-          "buttonsClicked": 6,
+          "controls": 6,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 7,
           "states": [],
           "status": {
             "error": "",
@@ -62,16 +62,16 @@
             "overflow": [],
             "tinyText": [],
             "emptyArea": null,
-            "boxHeight": 1580,
-            "boxWidth": 724
+            "boxHeight": 1744,
+            "boxWidth": 700
           },
           "final": {
             "overlaps": [],
             "overflow": [],
             "tinyText": [],
             "emptyArea": null,
-            "boxHeight": 1580,
-            "boxWidth": 724
+            "boxHeight": 1744,
+            "boxWidth": 700
           }
         },
         {
@@ -79,12 +79,12 @@
           "theme": "dark",
           "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
           "shots": [
-            "qa/shots/sweep/ald-cycle-360-dark-initial.png",
-            "qa/shots/sweep/ald-cycle-360-dark-interaction.png"
+            "qa/shots/sweep/bragg-mirror-360-dark-initial.png",
+            "qa/shots/sweep/bragg-mirror-360-dark-interaction.png"
           ],
-          "controls": 7,
-          "controlValuesExercised": 14,
-          "buttonsClicked": 6,
+          "controls": 6,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 7,
           "states": [],
           "status": {
             "error": "",
@@ -96,16 +96,16 @@
             "overflow": [],
             "tinyText": [],
             "emptyArea": null,
-            "boxHeight": 2150,
-            "boxWidth": 324
+            "boxHeight": 2519,
+            "boxWidth": 320
           },
           "final": {
             "overlaps": [],
             "overflow": [],
             "tinyText": [],
             "emptyArea": null,
-            "boxHeight": 2150,
-            "boxWidth": 324
+            "boxHeight": 2519,
+            "boxWidth": 320
           }
         },
         {
@@ -113,12 +113,12 @@
           "theme": "light",
           "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
           "shots": [
-            "qa/shots/sweep/ald-cycle-360-light-initial.png",
-            "qa/shots/sweep/ald-cycle-360-light-interaction.png"
+            "qa/shots/sweep/bragg-mirror-360-light-initial.png",
+            "qa/shots/sweep/bragg-mirror-360-light-interaction.png"
           ],
-          "controls": 7,
-          "controlValuesExercised": 14,
-          "buttonsClicked": 6,
+          "controls": 6,
+          "controlValuesExercised": 12,
+          "buttonsClicked": 7,
           "states": [],
           "status": {
             "error": "",
@@ -130,445 +130,20 @@
             "overflow": [],
             "tinyText": [],
             "emptyArea": null,
-            "boxHeight": 2150,
-            "boxWidth": 324
+            "boxHeight": 2519,
+            "boxWidth": 320
           },
           "final": {
             "overlaps": [],
             "overflow": [],
             "tinyText": [],
             "emptyArea": null,
-            "boxHeight": 2150,
-            "boxWidth": 324
-          }
-        }
-      ]
-    },
-    {
-      "id": "amhs-sim",
-      "errors": [],
-      "results": [
-        {
-          "width": 760,
-          "theme": "dark",
-          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
-          "shots": [
-            "qa/shots/sweep/amhs-sim-760-dark-initial.png",
-            "qa/shots/sweep/amhs-sim-760-dark-interaction.png"
-          ],
-          "controls": 2,
-          "controlValuesExercised": 4,
-          "buttonsClicked": 2,
-          "states": [],
-          "status": {
-            "error": "",
-            "invalidNumber": false,
-            "documentOverflow": false
-          },
-          "initial": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1507,
-            "boxWidth": 724
-          },
-          "final": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1556,
-            "boxWidth": 724
-          }
-        },
-        {
-          "width": 760,
-          "theme": "light",
-          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
-          "shots": [
-            "qa/shots/sweep/amhs-sim-760-light-initial.png",
-            "qa/shots/sweep/amhs-sim-760-light-interaction.png"
-          ],
-          "controls": 2,
-          "controlValuesExercised": 4,
-          "buttonsClicked": 2,
-          "states": [],
-          "status": {
-            "error": "",
-            "invalidNumber": false,
-            "documentOverflow": false
-          },
-          "initial": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1507,
-            "boxWidth": 724
-          },
-          "final": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1556,
-            "boxWidth": 724
-          }
-        },
-        {
-          "width": 360,
-          "theme": "dark",
-          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
-          "shots": [
-            "qa/shots/sweep/amhs-sim-360-dark-initial.png",
-            "qa/shots/sweep/amhs-sim-360-dark-interaction.png"
-          ],
-          "controls": 2,
-          "controlValuesExercised": 4,
-          "buttonsClicked": 2,
-          "states": [],
-          "status": {
-            "error": "",
-            "invalidNumber": false,
-            "documentOverflow": false
-          },
-          "initial": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 2656,
-            "boxWidth": 324
-          },
-          "final": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 2785,
-            "boxWidth": 324
-          }
-        },
-        {
-          "width": 360,
-          "theme": "light",
-          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
-          "shots": [
-            "qa/shots/sweep/amhs-sim-360-light-initial.png",
-            "qa/shots/sweep/amhs-sim-360-light-interaction.png"
-          ],
-          "controls": 2,
-          "controlValuesExercised": 4,
-          "buttonsClicked": 2,
-          "states": [],
-          "status": {
-            "error": "",
-            "invalidNumber": false,
-            "documentOverflow": false
-          },
-          "initial": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 2656,
-            "boxWidth": 324
-          },
-          "final": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 2785,
-            "boxWidth": 324
-          }
-        }
-      ]
-    },
-    {
-      "id": "damascene",
-      "errors": [],
-      "results": [
-        {
-          "width": 760,
-          "theme": "dark",
-          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
-          "shots": [
-            "qa/shots/sweep/damascene-760-dark-initial.png",
-            "qa/shots/sweep/damascene-760-dark-interaction.png"
-          ],
-          "controls": 1,
-          "controlValuesExercised": 2,
-          "buttonsClicked": 13,
-          "states": [],
-          "status": {
-            "error": "",
-            "invalidNumber": false,
-            "documentOverflow": false
-          },
-          "initial": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1484,
-            "boxWidth": 724
-          },
-          "final": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1484,
-            "boxWidth": 724
-          }
-        },
-        {
-          "width": 760,
-          "theme": "light",
-          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
-          "shots": [
-            "qa/shots/sweep/damascene-760-light-initial.png",
-            "qa/shots/sweep/damascene-760-light-interaction.png"
-          ],
-          "controls": 1,
-          "controlValuesExercised": 2,
-          "buttonsClicked": 13,
-          "states": [],
-          "status": {
-            "error": "",
-            "invalidNumber": false,
-            "documentOverflow": false
-          },
-          "initial": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1484,
-            "boxWidth": 724
-          },
-          "final": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1484,
-            "boxWidth": 724
-          }
-        },
-        {
-          "width": 360,
-          "theme": "dark",
-          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
-          "shots": [
-            "qa/shots/sweep/damascene-360-dark-initial.png",
-            "qa/shots/sweep/damascene-360-dark-interaction.png"
-          ],
-          "controls": 1,
-          "controlValuesExercised": 2,
-          "buttonsClicked": 13,
-          "states": [],
-          "status": {
-            "error": "",
-            "invalidNumber": false,
-            "documentOverflow": false
-          },
-          "initial": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1779,
-            "boxWidth": 324
-          },
-          "final": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1840,
-            "boxWidth": 324
-          }
-        },
-        {
-          "width": 360,
-          "theme": "light",
-          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
-          "shots": [
-            "qa/shots/sweep/damascene-360-light-initial.png",
-            "qa/shots/sweep/damascene-360-light-interaction.png"
-          ],
-          "controls": 1,
-          "controlValuesExercised": 2,
-          "buttonsClicked": 13,
-          "states": [],
-          "status": {
-            "error": "",
-            "invalidNumber": false,
-            "documentOverflow": false
-          },
-          "initial": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1779,
-            "boxWidth": 324
-          },
-          "final": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1840,
-            "boxWidth": 324
-          }
-        }
-      ]
-    },
-    {
-      "id": "gpu-bom",
-      "errors": [],
-      "results": [
-        {
-          "width": 760,
-          "theme": "dark",
-          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
-          "shots": [
-            "qa/shots/sweep/gpu-bom-760-dark-initial.png",
-            "qa/shots/sweep/gpu-bom-760-dark-interaction.png"
-          ],
-          "controls": 14,
-          "controlValuesExercised": 28,
-          "buttonsClicked": 2,
-          "states": [],
-          "status": {
-            "error": "",
-            "invalidNumber": false,
-            "documentOverflow": false
-          },
-          "initial": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1253,
-            "boxWidth": 724
-          },
-          "final": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1253,
-            "boxWidth": 724
-          }
-        },
-        {
-          "width": 760,
-          "theme": "light",
-          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
-          "shots": [
-            "qa/shots/sweep/gpu-bom-760-light-initial.png",
-            "qa/shots/sweep/gpu-bom-760-light-interaction.png"
-          ],
-          "controls": 14,
-          "controlValuesExercised": 28,
-          "buttonsClicked": 2,
-          "states": [],
-          "status": {
-            "error": "",
-            "invalidNumber": false,
-            "documentOverflow": false
-          },
-          "initial": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1253,
-            "boxWidth": 724
-          },
-          "final": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 1253,
-            "boxWidth": 724
-          }
-        },
-        {
-          "width": 360,
-          "theme": "dark",
-          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
-          "shots": [
-            "qa/shots/sweep/gpu-bom-360-dark-initial.png",
-            "qa/shots/sweep/gpu-bom-360-dark-interaction.png"
-          ],
-          "controls": 14,
-          "controlValuesExercised": 28,
-          "buttonsClicked": 2,
-          "states": [],
-          "status": {
-            "error": "",
-            "invalidNumber": false,
-            "documentOverflow": false
-          },
-          "initial": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 2284,
-            "boxWidth": 324
-          },
-          "final": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 2284,
-            "boxWidth": 324
-          }
-        },
-        {
-          "width": 360,
-          "theme": "light",
-          "initialCapture": "Fresh mount after clearing isolated test storage; pointer outside widget; 80ms after mount",
-          "shots": [
-            "qa/shots/sweep/gpu-bom-360-light-initial.png",
-            "qa/shots/sweep/gpu-bom-360-light-interaction.png"
-          ],
-          "controls": 14,
-          "controlValuesExercised": 28,
-          "buttonsClicked": 2,
-          "states": [],
-          "status": {
-            "error": "",
-            "invalidNumber": false,
-            "documentOverflow": false
-          },
-          "initial": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 2284,
-            "boxWidth": 324
-          },
-          "final": {
-            "overlaps": [],
-            "overflow": [],
-            "tinyText": [],
-            "emptyArea": null,
-            "boxHeight": 2284,
-            "boxWidth": 324
+            "boxHeight": 2519,
+            "boxWidth": 320
           }
         }
       ]
     }
-  ]
+  ],
+  "failures": []
 }

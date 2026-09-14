@@ -13,22 +13,25 @@
         "label": "Joints",
         "detail": "Join the die to the receiving wiring structure.",
         "glyph": "package",
-        "variant": "flip-chip"
+        "variant": "microbump"
       },
       {
         "label": "Substrate",
         "detail": "Redistributes connections and provides support.",
-        "glyph": "wires"
+        "glyph": "package",
+        "variant": "substrate"
       },
       {
         "label": "Board interface",
         "detail": "Connects the component to the wider system.",
-        "glyph": "package"
+        "glyph": "package",
+        "variant": "bga"
       }
     ],
     "edges": [],
     "note": "Conceptual schematic; geometry is not to scale.",
-    "section": "1-why-a-chip-needs-an-engineered-home"
+    "section": "1-why-a-chip-needs-an-engineered-home",
+    "scene": "generic-package-section"
   },
   {
     "family": "flow",
@@ -44,7 +47,8 @@
       {
         "label": "Backgrind",
         "detail": "Remove silicon from the rear as required.",
-        "glyph": "wafer"
+        "glyph": "wafer",
+        "variant": "backgrind"
       },
       {
         "label": "Support and finish",
@@ -54,7 +58,8 @@
       {
         "label": "Separate",
         "detail": "Release individual dies along the designated streets.",
-        "glyph": "chip"
+        "glyph": "chip",
+        "variant": "dicing"
       }
     ],
     "edges": [],
@@ -152,7 +157,7 @@
         "label": "Solder-based joints",
         "detail": "Raised joints connect separated die surfaces.",
         "glyph": "package",
-        "variant": "flip-chip"
+        "variant": "microbump"
       },
       {
         "label": "Hybrid bond",
