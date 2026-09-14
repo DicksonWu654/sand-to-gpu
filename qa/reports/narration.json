@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-14T02:55:16.530Z",
+  "timestamp": "2026-09-14T04:00:42.067Z",
   "status": "passed",
   "scope": "Deterministic browser interaction and DOM mapping. Voice quality is not established by mocks.",
   "results": [
@@ -132,7 +132,7 @@
           ]
         },
         "expanded": {
-          "top": 688.109375,
+          "top": 671.609375,
           "bottom": 978,
           "left": 345,
           "right": 935,
@@ -143,71 +143,71 @@
               "name": "Close audio player",
               "left": 893.09375,
               "right": 916,
-              "top": 701.109375,
-              "bottom": 727.109375
+              "top": 684.609375,
+              "bottom": 710.609375
             },
             {
               "name": "Previous passage",
               "left": 364,
               "right": 396.0625,
-              "top": 755.109375,
-              "bottom": 789.109375
+              "top": 738.609375,
+              "bottom": 772.609375
             },
             {
               "name": "Pause narration",
               "left": 403.0625,
               "right": 473.0625,
-              "top": 755.109375,
-              "bottom": 789.109375
+              "top": 738.609375,
+              "bottom": 772.609375
             },
             {
               "name": "Next passage",
               "left": 480.0625,
               "right": 512.125,
-              "top": 755.109375,
-              "bottom": 789.109375
+              "top": 738.609375,
+              "bottom": 772.609375
             },
             {
               "name": "Follow the spoken word",
               "left": 519.125,
               "right": 596.984375,
-              "top": 755.109375,
-              "bottom": 789.109375
+              "top": 738.609375,
+              "bottom": 772.609375
             },
             {
               "name": "Voice and playback settings",
               "left": 880.234375,
               "right": 916,
-              "top": 755.109375,
-              "bottom": 789.109375
+              "top": 738.609375,
+              "bottom": 772.609375
             },
             {
               "name": "Seek within this passage",
               "left": 366,
               "right": 836,
-              "top": 797.109375,
-              "bottom": 817.109375
+              "top": 780.609375,
+              "bottom": 800.609375
             },
             {
               "name": "Narration voice",
               "left": 364,
               "right": 633,
-              "top": 858.5,
-              "bottom": 894.5
+              "top": 842,
+              "bottom": 878
             },
             {
               "name": "Playback speed",
               "left": 647,
               "right": 916,
-              "top": 858.5,
-              "bottom": 894.5
+              "top": 842,
+              "bottom": 878
             },
             {
               "name": "Start at the passage currently on screen",
               "left": 364,
               "right": 916,
-              "top": 904.5,
-              "bottom": 938.5
+              "top": 888,
+              "bottom": 922
             }
           ]
         }
@@ -279,7 +279,7 @@
           ]
         },
         "expanded": {
-          "top": 688.109375,
+          "top": 671.609375,
           "bottom": 978,
           "left": 345,
           "right": 935,
@@ -290,71 +290,71 @@
               "name": "Close audio player",
               "left": 893.09375,
               "right": 916,
-              "top": 701.109375,
-              "bottom": 727.109375
+              "top": 684.609375,
+              "bottom": 710.609375
             },
             {
               "name": "Previous passage",
               "left": 364,
               "right": 396.0625,
-              "top": 755.109375,
-              "bottom": 789.109375
+              "top": 738.609375,
+              "bottom": 772.609375
             },
             {
               "name": "Pause narration",
               "left": 403.0625,
               "right": 473.0625,
-              "top": 755.109375,
-              "bottom": 789.109375
+              "top": 738.609375,
+              "bottom": 772.609375
             },
             {
               "name": "Next passage",
               "left": 480.0625,
               "right": 512.125,
-              "top": 755.109375,
-              "bottom": 789.109375
+              "top": 738.609375,
+              "bottom": 772.609375
             },
             {
               "name": "Follow the spoken word",
               "left": 519.125,
               "right": 596.984375,
-              "top": 755.109375,
-              "bottom": 789.109375
+              "top": 738.609375,
+              "bottom": 772.609375
             },
             {
               "name": "Voice and playback settings",
               "left": 880.234375,
               "right": 916,
-              "top": 755.109375,
-              "bottom": 789.109375
+              "top": 738.609375,
+              "bottom": 772.609375
             },
             {
               "name": "Seek within this passage",
               "left": 366,
               "right": 836,
-              "top": 797.109375,
-              "bottom": 817.109375
+              "top": 780.609375,
+              "bottom": 800.609375
             },
             {
               "name": "Narration voice",
               "left": 364,
               "right": 633,
-              "top": 858.5,
-              "bottom": 894.5
+              "top": 842,
+              "bottom": 878
             },
             {
               "name": "Playback speed",
               "left": 647,
               "right": 916,
-              "top": 858.5,
-              "bottom": 894.5
+              "top": 842,
+              "bottom": 878
             },
             {
               "name": "Start at the passage currently on screen",
               "left": 364,
               "right": 916,
-              "top": 904.5,
-              "bottom": 938.5
+              "top": 888,
+              "bottom": 922
             }
           ]
         }
@@ -426,7 +426,7 @@
           ]
         },
         "expanded": {
-          "top": 356.609375,
+          "top": 340.109375,
           "bottom": 659,
           "left": 10,
           "right": 365,
@@ -437,71 +437,71 @@
               "name": "Close audio player",
               "left": 329.09375,
               "right": 352,
-              "top": 367.609375,
-              "bottom": 393.609375
+              "top": 351.109375,
+              "bottom": 377.109375
             },
             {
               "name": "Previous passage",
               "left": 23,
               "right": 51.0625,
-              "top": 421.609375,
-              "bottom": 455.609375
+              "top": 405.109375,
+              "bottom": 439.109375
             },
             {
               "name": "Pause narration",
               "left": 56.0625,
               "right": 120.0625,
-              "top": 421.609375,
-              "bottom": 455.609375
+              "top": 405.109375,
+              "bottom": 439.109375
             },
             {
               "name": "Next passage",
               "left": 125.0625,
               "right": 153.125,
-              "top": 421.609375,
-              "bottom": 455.609375
+              "top": 405.109375,
+              "bottom": 439.109375
             },
             {
               "name": "Follow the spoken word",
               "left": 158.125,
               "right": 227.328125,
-              "top": 421.609375,
-              "bottom": 455.609375
+              "top": 405.109375,
+              "bottom": 439.109375
             },
             {
               "name": "Voice and playback settings",
               "left": 324.234375,
               "right": 352,
-              "top": 421.609375,
-              "bottom": 455.609375
+              "top": 405.109375,
+              "bottom": 439.109375
             },
             {
               "name": "Seek within this passage",
               "left": 25,
               "right": 272,
-              "top": 463.609375,
-              "bottom": 483.609375
+              "top": 447.109375,
+              "bottom": 467.109375
             },
             {
               "name": "Narration voice",
               "left": 23,
               "right": 180.5,
-              "top": 525,
-              "bottom": 561
+              "top": 508.5,
+              "bottom": 544.5
             },
             {
               "name": "Playback speed",
               "left": 194.5,
               "right": 352,
-              "top": 525,
-              "bottom": 561
+              "top": 508.5,
+              "bottom": 544.5
             },
             {
               "name": "Start at the passage currently on screen",
               "left": 23,
               "right": 352,
-              "top": 571,
-              "bottom": 605
+              "top": 554.5,
+              "bottom": 588.5
             }
           ]
         }
@@ -573,7 +573,7 @@
           ]
         },
         "expanded": {
-          "top": 356.609375,
+          "top": 340.109375,
           "bottom": 659,
           "left": 10,
           "right": 365,
@@ -584,71 +584,71 @@
               "name": "Close audio player",
               "left": 329.09375,
               "right": 352,
-              "top": 367.609375,
-              "bottom": 393.609375
+              "top": 351.109375,
+              "bottom": 377.109375
             },
             {
               "name": "Previous passage",
               "left": 23,
               "right": 51.0625,
-              "top": 421.609375,
-              "bottom": 455.609375
+              "top": 405.109375,
+              "bottom": 439.109375
             },
             {
               "name": "Pause narration",
               "left": 56.0625,
               "right": 120.0625,
-              "top": 421.609375,
-              "bottom": 455.609375
+              "top": 405.109375,
+              "bottom": 439.109375
             },
             {
               "name": "Next passage",
               "left": 125.0625,
               "right": 153.125,
-              "top": 421.609375,
-              "bottom": 455.609375
+              "top": 405.109375,
+              "bottom": 439.109375
             },
             {
               "name": "Follow the spoken word",
               "left": 158.125,
               "right": 227.328125,
-              "top": 421.609375,
-              "bottom": 455.609375
+              "top": 405.109375,
+              "bottom": 439.109375
             },
             {
               "name": "Voice and playback settings",
               "left": 324.234375,
               "right": 352,
-              "top": 421.609375,
-              "bottom": 455.609375
+              "top": 405.109375,
+              "bottom": 439.109375
             },
             {
               "name": "Seek within this passage",
               "left": 25,
               "right": 272,
-              "top": 463.609375,
-              "bottom": 483.609375
+              "top": 447.109375,
+              "bottom": 467.109375
             },
             {
               "name": "Narration voice",
               "left": 23,
               "right": 180.5,
-              "top": 525,
-              "bottom": 561
+              "top": 508.5,
+              "bottom": 544.5
             },
             {
               "name": "Playback speed",
               "left": 194.5,
               "right": 352,
-              "top": 525,
-              "bottom": 561
+              "top": 508.5,
+              "bottom": 544.5
             },
             {
               "name": "Start at the passage currently on screen",
               "left": 23,
               "right": 352,
-              "top": 571,
-              "bottom": 605
+              "top": 554.5,
+              "bottom": 588.5
             }
           ]
         }
@@ -803,7 +803,7 @@
     ],
     "technicalUnicode": {
       "status": "passed",
-      "text": "A 2 nm gate uses SiO\u2082; the wafer is 300 mm across.",
+      "text": "A 2 nm gate uses SiO₂; the wafer is 300 mm across.",
       "words": [
         {
           "text": "A",
@@ -831,7 +831,7 @@
           "end": 1.7625
         },
         {
-          "text": "SiO\u2082",
+          "text": "SiO₂",
           "start": 1.7625,
           "end": 3.225
         },
@@ -901,11 +901,5 @@
   "limitations": [
     "Mocked audio validates controls and highlighting, not naturalness or audible pronunciation.",
     "Actual synthesis/cache checks and backend review are recorded separately."
-  ],
-  "integrationCheck": {
-    "command": "npm run check",
-    "status": "passed",
-    "timestamp": "2026-09-14T03:05:08.017Z",
-    "checks": "32 lessons;352/352 figures;57 widget placements;176 quiz questions; historical structure and current prose contracts; no errors or warnings"
-  }
+  ]
 }

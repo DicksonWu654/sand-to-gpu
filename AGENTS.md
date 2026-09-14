@@ -37,3 +37,5 @@
 - A user-requested full render is an explicit batch operation. Capture its inventory from the actual reader extraction function, check both desktop and phone text, preserve exact passage identities, and count failures instead of silently omitting clips.
 - Treat static audio output as a staging artifact until generation and compression both finish and complete coverage passes. Keep large recordings outside Git, publish the complete folder together, and mark the static edition so missing assets never trigger a speech-generation API.
 - Validate compressed audio's decoded duration and encoder delay against source timings; file-size reduction alone does not establish highlight alignment. Large numerical explanations may need smaller phoneme batches while preserving original token offsets.
+
+- For narration click seeking, map each paragraph to its first extracted segment without changing authored text or inserting controls. Preserve links, interactive content, modified clicks and native text selection; cancel delayed clicks on close/navigation and reuse playback generation guards so the newest seek wins.

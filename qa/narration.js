@@ -70,7 +70,7 @@ function installApiMock() {
   const nativeFetch = window.fetch.bind(window);
   const api = window.__qaApi = { calls: [], delayed: [], delayNext: false, ignoreAbort: false, failNext: false, ready: true, cache: new Set(), manifests: {}, statusCalls: 0 };
   window.fetch = (url, options = {}) => {
-    const pathname = new URL(typeof url === 'string' ? url : url.url, location.href).pathname;
+    const pathname = new URL(typeof url === 'string' ? url : url instanceof URL ? url.href : url.url, location.href).pathname;
     // Keep local-generation cases isolated even when a recorded bundle is present.
     if (pathname.endsWith('/narration/index.json')) return Promise.resolve(new Response('', { status: 404 }));
     if (pathname === '/api/narration/status') {
@@ -117,6 +117,8 @@ async function run() {
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(base + '/' + route, { waitUntil: 'networkidle0' });
     await page.waitForFunction(() => !!window.CourseNarration);
+    // These cases deliberately exercise the mocked local-render path, even on a static preview.
+    await page.evaluate(() => document.querySelector('meta[name="narration-mode"]')?.remove());
     return page;
   }
   async function mountFixture(page) {

@@ -58,3 +58,13 @@ body.narration-open { padding-bottom: 200px; }
 @media (prefers-reduced-motion: reduce) {
   .narration-player, .narration-current-passage { scroll-behavior: auto; }
 }
+/* Listening adds a quiet pointer affordance without changing the authored text or its layout. */
+@media (hover: hover) {
+  .prose p.narration-seekable-passage:hover {
+    cursor: pointer; background-color: var(--accent-soft); border-radius: 3px;
+  }
+  .prose p.narration-seekable-passage :is(a, button, input, select, textarea, code) {
+    cursor: auto;
+  }
+  .prose p.narration-seekable-passage a { cursor: pointer; }
+}

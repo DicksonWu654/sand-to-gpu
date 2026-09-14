@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "timestamp": "2026-09-14T03:58:40.499Z",
+  "results": [
+    {
+      "name": "Closed player ignores paragraph clicks and adds no affordance",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Local nested inline click starts the chosen paragraph and resumes paused audio",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Static nested inline click starts the chosen paragraph and resumes paused audio",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Links, controls, editable text and excluded content keep their normal behavior",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Modified clicks, text selection and double-click do not seek",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Rapid paragraph requests ignore late obsolete renders",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Clicking the tail of a split paragraph starts its first segment",
+      "status": "passed",
+      "detail": {
+        "parts": 3,
+        "expected": 6,
+        "position": 6
+      }
+    },
+    {
+      "name": "Close and cleanup cancel pending paragraph timers and handlers",
+      "status": "passed",
+      "detail": null
+    }
+  ],
+  "pageErrors": [],
+  "limitations": [
+    "Synthetic audio clocks test interaction and cancellation; native real-recording paragraph seeking is tested separately on the finished export."
+  ]
+}

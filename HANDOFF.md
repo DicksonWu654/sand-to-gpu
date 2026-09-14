@@ -9,6 +9,8 @@
 > **Local narration:** See [NARRATION_2026-09-13.md](NARRATION_2026-09-13.md) for downloadable Kokoro voices, cached audio, synchronized highlights, setup and validation limits.
 >
 > **Publishing with audio:** See [PRERENDER_2026-09-13.md](PRERENDER_2026-09-13.md) for the full Heart recording inventory, resumable GPU rendering, MP3 export and static hosting.
+>
+> **Paragraph listening:** While the player is open, click a narrated paragraph to restart audio from that paragraph. Links, controls, code and text selection keep their normal behavior; the existing Read from here control remains a keyboard alternative. This changes playback navigation only: the extraction rules, course text and saved recordings are unchanged.
 
 # HANDOFF: "Sand to GPU" semiconductor course + interactive site
 

@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "timestamp": "2026-09-14T03:39:30.759Z",
-  "base": "http://127.0.0.1:8792",
+  "timestamp": "2026-09-14T03:58:36.564Z",
+  "base": "http://127.0.0.1:8790",
   "http": {
     "mime": "audio/mpeg",
     "headStatus": 200,
@@ -23,9 +23,17 @@
     "nativeDuration": 34.45,
     "metadataDuration": 34.45,
     "resumeClockAdvanced": true,
+    "paragraphClickSeek": {
+      "targetIndex": 10,
+      "actualPointerClick": true,
+      "resumedFromPaused": true,
+      "startsNearBeginning": 0.105052,
+      "correctSavedClip": true,
+      "correctParagraphHighlighted": true
+    },
     "closeStoppedAudio": true,
     "narrationApiRequests": 0,
-    "mp3Requests": 3
+    "mp3Requests": 6
   },
   "pageErrors": [],
   "limitations": [

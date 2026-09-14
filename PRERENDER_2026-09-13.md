@@ -4,7 +4,11 @@ The publishing edition uses saved Heart recordings for every passage narrated by
 
 **Completed:** all 6,545 unique MP3 clips and 6,728 passage placements passed the final audit. The recordings total approximately 56.66 hours and 1.637 GB of MP3 audio. The initial GPU pass took 44 minutes 34 seconds; the final repair/cache pass took 25 seconds. Both generation and export report complete with zero remaining failures.
 
-The verified archive on this computer is `C:\Users\dicks\Downloads\sand-to-gpu-static-2026-09-13.zip` (1,647,038,564 bytes; 6,636 files). Its CRC, source snapshot and SHA-256 checks passed; see `qa/reports/narration-package.json` for the checksum. The preview on port 8790 now serves the completed static edition, with the local speech API disabled.
+The verified archive on this computer is `C:\Users\dicks\Downloads\sand-to-gpu-static-2026-09-13.zip` (1,647,039,261 bytes; 6,636 files). Its CRC, source snapshot and SHA-256 checks passed; see `qa/reports/narration-package.json` for the checksum. The preview on port 8790 now serves the completed static edition, with the local speech API disabled.
+
+Archive SHA-256: `7bf5b93094207835372af34362ac0bed4bff249bddadb81a227a65349fb6374c`.
+
+With Listen open, clicking a paragraph starts playback from that paragraph. **Read from here** starts at the passage currently on screen. The refreshed publishing edition includes these controls and reuses all existing recordings. Eight paragraph interaction cases and eleven static-player cases passed. Native browser playback also verified a real pointer click from paused narration: it selected the correct MP3, restarted near the beginning, highlighted the expected text, and made no speech API requests. See `qa/reports/narration-paragraph.json` and `qa/reports/narration-static.json`.
 
 The inventory is captured from the same rendered DOM and extraction function as the Listen button. It contains 6,728 passage occurrences and 6,545 unique clips, approximately 478,000 written words. Identical passages share a recording. As in the interactive player, diagrams, tables, code and reference lists are left for visual reading; this is complete coverage of the narrated passages, not an audio description of every visual.
 

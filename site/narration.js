@@ -53,7 +53,8 @@
     let destroyed = false, passages = null, index = 0, generation = 0, frame = 0, lastWord = -1;
     let wantsPlay = false, follow = true, ready = false, opened = false, current = null, highlighted = null;
     let mainAbort = null, statusAbort = null, statusTimer = null, lastScrollAt = 0;
-    let recorded = null, recordingRoot = null;
+    let recorded = null, recordingRoot = null, paragraphClickTimer = null;
+    const paragraphStarts = new Map();
     const cache = new Map(), pending = new Map(), prefetchControllers = new Set(), audio = new Audio();
     audio.preload = 'auto';
     const launch = el('button',{type:'button',class:'narration-launch','aria-expanded':'false'},'Listen to this chapter');
@@ -80,7 +81,7 @@
     const here = button('here','Start at the passage currently on screen','Read from here');
     transport.append(previous,play,next,followButton,position,settingsToggle);
     settings.append(voiceLabel,rateLabel,here);
-    const note = el('p',{class:'narration-note'},'AI voice · Saved after its first reading. Diagrams, tables, code blocks and references are skipped.');
+    const note = el('p',{class:'narration-note'},'AI voice · Click a paragraph to read from there, or use Read from here. Saved after its first reading. Diagrams, tables, code blocks and references are skipped.');
     settings.append(note);
     player.append(top,status,transport,timeline,settings); toolbar.append(launch); document.body.append(player);
     const supportsHighlight = !!(window.CSS?.highlights && window.Highlight);
@@ -203,7 +204,7 @@
       if(chapter.complete!==true || chapter.voice!==index.voice || !Array.isArray(chapter.passages) || chapter.passages.length!==passages.length || chapter.passages.some((entry,i)=>entry.text!==passages[i].text))throw new Error('The recordings do not match this edition of the lesson. Updated audio is needed.');
       if(signal.aborted)throw new DOMException('Canceled','AbortError');
       recorded=new Map(chapter.passages.map(entry=>[entry.text,entry])); recordingRoot=root;
-      note.textContent='Recorded AI voice · Plays from saved audio. Diagrams, tables, code blocks and references are skipped.';
+      note.textContent='Recorded AI voice · Click a paragraph to read from there, or use Read from here. Plays from saved audio. Diagrams, tables, code blocks and references are skipped.';
       if(!supportsHighlight)note.textContent+=' This browser highlights the current passage.';
       return {ready:true,voices:[{id:index.voice,name:index.voice==='af_heart'?'Heart':index.voice}]};
     }
@@ -234,6 +235,8 @@
       return visible<0?0:visible;
     }
     function stop() {
+      clearTimeout(paragraphClickTimer);
+      paragraphStarts.forEach((_, element) => element.classList.remove('narration-seekable-passage'));
       opened=false; wantsPlay=false; generation++; clearTimeout(statusTimer); mainAbort?.abort();prefetchControllers.forEach(controller=>controller.abort());prefetchControllers.clear();statusAbort?.abort(); pending.clear();
       audio.pause();audio.removeAttribute('src');audio.load();current=null;cancelAnimationFrame(frame);clearHighlight();
       player.hidden=true;launch.setAttribute('aria-expanded','false');document.body.classList.remove('narration-open');
@@ -241,10 +244,15 @@
     launch.addEventListener('click',()=>{
       if(opened){play.focus();return;}
       passages ||= extract(prose); if(!passages.length)return;
+      if (!paragraphStarts.size) passages.forEach((passage, i) => {
+        if (passage.element.tagName === 'P' && !paragraphStarts.has(passage.element)) paragraphStarts.set(passage.element, i);
+      });
+      paragraphStarts.forEach((_, element) => element.classList.add('narration-seekable-passage'));
       opened=true; player.hidden=false; launch.setAttribute('aria-expanded','true');document.body.classList.add('narration-open');
       index=visibleIndex(); wantsPlay=true; setFollow(true); play.focus({preventScroll:true}); checkStatus();
     });
     player.addEventListener('click',async event=>{
+      clearTimeout(paragraphClickTimer);
       const action=event.target.closest('[data-action]')?.dataset.action;
       if(action==='settings'){settings.hidden=!settings.hidden;settingsToggle.setAttribute('aria-expanded',String(!settings.hidden));lastWord=-1;}
       if(action==='close'){stop();launch.focus({preventScroll:true});}
@@ -264,12 +272,29 @@
     voice.addEventListener('change',()=>{prefetchControllers.forEach(controller=>controller.abort());prefetchControllers.clear();pending.clear();if(ready)start(index);});
     audio.addEventListener('ended',()=>{if(destroyed || !opened || !wantsPlay)return; if(index<passages.length-1)start(index+1);else{wantsPlay=false;clearHighlight();setState('paused','Chapter complete. Take a moment to let it settle.');}});
     audio.addEventListener('error',()=>{if(destroyed || !opened || !current)return;wantsPlay=false;cancelAnimationFrame(frame);setState('error','Saved audio could not be played. Try another passage or retry.');current=null;});
-    const manual=event=>{if(event.target.closest?.('.narration-player'))return;if(opened && follow)setFollow(false,true);};
+    const manual=event=>{clearTimeout(paragraphClickTimer);if(event.target.closest?.('.narration-player'))return;if(opened && follow)setFollow(false,true);};
     const key=event=>{if(['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(event.key) && !event.target.closest('input,select,textarea,button,[contenteditable="true"]'))manual(event);};
     const anchor=event=>{if(event.target.closest('a[href^="#"]'))manual(event);};
+    // One delegated listener keeps ordinary paragraphs as selectable text, not thousands of controls.
+    const paragraphClick = event => {
+      clearTimeout(paragraphClickTimer);
+      if (!opened || destroyed || event.defaultPrevented || event.button !== 0 || event.detail > 1 || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
+      const target = event.target instanceof Element ? event.target : event.target.parentElement;
+      if (!target || target.closest('a,button,input,select,textarea,label,summary,[role=button],[role=link],[contenteditable],code,pre,table,.table-scroll,.widget,.section-figure,.reference-content,[hidden],[aria-hidden="true"]')) return;
+      const paragraph = target.closest('p');
+      if (!paragraph || !paragraphStarts.has(paragraph) || !document.getSelection()?.isCollapsed) return;
+      // Give double-click word selection a chance to finish before seeking.
+      paragraphClickTimer = setTimeout(() => {
+        if (!opened || destroyed || !paragraph.isConnected || !document.getSelection()?.isCollapsed) return;
+        wantsPlay = true; setFollow(true); index = paragraphStarts.get(paragraph);
+        if (ready) start(index);
+        else if (player.dataset.state === 'error') checkStatus();
+      }, 250);
+    };
+    prose.addEventListener('click', paragraphClick);
     window.addEventListener('wheel',manual,{passive:true});window.addEventListener('touchmove',manual,{passive:true});window.addEventListener('keydown',key);document.addEventListener('click',anchor);
     setState('idle');
-    return ()=>{stop();destroyed=true;window.removeEventListener('wheel',manual);window.removeEventListener('touchmove',manual);window.removeEventListener('keydown',key);document.removeEventListener('click',anchor);launch.remove();player.remove();cache.clear();};
+    return ()=>{stop();destroyed=true;prose.removeEventListener('click',paragraphClick);paragraphStarts.clear();window.removeEventListener('wheel',manual);window.removeEventListener('touchmove',manual);window.removeEventListener('keydown',key);document.removeEventListener('click',anchor);launch.remove();player.remove();cache.clear();};
   }
   window.CourseNarration={mount,extract,rangeFor};
 })();
