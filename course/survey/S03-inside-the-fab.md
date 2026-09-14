@@ -110,7 +110,7 @@ The important lesson is that a fab's capability is a coordinated capability. Too
 
 ## The people and companies
 
-TSMC, Intel and Samsung are examples of companies operating sophisticated wafer factories. Equipment suppliers include ASML for lithography and companies such as Applied Materials, Lam Research, Tokyo Electron and KLA across process and measurement functions. Carrier, transport and utility specialists support them. The factory's performance depends on the integration of these roles, not simply on owning the most expensive tool from each supplier.
+TSMC, Intel, Samsung and SMIC operate wafer factories with different process portfolios. Equipment suppliers include ASML for lithography; Applied Materials, Lam Research, Tokyo Electron, NAURA, AMEC and Piotech for different process steps; and KLA for measurement and inspection. ACM Research, with a US parent and Shanghai operations, is another example in wet cleaning. Carrier, transport and utility specialists support them. Factory performance depends on integrating suitable tools, materials and recipes for a particular product.
 
 ## Why it is hard
 

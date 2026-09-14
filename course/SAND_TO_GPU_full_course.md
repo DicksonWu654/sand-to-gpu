@@ -56,16 +56,16 @@ Before the map, a picture of the thing being made. Everything in this module is 
 
 ## The Chain in One Table
 
-**How to read the columns.** Each row is a stage in the order the material flows. *Input* and *Output* are physical. *Rough cost / value* is the value added at that stage or the price of its output, for the AI-accelerator path (leading-edge logic plus HBM in a **2.5D package**, meaning dies placed side by side on an interposer rather than stacked). *Time* is elapsed time through the stage, including queueing, not the minutes of actual processing. *Where* lists the countries or sites holding most of the volume. Costs and times are approximate and as of ~2025–2026; "~" means an order-of-magnitude figure, not a quote.
+**How to read the columns.** Each row is a stage in the order the material flows. *Input* and *Output* are physical. *Rough cost / value* is the value added at that stage or the price of its output, for the AI-accelerator path (leading-edge logic plus HBM in a **2.5D package**, meaning dies placed side by side on an interposer rather than stacked). *Time* is elapsed time through the stage, including queueing, not the minutes of actual processing. *Where* lists the countries or sites holding most of the volume. Costs and times are approximate and as of ~2025–2026; "~" means an order-of-magnitude figure, not a quote. Supplier names are examples at each stage, not a verified bill of materials for a particular NVIDIA product. A company’s headquarters, factory locations and ownership can also span different countries.
 
 | # | Stage | Input | Output | Who does it | Rough cost / value | Time | Where |
 |---|---|---|---|---|---|---|---|
 | 1 | Quartz mining | Quartzite / vein quartz ore | Lump quartz (>98% SiO2) | Sibelco, The Quartz Corp, Chinese and Brazilian miners | ~$50–150 per tonne (metallurgical); ~$5,000–10,000/t for high-purity crucible quartz | Days | Norway, Brazil, China, Spruce Pine NC |
-| 2 | Carbothermic reduction | Quartz + coal/charcoal/wood chips | **Metallurgical-grade silicon** (MG-Si, 98–99%) | Ferroglobe, Elkem, Chinese smelters (~80–85% of world supply) | ~$2–3/kg | Hours per tap; continuous | China, Norway, Brazil, USA |
-| 3 | Polysilicon | MG-Si + HCl → trichlorosilane → CVD | Electronic-grade polysilicon (9N–11N) | Wacker, Hemlock, Tokuyama, OCI; solar-grade: GCL, Tongwei, Daqo | ~$20–40/kg electronic grade (solar-grade fell to ~$5/kg in 2024–25) | ~1 week per batch incl. distillation | Germany, USA, Japan, Korea, Malaysia, China |
-| 4 | Crystal growth | Polysilicon chunks + dopant | Single-crystal **ingot**, 300 mm dia., ~2 m long, ~300–450 kg | Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron (in-house) | Ingot value ~$100–200k | ~2.5–3.5 days per crystal (melt, seed, pull, cool) | Japan, Taiwan, Germany, Korea, USA |
-| 5 | Wafering | Ingot | Polished prime wafer, 300 mm, 775 µm thick | Same five firms (~90% of 300 mm) | ~$100–150 polished; ~$200–300 epi | ~2–3 weeks | Same |
-| 6 | Wafer fab (front end) | Bare wafers + ~70–100+ masks + gases, chemicals, resists | Patterned wafer with ~15–18 metal layers | TSMC, Samsung, Intel Foundry (leading edge); GlobalFoundries, UMC, SMIC (mature) | N4 ~$16–17k; N3 ~$18–20k; N2 ~$30k per wafer | ~3 months (12–14 weeks) | Taiwan (~90% of leading edge), Korea, USA, Japan, Ireland, Israel |
+| 2 | Carbothermic reduction | Quartz + coal/charcoal/wood chips | **Metallurgical-grade silicon** (MG-Si, 98–99%) | Hoshine Silicon, Ferroglobe, Elkem and other smelters (China: ~80–85% of world supply) | ~$2–3/kg | Hours per tap; continuous | China, Norway, Brazil, USA |
+| 3 | Polysilicon | MG-Si + HCl → trichlorosilane → CVD | Electronic-grade polysilicon (9N–11N) | Wacker, Hemlock, Tokuyama, OCI, Xinhua Semiconductor (GCL); solar producers also include GCL Technology, Tongwei, Daqo | ~$20–40/kg electronic grade (solar-grade fell to ~$5/kg in 2024–25) | ~1 week per batch incl. distillation | Germany, USA, Japan, Korea, Malaysia, China |
+| 4 | Crystal growth | Polysilicon chunks + dopant | Single-crystal **ingot**, 300 mm dia., ~2 m long, ~300–450 kg | Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron, NSIG/Zing (in-house) | Ingot value ~$100–200k | ~2.5–3.5 days per crystal (melt, seed, pull, cool) | Japan, Taiwan, Germany, Korea, USA, China |
+| 5 | Wafering | Ingot | Polished prime wafer, 300 mm, 775 µm thick | Same wafer makers; supplier and product qualification determine use | ~$100–150 polished; ~$200–300 epi | ~2–3 weeks | Same |
+| 6 | Wafer fab (front end) | Bare wafers + ~70–100+ masks + gases, chemicals, resists | Patterned wafer with ~15–18 metal layers | TSMC, Samsung, Intel Foundry (leading edge); GlobalFoundries, UMC and SMIC (different process portfolios) | N4 ~$16–17k; N3 ~$18–20k; N2 ~$30k per wafer | ~3 months (12–14 weeks) | Taiwan (~90% of leading edge), Korea, USA, Japan, Ireland, Israel, China |
 | 7 | Wafer sort | Finished wafer | Wafer map of good/bad die, bins | Fab or test OSAT (KYEC), on Advantest / Teradyne testers | ~$1–5 per die for large logic | Hours per wafer | Co-located with fab |
 | 8 | Bumping + thinning + dicing | Sorted wafer | Singulated, bumped known-good die | Fab (TSMC) or OSAT (ASE, Amkor); DISCO tools | ~$50–200 per wafer | Days | Taiwan, Korea, China, Malaysia |
 | 9 | HBM manufacturing | DRAM wafers with TSVs | 8-, 12-, 16-high stacks, 24–48 GB each | SK hynix (~50%), Samsung (~33%), Micron (~18%) (Counterpoint, Q2 2026) | ~$200–700 per stack depending on generation and height; ~$15–20/GB (estimates vary) | DRAM fab ~2–3 months + ~1 week stacking/test | Korea, Taiwan and Japan (Micron), Singapore/USA (Micron, ramping) |
@@ -113,7 +113,7 @@ Electronic-grade silicon must be roughly 9N–11N pure (99.9999999% to 99.999999
 
 The workhorse route is the **Siemens process**. MG-Si powder is reacted with hydrogen chloride (HCl) gas at ~300 °C in a **fluidized bed**, a bed of powder held floating by upward gas flow so that it stirs like a liquid, to make **trichlorosilane** (TCS, SiHCl3), a liquid that boils at 32 °C: Si + 3HCl → SiHCl3 + H2. Because TCS is a liquid, it can be purified by **fractional distillation** (distillation through a tall column in which the vapor condenses and re-boils many times on its way up, so that compounds whose boiling points differ by only a few degrees still separate), repeated through many columns until metal chlorides, boron, and phosphorus are at parts-per-trillion levels (one in 10¹²). The purified TCS is then decomposed with hydrogen onto electrically heated silicon "U-rods" at ~1,100 °C in a **bell-jar reactor**, an inverted metal dome sealed to a base plate through which the rods and gases pass, growing polysilicon rods over 3–5 days to ~150–200 mm diameter. The deposition is the first reaction run backwards, SiHCl3 + H2 → Si + 3HCl, and the same chemistry can do both jobs because the reaction's direction depends on temperature: making TCS from silicon releases heat, so it is favoured cold (~300 °C), while breaking TCS back into silicon absorbs heat, so it is favoured hot (~1,100 °C). The hydrogen supplies the atoms that carry the chlorine away as HCl, which is recycled to the fluidized bed; only a fraction of the TCS converts on each pass over the rods, and the rest is condensed and sent round again. The alternative **fluidized bed reactor** (FBR) route decomposes silane (SiH4) onto silicon seed granules and produces free-flowing beads that are convenient for crucible charging.
 
-Wacker (Germany and USA), Hemlock (USA), Tokuyama (Japan), and OCI (Korea, with a Malaysian electronic-grade line from 2026) dominate electronic grade; Chinese producers (GCL, Tongwei, Daqo) dominate the far larger solar-grade market, where oversupply pushed prices below $5/kg in 2024–2025. Electronic grade sells for on the order of $20–40/kg, and a 300 mm ingot needs ~350–450 kg of it. The reactors and distillation columns are not a chokepoint: they are custom pressure vessels designed in-house or by a handful of engineering firms (historically GT Advanced Technologies and Centrotherm, now largely Chinese fabricators), and the scarce thing is the operating recipe and the decades of contamination discipline, not the hardware. Module 01 covers all of this at mechanism level.
+Electronic-grade suppliers include Wacker (Germany and USA), Hemlock (USA), Tokuyama (Japan), OCI (Korea) and Xinhua Semiconductor (GCL, China). GCL Technology, Tongwei and Daqo are also major names in the far larger solar-grade market, where oversupply pushed prices below $5/kg in 2024–2025. Electronic grade sells for on the order of $20–40/kg, and a 300 mm ingot needs ~350–450 kg of it. The reactors and distillation columns are not a chokepoint: they are custom pressure vessels designed in-house or by a handful of engineering firms (historically GT Advanced Technologies and Centrotherm, now largely Chinese fabricators), and the scarce thing is the operating recipe and the decades of contamination discipline, not the hardware. Module 01 covers all of this at mechanism level.
 
 > **What can go wrong: the impurity you cannot see until it is a crystal.** Polysilicon at 6N and at 11N look identical, and the failure that matters is invisible: a few parts per trillion of boron or phosphorus slipping through because a distillation column ran slightly off its set point, a seal leaked air (and with it dust, which carries boron), or the steel and graphite of the reactor, crusher and handling line shed metal and carbon into the product. So every lot is qualified the slow way: a small test crystal is grown from it by float zone (a crucible-free method, so nothing but the feedstock touches the melt), and its resistivity, which is set by the net dopant concentration, is measured; for the last parts per trillion, the crystal is cooled to ~10 K and its infrared absorption read, since at that temperature each dopant's electron sits on its own atom and absorbs at a wavelength unique to that element (Module 01). A lot that fails is not scrapped but sold down to solar grade. The mechanical failures are the rods: over 3–5 days at ~1,100 °C a power interruption drops the whole batch, a rod that grows lopsided touches its neighbour and shorts, and a rough "popcorn" surface traps chlorine-bearing residue that must be etched off before the chunks can be melted. Two rules follow from all this, and the rest of the chain inherits them: measure the product electrically, because chemistry alone cannot see the level you care about, and treat every touch as a contamination event.
 
@@ -133,7 +133,7 @@ The quartz crucible slowly dissolves into the melt, so the crystal always contai
 
 The problem is to turn a 2 m cylinder into ~1,500–2,000 discs, each 775 µm thick, flat to a few tens of nanometers, with a surface clean and smooth enough to print 20 nm features on, without wasting too much of a ~$100–200k crystal. The ingot is cropped, ground to exactly 300 mm, given a notch for orientation, and sliced by a **diamond-wire multi-wire saw** in which a single ~100 km wire loops through the ingot thousands of times. The **kerf**, the material the wire turns to dust with every cut, is ~150 µm per wafer, so roughly a sixth of the ingot is lost in the saw. Each wafer is then **lapped** (rubbed flat between two rotating plates with abrasive slurry between them) or ground, edge-profiled, chemically etched to remove the layer the saw damaged, double-side polished, and given a final **chemical-mechanical polish (CMP)** on the front side to sub-nanometer roughness. CMP is a pad plus a slurry of nanometer-sized silica particles in a mildly corrosive liquid: the chemistry softens the top few atoms and the mechanics wipes them away, which is how a surface becomes smooth to a fraction of an atom over a whole wafer. Cleaning follows the **RCA** sequence, named for the company that published it in 1970 (SC-1 ammonia/peroxide for particles, SC-2 HCl/peroxide for metals).
 
-The spec that matters most to the fab is local flatness. The lithography lens, like a camera, is sharp only within a slab a few tens of nanometers deep (its **depth of focus**), and every part of the wafer surface must sit inside that slab in each exposure field. The metric is **SFQR** (site front-surface least-squares range: the peak-to-valley deviation from a best-fit plane over one site), typically <20–30 nm over a 26 × 8 mm site. Scaled up, 25 nm over 26 mm is ~0.1 mm over the length of a football field. Many logic wafers get an additional **epitaxial** layer (a few µm of ultra-pure silicon grown by CVD, continuing the crystal) to bury crystal defects and provide a controlled doping profile. Five companies (Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron) supply ~90% of 300 mm wafers, and a polished prime wafer costs ~$100–150. Their tools come from a second, mostly Japanese tier: 300 mm wire saws from Komatsu NTC (with Takatori and Precision Surfacing Solutions as alternatives), double-side polishers from Precision Surfacing Solutions (the former Lapmaster Wolters line, built in Germany), Fujikoshi and SpeedFam, and the flatness and particle metrology almost entirely from KLA. Module 03 walks the full sequence; Module 04 covers **SOI** wafers (silicon on insulator: a thin silicon film on a buried glass layer) and **compound semiconductors** (crystals of two or more elements, such as gallium nitride or gallium arsenide), plus every consumable the fab will now burn through.
+The spec that matters most to the fab is local flatness. The lithography lens, like a camera, is sharp only within a slab a few tens of nanometers deep (its **depth of focus**), and every part of the wafer surface must sit inside that slab in each exposure field. The metric is **SFQR** (site front-surface least-squares range: the peak-to-valley deviation from a best-fit plane over one site), typically <20–30 nm over a 26 × 8 mm site. Scaled up, 25 nm over 26 mm is ~0.1 mm over the length of a football field. Many logic wafers get an additional **epitaxial** layer (a few µm of ultra-pure silicon grown by CVD, continuing the crystal) to bury crystal defects and provide a controlled doping profile. Large established suppliers include Shin-Etsu, SUMCO, GlobalWafers, Siltronic and SK Siltron, alongside suppliers such as NSIG/Zing, and a polished prime wafer costs ~$100–150. Their tools come from a second, mostly Japanese tier: 300 mm wire saws from Komatsu NTC (with Takatori and Precision Surfacing Solutions as alternatives), double-side polishers from Precision Surfacing Solutions (the former Lapmaster Wolters line, built in Germany), Fujikoshi and SpeedFam, and the flatness and particle metrology almost entirely from KLA. Module 03 walks the full sequence; Module 04 covers **SOI** wafers (silicon on insulator: a thin silicon film on a buried glass layer) and **compound semiconductors** (crystals of two or more elements, such as gallium nitride or gallium arsenide), plus every consumable the fab will now burn through.
 
 > **What can go wrong: a broken wire, a failed site, a particle that survived.** The costliest event is a wire break mid-cut: the web goes slack, the partly cut ingot can no longer be re-registered to the old cut planes to a micrometer, and the block is usually scrapped or re-cut at a new pitch, with every partial slice lost. A site that fails SFQR is a subtler failure: the scanner's focus sensor can follow a slow warp of the wafer but not a sharp local step, so in the affected field the lines print blurred and the dies there die months later in the fab. The wafer maker therefore measures every wafer on an interferometric flatness tool (KLA's WaferSight), and an out-of-spec wafer is downgraded to a monitor or test grade rather than shipped as prime. Particles are the third: a particle that survives the RCA clean is buried under the fab's first film and prints as a defect in every layer above it, so each wafer is scanned by a laser surface inspector (KLA's Surfscan) that counts light-scattering points down to a few tens of nanometers, and a prime wafer is allowed only a few tens of them. Metal contamination from a bad chemical batch is caught electrically, by measuring how long excess electrons survive in the silicon (**minority-carrier lifetime**, which metal atoms shorten); a bad batch is traced back to the specific tool and lot, the same discipline the fab will apply at every step.
 
@@ -272,7 +272,7 @@ Ask "what would stop the world from making more Blackwells next quarter?" and th
 
 Start with the physics. The smallest feature a lens can print scales with the wavelength of the light (Module 07 gives the equation). The industry used 193 nm **deep-ultraviolet (DUV)** light for two decades, stretching it with water between lens and wafer (**immersion**: water bends light more steeply than air, its refractive index at 193 nm being 1.44 against 1.0, so the lens can collect a wider cone of light from the mask and resolve finer lines) and by printing one layer as two or four interleaved exposures (**multiple patterning**), until features reached a tenth of the wavelength and the tricks ran out. **Extreme ultraviolet (EUV)** light at 13.5 nm is 14 times shorter. The price is that every material absorbs it, including air and glass. There is no lens, because nothing is transparent at 13.5 nm; the whole optical path is in vacuum; and the image is formed by mirrors, each coated with dozens of alternating molybdenum and silicon layers and reflecting only ~70% of what hits it. No single surface reflects 13.5 nm light usefully; each Mo/Si interface returns only a fraction of a percent. The trick is spacing: the layer pairs are laid down at half a wavelength apart, so the ~40–50 weak reflections from successive interfaces travel distances differing by whole wavelengths and add in phase, like echoes timed to reinforce one another, and the stack as a whole reaches ~70%. After the ~10 reflections from source to wafer only a few percent of the light survives. Two consequences follow. The light source must be enormously powerful, which is why it is a tin plasma: 50,000 droplets per second of molten tin are hit by a CO2 laser and flash into a plasma that radiates at 13.5 nm. Tin is the fuel because tin atoms stripped of roughly 8–13 electrons happen to radiate strongly in a band centred at 13.5 nm, which is the wavelength Mo/Si mirrors reflect best; in effect the wavelength was chosen for the mirror and the fuel chosen to match it. And the mirrors must be almost perfect, because at this wavelength a bump a few atoms high distorts the image.
 
-Every leading-edge node from TSMC's N7+ and Samsung's 7 nm-class equivalent (2019) onward, and the Intel equivalents, uses EUV for its finest layers; SMIC reaches 7 nm-class with DUV multi-patterning at lower yield. Every EUV scanner on earth is made by ASML in Veldhoven, Netherlands. The current workhorse NXE:3800E costs ~$200–220 million, weighs ~180 tonnes, ships in ~40 freight containers (three 747 freighters or ~20 trucks), and exposes ~200–220 wafers per hour. The High-NA EXE:5000/5200 raises the **numerical aperture** (NA: how wide a cone of light the optics can accept; larger NA prints finer features) from 0.33 to 0.55 with **anamorphic** optics (different magnification in the two directions, 4× one way and 8× the other, so the mirrors can accept the wider cone without becoming impossibly large; the price is a half-size exposure field). It costs ~$380–400 million and, as of mid-2026, is in early production use at Intel (on some 18A layers; 14A, the first node designed around it, targets **risk production**, early low-volume production while yield is still being learned, in 2027), under evaluation at Samsung and SK hynix, committed by TSMC for its A14P generation (~2028) after skipping it at A16, and being qualified at **imec** (the Belgian semiconductor research institute where ASML and the chipmakers share early tools). Module 08 has the customer-by-customer status. ASML recognized system sales for 44 EUV systems in 2024 and 48 in 2025; shipments and revenue recognition can fall in different periods; ~350 had shipped cumulatively by end-2025, over half of them to TSMC. Inside ASML's tool sit a Zeiss projection optics box (mirrors polished to ~50 pm **RMS surface figure**, the root-mean-square height error of the mirror surface; 50 picometers is about a quarter of one silicon atom, achieved in one Zeiss factory in Oberkochen), a Trumpf drive laser, a Cymer (ASML-owned) source, and frames and modules from VDL and others. EUV has never been licensed for China (since 2019); since September 2023 the most capable immersion DUV scanners (NXT:2000i and above) also require Dutch licences, with metrology and further immersion tools added in 2024–2025, while older immersion tools still ship to non-sanctioned Chinese fabs. Module 08 is entirely about this machine.
+Every leading-edge node from TSMC's N7+ and Samsung's 7 nm-class equivalent (2019) onward, and the Intel equivalents, uses EUV for its finest layers; TechInsights has identified SMIC 7 nm-class chips made without EUV, using DUV multi-patterning. That physical evidence does not establish the fab’s overall yield. Every EUV scanner on earth is made by ASML in Veldhoven, Netherlands. The current workhorse NXE:3800E costs ~$200–220 million, weighs ~180 tonnes, ships in ~40 freight containers (three 747 freighters or ~20 trucks), and exposes ~200–220 wafers per hour. The High-NA EXE:5000/5200 raises the **numerical aperture** (NA: how wide a cone of light the optics can accept; larger NA prints finer features) from 0.33 to 0.55 with **anamorphic** optics (different magnification in the two directions, 4× one way and 8× the other, so the mirrors can accept the wider cone without becoming impossibly large; the price is a half-size exposure field). It costs ~$380–400 million and, as of mid-2026, is in early production use at Intel (on some 18A layers; 14A, the first node designed around it, targets **risk production**, early low-volume production while yield is still being learned, in 2027), under evaluation at Samsung and SK hynix, committed by TSMC for its A14P generation (~2028) after skipping it at A16, and being qualified at **imec** (the Belgian semiconductor research institute where ASML and the chipmakers share early tools). Module 08 has the customer-by-customer status. ASML recognized system sales for 44 EUV systems in 2024 and 48 in 2025; shipments and revenue recognition can fall in different periods; ~350 had shipped cumulatively by end-2025, over half of them to TSMC. Inside ASML's tool sit a Zeiss projection optics box (mirrors polished to ~50 pm **RMS surface figure**, the root-mean-square height error of the mirror surface; 50 picometers is about a quarter of one silicon atom, achieved in one Zeiss factory in Oberkochen), a Trumpf drive laser, a Cymer (ASML-owned) source, and frames and modules from VDL and others. EUV has never been licensed for China (since 2019); since September 2023 the most capable immersion DUV scanners (NXT:2000i and above) also require Dutch licences, with metrology and further immersion tools added in 2024–2025, while older immersion tools still ship to non-sanctioned Chinese fabs. Module 08 is entirely about this machine.
 
 > **What can go wrong: the source stops.** The tin plasma coats the **collector**, the large mirror that gathers its light, and the droplet generator and laser run at the edge of their ratings; when any of them fails, a $200 million tool stops exposing and, with it, the ~100k+ wafer-passes a month it was delivering. Every lot waiting for that layer queues, and because a wafer visits EUV 20–25 times, an outage anywhere in the fleet slows the whole fab. That is why fabs spread each EUV layer across several qualified tools and why ASML keeps resident engineers and spare collectors at every EUV fab.
 
@@ -579,7 +579,12 @@ Shares and positions are estimates as of mid-2026 unless dated.
 | Zeiss SMT / Trumpf / Cymer | Germany / Germany / USA | EUV optics / drive laser / source | Sole suppliers to ASML |
 | Foxconn / Quanta / Wistron / Inventec | Taiwan | ODMs for boards, servers, NVL72 racks | Top NVIDIA system builders |
 | Sibelco / The Quartz Corp | Belgium / Norway | High-purity quartz (Spruce Pine) | Dominant in crucible-grade HPQ |
-| Ferroglobe / Elkem | Spain-UK / Norway | Metallurgical-grade silicon | Largest non-Chinese producers |
+| Hoshine Silicon / Ferroglobe / Elkem | China / Spain-UK / Norway | Metallurgical-grade silicon | Examples of major silicon-metal suppliers |
+| Xinhua Semiconductor (GCL) | China | Electronic-grade polysilicon | Semiconductor feedstock business, distinct from GCL’s bulk solar output |
+| NSIG / Zing Semiconductor | China | Silicon wafers including 300 mm | Wafer supplier; wafer type and customer qualification matter |
+| SMIC | China | Contract wafer fabrication | Foundry with multiple process platforms |
+| NAURA / AMEC / Piotech | China | Process equipment: deposition and etch, with portfolios differing by company | Equipment suppliers, not finished-chip manufacturers |
+| Anji Microelectronics | China | CMP slurries and formulated wet chemicals | Materials supplier |
 
 ## Common Misconceptions
 
@@ -588,7 +593,7 @@ Shares and positions are estimates as of mid-2026 unless dated.
 - **"A 2 nm node has 2 nm features."** → No dimension in an N2 transistor is 2 nm. Gate pitch is ~45–50 nm, metal pitch ~23–25 nm, nanosheet thickness a few nm. Node names have been marketing labels since the ~22 nm era; Module 11 explains what they actually track.
 - **"A fab is a building full of robots that runs itself."** → A GIGAFAB employs several thousand engineers and technicians, and the ~3-month cycle time is dominated by queueing at ~1,000 tools, not by the processing itself. Cycle time and yield are management problems as much as physics problems.
 - **"Silicon is scarce or strategically controlled."** → Quartz and MG-Si are cheap, abundant commodities. The strategic scarcity is in *purity* (electronic-grade polysilicon, HPQ crucible quartz) and in *capital and know-how* (EUV, leading-edge fabs, advanced packaging).
-- **"China cannot make advanced chips because it lacks silicon or engineers."** → China dominates MG-Si and solar polysilicon and has a large engineering base. What it lacks is EUV lithography (export-controlled since 2019) and, increasingly, the most capable immersion DUV tools and the metrology, resist, and substrate sub-tiers that sit in Japan, the Netherlands, and the US. SMIC's 7 nm-class output on DUV multi-patterning is real but yield- and volume-limited.
+- **"China cannot make advanced chips because it lacks silicon or engineers."** → China dominates MG-Si and solar polysilicon and has a large engineering base. Access to some advanced equipment is constrained by export licensing, including EUV and specified immersion DUV systems. That access constraint is different from a claim that the country has no capable materials, equipment or chip suppliers. TechInsights identified SMIC’s 7 nm-class process in the commercial Kirin 9000S. A teardown establishes a manufactured device, but does not reveal a fab’s overall yield, cost or available capacity.
 - **"ASML is the only EUV maker because of patents."** → Patents are the smallest part of it. EUV is a 25-year, multi-billion-euro supply chain (Zeiss optics with no second source, Trumpf lasers, the Cymer source, thousands of sub-suppliers) plus thousands of tool-years of learning about sources, mirrors and stages that exist nowhere else. A competitor holding every patent would still be a decade and tens of billions away.
 - **"HBM is just DRAM chips stacked on top of each other."** → The dies are designed differently (TSV columns with keep-out zones, a 1,024- or 2,048-bit interface instead of a few dozen pins, a logic base die at the bottom), and the stacking flow is a second manufacturing process with its own bonding chemistry, yield, and test step. That is why HBM costs several times more per bit (reported 3–5x on 2023–24 contract comparisons; later estimates vary) and why only three companies make it.
 
@@ -612,6 +617,22 @@ This module is the map; it consumes nothing and produces the mental model every 
 - USGS, *Mineral Commodity Summaries*, "Silicon" chapter (annual), for world MG-Si output and country shares.
 - IEEE International Roadmap for Devices and Systems (IRDS), "More Moore" and "Lithography" chapters, for node parameters.
 - NVIDIA, "NVIDIA H100 Tensor Core GPU Architecture" whitepaper (2022) and "NVIDIA Blackwell Architecture Technical Brief" (2024).
+
+- [Hoshine silicon-metal products](https://www.hoshinesilicon.com/en/products/list_78.aspx-2.html?lcid=40). Reviewed September 2026.
+
+- [GCL semiconductor materials, including Xinhua electronic-grade polysilicon](https://www.gcl-power.com/en/goods/semiconductor.html). Reviewed September 2026.
+
+- [NSIG wafer businesses](https://www.nsig.com/). Reviewed September 2026.
+
+- [NAURA process-equipment portfolio](https://www.naura.com/product/). Reviewed September 2026.
+
+- [AMEC product portfolio in its 2024 ESG report](https://www.amec-inc.com/uploads/files/20250611/17496080859885.pdf). Reviewed September 2026.
+
+- [Piotech deposition portfolio](https://en.piotech.cn/). Reviewed September 2026.
+
+- [Anji CMP and wet-chemical products](https://www.anjimicro.com/en/jiejuefangan.html). Reviewed September 2026.
+
+- [TechInsights: Kirin 9000S process analysis](https://www.techinsights.com/blog/hisilicon-kirin-9000s-smic-7nm-n2-process-flow-analysis). Reviewed September 2026.
 
 ---
 
@@ -753,7 +774,7 @@ The product is **metallurgical-grade silicon (MG-Si)**, also called silicon meta
 
 ### 3.4 Who makes MG-Si
 
-Global silicon-metal production is on the order of 4.5–5 million tonnes a year, and China produces roughly 80–85% of it; the USGS Mineral Commodity Summaries put 2024 world output at ~4.6 Mt with Chinese output at ~3.9 Mt (USGS counts silicon content; Chinese industry data, which count gross tonnage and include **secondary silicon**, scrap and off-grade silicon re-melted and resold rather than freshly smelted, run higher). The largest single producer is **Hoshine Silicon** in Xinjiang, with well over a million tonnes of capacity. Outside China, **Ferroglobe** (Spain, France, Canada, the US, South Africa; ~350 kt/yr silicon-metal nameplate, the largest non-Chinese producer, with actual output lower in 2024–25) and **Elkem** (Norway, Iceland, Canada, Paraguay, China; Norwegian-listed and majority owned by China National Bluestar) dominate, with **Dow** (Brazil), **RIMA** and **Liasa** (Brazil), **Simcoa** (Australia), and **Mississippi Silicon** (US) as smaller players. Wacker smelts part of its own requirement at the Holla plant in Norway (Wacker Chemicals Norway, acquired in 2010) and buys the rest of its chemical-grade MG-Si under long-term contracts from Elkem, Ferroglobe, and Brazilian producers, which is partly why supply free of Xinjiang-origin material (under a US law described in Section 9) matters to it.
+Global silicon-metal production is on the order of 4.5–5 million tonnes a year, and China produces roughly 80–85% of it; the USGS Mineral Commodity Summaries put 2024 world output at ~4.6 Mt with Chinese output at ~3.9 Mt (USGS counts silicon content; Chinese industry data, which count gross tonnage and include **secondary silicon**, scrap and off-grade silicon re-melted and resold rather than freshly smelted, run higher). The largest single producer is **Hoshine Silicon** in Xinjiang, with well over a million tonnes of capacity. Outside China, **Ferroglobe** (Spain, France, Canada, the US, South Africa; ~350 kt/yr silicon-metal nameplate, with actual output lower in 2024–25) and **Elkem** (Norway, Iceland, Canada, Paraguay, China; Norwegian-listed and majority owned by China National Bluestar) dominate, with **Dow** (Brazil), **RIMA** and **Liasa** (Brazil), **Simcoa** (Australia), and **Mississippi Silicon** (US) as smaller players. Wacker smelts part of its own requirement at the Holla plant in Norway (Wacker Chemicals Norway, acquired in 2010) and buys the rest of its chemical-grade MG-Si under long-term contracts from Elkem, Ferroglobe, and Brazilian producers, which is partly why supply free of Xinjiang-origin material (under a US law described in Section 9) matters to it.
 
 Demand splits roughly into thirds: aluminum alloys; silicones (the rubbers, sealants and oils made by reacting MG-Si with methyl chloride at Dow, Wacker, Momentive, Shin-Etsu, Elkem, and Chinese producers); and polysilicon, which has been the growth engine: solar polysilicon alone consumed on the order of 2 Mt of MG-Si in 2024.
 
@@ -965,7 +986,7 @@ One row of the table below needs a concept the earlier sections have not used. I
 
 The Chinese solar industry's switch in 2023–2025 from an older solar-cell design built on boron-doped (p-type) wafers to a newer, more efficient one built on phosphorus-doped (n-type) wafers tightened the solar spec sharply, because n-type wafers are sensitive to stray boron and to the metals that limit lifetime; the good "N-type grade" solar polysilicon of 2025 (B ≤ ~0.1 ppba, P ≤ ~0.3 ppba, ~8N) is close to what was considered electronic grade in the 1990s.
 
-The electronic-grade supply is dominated by a handful of incumbents (all as of 2025):
+Electronic-grade suppliers include long-established producers and newer suppliers. The following examples distinguish this market from bulk solar polysilicon (the historical site descriptions are as of 2025):
 
 - **Wacker**: Burghausen and Nünchritz, Germany; Charleston, Tennessee.
 - **Hemlock Semiconductor**: Hemlock, Michigan; owned by Corning with a Shin-Etsu Handotai minority stake since Dow's exit in 2020.
@@ -973,13 +994,14 @@ The electronic-grade supply is dominated by a handful of incumbents (all as of 2
 - **OCI**: Gunsan, Korea, converted to electronic grade only in 2020, plus Samalaju, Malaysia.
 - **High-Purity Silicon Corp.**: Yokkaichi, Japan, with a US plant in Alabama; the former Mitsubishi Materials polysilicon business, sold to the wafer maker SUMCO in 2023.
 - **REC Silicon**: silane gas, and historically FBR and Siemens polysilicon at Moses Lake and Butte.
+- **Xinhua Semiconductor (GCL group)**: China; an electronic-grade polysilicon business identified in GCL’s semiconductor-materials portfolio. This is distinct from treating all GCL solar polysilicon as electronic grade.
 
-So why do these six hold the market when Chinese producers make twenty times the tonnage? Four reasons.
+Why does a large solar-polysilicon business not automatically become a qualified supplier to every semiconductor wafer maker? Four separate questions explain the difference.
 
-1. **It is a small market.** Electronic-grade demand is on the order of 40–50 kt/yr, perhaps 3% of global polysilicon (~1.5–2 Mt/yr), and it grows with wafer starts at a few percent a year, not with solar's 30%. A single 100 kt solar line would double the world's EG supply; no one builds for that.
-2. **Qualification is slow and sticky.** A wafer maker qualifying a new feedstock source for 300 mm grows test crystals, runs full wafer characterization (resistivity, lifetime, oxygen precipitation behavior, defect density), then ships wafers to fab customers who run their own qualification lots; the cycle is one to two years and the fab customer sees no benefit, only risk. Once a source is qualified it stays qualified for a decade under long-term contract.
-3. **The last decade of purity is expensive in ways solar economics cannot justify**: extra distillation columns, resin guard beds, slower and smoother rod growth, cleanroom breaking, etching, and a much heavier analytical laboratory. Chinese producers have repeatedly announced "electronic grade" output (Xinte, Daqo, and Tongwei have all sold material into the 200 mm and discrete (single-function chips such as power transistors) market and have programs for 300 mm), and as of ~2025 they do supply part of China's domestic wafer industry, but the top-tier 300 mm wafer makers (Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron) still buy overwhelmingly from the incumbents.
-4. **Traceability and geopolitics** (Section 9) now cut in the incumbents' favor: US and Japanese customers want a supply chain that is not exposed to Xinjiang or to export-control retaliation.
+1. **It is a small market.** Electronic-grade demand is on the order of 40–50 kt/yr, perhaps 3% of global polysilicon (~1.5–2 Mt/yr), and it grows with wafer starts at a few percent a year, not with solar's 30%. A single 100 kt solar line would exceed that electronic-grade demand; its scale alone does not establish a market for semiconductor-qualified output.
+2. **Qualification is slow and sticky.** A wafer maker qualifying a new feedstock source for 300 mm grows test crystals, runs full wafer characterization (resistivity, lifetime, oxygen precipitation behavior, defect density), then ships wafers to fab customers who run their own qualification lots; the cycle can take one to two years. A customer weighs the qualification cost and yield risk against benefits such as price, capacity or supply resilience. Established suppliers can therefore retain business under long-term contracts, while a new supplier must demonstrate the required consistency.
+3. **The last decade of purity is expensive in ways solar economics cannot justify**: extra distillation columns, resin guard beds, slower and smoother rod growth, cleanroom breaking, etching, and a much heavier analytical laboratory. The test is product-specific: which contaminants are measured, at what detection limits, and which wafer and device processes have qualified the material? Xinhua is one supplier with an electronic-grade polysilicon business. A supplier’s purity claim or announced capacity, whether Chinese, European, American or Japanese, does not by itself answer every customer’s qualification requirements.
+4. **Traceability and trade rules** (Section 9) are a separate purchasing constraint. A technically suitable material may still face restrictions tied to its producer, origin, destination or end use. These requirements should be explained separately from material purity and process capability.
 
 ## 7. How Purity Is Measured
 
@@ -1046,11 +1068,11 @@ Two things follow. First, MG-Si and power together are roughly three quarters of
 
 Outside China, polysilicon documented free of Xinjiang content traded at **~$19–22/kg** through 2025 and 2026 (the Global Polysilicon Marker published by **OPIS**, a price-reporting agency, sat near $19–20/kg), a premium created entirely by policy.
 
-Electronic-grade prices are not published; they are set in multi-year contracts between half a dozen producers and five wafer makers. Reasonable estimates put EG at **~$20–40/kg**, two to four times the solar price (as of 2025). At 0.23 kg per 300 mm wafer, the polysilicon in a $150–200 wafer is worth ~$5–10, and in a $20,000 leading-edge processed wafer it is a rounding error, which is precisely why electronics buyers pay for purity and traceability rather than shopping on price.
+Electronic-grade prices are not published; they are set in multi-year contracts between qualified suppliers and wafer makers. Reasonable estimates put EG at **~$20–40/kg**, two to four times the solar price (as of 2025). At 0.23 kg per 300 mm wafer, the polysilicon in a $150–200 wafer is worth ~$5–10, and in a $20,000 leading-edge processed wafer it is a rounding error, which is precisely why electronics buyers pay for purity and traceability rather than shopping on price.
 
 ### 9.2 The China boom
 
-In 2005 China made under 5% of the world's polysilicon; in 2024 it made ~93–95%, and nine of the ten largest producers were Chinese. **Tongwei** (originally an animal-feed company; ~910 kt/yr in Sichuan, Inner Mongolia, and Yunnan), **GCL Technology** (~480 kt/yr, all granular), **Daqo New Energy** (~300–350 kt/yr, Xinjiang and Inner Mongolia; NYSE-listed), **Xinte Energy** (a TBEA subsidiary, ~300 kt/yr), **East Hope**, and **Asia Silicon** lead (nameplate capacities as of 2025); the four largest held about 65% of global output in 2024. Their advantages were not primarily technological (they adapt Western reactor designs, and GCL's FBR is SunEdison's) but scale, 18-month construction cycles, sub-$0.04/kWh coal or hydro power, cheap local MG-Si, and a domestic wafer industry that absorbs everything. Wacker's ~80 kt/yr and OCI Malaysia's ~35 kt/yr are the only non-Chinese solar-relevant capacity of note (Hemlock's output is mostly electronic grade, with some solar).
+In 2005 China made under 5% of the world's polysilicon; in 2024 it made ~93–95%, and nine of the ten largest producers were Chinese. **Tongwei** (originally an animal-feed company; ~910 kt/yr in Sichuan, Inner Mongolia, and Yunnan), **GCL Technology** (~480 kt/yr, all granular), **Daqo New Energy** (~300–350 kt/yr, Xinjiang and Inner Mongolia; NYSE-listed), **Xinte Energy** (a TBEA subsidiary, ~300 kt/yr), **East Hope**, and **Asia Silicon** lead (nameplate capacities as of 2025); the four largest held about 65% of global output in 2024. Their scale draws on a large solar-wafer customer base, access to electricity and silicon metal, and investment in manufacturing capacity. Reactor design, process control, energy efficiency and impurity management also affect competitiveness. Firms using the same process family can still differ in reactor engineering, operating recipes, impurity control and production efficiency. Examples outside China include Wacker's ~80 kt/yr and OCI Malaysia's ~35 kt/yr (historical nameplate estimates above); Hemlock's output is mostly electronic grade, with some solar.
 
 ### 9.3 Xinjiang and the UFLPA
 
@@ -1159,13 +1181,14 @@ The reaction-enthalpy energy estimate and the estimated ΔG crossing use simplif
 | Sibelco (IOTA) | Belgium / US (Spruce Pine, NC) | High-purity quartz for crucibles, quartzware | Leader |
 | The Quartz Corp | Norway / France (mines Spruce Pine, refines at Drag) | High-purity quartz | #2 |
 | Jiangsu Pacific Quartz | China | Natural HPQ processing, synthetic quartz, crucible feed | Rising #3 / China leader |
-| Hoshine Silicon | China (Xinjiang) | Largest MG-Si producer; Entity-listed, UFLPA-exposed | Leader (MG-Si) |
+| Hoshine Silicon | China | Silicon-metal producer; trade and origin restrictions are discussed separately in Section 9 | Major MG-Si supplier |
 | Ferroglobe | Spain / US / Canada / France / South Africa | MG-Si, ~350 kt/yr nameplate, largest outside China | Leader ex-China |
 | Elkem | Norway (Bluestar-owned) | MG-Si, silicones, silica fume; supplier to Wacker | #2 ex-China |
 | Wacker Chemie | Germany / US (Charleston, TN) / Norway (Holla MG-Si smelter) | EG and solar polysilicon, ~80 kt/yr; STC-integrated chemical site; part-integrated into MG-Si | EG leader |
 | Hemlock Semiconductor | US (Michigan; Corning + Shin-Etsu Handotai) | EG polysilicon, some solar | EG #2 |
 | Tokuyama | Japan | EG polysilicon | EG top tier |
-| OCI | Korea (Gunsan, EG) / Malaysia (Samalaju, solar) | EG and UFLPA-clean solar polysilicon | EG / clean-solar niche |
+| OCI | Korea (Gunsan, EG) / Malaysia (Samalaju, solar) | Electronic-grade and solar polysilicon at different sites | Product grade and shipment traceability must be checked separately |
+| Xinhua Semiconductor (GCL) | China | Electronic-grade polysilicon | Semiconductor feedstock supplier |
 | High-Purity Silicon Corp. (SUMCO group; ex-Mitsubishi Materials) | Japan (Yokkaichi) / US (Alabama) | EG polysilicon, largely for SUMCO | EG niche |
 | REC Silicon | US (Butte, MT; Moses Lake, WA idle); taken private by Hanwha (Korea) in 2025–26 | Silane gas; former FBR granular | Silane leader, FBR exited |
 | Tongwei | China | Solar polysilicon, ~910 kt/yr nameplate, Siemens | World #1 by volume |
@@ -1203,6 +1226,10 @@ Module 00 mapped the chain from quartz to a GPU rack; this module is its first i
 - S. Wolf and R. N. Tauber, *Silicon Processing for the VLSI Era, Vol. 1: Process Technology*, Lattice Press. Chapter 1 covers polysilicon and crystal growth from the fab engineer's side.
 - Sibelco, "Sibelco Restarts Production and Customer Shipments at Spruce Pine Following Hurricane Helene," press release, 10 October 2024; and the ITRPV (International Technology Roadmap for Photovoltaic) annual reports for solar polysilicon consumption, wafer thickness, and kerf trends.
 - Asianometry (YouTube) episodes on the polysilicon industry, the Siemens process, and Spruce Pine quartz, for a well-researched narrative overview.
+
+- [GCL semiconductor-materials business: Xinhua electronic-grade polysilicon](https://www.gcl-power.com/en/goods/semiconductor.html). Reviewed September 2026.
+
+- [Hoshine silicon-metal product catalogue](https://www.hoshinesilicon.com/en/products/list_78.aspx-2.html?lcid=40). Reviewed September 2026.
 
 ---
 
@@ -1287,7 +1314,7 @@ A modern 300 mm Czochralski puller is a tower roughly 8 to 12 m tall including i
 
 **Automation.** The control system runs the entire recipe: heater power, pull speed, seed and crucible rotation, crucible lift, argon flow and pressure, magnet current, and the **automatic diameter control (ADC)** loop. Each loop pairs a sensor with an actuator. The CCD camera measures the width of the bright meniscus ring at the crystal's edge, and the ADC loop turns any diameter error into a pull-rate correction (fast, minutes) and a heater-power correction (slow, tens of minutes); how the ring width encodes the diameter is explained in step 7 of the recipe. The load cell in the cable reads the crystal's weight, and the rate of weight gain is a second, independent measure of diameter that takes over if SiO fog blinds the camera. A **pyrometer** (a non-contact thermometer that reads temperature from the brightness and colour of the glow) aimed at the melt surface or the heater closes the temperature loop with heater power. Pressure gauges and **mass-flow controllers** (valves that meter a gas by mass rather than volume) hold the argon; position encoders on the crucible shaft hold the lift. What an operator actually watches, on screens beside the puller, is the live image of the meniscus and the four habit lines, the diameter trace against its setpoint and the heater-power trace, because a jump in any of them is the first sign of a bridge collapse, a crucible crack or structure loss. A modern puller runs with minimal operator intervention from seed dip to cool-down; operators charge crucibles, load seeds, and intervene on structure loss.
 
-Semiconductor pullers come from a handful of builders: **PVA TePla** (Germany; its Crystal Growing Systems unit makes the EKZ series and is also the leading Float Zone furnace supplier), **Ferrotec** (Japan/China, grown large in solar), **Linton Crystal Technologies** (Rochester, New York), **S-TECH** (Korea), and a Chinese solar-driven industry led by **Zhejiang Jingsheng (JSG)**. The Rochester lineage matters: Hamco (1952) became **Kayex**, which introduced the first 300 mm puller (KX300) in 1987 and built much of the pre-2000 fleet; Linton has owned the Kayex IP exclusively since 2013. The big wafer makers also design or heavily customise their own pullers and hot zones and treat them as proprietary; a vendor puller is a starting point, not the finished tool.
+Semiconductor pullers come from a handful of builders: **PVA TePla** (Germany; its Crystal Growing Systems unit makes the EKZ series and is also the leading Float Zone furnace supplier), **Ferrotec** (Japan/China, grown large in solar), **Linton Crystal Technologies** (Rochester, New York), **S-TECH** (Korea), and **Zhejiang Jingsheng (JSG)** (China), whose catalogue includes IC-grade 8–12 inch silicon crystal-growth and processing equipment as well as solar equipment. The Rochester lineage matters: Hamco (1952) became **Kayex**, which introduced the first 300 mm puller (KX300) in 1987 and built much of the pre-2000 fleet; Linton has owned the Kayex IP exclusively since 2013. The big wafer makers also design or heavily customise their own pullers and hot zones and treat them as proprietary; a vendor puller is a starting point, not the finished tool.
 
 ## The CZ Recipe, Step by Step
 
@@ -1619,7 +1646,7 @@ By tonnage, most CZ silicon now goes to photovoltaics, and solar pullers have be
 | FZ maximum zone height (Heywang) | ~15 mm | A simplified capillary-stability estimate; not a proof of a universal diameter ceiling |
 | FZ maximum production diameter | 200 mm (as of 2025) | Commercial range described here; low-oxygen MCZ serves current 300 mm demand, while larger FZ is a development problem |
 | 450 mm status | G450C 2011 to ~2017, abandoned | Wafer area is no longer the cost lever; EUV and packaging are |
-| Top-5 wafer maker share (as of 2025) | ~85 to 90 % of revenue (Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron) | A five-company oligopoly supplies every fab |
+| Established wafer suppliers | Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron, alongside other suppliers | Revenue, wafer area shipped and 300 mm capacity are different measures |
 
 ## Key Players
 
@@ -1630,12 +1657,12 @@ By tonnage, most CZ silicon now goes to photovoltaics, and solar pullers have be
 | GlobalWafers | Taiwan | CZ, epi, FZ (via Topsil); ex-MEMC/SunEdison "Perfect Silicon"; new 300 mm fab in Sherman, Texas (first production 2025, ramping as of 2025) | #3 (~15 to 17 %) |
 | Siltronic | Germany | CZ 300 mm (Freiberg, Singapore), FZ leader (Burghausen) | #4 (~12 to 13 %) |
 | SK Siltron | South Korea | CZ 300 mm; silicon carbide (SiC) wafers (SK Siltron CSS, US); ownership in transition: SK Group named Doosan Group preferred bidder for the company in December 2025 and agreed a sale in early 2026, with closing not confirmed at the time of writing | #5 (~10 to 12 %) |
-| NSIG (Zing Semiconductor) / TCL Zhonghuan | China | Domestic 300 mm CZ wafer entrants | Growing niche |
+| NSIG (Zing Semiconductor) / TCL Zhonghuan | China | Silicon wafer suppliers, including 300 mm products | Product and customer qualification determine use |
 | Okmetic | Finland | Specialty CZ (MEMS, RF, high-resistivity) up to 200 mm | Niche |
 | PVA TePla (CGS) | Germany | Semiconductor CZ pullers; dominant FZ furnace maker (FZ-35/40) | Leader in FZ equipment |
 | Ferrotec | Japan / China | CZ pullers (solar and semiconductor), crucibles, graphite, wafers | Major |
 | Linton Crystal Technologies | USA | CZ pullers (Kayex lineage since 1952; KX300 first 300 mm puller, 1987) | Niche, US supplier |
-| Zhejiang Jingsheng (JSG) | China | Volume solar CZ pullers; entering semiconductor pullers | Leader in solar pullers |
+| Zhejiang Jingsheng (JSG) | China | Silicon crystal-growth and processing equipment for IC-grade 8–12 inch wafers, plus solar equipment | Equipment supplier; semiconductor and solar product lines differ |
 | S-TECH | South Korea | CZ pullers | Niche |
 | Shin-Etsu Quartz, Momentive Technologies, Heraeus Conamic, Japan Super Quartz, Coorstek | Japan / USA / Germany | Synthetic-lined fused-silica crucibles | Oligopoly |
 | Sibelco, The Quartz Corp (Spruce Pine, NC) | Belgium / Norway (US mines) | High-purity quartz sand for crucibles | Near-monopoly on top grades |
@@ -1672,6 +1699,10 @@ This stage consumes the electronic-grade polysilicon of Module 01 (Wacker, Hemlo
 - SUMCO, "Silicon wafer manufacturing process" and technical pages at sumcosi.com; Siltronic, "Float Zone" product and technology pages at siltronic.com.
 - The Register, "How TSMC killed 450mm wafers for fear of Intel, Samsung" (August 2022), and SemiWiki/TechInsights, "The Lost Opportunity for 450mm" (2022), on why the diameter transition stalled.
 - Linton Crystal Technologies, company history and timeline (lintoncrystal.com), for the Hamco/Kayex/Linton puller lineage.
+
+- [JSG semiconductor and photovoltaic equipment portfolio](https://www.jsjd.cc/index.html). Official product scope, reviewed September 2026.
+
+- [NSIG: Zing 300 mm silicon-wafer business](https://www.nsig.com/). Official product scope, reviewed September 2026.
 
 ---
 
@@ -2148,14 +2179,14 @@ The 2021–2022 shortage led fabs to build several months of wafer inventory, an
 
 ### Market shares
 
-The 300 mm market is an oligopoly of five firms, together ~85–90% of capacity, plus a growing Chinese tier. Approximate revenue shares (as of ~2024–2025; analyst estimates that vary by a few points between sources):
+Large established silicon-wafer suppliers include the five companies below, alongside other suppliers in China and elsewhere. A market-share figure needs a defined denominator: revenue, wafer area shipped and 300 mm capacity measure different things. The following list identifies supplier roles across several wafer types; it is not a single capacity ranking.
 
-- **Shin-Etsu Handotai (SEH)**, Japan, ~30%: the leader in leading-edge 300 mm prime and epi, and a Smart Cut SOI licensee.
-- **SUMCO**, Japan, ~23–25%: number two, originator of "perfect silicon", with Formosa SUMCO in Taiwan.
-- **GlobalWafers**, Taiwan, ~15–17%: a roll-up of SunEdison Semiconductor (ex-MEMC) and Topsil; opened a ~$3.5 billion first-phase Sherman, Texas fab in 2025 with support from the CHIPS Act (the 2022 US law subsidising domestic chip manufacturing; Module 20).
-- **Siltronic**, Germany, ~12%: ex-Wacker Siltronic; new Singapore 300 mm fab.
-- **SK Siltron**, Korea, ~10–12%: ex-LG Siltron; Samsung's and SK hynix's domestic supplier.
-- **Others** (~10%): Soitec (SOI); Okmetic (Finland, wafers for **MEMS**, micro-electro-mechanical systems, the tiny mechanical sensors such as accelerometers and microphones); Wafer Works (Taiwan, 200 mm); and Chinese entrants NSIG/Zing Semiconductor, Ferrotec, TCL Zhonghuan, ESWIN, and GRITEK, which by 2025 had over 1 million wafers per month of 300 mm **nameplate** capacity (announced capacity, not demonstrated output), mostly at mature-node quality for domestic fabs. They face fewer barriers than Chinese chipmakers because export controls do not restrict grinders, polishers, or epi reactors the way they restrict lithography and etch.
+- **Shin-Etsu Handotai (SEH)**, Japan: the leader in leading-edge 300 mm prime and epi, and a Smart Cut SOI licensee.
+- **SUMCO**, Japan: number two, originator of "perfect silicon", with Formosa SUMCO in Taiwan.
+- **GlobalWafers**, Taiwan: a roll-up of SunEdison Semiconductor (ex-MEMC) and Topsil; opened a ~$3.5 billion first-phase Sherman, Texas fab in 2025 with support from the CHIPS Act (the 2022 US law subsidising domestic chip manufacturing; Module 20).
+- **Siltronic**, Germany: ex-Wacker Siltronic; new Singapore 300 mm fab.
+- **SK Siltron**, Korea: ex-LG Siltron; Samsung's and SK hynix's domestic supplier.
+- **Other suppliers**: Soitec (SOI); Okmetic (Finland, wafers for **MEMS**, micro-electro-mechanical systems, the tiny mechanical sensors such as accelerometers and microphones); Wafer Works (Taiwan, 200 mm); and suppliers including NSIG/Zing Semiconductor, Ferrotec (Japan/China), TCL Zhonghuan, ESWIN and GRITEK. NSIG identifies Zing as a supplier with commercial 300 mm wafer sales. Announced **nameplate capacity**, the output a line is designed to deliver, should be distinguished from actual shipments and from qualification for a particular polished, epitaxial or device-process specification. Neither diameter nor supplier nationality establishes that qualification.
 
 On the equipment and consumables side, the names have shifted recently: the polishing-pad business long known as DuPont (ex-Rodel) has been part of Qnity since the November 2025 spin-off, and the double-side polisher line long known as Lapmaster Wolters / Peter Wolters now trades as Precision Surfacing Solutions, which also absorbed Meyer Burger's wire-saw line in 2019.
 
@@ -2172,7 +2203,7 @@ On the equipment and consumables side, the names have shifted recently: the poli
 - Flatness vocabulary: TTV, bow, warp, GBIR, SFQR (~20 nm on 26 × 8 mm sites for EUV), nanotopography, edge exclusion (1.5 mm), all measured by dual Fizeau interferometry.
 - Particles are counted by laser scattering (intensity ∝ d^6), which is why sub-0.1 nm roughness is a precondition for seeing 26 nm particles; COPs from the crystal show up as pits.
 - Epi wafers grow a fresh, void-free layer by step flow; annealed and "perfect silicon" wafers are the cheaper DRAM alternatives; Smart Cut SOI transfers a film by hydrogen implant, bonding and splitting.
-- Five firms hold most 300 mm supply (~85–90%), ~7–8 million 300 mm wafers ship per month, a polished prime wafer is ~$100–150 and epi ~$200+, silicon is ~1–2% of a processed leading-edge wafer's cost, and fabs consume 10–25% extra as test and reclaim wafers.
+- A range of qualified suppliers makes 300 mm wafers; ~7–8 million 300 mm wafers ship per month, a polished prime wafer is ~$100–150 and epi ~$200+, silicon is ~1–2% of a processed leading-edge wafer's cost, and fabs consume 10–25% extra as test and reclaim wafers.
 
 ## Key Numbers
 
@@ -2205,19 +2236,19 @@ On the equipment and consumables side, the names have shifted recently: the poli
 | 300 mm polished / epi price | ~$100–150 / ~$200+ | Silicon is only ~1–2% of a processed leading-edge wafer's cost |
 | Global wafer shipments 2025 | 12,973 MSI, ~$11.4 B revenue | Scale of the industry; recovery from the 2023–2024 correction |
 | 300 mm demand | ~7–8 M wafers/month (~20 M+/quarter) | Sets the number of saws, grinders and polishers the world runs |
-| Top-5 share of 300 mm capacity | ~85–90% | An oligopoly with little pricing power against its far larger customers |
+| Supplier concentration | Several large established firms and additional suppliers | Compare capacity and revenue shares only with matching product scope |
 
 ## Key Players
 
 | Company | Country | Role / what they supply | Approx. position |
 |---|---|---|---|
-| Shin-Etsu Handotai (SEH) | Japan | 300 mm prime, epi, annealed, SOI (Smart Cut licensee) | Leader (~30%) |
-| SUMCO | Japan | 300 mm prime, epi, "perfect silicon"; Formosa SUMCO (Taiwan) | #2 (~24%) |
-| GlobalWafers | Taiwan | 300/200 mm prime and epi; ex-MEMC/SunEdison; Texas fab | #3 (~16%) |
-| Siltronic | Germany | 300 mm prime and epi; Singapore FabNext | #4 (~12%) |
-| SK Siltron | South Korea | 300 mm prime/epi for Samsung, SK hynix; SiC | #5 (~11%) |
+| Shin-Etsu Handotai (SEH) | Japan | 300 mm prime, epi, annealed, SOI (Smart Cut licensee) | Large established supplier |
+| SUMCO | Japan | 300 mm prime, epi, "perfect silicon"; Formosa SUMCO (Taiwan) | Large established supplier |
+| GlobalWafers | Taiwan | 300/200 mm prime and epi; ex-MEMC/SunEdison; Texas fab | Large established supplier |
+| Siltronic | Germany | 300 mm prime and epi; Singapore FabNext | Large established supplier |
+| SK Siltron | South Korea | 300 mm prime/epi for Samsung, SK hynix; SiC | Large established supplier |
 | Soitec | France | SOI wafers via Smart Cut (RF-SOI, FD-SOI, Photonics-SOI) | SOI leader (majority share) |
-| NSIG / Zing, Ferrotec, TCL Zhonghuan, ESWIN | China | 300 mm polished/epi for Chinese fabs | Emerging, mostly mature nodes |
+| NSIG / Zing, Ferrotec, TCL Zhonghuan, ESWIN | China; Ferrotec has Japan/China operations | Silicon wafer businesses, including 300 mm products | Product specifications and customer qualification vary |
 | Okmetic | Finland | 150/200 mm specialty and MEMS wafers | Niche |
 | RS Technologies | Japan | Wafer reclaim | Reclaim leader (~30%+) |
 | Pure Wafer, Hamada, Kinik, Phoenix Silicon | US/Japan/Taiwan | Wafer reclaim | Reclaim #2 tier |
@@ -2266,6 +2297,8 @@ Module 02 delivered a dislocation-free single-crystal ingot of known dopant type
 - KLA product pages for Surfscan SP7 and WaferSight flatness systems (kla.com).
 - Asianometry, "The Amazing, Humble Silicon Wafer" (YouTube, 2022) and "The 300mm Silicon Wafer Transition" (YouTube), good visual overviews of the wafering sequence and the diameter transition.
 - Stanley Wolf and Richard Tauber, Silicon Processing for the VLSI Era, Vol. 1: Process Technology, 2nd ed., Lattice Press, 2000, chapters on silicon substrates, epitaxy, and wafer cleaning.
+
+- [NSIG wafer businesses, including Zing 300 mm wafers](https://www.nsig.com/). Official product scope, reviewed September 2026.
 
 ---
 
@@ -2465,7 +2498,7 @@ This section is a short side note: germanium's production role in logic is as th
 
 Ge wafers themselves are easy to grow, which is the irony of the material: Ge melts cleanly at 938 °C, so Czochralski pulling works, in graphite or quartz crucibles under hydrogen or nitrogen, and dislocation-free 100–150 mm Ge crystals are routine. The refining chain starts from the germanium that concentrates in the dusts and residues of zinc smelters and some coal-fired power stations: the concentrate is chlorinated to volatile GeCl4, which is distilled to leave almost everything else behind, hydrolysed to GeO2, reduced in hydrogen to metal, and finally **zone-refined** (a short molten zone is swept along the bar many times and drags the impurities with it, because most impurities prefer the liquid) to 9N and beyond; the same route, pushed further, gives the ~10^10 impurity atoms per cm³ (about one atom in 4 × 10^12) of detector-grade Ge used in gamma-ray spectrometers, the purest bulk semiconductor made. Umicore (Belgium, with plants in the US) and AXT (US/China) are the merchant wafer suppliers, alongside Chinese refiners. What goes wrong is the oxide: a Ge surface left in air or rinsed in water loses its GeO2, so any Ge channel must be **passivated** another way, either by growing a few atomic layers of silicon on it by epitaxy and oxidising that (a **Si cap**), or by forming a thin GeO2 with ozone or plasma and immediately sealing it under ALD Al2O3 before it can dissolve or desorb; the density of charge traps at that interface is what decides whether a Ge pMOS transistor beats a strained-SiGe one.
 
-Ge is a byproduct of zinc refining and coal fly ash; China produces roughly 60–70% of refined Ge (estimates vary), with Umicore (Belgium) the main non-Chinese refiner and recycler. China put Ga and Ge under export licensing in August 2023 and banned exports to the US in December 2024; the Ge spot price roughly doubled through 2024. The same controls cover gallium, of which China refines ~90–98% by most estimates (from alumina production), which is the raw input of GaN and GaAs.
+Ge is a byproduct of zinc refining and coal fly ash; China produces roughly 60–70% of refined Ge (estimates vary), with suppliers including Yunnan Germanium (China), whose catalogue lists zone-refined germanium ingots, and Umicore (Belgium), active in refining and recycling. China put Ga and Ge under export licensing in August 2023 and banned exports to the US in December 2024; the Ge spot price roughly doubled through 2024. The same controls cover gallium, of which China refines ~90–98% by most estimates (from alumina production), which is the raw input of GaN and GaAs.
 
 ## The periodic table at 2 nm and below
 
@@ -2601,7 +2634,7 @@ The core chemistries are decades old but the purity has tightened by four orders
 
 The specification is metals. SEMI's C-series standards define grades; the tightest ("Grade 5"/"UHP") call for each of ~30 metals below 10 ppt, particles below a few per mL at 0.1 µm or smaller, and anions (negatively charged ions such as chloride, sulfate, nitrate) at ppb. A few thousand sodium ions per square micron in the gate oxide (~10^11 per cm²) is a measurable shift in a transistor's **threshold voltage** (the gate voltage at which it turns on), and an iron precipitate under the gate is a leakage site. Purification is by distillation (sulfuric, HF), **sub-boiling distillation** (evaporating the liquid below its boiling point so no droplets carry impurities over), **ion exchange** (resin beads that swap a captured metal ion for a harmless hydrogen ion), and, crucially, filtration and packaging: the bottle, drum, **PFA** piping (a Teflon-family plastic that leaches nothing) and every valve must not leach. Chemicals arrive in ISO tanks or 200 L drums, are transferred to a **bulk chemical distribution system (BCDS)**, the fab's chemical plumbing: bulk tank, day tanks, and filtered PFA loops to every tool, filtered again at point of use, and blended on-tool (SC-1 and DHF are mixed at the process chamber from concentrates and ultrapure water).
 
-Who makes the tools: the traditional **batch wet bench** dips 25–50 wafers at a time through a row of tanks, while the **single-wafer spin cleaner** sprays each chemistry onto one spinning wafer in turn, so no wafer ever sees a bath another wafer has dirtied; single-wafer tools from SCREEN (Japan, the leader), Tokyo Electron, Lam Research and SEMES (Samsung's tool subsidiary) have taken over the critical cleans, with batch benches from SCREEN and others kept for high-volume, less critical steps.
+Who makes the tools: the traditional **batch wet bench** dips 25–50 wafers at a time through a row of tanks, while the **single-wafer spin cleaner** sprays each chemistry onto one spinning wafer in turn, so no wafer ever sees a bath another wafer has dirtied; single-wafer tools from SCREEN (Japan, the leader), Tokyo Electron, Lam Research and SEMES (Samsung's tool subsidiary), and ACM Research serve critical cleans, with batch benches from SCREEN and others kept for high-volume, less critical steps.
 
 The most famous chokepoint is ultra-high-purity HF: **Stella Chemifa** and **Morita Chemical Industries**, both in Osaka, are the two suppliers of 12N ("99.9999999999%") HF that Japan restricted to Korea in 2019, and between them supplied the large majority of the world's leading-edge etching-grade HF. HF's raw material is fluorspar, ~60% of which is mined in China, so the chain is China → Japan → the world.
 
@@ -2614,7 +2647,7 @@ The most famous chokepoint is ultra-high-purity HF: **Stella Chemifa** and **Mor
 | Honeywell, Avantor/J.T. Baker, Entegris (ex-KMG, acquired 2018) | US | Acids, solvents, formulated cleans, delivery |
 | Soulbrain, Dongjin Semichem | Korea | HF, etchants, developers for Samsung and SK hynix |
 | Jiangyin Jianghua Micro-Electronic Materials | China | Wet chemicals for Chinese fabs |
-| SCREEN, Tokyo Electron, Lam Research, SEMES | Japan, Japan, US, Korea | Wet-clean tools (single-wafer and batch) |
+| SCREEN, Tokyo Electron, Lam Research, SEMES, ACM Research | Japan, Japan, US, Korea; ACM has a US parent and Shanghai operations | Wet-clean tools, with single-wafer and batch portfolios varying by supplier |
 
 > **What can go wrong:** **Watermarks**: if a droplet is allowed to evaporate on the wafer it leaves a ring of silica and whatever else was dissolved, which is why Marangoni and IPA-vapor drying exist. **Particle re-deposition**: a batch bath collects the particles from every wafer that has passed through it and gives some of them back to the next one, which is why critical cleans moved to single-wafer spin tools. **Bath ageing**: peroxide decomposes and etch rates drift, so baths are dosed or replaced on a schedule and their concentration is monitored in-line. And HF is dangerous: it penetrates skin and binds calcium in the body, so every HF station carries calcium gluconate gel and every fab trains for HF exposure before anything else.
 
@@ -2681,7 +2714,7 @@ The **pad** is a cast, sliced, and grooved polyurethane sheet of controlled poro
 | Fuso Chemical | Japan | Ultra-high-purity colloidal silica raw material used by most slurry makers |
 | DuPont/Qnity | US | Pads (IC1000 family, majority of the pad market for two decades), ceria and Cu slurries |
 | Resonac, AGC, Merck | Japan, Japan, Germany | Ceria STI slurries, specialty slurries |
-| Anji Microelectronics, KC Tech | China, Korea | Slurries for domestic fabs |
+| Anji Microelectronics, KC Tech | China, Korea | CMP slurries; Anji also supplies formulated wet chemicals |
 | 3M, FNS Tech, SKC, Fujibo | US, Korea, Korea, Japan | Pads, conditioners |
 | Applied Materials, Ebara | US, Japan | CMP tools |
 
@@ -2783,7 +2816,7 @@ The written resist (a chemically amplified e-beam resist, ~50–100 nm) is devel
 
 Stepping back over the categories: Japanese firms hold ~90% of photoresists, ~100% of EUV mask blanks, ~55% of silicon wafers (Shin-Etsu and SUMCO; industry estimate), the majority of high-purity HF, colloidal silica for slurries, quartz, sputter targets, DRAM high-k precursors, **dicing tape** (the sticky film a wafer sits on while it is sawn into dies) and **die-attach film** (the glue layer under a die in its package; Lintec, Nitto Denko, Resonac), and package substrates' **build-up film** (the insulating layers of the chip package substrate; Ajinomoto, Module 16). Estimates put Japan's overall share of wafer-fab materials at ~half by value, a share that has not fallen even as its share of chip production collapsed from ~50% in 1988 to under 10%.
 
-The reasons are structural. Materials do not scale like chips; they scale like craft. The value in a resist or a blank is a decades-long accumulation of small process improvements against purity and defect specifications that tighten every node, in an industry where qualification takes 6–18 months and the customer will not requalify unless forced. That favors incumbents with patient capital, a supply base that grew up next to the dominant chipmakers of the 1980s (NEC, Toshiba, Hitachi, Fujitsu) and kept improving after they faded, and chemical majors sitting atop deep domestic fluorine, silicone and specialty-monomer chains. Korea's 2019 localization drive and China's current one show how slow replacement is: China's resist makers reached KrF in five years and, as of 2024–2025, were still years from ArF immersion, let alone EUV.
+The reasons are structural. Materials do not scale like chips; they scale like craft. The value in a resist or a blank is a decades-long accumulation of small process improvements against purity and defect specifications that tighten every node, in an industry where qualification takes 6–18 months and the customer will not requalify unless forced. That favors incumbents with patient capital, a supply base that grew up next to the dominant chipmakers of the 1980s (NEC, Toshiba, Hitachi, Fujitsu) and kept improving after they faded, and chemical majors sitting atop deep domestic fluorine, silicone and specialty-monomer chains. A supplier may therefore qualify a resist for one wavelength, layer and customer while still developing another formulation. KrF, ArF immersion and EUV resists require different chemistry and defect control; progress in one category does not establish qualification in the others. This product-level distinction applies to established suppliers and new entrants alike.
 
 The implication for the supply chain is that the fab's risk register looks nothing like its cost sheet. Consumables are maybe 10–15% of the cost of a leading-edge wafer (an industry estimate), but the Tohoku earthquake of March 2011 (which took out Shin-Etsu's Shirakawa wafer plant and MEMC's Utsunomiya plant, ~25% of world wafer supply, for weeks, and Mitsubishi Gas Chemical's **BT resin** plant, the laminate in memory package substrates), the 2019 Japan–Korea spat, the 2022 neon shock and the 2023 Ga/Ge controls all demonstrated that a fab is only as robust as its least substitutable bottle.
 
@@ -2853,7 +2886,8 @@ The implication for the supply chain is that the fab's risk register looks nothi
 | AXT / Freiberger | US-China / Germany | GaAs and InP substrates (VGF, LEC) | #2/#3 in III-V substrates |
 | Lumentum / Coherent / Broadcom | US | InP EML and DFB lasers for 800G/1.6T transceivers | Leaders |
 | WIN Semiconductors | Taiwan | GaAs foundry (HBT/pHEMT for RF front ends) | #1 GaAs foundry |
-| Umicore | Belgium | Germanium refining and recycling, Ge substrates | Leading non-Chinese Ge supplier |
+| Umicore | Belgium | Germanium refining and recycling, Ge substrates | Refiner and substrate supplier |
+| Yunnan Germanium | China | Zone-refined germanium ingots | Refined material supplier; ingots and finished wafers are different products |
 | JSR / TOK / Shin-Etsu / Fujifilm / Sumitomo Chemical | Japan | Photoresists (i-line to EUV), ancillaries; JSR owns Inpria (metal-oxide EUV resist) | ~90% combined; TOK/JSR/Shin-Etsu lead EUV |
 | DuPont (Qnity) / Merck KGaA | US / Germany | Resists, BARC, CMP pads and slurries, precursors, wet chemicals | Leading non-Japanese materials houses |
 | Lam Research | US | Dry-deposited, dry-developed EUV resist; wet-clean and etch tools | Emerging in resist |
@@ -2906,6 +2940,14 @@ Module 03 ended with a polished, epi-ready 300 mm silicon wafer; this module add
 10. Chris Miller, *Chip War* (Scribner, 2022), on the 2019 Japan–Korea materials dispute and Japan's materials position.
 
 Additional sources for the definitions above: [Toshiba on area-specific resistance](https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/company/technical-review/pdf/ISPSD2021_4_en.pdf), [Littelfuse silicon MOSFET datasheet](https://www.littelfuse.com/assetdocs/littelfuse-discrete-mosfets-ixt-08n120p-datasheet?assetguid=301fbdbd-7c2d-4205-a7d8-3f7d7ab7a8fc), [Infineon on the SiC MOSFET/IGBT tradeoff](https://www.infineon.com/dgdl/Infineon-SiC_MOSFETs_for_Bridge_Topologies_Power_Electronics_Europe-Article-v01_00-EN.pdf?fileId=5546d4626eab8fbf016ef47919fc788e), [Intel on silicon Raman lasing](https://www.intel.com/pressroom/archive/releases/2005/20050217tech.htm), [Coherent on GaAs and InP optical devices](https://www.coherent.com/datacenter-communications), [Coherent on InP sources for silicon photonics](https://www.coherent.com/news/press-releases/high-efficiency-lasers-for-silicon-photonics-transceivers), and [Millipore on pure-water ions and resistivity](https://www.merckmillipore.com/GW/en/technical-documents/technical-article/water-purification/water-quality-monitoring).
+
+- [Yunnan Germanium: zone-refined germanium ingots](https://www.sino-ge.com/view/ynzyPC/7/501/view/1226.html). Official product scope, reviewed September 2026.
+
+- [Anji CMP and formulated wet chemicals](https://www.anjimicro.com/en/jiejuefangan.html). Official product scope, reviewed September 2026.
+
+- [ACM Research wet-processing portfolio](https://www.acmr.com/tools-and-processes/wet-processing/). Official product scope, reviewed September 2026.
+
+- [ACM Research corporate structure and operations](https://acmresearch.gcs-web.com/corporate-profile/). Official product scope, reviewed September 2026.
 
 ---
 
@@ -3173,10 +3215,10 @@ A 100,000 wspm leading-edge fab costs roughly $20–30 billion at N3, and N2/A16
 | DUV dry ArF / KrF / i-line | ~50–80 | $10–40 M | ASML, Nikon, Canon |
 | Coater/developer tracks | ~100+ | $10–20 M | TEL (~90% share), SCREEN |
 | Plasma etch chambers | many hundreds | $2–6 M per chamber | Lam, TEL, Applied |
-| CVD / ALD / PVD chambers | many hundreds | $1–6 M per chamber | Applied, Lam, TEL, ASM |
+| CVD / ALD / PVD chambers | many hundreds | $1–6 M per chamber | Applied, Lam, TEL, ASM, NAURA, Piotech (different deposition portfolios) |
 | Ion implanters | ~30–50 | $5–10 M | Applied (through its 2011 Varian purchase), Axcelis |
 | Furnaces / RTP / laser anneal | ~50–100 | $3–8 M | TEL, Kokusai, Applied, Veeco |
-| Wet / single-wafer clean | ~100+ | $3–8 M | SCREEN, TEL, Lam |
+| Wet / single-wafer clean | ~100+ | $3–8 M | SCREEN, TEL, Lam, ACM Research |
 | CMP | ~50–80 | $3–6 M | Applied, Ebara |
 | Electroplating | ~20–40 | $3–6 M | Lam, Applied |
 | Metrology / inspection | ~150–300 | $1–30 M | KLA (~50%+), Applied, Hitachi, ASML (its HMI electron-beam inspection line), Nova, Onto |
@@ -3484,6 +3526,9 @@ N3 wafer prices in 2024–2025 were roughly $18,000–20,000 and N2 is reported 
 | ASML | Netherlands | EUV and DUV scanners | Monopoly in EUV |
 | KLA | USA | Inspection and metrology (Surfscan SP7, 29xx/39xx series) | Leader (~50%+) |
 | SCREEN | Japan | Single-wafer and batch wet cleaning tools | Leader in clean |
+| SMIC | China | Contract wafer fabrication across multiple process platforms | Foundry operator |
+| NAURA / AMEC / Piotech | China | Process equipment: deposition and etch, with portfolios differing by company | Equipment suppliers |
+| ACM Research | US parent; Shanghai operations | Wet-processing and cleaning equipment | Equipment supplier |
 | Siemens (Opcenter), IBM (SiView), PEER Group, Cimetrix | Germany / USA / Canada / USA | MES and tool-connectivity software | Commercial alternatives to in-house MES |
 | Exyte (M+W), Jacobs, CTCI, United Integrated Services | Germany / USA / Taiwan / Taiwan | Fab design and construction, cleanroom and hook-up contractors | Leaders in fab construction |
 | Camfil, AAF, Nippon Muki | Sweden / USA / Japan | ULPA/HEPA filters, FFUs, chemical filters | Leaders in cleanroom filtration |
@@ -3521,6 +3566,18 @@ Module 04 delivered the fab's inputs: polished and epitaxial 300 mm wafers from 
 - Miller, C., *Chip War* (Scribner, 2022). Context on TSMC's rise, Fab 21, and the geopolitics of fab location.
 - Rest of World, "TSMC's debacle in the American desert" (2024), and subsequent New York Times and Reuters reporting on Fab 21's hiring, training, and ramp; Reuters coverage of the 2021 Taiwan drought and TSMC's water trucking, and of the April 2024 Hualien earthquake's effect on fabs.
 - Asianometry (YouTube) episodes on TSMC's fab construction, AMHS, and the Arizona fab, for well-sourced narrative overviews.
+
+- [NAURA process-equipment portfolio](https://www.naura.com/product/). Official product scope, reviewed September 2026.
+
+- [AMEC etch product portfolio, 2024 ESG report](https://www.amec-inc.com/uploads/files/20250611/17496080859885.pdf). Official product scope, reviewed September 2026.
+
+- [Piotech deposition portfolio](https://en.piotech.cn/). Official product scope, reviewed September 2026.
+
+- [ACM Research wet processing](https://www.acmr.com/tools-and-processes/wet-processing/). Official product scope, reviewed September 2026.
+
+- [ACM Research corporate profile](https://acmresearch.gcs-web.com/corporate-profile/). Official product scope, reviewed September 2026.
+
+- [SMIC technology portfolio](https://www.smics.com/en/site/productdetail/2). Official product scope, reviewed September 2026.
 
 ---
 
@@ -3786,7 +3843,7 @@ CVD is a family, sorted by temperature and by job. The hot batch films (polysili
 
 Once the first copper or aluminum layer is on the wafer, nothing may exceed ~400 °C: copper diffuses, aluminum pushes up **hillocks** (bumps it raises to relieve its own stress) and the low-k films degrade. This part of the flow is the **back end of line (BEOL)**, the wiring levels built above the transistors (Module 12). **Plasma-enhanced CVD** supplies the activation energy electrically instead of thermally: a **capacitively coupled plasma (CCP)**, struck between two parallel plates (the showerhead and the pedestal) driven at 13.56 MHz (a frequency reserved internationally for industrial use, so equipment can radiate at it without interfering with anything), at 100–2,000 W and 1–10 torr, creates electrons at 2–5 eV that dissociate the precursors into radicals, which react on a wafer at only 300–400 °C. The films are amorphous, hydrogen-rich (10–30 at.% H, as Si–H and N–H), less dense than their LPCVD equivalents, and non-conformal (step coverage 50–70%), but they are fast (100s of nm/min) and cool.
 
-Applied Materials' Producer platform (twin-chamber modules, three per tool, so six wafers in parallel) and Lam's Vector (four-station sequential-deposition chambers) dominate PECVD; TEL and, in China, Piotech are the challengers. The films:
+Applied Materials' Producer platform (twin-chamber modules, three per tool, so six wafers in parallel) and Lam's Vector (four-station sequential-deposition chambers) dominate PECVD; other PECVD suppliers include TEL and Piotech, whose catalogue also includes ALD and gap-fill systems. The films:
 
 - **SiO2** from SiH4 + N2O (or TEOS + O2) for **interlayer dielectrics** (the insulator between one wiring level and the next), hard masks, and **passivation** (the final protective skin over the finished chip).
 - **SiNx:H** (the x says the nitrogen-to-silicon ratio is not fixed at the 4:3 of Si3N4 but set by the recipe, and the :H that the film carries bonded hydrogen) from SiH4 + NH3 + N2 for **etch stops** (a thin film of a different material that an etch cannot penetrate, so the etch ends on it), passivation, and hard masks. Adding a low-frequency (300–400 kHz) RF component drives ions into the film and switches the stress from tensile (~+500 MPa) to compressive (~−2 GPa); in the "dual stress liner" era (90–32 nm) this was used to strain NMOS and PMOS channels separately (the electron-carrying and hole-carrying transistors of Before you start: electrons speed up in a stretched channel, holes in a squeezed one, so a tensile nitride was laid over the NMOS and a compressive one over the PMOS).
@@ -3941,7 +3998,7 @@ At the tightest pitches (~20–24 nm at 3 nm/2 nm) the total barrier plus liner 
 > **Worked example: what the liner costs in a 12 nm trench.**
 > Take an M1 trench 12 nm wide and 24 nm deep (aspect ratio 2) and give barrier, liner and seed together the ~4–5 nm budget above: ~2.25 nm on each sidewall and on the bottom. Copper then occupies (12 − 4.5) × (24 − 2.25) ≈ 7.5 × 21.75 ≈ 163 nm² of the trench's 288 nm² cross-section, 57%. The liner carries almost no current (TaN is ~200 µΩ·cm or more (~) against copper's 1.7), so the wire conducts like a 7.5 nm-wide copper line, and by the flight-length argument of 4.5 copper that narrow has a resistivity several times bulk. Now the coverage side: to leave even 1 nm of continuous seed on the lower sidewall with a sidewall step coverage of ~25% (~, an ionized-PVD figure) needs ~4 nm on the field, and the top corners, growing at ~1.5× the field rate, would carry 6 nm each and close half the 12 nm opening before the lower sidewall is coated. That arithmetic is why the M1 barrier is ALD, the liner is CVD or ALD cobalt or ruthenium, the copper seed there is only a couple of nanometres of PVD that reflows along the liner, and PVD copper seed in the 10–20 nm range is reserved for the wider upper levels.
 
-Elsewhere PVD makes the Ti/TiN contact liner, the aluminum bond pads and top-metal redistribution layers, NiPt for **silicides** (the metal-silicon contact compound of 4.5), and the phase-change and magnetic-tunnel-junction stacks of the emerging memories (PCRAM and MRAM). Applied had shipped more than 4,500 Endura systems by 2010 and many more since, and is estimated to hold on the order of 80% or more of the semiconductor PVD market; Ulvac, Evatec, and, in China, Naura are the other names.
+Elsewhere PVD makes the Ti/TiN contact liner, the aluminum bond pads and top-metal redistribution layers, NiPt for **silicides** (the metal-silicon contact compound of 4.5), and the phase-change and magnetic-tunnel-junction stacks of the emerging memories (PCRAM and MRAM). Applied had shipped more than 4,500 Endura systems by 2010 and many more since, and is estimated to hold on the order of 80% or more of the semiconductor PVD market; other PVD suppliers include Ulvac, Evatec and NAURA.
 
 > **What can go wrong:** *Shield flaking*: the chamber shields that catch stray metal build up thick, stressed deposits that eventually flake onto the wafer; shields are swapped on a wafer-count schedule and the chamber is qualified with particle monitor wafers. *Arcing*: an insulating inclusion or nodule on the target draws a spark that splatters metal droplets onto the wafer; modern power supplies detect arcs in microseconds and cut the power. *A discontinuous seed*: where the seed thins to nothing on a lower sidewall the plating bath cannot grow copper, leaving a void that opens the wire now or after a few thousand hours; caught by plating-void inspection and by continuity at test. *Target end-of-life*: as the racetrack deepens the rate drifts and the thickness map changes; sheet-resistance maps of monitor wafers track the drift and set the replacement interval.
 
@@ -4005,7 +4062,7 @@ Deposition is the largest segment of **wafer fab equipment (WFE)**, the industry
 
 | Segment | Leader | Approx. share | Note (as of 2024–2025) |
 |---|---|---|---|
-| PVD | Applied Materials (Endura) | ~80% or more | Near-monopoly; Ulvac, Evatec, Naura are the rest |
+| PVD | Applied Materials (Endura) | ~80% or more | Other PVD suppliers include Ulvac, Evatec and NAURA |
 | Single-wafer ALD | ASM International (Pulsar, EmerALD, Eagle) | > 55% | ALD is over half of ASM's equipment revenue; Applied and Lam investing to challenge |
 | Batch ALD/CVD | Kokusai Electric (TSURUGI-C²) | ~70% | Largely memory fabs; TEL is #2 |
 | Tungsten and metal fill | Lam Research (Altus, Altus Halo) | majority | Applied second |
@@ -4014,7 +4071,7 @@ Deposition is the largest segment of **wafer fab equipment (WFE)**, the industry
 | Vertical furnaces | Tokyo Electron (TELINDY PLUS) | leader | Kokusai second, ASM third |
 | RTP | Applied (Vantage) | leader | Mattson (Beijing E-Town), Screen niche |
 
-**Applied Materials** is the overall leader, with PVD, the leading CVD franchise, roughly half of epi, the RTP franchise, and growing ALD and W/Mo positions. **Lam Research** leads tungsten and metal fill, is co-leader in dielectric PECVD/ALD and gap fill, and is heavily exposed to 3D NAND. **ASM International** leads single-wafer ALD and is #2 in epi, making it the purest beneficiary of the gate-all-around transition. **Tokyo Electron** leads vertical furnaces and shares batch ALD with **Kokusai Electric**. ALD as a whole (single-wafer plus batch) is now an equipment market at least as large as PVD. Jusung and Wonik IPS (Korea), Piotech and Naura (China), and Veeco/Aixtron (compound-semiconductor MOCVD) fill the remaining niches.
+**Applied Materials** is the overall leader, with PVD, the leading CVD franchise, roughly half of epi, the RTP franchise, and growing ALD and W/Mo positions. **Lam Research** leads tungsten and metal fill, is co-leader in dielectric PECVD/ALD and gap fill, and is heavily exposed to 3D NAND. **ASM International** leads single-wafer ALD and is #2 in epi, making it the purest beneficiary of the gate-all-around transition. **Tokyo Electron** leads vertical furnaces and shares batch ALD with **Kokusai Electric**. ALD as a whole (single-wafer plus batch) is now an equipment market at least as large as PVD. Other suppliers serve distinct deposition applications: Jusung and Wonik IPS (Korea); Piotech (China), with PECVD, ALD and gap-fill systems; NAURA (China), with PVD, CVD and furnace products; and Veeco/Aixtron in compound-semiconductor MOCVD. A broad deposition label covers many film chemistries and reactor designs, so a supplier list does not imply that the tools are interchangeable.
 
 ## Summary
 
@@ -4080,7 +4137,7 @@ Deposition is the largest segment of **wafer fab equipment (WFE)**, the industry
 | Tokyo Electron | Japan | TELINDY vertical furnaces, batch ALD, NT333 spatial ALD, Triase+ metal CVD/ALD, Trias SPA plasma oxidation | Leader in furnaces; #2 batch ALD |
 | Kokusai Electric | Japan | AdvancedAce-300 furnaces, TSURUGI-C² batch ALD | Leader batch ALD (~70%) |
 | Jusung Engineering / Wonik IPS | South Korea | ALD/CVD for Samsung, SK hynix | Niche, memory-focused |
-| Naura / Piotech | China | PVD, ALD / PECVD for domestic fabs | Regional challengers |
+| NAURA / Piotech | China | NAURA: PVD, CVD and furnaces; Piotech: PECVD, ALD and gap fill | Distinct deposition portfolios |
 | Mattson (Beijing E-Town) / Screen | China / Japan | RTP, laser anneal | Niche |
 | Aixtron / Veeco | Germany / US | MOCVD for GaN, GaAs, SiC epi | Leaders in compound-semiconductor epi |
 | Merck (EMD), Entegris, Air Liquide, Adeka, Soulbrain, DNF, UP Chemical | DE / US / FR / JP / KR | ALD and CVD precursors (TMA, TEMAH, HfCl4, DCS, WF6, TSA, Mo precursors) | Precursor supply base |
@@ -4114,6 +4171,10 @@ Module 03 delivered a polished (and possibly epitaxial) 300 mm wafer, and Module
 8. Applied Materials product pages for Endura PVD, Producer Eterna FCVD, Centura Prime Epi, and Vantage RTP (appliedmaterials.com), and ASM International's technology pages for Pulsar ALD and Intrepid ES epitaxy (asm.com).
 9. SemiAnalysis, "Going Vertical: Gate All Around, 3D DRAM, 3D NAND, Kokusai Electric IPO" (2023), on batch ALD and the furnace market.
 10. A. J. M. Mackus, M. J. M. Merkx, and W. M. M. Kessels, "From the Bottom-Up: Toward Area-Selective Atomic Layer Deposition with High Selectivity," *Chemistry of Materials* 31, 2–12 (2019).
+
+- [NAURA product catalogue](https://www.naura.com/product/). Official product scope, reviewed September 2026.
+
+- [Piotech deposition product catalogue](https://en.piotech.cn/). Official product scope, reviewed September 2026.
 
 ---
 
@@ -4546,9 +4607,9 @@ Exact layer assignments are foundry-confidential; the table reflects public pres
 
 ## The Tool Market and Geography
 
-**ASML** (Veldhoven, Netherlands) holds ~90% of the lithography market by revenue, 100% of EUV, and ~85–90% of ArF immersion (trade-press estimates; ASML does not report share). Its 2025 revenue was €32.7B, of which €12.0B was DUV systems (279 systems, 47% of them immersion), €11.6B EUV systems (48 systems), and €8.2B installed-base service and upgrades (ASML 2025 Annual Report). A notable feature of ASML's DUV business is that a very large share of unit shipments go to China: China was 29% of ASML's sales in 2023, 36% in 2024 (peaking at 49% in individual quarters), and 33% in 2025 (ASML annual reports), almost entirely DUV (NXT:1980i-class and older immersion plus KrF/i-line tools), because Chinese fabs (SMIC, Hua Hong, CXMT, YMTC) are barred from EUV and buy DUV instead, and because the Dutch export rules (September 2023, extended September 2024 to the NXT:1970i and NXT:1980i) require licenses only for the more advanced immersion models (NXT:1970i and above, with the NXT:2000i and above effectively unavailable to China) while the rest remain freely shippable. As of the latest public reporting (2025), SMIC's 7 nm-class and 5 nm-class processes, used for Huawei's Kirin and Ascend chips, are pure DUV multi-patterning (SAQP) exactly as described above, with correspondingly reported low yields and high cost.
+**ASML** (Veldhoven, Netherlands) holds ~90% of the lithography market by revenue, 100% of EUV, and ~85–90% of ArF immersion (trade-press estimates; ASML does not report share). Its 2025 revenue was €32.7B, of which €12.0B was DUV systems (279 systems, 47% of them immersion), €11.6B EUV systems (48 systems), and €8.2B installed-base service and upgrades (ASML 2025 Annual Report). A notable feature of ASML's DUV business is that a very large share of unit shipments go to China: China was 29% of ASML's sales in 2023, 36% in 2024 (peaking at 49% in individual quarters), and 33% in 2025 (ASML annual reports), principally DUV. Export licences depend on the equipment model, customer, destination and applicable rules; ASML’s 2024 notice documents additional Dutch licensing requirements for certain immersion systems. A rule affecting one tool family does not mean every other tool is freely shippable. TechInsights identified SMIC’s 7 nm-class process in Huawei’s commercial Kirin 9000S. DUV multi-patterning can produce fine features, as explained above, but a teardown alone does not establish factory-wide yield, cost or capacity.
 
-**Nikon** (Japan) is ~5–8% of the market (trade-press estimate), with ArF immersion (NSR-S635E, 2018, and NSR-S636E, 2024; NA 1.35, ≥280 wph) sold mostly to Intel and to memory makers, and a larger KrF/i-line business. **Canon** (Japan) is ~5% by revenue (trade-press estimate) but ships many i-line and KrF tools (FPA-6300 series), and is pursuing **nanoimprint lithography (NIL)**: a stamp pressed into liquid resist has no diffraction limit, because no light forms the image; its limits are defects and the life of the template. The FPA-1200NZ2C, announced in October 2023 and first delivered in September 2024 to the Texas Institute for Electronics, presses a quartz template with ~14 nm patterns (equivalent to the "5 nm node" in Canon's marketing) into a liquid resist, which is UV-cured, transferring the pattern without any projection optics. Its throughput, defectivity and template lifetime have kept it out of leading-edge logic; the realistic targets are NAND and specialty devices. Chinese domestic lithography (SMEE, Shanghai Micro Electronics Equipment, with a 90 nm-class ArF tool and claims of 28 nm immersion, per 2025 reporting) is many years behind ASML. Sub-suppliers concentrate the risk further: Zeiss SMT (lenses, ~100% for ASML), Cymer and Gigaphoton (lasers, a duopoly), and TEL/SCREEN (tracks).
+**Nikon** (Japan) is ~5–8% of the market (trade-press estimate), with ArF immersion (NSR-S635E, 2018, and NSR-S636E, 2024; NA 1.35, ≥280 wph) sold mostly to Intel and to memory makers, and a larger KrF/i-line business. **Canon** (Japan) is ~5% by revenue (trade-press estimate) but ships many i-line and KrF tools (FPA-6300 series), and is pursuing **nanoimprint lithography (NIL)**: a stamp pressed into liquid resist has no diffraction limit, because no light forms the image; its limits are defects and the life of the template. The FPA-1200NZ2C, announced in October 2023 and first delivered in September 2024 to the Texas Institute for Electronics, presses a quartz template with ~14 nm patterns (equivalent to the "5 nm node" in Canon's marketing) into a liquid resist, which is UV-cured, transferring the pattern without any projection optics. Its throughput, defectivity and template lifetime have kept it out of leading-edge logic; the realistic targets are NAND and specialty devices. **SMEE** (Shanghai Micro Electronics Equipment, China) lists 90 nm-class step-and-scan projection equipment for IC fabrication in its public catalogue. The relevant comparison is a specified tool’s resolution, overlay, throughput and customer qualification; a national label or an announced development target does not establish those results. Sub-suppliers concentrate the risk further: Zeiss SMT (lenses, ~100% for ASML), Cymer and Gigaphoton (lasers, a duopoly), and TEL/SCREEN (tracks).
 
 Photoresist itself is a Japanese-dominated market (JSR, now owned by the Japan Investment Corporation; Tokyo Ohka Kogyo (TOK); Shin-Etsu Chemical; Fujifilm; Sumitomo Chemical) with DuPont and Merck as the main non-Japanese suppliers; Japan holds ~90% of ArF and EUV resist supply, which it used as leverage in its 2019 export dispute with Korea (Module 04).
 
@@ -4626,7 +4687,7 @@ Photoresist itself is a Japanese-dominated market (JSR, now owned by the Japan I
 | Synopsys / Siemens EDA | USA / Germany | OPC, ILT, SMO software (Proteus, Calibre) | Duopoly in OPC |
 | NVIDIA | USA | cuLitho GPU-accelerated computational lithography (with TSMC, Synopsys) | New entrant in OPC compute |
 | D2S, IMS Nanofabrication | USA / Austria | Curvilinear ILT; multi-beam mask writers | Niche leaders |
-| SMEE | China | Domestic ArF (90 nm class) scanners | Distant follower |
+| SMEE | China | Publicly catalogued 90 nm-class IC projection lithography | DUV equipment supplier; distinct from a qualified EUV scanner |
 
 ## Common Misconceptions
 
@@ -4657,6 +4718,12 @@ Lithography consumes the films deposited in Module 06 (the oxide, nitride, polys
 - WikiChip Fuse, "TSMC Details 5 nm" (IEDM 2019 coverage) and "IEDM 2019 – TSMC 5nm Process" (SemiWiki) for mask and EUV layer counts.
 - Asianometry (YouTube and asianometry.com), "A Deep Dive into Immersion Lithography Technology".
 - SPIE Advanced Lithography + Patterning conference proceedings (annual, February), the primary literature for everything in this module.
+
+- [SMEE IC projection-lithography catalogue](https://www.smee.com.cn/eis.pub?differ_net=0&method=indexinfo&onclicknodeno=1_4_1_1&service=homepageService). Official product scope, reviewed September 2026.
+
+- [ASML: updated export-licensing requirements, 2024](https://www.asml.com/en/news/press-releases/2024/asml-expects-impact-of-updated-export-restrictions-to-fall-within-outlook-for-2025). Official product scope, reviewed September 2026.
+
+- [TechInsights: Kirin 9000S physical process analysis](https://www.techinsights.com/blog/hisilicon-kirin-9000s-smic-7nm-n2-process-flow-analysis). Official product scope, reviewed September 2026.
 
 ---
 
@@ -5148,9 +5215,9 @@ ASML has shipped roughly 350 EUV systems cumulatively since the NXE:3100 in 2010
 
 ## Who Has EUV, and Who Is Not Allowed To
 
-EUV has never shipped to China. SMIC ordered an NXE:3400 in 2018 and the Dutch government, under US pressure, never issued the licence; EUV has been formally export-controlled since 2019. The US October 2022 and 2023 rules and the Dutch September 2023 (NXT:2000i and above) and September 2024 (NXT:1970i/1980i) rules then restricted the immersion DUV tools that would be used to multi-pattern around the lack of EUV. SMIC nonetheless produced 7 nm-class logic (Huawei Kirin 9000S, 2023) and "5 nm-class" parts by DUV quadruple patterning (the SAQP of the Before-you-start list), at lower yield and higher cost.
+EUV has never shipped to China. SMIC ordered an NXE:3400 in 2018 and the Dutch government, under US pressure, never issued the licence; EUV has been formally export-controlled since 2019. The US October 2022 and 2023 rules and the Dutch September 2023 (NXT:2000i and above) and September 2024 (NXT:1970i/1980i) rules then restricted the immersion DUV tools that would be used to multi-pattern around the lack of EUV. TechInsights identified SMIC 7 nm-class logic in the Huawei Kirin 9000S (2023), made without EUV. This demonstrates manufactured fine-feature devices; it does not by itself measure the factory’s yield, available capacity or profitability. Extra patterning steps add opportunities for error and expense, but their actual cost depends on the complete process.
 
-China's domestic response: **SMEE** (Shanghai Micro Electronics Equipment) is the DUV champion, with 90 nm tools in production and a 28 nm-class immersion tool (SSA800) that has been "about to ship" for years. On EUV, the most public program is the **laser-induced discharge plasma (LDP)** source at Harbin Institute of Technology under Zhao Yongpeng, in which a laser vaporizes tin from an electrode and a high-voltage discharge through the vapour forms the plasma; reported in-band power was ~100 to 150 W in 2025 (as reported, 2025), versus ASML's 500 to 600 W, and discharge sources are hard to scale (Ushio's XTREME group, which took over Philips' LDP program in 2010, reached ~30 W at the intermediate focus in 2011 and gave up on high-volume manufacturing sources a few years later). A prototype scanner, reportedly assembled with former ASML engineers, was said to be under test in 2025 with a target of ~2028 (as reported, 2025). Tsinghua's **steady-state microbunching (SSMB)** source is a longer-shot alternative: it starts from a synchrotron, the ring accelerator introduced under the Mo/Si mirror section, whose circulating electrons normally emit light incoherently and spread across the spectrum, and SSMB would make the electrons bunch so that they emit coherently at 13.5 nm, an approach still on paper at wafer-scale power. As of 2026 no Chinese EUV tool has printed a production wafer; the source gap is years, and the Zeiss-class optics are the harder problem behind it.
+Chinese companies and research groups work on different parts of this problem. **SMEE** supplies DUV lithography equipment; its public IC catalogue includes 90 nm-class projection systems. Research on alternative sources includes **steady-state microbunching (SSMB)**, studied by a Tsinghua-led international collaboration. In an electron storage ring, the idea is to arrange electrons into very short groups so their radiation adds coherently, rather than being emitted with unrelated phases. The collaboration demonstrated the underlying mechanism experimentally in 2021 and reported further tests in 2024. These are research milestones toward a possible light source, not demonstrations of an industrial 13.5 nm wafer scanner. A production EUV system must combine source power and stability, projection optics, masks, stages, contamination control and reliable wafer throughput. ASML remains the commercial EUV scanner supplier in its 2025 annual report; research progress should be described separately from a shipped and customer-qualified production system.
 
 ## History
 
@@ -5248,7 +5315,7 @@ The 2010s were a decade of delays. The 2008 roadmaps had EUV in production at 22
 | Samsung | South Korea | First EUV HVM (7LPP, 2019); logic and DRAM | #2 |
 | Intel | USA | Largest High-NA customer; 18A (low-NA, with some layers dual-qualified on High-NA in HVM from 2026), 14A (High-NA) | #3, High-NA leader |
 | SK hynix, Micron | South Korea / USA | EUV in DRAM (the 1a, 1b and 1γ generations: DRAM makers' node labels for successive "10 nm-class" generations, Module 15), high-bandwidth memory (HBM) base layers | DRAM users |
-| SMEE / Harbin IT | China | Domestic DUV; LDP EUV source research (~100–150 W, as reported 2025) | No production EUV |
+| SMEE / Tsinghua-led SSMB collaboration | China / international research collaboration | DUV equipment / experimental research toward an accelerator-based light source | Different roles; research is not a qualified EUV scanner |
 
 ## Common Misconceptions
 
@@ -5259,7 +5326,7 @@ The 2010s were a decade of delays. The 2008 roadmaps had EUV in production at 22
 - **"EUV ended multi-patterning."** → It ended it for one node. At N3 and N2, the tightest metal layers are below the ~26 nm single-exposure pitch of 0.33 NA and are double-patterned with EUV LELE or SALELE. High-NA exists to end it again.
 - **"High-NA just prints smaller; everything else is the same."** → The optics are anamorphic (4× / 8×) to keep the reticle-side angles workable, which halves the field to 26 × 16.5 mm. Reticle-limited dies such as large GPUs must be stitched or split into chiplets.
 - **"The hydrogen in the tool is there to make a better vacuum."** → It is a deliberately added gas at ~100 Pa in the source and a few Pa in the scanner: it slows tin ions before they sputter the collector, its radicals turn tin and carbon deposits into gases the pumps remove, and it costs only ~10% of the light per metre at 100 Pa.
-- **"China has, or is about to have, its own EUV."** → As of 2026 the strongest Chinese source (Harbin LDP) is reported at ~100–150 W versus ASML's 500–600 W in production and 1,000 W demonstrated; no Chinese tool has printed a production wafer, and the Zeiss-class optics are the larger unsolved problem.
+- **"A promising EUV source means a production EUV scanner is ready."** → A source experiment establishes a particular result under measured conditions. Production lithography also requires optics, masks, stages, contamination control, availability and customer qualification. Assess those demonstrated capabilities separately, regardless of where a team works.
 
 ## Where This Fits in the Supply Chain
 
@@ -5278,6 +5345,16 @@ Module 07 delivered the resist chemistry, the track, and the DUV scanner that st
 - imec press releases on the CNT pellicle and High-NA lab (imec-int.com); Mitsui Chemicals CNT pellicle production announcements (2024–2025).
 - SemiAnalysis (semianalysis.com), coverage of the EUV supply chain and High-NA economics.
 - Carl Zeiss SMT, EUV and High-NA EUV lithography optics technology pages (zeiss.com/smt).
+
+- [SMEE IC projection-lithography catalogue](https://www.smee.com.cn/eis.pub?differ_net=0&method=indexinfo&onclicknodeno=1_4_1_1&service=homepageService). Reviewed September 2026.
+
+- [TechInsights: Kirin 9000S physical process analysis](https://www.techinsights.com/blog/hisilicon-kirin-9000s-smic-7nm-n2-process-flow-analysis). Reviewed September 2026.
+
+- [Deng et al., experimental demonstration of SSMB, Nature (2021)](https://www.nature.com/articles/s41586-021-03203-0). Reviewed September 2026.
+
+- [Confirming the theoretical foundation of SSMB (2024)](https://www.nature.com/articles/s42005-024-01657-y). Reviewed September 2026.
+
+- [ASML 2025 annual report](https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm). Reviewed September 2026.
 
 ---
 
@@ -5651,7 +5728,7 @@ A leading-edge etch platform is a vacuum hub with a wafer-handling robot in the 
 
 **Hitachi High-Tech** (Japan) holds a niche in ECR/microwave conductor etch (gate, fin), a few percent of the market; long counted the fourth etch vendor, it has probably been overtaken by AMEC (~$1 billion of etch revenue) as of 2024–2025, though estimates differ.
 
-**AMEC** (Advanced Micro-Fabrication Equipment, Shanghai) makes the **Primo** family of CCP dielectric and ICP conductor etchers and is qualified for some dielectric etch at TSMC as well as at every Chinese fab. **Naura** (Beijing) makes ICP silicon etch and CCP tools and is the largest Chinese equipment vendor. As of 2024–2025 the two together took roughly 20% of etch purchases in China and a mid-single-digit share globally, concentrated in mature nodes and in memory (YMTC, CXMT) where export controls limit the US vendors; etch chambers, unlike EUV scanners, can be built from commercially available subsystems.
+**AMEC** (Advanced Micro-Fabrication Equipment, Shanghai) makes the **Primo** family of CCP dielectric and ICP conductor etchers, including TSV etch systems. **NAURA** (Beijing) also supplies semiconductor etch equipment within a broader process-tool portfolio. Those product categories correspond to the different plasma and material-removal problems explained in this module. Qualification is specific to a tool, recipe, layer and customer; it cannot be inferred for every fab from the supplier’s nationality or from one successful installation. Commercially available subsystems can support tool development, but integrating stable plasma control, uniformity, low defect counts and reliable operation remains substantial engineering work.
 
 ### Market shares and economics
 
@@ -5709,14 +5786,14 @@ The etch step count has grown faster than the total step count: SAQP turned one 
 | Lam Research | USA | Kiyo (ICP conductor), Flex (CCP dielectric), Sense.i, Syndion (TSV), Coronus (bevel), Cryo 3.0, first production ALE; wet clean | Leader (~40–45% of etch) |
 | Tokyo Electron (TEL) | Japan | Tactras platform with Vigus CCP and RLSA/ICP chambers; Episode UL cryogenic channel-hole etch; Certas CDE; wet benches | #2 (~25%); strong in dielectric and memory |
 | Applied Materials | USA | Centris Sym3 (dielectric), Centura conductor etch, Selectra and SiCoNi selective/radical removal, APF carbon hardmask | #3 (~18–20%); leader in selective removal |
-| AMEC | China | Primo CCP dielectric and ICP conductor etchers; TSV etch; qualified at TSMC for some dielectric etch | Rising; ~$1 B etch revenue (2024); ~20% of China's etch purchases with Naura |
+| AMEC | China | Primo CCP dielectric and ICP conductor etchers; TSV etch | Etch-equipment supplier with application-specific product lines |
 | Hitachi High-Tech | Japan | ECR/microwave conductor etchers (gate, fin) | Niche (~few %); fourth or fifth by revenue |
-| Naura | China | ICP silicon etch, CCP dielectric etch, strip; largest Chinese equipment vendor | Rising; mature nodes and China memory |
+| NAURA | China | Semiconductor etch and related process equipment | Product and layer qualification determine application |
 | SCREEN | Japan | Single-wafer (SU-3300) and batch (FC-3100) wet etch/clean | Leader in wet (~40–50%) |
 | SEMES | Korea | Wet etch/clean and strip, Samsung affiliate | #3–4 in wet |
 | KLA (SPTS) | USA / UK | Deep silicon (Bosch) etch for MEMS, TSV, photonics | Leader in MEMS deep etch |
 | Mattson, PSK, ULVAC | China (formerly USA) / Korea / Japan | Photoresist strip (ash) | PSK and Mattson lead strip |
-| Hana Materials, SK Enpulse, Mitsubishi Materials, CoorsTek, Ferrotec | Korea / Japan / USA | Si, SiC and ceramic consumables: edge rings, showerheads, liners | Consumables suppliers |
+| Hana Materials, SK Enpulse, Mitsubishi Materials, CoorsTek, Ferrotec | Korea / Japan / USA; Ferrotec has Japan/China operations | Si, SiC and ceramic consumables: edge rings, showerheads, liners | Consumables suppliers |
 | Robert Bosch GmbH | Germany | Originator and licensor of the Bosch deep-etch process | IP holder |
 
 ## Common Misconceptions
@@ -5746,6 +5823,10 @@ Etch consumes the patterned resist and hardmask stacks from lithography (Modules
 8. Lam Research, "Lam Research Introduces Lam Cryo 3.0 Cryogenic Etch Technology," press release, July 2024, and the Lam newsroom blog "The Road to 1,000 Layer 3D NAND."
 9. Semiconductor Engineering, "Cryogenic Etch: A Key Enabler of 3D NAND" and its knowledge-center articles on atomic layer etching and high-aspect-ratio etch (semiengineering.com).
 10. K. R. Williams, K. Gupta and M. Wasilik, "Etch rates for micromachining processing, Part II," *Journal of Microelectromechanical Systems* 12, 761 (2003). The reference table of wet and dry etch rates for dozens of materials and etchants.
+
+- [AMEC 2024 ESG report: CCP, ICP and TSV product families](https://www.amec-inc.com/uploads/files/20250611/17496080859885.pdf). Official product scope, reviewed September 2026.
+
+- [NAURA semiconductor process-equipment catalogue](https://www.naura.com/product/). Official product scope, reviewed September 2026.
 
 ---
 
@@ -6165,7 +6246,7 @@ Implant bays are among the most hazardous places in a fab. **Arsine** (AsH₃) h
 
 ## 12. Market, Cost and Throughput
 
-The implant equipment market is ~$3.5–4 B per year (analyst estimates, as of ~2025), roughly 3–4 % of **wafer fab equipment (WFE)**, the ~$100 B-plus per year market for all the machines inside a fab. **Applied Materials** (which acquired Varian Semiconductor Equipment in 2011 for $4.9 B, and with it the VIISta line and ~60–70 % share of the silicon implant market) is the leader across high-current and medium-current; **Axcelis** (Massachusetts, spun out of Eaton in 2000) holds ~25 % overall, is the leader in high-energy and dominates SiC power (reportedly ~70 % or more). **SMIT** (Sumitomo Heavy Industries Ion Technology, Japan) and **Nissin Ion Equipment** (Japan) supply medium-current and, in SMIT's case, high-energy tools mainly to Japanese and some Chinese fabs. Chinese domestic suppliers, notably **CETC** (the 48th Research Institute) and **Kingstone** (Wanye Enterprises), have shipped low- and medium-energy tools to domestic fabs under the localisation push since 2022, but have little share outside China. Applied and Axcelis together are effectively a duopoly at the leading edge. Axcelis's revenue more than doubled from 2020 (~$475 M) to 2023 (~$1.13 B), mainly on SiC implant demand (Section 9), and then fell back in ~2024–2025 as SiC, electric-vehicle and mature-node demand softened, so that growth was a cycle, not a trend, and the doubling should not be extrapolated.
+The implant equipment market is ~$3.5–4 B per year (analyst estimates, as of ~2025), roughly 3–4 % of **wafer fab equipment (WFE)**, the ~$100 B-plus per year market for all the machines inside a fab. **Applied Materials** (which acquired Varian Semiconductor Equipment in 2011 for $4.9 B, and with it the VIISta line and ~60–70 % share of the silicon implant market) is the leader across high-current and medium-current; **Axcelis** (Massachusetts, spun out of Eaton in 2000) holds ~25 % overall, is the leader in high-energy and dominates SiC power (reportedly ~70 % or more). **SMIT** (Sumitomo Heavy Industries Ion Technology, Japan) and **Nissin Ion Equipment** (Japan) supply medium-current and, in SMIT's case, high-energy tools mainly to Japanese and some Chinese fabs. Chinese suppliers include **CETC** (the 48th Research Institute) and **Kingstone**. Kingstone’s public catalogue covers low-energy high-current, medium-current, high-energy, hydrogen and SiC/GaN implantation systems. These categories correspond to different beam energy, current and material requirements; a catalogue listing establishes an offered product family, not qualification for every process or customer. Applied and Axcelis together are effectively a duopoly at the leading edge. Axcelis's revenue more than doubled from 2020 (~$475 M) to 2023 (~$1.13 B), mainly on SiC implant demand (Section 9), and then fell back in ~2024–2025 as SiC, electric-vehicle and mature-node demand softened, so that growth was a cycle, not a trend, and the doubling should not be extrapolated.
 
 Tool prices run ~$4–5 M for medium-current, ~$5–7 M for high-current, and ~$8 M and up for high-energy. Throughput depends on dose: a well implant at 10¹³ cm⁻² is limited by wafer handling and mechanical scan to ~200–400 wph (vendors quote up to 500 wph), while a high-dose implant is beam-current limited.
 
@@ -6228,7 +6309,7 @@ And the 20 mA itself is the space-charge ceiling of Section 3: a machine that co
 | Axcelis Technologies | USA | Purion H / Dragon (high current), Purion M (medium), Purion XE / VXE / XEmax (high energy to 15 MeV), Purion Power for SiC | #2 overall, leader in high-energy and SiC |
 | SMIT (Sumitomo Heavy Industries Ion Technology) | Japan | SHX high-current, MC3 medium-current and S-UHE / SS-UHE high-energy (linac) implanters | Niche, #3 |
 | Nissin Ion Equipment | Japan | Medium-current implanters (EXCEED), display implanters | Niche |
-| CETC 48th Institute, Kingstone (Wanye) | China | Domestic low/medium-energy implanters | Niche, China only |
+| CETC 48th Institute / Kingstone | China | Ion implantation; Kingstone lists high-current, medium-current, high-energy, hydrogen and compound-semiconductor tools | Supplier portfolios and customer qualifications differ |
 | 3M (ex-SemEquip, Ceradyne) | USA | ClusterBoron B₁₈H₂₂ source material for cluster implants | Sole supplier of a niche source |
 | Mattson Technology (Beijing E-Town) | USA / China | Helios RTP, Millios flash-lamp MSA | #2 in RTP |
 | Veeco (ex-Ultratech) | USA | LSA101 laser spike anneal | Leader in laser anneal |
@@ -6267,6 +6348,8 @@ Implant and anneal sit in the front-end loop between lithography (Modules 7 and 
 - Axcelis Technologies, "Ion Implantation and Applications for Power Devices" (technical white paper, axcelis.com) and "Purion XEmax, Axcelis ultra-high energy implanter with Boost technology," *MRS Advances* (2022).
 - T. Kimoto and J. A. Cooper, *Fundamentals of Silicon Carbide Technology* (Wiley, 2014), chapter on ion implantation and high-temperature annealing of SiC.
 - M. Bruel, "Silicon on insulator material technology," *Electronics Letters* 31, 1201 (1995), the original Smart Cut paper.
+
+- [Kingstone ion-implantation product families](https://www.kingstonesemi.com/en/products). Official product scope, reviewed September 2026.
 
 ---
 
@@ -6876,6 +6959,8 @@ None of these dimensions can be imaged optically; a 6 nm fin is roughly a hundre
 
 ## Key Players
 
+The table emphasizes the most advanced transistor transitions; it is not the complete foundry market. SMIC also manufactures FinFET logic, while Hua Hong supplies specialty processes for functions such as embedded memory and power devices. A power-management chip does not need the same transistor geometry as a dense GPU. Compare the technology needed by the product, not only the smallest node in a company's roadmap. [Hua Hong 2025 report](https://www.hkexnews.hk/listedco/listconews/sehk/2026/0409/2026040901618_c.pdf); [TechInsights N+3 analysis](https://www.techinsights.com/blog/smic-n3-kirin-9030-pro-process-flow-analysis).
+
 | Company | Country | Role / what they supply | Approx. position |
 |---|---|---|---|
 | TSMC | Taiwan | N2 nanosheet in HVM (Q4 2025), A16 with Super Power Rail (H2 2026); ~90% of leading-edge foundry output (as of 2025) | Leader |
@@ -6884,7 +6969,7 @@ None of these dimensions can be imaged optically; a 6 nm fin is roughly a hundre
 | imec | Belgium | Pre-competitive R&D consortium: nanosheet, forksheet, CFET, BSPDN roadmaps used by the whole industry | Leader (research) |
 | IBM Research | USA | Nanosheet pioneer (Albany, 2017 5 nm demo), VTFET; partners Samsung and Rapidus | Niche (research/IP) |
 | Rapidus | Japan | 2 nm nanosheet foundry start-up with IBM technology, pilot line 2025, HVM target 2027 | Entrant |
-| SMIC | China | DUV-only FinFET at ~N7/N5-class density (N+2/N+3) under export controls | Niche (constrained) |
+| SMIC | China | FinFET logic; N+2 and further-scaled N+3 identified in chip teardowns | DUV scaling; N+3 is not equivalent to TSMC/Samsung 5 nm in the cited dimensional comparison |
 | Applied Materials | USA | Epi (Centura for Si/SiGe superlattice and S/D), PVD/ALD metals for gate stack and contacts (Endura, Volta), selective removal (SiCoNi, Selectra), FCVD (Eterna), CMP (Reflexion) | Leader in epi, PVD, CMP |
 | Lam Research | USA | Conductor and dielectric etch (fin, gate, S/D recess, channel release; Kiyo), ALD spacers/inner spacers, W/Mo fill (Altus) | Leader in etch |
 | Tokyo Electron (TEL) | Japan | Etch, ALD/CVD, tracks, wet clean, selective SiGe etch and chemical oxide removal (Certas gas-phase) | #2–3 in etch/dep |
@@ -7397,10 +7482,12 @@ The BEOL is where the equipment oligopoly is most visible, because each step has
 | Intel PowerVia effect on M0 pitch | 30 nm relaxed to 36 nm | Backside power buys litho margin at the tightest level |
 | IR drop example | ~70 mV at 133 A through ~0.5 mΩ (100 W at 0.75 V) | Nearly 10 percent of the supply lost in the grid |
 | Steps per dual damascene level | ~30 to 40 operations | Half the steps of a logic flow are BEOL |
-| Applied Materials share of CMP / Lam share of Cu ECD (estimated, as of 2025) | ~70 percent / majority (> 60 percent) | Two tools, two suppliers |
+| Applied Materials share of CMP / Lam share of Cu ECD (estimated, as of 2025) | ~70 percent / majority (> 60 percent) | Estimated leadership in two distinct tool categories; other suppliers also participate |
 | Al pad thickness / C4 bump pitch | ~1 to 3 µm / ~130 to 150 µm | The 10,000× jump in scale to the package |
 
 ## Key Players
+
+Supplier choice varies by BEOL operation. Alongside the established suppliers below, Hwatsing offers CMP tools and ACM Research offers copper electroplating systems for dual-damascene processing. Those are concrete polishing and metal-fill roles; a catalogue does not prove qualification for every metal layer in a particular foundry flow. [Hwatsing CMP equipment](https://www.hwatsing.com/en/product_detail/757.html); [ACM process portfolio](https://www.acmr.com/), checked 14 September 2026.
 
 | Company | Country | What they supply | Position |
 |---|---|---|---|
@@ -7905,7 +7992,7 @@ Yield models describe dies with zero killer defects. Designers cheat this three 
 
 This is a support section: the market and the money, at less depth than the physics above.
 
-**KLA** (Milpitas, California; the 1997 merger of KLA Instruments and Tencor) holds about 55 to 56 percent of the process control equipment market and a considerably larger share of optical patterned-wafer inspection, where it has few real competitors at the leading edge. Its fiscal 2025 revenue was about $12 billion, over 80 percent from semiconductor process control. The remainder is split among **Applied Materials** (e-beam review and inspection, CD-SEM), **Hitachi High-Tech** (the CD-SEM leader, dark-field inspection, review), **ASML** (YieldStar overlay, HMI e-beam), **Onto Innovation** (film and OCD metrology, packaging inspection), **Nova** (OCD, integrated metrology, composition by XRF and **XPS**, X-ray photoelectron spectroscopy, a surface-composition technique), **Lasertec** (the sole supplier of actinic EUV mask inspection for years), **Camtek** (packaging), **Zeiss** (mask review), and **Bruker**, **Rigaku**, and **Thermo Fisher** in X-ray and electron microscopy. Chinese suppliers (Skyverse, RSIC, Jingce) serve domestic fabs but remain years behind at the leading edge.
+**KLA** (Milpitas, California; the 1997 merger of KLA Instruments and Tencor) holds about 55 to 56 percent of the process control equipment market and a considerably larger share of optical patterned-wafer inspection, where it has few real competitors at the leading edge. Its fiscal 2025 revenue was about $12 billion, over 80 percent from semiconductor process control. The remainder is split among **Applied Materials** (e-beam review and inspection, CD-SEM), **Hitachi High-Tech** (the CD-SEM leader, dark-field inspection, review), **ASML** (YieldStar overlay, HMI e-beam), **Onto Innovation** (film and OCD metrology, packaging inspection), **Nova** (OCD, integrated metrology, composition by XRF and **XPS**, X-ray photoelectron spectroscopy, a surface-composition technique), **Lasertec** (the sole supplier of actinic EUV mask inspection for years), **Camtek** (packaging), **Zeiss** (mask review), and **Bruker**, **Rigaku**, and **Thermo Fisher** in X-ray and electron microscopy. Skyverse and other suppliers in China also participate in inspection and metrology. Their products should be compared by the specific measurement or defect class and customer qualification, rather than assigned a single unsupported number of years of delay. The product example in Key Players shows why inspection and metrology need separate comparisons.
 
 Process control takes about 12 percent of **wafer fab equipment (WFE)** spending in recent years, the "one dollar in eight" of the opening, within a 10 to 15 percent range depending on the mix of nodes being built, and it rises about a point per node as each adds more critical layers, tighter budgets, and new failure modes (stochastics, gate-all-around (GAA) channel thickness, backside power delivery, the power wiring on the back of the wafer, Module 12). A $20 billion gigafab therefore carries $2 billion to $3 billion of metrology and inspection tools, comparable to its entire etch fleet. Per wafer, the **cost of ownership** of inspection (the tool's price, floor space, staff and consumables, spread over the wafers it processes) is a few hundred dollars for a leading-edge logic wafer, a few percent of wafer cost, and the return is measured in yield points.
 
@@ -8012,6 +8099,8 @@ Each new process passes a qualification suite on these mechanisms (JEDEC's JEP00
 | EUV line-width roughness | ~1 to 2 nm 3σ (resist- and dose-dependent) | Feeds transistor variability; measured by CD-SEM with noise correction |
 
 ## Key Players
+
+Process control includes several markets rather than one interchangeable instrument. Skyverse, based in China, lists patterned and unpatterned wafer inspection, optical critical-dimension, film-thickness and overlay metrology among its products. These product families address distinct process-control tasks alongside those of the suppliers below. Comparing alternatives requires the actual defect sensitivity, throughput, measurement repeatability and fab qualification for the intended layer. [Skyverse product portfolio](https://www.skyverse.cn/?trk=public_post-text), checked 14 September 2026.
 
 | Company | Country | Role / what they supply | Approx. position |
 |---|---|---|---|
@@ -8450,7 +8539,7 @@ Three kinds of organizations run wafer sort.
 
 ## The Equipment Market
 
-The ATE market is a duopoly. **Advantest** (Japan) held ~56 percent of the SoC tester market in 2024 and, by its own reporting, ~66 percent in 2025 on V93000 EXA Scale wins in AI accelerators and HBM; **Teradyne** (US) held most of the remainder, ~35 percent in 2024 and ~25 to 30 percent in 2025, strongest in mobile SoCs and in memory with Magnum (as of 2025; analyst estimates of both shares differ by several points). Together they hold ~80 to 90 percent of total ATE revenue, which has run at roughly $6 to 9 billion per year through the AI upcycle (as of 2025). The rest is **Cohu** (US), **Chroma** (Taiwan), and Chinese entrants **Hangzhou Changchuan** and **Beijing Huafeng**, growing in domestic mature-node markets under export-control pressure. Probers are the TEL and Accretech duopoly described above. Probe cards are a market of roughly $3 billion per year as of ~2025, led by FormFactor (~$0.8 billion revenue, roughly a quarter to 30 percent share), with Technoprobe a close second and gaining at TSMC on 3 nm and 2 nm qualifications, MJC and JEM dominant in DRAM full-wafer cards, and MPI behind them; the five largest suppliers hold about three quarters of the market.
+The ATE market is a duopoly. **Advantest** (Japan) held ~56 percent of the SoC tester market in 2024 and, by its own reporting, ~66 percent in 2025 on V93000 EXA Scale wins in AI accelerators and HBM; **Teradyne** (US) held most of the remainder, ~35 percent in 2024 and ~25 to 30 percent in 2025, strongest in mobile SoCs and in memory with Magnum (as of 2025; analyst estimates of both shares differ by several points). Together they hold ~80 to 90 percent of total ATE revenue, which has run at roughly $6 to 9 billion per year through the AI upcycle (as of 2025). The rest is **Cohu** (US), **Chroma** (Taiwan), and **Hangzhou Changchuan** and **Beijing Huafeng (AccoTEST)** in China. AccoTEST publishes analog, mixed-signal, power and SoC test platforms, including wafer-test configurations; these roles should be assessed by device requirements rather than described only as a response to trade policy. [AccoTEST wafer-test systems](https://www.accotest.com/products/sts8200-axe-plus/). Probers are the TEL and Accretech duopoly described above. Probe cards are a market of roughly $3 billion per year as of ~2025, led by FormFactor (~$0.8 billion revenue, roughly a quarter to 30 percent share), with Technoprobe a close second and gaining at TSMC on 3 nm and 2 nm qualifications, MJC and JEM dominant in DRAM full-wafer cards, and MPI behind them; the five largest suppliers hold about three quarters of the market.
 
 ## Summary
 
@@ -8508,6 +8597,7 @@ The ATE market is a duopoly. **Advantest** (Japan) held ~56 percent of the SoC t
 |---|---|---|---|
 | Advantest | Japan | V93000 EXA Scale and T2000 SoC testers, T5800 memory testers, ACS analytics | Leader in SoC and memory ATE (~56–66% SoC, 2024–2025) |
 | Teradyne | US | UltraFLEX / UltraFLEXplus SoC testers, Magnum memory testers, STDF originator | #2 in ATE (~25–35% SoC, 2024–2025) |
+| AccoTEST (Beijing Huafeng) | China | Analog, mixed-signal, power and SoC ATE; wafer-test configurations | Application-specific test platforms |
 | Tokyo Electron | Japan | Precio- and Prexa-series 300 mm wafer probers | Co-leader in probers |
 | Tokyo Seimitsu (Accretech) | Japan | UF3000-series wafer probers | Co-leader in probers |
 | FormFactor | US | MEMS probe cards (logic, DRAM, NAND), engineering probe systems | Probe card leader (~25–30%) |
@@ -8796,7 +8886,7 @@ The state of the art as of ~2025–2026:
 | Samsung | V9 | ~286 | 2 | 2024–25; V10 (~400 layers) ramping in 2026, with a roadmap talking about 1,000 layers |
 | Micron | G9 | 276 | 2 | Fastest interface (3,600 MT/s, megatransfers per second) at launch; G10 in development (layer count not confirmed as of ~2025) |
 | Kioxia / SanDisk | BiCS8 | 218 | 2 | CBA bonded periphery; 332-layer BiCS10 (3 decks, CBA) sampling from mid-2026, volume 2027 |
-| YMTC | Xtacking 4.0 (Gen 5) | ~294 total (active count reported at ~270 by TechInsights) | 2–3 | Wafer-to-wafer bonded periphery; sanctioned, without access to new US tools |
+| YMTC | Xtacking 4.0 (Gen 5) | ~294 total (active count reported at ~270 by TechInsights) | 2–3 | Wafer-to-wafer bonded periphery; export-control exposure discussed below |
 
 Vendors differ in whether they count dummy and select layers, so "321" and "286" are not directly comparable; density per mm² also depends on hole-pitch shrink (~10% per generation) and bits per cell. The best 2025 TLC dies are ~20–25 Gb/mm² (TechInsights puts SK hynix's 321-layer and YMTC's Gen 5 TLC just above 20 Gb/mm²), QLC ~23–30 Gb/mm²; a 1 Tb TLC die is ~40–50 mm². Treat the density figures as ±10%, since they depend on whose die-area convention is used.
 
@@ -8813,7 +8903,7 @@ Vendors differ in whether they count dummy and select layers, so "321" and "286"
 | Micron | ~12–14% | Singapore, Manassas |
 | YMTC (China) | ~6–10% | Wuhan; on the US Entity List since Dec 2022 |
 
-Three things the table hides. **Kioxia and SanDisk are one manufacturing operation with two sales forces.** The Yokkaichi and Kitakami fabs are joint ventures (Flash Partners, Flash Alliance and Flash Forward) descended from Toshiba's 2000 partnership with SanDisk: each partner funds roughly half the tools, takes roughly half the wafers and co-designs the same BiCS die, then sells its own SSDs and components. The February 2025 spin-out of SanDisk from Western Digital changed the owner, not the arrangement, so the two rows in the table are best read as one ~30% block, the world's second-largest NAND maker. **Solidigm is SK hynix's QLC arm.** SK hynix bought Intel's NAND and SSD business, including the Dalian fab in China, in a two-stage deal (first closing December 2021, final closing March 2025) and renamed it Solidigm. Its floating-gate QLC dies and its enterprise QLC SSDs, the largest-capacity drives on the market (60–120 TB class as of 2025), are what give the SK group its data-centre QLC position, while SK hynix's own charge-trap TLC serves the mainstream; the two product lines are still made on different cells in different fabs. **YMTC operates under sanctions.** Placed on the US Entity List in December 2022, it cannot buy new tools from Lam, Applied or KLA, or leading tools from ASML and TEL, and is cut off from most upgrades and service. It has kept scaling (~294 total layers at Gen 5, ~270 active, per TechInsights) by running the tools it bought before 2022, by substituting domestic tool makers (Naura, AMEC, Piotech) where it can, and by its Xtacking architecture, which puts the periphery on a separately bonded wafer so the array wafer needs fewer leading-edge tools; its sales are almost entirely inside China. Micron and Samsung are covered by their DRAM entries in Section 8; Samsung's Xi'an fab in China, its largest NAND site outside Korea, is itself exposed to US export controls (as of late 2025, tool shipments to it need annual US licences after the previous blanket authorization was withdrawn).
+Three things the table hides. **Kioxia and SanDisk are one manufacturing operation with two sales forces.** The Yokkaichi and Kitakami fabs are joint ventures (Flash Partners, Flash Alliance and Flash Forward) descended from Toshiba's 2000 partnership with SanDisk: each partner funds roughly half the tools, takes roughly half the wafers and co-designs the same BiCS die, then sells its own SSDs and components. The February 2025 spin-out of SanDisk from Western Digital changed the owner, not the arrangement, so the two rows in the table are best read as one ~30% block, the world's second-largest NAND maker. **Solidigm is SK hynix's QLC arm.** SK hynix bought Intel's NAND and SSD business, including the Dalian fab in China, in a two-stage deal (first closing December 2021, final closing March 2025) and renamed it Solidigm. Its floating-gate QLC dies and its enterprise QLC SSDs, the largest-capacity drives on the market (60–120 TB class as of 2025), are what give the SK group its data-centre QLC position, while SK hynix's own charge-trap TLC serves the mainstream; the two product lines are still made on different cells in different fabs. **YMTC combines a distinct architecture with export-control exposure.** Its Xtacking process builds the array and peripheral circuits separately before bonding; the product comparison needs to consider that architecture, not only layer count. Its December 2022 US Entity List designation introduced licensing restrictions for items subject to the Export Administration Regulations. That legal scope should not be expanded into an unsupported assertion that every foreign tool, upgrade or service is unavailable. Module 20 explains why transaction rules, product capability and factory economics are different questions. [BIS December 2022 announcement](https://www.bis.gov/press-release/commerce-adds-36-entity-list-supporting-peoples-republic-chinas-military-modernization-violations-human); [YMTC architecture](https://www.ymtc.com/en/technicalintroduction.html). Micron and Samsung are covered by their DRAM entries in Section 8; Samsung's Xi'an fab in China, its largest NAND site outside Korea, is itself exposed to US export controls (as of late 2025, tool shipments to it need annual US licences after the previous blanket authorization was withdrawn).
 
 ## 14. HBM and the bandwidth wall
 
@@ -9002,14 +9092,16 @@ The HBM stack leaves the memory maker as a tested, molded cube ~11 × 11 × 0.72
 
 ## Key Players
 
+Conventional DRAM, NAND and HBM need separate supplier maps. CXMT's public portfolio includes DDR5 and LPDDR5X; YMTC's Xtacking makes the memory array and peripheral circuits on separate wafers before bonding them. Both are relevant to the memory mechanisms in this module. Neither their inclusion nor a vendor roadmap establishes qualification for a specific GPU's HBM stack. [CXMT products](https://www.cxmt.com/en/product.html); [YMTC architecture](https://www.ymtc.com/en/technicalintroduction.html), checked 14 September 2026.
+
 | Company | Country | Role / what they supply | Approx. position |
 |---|---|---|---|
 | SK hynix | Korea | DRAM, NAND (incl. Solidigm), HBM3/3E/4; MR-MUF stacking | HBM leader (~57–62% of 2025 bits; ~50% in Q2 2026 per Counterpoint); DRAM #1–2 |
 | Samsung Electronics | Korea | DRAM, NAND (V-NAND), HBM; TC-NCF; own 4 nm base die | DRAM #1–2; NAND #1; HBM #2 (~33% Q2 2026) |
 | Micron | USA | DRAM (1β/1γ), NAND, HBM3E/4 (TCB/NCF; in-house base die through HBM4) | DRAM #3; HBM #3 (~21% in 2025, ~18% Q2 2026) |
-| CXMT | China | DDR4/DDR5/LPDDR DRAM without EUV | DRAM #4 (~5–8%), rising |
+| CXMT | China | DDR and LPDDR DRAM, including published DDR5 and LPDDR5X products | Conventional DRAM supplier |
 | Kioxia / SanDisk | Japan / USA | 3D NAND (BiCS, CBA bonded periphery), JV fabs in Yokkaichi/Kitakami | NAND #3 and #4 combined ~30% |
-| YMTC | China | 3D NAND (Xtacking wafer-bonded periphery) | NAND #6 (~6–10%), sanctioned |
+| YMTC | China | 3D NAND (Xtacking wafer-bonded periphery) | NAND supplier; architecture, density, yield and qualification are separate comparisons |
 | TSMC | Taiwan | HBM4 base dies (N12, N5/N3 next) for SK hynix, and for Micron from HBM4E; CoWoS integration | Sole logic-foundry base-die supplier outside Samsung |
 | Lam Research | USA | HAR dielectric etch for capacitors and NAND channel holes; cryo etch; W/Mo ALD; Bosch TSV etch; SABRE 3D TSV plating | Leader in memory etch |
 | Applied Materials | USA | PECVD ON stacks, Endura PVD barriers/seed, CMP, hybrid-bonding (with BESI) | Leader in deposition/CMP |
@@ -9606,11 +9698,13 @@ For a mainstream chip, assembly and packaging is on the order of 10–20% of the
 
 ## Key Players
 
+The company's home country is not the full factory map: JCET, for example, reported manufacturing locations in China, Korea and Singapore. Its packaging and test business serves international customers. This is why supplier concentration should be assessed by the actual plant, process and qualified capacity, not by assigning every package to a corporate flag. [JCET 2023 operating update](https://www.prnewswire.com/news-releases/focusing-on-high-performance-advanced-packaging-and-global-layout-jcet-achieved-quarter-on-quarter-growth-in-q2-2023-301910156.html).
+
 | Company | Country | What they supply | Position |
 |---|---|---|---|
 | ASE Technology (incl. SPIL) | Taiwan | Largest OSAT: bumping, FCBGA, wire bond, fan-out, test | Leader (~30% of OSAT market) |
 | Amkor | USA | #2 OSAT; Arizona campus for TSMC Arizona wafers | #2 |
-| JCET | China | #3 OSAT (ex-STATS ChipPAC), eWLB fan-out | #3 |
+| JCET | China | OSAT (including STATS ChipPAC), fan-out and XDFOI heterogeneous integration | Global packaging-and-test supplier |
 | Tongfu, PTI, Huatian | China / Taiwan / China | #4–6 OSATs; PTI leads memory packaging | Top tier |
 | TSMC (AP1–AP8) | Taiwan | In-house bumping, InFO, CoWoS, SoIC | Leader in advanced packaging |
 | Ajinomoto Fine-Techno | Japan | ABF build-up dielectric film | Near-monopoly (> 90%) |
@@ -9990,7 +10084,7 @@ Samsung's **I-Cube** is its 2.5D family, and it has the same shape as CoWoS. **I
 
 ### The OSATs: ASE, Amkor, SPIL, JCET
 
-The outsourced assembly houses build 2.5D-class flows on fan-out RDL rather than silicon interposers, since they lack 300 mm front-end fabs. ASE's **FOCoS** (Fan-Out Chip on Substrate) puts dies on a ~2 µm line/space fan-out RDL interposer, and **FOCoS-Bridge** embeds a silicon bridge under die edges, a direct CoWoS-L analogue; ASE's **CoWoP** (chip-on-wafer-on-PCB) proposal drops the ABF substrate and mounts the CoW module on a large fine-line PCB. Amkor's **S-SWIFT** and **S-Connect** are the equivalents. ASE (which owns SPIL) and Amkor are also TSMC's designated overflow for CoWoS oS and, from 2025, some CoWoS-S CoW. JCET's XDFOI is the Chinese equivalent, relevant because 2.5D assembly of domestically fabbed dies is one of the few scaling paths open to Huawei and its foundry partners, and, as of 2026, packaging equipment is far less restricted by export controls than EUV lithography is.
+The outsourced assembly houses build 2.5D-class flows on fan-out RDL rather than silicon interposers, since they lack 300 mm front-end fabs. ASE's **FOCoS** (Fan-Out Chip on Substrate) puts dies on a ~2 µm line/space fan-out RDL interposer, and **FOCoS-Bridge** embeds a silicon bridge under die edges, a direct CoWoS-L analogue; ASE's **CoWoP** (chip-on-wafer-on-PCB) proposal drops the ABF substrate and mounts the CoW module on a large fine-line PCB. Amkor's **S-SWIFT** and **S-Connect** are the equivalents. ASE (which owns SPIL) and Amkor are also TSMC's designated overflow for CoWoS oS and, from 2025, some CoWoS-S CoW. JCET's **XDFOI** is another heterogeneous-integration platform. In its April 2024 results release, JCET reported stable high-volume XDFOI manufacturing across multiple factories. These factories supply advanced-packaging services to global customers. It is not the same process as CoWoS: interconnect geometry, package dimensions, thermal limits, yield, available capacity and customer qualification must be compared for the particular design. [JCET Q1 2024 production update](https://www.prnewswire.com/news-releases/jcet-q1-2024-revenue-and-net-profit-achieve-double-digit-year-on-year-growth-302126070.html).
 
 ## Fan-Out and the Move to Panels
 
@@ -10103,11 +10197,11 @@ Doubling CoWoS from ~35k to ~80k wpm in 2025 required on the order of a thousand
 | NVIDIA | USA | ~55–65% of CoWoS capacity; NV-HBI; Blackwell/Rubin on CoWoS-L | #1 customer |
 | AMD | USA | MI300/MI350 on SoIC + CoWoS; 3D V-Cache; Infinity Fabric | #2 accelerator customer; hybrid-bonding pioneer |
 | Broadcom / Marvell / Alchip / MediaTek | USA / USA / Taiwan / Taiwan | Custom AI ASICs on CoWoS for Google, Meta, Amazon, Microsoft | Major CoWoS consumers |
-| Intel (Intel Foundry) | USA | EMIB, EMIB-T, Foveros, Foveros Direct; AP fabs in Arizona, New Mexico, Malaysia | Only full-stack alternative to TSMC |
+| Intel (Intel Foundry) | USA | EMIB, EMIB-T, Foveros, Foveros Direct; AP fabs in Arizona, New Mexico, Malaysia | Foundry and advanced-packaging supplier |
 | Samsung | South Korea | I-Cube (2.5D), X-Cube (3D); HBM + logic + packaging turnkey | #3 in advanced packaging |
 | ASE (incl. SPIL) | Taiwan | CoWoS oS overflow, FOCoS, FOCoS-Bridge, CoWoP | #1 OSAT |
 | Amkor | USA | CoWoS oS overflow, S-SWIFT/S-Connect, Arizona plant (~2027–28) | #2 OSAT |
-| JCET | China | XDFOI fan-out and 2.5D for domestic AI chips | #3 OSAT; China's main option |
+| JCET | China | XDFOI fan-out and heterogeneous integration | Global OSAT; reported XDFOI high-volume production |
 | SK hynix / Samsung / Micron | South Korea / South Korea / USA | HBM3E/HBM4 known-good stacks | ~50% / ~33% / ~18% of HBM (Q2 2026 Counterpoint estimate, Module 15) |
 | Ibiden / Unimicron / Shinko / Kinsus / AT&S | Japan / Taiwan / Japan / Taiwan / Austria | High-layer-count ABF substrates (film from Ajinomoto) | Leaders in large AI substrates |
 | Besi | Netherlands | TCB and die-to-wafer hybrid bonders (Applied holds ~9%) | ~80% of hybrid bonding |
@@ -10528,6 +10622,8 @@ Cost and fallout examples are illustrative unless tied to a named product; the $
 | KYEC quarterly revenue, Q1 2026 | NT$10.191943 billion, consolidated statements (~US$319M at illustrative NT$32/US$) | Scale of the outsourced test industry |
 
 ## Key Players
+
+The test supplier depends on the device. AccoTEST supplies analog, power and SoC test systems, and JCET provides packaging and testing services through its international manufacturing network. Including them does not imply that a power-device tester or a general OSAT line can immediately replace a qualified high-power GPU test flow. The distinction is the required electrical resources, thermal handling, program and customer qualification. [AccoTEST portfolio](https://www.accotest.com/); [JCET operating update](https://www.prnewswire.com/news-releases/focusing-on-high-performance-advanced-packaging-and-global-layout-jcet-achieved-quarter-on-quarter-growth-in-q2-2023-301910156.html).
 
 | Company | Country | Role / what they supply | Approx. position |
 |---|---|---|---|
@@ -10995,6 +11091,8 @@ Every one of these is one to three companies deep. The ones with genuinely no su
 
 ## Key Players
 
+This table follows the NVIDIA case study, so a supplier's absence is not evidence that it is absent from the wider computing industry. Huawei designs Ascend accelerators and Atlas systems; AMD and hyperscaler-designed accelerators provide other examples discussed in Modules 17 and 20. Huawei's September 2025 roadmap is useful for studying system-level choices, but its advertised peaks and future targets are not independent benchmark results. Compare delivered workload performance, memory, interconnect, software and power under the same conditions. [Huawei Atlas and Ascend roadmap](https://www.huawei.com/en/news/2025/9/hc-xu-keynote-speech).
+
 | Company | Country | Role / what they supply | Approx. position |
 |---|---|---|---|
 | NVIDIA | USA | Fabless designer of GPUs, NVSwitch, NICs, boards, rack reference designs; cuLitho | Leader, ~80%+ of AI accelerators (as of 2025) |
@@ -11193,21 +11291,21 @@ The margin figures are approximate and move with the cycle; the pattern is what 
 
 ## The Geographic Map
 
-Where each layer physically sits is the substance of every geopolitical argument about the industry. Four terms before the table. **High bandwidth memory (HBM)** is a stack of 8–16 DRAM dies wired vertically through **through-silicon vias (TSVs)**, copper-filled holes drilled through each die, and placed beside the GPU in the same package (Module 15); it is why memory makers are now central to the AI story. **1β/1γ** ("one-beta", "one-gamma") are the DRAM makers' names for their newest process generations, roughly 12–13 nm-class, the only lines that can make current HBM. **Back-end** is packaging and test; **ATMP** (assembly, test, marking and packaging) is India's term for a back-end plant. **300 mm capacity** counts wafer starts on today's standard 300 mm wafers. The numbers below are approximate capacity or revenue shares as of 2024–2025.
+Selected regional roles help explain the industry's connections. The table mixes physical production, company revenue and demand indicators, each with its own denominator; it is not a map of where every factory sits. Four terms before the table. **High bandwidth memory (HBM)** is a stack of 8–16 DRAM dies wired vertically through **through-silicon vias (TSVs)**, copper-filled holes drilled through each die, and placed beside the GPU in the same package (Module 15); it is why memory makers are now central to the AI story. **1β/1γ** ("one-beta", "one-gamma") are the DRAM makers' names for their newest process generations, roughly 12–13 nm-class, the only lines that can make current HBM. **Back-end** is packaging and test; **ATMP** (assembly, test, marking and packaging) is India's term for a back-end plant. **300 mm capacity** counts wafer starts on today's standard 300 mm wafers. The numbers below are approximate capacity or revenue shares as of 2024–2025.
 
-| Region | What it dominates | Approximate share | Key firms and sites |
+| Region | Major roles | Approximate share (denominators differ) | Key firms and sites |
 |---|---|---|---|
-| Taiwan | Foundry wafers; the most advanced logic; advanced packaging | ~60–70% of foundry revenue; ~90% of ≤5 nm-class logic wafers; ~90%+ of CoWoS-class packaging | TSMC (Hsinchu, Taichung, Tainan, Kaohsiung), UMC, PSMC, VIS, ASE, MediaTek |
+| Taiwan | Foundry wafers; the most advanced logic; advanced packaging | ~60–70% of foundry revenue; ~90% of ≤5 nm-class logic wafers; concentrated TSMC CoWoS production | TSMC (Hsinchu, Taichung, Tainan, Kaohsiung), UMC, PSMC, VIS, ASE, MediaTek |
 | South Korea | Memory | ~70% of DRAM revenue, ~50% of NAND, ~75–80% of HBM (SK hynix ~55–60%, Samsung ~20%) | Samsung (Pyeongtaek, Hwaseong, Giheung), SK hynix (Icheon, Cheongju, Yongin cluster under construction) |
 | Japan | Materials and specialty equipment | ~50% of materials value; ~90% of resists; ~55% of 300 mm wafers; ~25–30% of equipment | Shin-Etsu, SUMCO, JSR, TOK, Hoya, TEL, Screen, Advantest, Disco, Lasertec, Ajinomoto |
 | Netherlands | Lithography | 100% of EUV, ~85–90% of immersion DUV; ALD (ASM); hybrid bonding (Besi) | ASML (Veldhoven), ASM International, Besi |
 | United States | Design, EDA, most non-litho equipment, some leading-edge fabs | ~50% of chip revenue by headquarters; ~70% of EDA; ~40% of equipment; ~10–12% of global fab capacity | NVIDIA, AMD, Broadcom, Qualcomm, Apple, Intel (Arizona, Oregon, Ohio), Micron (Idaho, New York), TI, AMAT, Lam, KLA, Synopsys, Cadence |
 | Germany | EUV optics, chemicals, power semiconductors | Sole EUV optics source; ~2–3% of fab capacity | Zeiss SMT (Oberkochen), Trumpf (Ditzingen), Infineon (Dresden), GlobalFoundries Dresden, ESMC (2027), Merck, Siltronic |
-| China | Demand; mature-node capacity; back-end | ~30% of chip demand (higher including chips re-exported in electronics); ~25% of 300 mm capacity in 2026 (SEMI; mostly ≥28 nm); ~35–40% of equipment purchases in 2024–25; ~30% of OSAT | SMIC, Hua Hong, CXMT, YMTC, Huawei/HiSilicon, Naura, AMEC, JCET |
+| China | Chip design, foundries, memory, materials, equipment, packaging and demand | ~30% of chip demand (higher including chips re-exported in electronics); ~25% of 300 mm capacity in 2026 (SEMI; mostly ≥28 nm); ~35–40% of equipment purchases in 2024–25; ~30% of OSAT | SMIC, Hua Hong, CXMT, YMTC, Huawei/HiSilicon, Naura, AMEC, JCET |
 | Malaysia, Vietnam, Philippines, Singapore | Assembly and test; some mature fabs | Malaysia ~13% of global back-end; Singapore ~10% of global fab output (mostly mature) | Intel Penang, Infineon Kulim, Micron Singapore, GlobalFoundries Singapore, Amkor Vietnam |
 | India | Emerging fabs and OSATs | Negligible today; first 28 nm-class fab ~2026–27 | Tata/PSMC Dholera, Micron Sanand ATMP, Tata Assam OSAT |
 
-The map has a structure worth stating plainly: design is American, lithography is Dutch and German, materials are Japanese, memory is Korean, leading-edge logic is Taiwanese, and the largest single market is Chinese. No region can make a leading-edge chip alone; the United States, for all its design strength, has no EUV tools of its own making, no mask blanks, no resist to speak of, and ~10% of world fab capacity. This mutual dependence is the basis of both the export-control regime (the US can weaponize the choke points its allies control) and the pushback against it (each ally's firms lose Chinese revenue when it does).
+The table describes concentrations, not national monopolies over entire kinds of engineering. Memory also comes from US, Japanese and Chinese suppliers; design, manufacturing, materials and equipment cross many borders. Revenue assigned to a company's headquarters is not a map of its factories, and purchases by electronics assemblers are not the same as final consumption. The operational question is where a particular qualified process runs and what it depends on. Export controls act on specific technologies, transactions and entities within that network, while industrial policy and commercial investment can change its shape.
 
 How did the map get this way? By decisions made 40 years ago that the learning curve then locked in. In the 1980s Japan's NEC, Toshiba and Hitachi took the DRAM market from the American firms that invented it, and the materials suppliers that grew up around those fabs (resists, wafers, gases, mask blanks) stayed after Japan's DRAM makers lost to Korea in the 1990s. Korea's position came from two **chaebol** (family-controlled conglomerates), Samsung and what became SK hynix, betting on memory and investing through every bust when rivals stopped, which is what a commodity with 2–3-year capacity lags rewards. Taiwan's research institute **ITRI** spun out TSMC in 1987 under Morris Chang, and the pure-play foundry let American designers give up their fabs, creating the fabless layer and the volume flywheel at once. ASML was spun out of Philips in 1984 and won the EUV race in the 2000s partly because its US rivals had left lithography. The United States kept what did not need a fab: design, EDA, and most tools that do not involve the lens. Every later policy in this module is an attempt to move something on this map against the grain of those decisions.
 
@@ -11317,7 +11415,7 @@ The whole 2024–28 build plan of TSMC, SK hynix, Micron and ASML is sized again
 
 ## Taiwan Concentration Risk
 
-Taiwan makes ~90% of the world's most advanced logic chips and ~90% of CoWoS-class packaging inside a 400 km long island on the Pacific Ring of Fire, across a strait from a government that has never renounced the use of force. This matters more than any other concentration in the chain because of time: a fab cannot be replaced in less than 2–3 years, so any interruption longer than a fab's inventory is felt by every electronics product on earth. The risk scenarios divide by mechanism.
+Taiwan hosts a large concentration of advanced logic and TSMC's CoWoS operations. CoWoS is a particular process family, not a name for every supplier's advanced packaging. Earthquakes, utility interruptions, trade restrictions or armed conflict can disrupt production through different mechanisms. The impact depends on the affected factories, qualified alternate capacity, inventories and transport routes; it should not be reduced to a single percentage or a guaranteed recovery time. The scenarios below distinguish those mechanisms.
 
 **Earthquakes** are the frequent, manageable case. Taiwan's fabs are built on **base isolation** (the building sits on flexible bearings so the ground moves underneath it) and dampers, and tools have automatic shutdown on seismic triggers (the wafer inside a lithography tool during a quake is scrapped, but the tool is protected). On April 3, 2024 a magnitude 7.4 earthquake struck off Hualien; TSMC reported that overall tool recovery exceeded 70% within 10 hours and 80% within a day, with fabs at full production within ~3 days, and a total impact of ~NT$3 billion (~$90 million) in scrapped wafers and lost output, about 0.4–0.5% of a 2024 quarter's revenue. A magnitude 6.4 quake near Chiayi on January 21, 2025 was costlier (~NT$5.3 billion, ~$160 million net of insurance, recognized in the first quarter of 2025) but still well under 1% of a quarter's revenue. Damage depends on local shaking, distance, depth, soil, construction and utility interruption, not a universal magnitude threshold. TSMC identifies natural disasters as a material disruption risk; its spread across Hsinchu, Taichung, Tainan, and Kaohsiung provides partial mitigation.
 
@@ -11406,46 +11504,45 @@ This is why the Dutch and Japanese alignment matters:
 
 The effect on ASML, AMAT, Lam, and KLA has been real but bounded: each lost ~5–15% of revenue to the controls, offset by the AI capex boom. China remained a very large market for all of them: ASML's China share of system sales was the 41% (2024) and 33% (2025) quoted above, and the US tool makers' China revenue share was ~25–35% in 2024–25. That revenue comes from mature-node fabs (28 nm and above) that the rules deliberately leave open, and that Chinese fabs have been building at an unprecedented rate.
 
-> **What can go wrong:** Evasion, and how it is caught. The routes are known. **Transshipment**: chips sold legally to a Singapore or Malaysian distributor are re-exported to China; Singapore's share of NVIDIA's billed revenue rising far above its data-center footprint in 2024 was the signature. **Cloud rental**: a Chinese firm rents H100 time outside China, which the chip rules do not reach and the rescinded Diffusion Rule tried to. **Shell affiliates**: a listed entity buys through a subsidiary under another name, which the September 2025 50% rule was written to close. Detection comes from teardowns (the TSMC die found in a Huawei Ascend 910B in October 2024 triggered the January 2025 foundry rule), customs data showing volumes out of proportion to a country's compute demand, and Justice Department cases built on payment records, which have produced guilty pleas for H100 smuggling through Singapore and Malaysia. The scale is real but bounded: the FT's ~$1 billion estimate for the three months after the H20 ban is a few percent of NVIDIA's data-center revenue over the period. Chips leak by the thousand; fabs do not leak at all.
+> **What can go wrong:** Confusing a trade statistic with evidence of a violation. Billing address, shipment destination and ultimate use are different facts: NVIDIA explicitly separates them in its FY2025 report. A high share of revenue billed in Singapore does not by itself demonstrate transshipment to a prohibited buyer. Alleged diversion needs transaction-specific evidence and should be distinguished from a proven violation. Remote cloud use also needs its own analysis of the applicable rules, parties and use; it is not automatically equivalent to exporting the underlying chip. Finally, restricting access to equipment, service, parts or software can affect a fab without moving the building itself. [NVIDIA FY2025 report](https://s201.q4cdn.com/141608511/files/doc_financials/2025/annual/NVIDIA-2025-Annual-Report.pdf).
 
 ## China's Response
 
-China's answer to the controls is a state-financed effort to replace every layer of the chain, and its results are uneven by layer for the reason the controls were designed as they were: layers that money and time can replace (mature-node capacity, etch and deposition tools) are being replaced, and layers that depend on a single foreign supplier's learning curve (EUV, HBM, resist, EDA) are not.
+China's semiconductor industry participates in many layers of the global chain, including raw materials, chip design, wafer fabrication, memory, equipment, packaging and systems. Export controls and public funding influence those businesses, but they do not explain every product or customer relationship. To understand what can be built, separate three questions: what has been demonstrated, what is offered commercially, and what is qualified at the required volume and cost.
 
-**Logic**: SMIC's **N+2** process (7 nm-class; N+1, N+2 and N+3 are SMIC's names for its successive DUV-only advanced nodes) runs DUV-only with **quadruple patterning** (one layer's pattern split across four exposures) at critical layers. It appeared in the Huawei Kirin 9000S in the Mate 60 Pro in August 2023, a year after the October 2022 rules, and TechInsights confirmed its dimensions. The follow-on Kirin 9020 (late 2024) was found to be a refined N+2 rather than a true 5 nm node, and SMIC's N+3 "5 nm-class" process, reported in 2025 in some Huawei Ascend and Kirin parts, relies on further DUV multi-patterning at yields analysts put well below 50% (some reports cite ~20–30%), with costs per good die several times TSMC's. Without EUV, each further shrink adds mask layers (Module 07) at rising cost and falling yield, so SMIC can reach 5 nm-class dimensions but not 5 nm economics, and 3 nm-class is not credible on DUV. SMIC's 7 nm-class capacity was estimated at ~30,000–45,000 wspm in 2025, much of it for Huawei.
+**Logic**: physical chip analysis supplies stronger evidence about structures than an unsourced node label. TechInsights identified SMIC's 7 nm-class **N+2** in the Kirin 9000S. Its later N+3 analysis found further DUV-based scaling, while stating that the process remained less scaled than commercial TSMC and Samsung 5 nm processes. That supports a real engineering advance, not an automatic equivalence between the companies' node names. The teardown does not reveal factory-wide yield or manufacturing cost. [N+2 process analysis](https://www.techinsights.com/blog/hisilicon-kirin-9000s-smic-7nm-n2-process-flow-analysis); [N+3 process analysis](https://www.techinsights.com/blog/smic-n3-kirin-9030-pro-process-flow-analysis), checked 14 September 2026.
 
-The mechanism: one EUV exposure prints a fine layer in a single pass. To print it with 193 nm DUV, the pattern is split into four coarser patterns exposed separately, each with its own resist coat, develop, etch, strip and clean, so one EUV layer becomes ~8–10 extra process steps, four masks instead of one, and days of extra cycle time in a flow that already takes ~3 months. Every added step is a chance for a defect, and every added exposure must align to the previous one within a few nanometres. If each extra pass costs ~2–5% of the wafer's dies, then over the ~20 extra passes a 5 nm-class flow needs, (1 − 0.02)<sup>20</sup> ≈ 0.67 and (1 − 0.05)<sup>20</sup> ≈ 0.36: multipatterning alone removes a third to two-thirds of the wafer before any other yield loss. That is the arithmetic behind "well below 50%", and it worsens each node as more layers need splitting.
+The manufacturing mechanism still matters. A fine pattern that cannot be resolved in one DUV exposure can be split across several exposures or generated through spacer-based patterning. Extra deposition, etch, mask and alignment steps increase cycle time and create additional opportunities for variation or defects. But the result depends on the actual layer, design rules, process control and learning. EUV is not a guarantee of one exposure per layer, and “four patterns” does not mean every layer incurs the same yield penalty. The equation (1 − p)^n describes n independent added loss opportunities with probability p; it becomes a prediction only after those assumptions and inputs are measured.
 
-> **Worked example: cost per good die on DUV-only 5 nm (hedged estimate).**
-> Every input below is an estimate marked "~"; the point is the ratio, not the dollars. Take a die with ~100 candidate sites per 300 mm wafer.
-> TSMC N5: manufacturing cost is the wafer price less the gross margin, ~$16,000 × (1 − 0.58) ≈ ~$6,700 per wafer, at a mature yield of ~80%: ~$6,700 ÷ (100 × 0.8) ≈ ~$84 per good die. At TSMC's selling price the customer pays ~$16,000 ÷ 80 ≈ ~$200 per good die.
-> SMIC N+3: a DUV-only 5 nm-class wafer with quadruple patterning has more steps and more masks than N5, so its cost is at least ~$12,000-class even before the fixed cost of a fab that runs far below capacity; at ~30% yield: ~$12,000 ÷ (100 × 0.3) ≈ ~$400 per good die.
-> Ratio: ~$400 ÷ ~$84 ≈ 4–5× TSMC's manufacturing cost per good die, and ~2× what TSMC's customers actually pay after TSMC's margin. Move the yield to ~20% and the ratio at cost is ~7×.
-> Why this caps volume: at ~30% yield each good die consumes more than three wafer starts, so SMIC's ~30,000–45,000 wspm of 7 nm-class capacity delivers the good-die output of a ~10,000–15,000 wspm TSMC line, and each of those wafers is one not made on the mature nodes that earn SMIC's actual margin. Only products the state will pay for regardless of cost (Huawei's Kirin phones, the Ascend accelerators) can absorb a ~$400 die, which is why the output is tens of thousands of wafers a month for a short list of customers rather than a merchant business.
+> **Worked example: how yield changes cost per good die.**
+> Consider two hypothetical production lines, each with 100 candidate dies per wafer. Line A costs $6,700 per wafer and yields 80 good dies, so its manufacturing cost is $6,700 ÷ 80 ≈ $84 per good die. Line B costs $12,000 per wafer and yields 30 good dies, so it costs $12,000 ÷ 30 = $400 per good die, about 4.8 times as much. If B improves to 60 good dies, its cost falls to $200 without changing wafer cost.
+> These are illustrative inputs, not measurements of TSMC or SMIC. A foundry's selling price and company-wide gross margin cannot be used to reconstruct a particular node's manufacturing cost reliably. The lesson is to ask for product-specific yield, utilization and cost evidence before declaring a process commercially competitive or uneconomic.
 
-**AI accelerators**: Huawei's Ascend 910B (SMIC N+2, ~280–350 TFLOPS **BF16**, a 16-bit number format used for AI arithmetic, HBM2E-class memory) and 910C (two 910B dies in one package, roughly H100-class peak but constrained by HBM supply and interconnect) shipped on the order of a few hundred thousand units in 2024–25, with Huawei's September 2025 roadmap announcing the Ascend 950/960/970 series with in-house HBM through 2028. The binding constraints are HBM (China has no volume HBM producer, and the December 2024 rule cut off Samsung's HBM2E exports; CXMT's HBM3 was in sampling as of 2025), SMIC capacity, and CoWoS-class packaging, which Huawei has sourced from domestic OSATs at lower density.
+**AI accelerators**: Huawei's Ascend and Atlas products show why the comparison must extend beyond the transistor. Its September 2025 presentation describes accelerator, memory and interconnect roadmaps and larger connected systems. These are company disclosures, with future milestones distinguished from delivered products. Fair comparisons require the same workload, numerical precision, software maturity, power budget and system scale. A peak arithmetic specification alone neither establishes parity with an NVIDIA GPU nor proves a fixed number of years of delay. [Huawei roadmap](https://www.huawei.com/en/news/2025/9/hc-xu-keynote-speech).
 
-**Memory**: CXMT (ChangXin Memory) reached DDR5 and LPDDR5X on a ~17–18 nm-class node, with capacity estimated at ~200,000+ wspm and ~10–15% of global DRAM wafer capacity by 2025 (though a smaller bit share), and was preparing an IPO; YMTC shipped 232-layer NAND in 2022 and a ~270-layer generation in 2024 using **string stacking** (building a tall 3D NAND stack as two half-height stacks made in sequence, so each etch is shallower, Module 15) and domestic tools where possible, despite Entity Listing since December 2022. Both operate at lower yields and higher cost than the incumbents but are commercially real and have pushed down prices at the low end of the market.
+**Memory**: CXMT lists DDR5 and LPDDR5X products; YMTC develops 3D NAND with Xtacking, which bonds separately processed memory-array and peripheral-circuit wafers. Those are concrete capabilities in different memory markets. Conventional DRAM availability does not establish an HBM supplier's stack yield, interface qualification or shipment volume. Likewise, NAND layer count alone does not determine cost, endurance or speed. The reviewed public product information does not justify a blanket claim that every Chinese memory product has lower yield or higher cost than every incumbent product. [CXMT products](https://www.cxmt.com/en/product.html); [YMTC architecture](https://www.ymtc.com/en/technicalintroduction.html).
 
-**Equipment**: Naura (~¥30 billion revenue in 2024; etch, deposition, clean, furnaces), AMEC (etch, including **capacitor etch**, the deep narrow hole etch that forms a DRAM cell's storage capacitor, for DRAM; sold to TSMC before the controls), Piotech (deposition), ACM Research (clean), Hwatsing (CMP), and SiCarrier (a Shenzhen state-backed firm linked to Huawei that unveiled a broad tool line in 2025) cover deposition, etch, clean and CMP at 28 nm and increasingly at 14/7 nm. Domestic tools were ~15–25% of Chinese fab purchases in 2025, up from ~5% in 2019. Lithography is the gap: SMEE's SSA800 **ArF** immersion scanner (ArF is the argon fluoride laser that produces 193 nm light; nominal 28 nm, with ~90 nm-class **overlay** claims, overlay being how accurately a layer lines up on the one below it; a 2 nm process needs ~1–2 nm, so 90 nm-class is 28 nm-era performance) is not in volume production, and reports of a Huawei-led EUV effort using a **laser-induced discharge plasma (LDP)** source (a cheaper and dimmer way of making EUV light than ASML's laser-produced plasma, Module 08; prototype claims in 2025) remain unverified. Metrology, resist (China relies on JSR, TOK, Shin-Etsu for ArF and EUV resist), and EDA (**Empyrean** and **Primarius**, China's EDA startups, are far behind Synopsys/Cadence) are the other soft spots.
+**Equipment and design tools**: NAURA and AMEC supply process tools; Hwatsing supplies CMP; ACM Research supplies cleaning and plating; Skyverse supplies inspection and metrology. Empyrean supplies circuit-design and foundry-enablement software. An etcher used for one step on an advanced chip does not make its vendor a supplier of the whole fab, just as a useful SPICE simulator does not establish an entire leading-edge digital signoff flow. Qualification needs a product, process step and customer context. Claims about a future scanner also need actual resolution, overlay, throughput and production-use evidence; a chip node label cannot substitute for those measurements.
 
-| Layer | Chinese champion | Gap to leader | Binding constraint |
+**Packaging**: JCET reported XDFOI high-volume production in 2023 and a subsequent manufacturing update in 2024. China therefore belongs in the advanced-packaging discussion as a supplier as well as a customer. XDFOI and CoWoS are different platforms, and neither shared terminology such as “2.5D” nor a production announcement establishes equal package size, density, capacity or qualification for a specific GPU. [JCET production update](https://www.prnewswire.com/news-releases/jcet-q1-2024-revenue-and-net-profit-achieve-double-digit-year-on-year-growth-302126070.html).
+
+| Layer | Representative companies | What the evidence establishes | What needs a separate comparison |
 |---|---|---|---|
-| Logic foundry | SMIC | 7 nm-class in volume, 5 nm-class at low yield; leader at 2 nm | No EUV; yield and cost of DUV multipatterning |
-| AI accelerators | Huawei Ascend | Roughly H100-class peak per package on paper, several years behind on memory and interconnect | HBM supply, SMIC capacity, packaging density |
-| HBM | CXMT (HBM3 sampling, 2025) | No volume product; leaders shipping HBM3E, HBM4 in 2026 | TSV and stacking yield; Samsung HBM2E exports cut off Dec 2024 |
-| DRAM | CXMT | ~17–18 nm-class vs 1β/1γ (~12–13 nm-class) | Tool controls at ≤18 nm half-pitch |
-| NAND | YMTC | ~270 layers vs ~300+; competitive on the low end | Entity Listed since Dec 2022; domestic tools |
-| Deposition, etch, clean, CMP tools | Naura, AMEC, Piotech, ACM, Hwatsing | Capable at 28 nm, partial at 14/7 nm | Process control and the finest-geometry steps |
-| Lithography | SMEE (SSA800) | No volume immersion tool; no EUV | Overlay, source power, optics |
-| Resist | Domestic firms at older wavelengths (248 nm and above) | Dependent on Japan for ArF and EUV resist | Chemistry qualification, decades of learning curve |
-| EDA | Empyrean, Primarius | Usable for mature nodes and analog | No full leading-edge digital flow |
+| Logic foundry | SMIC; Hua Hong in specialty processes | Commercial foundry businesses; teardown-documented advanced SMIC structures | Per-product density, yield, cost, volume and customer qualification |
+| AI accelerators | Huawei / HiSilicon | Ascend/Atlas product and system roadmaps | Delivered workload performance, power, software and supply |
+| DRAM and HBM | CXMT; HBM discussed separately in Module 15 | Published DDR/LPDDR products | HBM stack qualification and volume cannot be inferred from DDR production |
+| NAND | YMTC | Xtacking NAND architecture and products | Density, performance, endurance, cost and qualified customer uses |
+| Process tools | NAURA, AMEC, Piotech, ACM Research, Hwatsing | Etch, deposition, cleaning, plating or CMP portfolios, depending on supplier | Qualified operation and throughput at the customer's required layer |
+| Inspection and metrology | Skyverse | Wafer-inspection and optical-metrology product families | Sensitivity, repeatability, throughput and qualification |
+| Lithography | SMEE; ASML, Nikon and Canon in the wider market | Distinct lithography suppliers and product classes | Published scanner specifications and demonstrated production use; no equivalence inferred from announcements |
+| EDA | Empyrean, Primarius | Design, modeling and verification products | Particular PDKs, design classes and complete qualified flows |
+| Packaging | JCET, Tongfu, Huatian | Packaging-and-test suppliers; JCET reports XDFOI production | Platform-specific capability, manufacturing sites and available qualified capacity |
 
 **Money**: the National Integrated Circuit Industry Investment Fund ("Big Fund") raised ~¥139 billion (2014), ~¥204 billion (2019), and ¥344 billion (~$47.5 billion, May 2024) for its third phase, on top of provincial funds, subsidized loans, and tax holidays; total state support for the sector is estimated at over $150 billion since 2014. China bought ~$50 billion of semiconductor equipment in 2024 (SEMI, all types), ~42% of the world total and the largest single market for ASML, AMAT, Lam, and TEL; in 2025 it spent a flat ~$49 billion, which fell to ~36% of a larger world total as Taiwan and Korea spending surged. Chinese 300 mm capacity is on track to be ~25% of the world's in 2026 (SEMI) and roughly a third of mature-node capacity by 2027, almost all at 28 nm and above, which is beginning to depress mature-node pricing worldwide.
 
 **Counter-controls**: China restricted gallium and germanium exports (July 2023; ~98% and ~60% of world supply respectively), graphite (Dec 2023), antimony (Aug 2024), banned gallium/germanium/antimony to the US outright (Dec 2024), controlled seven medium and heavy rare earths (April 2025), and on October 9, 2025 announced sweeping rare-earth controls with an extraterritorial clause covering foreign products containing Chinese rare-earth content, then suspended those October measures for one year in November 2025 under the trade truce, issuing general licenses for US end users (as of late 2025). China also opened antitrust probes into NVIDIA (2024–25) and Qualcomm (October 2025) and an anti-dumping probe into US analog chips (Sept 2025). Gallium matters for GaN and GaAs (Module 04), germanium for SiGe and infrared optics; neither stops a silicon fab, but both raise costs for the compound-semiconductor and defense sub-tiers.
 
-> **Why it matters downstream:** The three tool thresholds in the October 2022 rule (logic at ≤16/14 nm with non-planar transistors, DRAM at ≤18 nm half-pitch, NAND at ≥128 layers) map directly onto process steps in Modules 07–12. "Non-planar" means FinFET and GAA (Module 11), so the rule bites at fin and gate patterning, the self-aligned multipatterning of Module 07 and the ALD gate stacks of Module 06; anything SMIC does there must run on tools it already owned, older immersion scanners it may still buy, or Naura and AMEC chambers. For CXMT the 18 nm line falls on the capacitor etch and the finest DUV layers of the DRAM flow (Module 15); for YMTC the 128-layer line falls on the high-aspect-ratio channel etch (Module 09) that Lam and TEL dominate, which is why string stacking, two shallower etches instead of one deep one, is an engineering response to a legal threshold.
+> **Why it matters downstream:** The manufacturing thresholds in the October 2022 rule (logic at ≤16/14 nm with non-planar transistors, DRAM at ≤18 nm half-pitch, NAND at ≥128 layers) connect legal coverage to technologies explained in Modules 07–15. They are not a recipe-by-recipe map of which tools a company owns or can acquire. Non-planar transistors require demanding patterning and film control; DRAM capacitors and NAND channels require deep etches. String stacking reduces the depth of each NAND etch and is useful across suppliers for that physical reason. Export controls can change procurement choices, but the existence of an engineering technique should not be attributed to a legal threshold without evidence.
 
 ## Industrial Policy Elsewhere
 
@@ -11535,16 +11632,16 @@ Because so much of this module is estimates, knowing the sources and their biase
 
 - Chips were a ~$792 billion business in 2025; equipment (~$135 billion) and materials ($73.2 billion) are fractions of it, so tool makers live on the second derivative of chip demand: orders move with the change in expected growth, not with sales.
 - Every layer is concentrated because qualification makes switching suppliers cost months; equipment and EDA earn the highest gross margins, OSATs the lowest.
-- The map: design American, lithography Dutch and German, materials Japanese, memory Korean, leading-edge logic Taiwanese, largest market Chinese; no region can build a leading-edge chip alone.
+- Regional concentrations matter, but headquarters, fab location, customer billing and final demand are different maps. Suppliers in China and elsewhere contribute across several layers of the chain.
 - A 2 nm fab costs ~$20–30 billion, ~80% of it tools depreciated over 5 years; depreciation alone is ~$8,000 per wafer at 90% utilization and ~$14,000 at 50%, which is why utilization, not price, sets foundry margins and why foundries discount old nodes rather than idle them.
 - Cost per transistor has been roughly flat since 28 nm because wafer price rises ~1.5–1.8× per node while density rises ~1.5–1.7×, and SRAM, analog and I/O do not shrink at all; Moore's law survives as transistors per package, paid for with chiplets and larger packages.
 - Rock's law (fab cost doubling every ~4 years) is why only TSMC, Samsung and Intel remain at the leading edge, and TSMC's volume flywheel keeps widening its lead.
 - Memory is a commodity built with 2–3-year capacity lags, so it swings between 50–70% price collapses and doublings; the 2025–26 spike came from HBM's 2–3× wafer intensity diverting 1β/1γ DRAM capacity away from commodity parts.
 - AI demand is one line item, hyperscaler capex (~$400 billion in 2025, ~$720–745 billion guided for 2026), and the binding constraints have been CoWoS, then HBM, then power; front-end wafers for an entire GPU generation are ~1–2% of TSMC's output.
-- Taiwan makes ~90% of ≤5 nm-class logic and ~90%+ of CoWoS-class packaging; the April 2024 earthquake cost ~0.4–0.5% of a 2024 quarter's revenue; a blockade would idle the fabs within weeks by starving them of consumables without damaging them, and a war would remove ~90% of leading-edge output for years.
+- Taiwan hosts concentrated advanced-logic and TSMC CoWoS capacity. Disruptions can affect consumables, utilities or logistics without destroying equipment; substitution depends on actual factories and qualified processes.
 - Diversification is real but partial: Arizona N4 in volume, N3 in 2027, N2 ~2028–29, eventually ~30% of TSMC's 2 nm-and-beyond capacity; after the 35% credit and grants a US fab's net capex is below Taiwan's unsubsidized figure, and the lasting penalties are ~5–20% per wafer, talent, and a one-node lag.
-- US export controls work through ECCN thresholds (TPP ≥ 4,800, or ≥ 1,600 with density ≥ 5.92 TPP/mm²; H100 ≈ 15,800, H20 ≈ 2,370), the Entity List, the Foreign Direct Product Rule and tool controls coordinated with the Netherlands and Japan; tool controls bind because a scanner cannot be smuggled or serviced covertly.
-- China can make 7 nm- and 5 nm-class chips on DUV multipatterning at ~4–5× TSMC's cost per good die and a fraction of its yield; it has no EUV, no volume HBM and no CoWoS-class packaging at scale, but ~25% of world 300 mm capacity at mature nodes.
+- US export controls work through ECCN thresholds (TPP ≥ 4,800, or ≥ 1,600 with density ≥ 5.92 TPP/mm²; H100 ≈ 15,800, H20 ≈ 2,370), the Entity List, the Foreign Direct Product Rule and tool controls coordinated with the Netherlands and Japan; equipment access, spare parts and service can constrain operations as well as initial tool purchases.
+- SMIC has teardown-documented DUV-based advanced logic, while Chinese firms also supply memory, process equipment, design tools and packaging. Node labels and roadmaps do not establish production yield, cost or qualification; compare specific products and processes.
 - The sole-source points that would take longest to replace (Zeiss optics, ASML, Lasertec, Ajinomoto ABF) sit in Germany, the Netherlands and Japan, concentrated by economics, not policy: a market of ~50 optics sets a year cannot support a second supplier.
 - People, not money, gate every diversification program: a node bring-up team is a few thousand people worldwide, and a new fab's ~3,000 staff take 12–18 months to train on a running line.
 
@@ -11562,14 +11659,14 @@ Because so much of this module is estimates, knowing the sources and their biase
 | Capex per 1,000 wspm | ~$100M at 28 nm to ~$500M at 2 nm | Why only three firms can afford 2 nm; depreciation is ~$8,000 of a $30,000 wafer |
 | Design cost of a large SoC | ~$50M at 28 nm; ~$540M at 5 nm; ~$590M at 3 nm; ~$700–800M at 2 nm | Only products with billions of revenue can use the leading edge |
 | Hyperscaler capex (top 4) | ~$230B (2024); ~$400–410B (2025); ~$720–745B guided for 2026 | The line item the 2024–28 capacity plan is sized against (as of August 2026) |
-| Taiwan share of ≤5 nm-class logic | ~90% | Plus ~90% of CoWoS-class packaging; a blockade removes both within weeks |
+| Taiwan share of ≤5 nm-class logic | ~90% | A separate concentration exists in TSMC CoWoS; interruption severity and recovery depend on the affected sites and supplies |
 | Korea share of DRAM / HBM | ~70% / ~75–80% | SK hynix ~55–60% of HBM; the AI build depends on Korea as much as on TSMC |
 | China share of equipment purchases | ~42% (2024, ~$50B); ~36% (2025, ~$49B) | What tool makers stand to lose from tighter controls; almost all mature-node and legal |
 | China share of world 300 mm capacity | ~25% (2026, SEMI); ~1/3 of mature-node capacity by 2027 | Mostly ≥28 nm: the controls redirected China's money into open nodes, now depressing mature-node prices |
 | CHIPS Act | $39B grants; ITC 25% → 35% (property in service after 2025) | The 35% credit makes a US fab's net capex lower than Taiwan's; grants did not buy customers |
 | US government stake in Intel | ~10% for $8.9B (433.3M shares at $20.47) | The state has a direct stake in Intel Foundry surviving (Aug 2025) |
 | TSMC Arizona commitment | $165B; P1 N4 in HVM (Q4 2024); P2 N3 targeted 2H 2027; P3 N2/A16 ~2028–29 | Largest foreign investment in US history; one node behind Taiwan by construction (as of mid-2026) |
-| Big Fund III | ¥344B (~$47.5B), May 2024 | Money is not China's constraint; EUV, HBM and resist are |
+| Big Fund III | ¥344B (~$47.5B), May 2024 | Funding is one input; technology, qualification, talent and customers also matter |
 | Oct 2022 tool thresholds | Logic ≤16/14 nm non-planar; DRAM ≤18 nm half-pitch; NAND ≥128 layers | Historical manufacturing thresholds; later chip, end-use, entity and licensing rules are separate and changed over time |
 | H20 / H200 China arrangements | 15% revenue share (Aug 2025); 25% for H200 (Dec 2025–Feb 2026), only token shipments | BIS licensing conditions and customer procurement restrictions both matter; practical shipment constraints require dated evidence |
 | Hualien earthquake (Apr 3, 2024) | M7.4; >70% tool recovery in 10 h; ~NT$3B loss | ~0.4–0.5% of a 2024 quarter's revenue; future damage depends on local shaking and infrastructure |
@@ -11583,19 +11680,19 @@ Because so much of this module is estimates, knowing the sources and their biase
 | TSMC | Taiwan | Leading-edge foundry, CoWoS/SoIC packaging | ~67–70% of foundry; ~90%+ at the leading edge |
 | Samsung Foundry | Korea | SF3/SF2 GAA foundry; Taylor TX (Tesla AI6) | #2 foundry (~7–8%) |
 | Intel Foundry | USA | 18A in HVM (Fab 52, Arizona); 14A with High-NA; ~10% US-government owned | #3 leading-edge; few external customers as of 2026 |
-| SMIC | China | 7 nm-class (N+2) and 5 nm-class DUV multi-patterning; Huawei's foundry | #3 foundry by revenue (~5–6%); Entity Listed |
+| SMIC | China | Mature, specialty and advanced logic; N+2/N+3 identified in teardowns | Commercial foundry; dimensions and private manufacturing economics require distinct evidence |
 | GlobalFoundries / UMC | USA / Taiwan | Mature and specialty nodes (12 nm and above) | ~4–5% each |
 | NVIDIA | USA | Fabless; ~80%+ of merchant AI accelerators; ~60% of CoWoS | Leader |
 | AMD, Broadcom, Qualcomm, Apple, MediaTek | USA / Taiwan | Fabless and captive designers; TSMC's main N3/N2 customers | Top fabless |
 | Synopsys, Cadence, Siemens EDA | USA / Germany | EDA and IP | ~85% of EDA combined |
 | Arm | UK | CPU architecture IP | Dominant in mobile and AI-server CPUs |
 | SK hynix, Samsung, Micron | Korea / Korea / USA | DRAM, NAND, HBM | HBM ~55–60% / ~20% / ~20% (2025) |
-| CXMT, YMTC | China | DRAM (DDR5, LPDDR5X, HBM3 sampling), NAND (~270 layers) | ~10–15% of DRAM wafer capacity; Entity Listed (YMTC) |
+| CXMT / YMTC | China | DDR/LPDDR DRAM / Xtacking 3D NAND | Distinct memory product suppliers; HBM capability needs separate evidence |
 | Huawei / HiSilicon | China | Kirin SoCs, Ascend 910B/C/950 accelerators | Leading Chinese AI chip designer; Entity Listed |
 | ASML | Netherlands | EUV (sole), immersion DUV (~85–90%) | Monopoly / leader |
 | Applied Materials, Lam Research, KLA | USA | Deposition/etch/CMP/implant; etch/deposition; process control | #1 / #3–4 / #5 by revenue; ~55% of process control (KLA) |
 | Tokyo Electron, Screen, Advantest, Disco, Lasertec | Japan | Tracks, etch, furnaces; clean; test; dicing; EUV mask inspection | #4 overall (TEL); leaders in each niche |
-| Naura, AMEC, SiCarrier, SMEE | China | Domestic etch, deposition, clean, lithography (28 nm claims) | ~15–25% of Chinese tool purchases; no EUV |
+| NAURA, AMEC, Hwatsing, ACM Research, Skyverse | China / US-China (ACM) | Etch, deposition, CMP, cleaning, plating, inspection and metrology, depending on supplier | Product- and process-specific equipment capabilities |
 | Zeiss SMT, Trumpf, Cymer | Germany / Germany / USA | EUV optics, drive laser, source | Sole suppliers |
 | Shin-Etsu, SUMCO, JSR, TOK, Hoya, AGC, Ajinomoto | Japan | Wafers, resists, mask blanks, ABF | Leaders; ~90% of resist, ~95% of high-performance substrate insulation (Ajinomoto company claim) |
 | Rapidus | Japan | 2 nm foundry startup (IBM process), Hokkaido | Pre-production; HVM target FY2027 |
@@ -11604,13 +11701,13 @@ Because so much of this module is estimates, knowing the sources and their biase
 
 ## Common Misconceptions
 
-- **"Export controls have failed because Huawei made a 7 nm phone chip."** → The 2022–24 controls targeted AI compute at scale, not the existence of a 7 nm die. SMIC can make 7 nm-class and even 5 nm-class parts on DUV, but at yields and costs that limit volume to tens of thousands of wafers a month, and China still has no EUV, no volume HBM, and no CoWoS-class packaging at scale. The controls slowed China by an estimated several years at the leading edge while accelerating its mature-node and tool self-sufficiency, which is a mixed result, not a null one.
+- **"One working chip proves that export controls either succeeded or failed."** → A teardown establishes what was built. Assessing a policy also requires evidence about production volume, cost, access to equipment and service, substitutions, and effects on customers and suppliers. The existence of an advanced chip does not settle those questions; neither does an unsupported estimate of its yield.
 - **"TSMC has 90% market share."** → It has ~67–70% of foundry revenue and ~90%+ of wafers at 5 nm-class and below. The two numbers answer different questions, and confusing them exaggerates TSMC's position in mature nodes (where China and UMC are large) and understates it at the leading edge.
-- **"Moving production to the US is uneconomic because US wafers cost 50% more."** → Construction cost is ~1.5× or more, but tools (~80% of capex) cost the same everywhere, and after the 35% tax credit and grants a US fab's net capex is below Taiwan's unsubsidized figure. The persistent operating penalty is ~5–20% per wafer, which customers seeking US origin have been willing to pay. The real barriers are talent, cycle time, and TSMC's preference to develop each node at home.
+- **"Moving production to the US is uneconomic because US wafers cost 50% more."** → Construction cost is ~1.5× or more, but tools (~80% of capex) cost the same everywhere, and in the worked example, the 35% tax credit and grants bring US net capex below Taiwan's unsubsidized figure. Actual projects depend on their eligible costs and support terms. The persistent operating penalty is ~5–20% per wafer, which customers seeking US origin have been willing to pay. The real barriers are talent, cycle time, and TSMC's preference to develop each node at home.
 - **"Cost per transistor is still falling ~30% a year."** → It has been roughly flat since ~28 nm. Density still rises ~1.5–1.7× per node, but wafer price rises nearly as fast, SRAM has stopped scaling, and design costs have reached $500 million or more per chip at 3 nm. Moore's law survives as transistors per package, financed by chiplets and larger packages, not as cheaper transistors.
-- **"The AI constraint is GPU die supply from TSMC's fabs."** → Front-end wafer capacity has exceeded accelerator demand throughout; a whole GPU generation's compute dies are ~1–2% of TSMC's wafer output. The bottlenecks have been CoWoS packaging (2023–25), HBM (2025–26), and increasingly data-center power and grid interconnection.
+- **"The AI constraint is always GPU die supply from TSMC's fabs."** → A working system needs logic dies, HBM, packaging, test, power and networking together. Packaging, memory or data-center power can constrain deliveries even when logic-wafer capacity is available. Identify the limiting stage for the product and period being discussed, rather than treating any one stage as a permanent bottleneck.
 - **"A fab is worth building anywhere with enough subsidy."** → Subsidies reduce capex, but the fab's economics are set by utilization: at 50% loading a leading-edge fab's gross margin roughly halves. Fabs without customers (Samsung Taylor 2022–24, Intel's external foundry, JASM 2's delays) are the recurring failure mode of industrial policy, not construction cost.
-- **"China's ~$50 billion a year of tool purchases proves the controls leak."** → Almost all of it is deposition, etch, clean and older lithography tools for 28 nm-and-above fabs, which the rules deliberately allow; the controlled items (EUV, the most capable immersion DUV, advanced-node etch and deposition, HBM) are what China is not buying. The controls redirected China's spending; they did not fail to stop it.
+- **"China's aggregate tool purchases prove that export controls are being violated."** → Total purchases combine many tool classes, manufacturing applications and transactions. They do not identify the controlled item, recipient, end use or authorization. Assessing compliance requires those details; spending alone proves neither a violation nor that the policy has achieved its objectives.
 
 ## Where This Fits in the Supply Chain
 
@@ -11633,6 +11730,8 @@ Module 19 ended with an NVIDIA rack leaving a Foxconn or Quanta line, the physic
 
 - [SEMI July 14, 2026 equipment forecast and reported 2025 WFE base](https://www.semi.org/en/semi-press-release/global-semiconductor-equipment-sales-forecast-to-reach-a-record-229-billion-dollars-in-2028-semi-reports).
 - [BIS October 2022 public briefing: historical manufacturing thresholds](https://www.bis.gov/media/1383).
+
+- Capability and framing review, 14 September 2026: [NAURA products](https://www.naura.com/index.html?l=english), [AMEC product brochure](https://static.amec-inc.com/uploads/f64b9adcd24b400caf459c98af4e473e.pdf), [Hwatsing CMP](https://www.hwatsing.com/en/product_detail/757.html), [ACM Research processes](https://www.acmr.com/), [Skyverse products](https://www.skyverse.cn/?trk=public_post-text), [Empyrean foundry tools](https://www.empyrean-tech.com/solutions/index-18.html), [Hua Hong 2025 report](https://www.hkexnews.hk/listedco/listconews/sehk/2026/0409/2026040901618_c.pdf). These identify roles; no common ranking or complete advanced-node qualification is inferred.
 
 ---
 
@@ -12064,11 +12163,11 @@ A useful way to hold this in mind: a Blackwell package is about 4 × 10⁶ metal
 
 Numbers are compiled from foundry disclosures at IEDM/VLSI, WikiChip, TechInsights and SemiAnalysis teardowns, and the course's own Module 11 and Module 20. Values marked ~ are estimates; foundries stopped publishing pitches around the 7 nm generation. Density is for the high-density library at 100% utilization; real chips reach 50–70% of it. Wafer prices are list-price estimates as of ~2025.
 
-**How to read this table.** *Marketing node* is the name the foundry sells the process under; it is a label, not a length. *Foundry* is who runs it. *HVM year* is when it reached high-volume manufacturing (see HVM in the Glossary), not when it was announced. *Transistor* is the device type: planar, FinFET, or nanosheet gate-all-around, with vendor names where the vendor uses them. *CPP* is the contacted poly pitch, the gate-to-gate spacing in nanometres (see CPP). *Min MP* is the tightest metal pitch, usually M0 or M1 (see Metal pitch). *Fin/sheet pitch* is the fin-to-fin spacing for FinFET nodes; "sheet" means the node uses nanosheets, which have no fin pitch. *Density* is millions of transistors per mm² for the high-density (HD) standard-cell library at 100% utilization (see MTr/mm²); "measured" means a TechInsights teardown of a real chip, "claimed" means the foundry's own marketing figure, "est." means an analyst reconstruction. *Litho* says which layers use EUV, and how many; "EUV LELE" means EUV double patterning by two litho-etch passes (see LELE). *Approx. wafer price* is the list-price estimate; "internal" means Intel did not sell those wafers to outside customers, so no price exists.
+**How to read this table.** *Marketing node* is the name the foundry sells the process under; it is a label, not a length. *Foundry* is who runs it. *HVM year/status* separates a reported production date from a future target or estimate. A target is not evidence of achieved high-volume manufacturing (see HVM in the Glossary); this distinction applies to every foundry in the table. “—” means the cited sources do not establish a value here, not zero or an absence of capability. *Transistor* is the device type: planar, FinFET, or nanosheet gate-all-around, with vendor names where the vendor uses them. *CPP* is the contacted poly pitch, the gate-to-gate spacing in nanometres (see CPP). *Min MP* is the tightest metal pitch, usually M0 or M1 (see Metal pitch). *Fin/sheet pitch* is the fin-to-fin spacing for FinFET nodes; "sheet" means the node uses nanosheets, which have no fin pitch. *Density* is millions of transistors per mm² for the high-density (HD) standard-cell library at 100% utilization (see MTr/mm²); "measured" means a TechInsights teardown of a real chip, "claimed" means the foundry's own marketing figure, "est." means an analyst reconstruction. *Litho* says which layers use EUV, and how many; "EUV LELE" means EUV double patterning by two litho-etch passes (see LELE). *Approx. wafer price* is the list-price estimate; "internal" means Intel did not sell those wafers to outside customers, so no price exists.
 
 > **Intuition:** A node name is a model year, not a measurement. Nothing on an N2 wafer is 2 nm across: the gate is ~12–16 nm long, the gates sit ~45 nm apart, the tightest wires ~23 nm apart. The three physical numbers that matter are CPP, MP, and MTr/mm², and even MTr/mm² is a library figure that real chips reach only 50–70% of, because real chips leave routing channels, memory, and analog blocks between the standard cells. When two nodes from different foundries are compared, compare those three numbers, not the names; Intel 7 and TSMC N7 have similar pitches, and Intel 18A's 32 nm metal pitch is looser than N3E's 23 nm.
 
-| Marketing node | Foundry | HVM year | Transistor | CPP (nm) | Min MP (nm) | Fin/sheet pitch (nm) | Density (MTr/mm², HD) | Litho (EUV layers) | Approx. wafer price |
+| Marketing node | Foundry | HVM year/status | Transistor | CPP (nm) | Min MP (nm) | Fin/sheet pitch (nm) | Density (MTr/mm², HD) | Litho (EUV layers) | Approx. wafer price |
 |---|---|---|---|---|---|---|---|---|---|
 | 28 nm (28HPM) | TSMC | 2011 | Planar HKMG | ~117 | ~90 | n/a | ~12–15 | DUV ArFi, 0 EUV | ~$2.5–3k |
 | 16 nm (N16) | TSMC | 2015 | FinFET | 90 | 64 | 48 | ~29 | DUV ArFi, LELE, 0 EUV | ~$4–5k |
@@ -12090,7 +12189,7 @@ Numbers are compiled from foundry disclosures at IEDM/VLSI, WikiChip, TechInsigh
 | SF3 (3GAP) | Samsung | 2024 | MBCFET | ~45 | ~28 | sheet | ~170 | EUV | ~$18–20k |
 | SF2 | Samsung | 2025–26 | MBCFET 2nd gen | ~45 | ~28 | sheet | ~200–230 est. | EUV | ~$25k est. |
 | N+2 ("7 nm class") | SMIC | 2023 | FinFET | ~57 | ~40 | ~30 | ~90 | DUV SAQP only (no EUV; export controls) | ~$10–12k est. |
-| N+3 ("5 nm class") | SMIC | 2024–25 | FinFET | ~51–54 | ~30–36 | ~28 | ~120–130 est. | DUV multi-patterning, low yield | n/a |
+| N+3 | SMIC | — (2025 chip teardown) | FinFET | — | — | — | — | DUV multi-patterning | — |
 | 2 nm | Rapidus | pilot 2025, HVM target 2027 | Nanosheet GAA (IBM-derived) | ~45 est. | ~24 est. | sheet | ~200+ target | EUV NXE:3800E | n/a |
 
 Legend for the vendor names in the Transistor column: **FinFlex** and **NanoFlex** are TSMC's options to mix fin counts (N3) or nanosheet widths (N2) cell by cell; **MBCFET** (Samsung) and **RibbonFET** (Intel) are those companies' names for the nanosheet gate-all-around transistor; **PowerVia** is Intel's backside power delivery, **PowerDirect** its planned second generation with direct contacts to the transistors, and **Super Power Rail** is TSMC's backside power scheme on A16. All are defined in the Glossary.
@@ -12102,6 +12201,8 @@ Legend for the vendor names in the Transistor column: **FinFlex** and **NanoFlex
 Three things follow from those two calculations. First, CPP has been essentially flat at 45–50 nm since N5 because it must fit a gate, two spacers, and a contact; remaining density comes from metal pitch, cell height (track reduction, backside power), and DTCO. Second, density gain per node has fallen from ~2× (N16 to N10 to N7) to ~1.15–1.3× (N3E to N2), while wafer price has risen ~1.5× per node, which is why cost per transistor has stopped falling at the leading edge, as the second worked example shows. Third, the EUV layer count roughly doubles every two nodes, and each EUV layer costs 2–3× a DUV layer in tool time, so litho's share of wafer cost has grown from ~25% at N16 to ~35–40% at N2.
 
 > **What can go wrong:** Reading a density claim. Three traps catch most readers. The first is comparing a foundry's library figure (100% utilization, HD cells, often a NAND2-and-flip-flop weighted average) with a teardown of a real chip, which is a different quantity by the 50–70% factor above; the H100 example shows the gap. The second is comparing an SRAM-heavy die with a logic-heavy one: SRAM bit cells have barely shrunk since N5, so a die that is half cache scales worse than the library number suggests, while a pure-logic block can exceed it. The third is treating "claimed" and "measured" as the same: N5's 171 claimed against 138 measured is the standard example, and the N2 figures in the table are marked "est." because they rest on analyst reconstruction rather than a published teardown. For any density number, ask which library, what utilization, and who measured it.
+
+TechInsights identifies N+3 as further scaling of SMIC's 7 nm-class technology and reports that it remains less scaled than TSMC and Samsung 5 nm processes. The unspecified cells above avoid presenting unverified pitches, density or production yield as measured facts. A physical-chip teardown and a high-volume-production announcement establish different things. [TechInsights N+3 process analysis](https://www.techinsights.com/blog/smic-n3-kirin-9030-pro-process-flow-analysis).
 
 ## Master Process Flow
 
@@ -12341,16 +12442,17 @@ What comes in is finished GPU packages; what goes out is a running, monitored da
 
 ## Who Buys From Whom
 
-An adjacency list for the key companies. The list follows the chain from raw materials to the data center; a company's main customers are named where public, otherwise the customer class is given.
+An adjacency list for representative companies. The list follows the chain from raw materials to the data center. Grouped entries show supplier and customer categories, not a claim that every listed supplier sells to every listed buyer. A specific purchasing relationship, factory location or product qualification needs its own evidence.
 
-How to read it. Every arrow (→) reads "sells to", left to right, without exception. Seven role words recur. A **foundry** makes wafers for others; some foundry divisions belong to IDMs that also sell their own chips. A **fabless** company designs chips and owns no fab. An **IDM** (integrated device manufacturer) designs and fabricates its own chips. An **OSAT** (outsourced semiconductor assembly and test house) packages and tests chips for hire. An **ODM** (original design manufacturer) designs and builds servers and racks that a brand or hyperscaler sells or uses. An **OEM** (original equipment manufacturer) sells systems under its own name. A **hyperscaler** runs data centers at the scale of hundreds of thousands of servers and is the end customer. Market shares are approximate and dated "as of 2025"; they move. Each sub-list ends with a note on its choke point, the relationship in it that has no ready substitute.
+How to read it. Arrows (→) show the direction in which a material, service or product moves to the next customer class. Grouped examples describe a stage of the chain; only explicitly documented company-to-company purchases should be read as a specific contract. Seven role words recur. A **foundry** makes wafers for others; some foundry divisions belong to IDMs that also sell their own chips. A **fabless** company designs chips and owns no fab. An **IDM** (integrated device manufacturer) designs and fabricates its own chips. An **OSAT** (outsourced semiconductor assembly and test house) packages and tests chips for hire. An **ODM** (original design manufacturer) designs and builds servers and racks that a brand or hyperscaler sells or uses. An **OEM** (original equipment manufacturer) sells systems under its own name. A **hyperscaler** runs data centers at the scale of hundreds of thousands of servers and is the end customer. Market shares are approximate and dated "as of 2025"; they move. Each sub-list ends with a note on its choke point, the relationship in it that has no ready substitute.
 
 ### Raw materials and wafers
 
 - **Sibelco, The Quartz Corp** (high-purity quartz) → crucible makers (Shin-Etsu Quartz, Momentive/Heraeus, Ferrotec) → CZ pullers at wafer makers.
-- **Ferroglobe, Elkem, Chinese MG-Si producers** → polysilicon makers (Wacker, Hemlock, Tokuyama, OCI, GCL, Tongwei).
-- **Wacker, Hemlock, Tokuyama, REC Silicon** (electronic-grade polysilicon) → Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron.
-- **Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron** (300 mm prime and epi wafers) → TSMC, Samsung, Intel, SK hynix, Micron, SMIC, all fabs. Shin-Etsu and SUMCO together hold ~55–60% (as of 2025).
+- **Ferroglobe, Elkem, Hoshine and other silicon-metal producers** → polysilicon makers (Wacker, Hemlock, Tokuyama, OCI, GCL, Tongwei).
+- **Wacker, Hemlock, Tokuyama and Xinhua Semiconductor (GCL)** (electronic-grade polysilicon) → qualified semiconductor-wafer manufacturers. The companies named here are examples of the producer category, not a list of disclosed bilateral contracts.
+- **Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron** (300 mm prime and epi wafers) → TSMC, Samsung, Intel, SK hynix, Micron, SMIC, all fabs. Supplier shares depend on whether the measure is revenue, wafer area, diameter or product grade; those measures should not be combined.
+- **NSIG / Shanghai Zing** (300 mm silicon wafers), with other NSIG businesses in SOI and customized wafers → semiconductor manufacturers. [NSIG product overview](https://www.nsig.com/en), checked 14 September 2026.
 - **Soitec** (SOI wafers) → GlobalFoundries, STMicro, Samsung; RF-SOI to Qualcomm/Skyworks via foundries.
 - **Wolfspeed, Coherent (II-VI), SICC** (SiC substrates) → STMicro, Infineon, onsemi (power devices, not in the GPU chain).
 - Choke point: crucible-grade high-purity quartz comes overwhelmingly from one district, Spruce Pine, North Carolina, with no qualified substitute at volume.
@@ -12379,7 +12481,7 @@ How to read it. Every arrow (→) reads "sells to", left to right, without excep
 - **Axcelis** (ion implanters, esp. high-current and SiC) → fabs; **Applied** (Varian) leads in implant.
 - **Advantest** (SoC/memory ATE, ~60%, as of 2025) → TSMC-ecosystem test houses (KYEC, ASE), NVIDIA, Samsung, SK hynix; **Teradyne** (~30%, as of 2025) → Apple ecosystem, Micron, Qualcomm.
 - **FormFactor, Technoprobe, Micronics Japan (MJC)** (probe cards) → fabs and test houses; **DISCO** (dicing saws, grinders, ~70–80%, as of 2025) → OSATs, memory makers; **Besi, ASMPT, Hanmi** (die bonders, TCB, hybrid bonders) → TSMC, SK hynix, OSATs; **EV Group, SUSS** (wafer bonders) → memory makers, TSMC.
-- **Naura, AMEC, SMEE, Piotech** (Chinese domestic etch, deposition, lithography) → SMIC, Hua Hong, YMTC, CXMT.
+- **NAURA, AMEC, Hwatsing, ACM Research and Piotech** (etch, deposition, CMP, cleaning and plating, depending on vendor) → foundry, memory and packaging customers. A tool that performs one qualified step is not a complete node-qualified fab flow.
 - **Daifuku, Murata Machinery** (AMHS) → all fabs. **Exyte, M+W, Jacobs** (fab construction) → TSMC, Samsung, Intel, Micron.
 - Choke point: ASML is the only EUV tool maker, and its optics come only from Zeiss SMT and its drive lasers only from Trumpf; TCB and hybrid-bonder qualifications depend on the specific customer and process; Hanmi and Besi are important suppliers, not the only suppliers of those equipment classes.
 
@@ -12389,6 +12491,7 @@ These purchases have to fit together. A licensed IP block supplies a circuit fun
 
 - **Synopsys, Cadence, Siemens EDA** (tools) → NVIDIA, AMD, Apple, Broadcom, Qualcomm, all designers; also to TSMC/Samsung for PDK and OPC flows.
 - **Arm** (CPU IP) → NVIDIA (Grace, Vera), Apple, Qualcomm, AWS, Ampere Computing (the CPU company). **Synopsys, Cadence, Alphawave, Rambus** (PHY/interface IP: HBM, PCIe, UCIe, SerDes; a SerDes is the serializer/deserializer circuit that drives a high-speed link, and a PHY is its physical-layer block) → NVIDIA and other fabless.
+- **Empyrean** (simulation, verification and foundry-enablement tools) → circuit-design and foundry customers; tool selection follows the specific design and PDK.
 - **TSMC** (PDK, design rules, reference flows) → its customers.
 - Choke point: two EDA vendors hold ~70% of the market (as of 2025) and every leading-node PDK is qualified against their tools, so a design team cannot change vendor mid-node.
 
@@ -12396,9 +12499,9 @@ These purchases have to fit together. A licensed IP block supplies a circuit fun
 
 - **TSMC** (wafers on N4/N3/N2; CoWoS/SoIC/InFO packaging) → NVIDIA (~$20B+ per year by 2025), Apple (largest customer at ~20–25% of revenue, as of 2025), AMD, Broadcom, Qualcomm, MediaTek, Marvell, Intel (some products), Google/AWS/Microsoft custom ASICs via design and ASIC service partners such as Broadcom, Marvell, Alchip and GUC.
 - **Samsung Foundry** (SF3/SF2 wafers) → Samsung LSI (Samsung's own chip-design division), Qualcomm (some), Google Tensor (historically, the Pixel phone processor), Tesla, crypto ASICs. **Intel Foundry** (18A) → Intel products, Microsoft, external test chips; **Intel packaging (EMIB/Foveros)** → Intel, AWS, external.
-- **SMIC** (N+2/N+3) → Huawei HiSilicon and domestic Chinese fabless. **Rapidus** (2 nm, from 2027) → target Japanese and US customers. **GlobalFoundries, UMC** (mature nodes) → automotive, RF, analog customers.
+- **SMIC** (mature, specialty and advanced logic processes) → fabless customers, including Huawei HiSilicon in teardown-documented products. **Hua Hong** (specialty processes) → embedded-memory, power, analog and other chip customers. **Rapidus** (2 nm, from 2027) → target Japanese and US customers. **GlobalFoundries, UMC** (mature nodes) → automotive, RF, analog customers.
 - **SK hynix** (HBM3E/HBM4, ~50–60%, as of 2025) → NVIDIA (primary), AMD, Broadcom; **Micron** (HBM3E/HBM4) → NVIDIA, AMD; **Samsung** (HBM3E/HBM4) → AMD, Google, NVIDIA (qualification-dependent). Note that TSMC often takes delivery of HBM for CoWoS assembly on NVIDIA's account.
-- **Kioxia, Western Digital/SanDisk, Samsung, SK hynix (Solidigm), Micron** (NAND) → SSD makers → server builders.
+- **Kioxia, SanDisk, Samsung, SK hynix (Solidigm), Micron and YMTC** (NAND) → storage-device makers → system builders. **CXMT** (DDR/LPDDR DRAM) → memory-module and device customers. Conventional DRAM, NAND and HBM are separate product and qualification markets.
 - Choke point: TSMC makes >90% of leading-edge logic wafers and all CoWoS, and SK hynix supplies most of the HBM that goes into them (as of 2025).
 
 ### Packaging, substrates, test
@@ -12526,16 +12629,19 @@ Reading order for this group: the free nanoHUB and MIT OpenCourseWare material f
 
 ## Key Players
 
-Master list of ~60 companies across the whole chain. Position is as of ~2025.
+A reference directory of representative companies across the chain. It includes suppliers from multiple regions and is neither exhaustive nor a common revenue ranking. Country labels describe the company's main base; manufacturing sites, ownership and customers can span other countries. A product offered by one supplier is not automatically qualified for every fab or chip. Existing market-share estimates retain their stated dates; the added capability references were checked on 14 September 2026.
 
 Legend for the Stage column: **Raw materials** and **Materials** supply what fabs consume; **Wafers** make the silicon discs; **Equipment** makes the tools (sub-tier means a supplier to a tool maker); **Test** and **Packaging equipment** make the back-end tools; **Design** sells EDA software and IP; **Foundry** makes wafers for others; **IDM** designs and fabricates its own chips; **Memory** is the DRAM/NAND/HBM makers; **Packaging** makes substrates; **OSAT** assembles and tests for hire; **Test services** is final test and burn-in for hire; **Fabless** designs chips and owns no fab; **System** builds modules, servers and racks; **End customer** buys and runs them. "Position" is an approximate 2025 market position, not a revenue ranking in every row; fast-moving rows carry a (2025) tag.
 
 | Company | Country | Stage | What they supply | Position |
 |---|---|---|---|---|
 | Sibelco / The Quartz Corp | Belgium / Norway-France | Raw materials | High-purity quartz (Spruce Pine) | Dominant in crucible-grade HPQ |
-| Ferroglobe | Spain-UK | Raw materials | Metallurgical-grade silicon | Largest non-Chinese MG-Si |
-| Elkem | Norway | Raw materials | MG-Si, silicones | Top 3 non-Chinese |
-| Wacker Chemie | Germany | Raw materials | Electronic-grade polysilicon | #1 electronic grade outside China |
+| Ferroglobe | Spain-UK | Raw materials | Metallurgical-grade silicon | Silicon-metal supplier; further purification is needed for chip feedstock |
+| Elkem | Norway | Raw materials | MG-Si, silicon-based materials | Silicon and silicon-based materials producer |
+| Hoshine Silicon | China | Raw materials | Industrial silicon and silicon-based materials | Industrial-silicon producer |
+| Xinhua Semiconductor (GCL) | China | Raw materials | Electronic-grade polysilicon | Part of GCL's semiconductor-materials business |
+| NSIG / Shanghai Zing | China | Wafers | Semiconductor silicon wafers, including 300 mm | Wafer supplier; NSIG also includes SOI and customized-wafer businesses |
+| Wacker Chemie | Germany | Raw materials | Electronic-grade polysilicon | Established electronic-grade polysilicon supplier |
 | Hemlock Semiconductor | USA | Raw materials | Electronic-grade polysilicon | Top 3 electronic grade |
 | Tokuyama | Japan | Raw materials | Electronic-grade polysilicon | Top 3 electronic grade |
 | Shin-Etsu Chemical | Japan | Wafers, materials | 300 mm wafers, photoresist, quartz, mask blanks | #1 wafers (~30%) |
@@ -12574,28 +12680,36 @@ Legend for the Stage column: **Raw materials** and **Materials** supply what fab
 | DISCO | Japan | Packaging equipment | Dicing saws, grinders, laser dicers | ~70–80% |
 | Besi | Netherlands | Packaging equipment | Die bonders, hybrid bonders | Leader in hybrid bonding tools |
 | Hanmi Semiconductor | Korea | Packaging equipment | TCB bonders for HBM | Leader in HBM TCB |
-| Naura / AMEC / SMEE | China | Equipment | Domestic etch, deposition, DUV litho | Rising under export controls |
+| NAURA / AMEC | China | Equipment | Deposition and etch / dielectric and conductor etch | Process-equipment suppliers |
+| Hwatsing | China | Equipment | CMP and wafer-processing equipment | Supplies planarization tools |
+| Skyverse | China | Equipment | Wafer inspection and optical metrology | Product families include defect, film and overlay measurement |
+| AccoTEST (Beijing Huafeng) | China | Test | Analog, mixed-signal, power and SoC test systems | Commercial ATE supplier |
 | Synopsys | USA | Design | EDA, IP | #1 EDA |
 | Cadence | USA | Design | EDA, IP | #2 EDA |
 | Siemens EDA | Germany-USA | Design | EDA (Calibre DRC/LVS) | #3 EDA; leader in signoff |
+| Empyrean | China | Design | Circuit simulation, physical verification and foundry-enablement tools | Design and foundry-software provider |
 | Arm | UK | Design | CPU IP (Grace, Vera) | Dominant CPU IP |
 | TSMC | Taiwan | Foundry, packaging | N4/N3/N2/A16 wafers; CoWoS, SoIC, InFO | >90% of leading-edge logic; ~65–70% foundry revenue (2025) |
 | Samsung Electronics | Korea | Foundry, memory | SF3/SF2 wafers; DRAM, NAND, HBM | #2 foundry (2025); #1–2 DRAM revenue (traded the lead with SK hynix through 2025); #1 NAND |
 | Intel / Intel Foundry | USA | IDM, foundry | 18A/14A wafers; EMIB, Foveros | #3 leading edge; first High-NA user; 18A in production, 14A in development (2025) |
-| SMIC | China | Foundry | N+2/N+3 (7/5 nm class, DUV only) | Largest Chinese foundry |
+| SMIC | China | Foundry | Mature and specialty processes; FinFET and N+2/N+3 logic | Commercial foundry; advanced logic identified in physical chip analysis |
+| Hua Hong | China | Foundry | Embedded memory, power, analog and other specialty processes | Specialty-foundry supplier |
 | Rapidus | Japan | Foundry | 2 nm GAA (HVM target 2027) | New entrant |
 | GlobalFoundries / UMC | USA / Taiwan | Foundry | Mature and specialty nodes | #3–4 foundries by revenue |
 | SK hynix | Korea | Memory | DRAM, NAND, HBM3E/HBM4 | #1 HBM (~50–60%, 2025); #1–2 DRAM revenue (2025) |
 | Micron | USA | Memory | DRAM, NAND, HBM3E/HBM4 | #3 DRAM; ~20%+ HBM (2025) |
 | Kioxia | Japan | Memory | NAND | #2–3 NAND |
+| CXMT | China | Memory | DRAM, including DDR5 and LPDDR5X | Conventional DRAM product supplier |
+| YMTC | China | Memory | 3D NAND using Xtacking bonded array and peripheral wafers | NAND architecture and product supplier |
 | Ibiden | Japan | Packaging | Build-up substrates | #1 high-end substrates |
 | Unimicron | Taiwan | Packaging | Build-up substrates, HDI PCBs | #2 high-end substrates |
 | Shinko / AT&S | Japan / Austria | Packaging | Build-up substrates | Top 5 substrates |
 | ASE (incl. SPIL) | Taiwan | OSAT | Assembly, test, CoWoS overflow | #1 OSAT |
 | Amkor | USA | OSAT | Assembly, test, 2.5D | #2 OSAT |
-| JCET | China | OSAT | Assembly, test | #3 OSAT |
+| JCET | China | OSAT | Assembly, test, XDFOI heterogeneous integration | International manufacturing network; reported XDFOI production |
 | KYEC | Taiwan | Test services | Final test, burn-in for NVIDIA-class parts | Leading Taiwan test house |
 | NVIDIA | USA | Fabless, system | GPUs, NVLink/NVSwitch, NICs, HGX, NVL72 designs | ~80%+ of AI accelerators (2025) |
+| Huawei / HiSilicon | China | Fabless, system | Kirin chips, Ascend accelerators and Atlas systems | Accelerator and computing-systems developer |
 | AMD | USA | Fabless | MI300/MI350 GPUs, EPYC CPUs | #2 merchant AI accelerators (2025) |
 | Broadcom / Marvell | USA | Fabless | Custom AI ASICs, networking, SerDes | Leaders in custom ASIC |
 | Apple / Qualcomm / MediaTek | USA / USA / Taiwan | Fabless | SoCs; largest TSMC customers by wafer volume | Top TSMC customers |
@@ -12640,3 +12754,7 @@ The tables in this module are compiled from the following sources, which are als
 - [Royal Society of Chemistry silicon properties](https://periodic-table.rsc.org/element/14/silicon).
 - [Siltronic 2016 annual report, printed page 2: standard 300 mm wafer thickness](https://www.siltronic.com/fileadmin/investorrelations/Hauptversammlungen/Archiv/HV_2017/annual_report_2016_en.pdf).
 - [ASML November 2024 investor presentation: dose-qualified throughput](https://www.sec.gov/Archives/edgar/data/937966/000093796624000026/exhibit994.htm).
+
+- Supplier-directory capability references (checked 14 September 2026): [Hoshine](https://www.hoshinesilicon.com/en/gsjs/index_69.aspx.html), [Ferroglobe](https://www.ferroglobe.com/solutions/silicon-metal), [Elkem](https://www.elkem.com/products/silicon/silicon-metalloid/), [GCL issuer report naming Xinhua Semiconductor](https://www.hkexnews.hk/listedco/listconews/sehk/2023/0428/2023042801198.pdf). These establish product roles, not a like-for-like market-share ranking.
+- [CXMT products](https://www.cxmt.com/en/product.html), [YMTC Xtacking](https://www.ymtc.com/en/technicalintroduction.html), [Hua Hong 2025 report](https://www.hkexnews.hk/listedco/listconews/sehk/2026/0409/2026040901618_c.pdf), [TechInsights N+3 process analysis](https://www.techinsights.com/blog/smic-n3-kirin-9030-pro-process-flow-analysis).
+- [NAURA equipment portfolio](https://www.naura.com/index.html?l=english), [AMEC product brochure](https://static.amec-inc.com/uploads/f64b9adcd24b400caf459c98af4e473e.pdf), [Hwatsing CMP](https://www.hwatsing.com/en/product_detail/757.html), [Skyverse product families](https://www.skyverse.cn/?trk=public_post-text), [AccoTEST systems](https://www.accotest.com/), [Empyrean foundry tools](https://www.empyrean-tech.com/solutions/index-18.html), [JCET production update](https://www.prnewswire.com/news-releases/focusing-on-high-performance-advanced-packaging-and-global-layout-jcet-achieved-quarter-on-quarter-growth-in-q2-2023-301910156.html), [Huawei Atlas and Ascend roadmap, September 2025](https://www.huawei.com/en/news/2025/9/hc-xu-keynote-speech). Company descriptions establish offered capabilities; performance, yield and customer qualifications require more specific evidence.

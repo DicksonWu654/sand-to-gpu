@@ -1,0 +1,218 @@
+{
+  "checkedAt": "2026-09-14T04:39:48.478Z",
+  "status": "passed",
+  "baseUrl": "http://127.0.0.1:8793",
+  "contentSha256": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
+  "scope": "Modules20 and21 selected changed supplier tables, desktop1280 and phone375, light/dark; named suppliers, font size, table scroll containment and keyboard scroll, page errors and document overflow. Not a full course visual or factual audit.",
+  "contractReview": {
+    "amendments": "Exact named before/after option arrays are applied to the historical baseline; answer indices/counts and all unlisted options remain historical. Built quizzes independently match authored JSON.",
+    "negativeCases": [
+      {
+        "case": "prose-corruption",
+        "detected": true
+      },
+      {
+        "case": "quiz-wording-corruption",
+        "detected": true
+      },
+      {
+        "case": "quiz-option-corruption",
+        "detected": true
+      },
+      {
+        "case": "reviewed-option-still-protected-1-5",
+        "detected": true
+      },
+      {
+        "case": "reviewed-option-still-protected-20-4",
+        "detected": true
+      },
+      {
+        "case": "reviewed-option-still-protected-20-5",
+        "detected": true
+      },
+      {
+        "case": "unlisted-option-in-amended-module",
+        "detected": true
+      },
+      {
+        "case": "answer-index-in-amended-question",
+        "detected": true
+      },
+      {
+        "case": "historical-heading-text",
+        "detected": true
+      },
+      {
+        "case": "missing-lesson",
+        "detected": true
+      }
+    ],
+    "livePreviewUntouched": true
+  },
+  "cases": [
+    {
+      "module": 20,
+      "width": 1280,
+      "theme": "light",
+      "status": "passed",
+      "missing": [],
+      "documentWidth": 1280,
+      "viewportWidth": 1280,
+      "tableRows": 10,
+      "minBodyCellFontPx": 13,
+      "wrapperWidth": 786,
+      "tableWidth": 786,
+      "maxScrollReached": 0,
+      "overflowX": "auto",
+      "tabindex": null,
+      "ariaLabel": null,
+      "pageErrors": [],
+      "screenshot": "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/global-coverage/m20-1280-light.png"
+    },
+    {
+      "module": 20,
+      "width": 1280,
+      "theme": "dark",
+      "status": "passed",
+      "missing": [],
+      "documentWidth": 1280,
+      "viewportWidth": 1280,
+      "tableRows": 10,
+      "minBodyCellFontPx": 13,
+      "wrapperWidth": 786,
+      "tableWidth": 786,
+      "maxScrollReached": 0,
+      "overflowX": "auto",
+      "tabindex": null,
+      "ariaLabel": null,
+      "pageErrors": [],
+      "screenshot": "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/global-coverage/m20-1280-dark.png"
+    },
+    {
+      "module": 20,
+      "width": 375,
+      "theme": "light",
+      "status": "passed",
+      "missing": [],
+      "documentWidth": 375,
+      "viewportWidth": 375,
+      "tableRows": 10,
+      "minBodyCellFontPx": 13,
+      "wrapperWidth": 333,
+      "tableWidth": 560,
+      "maxScrollReached": 227,
+      "overflowX": "auto",
+      "tabindex": "0",
+      "ariaLabel": "China's Response \u2014 scroll horizontally for more columns",
+      "keyboardScroll": 40,
+      "pageErrors": [],
+      "screenshot": "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/global-coverage/m20-375-light.png"
+    },
+    {
+      "module": 20,
+      "width": 375,
+      "theme": "dark",
+      "status": "passed",
+      "missing": [],
+      "documentWidth": 375,
+      "viewportWidth": 375,
+      "tableRows": 10,
+      "minBodyCellFontPx": 13,
+      "wrapperWidth": 333,
+      "tableWidth": 560,
+      "maxScrollReached": 227,
+      "overflowX": "auto",
+      "tabindex": "0",
+      "ariaLabel": "China's Response \u2014 scroll horizontally for more columns",
+      "keyboardScroll": 40,
+      "pageErrors": [],
+      "screenshot": "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/global-coverage/m20-375-dark.png"
+    },
+    {
+      "module": 21,
+      "width": 1280,
+      "theme": "light",
+      "status": "passed",
+      "missing": [],
+      "documentWidth": 1280,
+      "viewportWidth": 1280,
+      "tableRows": 86,
+      "minBodyCellFontPx": 13,
+      "wrapperWidth": 786,
+      "tableWidth": 786,
+      "maxScrollReached": 0,
+      "overflowX": "auto",
+      "tabindex": null,
+      "ariaLabel": null,
+      "pageErrors": [],
+      "screenshot": "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/global-coverage/m21-1280-light.png"
+    },
+    {
+      "module": 21,
+      "width": 1280,
+      "theme": "dark",
+      "status": "passed",
+      "missing": [],
+      "documentWidth": 1280,
+      "viewportWidth": 1280,
+      "tableRows": 86,
+      "minBodyCellFontPx": 13,
+      "wrapperWidth": 786,
+      "tableWidth": 786,
+      "maxScrollReached": 0,
+      "overflowX": "auto",
+      "tabindex": null,
+      "ariaLabel": null,
+      "pageErrors": [],
+      "screenshot": "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/global-coverage/m21-1280-dark.png"
+    },
+    {
+      "module": 21,
+      "width": 375,
+      "theme": "light",
+      "status": "passed",
+      "missing": [],
+      "documentWidth": 375,
+      "viewportWidth": 375,
+      "tableRows": 86,
+      "minBodyCellFontPx": 13,
+      "wrapperWidth": 333,
+      "tableWidth": 560,
+      "maxScrollReached": 227,
+      "overflowX": "auto",
+      "tabindex": "0",
+      "ariaLabel": "Key Players \u2014 scroll horizontally for more columns",
+      "keyboardScroll": 40,
+      "pageErrors": [],
+      "screenshot": "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/global-coverage/m21-375-light.png"
+    },
+    {
+      "module": 21,
+      "width": 375,
+      "theme": "dark",
+      "status": "passed",
+      "missing": [],
+      "documentWidth": 375,
+      "viewportWidth": 375,
+      "tableRows": 86,
+      "minBodyCellFontPx": 13,
+      "wrapperWidth": 333,
+      "tableWidth": 560,
+      "maxScrollReached": 227,
+      "overflowX": "auto",
+      "tabindex": "0",
+      "ariaLabel": "Key Players \u2014 scroll horizontally for more columns",
+      "keyboardScroll": 40,
+      "pageErrors": [],
+      "screenshot": "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/qa/shots/global-coverage/m21-375-dark.png"
+    }
+  ],
+  "errors": [],
+  "visualReview": "Inspected saved desktop and phone captures in both themes. Supplier names and explanatory rows are legible, with13px body text. Phone tables intentionally scroll within their container; the scroll cue is visible at the table start and keyboard access reaches hidden columns. No overlapping text or document overflow observed in the captured table regions. Captures settle document layout and require the target row to be onscreen.",
+  "harnessNotes": [
+    "Initial font assertion incorrectly applied a body-text threshold to existing10px uppercase table headers; final assertion checks13px body cells separately.",
+    "Initial screenshots preceded completed scroll/layout positioning; final captures use settled coordinates with a visible-target assertion. No application change was needed."
+  ],
+  "checkerInspection": "The reviewed amendments change only exact before/after option arrays for m01q5,m20q4,m20q5. Baseline answer indices, question counts and quiz module identities remain untouched. No gap found in these protections; direct negative checks cover all three amended arrays, another option in an amended module, an answer index, heading text, authored prose, authored quiz wording, an unrelated option and a missing lesson."
+}

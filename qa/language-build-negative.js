@@ -9,6 +9,10 @@ const cases=[
  {name:'prose-corruption',change:c=>{const m=c.modules.find(m=>m.n===4);m.html=m.html.replace('<p>','<p>Injected prose corruption. ');},expected:'m/4 built prose differs from current authored source'},
  {name:'quiz-wording-corruption',change:c=>{c.modules.find(m=>m.n===14).quiz.questions[0].q+=' Injected quiz corruption.';},expected:'m/14 built quiz differs from current authored quiz'},
  {name:'quiz-option-corruption',change:c=>{c.modules.find(m=>m.n===14).quiz.questions[0].options[0]+=' Injected option corruption.';},expected:'m/14 historical quiz structure changed'},
+ ...[[1,5],[20,4],[20,5]].map(([module,question])=>({name:`reviewed-option-still-protected-${module}-${question}`,change:c=>{c.modules.find(m=>m.n===module).quiz.questions[question-1].options[0]+=' Unauthorized follow-up.';},expected:`m/${module} historical quiz structure changed`})),
+ {name:'unlisted-option-in-amended-module',change:c=>{c.modules.find(m=>m.n===20).quiz.questions[0].options[0]+=' Unauthorized adjacent edit.';},expected:'m/20 historical quiz structure changed'},
+ {name:'answer-index-in-amended-question',change:c=>{c.modules.find(m=>m.n===1).quiz.questions[4].answer=0;},expected:'m/1 historical quiz structure changed'},
+ {name:'historical-heading-text',change:c=>{const m=c.modules.find(m=>m.n===20);m.html=m.html.replace(/(<h2\b[^>]*>)/,'$1Unauthorized heading text ');},expected:'m/20 original heading contract changed'},
  {name:'missing-lesson',change:c=>{c.modules=c.modules.filter(m=>m.n!==4);},expected:'historical lesson identity contract changed'},
 ];
 const results=[];

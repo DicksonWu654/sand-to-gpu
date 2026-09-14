@@ -118,7 +118,7 @@ These examples come from Module 15; generation and operating conditions matter.
 
 ## The people and companies
 
-SK hynix, Samsung and Micron manufacture the major DRAM and HBM product families. NAND production also includes companies such as Kioxia and SanDisk, with partnerships and process choices that differ from the DRAM business. Equipment suppliers provide the deep etch, deposition, thinning and bonding capability, while the GPU and packaging partners help qualify the memory in its final operating environment.
+SK hynix, Samsung and Micron manufacture major DRAM and HBM families; CXMT supplies conventional DRAM, including DDR5 and LPDDR5X. NAND suppliers include Kioxia, SanDisk and YMTC, whose Xtacking architecture bonds separately manufactured array and peripheral circuits. Conventional DRAM, NAND and HBM are different product markets, so leadership or availability in one does not establish qualification in another. Equipment and packaging partners help turn each memory design into a dependable product.
 
 ## Why it is hard
 

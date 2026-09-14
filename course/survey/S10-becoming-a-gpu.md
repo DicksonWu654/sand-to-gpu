@@ -120,7 +120,7 @@ These are specific examples from Modules 19 and 20, not a specification for ever
 
 ## The people and companies
 
-NVIDIA defines its GPU and system architecture; TSMC supplies wafer fabrication and advanced packaging; memory companies supply HBM. System manufacturers such as Foxconn, Quanta and Wistron integrate boards and racks, while server vendors, networking companies, power specialists and cooling suppliers contribute their own equipment. The customer then operates the result with software and facilities that determine how much useful work it delivers.
+This chapter follows NVIDIA's system as a concrete example: TSMC supplies its wafer fabrication and advanced packaging, memory companies supply HBM, and manufacturers such as Foxconn, Quanta and Wistron integrate boards and racks. The wider industry also includes AMD, Huawei's Ascend and Atlas products, and hyperscaler-designed accelerators. Those systems need fair workload, software, memory, interconnect and power comparisons. A NVIDIA supplier list is useful for this case study, but it is not a complete map of all computing suppliers.
 
 ## Why it is hard
 

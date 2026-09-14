@@ -260,7 +260,7 @@ CVD is a family, sorted by temperature and by job. The hot batch films (polysili
 
 Once the first copper or aluminum layer is on the wafer, nothing may exceed ~400 °C: copper diffuses, aluminum pushes up **hillocks** (bumps it raises to relieve its own stress) and the low-k films degrade. This part of the flow is the **back end of line (BEOL)**, the wiring levels built above the transistors (Module 12). **Plasma-enhanced CVD** supplies the activation energy electrically instead of thermally: a **capacitively coupled plasma (CCP)**, struck between two parallel plates (the showerhead and the pedestal) driven at 13.56 MHz (a frequency reserved internationally for industrial use, so equipment can radiate at it without interfering with anything), at 100–2,000 W and 1–10 torr, creates electrons at 2–5 eV that dissociate the precursors into radicals, which react on a wafer at only 300–400 °C. The films are amorphous, hydrogen-rich (10–30 at.% H, as Si–H and N–H), less dense than their LPCVD equivalents, and non-conformal (step coverage 50–70%), but they are fast (100s of nm/min) and cool.
 
-Applied Materials' Producer platform (twin-chamber modules, three per tool, so six wafers in parallel) and Lam's Vector (four-station sequential-deposition chambers) dominate PECVD; TEL and, in China, Piotech are the challengers. The films:
+Applied Materials' Producer platform (twin-chamber modules, three per tool, so six wafers in parallel) and Lam's Vector (four-station sequential-deposition chambers) dominate PECVD; other PECVD suppliers include TEL and Piotech, whose catalogue also includes ALD and gap-fill systems. The films:
 
 - **SiO2** from SiH4 + N2O (or TEOS + O2) for **interlayer dielectrics** (the insulator between one wiring level and the next), hard masks, and **passivation** (the final protective skin over the finished chip).
 - **SiNx:H** (the x says the nitrogen-to-silicon ratio is not fixed at the 4:3 of Si3N4 but set by the recipe, and the :H that the film carries bonded hydrogen) from SiH4 + NH3 + N2 for **etch stops** (a thin film of a different material that an etch cannot penetrate, so the etch ends on it), passivation, and hard masks. Adding a low-frequency (300–400 kHz) RF component drives ions into the film and switches the stress from tensile (~+500 MPa) to compressive (~−2 GPa); in the "dual stress liner" era (90–32 nm) this was used to strain NMOS and PMOS channels separately (the electron-carrying and hole-carrying transistors of Before you start: electrons speed up in a stretched channel, holes in a squeezed one, so a tensile nitride was laid over the NMOS and a compressive one over the PMOS).
@@ -415,7 +415,7 @@ At the tightest pitches (~20–24 nm at 3 nm/2 nm) the total barrier plus liner 
 > **Worked example: what the liner costs in a 12 nm trench.**
 > Take an M1 trench 12 nm wide and 24 nm deep (aspect ratio 2) and give barrier, liner and seed together the ~4–5 nm budget above: ~2.25 nm on each sidewall and on the bottom. Copper then occupies (12 − 4.5) × (24 − 2.25) ≈ 7.5 × 21.75 ≈ 163 nm² of the trench's 288 nm² cross-section, 57%. The liner carries almost no current (TaN is ~200 µΩ·cm or more (~) against copper's 1.7), so the wire conducts like a 7.5 nm-wide copper line, and by the flight-length argument of 4.5 copper that narrow has a resistivity several times bulk. Now the coverage side: to leave even 1 nm of continuous seed on the lower sidewall with a sidewall step coverage of ~25% (~, an ionized-PVD figure) needs ~4 nm on the field, and the top corners, growing at ~1.5× the field rate, would carry 6 nm each and close half the 12 nm opening before the lower sidewall is coated. That arithmetic is why the M1 barrier is ALD, the liner is CVD or ALD cobalt or ruthenium, the copper seed there is only a couple of nanometres of PVD that reflows along the liner, and PVD copper seed in the 10–20 nm range is reserved for the wider upper levels.
 
-Elsewhere PVD makes the Ti/TiN contact liner, the aluminum bond pads and top-metal redistribution layers, NiPt for **silicides** (the metal-silicon contact compound of 4.5), and the phase-change and magnetic-tunnel-junction stacks of the emerging memories (PCRAM and MRAM). Applied had shipped more than 4,500 Endura systems by 2010 and many more since, and is estimated to hold on the order of 80% or more of the semiconductor PVD market; Ulvac, Evatec, and, in China, Naura are the other names.
+Elsewhere PVD makes the Ti/TiN contact liner, the aluminum bond pads and top-metal redistribution layers, NiPt for **silicides** (the metal-silicon contact compound of 4.5), and the phase-change and magnetic-tunnel-junction stacks of the emerging memories (PCRAM and MRAM). Applied had shipped more than 4,500 Endura systems by 2010 and many more since, and is estimated to hold on the order of 80% or more of the semiconductor PVD market; other PVD suppliers include Ulvac, Evatec and NAURA.
 
 > **What can go wrong:** *Shield flaking*: the chamber shields that catch stray metal build up thick, stressed deposits that eventually flake onto the wafer; shields are swapped on a wafer-count schedule and the chamber is qualified with particle monitor wafers. *Arcing*: an insulating inclusion or nodule on the target draws a spark that splatters metal droplets onto the wafer; modern power supplies detect arcs in microseconds and cut the power. *A discontinuous seed*: where the seed thins to nothing on a lower sidewall the plating bath cannot grow copper, leaving a void that opens the wire now or after a few thousand hours; caught by plating-void inspection and by continuity at test. *Target end-of-life*: as the racetrack deepens the rate drifts and the thickness map changes; sheet-resistance maps of monitor wafers track the drift and set the replacement interval.
 
@@ -479,7 +479,7 @@ Deposition is the largest segment of **wafer fab equipment (WFE)**, the industry
 
 | Segment | Leader | Approx. share | Note (as of 2024–2025) |
 |---|---|---|---|
-| PVD | Applied Materials (Endura) | ~80% or more | Near-monopoly; Ulvac, Evatec, Naura are the rest |
+| PVD | Applied Materials (Endura) | ~80% or more | Other PVD suppliers include Ulvac, Evatec and NAURA |
 | Single-wafer ALD | ASM International (Pulsar, EmerALD, Eagle) | > 55% | ALD is over half of ASM's equipment revenue; Applied and Lam investing to challenge |
 | Batch ALD/CVD | Kokusai Electric (TSURUGI-C²) | ~70% | Largely memory fabs; TEL is #2 |
 | Tungsten and metal fill | Lam Research (Altus, Altus Halo) | majority | Applied second |
@@ -488,7 +488,7 @@ Deposition is the largest segment of **wafer fab equipment (WFE)**, the industry
 | Vertical furnaces | Tokyo Electron (TELINDY PLUS) | leader | Kokusai second, ASM third |
 | RTP | Applied (Vantage) | leader | Mattson (Beijing E-Town), Screen niche |
 
-**Applied Materials** is the overall leader, with PVD, the leading CVD franchise, roughly half of epi, the RTP franchise, and growing ALD and W/Mo positions. **Lam Research** leads tungsten and metal fill, is co-leader in dielectric PECVD/ALD and gap fill, and is heavily exposed to 3D NAND. **ASM International** leads single-wafer ALD and is #2 in epi, making it the purest beneficiary of the gate-all-around transition. **Tokyo Electron** leads vertical furnaces and shares batch ALD with **Kokusai Electric**. ALD as a whole (single-wafer plus batch) is now an equipment market at least as large as PVD. Jusung and Wonik IPS (Korea), Piotech and Naura (China), and Veeco/Aixtron (compound-semiconductor MOCVD) fill the remaining niches.
+**Applied Materials** is the overall leader, with PVD, the leading CVD franchise, roughly half of epi, the RTP franchise, and growing ALD and W/Mo positions. **Lam Research** leads tungsten and metal fill, is co-leader in dielectric PECVD/ALD and gap fill, and is heavily exposed to 3D NAND. **ASM International** leads single-wafer ALD and is #2 in epi, making it the purest beneficiary of the gate-all-around transition. **Tokyo Electron** leads vertical furnaces and shares batch ALD with **Kokusai Electric**. ALD as a whole (single-wafer plus batch) is now an equipment market at least as large as PVD. Other suppliers serve distinct deposition applications: Jusung and Wonik IPS (Korea); Piotech (China), with PECVD, ALD and gap-fill systems; NAURA (China), with PVD, CVD and furnace products; and Veeco/Aixtron in compound-semiconductor MOCVD. A broad deposition label covers many film chemistries and reactor designs, so a supplier list does not imply that the tools are interchangeable.
 
 ## Summary
 
@@ -554,7 +554,7 @@ Deposition is the largest segment of **wafer fab equipment (WFE)**, the industry
 | Tokyo Electron | Japan | TELINDY vertical furnaces, batch ALD, NT333 spatial ALD, Triase+ metal CVD/ALD, Trias SPA plasma oxidation | Leader in furnaces; #2 batch ALD |
 | Kokusai Electric | Japan | AdvancedAce-300 furnaces, TSURUGI-C² batch ALD | Leader batch ALD (~70%) |
 | Jusung Engineering / Wonik IPS | South Korea | ALD/CVD for Samsung, SK hynix | Niche, memory-focused |
-| Naura / Piotech | China | PVD, ALD / PECVD for domestic fabs | Regional challengers |
+| NAURA / Piotech | China | NAURA: PVD, CVD and furnaces; Piotech: PECVD, ALD and gap fill | Distinct deposition portfolios |
 | Mattson (Beijing E-Town) / Screen | China / Japan | RTP, laser anneal | Niche |
 | Aixtron / Veeco | Germany / US | MOCVD for GaN, GaAs, SiC epi | Leaders in compound-semiconductor epi |
 | Merck (EMD), Entegris, Air Liquide, Adeka, Soulbrain, DNF, UP Chemical | DE / US / FR / JP / KR | ALD and CVD precursors (TMA, TEMAH, HfCl4, DCS, WF6, TSA, Mo precursors) | Precursor supply base |
@@ -588,3 +588,7 @@ Module 03 delivered a polished (and possibly epitaxial) 300 mm wafer, and Module
 8. Applied Materials product pages for Endura PVD, Producer Eterna FCVD, Centura Prime Epi, and Vantage RTP (appliedmaterials.com), and ASM International's technology pages for Pulsar ALD and Intrepid ES epitaxy (asm.com).
 9. SemiAnalysis, "Going Vertical: Gate All Around, 3D DRAM, 3D NAND, Kokusai Electric IPO" (2023), on batch ALD and the furnace market.
 10. A. J. M. Mackus, M. J. M. Merkx, and W. M. M. Kessels, "From the Bottom-Up: Toward Area-Selective Atomic Layer Deposition with High Selectivity," *Chemistry of Materials* 31, 2–12 (2019).
+
+- [NAURA product catalogue](https://www.naura.com/product/). Official product scope, reviewed September 2026.
+
+- [Piotech deposition product catalogue](https://en.piotech.cn/). Official product scope, reviewed September 2026.

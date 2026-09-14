@@ -46,15 +46,15 @@
       "explanation": "690 kJ/mol divided by 28.09 g/mol gives 24.6 MJ/kg = 6.8 kWh/kg; the remainder of the 11-13 MWh/t covers heating the charge to ~2,000 C, melting, and heat carried out by CO gas. Lumpy quartz is required so gases can escape the packed bed."
     },
     {
-      "q": "Why do the world's 300 mm wafer makers buy electronic-grade polysilicon almost entirely from Wacker, Hemlock, Tokuyama, OCI, and High-Purity Silicon Corp. (the former Mitsubishi Materials business), even though Chinese producers such as Tongwei, GCL, and Daqo make roughly 95% of the world's polysilicon?",
+      "q": "Why does a large solar-polysilicon producer not automatically become a qualified electronic-grade supplier for every 300 mm wafer process?",
       "options": [
-        "Chinese plants use the FBR silane route, which cannot reach better than 6N purity",
-        "Electronic grade requires 10-100x lower boron and phosphorus, etched and cleanroom-handled chunk, FZ test-ingot verification and 1-2 year customer qualification, and the whole EG market is only ~40-50 kt/yr, so incumbents with long-term contracts and traceable supply chains keep it",
-        "US export controls prohibit the import of any Chinese polysilicon for semiconductor use",
-        "Chinese polysilicon is sold only as granules, which cannot be loaded into a Czochralski crucible"
+        "FBR chemistry cannot produce semiconductor-purity silicon, regardless of process control",
+        "Electronic-grade supply needs stringent impurity and surface-cleanliness control, verification and customer qualification; solar tonnage alone does not demonstrate those requirements",
+        "Every semiconductor customer requires its polysilicon to be manufactured in the same country as its wafer factory",
+        "Granular silicon cannot be loaded into a Czochralski crucible"
       ],
       "answer": 1,
-      "explanation": "EG is a small (~3% of tonnage), slow-growing, qualification-locked market where purity, surface cleanliness, and traceability matter far more than price; Chinese producers have EG programs but as of ~2025 supply mainly 200 mm and domestic customers."
+      "explanation": "The relevant test is the material and its qualification for a particular process. Xinhua Semiconductor is one example of an electronic-grade supplier. Solar output volume does not establish electronic-grade purity, consistency or customer acceptance."
     },
     {
       "q": "A 300 mm Czochralski ingot has a 2 m cylindrical body grown at ~306 mm diameter. Using a silicon density of 2.33 g/cm3 and a per-wafer pitch of ~1.0-1.1 mm (775 um wafer plus kerf and polishing losses), which estimate is correct?",

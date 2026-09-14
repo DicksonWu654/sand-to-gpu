@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-09-14T03:40:03.432Z",
+  "timestamp": "2026-09-14T04:40:47.660Z",
   "status": "passed",
   "inventory": {
     "lessons": 32,
-    "passages": 6728,
-    "uniqueClips": 6545,
-    "sourceHash": "64e8ef1d873c14b154d064f3d211992b4c10ed8b8ab36d85ab4dd101d8108a18",
+    "passages": 6739,
+    "uniqueClips": 6556,
+    "sourceHash": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
     "extractorHash": "351feff3ad368046e031df3d1812efad6ba2963b05357b702ecc7ba7300b77f1"
   },
-  "clipsChecked": 6545,
-  "bytes": 1636564972,
-  "audioSeconds": 203989.18662499974,
+  "clipsChecked": 6556,
+  "bytes": 1639284752,
+  "audioSeconds": 204328.13758333307,
   "errors": [],
   "limitations": [
     "Technical integrity and exact text coverage do not grade audible pronunciation or naturalness.",

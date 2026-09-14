@@ -262,10 +262,10 @@ A 100,000 wspm leading-edge fab costs roughly $20–30 billion at N3, and N2/A16
 | DUV dry ArF / KrF / i-line | ~50–80 | $10–40 M | ASML, Nikon, Canon |
 | Coater/developer tracks | ~100+ | $10–20 M | TEL (~90% share), SCREEN |
 | Plasma etch chambers | many hundreds | $2–6 M per chamber | Lam, TEL, Applied |
-| CVD / ALD / PVD chambers | many hundreds | $1–6 M per chamber | Applied, Lam, TEL, ASM |
+| CVD / ALD / PVD chambers | many hundreds | $1–6 M per chamber | Applied, Lam, TEL, ASM, NAURA, Piotech (different deposition portfolios) |
 | Ion implanters | ~30–50 | $5–10 M | Applied (through its 2011 Varian purchase), Axcelis |
 | Furnaces / RTP / laser anneal | ~50–100 | $3–8 M | TEL, Kokusai, Applied, Veeco |
-| Wet / single-wafer clean | ~100+ | $3–8 M | SCREEN, TEL, Lam |
+| Wet / single-wafer clean | ~100+ | $3–8 M | SCREEN, TEL, Lam, ACM Research |
 | CMP | ~50–80 | $3–6 M | Applied, Ebara |
 | Electroplating | ~20–40 | $3–6 M | Lam, Applied |
 | Metrology / inspection | ~150–300 | $1–30 M | KLA (~50%+), Applied, Hitachi, ASML (its HMI electron-beam inspection line), Nova, Onto |
@@ -573,6 +573,9 @@ N3 wafer prices in 2024–2025 were roughly $18,000–20,000 and N2 is reported 
 | ASML | Netherlands | EUV and DUV scanners | Monopoly in EUV |
 | KLA | USA | Inspection and metrology (Surfscan SP7, 29xx/39xx series) | Leader (~50%+) |
 | SCREEN | Japan | Single-wafer and batch wet cleaning tools | Leader in clean |
+| SMIC | China | Contract wafer fabrication across multiple process platforms | Foundry operator |
+| NAURA / AMEC / Piotech | China | Process equipment: deposition and etch, with portfolios differing by company | Equipment suppliers |
+| ACM Research | US parent; Shanghai operations | Wet-processing and cleaning equipment | Equipment supplier |
 | Siemens (Opcenter), IBM (SiView), PEER Group, Cimetrix | Germany / USA / Canada / USA | MES and tool-connectivity software | Commercial alternatives to in-house MES |
 | Exyte (M+W), Jacobs, CTCI, United Integrated Services | Germany / USA / Taiwan / Taiwan | Fab design and construction, cleanroom and hook-up contractors | Leaders in fab construction |
 | Camfil, AAF, Nippon Muki | Sweden / USA / Japan | ULPA/HEPA filters, FFUs, chemical filters | Leaders in cleanroom filtration |
@@ -610,3 +613,15 @@ Module 04 delivered the fab's inputs: polished and epitaxial 300 mm wafers from 
 - Miller, C., *Chip War* (Scribner, 2022). Context on TSMC's rise, Fab 21, and the geopolitics of fab location.
 - Rest of World, "TSMC's debacle in the American desert" (2024), and subsequent New York Times and Reuters reporting on Fab 21's hiring, training, and ramp; Reuters coverage of the 2021 Taiwan drought and TSMC's water trucking, and of the April 2024 Hualien earthquake's effect on fabs.
 - Asianometry (YouTube) episodes on TSMC's fab construction, AMHS, and the Arizona fab, for well-sourced narrative overviews.
+
+- [NAURA process-equipment portfolio](https://www.naura.com/product/). Official product scope, reviewed September 2026.
+
+- [AMEC etch product portfolio, 2024 ESG report](https://www.amec-inc.com/uploads/files/20250611/17496080859885.pdf). Official product scope, reviewed September 2026.
+
+- [Piotech deposition portfolio](https://en.piotech.cn/). Official product scope, reviewed September 2026.
+
+- [ACM Research wet processing](https://www.acmr.com/tools-and-processes/wet-processing/). Official product scope, reviewed September 2026.
+
+- [ACM Research corporate profile](https://acmresearch.gcs-web.com/corporate-profile/). Official product scope, reviewed September 2026.
+
+- [SMIC technology portfolio](https://www.smics.com/en/site/productdetail/2). Official product scope, reviewed September 2026.

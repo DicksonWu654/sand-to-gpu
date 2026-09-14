@@ -113,7 +113,7 @@ The **thermal budget** is the accumulated exposure to heat that the structure ca
 
 ## The people and companies
 
-Applied Materials, Lam Research and Tokyo Electron supply important deposition and etch capabilities. ASM specializes in deposition technologies including ALD and epitaxy. Applied Materials and Axcelis are important ion-implantation suppliers discussed in the deep modules. These companies participate in different segments and applications; a broad supplier role does not imply that every product or recipe is interchangeable. Fab engineers qualify a complete process on particular equipment and materials.
+Applied Materials, Lam Research and Tokyo Electron supply deposition and etch equipment. ASM specializes in deposition technologies including ALD and epitaxy. NAURA and Piotech offer different deposition portfolios, while AMEC’s etchers address dielectric, conductor and through-silicon-via applications. Applied Materials, Axcelis and Kingstone are examples of ion-implantation suppliers. These companies participate in different segments; their products are not automatically interchangeable. Fab engineers qualify a complete process on particular equipment and materials.
 
 ## Why it is hard
 

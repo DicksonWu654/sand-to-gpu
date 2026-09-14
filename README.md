@@ -2,9 +2,11 @@
 
 An in-depth, self-study course following silicon from quartz to an NVIDIA GPU rack. It explains the physics, chemistry, manufacturing equipment, supply chain, and engineering tradeoffs for a reader who knows programming and school science.
 
+See the [global supplier coverage review](GLOBAL_COVERAGE_REVIEW_2026-09-14.md) for corrections to regional omissions, capability claims and policy framing, with primary sources and validation limits.
+
 ## Course tracks
 
-- **Deep dive:** 22 modules, roughly 512,000 words, covering materials, wafer fabrication, transistors, memory, packaging, testing, GPU systems, and economics.
+- **Deep dive:** 22 modules, roughly 517,000 words, covering materials, wafer fabrication, transistors, memory, packaging, testing, GPU systems, and economics.
 - **Survey:** ten shorter chapters connecting the whole supply chain, with links into the deep modules.
 - **Interactive learning:** 46 widget implementations, eight-question module quizzes, search, a glossary, and browser-local progress and theme preferences.
 - **Illustrated atlas:** 352 authored figures across the substantive teaching sections, chapter opening illustrations, and responsive light and dark layouts. Physical structures, process flows, comparisons, and networks complement the interactive labs.

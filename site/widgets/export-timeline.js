@@ -3,9 +3,9 @@
   'use strict';
   let mountCount = 0;
   const ACTORS = {
-    us:   { name: 'US rule', sub: 'BIS, Commerce Dept', color: 'var(--accent)', lane: 0, short: 'US' },
-    ally: { name: 'Allied control', sub: 'NL · JP · TW', color: 'var(--accent2)', lane: 1, short: 'Allies' },
-    cn:   { name: 'China response', sub: 'counter-controls', color: 'var(--bad)', lane: 2, short: 'China' },
+    us:   { name: 'United States', sub: 'Policy / industry', color: 'var(--accent)', lane: 0, short: 'US' },
+    ally: { name: 'NL · JP · TW', sub: 'Policy / industry', color: 'var(--accent2)', lane: 1, short: 'NL / JP / TW' },
+    cn:   { name: 'China', sub: 'Policy / industry', color: 'var(--si)', lane: 2, short: 'China' },
   };
   const KINDS = { chips: 'Chips', tools: 'Tools', firms: 'Firms & people', materials: 'Materials' };
   const RANGES = { all: [2018, 2027, '2018 – 2026 (all)'], early: [2019, 2023, '2019 – 2022'], y2023: [2023, 2024, '2023'], y2024: [2024, 2025, '2024'], y2025: [2025, 2026, '2025'], y2026: [2026, 2027, '2026'] };
@@ -16,12 +16,12 @@
     { id: 'huawei-el', actor: 'us', kinds: ['firms'], t: dec(2019, 8), date: 'Aug 2019 – 2020', short: 'Huawei Entity List', title: 'Huawei added to the Entity List',
       what: 'Almost everything: Entity List status means Huawei needs a US licence for nearly any US-origin item, including US EDA software.',
       who: 'Huawei and its chip designer HiSilicon.',
-      how: 'Killed HiSilicon’s Kirin roadmap for three years; the Kirin line only returned in Aug 2023 on SMIC’s 7 nm-class N+2 process (see the Mate 60 marker).',
+      how: 'Interrupted access to manufacturing for new Kirin designs; the Kirin line only returned in Aug 2023 on SMIC’s 7 nm-class N+2 process (see the Mate 60 marker).',
       nums: [['3 yr', 'Kirin roadmap gap']] },
     { id: 'nl-euv', actor: 'ally', kinds: ['tools'], t: dec(2019, 7), date: '2019', short: 'EUV licence withheld', title: 'Dutch government withholds ASML’s EUV licence',
       what: 'EUV lithography: ASML has never shipped an EUV scanner to China; the Dutch government withheld the export licence under US pressure.',
       who: 'Any Chinese fab.',
-      how: 'None: a fab cannot smuggle an EUV scanner, which is why tool controls bind harder than chip controls. Without EUV, SMIC’s shrinks rely on DUV multi-patterning at rising cost and falling yield.',
+      how: 'Without access to EUV, smaller features require DUV multiple patterning: additional exposures, process steps and alignment control. Those requirements affect cost and yield; the result depends on the particular manufacturing process.',
       nums: [['0', 'EUV scanners shipped to China']] },
     { id: 'fdpr', actor: 'us', kinds: ['chips'], t: dec(2020, 5), date: 'May 2020', short: 'FDPR expansion', title: 'Foreign Direct Product Rule extended to Huawei',
       what: 'Chips made anywhere with US tools, technology or software, if destined for Huawei: the FDPR extends US jurisdiction to foreign-made items.',
@@ -30,13 +30,13 @@
       nums: [['Sept 2020', 'TSMC stops shipping to Huawei']] },
     { id: 'oct7', actor: 'us', kinds: ['chips', 'tools', 'firms'], t: dec(2022, 10, 7), date: 'Oct 7, 2022', short: 'Oct 7 rule', title: 'Advanced computing and semiconductor manufacturing rule',
       what: 'Chips: new ECCNs 3A090/4A090 for accelerators with total processing performance TPP ≥ 4800 and interconnect bandwidth ≥ 600 GB/s, capturing the A100 and H100. Tools: licences for equipment for logic at ≤16/14 nm with non-planar transistors, DRAM at ≤18 nm half-pitch and NAND at ≥128 layers. People: the US persons rule (§744.6) bars US citizens and residents from supporting advanced Chinese fabs without a licence.',
-      who: 'China as a destination; advanced fabs at YMTC, CXMT and SMIC (US engineers were pulled out overnight); supercomputer end uses; an expanded Entity List.',
+      who: 'China as a destination; advanced fabs at YMTC, CXMT and SMIC; supercomputer end uses; an expanded Entity List.',
       how: 'NVIDIA shipped the A800 and H800: identical dies with interconnect capped at 400 GB/s, under the 600 GB/s test.',
       nums: [['≥ 4800', 'TPP chip threshold'], ['≥ 600 GB/s', 'interconnect threshold'], ['≤ 16/14 nm', 'logic tool limit (non-planar)'], ['≤ 18 nm', 'DRAM half-pitch limit'], ['≥ 128', 'NAND layers'], ['400 GB/s', 'A800/H800 interconnect cap']] },
     { id: 'ymtc', actor: 'us', kinds: ['firms'], t: dec(2022, 12), date: 'Dec 2022', short: 'YMTC listed', title: 'YMTC added to the Entity List',
       what: 'Nearly all US-origin items and tools for YMTC, China’s 3D NAND maker.',
       who: 'YMTC.',
-      how: 'YMTC kept shipping: 232-layer NAND in 2022, then a ~270-layer generation in 2024 using string stacking and domestic tools where possible, at lower yield and higher cost than the incumbents.',
+      how: 'YMTC kept shipping: 232-layer NAND in 2022, then a ~270-layer generation in 2024 using string stacking and domestic tools where possible. Public layer counts do not establish comparable manufacturing yields or costs.',
       nums: [['~270', 'YMTC NAND layers, 2024']] },
     { id: 'jp-2023', actor: 'ally', kinds: ['tools'], t: dec(2023, 7, 23), date: 'Jul 23, 2023', short: 'Japan: 23 tool types', title: 'Japan requires licences for 23 equipment categories',
       what: '23 categories of chipmaking equipment, including EUV-related items, advanced etch and deposition, and cleaning.',
@@ -45,14 +45,14 @@
       nums: [['23', 'equipment categories']] },
     { id: 'cn-gage', actor: 'cn', kinds: ['materials'], t: dec(2023, 7), date: 'Jul 2023', short: 'Ga/Ge curbs', title: 'China restricts gallium and germanium exports',
       what: 'Export licences for gallium (~98% of world supply is Chinese) and germanium (~60%).',
-      who: 'Foreign buyers: the first materials counter-control after the Oct 2022 rules.',
+      who: 'Foreign buyers subject to the licensing requirements.',
       how: 'Neither stops a silicon fab: gallium matters for GaN and GaAs, germanium for SiGe and infrared optics, so the cost lands on the compound-semiconductor and defence sub-tiers.',
       nums: [['~98 %', 'of world gallium supply'], ['~60 %', 'of world germanium supply']] },
     { id: 'mate60', actor: 'cn', kinds: ['chips'], t: dec(2023, 8), date: 'Aug 2023', short: 'Mate 60 (7 nm)', title: 'Huawei Mate 60 Pro ships a 7 nm-class Kirin 9000S',
-      what: 'Not a restriction: China’s demonstration that SMIC’s N+2 process (7 nm-class, DUV-only with quadruple patterning at critical layers) works, a year after the Oct 2022 rules. TechInsights confirmed the dimensions.',
-      who: 'A signal to Washington that the Kirin line was back after three years.',
-      how: 'The controls targeted AI compute at scale, not the existence of a 7 nm die: SMIC’s 7 nm-class capacity was ~30,000–45,000 wspm in 2025, much of it for Huawei, at yields and costs far worse than TSMC’s. 3 nm-class is not credible on DUV.',
-      nums: [['7 nm-class', 'SMIC N+2, DUV only'], ['30–45k wspm', 'SMIC 7 nm-class capacity, 2025']] },
+      what: 'An industry development: the phone shipped with a Kirin 9000S made on SMIC’s 7 nm-class N+2 process. TechInsights identified the process in its teardown.',
+      who: 'Huawei and its chip-design and manufacturing supply chain.',
+      how: 'A shipped chip establishes that a process can produce functioning devices. It does not by itself establish production capacity, yield or cost. DUV multiple patterning adds manufacturing steps and tighter alignment requirements as features shrink.',
+      nums: [['7 nm-class', 'SMIC N+2 process']] },
     { id: 'nl-2023', actor: 'ally', kinds: ['tools'], t: dec(2023, 9), date: 'Sept 2023', short: 'NXT:2000i licences', title: 'Dutch licences required for ASML’s most capable immersion DUV',
       what: 'TWINSCAN NXT:2000i and above, the most capable immersion DUV scanners.',
       who: 'Chinese customers of ASML.',
@@ -60,12 +60,12 @@
       nums: [['~41 %', 'China share of ASML system sales, 2024']] },
     { id: 'oct17', actor: 'us', kinds: ['chips', 'tools'], t: dec(2023, 10, 17), date: 'Oct 17, 2023', short: 'Oct 17 update', title: 'October 2023 update: the performance-density test',
       what: 'Chips: the interconnect test is replaced by performance density. Controlled if TPP ≥ 4800, or TPP ≥ 1600 with density ≥ 5.92 TPP/mm²; a gray zone (TPP 2400–4800) needs notification. Tools: more lithography and deposition items.',
-      who: 'China plus ~40 countries, and Chinese-headquartered firms anywhere in the world. Closes the A800/H800 loophole.',
+      who: 'China plus ~40 countries, and Chinese-headquartered firms anywhere in the world. Changes the eligibility of A800/H800-class products under the earlier criteria.',
       how: 'NVIDIA designed the H20 (TPP ~2,400: a cut-down Hopper with full HBM3 but ~15% of H100’s compute), L20 and L2 to fit under the line.',
       nums: [['5.92 TPP/mm²', 'performance-density threshold'], ['≥ 1600', 'TPP with the density test'], ['2400–4800', 'gray zone (notification)'], ['~2,400', 'H20 TPP'], ['~15 %', 'H20 compute vs H100']] },
     { id: 'cn-graphite', actor: 'cn', kinds: ['materials'], t: dec(2023, 12), date: 'Dec 2023', short: 'Graphite', title: 'China restricts graphite exports',
       what: 'Export licences for graphite.',
-      who: 'Foreign buyers: the second materials counter-control.',
+      who: 'Foreign buyers subject to the licensing requirements.',
       how: 'Part of a widening set of materials controls: gallium and germanium (Jul 2023), graphite (Dec 2023), antimony (Aug 2024), then an outright ban to the US (Dec 2024).',
       nums: [] },
     { id: 'cn-antimony', actor: 'cn', kinds: ['materials'], t: dec(2024, 8), date: 'Aug 2024', short: 'Antimony', title: 'China restricts antimony exports',
@@ -161,7 +161,7 @@
 
   window.registerWidget('export-timeline', {
     title: 'Export Controls, 2018 to 2026',
-    caption: 'Click a marker (or use Prev / Next) to read what each rule restricted, whom it targeted and how the industry worked around it. Notice the pattern: every US chip threshold is answered within months by a cut-down NVIDIA part, while the tool controls, which cannot be smuggled, are the ones that bind.',
+    caption: 'Click a marker (or use Prev / Next) to explore selected policy and industry events: what changed, which firms or users were affected, and what followed. Lanes identify jurisdictions rather than assuming a shared policy viewpoint.',
     mount(el, ctx) {
       const { h, svg } = ctx;
       const uid = 'et' + (++mountCount);
@@ -194,7 +194,7 @@
       const count = h('span', { class: 'count' });
       const selStyle = { minWidth: 0, maxWidth: '100%', width: '100%' };
       const jumpSel = h('select', { 'aria-label': 'Jump to event', style: selStyle }, ...EVENTS.map(ev => h('option', { value: ev.id }, ev.date + ' · ' + ev.short)));
-      const filterSel = h('select', { style: selStyle }, h('option', { value: 'all' }, 'All three'), h('option', { value: 'us' }, 'US rules only'), h('option', { value: 'ally' }, 'Allied controls only'), h('option', { value: 'cn' }, 'China responses only'));
+      const filterSel = h('select', { style: selStyle }, h('option', { value: 'all' }, 'All jurisdictions'), h('option', { value: 'us' }, 'United States only'), h('option', { value: 'ally' }, 'NL / JP / TW only'), h('option', { value: 'cn' }, 'China only'));
       const rangeSel = h('select', { style: selStyle }, ...Object.keys(RANGES).map(k => h('option', { value: k }, RANGES[k][2])));
       jumpSel.addEventListener('change', () => {
         const ev = byId(jumpSel.value); if (!ev) return;
@@ -211,7 +211,28 @@
         h('label', { class: 'w-ctl' }, h('span', null, 'Zoom'), rangeSel, h('output')));
 
       // ---------- drawing ----------
-      const svgEl = svg('svg', { class: 'w-svg', viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'Timeline of US, allied and Chinese export-control events, 2018 to 2026, in three lanes' });
+      const svgEl = svg('svg', { class: 'w-svg', viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'Timeline of policy and industry events in the United States, Netherlands, Japan, Taiwan and China, 2018 to 2026, in three lanes' });
+      // Crowded markers have overlapping generous hit circles. Resolve a pointer
+      // against visible marker centres, not whichever SVG group was painted last.
+      function pointerEventId(event) {
+        const matrix = svgEl.getScreenCTM();
+        if (!matrix) return null;
+        const point = new DOMPoint(event.clientX, event.clientY).matrixTransform(matrix.inverse());
+        let nearest = null, distance = 14 * 14;
+        lastInst.forEach(item => {
+          const d = (point.x - item.x) ** 2 + (point.y - item.y) ** 2;
+          if (d < distance) { nearest = item.ev.id; distance = d; }
+        });
+        return nearest;
+      }
+      svgEl.addEventListener('pointermove', event => setHover(pointerEventId(event)));
+      svgEl.addEventListener('pointerleave', () => setHover(null));
+      svgEl.addEventListener('click', event => {
+        if (!event.detail) return; // keyboard/assistive clicks use the focused group
+        const id = pointerEventId(event);
+        if (id) select(id);
+      });
+
       const hoverLayer = svg('g');
       const detail = h('div', { style: { border: '1px solid var(--line)', borderRadius: '6px', padding: '10px 14px', margin: '8px 0 6px' } });
       const nums = h('div', { class: 'w-readout' });
@@ -294,14 +315,14 @@
         inst.forEach(i => {
           const ev = i.ev, a = ACTORS[i.lane], isSel = ev.id === st.sel;
           const dim = st.filter !== 'all' && st.filter !== i.lane && ev.actor !== 'both';
-          const g = svg('g', { tabindex: 0, role: 'button', 'aria-label': ev.date + ': ' + ev.title, 'data-ev': ev.id, style: { cursor: 'pointer', outline: 'none' }, opacity: dim ? 0.35 : 1 });
+          const g = svg('g', { tabindex: 0, role: 'button', 'aria-label': ev.date + ': ' + ev.title, 'data-ev': ev.id, 'aria-pressed': String(isSel), style: { cursor: 'pointer', outline: 'none' }, opacity: dim ? 0.35 : 1 });
           g.append(svg('circle', { cx: i.x, cy: i.y, r: 12, fill: 'var(--panel)', 'fill-opacity': 0.01 }));
           if (isSel) g.append(svg('circle', { cx: i.x, cy: i.y, r: 12, fill: 'none', stroke: 'var(--ink)', 'stroke-width': 1.5 }));
           g.append(glyph(ev.kinds[0], i.x, i.y, a.color, !!ev.relaxed, (isSel ? 1.25 : 1) * (wide ? 1 : 0.88)));
           g.append(svg('title', null, ev.date + ' · ' + ev.title));
-          g.addEventListener('pointerenter', () => setHover(ev.id)); g.addEventListener('focus', () => setHover(ev.id));
-          g.addEventListener('pointerleave', () => setHover(null)); g.addEventListener('blur', () => setHover(null));
-          g.addEventListener('click', () => select(ev.id));
+          g.addEventListener('focus', () => setHover(ev.id));
+          g.addEventListener('blur', () => setHover(null));
+          g.addEventListener('click', event => { if (!event.detail) select(ev.id); });
           g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(ev.id); } });
           gl.append(g);
         });
@@ -384,7 +405,7 @@
         const wide = W >= 560;
         const row = (k, v) => [h('span', { style: { color: 'var(--muted)', fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.05em', paddingTop: wide ? '2px' : '4px' } }, k), h('div', { style: { lineHeight: 1.45 } }, v)];
         const grid = h('div', { style: { display: 'grid', gridTemplateColumns: wide ? '148px 1fr' : '1fr', gap: wide ? '6px 12px' : '0 0', marginTop: '6px' } },
-          ...row('What it restricted', ev.what), ...row('Who it targeted', ev.who), ...row('Workaround / response', ev.how));
+          ...row('What changed', ev.what), ...row('Who was affected', ev.who), ...row('Industry effect / follow-up', ev.how));
         detail.append(head, h('div', { style: { fontWeight: 600, fontSize: '14.5px' } }, ev.title), grid);
         nums.innerHTML = '';
         ev.nums.forEach(([v, l]) => nums.append(h('div', { class: 'w-stat' }, h('b', null, v), h('span', null, l))));
@@ -429,7 +450,7 @@
         h('span', { class: 'w-legend-item' }, h('i', { style: { background: 'repeating-linear-gradient(45deg, var(--line2) 0 2px, transparent 2px 5px)' } }), 'hatched = after the module’s “as of mid-2026” knowledge'));
       const formula = h('div', { class: 'w-formula', html: 'Chip test (Oct 2022): TPP ≥ 4800 <b>and</b> interconnect ≥ 600 GB/s &nbsp;→&nbsp; (Oct 2023): TPP ≥ 4800, <b>or</b> TPP ≥ 1600 with density ≥ 5.92 TPP/mm²; gray zone TPP 2400–4800<br>Tool test (Oct 2022): logic ≤ 16/14 nm non-planar · DRAM ≤ 18 nm half-pitch · NAND ≥ 128 layers &nbsp;·&nbsp; HBM (Dec 2024): bandwidth density > 2 GB/s/mm²' });
       const note = h('div', { class: 'w-note', html: '<b>How the machinery works.</b> BIS (the Bureau of Industry and Security, US Commerce Department) writes the rules under the Export Administration Regulations (EAR); every controlled item gets an ECCN (Export Control Classification Number) and needs a licence for listed destinations or end users; the Entity List names firms that need a licence for almost everything; and the Foreign Direct Product Rule (FDPR) reaches foreign-made items built with US tools, technology or software. TPP is total processing performance, the chip metric the thresholds use. '
-        + '<b>Why tools bind:</b> advanced chips can be smuggled (H100s have been routed through Singapore and Malaysia), but a fab cannot smuggle an EUV scanner, so Dutch and Japanese alignment is what limits SMIC. ASML, AMAT, Lam and KLA each lost ~5–15% of revenue to the controls, offset by the AI capex boom; the ~25–35% of revenue they still earn in China (2024–25) comes from mature-node fabs (28 nm and above) that the rules deliberately leave open.' });
+        + '<b>Why equipment matters:</b> manufacturing systems depend on installation, maintenance, replacement parts and process expertise as well as delivery. A licence requirement is not automatically a blanket ban: the outcome depends on the equipment, jurisdiction, destination and end user. Use the dated events as examples, not as a current guide to whether a shipment is permitted.' });
 
       el.append(h('div', { class: 'w-steps' }, nav, controls), svgEl, legend, detail, nums, formula, note);
 

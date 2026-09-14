@@ -1,0 +1,273 @@
+{
+  "status": "passed",
+  "timestamp": "2026-09-14T04:43:57.857658+00:00",
+  "sourceHash": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
+  "previousSourceHash": "64e8ef1d873c14b154d064f3d211992b4c10ed8b8ab36d85ab4dd101d8108a18",
+  "extractorHash": "351feff3ad368046e031df3d1812efad6ba2963b05357b702ecc7ba7300b77f1",
+  "extractorUnchanged": true,
+  "voice": "af_heart",
+  "modelRevision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+  "engineVersion": "kokoro-0.9.4-course-1",
+  "inventory": {
+    "lessons": 32,
+    "passages": 6739,
+    "uniqueClips": 6556,
+    "characters": 2823959,
+    "words": 478493
+  },
+  "identityChanges": {
+    "reused": 6457,
+    "new": 99,
+    "retired": 88,
+    "affectedLessons": [
+      {
+        "lesson": "#/s/01",
+        "oldPassages": 66,
+        "newPassages": 66,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/s/02",
+        "oldPassages": 60,
+        "newPassages": 60,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/s/03",
+        "oldPassages": 61,
+        "newPassages": 61,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/s/04",
+        "oldPassages": 61,
+        "newPassages": 61,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/s/05",
+        "oldPassages": 62,
+        "newPassages": 62,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/s/06",
+        "oldPassages": 58,
+        "newPassages": 58,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/s/07",
+        "oldPassages": 62,
+        "newPassages": 62,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/s/08",
+        "oldPassages": 63,
+        "newPassages": 63,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/s/09",
+        "oldPassages": 64,
+        "newPassages": 64,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/s/10",
+        "oldPassages": 64,
+        "newPassages": 64,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/m/00",
+        "oldPassages": 302,
+        "newPassages": 302,
+        "newIdentities": 6
+      },
+      {
+        "lesson": "#/m/01",
+        "oldPassages": 277,
+        "newPassages": 278,
+        "newIdentities": 10
+      },
+      {
+        "lesson": "#/m/02",
+        "oldPassages": 234,
+        "newPassages": 234,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/m/03",
+        "oldPassages": 289,
+        "newPassages": 289,
+        "newIdentities": 8
+      },
+      {
+        "lesson": "#/m/04",
+        "oldPassages": 269,
+        "newPassages": 269,
+        "newIdentities": 3
+      },
+      {
+        "lesson": "#/m/06",
+        "oldPassages": 282,
+        "newPassages": 282,
+        "newIdentities": 3
+      },
+      {
+        "lesson": "#/m/07",
+        "oldPassages": 268,
+        "newPassages": 267,
+        "newIdentities": 3
+      },
+      {
+        "lesson": "#/m/08",
+        "oldPassages": 276,
+        "newPassages": 275,
+        "newIdentities": 3
+      },
+      {
+        "lesson": "#/m/09",
+        "oldPassages": 220,
+        "newPassages": 220,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/m/10",
+        "oldPassages": 242,
+        "newPassages": 242,
+        "newIdentities": 2
+      },
+      {
+        "lesson": "#/m/11",
+        "oldPassages": 328,
+        "newPassages": 329,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/m/12",
+        "oldPassages": 259,
+        "newPassages": 260,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/m/13",
+        "oldPassages": 292,
+        "newPassages": 294,
+        "newIdentities": 3
+      },
+      {
+        "lesson": "#/m/14",
+        "oldPassages": 233,
+        "newPassages": 234,
+        "newIdentities": 2
+      },
+      {
+        "lesson": "#/m/15",
+        "oldPassages": 243,
+        "newPassages": 244,
+        "newIdentities": 3
+      },
+      {
+        "lesson": "#/m/16",
+        "oldPassages": 290,
+        "newPassages": 291,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/m/17",
+        "oldPassages": 221,
+        "newPassages": 221,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/m/18",
+        "oldPassages": 206,
+        "newPassages": 207,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/m/19",
+        "oldPassages": 241,
+        "newPassages": 242,
+        "newIdentities": 1
+      },
+      {
+        "lesson": "#/m/20",
+        "oldPassages": 215,
+        "newPassages": 214,
+        "newIdentities": 21
+      },
+      {
+        "lesson": "#/m/21",
+        "oldPassages": 650,
+        "newPassages": 654,
+        "newIdentities": 14
+      }
+    ]
+  },
+  "render": {
+    "elapsedSeconds": 101,
+    "cachedClips": 6457,
+    "generatedClips": 99,
+    "failedClips": 0,
+    "device": "cuda",
+    "workers": 2
+  },
+  "export": {
+    "version": 1,
+    "pid": 1490796,
+    "status": "complete",
+    "updatedAt": "2026-09-14T04:37:46.274Z",
+    "output": "/home/artemis/.cache/sand-to-gpu/static-export",
+    "format": "mp3",
+    "bitrate": 64000,
+    "compressedClips": 6556,
+    "failedClips": 0,
+    "active": 0,
+    "mp3Bytes": 1639284752,
+    "wavBytes": 9808026464,
+    "elapsedSeconds": 39,
+    "errors": []
+  },
+  "coverage": {
+    "report": "qa/reports/narration-coverage.json",
+    "clips": 6556,
+    "passages": 6739,
+    "lessons": 32,
+    "domComparisons": 64,
+    "audioSeconds": 204328.13758333307,
+    "mp3Bytes": 1639284752,
+    "sourceAssetsCompared": 58,
+    "errors": []
+  },
+  "nativePlayback": {
+    "stagingReport": "qa/reports/narration-neutrality-native.json",
+    "liveReport": "qa/reports/narration-neutrality-native-live.json",
+    "newRecordingKey": "6bd0a6a2c457dadf814b48016a6c14ed6444797d815717905a6d69a56a12c5dd",
+    "apiRequests": 0,
+    "rangeStatus": 206
+  },
+  "promotion": {
+    "status": "passed",
+    "timestamp": "2026-09-14T04:40:25.952353+00:00",
+    "canonical": "/home/artemis/.cache/sand-to-gpu/static-export",
+    "backup": "/home/artemis/.cache/sand-to-gpu/static-export-before-neutrality-2026-09-14",
+    "previousSourceHash": "64e8ef1d873c14b154d064f3d211992b4c10ed8b8ab36d85ab4dd101d8108a18",
+    "sourceHash": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
+    "livePort": 8790,
+    "serverRestartRequired": false
+  },
+  "package": {
+    "archive": "/mnt/c/Users/dicks/Downloads/sand-to-gpu-static-2026-09-13.zip",
+    "files": 6647,
+    "bytes": 1649782775,
+    "sha256": "448723454c9882c833d8022600f43c18d7326803f75575452f81ae38069aef3f"
+  },
+  "limitations": [
+    "Technical integrity and exact text coverage do not grade audible pronunciation or naturalness.",
+    "MP3 duration uses the fixed export codec, frame count and encoder delay/padding; representative browser decode is recorded separately."
+  ]
+}

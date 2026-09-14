@@ -2,15 +2,15 @@
 
 The publishing edition uses saved Heart recordings for every passage narrated by the player across all 32 lessons. It contains ordinary website files, MP3 audio and word-timing manifests. A visitor does not download Kokoro or run inference. No speech API or Python process is needed on the hosting service.
 
-**Completed:** all 6,545 unique MP3 clips and 6,728 passage placements passed the final audit. The recordings total approximately 56.66 hours and 1.637 GB of MP3 audio. The initial GPU pass took 44 minutes 34 seconds; the final repair/cache pass took 25 seconds. Both generation and export report complete with zero remaining failures.
+**Current edition, September 14:** all 6,556 unique MP3 clips and 6,739 passage placements passed the final audit. The recordings total approximately 56.76 hours and 1.639 GB of MP3 audio. The supplier and geography revisions required 99 new recordings; 6,457 unchanged recordings were reused. Generation/cache assembly took 101 seconds and MP3 export took 39 seconds, with zero failures.
 
-The verified archive on this computer is `C:\Users\dicks\Downloads\sand-to-gpu-static-2026-09-13.zip` (1,647,039,261 bytes; 6,636 files). Its CRC, source snapshot and SHA-256 checks passed; see `qa/reports/narration-package.json` for the checksum. The preview on port 8790 now serves the completed static edition, with the local speech API disabled.
+The verified archive on this computer is `C:\Users\dicks\Downloads\sand-to-gpu-static-2026-09-13.zip` (1,649,782,775 bytes; 6,647 files). Its CRC, source snapshot and SHA-256 checks passed; see `qa/reports/narration-package.json` for the checksum. The preview on port 8790 now serves the completed static edition, with the local speech API disabled.
 
-Archive SHA-256: `7bf5b93094207835372af34362ac0bed4bff249bddadb81a227a65349fb6374c`.
+Archive SHA-256: `448723454c9882c833d8022600f43c18d7326803f75575452f81ae38069aef3f`.
 
-With Listen open, clicking a paragraph starts playback from that paragraph. **Read from here** starts at the passage currently on screen. The refreshed publishing edition includes these controls and reuses all existing recordings. Eight paragraph interaction cases and eleven static-player cases passed. Native browser playback also verified a real pointer click from paused narration: it selected the correct MP3, restarted near the beginning, highlighted the expected text, and made no speech API requests. See `qa/reports/narration-paragraph.json` and `qa/reports/narration-static.json`.
+With Listen open, clicking a paragraph starts playback from that paragraph. **Read from here** starts at the passage currently on screen. The publishing edition includes these controls. Their earlier refresh reused all existing recordings; the September 14 content revision regenerated changed passages. Eight paragraph interaction cases and eleven static-player cases passed. Native browser playback also verified a real pointer click from paused narration: it selected the correct MP3, restarted near the beginning, highlighted the expected text, and made no speech API requests. See `qa/reports/narration-paragraph.json` and `qa/reports/narration-static.json`.
 
-The inventory is captured from the same rendered DOM and extraction function as the Listen button. It contains 6,728 passage occurrences and 6,545 unique clips, approximately 478,000 written words. Identical passages share a recording. As in the interactive player, diagrams, tables, code and reference lists are left for visual reading; this is complete coverage of the narrated passages, not an audio description of every visual.
+The inventory is captured from the same rendered DOM and extraction function as the Listen button. It contains 6,739 passage occurrences and 6,556 unique clips, totaling 478,493 written words. Identical passages share a recording. As in the interactive player, diagrams, tables, code and reference lists are left for visual reading; this is complete coverage of the narrated passages, not an audio description of every visual.
 
 ## Build and storage
 
@@ -74,7 +74,7 @@ npm run narration:export
 node qa/narration-coverage.js
 ```
 
-The exporter can also run in a separate terminal while speech is being generated. If the speech job stops for repair, repeat generation and export; already completed speech and verified MP3 files are reused. Keep the local preview available during export because the finalizer verifies the current reader's extraction function against the recorded inventory.
+For an update to an existing edition, run generation to completion before starting export: copied old manifests and old progress records must not be mistaken for the new completed edition. If the speech job stops for repair, repeat generation and export; already completed speech and verified MP3 files are reused. Keep the local preview available during export because the finalizer verifies the current reader's extraction function against the recorded inventory.
 
 To preview the completed folder without any speech service:
 
@@ -99,3 +99,13 @@ The existing 16 player tests and 11 static-playback cases passed. The static cas
 The full coverage audit checks every unique MP3's hash, complete frame stream and gapless duration, every passage's word timing bounds and exact source offsets, all chapter references and source fingerprints. These checks establish technical consistency and completeness. They do not grade the pronunciation of every technical term or the subjective pleasantness of the voice.
 
 Final evidence is saved in `qa/reports/narration-prerender.json`, `narration-coverage.json` and `narration-export.json`. Every clip passed, all 64 desktop/phone lesson comparisons matched, and the actual static-server player passed native MP3 playback, pause, seek, word highlighting, resume and close, with zero narration API calls. The server returned the correct MP3 MIME type, an empty HEAD response and working byte ranges.
+
+## September 14 content and audio release
+
+The supplier/geography audit changed narration identities in 31 lessons. The reader extraction function is unchanged. This release adds 99 new clip identities and retires 88 from the publishing bundle; the original WAV cache is retained for reuse. The previous completed publishing folder is preserved locally at `~/.cache/sand-to-gpu/static-export-before-neutrality-2026-09-14/`.
+
+Generation and compression ran in a separate staging directory while port 8790 continued serving the previous edition. All 6,556 MP3 hashes, complete frame streams, decoded durations, timing bounds and source offsets passed. All 32 lessons matched the live reader at desktop and phone widths, for 64 comparisons. After promotion, the full audit passed again against port 8790.
+
+A native browser check selected the newly recorded S01 supplier-role paragraph with a real pointer click. Its correct 40.975-second MP3 played, the playback clock advanced, the passage and spoken word highlighted, and a byte-range request returned HTTP 206 with the correct audio MIME type. No speech API requests or page errors occurred, on either staging or the promoted preview. This verifies technical playback and mapping, not a subjective pronunciation review.
+
+Current evidence: `qa/reports/narration-neutrality-release.json`, `narration-coverage.json`, `narration-neutrality-native.json`, `narration-neutrality-native-live.json`, and `narration-package.json`. The earlier `narration-prerender.json` and `narration-export.json` retain the initial full-render and player-transport history.

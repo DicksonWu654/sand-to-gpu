@@ -136,7 +136,7 @@ The product is **metallurgical-grade silicon (MG-Si)**, also called silicon meta
 
 ### 3.4 Who makes MG-Si
 
-Global silicon-metal production is on the order of 4.5–5 million tonnes a year, and China produces roughly 80–85% of it; the USGS Mineral Commodity Summaries put 2024 world output at ~4.6 Mt with Chinese output at ~3.9 Mt (USGS counts silicon content; Chinese industry data, which count gross tonnage and include **secondary silicon**, scrap and off-grade silicon re-melted and resold rather than freshly smelted, run higher). The largest single producer is **Hoshine Silicon** in Xinjiang, with well over a million tonnes of capacity. Outside China, **Ferroglobe** (Spain, France, Canada, the US, South Africa; ~350 kt/yr silicon-metal nameplate, the largest non-Chinese producer, with actual output lower in 2024–25) and **Elkem** (Norway, Iceland, Canada, Paraguay, China; Norwegian-listed and majority owned by China National Bluestar) dominate, with **Dow** (Brazil), **RIMA** and **Liasa** (Brazil), **Simcoa** (Australia), and **Mississippi Silicon** (US) as smaller players. Wacker smelts part of its own requirement at the Holla plant in Norway (Wacker Chemicals Norway, acquired in 2010) and buys the rest of its chemical-grade MG-Si under long-term contracts from Elkem, Ferroglobe, and Brazilian producers, which is partly why supply free of Xinjiang-origin material (under a US law described in Section 9) matters to it.
+Global silicon-metal production is on the order of 4.5–5 million tonnes a year, and China produces roughly 80–85% of it; the USGS Mineral Commodity Summaries put 2024 world output at ~4.6 Mt with Chinese output at ~3.9 Mt (USGS counts silicon content; Chinese industry data, which count gross tonnage and include **secondary silicon**, scrap and off-grade silicon re-melted and resold rather than freshly smelted, run higher). The largest single producer is **Hoshine Silicon** in Xinjiang, with well over a million tonnes of capacity. Outside China, **Ferroglobe** (Spain, France, Canada, the US, South Africa; ~350 kt/yr silicon-metal nameplate, with actual output lower in 2024–25) and **Elkem** (Norway, Iceland, Canada, Paraguay, China; Norwegian-listed and majority owned by China National Bluestar) dominate, with **Dow** (Brazil), **RIMA** and **Liasa** (Brazil), **Simcoa** (Australia), and **Mississippi Silicon** (US) as smaller players. Wacker smelts part of its own requirement at the Holla plant in Norway (Wacker Chemicals Norway, acquired in 2010) and buys the rest of its chemical-grade MG-Si under long-term contracts from Elkem, Ferroglobe, and Brazilian producers, which is partly why supply free of Xinjiang-origin material (under a US law described in Section 9) matters to it.
 
 Demand splits roughly into thirds: aluminum alloys; silicones (the rubbers, sealants and oils made by reacting MG-Si with methyl chloride at Dow, Wacker, Momentive, Shin-Etsu, Elkem, and Chinese producers); and polysilicon, which has been the growth engine: solar polysilicon alone consumed on the order of 2 Mt of MG-Si in 2024.
 
@@ -348,7 +348,7 @@ One row of the table below needs a concept the earlier sections have not used. I
 
 The Chinese solar industry's switch in 2023–2025 from an older solar-cell design built on boron-doped (p-type) wafers to a newer, more efficient one built on phosphorus-doped (n-type) wafers tightened the solar spec sharply, because n-type wafers are sensitive to stray boron and to the metals that limit lifetime; the good "N-type grade" solar polysilicon of 2025 (B ≤ ~0.1 ppba, P ≤ ~0.3 ppba, ~8N) is close to what was considered electronic grade in the 1990s.
 
-The electronic-grade supply is dominated by a handful of incumbents (all as of 2025):
+Electronic-grade suppliers include long-established producers and newer suppliers. The following examples distinguish this market from bulk solar polysilicon (the historical site descriptions are as of 2025):
 
 - **Wacker**: Burghausen and Nünchritz, Germany; Charleston, Tennessee.
 - **Hemlock Semiconductor**: Hemlock, Michigan; owned by Corning with a Shin-Etsu Handotai minority stake since Dow's exit in 2020.
@@ -356,13 +356,14 @@ The electronic-grade supply is dominated by a handful of incumbents (all as of 2
 - **OCI**: Gunsan, Korea, converted to electronic grade only in 2020, plus Samalaju, Malaysia.
 - **High-Purity Silicon Corp.**: Yokkaichi, Japan, with a US plant in Alabama; the former Mitsubishi Materials polysilicon business, sold to the wafer maker SUMCO in 2023.
 - **REC Silicon**: silane gas, and historically FBR and Siemens polysilicon at Moses Lake and Butte.
+- **Xinhua Semiconductor (GCL group)**: China; an electronic-grade polysilicon business identified in GCL’s semiconductor-materials portfolio. This is distinct from treating all GCL solar polysilicon as electronic grade.
 
-So why do these six hold the market when Chinese producers make twenty times the tonnage? Four reasons.
+Why does a large solar-polysilicon business not automatically become a qualified supplier to every semiconductor wafer maker? Four separate questions explain the difference.
 
-1. **It is a small market.** Electronic-grade demand is on the order of 40–50 kt/yr, perhaps 3% of global polysilicon (~1.5–2 Mt/yr), and it grows with wafer starts at a few percent a year, not with solar's 30%. A single 100 kt solar line would double the world's EG supply; no one builds for that.
-2. **Qualification is slow and sticky.** A wafer maker qualifying a new feedstock source for 300 mm grows test crystals, runs full wafer characterization (resistivity, lifetime, oxygen precipitation behavior, defect density), then ships wafers to fab customers who run their own qualification lots; the cycle is one to two years and the fab customer sees no benefit, only risk. Once a source is qualified it stays qualified for a decade under long-term contract.
-3. **The last decade of purity is expensive in ways solar economics cannot justify**: extra distillation columns, resin guard beds, slower and smoother rod growth, cleanroom breaking, etching, and a much heavier analytical laboratory. Chinese producers have repeatedly announced "electronic grade" output (Xinte, Daqo, and Tongwei have all sold material into the 200 mm and discrete (single-function chips such as power transistors) market and have programs for 300 mm), and as of ~2025 they do supply part of China's domestic wafer industry, but the top-tier 300 mm wafer makers (Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron) still buy overwhelmingly from the incumbents.
-4. **Traceability and geopolitics** (Section 9) now cut in the incumbents' favor: US and Japanese customers want a supply chain that is not exposed to Xinjiang or to export-control retaliation.
+1. **It is a small market.** Electronic-grade demand is on the order of 40–50 kt/yr, perhaps 3% of global polysilicon (~1.5–2 Mt/yr), and it grows with wafer starts at a few percent a year, not with solar's 30%. A single 100 kt solar line would exceed that electronic-grade demand; its scale alone does not establish a market for semiconductor-qualified output.
+2. **Qualification is slow and sticky.** A wafer maker qualifying a new feedstock source for 300 mm grows test crystals, runs full wafer characterization (resistivity, lifetime, oxygen precipitation behavior, defect density), then ships wafers to fab customers who run their own qualification lots; the cycle can take one to two years. A customer weighs the qualification cost and yield risk against benefits such as price, capacity or supply resilience. Established suppliers can therefore retain business under long-term contracts, while a new supplier must demonstrate the required consistency.
+3. **The last decade of purity is expensive in ways solar economics cannot justify**: extra distillation columns, resin guard beds, slower and smoother rod growth, cleanroom breaking, etching, and a much heavier analytical laboratory. The test is product-specific: which contaminants are measured, at what detection limits, and which wafer and device processes have qualified the material? Xinhua is one supplier with an electronic-grade polysilicon business. A supplier’s purity claim or announced capacity, whether Chinese, European, American or Japanese, does not by itself answer every customer’s qualification requirements.
+4. **Traceability and trade rules** (Section 9) are a separate purchasing constraint. A technically suitable material may still face restrictions tied to its producer, origin, destination or end use. These requirements should be explained separately from material purity and process capability.
 
 ## 7. How Purity Is Measured
 
@@ -429,11 +430,11 @@ Two things follow. First, MG-Si and power together are roughly three quarters of
 
 Outside China, polysilicon documented free of Xinjiang content traded at **~$19–22/kg** through 2025 and 2026 (the Global Polysilicon Marker published by **OPIS**, a price-reporting agency, sat near $19–20/kg), a premium created entirely by policy.
 
-Electronic-grade prices are not published; they are set in multi-year contracts between half a dozen producers and five wafer makers. Reasonable estimates put EG at **~$20–40/kg**, two to four times the solar price (as of 2025). At 0.23 kg per 300 mm wafer, the polysilicon in a $150–200 wafer is worth ~$5–10, and in a $20,000 leading-edge processed wafer it is a rounding error, which is precisely why electronics buyers pay for purity and traceability rather than shopping on price.
+Electronic-grade prices are not published; they are set in multi-year contracts between qualified suppliers and wafer makers. Reasonable estimates put EG at **~$20–40/kg**, two to four times the solar price (as of 2025). At 0.23 kg per 300 mm wafer, the polysilicon in a $150–200 wafer is worth ~$5–10, and in a $20,000 leading-edge processed wafer it is a rounding error, which is precisely why electronics buyers pay for purity and traceability rather than shopping on price.
 
 ### 9.2 The China boom
 
-In 2005 China made under 5% of the world's polysilicon; in 2024 it made ~93–95%, and nine of the ten largest producers were Chinese. **Tongwei** (originally an animal-feed company; ~910 kt/yr in Sichuan, Inner Mongolia, and Yunnan), **GCL Technology** (~480 kt/yr, all granular), **Daqo New Energy** (~300–350 kt/yr, Xinjiang and Inner Mongolia; NYSE-listed), **Xinte Energy** (a TBEA subsidiary, ~300 kt/yr), **East Hope**, and **Asia Silicon** lead (nameplate capacities as of 2025); the four largest held about 65% of global output in 2024. Their advantages were not primarily technological (they adapt Western reactor designs, and GCL's FBR is SunEdison's) but scale, 18-month construction cycles, sub-$0.04/kWh coal or hydro power, cheap local MG-Si, and a domestic wafer industry that absorbs everything. Wacker's ~80 kt/yr and OCI Malaysia's ~35 kt/yr are the only non-Chinese solar-relevant capacity of note (Hemlock's output is mostly electronic grade, with some solar).
+In 2005 China made under 5% of the world's polysilicon; in 2024 it made ~93–95%, and nine of the ten largest producers were Chinese. **Tongwei** (originally an animal-feed company; ~910 kt/yr in Sichuan, Inner Mongolia, and Yunnan), **GCL Technology** (~480 kt/yr, all granular), **Daqo New Energy** (~300–350 kt/yr, Xinjiang and Inner Mongolia; NYSE-listed), **Xinte Energy** (a TBEA subsidiary, ~300 kt/yr), **East Hope**, and **Asia Silicon** lead (nameplate capacities as of 2025); the four largest held about 65% of global output in 2024. Their scale draws on a large solar-wafer customer base, access to electricity and silicon metal, and investment in manufacturing capacity. Reactor design, process control, energy efficiency and impurity management also affect competitiveness. Firms using the same process family can still differ in reactor engineering, operating recipes, impurity control and production efficiency. Examples outside China include Wacker's ~80 kt/yr and OCI Malaysia's ~35 kt/yr (historical nameplate estimates above); Hemlock's output is mostly electronic grade, with some solar.
 
 ### 9.3 Xinjiang and the UFLPA
 
@@ -542,13 +543,14 @@ The reaction-enthalpy energy estimate and the estimated ΔG crossing use simplif
 | Sibelco (IOTA) | Belgium / US (Spruce Pine, NC) | High-purity quartz for crucibles, quartzware | Leader |
 | The Quartz Corp | Norway / France (mines Spruce Pine, refines at Drag) | High-purity quartz | #2 |
 | Jiangsu Pacific Quartz | China | Natural HPQ processing, synthetic quartz, crucible feed | Rising #3 / China leader |
-| Hoshine Silicon | China (Xinjiang) | Largest MG-Si producer; Entity-listed, UFLPA-exposed | Leader (MG-Si) |
+| Hoshine Silicon | China | Silicon-metal producer; trade and origin restrictions are discussed separately in Section 9 | Major MG-Si supplier |
 | Ferroglobe | Spain / US / Canada / France / South Africa | MG-Si, ~350 kt/yr nameplate, largest outside China | Leader ex-China |
 | Elkem | Norway (Bluestar-owned) | MG-Si, silicones, silica fume; supplier to Wacker | #2 ex-China |
 | Wacker Chemie | Germany / US (Charleston, TN) / Norway (Holla MG-Si smelter) | EG and solar polysilicon, ~80 kt/yr; STC-integrated chemical site; part-integrated into MG-Si | EG leader |
 | Hemlock Semiconductor | US (Michigan; Corning + Shin-Etsu Handotai) | EG polysilicon, some solar | EG #2 |
 | Tokuyama | Japan | EG polysilicon | EG top tier |
-| OCI | Korea (Gunsan, EG) / Malaysia (Samalaju, solar) | EG and UFLPA-clean solar polysilicon | EG / clean-solar niche |
+| OCI | Korea (Gunsan, EG) / Malaysia (Samalaju, solar) | Electronic-grade and solar polysilicon at different sites | Product grade and shipment traceability must be checked separately |
+| Xinhua Semiconductor (GCL) | China | Electronic-grade polysilicon | Semiconductor feedstock supplier |
 | High-Purity Silicon Corp. (SUMCO group; ex-Mitsubishi Materials) | Japan (Yokkaichi) / US (Alabama) | EG polysilicon, largely for SUMCO | EG niche |
 | REC Silicon | US (Butte, MT; Moses Lake, WA idle); taken private by Hanwha (Korea) in 2025–26 | Silane gas; former FBR granular | Silane leader, FBR exited |
 | Tongwei | China | Solar polysilicon, ~910 kt/yr nameplate, Siemens | World #1 by volume |
@@ -586,3 +588,7 @@ Module 00 mapped the chain from quartz to a GPU rack; this module is its first i
 - S. Wolf and R. N. Tauber, *Silicon Processing for the VLSI Era, Vol. 1: Process Technology*, Lattice Press. Chapter 1 covers polysilicon and crystal growth from the fab engineer's side.
 - Sibelco, "Sibelco Restarts Production and Customer Shipments at Spruce Pine Following Hurricane Helene," press release, 10 October 2024; and the ITRPV (International Technology Roadmap for Photovoltaic) annual reports for solar polysilicon consumption, wafer thickness, and kerf trends.
 - Asianometry (YouTube) episodes on the polysilicon industry, the Siemens process, and Spruce Pine quartz, for a well-researched narrative overview.
+
+- [GCL semiconductor-materials business: Xinhua electronic-grade polysilicon](https://www.gcl-power.com/en/goods/semiconductor.html). Reviewed September 2026.
+
+- [Hoshine silicon-metal product catalogue](https://www.hoshinesilicon.com/en/products/list_78.aspx-2.html?lcid=40). Reviewed September 2026.

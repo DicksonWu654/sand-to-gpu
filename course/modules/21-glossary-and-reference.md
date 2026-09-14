@@ -426,11 +426,11 @@ A useful way to hold this in mind: a Blackwell package is about 4 × 10⁶ metal
 
 Numbers are compiled from foundry disclosures at IEDM/VLSI, WikiChip, TechInsights and SemiAnalysis teardowns, and the course's own Module 11 and Module 20. Values marked ~ are estimates; foundries stopped publishing pitches around the 7 nm generation. Density is for the high-density library at 100% utilization; real chips reach 50–70% of it. Wafer prices are list-price estimates as of ~2025.
 
-**How to read this table.** *Marketing node* is the name the foundry sells the process under; it is a label, not a length. *Foundry* is who runs it. *HVM year* is when it reached high-volume manufacturing (see HVM in the Glossary), not when it was announced. *Transistor* is the device type: planar, FinFET, or nanosheet gate-all-around, with vendor names where the vendor uses them. *CPP* is the contacted poly pitch, the gate-to-gate spacing in nanometres (see CPP). *Min MP* is the tightest metal pitch, usually M0 or M1 (see Metal pitch). *Fin/sheet pitch* is the fin-to-fin spacing for FinFET nodes; "sheet" means the node uses nanosheets, which have no fin pitch. *Density* is millions of transistors per mm² for the high-density (HD) standard-cell library at 100% utilization (see MTr/mm²); "measured" means a TechInsights teardown of a real chip, "claimed" means the foundry's own marketing figure, "est." means an analyst reconstruction. *Litho* says which layers use EUV, and how many; "EUV LELE" means EUV double patterning by two litho-etch passes (see LELE). *Approx. wafer price* is the list-price estimate; "internal" means Intel did not sell those wafers to outside customers, so no price exists.
+**How to read this table.** *Marketing node* is the name the foundry sells the process under; it is a label, not a length. *Foundry* is who runs it. *HVM year/status* separates a reported production date from a future target or estimate. A target is not evidence of achieved high-volume manufacturing (see HVM in the Glossary); this distinction applies to every foundry in the table. “—” means the cited sources do not establish a value here, not zero or an absence of capability. *Transistor* is the device type: planar, FinFET, or nanosheet gate-all-around, with vendor names where the vendor uses them. *CPP* is the contacted poly pitch, the gate-to-gate spacing in nanometres (see CPP). *Min MP* is the tightest metal pitch, usually M0 or M1 (see Metal pitch). *Fin/sheet pitch* is the fin-to-fin spacing for FinFET nodes; "sheet" means the node uses nanosheets, which have no fin pitch. *Density* is millions of transistors per mm² for the high-density (HD) standard-cell library at 100% utilization (see MTr/mm²); "measured" means a TechInsights teardown of a real chip, "claimed" means the foundry's own marketing figure, "est." means an analyst reconstruction. *Litho* says which layers use EUV, and how many; "EUV LELE" means EUV double patterning by two litho-etch passes (see LELE). *Approx. wafer price* is the list-price estimate; "internal" means Intel did not sell those wafers to outside customers, so no price exists.
 
 > **Intuition:** A node name is a model year, not a measurement. Nothing on an N2 wafer is 2 nm across: the gate is ~12–16 nm long, the gates sit ~45 nm apart, the tightest wires ~23 nm apart. The three physical numbers that matter are CPP, MP, and MTr/mm², and even MTr/mm² is a library figure that real chips reach only 50–70% of, because real chips leave routing channels, memory, and analog blocks between the standard cells. When two nodes from different foundries are compared, compare those three numbers, not the names; Intel 7 and TSMC N7 have similar pitches, and Intel 18A's 32 nm metal pitch is looser than N3E's 23 nm.
 
-| Marketing node | Foundry | HVM year | Transistor | CPP (nm) | Min MP (nm) | Fin/sheet pitch (nm) | Density (MTr/mm², HD) | Litho (EUV layers) | Approx. wafer price |
+| Marketing node | Foundry | HVM year/status | Transistor | CPP (nm) | Min MP (nm) | Fin/sheet pitch (nm) | Density (MTr/mm², HD) | Litho (EUV layers) | Approx. wafer price |
 |---|---|---|---|---|---|---|---|---|---|
 | 28 nm (28HPM) | TSMC | 2011 | Planar HKMG | ~117 | ~90 | n/a | ~12–15 | DUV ArFi, 0 EUV | ~$2.5–3k |
 | 16 nm (N16) | TSMC | 2015 | FinFET | 90 | 64 | 48 | ~29 | DUV ArFi, LELE, 0 EUV | ~$4–5k |
@@ -452,7 +452,7 @@ Numbers are compiled from foundry disclosures at IEDM/VLSI, WikiChip, TechInsigh
 | SF3 (3GAP) | Samsung | 2024 | MBCFET | ~45 | ~28 | sheet | ~170 | EUV | ~$18–20k |
 | SF2 | Samsung | 2025–26 | MBCFET 2nd gen | ~45 | ~28 | sheet | ~200–230 est. | EUV | ~$25k est. |
 | N+2 ("7 nm class") | SMIC | 2023 | FinFET | ~57 | ~40 | ~30 | ~90 | DUV SAQP only (no EUV; export controls) | ~$10–12k est. |
-| N+3 ("5 nm class") | SMIC | 2024–25 | FinFET | ~51–54 | ~30–36 | ~28 | ~120–130 est. | DUV multi-patterning, low yield | n/a |
+| N+3 | SMIC | — (2025 chip teardown) | FinFET | — | — | — | — | DUV multi-patterning | — |
 | 2 nm | Rapidus | pilot 2025, HVM target 2027 | Nanosheet GAA (IBM-derived) | ~45 est. | ~24 est. | sheet | ~200+ target | EUV NXE:3800E | n/a |
 
 Legend for the vendor names in the Transistor column: **FinFlex** and **NanoFlex** are TSMC's options to mix fin counts (N3) or nanosheet widths (N2) cell by cell; **MBCFET** (Samsung) and **RibbonFET** (Intel) are those companies' names for the nanosheet gate-all-around transistor; **PowerVia** is Intel's backside power delivery, **PowerDirect** its planned second generation with direct contacts to the transistors, and **Super Power Rail** is TSMC's backside power scheme on A16. All are defined in the Glossary.
@@ -464,6 +464,8 @@ Legend for the vendor names in the Transistor column: **FinFlex** and **NanoFlex
 Three things follow from those two calculations. First, CPP has been essentially flat at 45–50 nm since N5 because it must fit a gate, two spacers, and a contact; remaining density comes from metal pitch, cell height (track reduction, backside power), and DTCO. Second, density gain per node has fallen from ~2× (N16 to N10 to N7) to ~1.15–1.3× (N3E to N2), while wafer price has risen ~1.5× per node, which is why cost per transistor has stopped falling at the leading edge, as the second worked example shows. Third, the EUV layer count roughly doubles every two nodes, and each EUV layer costs 2–3× a DUV layer in tool time, so litho's share of wafer cost has grown from ~25% at N16 to ~35–40% at N2.
 
 > **What can go wrong:** Reading a density claim. Three traps catch most readers. The first is comparing a foundry's library figure (100% utilization, HD cells, often a NAND2-and-flip-flop weighted average) with a teardown of a real chip, which is a different quantity by the 50–70% factor above; the H100 example shows the gap. The second is comparing an SRAM-heavy die with a logic-heavy one: SRAM bit cells have barely shrunk since N5, so a die that is half cache scales worse than the library number suggests, while a pure-logic block can exceed it. The third is treating "claimed" and "measured" as the same: N5's 171 claimed against 138 measured is the standard example, and the N2 figures in the table are marked "est." because they rest on analyst reconstruction rather than a published teardown. For any density number, ask which library, what utilization, and who measured it.
+
+TechInsights identifies N+3 as further scaling of SMIC's 7 nm-class technology and reports that it remains less scaled than TSMC and Samsung 5 nm processes. The unspecified cells above avoid presenting unverified pitches, density or production yield as measured facts. A physical-chip teardown and a high-volume-production announcement establish different things. [TechInsights N+3 process analysis](https://www.techinsights.com/blog/smic-n3-kirin-9030-pro-process-flow-analysis).
 
 ## Master Process Flow
 
@@ -703,16 +705,17 @@ What comes in is finished GPU packages; what goes out is a running, monitored da
 
 ## Who Buys From Whom
 
-An adjacency list for the key companies. The list follows the chain from raw materials to the data center; a company's main customers are named where public, otherwise the customer class is given.
+An adjacency list for representative companies. The list follows the chain from raw materials to the data center. Grouped entries show supplier and customer categories, not a claim that every listed supplier sells to every listed buyer. A specific purchasing relationship, factory location or product qualification needs its own evidence.
 
-How to read it. Every arrow (→) reads "sells to", left to right, without exception. Seven role words recur. A **foundry** makes wafers for others; some foundry divisions belong to IDMs that also sell their own chips. A **fabless** company designs chips and owns no fab. An **IDM** (integrated device manufacturer) designs and fabricates its own chips. An **OSAT** (outsourced semiconductor assembly and test house) packages and tests chips for hire. An **ODM** (original design manufacturer) designs and builds servers and racks that a brand or hyperscaler sells or uses. An **OEM** (original equipment manufacturer) sells systems under its own name. A **hyperscaler** runs data centers at the scale of hundreds of thousands of servers and is the end customer. Market shares are approximate and dated "as of 2025"; they move. Each sub-list ends with a note on its choke point, the relationship in it that has no ready substitute.
+How to read it. Arrows (→) show the direction in which a material, service or product moves to the next customer class. Grouped examples describe a stage of the chain; only explicitly documented company-to-company purchases should be read as a specific contract. Seven role words recur. A **foundry** makes wafers for others; some foundry divisions belong to IDMs that also sell their own chips. A **fabless** company designs chips and owns no fab. An **IDM** (integrated device manufacturer) designs and fabricates its own chips. An **OSAT** (outsourced semiconductor assembly and test house) packages and tests chips for hire. An **ODM** (original design manufacturer) designs and builds servers and racks that a brand or hyperscaler sells or uses. An **OEM** (original equipment manufacturer) sells systems under its own name. A **hyperscaler** runs data centers at the scale of hundreds of thousands of servers and is the end customer. Market shares are approximate and dated "as of 2025"; they move. Each sub-list ends with a note on its choke point, the relationship in it that has no ready substitute.
 
 ### Raw materials and wafers
 
 - **Sibelco, The Quartz Corp** (high-purity quartz) → crucible makers (Shin-Etsu Quartz, Momentive/Heraeus, Ferrotec) → CZ pullers at wafer makers.
-- **Ferroglobe, Elkem, Chinese MG-Si producers** → polysilicon makers (Wacker, Hemlock, Tokuyama, OCI, GCL, Tongwei).
-- **Wacker, Hemlock, Tokuyama, REC Silicon** (electronic-grade polysilicon) → Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron.
-- **Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron** (300 mm prime and epi wafers) → TSMC, Samsung, Intel, SK hynix, Micron, SMIC, all fabs. Shin-Etsu and SUMCO together hold ~55–60% (as of 2025).
+- **Ferroglobe, Elkem, Hoshine and other silicon-metal producers** → polysilicon makers (Wacker, Hemlock, Tokuyama, OCI, GCL, Tongwei).
+- **Wacker, Hemlock, Tokuyama and Xinhua Semiconductor (GCL)** (electronic-grade polysilicon) → qualified semiconductor-wafer manufacturers. The companies named here are examples of the producer category, not a list of disclosed bilateral contracts.
+- **Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron** (300 mm prime and epi wafers) → TSMC, Samsung, Intel, SK hynix, Micron, SMIC, all fabs. Supplier shares depend on whether the measure is revenue, wafer area, diameter or product grade; those measures should not be combined.
+- **NSIG / Shanghai Zing** (300 mm silicon wafers), with other NSIG businesses in SOI and customized wafers → semiconductor manufacturers. [NSIG product overview](https://www.nsig.com/en), checked 14 September 2026.
 - **Soitec** (SOI wafers) → GlobalFoundries, STMicro, Samsung; RF-SOI to Qualcomm/Skyworks via foundries.
 - **Wolfspeed, Coherent (II-VI), SICC** (SiC substrates) → STMicro, Infineon, onsemi (power devices, not in the GPU chain).
 - Choke point: crucible-grade high-purity quartz comes overwhelmingly from one district, Spruce Pine, North Carolina, with no qualified substitute at volume.
@@ -741,7 +744,7 @@ How to read it. Every arrow (→) reads "sells to", left to right, without excep
 - **Axcelis** (ion implanters, esp. high-current and SiC) → fabs; **Applied** (Varian) leads in implant.
 - **Advantest** (SoC/memory ATE, ~60%, as of 2025) → TSMC-ecosystem test houses (KYEC, ASE), NVIDIA, Samsung, SK hynix; **Teradyne** (~30%, as of 2025) → Apple ecosystem, Micron, Qualcomm.
 - **FormFactor, Technoprobe, Micronics Japan (MJC)** (probe cards) → fabs and test houses; **DISCO** (dicing saws, grinders, ~70–80%, as of 2025) → OSATs, memory makers; **Besi, ASMPT, Hanmi** (die bonders, TCB, hybrid bonders) → TSMC, SK hynix, OSATs; **EV Group, SUSS** (wafer bonders) → memory makers, TSMC.
-- **Naura, AMEC, SMEE, Piotech** (Chinese domestic etch, deposition, lithography) → SMIC, Hua Hong, YMTC, CXMT.
+- **NAURA, AMEC, Hwatsing, ACM Research and Piotech** (etch, deposition, CMP, cleaning and plating, depending on vendor) → foundry, memory and packaging customers. A tool that performs one qualified step is not a complete node-qualified fab flow.
 - **Daifuku, Murata Machinery** (AMHS) → all fabs. **Exyte, M+W, Jacobs** (fab construction) → TSMC, Samsung, Intel, Micron.
 - Choke point: ASML is the only EUV tool maker, and its optics come only from Zeiss SMT and its drive lasers only from Trumpf; TCB and hybrid-bonder qualifications depend on the specific customer and process; Hanmi and Besi are important suppliers, not the only suppliers of those equipment classes.
 
@@ -751,6 +754,7 @@ These purchases have to fit together. A licensed IP block supplies a circuit fun
 
 - **Synopsys, Cadence, Siemens EDA** (tools) → NVIDIA, AMD, Apple, Broadcom, Qualcomm, all designers; also to TSMC/Samsung for PDK and OPC flows.
 - **Arm** (CPU IP) → NVIDIA (Grace, Vera), Apple, Qualcomm, AWS, Ampere Computing (the CPU company). **Synopsys, Cadence, Alphawave, Rambus** (PHY/interface IP: HBM, PCIe, UCIe, SerDes; a SerDes is the serializer/deserializer circuit that drives a high-speed link, and a PHY is its physical-layer block) → NVIDIA and other fabless.
+- **Empyrean** (simulation, verification and foundry-enablement tools) → circuit-design and foundry customers; tool selection follows the specific design and PDK.
 - **TSMC** (PDK, design rules, reference flows) → its customers.
 - Choke point: two EDA vendors hold ~70% of the market (as of 2025) and every leading-node PDK is qualified against their tools, so a design team cannot change vendor mid-node.
 
@@ -758,9 +762,9 @@ These purchases have to fit together. A licensed IP block supplies a circuit fun
 
 - **TSMC** (wafers on N4/N3/N2; CoWoS/SoIC/InFO packaging) → NVIDIA (~$20B+ per year by 2025), Apple (largest customer at ~20–25% of revenue, as of 2025), AMD, Broadcom, Qualcomm, MediaTek, Marvell, Intel (some products), Google/AWS/Microsoft custom ASICs via design and ASIC service partners such as Broadcom, Marvell, Alchip and GUC.
 - **Samsung Foundry** (SF3/SF2 wafers) → Samsung LSI (Samsung's own chip-design division), Qualcomm (some), Google Tensor (historically, the Pixel phone processor), Tesla, crypto ASICs. **Intel Foundry** (18A) → Intel products, Microsoft, external test chips; **Intel packaging (EMIB/Foveros)** → Intel, AWS, external.
-- **SMIC** (N+2/N+3) → Huawei HiSilicon and domestic Chinese fabless. **Rapidus** (2 nm, from 2027) → target Japanese and US customers. **GlobalFoundries, UMC** (mature nodes) → automotive, RF, analog customers.
+- **SMIC** (mature, specialty and advanced logic processes) → fabless customers, including Huawei HiSilicon in teardown-documented products. **Hua Hong** (specialty processes) → embedded-memory, power, analog and other chip customers. **Rapidus** (2 nm, from 2027) → target Japanese and US customers. **GlobalFoundries, UMC** (mature nodes) → automotive, RF, analog customers.
 - **SK hynix** (HBM3E/HBM4, ~50–60%, as of 2025) → NVIDIA (primary), AMD, Broadcom; **Micron** (HBM3E/HBM4) → NVIDIA, AMD; **Samsung** (HBM3E/HBM4) → AMD, Google, NVIDIA (qualification-dependent). Note that TSMC often takes delivery of HBM for CoWoS assembly on NVIDIA's account.
-- **Kioxia, Western Digital/SanDisk, Samsung, SK hynix (Solidigm), Micron** (NAND) → SSD makers → server builders.
+- **Kioxia, SanDisk, Samsung, SK hynix (Solidigm), Micron and YMTC** (NAND) → storage-device makers → system builders. **CXMT** (DDR/LPDDR DRAM) → memory-module and device customers. Conventional DRAM, NAND and HBM are separate product and qualification markets.
 - Choke point: TSMC makes >90% of leading-edge logic wafers and all CoWoS, and SK hynix supplies most of the HBM that goes into them (as of 2025).
 
 ### Packaging, substrates, test
@@ -888,16 +892,19 @@ Reading order for this group: the free nanoHUB and MIT OpenCourseWare material f
 
 ## Key Players
 
-Master list of ~60 companies across the whole chain. Position is as of ~2025.
+A reference directory of representative companies across the chain. It includes suppliers from multiple regions and is neither exhaustive nor a common revenue ranking. Country labels describe the company's main base; manufacturing sites, ownership and customers can span other countries. A product offered by one supplier is not automatically qualified for every fab or chip. Existing market-share estimates retain their stated dates; the added capability references were checked on 14 September 2026.
 
 Legend for the Stage column: **Raw materials** and **Materials** supply what fabs consume; **Wafers** make the silicon discs; **Equipment** makes the tools (sub-tier means a supplier to a tool maker); **Test** and **Packaging equipment** make the back-end tools; **Design** sells EDA software and IP; **Foundry** makes wafers for others; **IDM** designs and fabricates its own chips; **Memory** is the DRAM/NAND/HBM makers; **Packaging** makes substrates; **OSAT** assembles and tests for hire; **Test services** is final test and burn-in for hire; **Fabless** designs chips and owns no fab; **System** builds modules, servers and racks; **End customer** buys and runs them. "Position" is an approximate 2025 market position, not a revenue ranking in every row; fast-moving rows carry a (2025) tag.
 
 | Company | Country | Stage | What they supply | Position |
 |---|---|---|---|---|
 | Sibelco / The Quartz Corp | Belgium / Norway-France | Raw materials | High-purity quartz (Spruce Pine) | Dominant in crucible-grade HPQ |
-| Ferroglobe | Spain-UK | Raw materials | Metallurgical-grade silicon | Largest non-Chinese MG-Si |
-| Elkem | Norway | Raw materials | MG-Si, silicones | Top 3 non-Chinese |
-| Wacker Chemie | Germany | Raw materials | Electronic-grade polysilicon | #1 electronic grade outside China |
+| Ferroglobe | Spain-UK | Raw materials | Metallurgical-grade silicon | Silicon-metal supplier; further purification is needed for chip feedstock |
+| Elkem | Norway | Raw materials | MG-Si, silicon-based materials | Silicon and silicon-based materials producer |
+| Hoshine Silicon | China | Raw materials | Industrial silicon and silicon-based materials | Industrial-silicon producer |
+| Xinhua Semiconductor (GCL) | China | Raw materials | Electronic-grade polysilicon | Part of GCL's semiconductor-materials business |
+| NSIG / Shanghai Zing | China | Wafers | Semiconductor silicon wafers, including 300 mm | Wafer supplier; NSIG also includes SOI and customized-wafer businesses |
+| Wacker Chemie | Germany | Raw materials | Electronic-grade polysilicon | Established electronic-grade polysilicon supplier |
 | Hemlock Semiconductor | USA | Raw materials | Electronic-grade polysilicon | Top 3 electronic grade |
 | Tokuyama | Japan | Raw materials | Electronic-grade polysilicon | Top 3 electronic grade |
 | Shin-Etsu Chemical | Japan | Wafers, materials | 300 mm wafers, photoresist, quartz, mask blanks | #1 wafers (~30%) |
@@ -936,28 +943,36 @@ Legend for the Stage column: **Raw materials** and **Materials** supply what fab
 | DISCO | Japan | Packaging equipment | Dicing saws, grinders, laser dicers | ~70–80% |
 | Besi | Netherlands | Packaging equipment | Die bonders, hybrid bonders | Leader in hybrid bonding tools |
 | Hanmi Semiconductor | Korea | Packaging equipment | TCB bonders for HBM | Leader in HBM TCB |
-| Naura / AMEC / SMEE | China | Equipment | Domestic etch, deposition, DUV litho | Rising under export controls |
+| NAURA / AMEC | China | Equipment | Deposition and etch / dielectric and conductor etch | Process-equipment suppliers |
+| Hwatsing | China | Equipment | CMP and wafer-processing equipment | Supplies planarization tools |
+| Skyverse | China | Equipment | Wafer inspection and optical metrology | Product families include defect, film and overlay measurement |
+| AccoTEST (Beijing Huafeng) | China | Test | Analog, mixed-signal, power and SoC test systems | Commercial ATE supplier |
 | Synopsys | USA | Design | EDA, IP | #1 EDA |
 | Cadence | USA | Design | EDA, IP | #2 EDA |
 | Siemens EDA | Germany-USA | Design | EDA (Calibre DRC/LVS) | #3 EDA; leader in signoff |
+| Empyrean | China | Design | Circuit simulation, physical verification and foundry-enablement tools | Design and foundry-software provider |
 | Arm | UK | Design | CPU IP (Grace, Vera) | Dominant CPU IP |
 | TSMC | Taiwan | Foundry, packaging | N4/N3/N2/A16 wafers; CoWoS, SoIC, InFO | >90% of leading-edge logic; ~65–70% foundry revenue (2025) |
 | Samsung Electronics | Korea | Foundry, memory | SF3/SF2 wafers; DRAM, NAND, HBM | #2 foundry (2025); #1–2 DRAM revenue (traded the lead with SK hynix through 2025); #1 NAND |
 | Intel / Intel Foundry | USA | IDM, foundry | 18A/14A wafers; EMIB, Foveros | #3 leading edge; first High-NA user; 18A in production, 14A in development (2025) |
-| SMIC | China | Foundry | N+2/N+3 (7/5 nm class, DUV only) | Largest Chinese foundry |
+| SMIC | China | Foundry | Mature and specialty processes; FinFET and N+2/N+3 logic | Commercial foundry; advanced logic identified in physical chip analysis |
+| Hua Hong | China | Foundry | Embedded memory, power, analog and other specialty processes | Specialty-foundry supplier |
 | Rapidus | Japan | Foundry | 2 nm GAA (HVM target 2027) | New entrant |
 | GlobalFoundries / UMC | USA / Taiwan | Foundry | Mature and specialty nodes | #3–4 foundries by revenue |
 | SK hynix | Korea | Memory | DRAM, NAND, HBM3E/HBM4 | #1 HBM (~50–60%, 2025); #1–2 DRAM revenue (2025) |
 | Micron | USA | Memory | DRAM, NAND, HBM3E/HBM4 | #3 DRAM; ~20%+ HBM (2025) |
 | Kioxia | Japan | Memory | NAND | #2–3 NAND |
+| CXMT | China | Memory | DRAM, including DDR5 and LPDDR5X | Conventional DRAM product supplier |
+| YMTC | China | Memory | 3D NAND using Xtacking bonded array and peripheral wafers | NAND architecture and product supplier |
 | Ibiden | Japan | Packaging | Build-up substrates | #1 high-end substrates |
 | Unimicron | Taiwan | Packaging | Build-up substrates, HDI PCBs | #2 high-end substrates |
 | Shinko / AT&S | Japan / Austria | Packaging | Build-up substrates | Top 5 substrates |
 | ASE (incl. SPIL) | Taiwan | OSAT | Assembly, test, CoWoS overflow | #1 OSAT |
 | Amkor | USA | OSAT | Assembly, test, 2.5D | #2 OSAT |
-| JCET | China | OSAT | Assembly, test | #3 OSAT |
+| JCET | China | OSAT | Assembly, test, XDFOI heterogeneous integration | International manufacturing network; reported XDFOI production |
 | KYEC | Taiwan | Test services | Final test, burn-in for NVIDIA-class parts | Leading Taiwan test house |
 | NVIDIA | USA | Fabless, system | GPUs, NVLink/NVSwitch, NICs, HGX, NVL72 designs | ~80%+ of AI accelerators (2025) |
+| Huawei / HiSilicon | China | Fabless, system | Kirin chips, Ascend accelerators and Atlas systems | Accelerator and computing-systems developer |
 | AMD | USA | Fabless | MI300/MI350 GPUs, EPYC CPUs | #2 merchant AI accelerators (2025) |
 | Broadcom / Marvell | USA | Fabless | Custom AI ASICs, networking, SerDes | Leaders in custom ASIC |
 | Apple / Qualcomm / MediaTek | USA / USA / Taiwan | Fabless | SoCs; largest TSMC customers by wafer volume | Top TSMC customers |
@@ -1002,3 +1017,7 @@ The tables in this module are compiled from the following sources, which are als
 - [Royal Society of Chemistry silicon properties](https://periodic-table.rsc.org/element/14/silicon).
 - [Siltronic 2016 annual report, printed page 2: standard 300 mm wafer thickness](https://www.siltronic.com/fileadmin/investorrelations/Hauptversammlungen/Archiv/HV_2017/annual_report_2016_en.pdf).
 - [ASML November 2024 investor presentation: dose-qualified throughput](https://www.sec.gov/Archives/edgar/data/937966/000093796624000026/exhibit994.htm).
+
+- Supplier-directory capability references (checked 14 September 2026): [Hoshine](https://www.hoshinesilicon.com/en/gsjs/index_69.aspx.html), [Ferroglobe](https://www.ferroglobe.com/solutions/silicon-metal), [Elkem](https://www.elkem.com/products/silicon/silicon-metalloid/), [GCL issuer report naming Xinhua Semiconductor](https://www.hkexnews.hk/listedco/listconews/sehk/2023/0428/2023042801198.pdf). These establish product roles, not a like-for-like market-share ranking.
+- [CXMT products](https://www.cxmt.com/en/product.html), [YMTC Xtacking](https://www.ymtc.com/en/technicalintroduction.html), [Hua Hong 2025 report](https://www.hkexnews.hk/listedco/listconews/sehk/2026/0409/2026040901618_c.pdf), [TechInsights N+3 process analysis](https://www.techinsights.com/blog/smic-n3-kirin-9030-pro-process-flow-analysis).
+- [NAURA equipment portfolio](https://www.naura.com/index.html?l=english), [AMEC product brochure](https://static.amec-inc.com/uploads/f64b9adcd24b400caf459c98af4e473e.pdf), [Hwatsing CMP](https://www.hwatsing.com/en/product_detail/757.html), [Skyverse product families](https://www.skyverse.cn/?trk=public_post-text), [AccoTEST systems](https://www.accotest.com/), [Empyrean foundry tools](https://www.empyrean-tech.com/solutions/index-18.html), [JCET production update](https://www.prnewswire.com/news-releases/focusing-on-high-performance-advanced-packaging-and-global-layout-jcet-achieved-quarter-on-quarter-growth-in-q2-2023-301910156.html), [Huawei Atlas and Ascend roadmap, September 2025](https://www.huawei.com/en/news/2025/9/hc-xu-keynote-speech). Company descriptions establish offered capabilities; performance, yield and customer qualifications require more specific evidence.

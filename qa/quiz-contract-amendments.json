@@ -1,0 +1,56 @@
+[
+  {
+    "module": 1,
+    "question": 5,
+    "beforeOptions": [
+      "Chinese plants use the FBR silane route, which cannot reach better than 6N purity",
+      "Electronic grade requires 10-100x lower boron and phosphorus, etched and cleanroom-handled chunk, FZ test-ingot verification and 1-2 year customer qualification, and the whole EG market is only ~40-50 kt/yr, so incumbents with long-term contracts and traceable supply chains keep it",
+      "US export controls prohibit the import of any Chinese polysilicon for semiconductor use",
+      "Chinese polysilicon is sold only as granules, which cannot be loaded into a Czochralski crucible"
+    ],
+    "afterOptions": [
+      "FBR chemistry cannot produce semiconductor-purity silicon, regardless of process control",
+      "Electronic-grade supply needs stringent impurity and surface-cleanliness control, verification and customer qualification; solar tonnage alone does not demonstrate those requirements",
+      "Every semiconductor customer requires its polysilicon to be manufactured in the same country as its wafer factory",
+      "Granular silicon cannot be loaded into a Czochralski crucible"
+    ],
+    "reason": "Replace an unsupported incumbent-only and nationality-specific premise with product purity, consistency and customer qualification.",
+    "review": "course/review/neutrality-foundations-2026-09-14.md"
+  },
+  {
+    "module": 20,
+    "question": 4,
+    "beforeOptions": [
+      "China cannot obtain 300 mm silicon wafers of sufficient purity",
+      "SMIC lacks EDA tools capable of place-and-route below 7 nm",
+      "Without EUV, each shrink requires more DUV multi-patterning passes, so mask count, cost, and defect exposure rise while yield falls (reported well below 50% at 5 nm-class), making the node possible but uneconomic and 3 nm-class not credible",
+      "SMIC's fabs are limited to 200 mm wafers"
+    ],
+    "afterOptions": [
+      "The foundry cannot obtain silicon wafers pure enough for advanced logic",
+      "Every transistor must use a different EDA tool because the exposure wavelength changed",
+      "Additional patterning and alignment steps can increase cost, cycle time and defect exposure; a teardown can establish dimensions and structures, but does not establish factory yield or cost per good die",
+      "The foundry must switch from 300 mm to 200 mm wafers to use additional exposures"
+    ],
+    "reason": "Remove unsupported process-node, yield and profitability assertions; test multi-patterning tradeoffs and the evidence limits of chip teardowns.",
+    "review": "course/review/neutrality-backhalf-2026-09-14.md"
+  },
+  {
+    "module": 20,
+    "question": 5,
+    "beforeOptions": [
+      "About 50% of both; a major earthquake near Tainan",
+      "About 90% of both; a naval blockade that stops inbound chemicals, gases and spares and outbound wafers within weeks",
+      "About 70% of wafers and 30% of packaging; a US export-control action against TSMC",
+      "About 90% of wafers but under 20% of packaging; a typhoon season power outage"
+    ],
+    "afterOptions": [
+      "Factories can use any locally available chemicals without qualification, so only damaged equipment stops production",
+      "An interruption to qualified chemicals, gases, spare parts or transport can stop output; alternative foundries and packaging technologies require product-specific redesign and qualification",
+      "A foundry's headquarters determines where every wafer and package it sells is physically manufactured",
+      "All advanced packaging is the same as CoWoS, so another OSAT can take over the process immediately"
+    ],
+    "reason": "Distinguish TSMC-specific CoWoS supply risk from the broader advanced-packaging market and preserve product qualification requirements.",
+    "review": "course/review/neutrality-backhalf-2026-09-14.md"
+  }
+]

@@ -2,6 +2,7 @@
 
 - Preserve the course’s teaching depth, sequence, and concrete explanations when improving prose or visuals.
 - Check technical claims against authoritative primary sources; distinguish measured data, published estimates, and illustrative models. Date time-sensitive claims and document uncertainty.
+- Select supplier examples by their documented role in the global supply chain, without excluding a country by default. Apply the same evidence standard to every region; distinguish headquarters, ownership and manufacturing location, and company announcements from independently established capabilities. Explain policy from the named jurisdiction's perspective rather than assuming the reader shares it. Representative lists need not imply equal capabilities or market shares.
 - Read `HANDOFF.md`, the course guides, and relevant widget/QA specifications before continuing their work.
 - Delegate independent research, audits, implementation, and testing to subagents; coordinate ownership to avoid overlapping edits.
 - Keep builds reproducible: install dependencies with `npm ci`, rebuild course content with `node build.js`, and follow `qa/WIDGET_QA_STANDARD.md` for affected widgets. Record actual validation and unresolved limitations.
@@ -11,6 +12,7 @@
 ## Lessons from the continuation
 
 - Page QA must assert the rendered theme, not just the requested theme or localStorage value. Hash navigation can retain the current document and its startup state.
+- Interaction scenarios must assert which item was selected, not only that a click produced no browser error. Dense SVG hit regions can select a neighboring event on phones despite clean geometry reports; verify actual pointer coordinates, hover and keyboard paths.
 - Some widgets replace their SVG repeatedly. Responsive wrappers must be reused or pruned, including hints and focus regions; test repeated state changes and cleanup.
 - Treat `UNVERIFIABLE` and `UNRESOLVED` consistently in review summaries. A primary-source link can establish a limitation without confirming the whole claim. Keep calculations conditional on their stated inputs.
 - See `CONTINUATION_2026-09-13.md` and the current QA reports before treating the original `HANDOFF.md` as current state.

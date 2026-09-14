@@ -1,93 +1,71 @@
-/* geo-share — "Who Makes What, Where" (Module 20) */
+/* geo-share — selected supplier footprints (Module 20).
+ * Company roles: official catalogs linked in course/review/neutrality-visuals-2026-09-14.md.
+ * This is a qualitative roster, not a market-share or factory-location dataset. */
 (function () {
   'use strict';
-  // Taiwan and Netherlands never share a bar below, so they can safely reuse the
-  // two look-alike ambers (--accent / --warn) without becoming confusable in practice.
   const COUNTRIES = {
     TW: { name: 'Taiwan', v: 'var(--accent)' },
-    KR: { name: 'Korea', v: 'var(--accent2)' },
+    KR: { name: 'South Korea', v: 'var(--accent2)' },
     JP: { name: 'Japan', v: 'var(--cu)' },
     NL: { name: 'Netherlands', v: 'var(--warn)' },
     US: { name: 'United States', v: 'var(--ok)' },
     CN: { name: 'China', v: 'var(--si)' },
     DE: { name: 'Germany', v: 'var(--ink)' },
-    OT: { name: 'Other', v: 'var(--muted)' },
   };
-  // Shares are analyst estimates (TrendForce/SEMI/company filings), Module 20 — all approximate unless noted exact.
+  // Geography describes these selected companies' headquarters, except the
+  // explicitly labeled Siemens parent group. It does not assign their factories.
   const LAYERS = [
-    { id: 'euv', label: 'EUV lithography', seg: [['NL', 100, true, 'ASML — sole supplier']] },
-    { id: 'duv', label: 'DUV litho (immersion)', seg: [['NL', 85, false, 'ASML'], ['JP', 15, false, 'Nikon, Canon']] },
-    { id: 'wfe', label: 'Wafer fab equipment', seg: [['US', 40, false, 'Applied Materials, Lam Research, KLA'], ['JP', 30, false, 'Tokyo Electron, Screen, Advantest, Disco'], ['NL', 20, false, 'ASML, ASM International, Besi'], ['OT', 10, false, 'various']] },
-    { id: 'wafers', label: 'Silicon wafers', seg: [['JP', 55, false, 'Shin-Etsu, SUMCO'], ['TW', 15, false, 'GlobalWafers'], ['KR', 12, false, 'SK Siltron'], ['DE', 12, false, 'Siltronic'], ['OT', 6, false, 'various']] },
-    { id: 'resist', label: 'Photoresist', seg: [['JP', 90, false, 'JSR, TOK, Shin-Etsu, Fujifilm'], ['OT', 10, false, 'DuPont, Merck/EMD']] },
-    { id: 'logic5', label: 'Leading-edge logic ≤ 5 nm', seg: [['TW', 90, false, 'TSMC'], ['KR', 8, false, 'Samsung Foundry'], ['US', 2, false, 'Intel Foundry (18A)']] },
-    { id: 'foundry', label: 'All foundry (every node)', seg: [['TW', 65, false, 'TSMC, UMC, PSMC, VIS'], ['CN', 12, false, 'SMIC, Hua Hong'], ['KR', 8, false, 'Samsung Foundry'], ['US', 4, false, 'GlobalFoundries'], ['OT', 11, false, 'various']] },
-    { id: 'dram', label: 'DRAM', seg: [['KR', 70, false, 'Samsung, SK hynix'], ['US', 25, false, 'Micron'], ['CN', 5, false, 'CXMT']] },
-    { id: 'nand', label: 'NAND', seg: [['KR', 50, false, 'Samsung, SK hynix'], ['JP', 20, false, 'Kioxia'], ['US', 25, false, 'Micron, Western Digital'], ['CN', 5, false, 'YMTC']] },
-    { id: 'hbm', label: 'HBM', seg: [['KR', 90, false, 'SK hynix, Samsung'], ['US', 10, false, 'Micron']] },
-    { id: 'osat', label: 'OSAT / advanced packaging', seg: [['TW', 52, false, 'ASE, SPIL, TSMC CoWoS/SoIC'], ['CN', 25, false, 'JCET, Tongfu'], ['US', 10, false, 'Amkor'], ['OT', 13, false, 'Korea, Japan, SE Asia']] },
-    { id: 'eda', label: 'EDA', seg: [['US', 95, false, 'Synopsys, Cadence'], ['OT', 5, false, 'Siemens EDA (Germany)']] },
-    { id: 'fabless', label: 'Fabless design', seg: [['US', 65, false, 'NVIDIA, AMD, Qualcomm, Broadcom, Apple'], ['TW', 12, false, 'MediaTek'], ['CN', 15, false, 'various fabless'], ['OT', 8, false, 'various']] },
-    { id: 'demand', label: 'End demand', seg: [['CN', 30, false, 'phones, PCs, servers assembled there'], ['US', 25, false, 'hyperscalers, PCs, autos'], ['OT', 45, false, 'Europe, rest of Asia, everywhere else']] },
+    { label: 'EUV lithography', entries: [['NL', 'ASML']] },
+    { label: 'Immersion DUV lithography', entries: [['NL', 'ASML'], ['JP', 'Nikon']] },
+    { label: 'Wafer processing equipment', entries: [['US', 'Applied Materials, Lam Research'], ['JP', 'Tokyo Electron, SCREEN'], ['NL', 'ASML, ASM International'], ['CN', 'NAURA, AMEC']] },
+    { label: 'Silicon wafers', entries: [['JP', 'Shin-Etsu, SUMCO'], ['TW', 'GlobalWafers'], ['KR', 'SK Siltron'], ['DE', 'Siltronic'], ['CN', 'NSIG / Shanghai Xinsheng']] },
+    { label: 'Photoresist', entries: [['JP', 'JSR, TOK, Shin-Etsu, Fujifilm'], ['DE', 'Merck / EMD']] },
+    { label: 'Foundry services', entries: [['TW', 'TSMC, UMC, PSMC, VIS'], ['CN', 'SMIC, Hua Hong'], ['KR', 'Samsung'], ['US', 'GlobalFoundries, Intel Foundry']] },
+    { label: 'DRAM', entries: [['KR', 'Samsung, SK hynix'], ['US', 'Micron'], ['CN', 'CXMT']] },
+    { label: 'NAND', entries: [['KR', 'Samsung, SK hynix'], ['JP', 'Kioxia'], ['US', 'Micron'], ['CN', 'YMTC']] },
+    { label: 'HBM', entries: [['KR', 'SK hynix, Samsung'], ['US', 'Micron']] },
+    { label: 'Packaging services', entries: [['TW', 'ASE / SPIL, TSMC'], ['CN', 'JCET, Tongfu'], ['US', 'Amkor']] },
+    { label: 'EDA software', entries: [['US', 'Synopsys, Cadence'], ['DE', 'Siemens EDA — German parent group'], ['CN', 'Empyrean']] },
+    { label: 'Fabless design', entries: [['US', 'NVIDIA, AMD, Qualcomm, Broadcom'], ['TW', 'MediaTek'], ['CN', 'HiSilicon, UNISOC']] },
   ];
 
   window.registerWidget('geo-share', {
-    title: 'Who Makes What, Where',
-    caption: 'Each bar is one supply-chain layer. Hover a segment for the exact share and leading firms; click a country below to trace it through every layer.',
+    title: 'Who Makes What: Selected Supplier Footprints',
+    caption: 'Explore company examples by supply-chain role. The country or region identifies headquarters, or an explicitly named parent group. Card size and order do not represent market share, production capacity or technical equivalence.',
     mount(el, ctx) {
-      const { h, svg, fmt } = ctx;
+      const { h } = ctx;
       let activeCountry = null;
-      const segEls = [];
-      const tip = h('div', { class: 'w-note', style: { minHeight: '18px' } }, 'Hover or focus a segment for detail.');
-
-      const rows = h('div', { style: { display: 'grid', gap: '7px' } });
+      const cards = [];
+      const tip = h('div', { class: 'w-note', 'aria-live': 'polite' }, 'Select a country or region to highlight its examples. These lists are not exhaustive; an absent entry does not mean no activity.');
+      const rows = h('div', { style: { display: 'grid', gap: '14px' } });
       LAYERS.forEach(layer => {
-        const label = h('div', { style: { fontSize: '12.5px', fontFamily: 'var(--sans)' } }, layer.label);
-        const barSvg = svg('svg', { viewBox: '0 0 400 22', style: { display: 'block', width: '100%', height: '22px' }, role: 'img', 'aria-label': layer.label + ' market share by country' });
-        let x = 0;
-        layer.seg.forEach(([cc, pct, exact, companies]) => {
-          const w = pct * 4;
-          const rect = svg('rect', { x, y: 0, width: Math.max(0, w - 0.6), height: 22, rx: 2, fill: COUNTRIES[cc].v, tabindex: 0, 'aria-label': `${COUNTRIES[cc].name} ${exact ? '' : '~'}${pct}% — ${companies}` });
-          rect.addEventListener('mouseenter', () => showTip(layer, cc, pct, exact, companies));
-          rect.addEventListener('focus', () => showTip(layer, cc, pct, exact, companies));
-          rect.addEventListener('click', () => showTip(layer, cc, pct, exact, companies));
-          barSvg.append(rect);
-          segEls.push({ el: rect, cc });
-          x += w;
+        const examples = h('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '6px', minWidth: '0' } });
+        layer.entries.forEach(([cc, companies]) => {
+          const card = h('div', { style: { flex: '1 1 170px', minWidth: '0', padding: '8px 10px', border: '1px solid var(--line)', borderLeft: `3px solid ${COUNTRIES[cc].v}`, borderRadius: '5px', background: 'var(--panel)', fontSize: '12px', overflowWrap: 'anywhere' } },
+            h('div', { style: { fontWeight: '650', marginBottom: '3px' } }, COUNTRIES[cc].name),
+            h('div', { style: { lineHeight: '1.45' } }, companies));
+          cards.push({ el: card, cc }); examples.append(card);
         });
-        rows.append(h('div', { style: { display: 'grid', gridTemplateColumns: '168px 1fr', gap: '10px', alignItems: 'center' } }, label, barSvg));
+        rows.append(h('div', { style: { display: 'grid', gap: '8px', alignItems: 'start' } },
+          h('div', { style: { fontSize: '13px', fontWeight: '650', paddingTop: '8px' } }, layer.label), examples));
       });
-
-      function showTip(layer, cc, pct, exact, companies) {
-        tip.textContent = `${layer.label} — ${COUNTRIES[cc].name}: ${exact ? '' : '~'}${pct}% — ${companies}`;
-      }
-
-      const legend = h('div', { class: 'w-legend' });
-      const legendBtns = new Map();
-      Object.keys(COUNTRIES).forEach(cc => {
-        const c = COUNTRIES[cc];
-        const btn = h('button', { class: 'w-btn', style: { display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '3px 9px' } },
-          h('i', { style: { width: '12px', height: '12px', borderRadius: '3px', display: 'inline-block', background: c.v } }), c.name);
-        btn.addEventListener('click', () => { activeCountry = activeCountry === cc ? null : cc; applyFilter(); });
-        legend.append(btn); legendBtns.set(cc, btn);
-      });
-
-      function applyFilter() {
-        segEls.forEach(({ el: rect, cc }) => {
-          const dim = activeCountry && cc !== activeCountry;
-          rect.setAttribute('opacity', dim ? 0.18 : 1);
+      const legend = h('div', { class: 'w-legend', 'aria-label': 'Highlight supplier headquarters or parent group' });
+      const buttons = new Map();
+      Object.entries(COUNTRIES).forEach(([cc, country]) => {
+        const button = h('button', { class: 'w-btn', 'aria-pressed': 'false', 'data-country': cc }, country.name);
+        button.addEventListener('click', () => {
+          activeCountry = activeCountry === cc ? null : cc;
+          cards.forEach(card => { card.el.style.opacity = activeCountry && card.cc !== activeCountry ? '.35' : '1'; });
+          buttons.forEach((btn, key) => { btn.classList.toggle('primary', key === activeCountry); btn.setAttribute('aria-pressed', String(key === activeCountry)); });
+          const roles = LAYERS.filter(layer => layer.entries.some(entry => entry[0] === activeCountry)).map(layer => layer.label);
+          tip.textContent = activeCountry
+            ? COUNTRIES[activeCountry].name + ' examples shown: ' + roles.join(' · ') + '. This is a selected roster, not a complete national capability inventory.'
+            : 'Select a country or region to highlight its examples. These lists are not exhaustive; an absent entry does not mean no activity.';
         });
-        legendBtns.forEach((btn, cc) => btn.classList.toggle('primary', cc === activeCountry));
-        if (activeCountry) {
-          const totals = LAYERS.map(l => { const s = l.seg.find(s => s[0] === activeCountry); return s ? `${l.label} ${s[2] ? '' : '~'}${s[1]}%` : null; }).filter(Boolean);
-          tip.textContent = `${COUNTRIES[activeCountry].name}: ` + (totals.length ? totals.join(' · ') : 'negligible in every layer shown');
-        } else {
-          tip.textContent = 'Hover or focus a segment for detail.';
-        }
-      }
-
-      el.append(rows, legend, tip,
-        h('div', { class: 'w-note' }, 'Shares are analyst estimates (TrendForce, SEMI, company filings) as of ~2025; "~" marks an approximation. Source: Module 20.'));
+        buttons.set(cc, button); legend.append(button);
+      });
+      el.append(legend, tip, rows,
+        h('div', { class: 'w-note' }, 'Supplier examples reviewed September 2026. A company can design, manufacture or serve customers in several countries. Capabilities also differ by process, product and qualification. Assembly location, customer billing and final use are separate measures; none is plotted as a market-share percentage here.'));
       return () => {};
     }
   });

@@ -26,6 +26,12 @@ async function runScenario(page, scenario, shot) {
       await page.evaluate(({ sel, value }) => { const el = document.querySelector(sel); if (!el) throw new Error('scenario: not found ' + sel); if (el.type === 'checkbox') el.checked = !!value; else el.value = value; el.dispatchEvent(new Event('input', { bubbles: true })); el.dispatchEvent(new Event('change', { bubbles: true })); }, { sel: step.set, value: step.value });
     }
     if (step.hover) { const el = await page.$(step.hover); if (el) await el.hover(); }
+    if (step.assertValue) {
+      const { selector, value } = step.assertValue;
+      const actual = await page.$eval(selector, el => el.value);
+      if (actual !== value) throw new Error(`scenario: ${selector} expected ${value}, got ${actual}`);
+    }
+
     if (step.wait) await new Promise(r => setTimeout(r, step.wait));
     if (step.shot) await shot(step.shot);
   }

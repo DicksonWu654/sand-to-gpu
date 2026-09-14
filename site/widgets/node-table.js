@@ -35,7 +35,7 @@
 
   window.registerWidget('node-table', {
     title: 'What a Node Name Actually Means',
-    caption: '"7 nm" and "2 nm" are marketing labels, not measurements. CPP, metal pitch and transistor density are the real yardsticks — explore them below.',
+    caption: '"7 nm" and "2 nm" are marketing labels, not measurements. CPP, metal pitch and transistor density are the real yardsticks — explore selected Intel, TSMC and Samsung processes below. This comparison is not an exhaustive foundry roster.',
     mount(el, ctx) {
       const { h, svg, fmt } = ctx;
       let ax = 'year', ay = 'dens', trueScale = false;

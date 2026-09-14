@@ -79,7 +79,7 @@ A modern 300 mm Czochralski puller is a tower roughly 8 to 12 m tall including i
 
 **Automation.** The control system runs the entire recipe: heater power, pull speed, seed and crucible rotation, crucible lift, argon flow and pressure, magnet current, and the **automatic diameter control (ADC)** loop. Each loop pairs a sensor with an actuator. The CCD camera measures the width of the bright meniscus ring at the crystal's edge, and the ADC loop turns any diameter error into a pull-rate correction (fast, minutes) and a heater-power correction (slow, tens of minutes); how the ring width encodes the diameter is explained in step 7 of the recipe. The load cell in the cable reads the crystal's weight, and the rate of weight gain is a second, independent measure of diameter that takes over if SiO fog blinds the camera. A **pyrometer** (a non-contact thermometer that reads temperature from the brightness and colour of the glow) aimed at the melt surface or the heater closes the temperature loop with heater power. Pressure gauges and **mass-flow controllers** (valves that meter a gas by mass rather than volume) hold the argon; position encoders on the crucible shaft hold the lift. What an operator actually watches, on screens beside the puller, is the live image of the meniscus and the four habit lines, the diameter trace against its setpoint and the heater-power trace, because a jump in any of them is the first sign of a bridge collapse, a crucible crack or structure loss. A modern puller runs with minimal operator intervention from seed dip to cool-down; operators charge crucibles, load seeds, and intervene on structure loss.
 
-Semiconductor pullers come from a handful of builders: **PVA TePla** (Germany; its Crystal Growing Systems unit makes the EKZ series and is also the leading Float Zone furnace supplier), **Ferrotec** (Japan/China, grown large in solar), **Linton Crystal Technologies** (Rochester, New York), **S-TECH** (Korea), and a Chinese solar-driven industry led by **Zhejiang Jingsheng (JSG)**. The Rochester lineage matters: Hamco (1952) became **Kayex**, which introduced the first 300 mm puller (KX300) in 1987 and built much of the pre-2000 fleet; Linton has owned the Kayex IP exclusively since 2013. The big wafer makers also design or heavily customise their own pullers and hot zones and treat them as proprietary; a vendor puller is a starting point, not the finished tool.
+Semiconductor pullers come from a handful of builders: **PVA TePla** (Germany; its Crystal Growing Systems unit makes the EKZ series and is also the leading Float Zone furnace supplier), **Ferrotec** (Japan/China, grown large in solar), **Linton Crystal Technologies** (Rochester, New York), **S-TECH** (Korea), and **Zhejiang Jingsheng (JSG)** (China), whose catalogue includes IC-grade 8–12 inch silicon crystal-growth and processing equipment as well as solar equipment. The Rochester lineage matters: Hamco (1952) became **Kayex**, which introduced the first 300 mm puller (KX300) in 1987 and built much of the pre-2000 fleet; Linton has owned the Kayex IP exclusively since 2013. The big wafer makers also design or heavily customise their own pullers and hot zones and treat them as proprietary; a vendor puller is a starting point, not the finished tool.
 
 ## The CZ Recipe, Step by Step
 
@@ -411,7 +411,7 @@ By tonnage, most CZ silicon now goes to photovoltaics, and solar pullers have be
 | FZ maximum zone height (Heywang) | ~15 mm | A simplified capillary-stability estimate; not a proof of a universal diameter ceiling |
 | FZ maximum production diameter | 200 mm (as of 2025) | Commercial range described here; low-oxygen MCZ serves current 300 mm demand, while larger FZ is a development problem |
 | 450 mm status | G450C 2011 to ~2017, abandoned | Wafer area is no longer the cost lever; EUV and packaging are |
-| Top-5 wafer maker share (as of 2025) | ~85 to 90 % of revenue (Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron) | A five-company oligopoly supplies every fab |
+| Established wafer suppliers | Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron, alongside other suppliers | Revenue, wafer area shipped and 300 mm capacity are different measures |
 
 ## Key Players
 
@@ -422,12 +422,12 @@ By tonnage, most CZ silicon now goes to photovoltaics, and solar pullers have be
 | GlobalWafers | Taiwan | CZ, epi, FZ (via Topsil); ex-MEMC/SunEdison "Perfect Silicon"; new 300 mm fab in Sherman, Texas (first production 2025, ramping as of 2025) | #3 (~15 to 17 %) |
 | Siltronic | Germany | CZ 300 mm (Freiberg, Singapore), FZ leader (Burghausen) | #4 (~12 to 13 %) |
 | SK Siltron | South Korea | CZ 300 mm; silicon carbide (SiC) wafers (SK Siltron CSS, US); ownership in transition: SK Group named Doosan Group preferred bidder for the company in December 2025 and agreed a sale in early 2026, with closing not confirmed at the time of writing | #5 (~10 to 12 %) |
-| NSIG (Zing Semiconductor) / TCL Zhonghuan | China | Domestic 300 mm CZ wafer entrants | Growing niche |
+| NSIG (Zing Semiconductor) / TCL Zhonghuan | China | Silicon wafer suppliers, including 300 mm products | Product and customer qualification determine use |
 | Okmetic | Finland | Specialty CZ (MEMS, RF, high-resistivity) up to 200 mm | Niche |
 | PVA TePla (CGS) | Germany | Semiconductor CZ pullers; dominant FZ furnace maker (FZ-35/40) | Leader in FZ equipment |
 | Ferrotec | Japan / China | CZ pullers (solar and semiconductor), crucibles, graphite, wafers | Major |
 | Linton Crystal Technologies | USA | CZ pullers (Kayex lineage since 1952; KX300 first 300 mm puller, 1987) | Niche, US supplier |
-| Zhejiang Jingsheng (JSG) | China | Volume solar CZ pullers; entering semiconductor pullers | Leader in solar pullers |
+| Zhejiang Jingsheng (JSG) | China | Silicon crystal-growth and processing equipment for IC-grade 8–12 inch wafers, plus solar equipment | Equipment supplier; semiconductor and solar product lines differ |
 | S-TECH | South Korea | CZ pullers | Niche |
 | Shin-Etsu Quartz, Momentive Technologies, Heraeus Conamic, Japan Super Quartz, Coorstek | Japan / USA / Germany | Synthetic-lined fused-silica crucibles | Oligopoly |
 | Sibelco, The Quartz Corp (Spruce Pine, NC) | Belgium / Norway (US mines) | High-purity quartz sand for crucibles | Near-monopoly on top grades |
@@ -464,3 +464,7 @@ This stage consumes the electronic-grade polysilicon of Module 01 (Wacker, Hemlo
 - SUMCO, "Silicon wafer manufacturing process" and technical pages at sumcosi.com; Siltronic, "Float Zone" product and technology pages at siltronic.com.
 - The Register, "How TSMC killed 450mm wafers for fear of Intel, Samsung" (August 2022), and SemiWiki/TechInsights, "The Lost Opportunity for 450mm" (2022), on why the diameter transition stalled.
 - Linton Crystal Technologies, company history and timeline (lintoncrystal.com), for the Hamco/Kayex/Linton puller lineage.
+
+- [JSG semiconductor and photovoltaic equipment portfolio](https://www.jsjd.cc/index.html). Official product scope, reviewed September 2026.
+
+- [NSIG: Zing 300 mm silicon-wafer business](https://www.nsig.com/). Official product scope, reviewed September 2026.

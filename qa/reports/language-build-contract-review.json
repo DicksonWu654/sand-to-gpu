@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-14T01:32:20.343Z",
+  "checkedAt": "2026-09-14T04:37:14.471Z",
   "importHasNoBuildSideEffects": true,
   "repeatedRenderResetsHeadingState": true,
   "artifactsUnchangedOnImport": [
@@ -11,8 +11,8 @@
   "negativeTests": [
     {
       "case": "prose-corruption",
-      "input": "/tmp/sand-to-gpu-language-negative-PFdAQ6/prose-corruption.js",
-      "reportFile": "/tmp/sand-to-gpu-language-negative-PFdAQ6/prose-corruption.json",
+      "input": "/tmp/sand-to-gpu-language-negative-xjSpcJ/prose-corruption.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-xjSpcJ/prose-corruption.json",
       "exitCode": 1,
       "expected": "m/4 built prose differs from current authored source",
       "errors": [
@@ -22,8 +22,8 @@
     },
     {
       "case": "quiz-wording-corruption",
-      "input": "/tmp/sand-to-gpu-language-negative-PFdAQ6/quiz-wording-corruption.js",
-      "reportFile": "/tmp/sand-to-gpu-language-negative-PFdAQ6/quiz-wording-corruption.json",
+      "input": "/tmp/sand-to-gpu-language-negative-xjSpcJ/quiz-wording-corruption.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-xjSpcJ/quiz-wording-corruption.json",
       "exitCode": 1,
       "expected": "m/14 built quiz differs from current authored quiz",
       "errors": [
@@ -33,8 +33,8 @@
     },
     {
       "case": "quiz-option-corruption",
-      "input": "/tmp/sand-to-gpu-language-negative-PFdAQ6/quiz-option-corruption.js",
-      "reportFile": "/tmp/sand-to-gpu-language-negative-PFdAQ6/quiz-option-corruption.json",
+      "input": "/tmp/sand-to-gpu-language-negative-xjSpcJ/quiz-option-corruption.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-xjSpcJ/quiz-option-corruption.json",
       "exitCode": 1,
       "expected": "m/14 historical quiz structure changed",
       "errors": [
@@ -44,9 +44,81 @@
       "detected": true
     },
     {
+      "case": "reviewed-option-still-protected-1-5",
+      "input": "/tmp/sand-to-gpu-language-negative-xjSpcJ/reviewed-option-still-protected-1-5.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-xjSpcJ/reviewed-option-still-protected-1-5.json",
+      "exitCode": 1,
+      "expected": "m/1 historical quiz structure changed",
+      "errors": [
+        "m/1 built quiz differs from current authored quiz",
+        "m/1 historical quiz structure changed"
+      ],
+      "detected": true
+    },
+    {
+      "case": "reviewed-option-still-protected-20-4",
+      "input": "/tmp/sand-to-gpu-language-negative-xjSpcJ/reviewed-option-still-protected-20-4.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-xjSpcJ/reviewed-option-still-protected-20-4.json",
+      "exitCode": 1,
+      "expected": "m/20 historical quiz structure changed",
+      "errors": [
+        "m/20 built quiz differs from current authored quiz",
+        "m/20 historical quiz structure changed"
+      ],
+      "detected": true
+    },
+    {
+      "case": "reviewed-option-still-protected-20-5",
+      "input": "/tmp/sand-to-gpu-language-negative-xjSpcJ/reviewed-option-still-protected-20-5.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-xjSpcJ/reviewed-option-still-protected-20-5.json",
+      "exitCode": 1,
+      "expected": "m/20 historical quiz structure changed",
+      "errors": [
+        "m/20 built quiz differs from current authored quiz",
+        "m/20 historical quiz structure changed"
+      ],
+      "detected": true
+    },
+    {
+      "case": "unlisted-option-in-amended-module",
+      "input": "/tmp/sand-to-gpu-language-negative-xjSpcJ/unlisted-option-in-amended-module.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-xjSpcJ/unlisted-option-in-amended-module.json",
+      "exitCode": 1,
+      "expected": "m/20 historical quiz structure changed",
+      "errors": [
+        "m/20 built quiz differs from current authored quiz",
+        "m/20 historical quiz structure changed"
+      ],
+      "detected": true
+    },
+    {
+      "case": "answer-index-in-amended-question",
+      "input": "/tmp/sand-to-gpu-language-negative-xjSpcJ/answer-index-in-amended-question.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-xjSpcJ/answer-index-in-amended-question.json",
+      "exitCode": 1,
+      "expected": "m/1 historical quiz structure changed",
+      "errors": [
+        "m/1 built quiz differs from current authored quiz",
+        "m/1 historical quiz structure changed"
+      ],
+      "detected": true
+    },
+    {
+      "case": "historical-heading-text",
+      "input": "/tmp/sand-to-gpu-language-negative-xjSpcJ/historical-heading-text.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-xjSpcJ/historical-heading-text.json",
+      "exitCode": 1,
+      "expected": "m/20 original heading contract changed",
+      "errors": [
+        "m/20 built prose differs from current authored source",
+        "m/20 original heading contract changed"
+      ],
+      "detected": true
+    },
+    {
       "case": "missing-lesson",
-      "input": "/tmp/sand-to-gpu-language-negative-PFdAQ6/missing-lesson.js",
-      "reportFile": "/tmp/sand-to-gpu-language-negative-PFdAQ6/missing-lesson.json",
+      "input": "/tmp/sand-to-gpu-language-negative-xjSpcJ/missing-lesson.js",
+      "reportFile": "/tmp/sand-to-gpu-language-negative-xjSpcJ/missing-lesson.json",
       "exitCode": 1,
       "expected": "historical lesson identity contract changed",
       "errors": [
@@ -71,7 +143,7 @@
   "liveContentFile": "/mnt/c/Users/dicks/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/scratch-workspaces/0825c556-cb7b-4de6-85c1-ff4865168fc7/185ad3f3-7d78-4eb8-a01f-fae74ee79efb/scratch-2026-09-13-9d51cd/site/content.js",
   "livePreviewUntouched": true,
   "finalStatus": "frozen",
-  "negativeTestBaseContentSha256": "20f80a795c2ade7c72dfb8fe241b3ae396da69d52bf1292f16665f1f66e8f23b",
+  "negativeTestBaseContentSha256": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
   "finalContentSha256": "64e8ef1d873c14b154d064f3d211992b4c10ed8b8ab36d85ab4dd101d8108a18",
   "hashScope": "Negative tests used an earlier isolated snapshot; finalContentSha256 identifies the rebuilt publication candidate after the final wording edits."
 }

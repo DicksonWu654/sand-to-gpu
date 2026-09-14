@@ -471,14 +471,14 @@ The 2021–2022 shortage led fabs to build several months of wafer inventory, an
 
 ### Market shares
 
-The 300 mm market is an oligopoly of five firms, together ~85–90% of capacity, plus a growing Chinese tier. Approximate revenue shares (as of ~2024–2025; analyst estimates that vary by a few points between sources):
+Large established silicon-wafer suppliers include the five companies below, alongside other suppliers in China and elsewhere. A market-share figure needs a defined denominator: revenue, wafer area shipped and 300 mm capacity measure different things. The following list identifies supplier roles across several wafer types; it is not a single capacity ranking.
 
-- **Shin-Etsu Handotai (SEH)**, Japan, ~30%: the leader in leading-edge 300 mm prime and epi, and a Smart Cut SOI licensee.
-- **SUMCO**, Japan, ~23–25%: number two, originator of "perfect silicon", with Formosa SUMCO in Taiwan.
-- **GlobalWafers**, Taiwan, ~15–17%: a roll-up of SunEdison Semiconductor (ex-MEMC) and Topsil; opened a ~$3.5 billion first-phase Sherman, Texas fab in 2025 with support from the CHIPS Act (the 2022 US law subsidising domestic chip manufacturing; Module 20).
-- **Siltronic**, Germany, ~12%: ex-Wacker Siltronic; new Singapore 300 mm fab.
-- **SK Siltron**, Korea, ~10–12%: ex-LG Siltron; Samsung's and SK hynix's domestic supplier.
-- **Others** (~10%): Soitec (SOI); Okmetic (Finland, wafers for **MEMS**, micro-electro-mechanical systems, the tiny mechanical sensors such as accelerometers and microphones); Wafer Works (Taiwan, 200 mm); and Chinese entrants NSIG/Zing Semiconductor, Ferrotec, TCL Zhonghuan, ESWIN, and GRITEK, which by 2025 had over 1 million wafers per month of 300 mm **nameplate** capacity (announced capacity, not demonstrated output), mostly at mature-node quality for domestic fabs. They face fewer barriers than Chinese chipmakers because export controls do not restrict grinders, polishers, or epi reactors the way they restrict lithography and etch.
+- **Shin-Etsu Handotai (SEH)**, Japan: the leader in leading-edge 300 mm prime and epi, and a Smart Cut SOI licensee.
+- **SUMCO**, Japan: number two, originator of "perfect silicon", with Formosa SUMCO in Taiwan.
+- **GlobalWafers**, Taiwan: a roll-up of SunEdison Semiconductor (ex-MEMC) and Topsil; opened a ~$3.5 billion first-phase Sherman, Texas fab in 2025 with support from the CHIPS Act (the 2022 US law subsidising domestic chip manufacturing; Module 20).
+- **Siltronic**, Germany: ex-Wacker Siltronic; new Singapore 300 mm fab.
+- **SK Siltron**, Korea: ex-LG Siltron; Samsung's and SK hynix's domestic supplier.
+- **Other suppliers**: Soitec (SOI); Okmetic (Finland, wafers for **MEMS**, micro-electro-mechanical systems, the tiny mechanical sensors such as accelerometers and microphones); Wafer Works (Taiwan, 200 mm); and suppliers including NSIG/Zing Semiconductor, Ferrotec (Japan/China), TCL Zhonghuan, ESWIN and GRITEK. NSIG identifies Zing as a supplier with commercial 300 mm wafer sales. Announced **nameplate capacity**, the output a line is designed to deliver, should be distinguished from actual shipments and from qualification for a particular polished, epitaxial or device-process specification. Neither diameter nor supplier nationality establishes that qualification.
 
 On the equipment and consumables side, the names have shifted recently: the polishing-pad business long known as DuPont (ex-Rodel) has been part of Qnity since the November 2025 spin-off, and the double-side polisher line long known as Lapmaster Wolters / Peter Wolters now trades as Precision Surfacing Solutions, which also absorbed Meyer Burger's wire-saw line in 2019.
 
@@ -495,7 +495,7 @@ On the equipment and consumables side, the names have shifted recently: the poli
 - Flatness vocabulary: TTV, bow, warp, GBIR, SFQR (~20 nm on 26 × 8 mm sites for EUV), nanotopography, edge exclusion (1.5 mm), all measured by dual Fizeau interferometry.
 - Particles are counted by laser scattering (intensity ∝ d^6), which is why sub-0.1 nm roughness is a precondition for seeing 26 nm particles; COPs from the crystal show up as pits.
 - Epi wafers grow a fresh, void-free layer by step flow; annealed and "perfect silicon" wafers are the cheaper DRAM alternatives; Smart Cut SOI transfers a film by hydrogen implant, bonding and splitting.
-- Five firms hold most 300 mm supply (~85–90%), ~7–8 million 300 mm wafers ship per month, a polished prime wafer is ~$100–150 and epi ~$200+, silicon is ~1–2% of a processed leading-edge wafer's cost, and fabs consume 10–25% extra as test and reclaim wafers.
+- A range of qualified suppliers makes 300 mm wafers; ~7–8 million 300 mm wafers ship per month, a polished prime wafer is ~$100–150 and epi ~$200+, silicon is ~1–2% of a processed leading-edge wafer's cost, and fabs consume 10–25% extra as test and reclaim wafers.
 
 ## Key Numbers
 
@@ -528,19 +528,19 @@ On the equipment and consumables side, the names have shifted recently: the poli
 | 300 mm polished / epi price | ~$100–150 / ~$200+ | Silicon is only ~1–2% of a processed leading-edge wafer's cost |
 | Global wafer shipments 2025 | 12,973 MSI, ~$11.4 B revenue | Scale of the industry; recovery from the 2023–2024 correction |
 | 300 mm demand | ~7–8 M wafers/month (~20 M+/quarter) | Sets the number of saws, grinders and polishers the world runs |
-| Top-5 share of 300 mm capacity | ~85–90% | An oligopoly with little pricing power against its far larger customers |
+| Supplier concentration | Several large established firms and additional suppliers | Compare capacity and revenue shares only with matching product scope |
 
 ## Key Players
 
 | Company | Country | Role / what they supply | Approx. position |
 |---|---|---|---|
-| Shin-Etsu Handotai (SEH) | Japan | 300 mm prime, epi, annealed, SOI (Smart Cut licensee) | Leader (~30%) |
-| SUMCO | Japan | 300 mm prime, epi, "perfect silicon"; Formosa SUMCO (Taiwan) | #2 (~24%) |
-| GlobalWafers | Taiwan | 300/200 mm prime and epi; ex-MEMC/SunEdison; Texas fab | #3 (~16%) |
-| Siltronic | Germany | 300 mm prime and epi; Singapore FabNext | #4 (~12%) |
-| SK Siltron | South Korea | 300 mm prime/epi for Samsung, SK hynix; SiC | #5 (~11%) |
+| Shin-Etsu Handotai (SEH) | Japan | 300 mm prime, epi, annealed, SOI (Smart Cut licensee) | Large established supplier |
+| SUMCO | Japan | 300 mm prime, epi, "perfect silicon"; Formosa SUMCO (Taiwan) | Large established supplier |
+| GlobalWafers | Taiwan | 300/200 mm prime and epi; ex-MEMC/SunEdison; Texas fab | Large established supplier |
+| Siltronic | Germany | 300 mm prime and epi; Singapore FabNext | Large established supplier |
+| SK Siltron | South Korea | 300 mm prime/epi for Samsung, SK hynix; SiC | Large established supplier |
 | Soitec | France | SOI wafers via Smart Cut (RF-SOI, FD-SOI, Photonics-SOI) | SOI leader (majority share) |
-| NSIG / Zing, Ferrotec, TCL Zhonghuan, ESWIN | China | 300 mm polished/epi for Chinese fabs | Emerging, mostly mature nodes |
+| NSIG / Zing, Ferrotec, TCL Zhonghuan, ESWIN | China; Ferrotec has Japan/China operations | Silicon wafer businesses, including 300 mm products | Product specifications and customer qualification vary |
 | Okmetic | Finland | 150/200 mm specialty and MEMS wafers | Niche |
 | RS Technologies | Japan | Wafer reclaim | Reclaim leader (~30%+) |
 | Pure Wafer, Hamada, Kinik, Phoenix Silicon | US/Japan/Taiwan | Wafer reclaim | Reclaim #2 tier |
@@ -589,3 +589,5 @@ Module 02 delivered a dislocation-free single-crystal ingot of known dopant type
 - KLA product pages for Surfscan SP7 and WaferSight flatness systems (kla.com).
 - Asianometry, "The Amazing, Humble Silicon Wafer" (YouTube, 2022) and "The 300mm Silicon Wafer Transition" (YouTube), good visual overviews of the wafering sequence and the diameter transition.
 - Stanley Wolf and Richard Tauber, Silicon Processing for the VLSI Era, Vol. 1: Process Technology, 2nd ed., Lattice Press, 2000, chapters on silicon substrates, epitaxy, and wafer cleaning.
+
+- [NSIG wafer businesses, including Zing 300 mm wafers](https://www.nsig.com/). Official product scope, reviewed September 2026.

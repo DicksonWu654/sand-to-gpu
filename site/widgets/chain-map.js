@@ -22,7 +22,7 @@
     { id: 'mgsi', name: 'Carbothermic|reduction', cat: 'mat', mod: 1, glyph: 'furnace', out1: 'MG-Si $2–3/kg',
       why: 'Lump quartz and carbon (coal, charcoal, wood chips) are melted in a submerged arc furnace at ~2 000 °C: SiO₂ + 2C → Si + 2CO. The product is 98–99 % “metallurgical-grade” silicon (MG-Si); each tonne eats ~11–13 MWh, so smelters sit next to cheap hydro or coal power.',
       in: 'Quartz + coal / charcoal / wood chips', out: 'Metallurgical-grade silicon (MG-Si, 98–99 %)',
-      who: 'Ferroglobe, Elkem, Chinese smelters (~80–85 % of world supply)',
+      who: 'Examples: Ferroglobe, Elkem, Hoshine and other smelters',
       cost: '~$2–3/kg', time: 'Hours per tap; continuous', where: 'China, Norway, Brazil, USA' },
     { id: 'poly', name: 'Polysilicon', cat: 'mat', mod: 1, glyph: 'siemens', out1: '9N–11N $30/kg',
       why: 'MG-Si is converted to the liquid trichlorosilane (SiHCl₃), distilled until impurities are parts-per-trillion, then decomposed onto electrically heated silicon U-rods in a bell-jar (Siemens) reactor. That is a billion-fold purity gain to 9N–11N (99.9999999 %+), which is what “electronic grade” means.',
@@ -33,13 +33,13 @@
     { id: 'ingot', name: 'Crystal|growth', cat: 'mat', mod: 2, glyph: 'cz', out1: 'ingot ~$150k',
       why: 'Polysilicon is melted at ~1 420 °C in a quartz crucible and a small seed crystal is slowly pulled out while rotating (the Czochralski, or CZ, process); the melt freezes onto it as one continuous single crystal, because a transistor needs a defect-free lattice with a known orientation.',
       in: 'Polysilicon chunks + dopant', out: 'Single-crystal ingot, 300 mm dia., ~2 m long, ~300–450 kg',
-      who: 'Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron',
-      cost: 'Ingot value ~$100–200k', time: '~2.5–3.5 days per crystal (melt, seed, pull, cool)', where: 'Japan, Taiwan, Germany, Korea, USA' },
+      who: 'Examples: Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron, NSIG / Shanghai Xinsheng',
+      cost: 'Ingot value ~$100–200k', time: '~2.5–3.5 days per crystal (melt, seed, pull, cool)', where: 'Japan, Taiwan, Germany, Korea, USA, China' },
     { id: 'wafer', name: 'Wafering', cat: 'mat', mod: 3, glyph: 'wafering', out1: '$100–150 each',
       why: 'The ingot is ground to exactly 300 mm, sliced by a diamond-wire saw into ~1 500–2 000 slices, then ground, etched and polished to sub-nanometre roughness: a 775 µm-thick mirror that is flat to a few tens of nanometres, because EUV lithography has a depth of focus that small.',
       in: 'Ingot', out: 'Polished prime wafer, 300 mm, 775 µm thick',
-      who: 'Same five firms (~90 % of 300 mm)',
-      cost: '~$100–150 polished; ~$200–300 with an epitaxial (extra grown) silicon layer', time: '~2–3 weeks', where: 'Japan, Taiwan, Germany, Korea, USA' },
+      who: 'Examples: Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron, NSIG / Shanghai Xinsheng',
+      cost: '~$100–150 polished; ~$200–300 with an epitaxial (extra grown) silicon layer', time: '~2–3 weeks', where: 'Japan, Taiwan, Germany, Korea, USA, China' },
     { id: 'feol', name: 'Fab: FEOL', cat: 'fab', mod: 11, glyph: 'feol', out1: 'transistors',
       why: 'FEOL = front end of line: the fab steps that build the transistors themselves (isolation, wells, the gate stack, source/drain epitaxy) through hundreds of deposition, lithography, etch and implant steps. This is where the ~2 nm alignment tolerances and the ~20–25 EUV mask layers live.',
       in: 'Bare wafers + ~70–100+ masks + gases, chemicals, resists', out: 'Transistors: gate stack, source/drain epitaxy',
@@ -165,7 +165,7 @@
 
   window.registerWidget('chain-map', {
     title: 'The Supply Chain in One Map',
-    caption: 'Follow the material, then explore where chip design and a separate memory line meet it. Select a phase or a manufacturing stage to inspect the transformation.',
+    caption: 'Follow the material, then explore where chip design and a separate memory line meet it. Select a phase or stage to inspect the transformation. Suppliers are selected examples; downstream packaging and systems follow the high-end GPU case, not every chip supply chain.',
     mount(el, ctx) {
       const { h, svg } = ctx;
       let current = NODES.find(n => n.id === 'cowos');

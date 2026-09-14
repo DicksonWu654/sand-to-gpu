@@ -1,15 +1,16 @@
 {
   "status": "passed",
-  "verifiedAt": "2026-09-14T03:59:45.643047+00:00",
+  "verifiedAt": "2026-09-14T04:43:57.857658+00:00",
   "archive": "/mnt/c/Users/dicks/Downloads/sand-to-gpu-static-2026-09-13.zip",
-  "files": 6636,
+  "files": 6647,
   "lessons": 32,
-  "audioClips": 6545,
-  "bytes": 1647039261,
-  "sha256": "7bf5b93094207835372af34362ac0bed4bff249bddadb81a227a65349fb6374c",
-  "previousArchiveSha256": "c255405c7c0900c490b92a75d07fc45cf1111098e3ecc69af05d6484a4b6ba5e",
-  "update": "Paragraph selection and Read from here controls; recordings and timing manifests unchanged.",
+  "audioClips": 6556,
+  "bytes": 1649782775,
+  "sha256": "448723454c9882c833d8022600f43c18d7326803f75575452f81ae38069aef3f",
+  "previousArchiveSha256": "7bf5b93094207835372af34362ac0bed4bff249bddadb81a227a65349fb6374c",
+  "update": "September14 supplier/geography content revision:99 new recordings,6457 reused,88 retired publishing identities.",
   "sourceHashes": {
+    "content.js": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
     "narration.js": "ff1abe9f1dcce6e570a4c7fd1db47ca7b3241bbef296ff33de715fab87232f99",
     "narration.css": "b90d6cc7aee23277c38d55f118ec99c0b2b28649105ae3b54bb5c7a14ff18ea5"
   },
@@ -25,6 +26,6 @@
   },
   "compression": {
     "mp3": "ZIP_STORED",
-    "text": "ZIP_DEFLATED, level 6"
+    "text": "ZIP_DEFLATED, level6"
   }
 }

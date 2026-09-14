@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "pointerSelections": 112,
+  "results": [
+    {
+      "width": 760,
+      "theme": "dark",
+      "pointerSelections": 28,
+      "hover": "h20-ban",
+      "keyboardSelection": "dec2",
+      "status": "passed"
+    },
+    {
+      "width": 760,
+      "theme": "light",
+      "pointerSelections": 28,
+      "hover": "h20-ban",
+      "keyboardSelection": "dec2",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "pointerSelections": 28,
+      "hover": "h20-ban",
+      "keyboardSelection": "dec2",
+      "status": "passed"
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "pointerSelections": 28,
+      "hover": "h20-ban",
+      "keyboardSelection": "dec2",
+      "status": "passed"
+    }
+  ],
+  "errors": []
+}

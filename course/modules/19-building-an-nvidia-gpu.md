@@ -413,6 +413,8 @@ Every one of these is one to three companies deep. The ones with genuinely no su
 
 ## Key Players
 
+This table follows the NVIDIA case study, so a supplier's absence is not evidence that it is absent from the wider computing industry. Huawei designs Ascend accelerators and Atlas systems; AMD and hyperscaler-designed accelerators provide other examples discussed in Modules 17 and 20. Huawei's September 2025 roadmap is useful for studying system-level choices, but its advertised peaks and future targets are not independent benchmark results. Compare delivered workload performance, memory, interconnect, software and power under the same conditions. [Huawei Atlas and Ascend roadmap](https://www.huawei.com/en/news/2025/9/hc-xu-keynote-speech).
+
 | Company | Country | Role / what they supply | Approx. position |
 |---|---|---|---|
 | NVIDIA | USA | Fabless designer of GPUs, NVSwitch, NICs, boards, rack reference designs; cuLitho | Leader, ~80%+ of AI accelerators (as of 2025) |

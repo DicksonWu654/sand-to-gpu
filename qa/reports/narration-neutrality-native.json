@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "timestamp": "2026-09-14T04:39:50.421Z",
+  "baseUrl": "http://127.0.0.1:8792",
+  "sourceHash": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
+  "lesson": "#/s/01",
+  "passageIndex": 59,
+  "newRecordingKey": "6bd0a6a2c457dadf814b48016a6c14ed6444797d815717905a6d69a56a12c5dd",
+  "text": "NVIDIA illustrates the design and system-integration role, TSMC the foundry and advanced-packaging role, and SK hynix, Samsung and Micron the major memory-manufacturing role. Hoshine supplies silicon metal, while Xinhua Semiconductor supplies electronic-grade polysilicon: these are different stages and purity requirements. Equipment suppliers such as ASML and NAURA make tools used by chip manufacturers, while Anji supplies CMP slurries and wet chemicals. Packaging houses and system builders complete later stages. These examples describe roles in the wider industry, not a confirmed list of suppliers for a particular NVIDIA chip.",
+  "nativeAudio": {
+    "currentTime": 1.314615,
+    "duration": 40.975,
+    "paused": false,
+    "readyState": 4,
+    "currentSrc": "http://127.0.0.1:8792/narration/audio/6bd0a6a2c457dadf814b48016a6c14ed6444797d815717905a6d69a56a12c5dd.mp3",
+    "position": "60 / 66",
+    "highlightedText": "NVIDIA illustrates the design and system-integration role, TSMC the foundry and advanced-packaging role, and SK hynix, Samsung and Micron the major memory-manufacturing role. Hoshine supplies silicon metal, while Xinhua Semiconductor supplies electronic-grade polysilicon: these are different stages and purity requirements. Equipment suppliers such as ASML and NAURA make tools used by chip manufacturers, while Anji supplies CMP slurries and wet chemicals. Packaging houses and system builders complete later stages. These examples describe roles in the wider industry, not a confirmed list of suppliers for a particular NVIDIA chip.",
+    "wordHighlights": 1,
+    "staticMarker": true
+  },
+  "nativeTimeAdvancedSeconds": 0.8084690000000001,
+  "rangeStatus": 206,
+  "apiRequests": [],
+  "pageErrors": [],
+  "limitations": [
+    "Verifies real decoding, playback, passage selection and word highlighting; not a subjective pronunciation assessment."
+  ]
+}

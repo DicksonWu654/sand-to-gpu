@@ -35,26 +35,26 @@
       "explanation": "The 2022 rule caught chips with TPP >= 4800 and interconnect >= 600 GB/s; A800/H800 ducked the second test. The 2023 rule keys on TPP and TPP per mm^2 alone, which is what forced the far weaker H20 (TPP ~2400)."
     },
     {
-      "q": "What is the binding technical limit on SMIC's ability to follow TSMC below 5 nm-class, given that it has demonstrated 7 nm-class (Kirin 9000S, 2023) and 5 nm-class parts?",
+      "q": "What manufacturing tradeoff follows when a foundry uses DUV multi-patterning to make finer logic features, and what can a chip teardown establish?",
       "options": [
-        "China cannot obtain 300 mm silicon wafers of sufficient purity",
-        "SMIC lacks EDA tools capable of place-and-route below 7 nm",
-        "Without EUV, each shrink requires more DUV multi-patterning passes, so mask count, cost, and defect exposure rise while yield falls (reported well below 50% at 5 nm-class), making the node possible but uneconomic and 3 nm-class not credible",
-        "SMIC's fabs are limited to 200 mm wafers"
+        "The foundry cannot obtain silicon wafers pure enough for advanced logic",
+        "Every transistor must use a different EDA tool because the exposure wavelength changed",
+        "Additional patterning and alignment steps can increase cost, cycle time and defect exposure; a teardown can establish dimensions and structures, but does not establish factory yield or cost per good die",
+        "The foundry must switch from 300 mm to 200 mm wafers to use additional exposures"
       ],
       "answer": 2,
-      "explanation": "EUV has never been licensed to China and immersion DUV above the NXT:1980i class is now restricted, so SMIC's only path is quadruple-plus patterning, which trades yield and cost for dimension."
+      "explanation": "Splitting a fine pattern across several DUV patterning steps creates extra processing and alignment work. TechInsights identified SMIC N+2 and a further-scaled N+3 from physical chips; its N+3 comparison did not establish equivalence to TSMC or Samsung 5 nm. Production yield, utilization and cost require separate evidence, so a teardown alone cannot prove that a process is uneconomic."
     },
     {
-      "q": "Roughly what fraction of the world's most advanced (5 nm-class and below) logic wafers and of CoWoS-class advanced packaging is produced in Taiwan, and which risk scenario would most directly remove that output without physically damaging fabs?",
+      "q": "Why does geographic concentration in advanced logic and TSMC's CoWoS production create a supply risk even when no fab equipment is physically damaged?",
       "options": [
-        "About 50% of both; a major earthquake near Tainan",
-        "About 90% of both; a naval blockade that stops inbound chemicals, gases and spares and outbound wafers within weeks",
-        "About 70% of wafers and 30% of packaging; a US export-control action against TSMC",
-        "About 90% of wafers but under 20% of packaging; a typhoon season power outage"
+        "Factories can use any locally available chemicals without qualification, so only damaged equipment stops production",
+        "An interruption to qualified chemicals, gases, spare parts or transport can stop output; alternative foundries and packaging technologies require product-specific redesign and qualification",
+        "A foundry's headquarters determines where every wafer and package it sells is physically manufactured",
+        "All advanced packaging is the same as CoWoS, so another OSAT can take over the process immediately"
       ],
       "answer": 1,
-      "explanation": "Taiwan holds ~90% of leading-edge logic and ~90%+ of CoWoS-class packaging. Fabs hold days to weeks of consumables, so a blockade idles them without destroying them; earthquakes such as Hualien (Apr 2024) have cost only ~0.1% of a quarter's revenue."
+      "explanation": "CoWoS is TSMC's process family, while other suppliers offer different advanced-packaging platforms. A supply interruption can idle intact production lines. The operational risk depends on actual fab and packaging locations, inventory, logistics and qualified alternatives, not a single market-share percentage or the corporate headquarters."
     },
     {
       "q": "The CHIPS Act's Section 48D investment tax credit was raised from 25% to 35% in the July 2025 tax law. In the worked example of moving ~12,500 wspm of N3 capacity to Arizona, what is the net effect of US incentives on capex versus Taiwan, and where does the persistent US cost penalty actually sit?",

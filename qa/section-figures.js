@@ -13,6 +13,16 @@ function course(source){let sandbox={window:{}};vm.runInNewContext(source,sandbo
  const actual=course(fs.readFileSync(contentFile,'utf8'));
  // The baseline is the signed course continuation before the visual refactor.
  const baseline=course(cp.execFileSync('git',['show','adc7c74c0543d95a083cbf224274b4ba89008b7d:site/content.js'],{cwd:root,encoding:'utf8',maxBuffer:15*1024*1024}));
+ // Explicitly reviewed factual corrections amend only the named historical option text.
+ // Counts, answer indices and every unlisted option remain protected by the baseline.
+ const amendments=JSON.parse(fs.readFileSync(path.join(root,'qa/quiz-contract-amendments.json'),'utf8'));
+ const amendedQuestions=new Set();
+ for(const amendment of amendments){
+  const key=amendment.module+':'+amendment.question;
+  const question=baseline.modules.find(m=>m.n===amendment.module)?.quiz?.questions?.[amendment.question-1];
+  if(amendedQuestions.has(key)||!question||!amendment.reason||!amendment.review||JSON.stringify(question.options)!==JSON.stringify(amendment.beforeOptions)||!Array.isArray(amendment.afterOptions)||amendment.afterOptions.length!==question.options.length||amendment.afterOptions.some(option=>typeof option!=='string'||!option.trim()))throw Error('Invalid reviewed quiz amendment '+key);
+  amendedQuestions.add(key);question.options=amendment.afterOptions;
+ }
  const sources={},authoredQuizzes={},sourceHashes={},quizSourceHashes={};
  for(const [track,dir,pattern] of [['m','modules',/^(\d\d)-.*\.md$/],['s','survey',/^S(\d\d)-.*\.md$/]]){
   for(const file of fs.readdirSync(path.join(root,'course',dir)).sort()){
@@ -57,5 +67,5 @@ function course(source){let sandbox={window:{}};vm.runInNewContext(source,sandbo
   }
   return {lessons:all.length,figures,svgs,widgets,sourceTextLessons,headingLessons,authoredQuizLessons,historicalQuizStructureLessons,errors};
  },{actual,baseline,intended,placements,sources,authoredQuizzes});}finally{await browser.close();}
- const report={checkedAt:new Date().toISOString(),contentFile,reportFile,historicalContractBaseline:'adc7c74c0543d95a083cbf224274b4ba89008b7d',historicalContract:'Lesson identities, heading IDs/text/order, quiz module identifiers, question counts, answer indices and options remain unchanged. Question and explanation prose may be intentionally edited.',quizContract:'Built quiz JSON must exactly match the current authored quiz JSON.',proseContract:'Built prose must match current authored Markdown after the standard rendering transforms; editorial changes are reviewed separately.',sourceHashes,quizSourceHashes,...result};fs.writeFileSync(reportFile,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(result.errors.length)process.exitCode=1;
+ const report={checkedAt:new Date().toISOString(),contentFile,reportFile,historicalContractBaseline:'adc7c74c0543d95a083cbf224274b4ba89008b7d',historicalContract:'Lesson identities, heading IDs/text/order, quiz module identifiers, question counts and answer indices remain unchanged. Options match the baseline plus the explicit reviewed factual corrections in qa/quiz-contract-amendments.json. Question and explanation prose may be intentionally edited.',reviewedQuizAmendments:amendments,quizContract:'Built quiz JSON must exactly match the current authored quiz JSON.',proseContract:'Built prose must match current authored Markdown after the standard rendering transforms; editorial changes are reviewed separately.',sourceHashes,quizSourceHashes,...result};fs.writeFileSync(reportFile,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(result.errors.length)process.exitCode=1;
 })().catch(e=>{console.error(e);process.exitCode=1});

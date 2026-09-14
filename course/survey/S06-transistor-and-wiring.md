@@ -107,7 +107,7 @@ These are selected examples from Modules 11 and 12, not a universal process spec
 
 ## The people and companies
 
-TSMC, Intel and Samsung integrate the transistor and wiring processes into complete manufacturing technologies. Equipment and materials suppliers provide the deposition, etch, polishing and measurement capabilities those flows need. Circuit designers and electronic-design-automation companies translate process rules into libraries and layouts. The finished result depends on the coordination between those groups, including detailed information that is not public.
+TSMC, Intel and Samsung integrate the newest transistor transitions into complete technologies; SMIC also manufactures FinFET logic, and Hua Hong supplies specialty processes for functions such as embedded memory and power devices. These are different product needs, not a single race judged only by the smallest node. Equipment suppliers include firms such as Hwatsing in polishing and ACM Research in metal plating, alongside the suppliers covered in Modules 11 and 12. Circuit designers and EDA companies turn process rules into usable libraries and layouts.
 
 ## Why it is hard
 

@@ -547,11 +547,13 @@ For a mainstream chip, assembly and packaging is on the order of 10–20% of the
 
 ## Key Players
 
+The company's home country is not the full factory map: JCET, for example, reported manufacturing locations in China, Korea and Singapore. Its packaging and test business serves international customers. This is why supplier concentration should be assessed by the actual plant, process and qualified capacity, not by assigning every package to a corporate flag. [JCET 2023 operating update](https://www.prnewswire.com/news-releases/focusing-on-high-performance-advanced-packaging-and-global-layout-jcet-achieved-quarter-on-quarter-growth-in-q2-2023-301910156.html).
+
 | Company | Country | What they supply | Position |
 |---|---|---|---|
 | ASE Technology (incl. SPIL) | Taiwan | Largest OSAT: bumping, FCBGA, wire bond, fan-out, test | Leader (~30% of OSAT market) |
 | Amkor | USA | #2 OSAT; Arizona campus for TSMC Arizona wafers | #2 |
-| JCET | China | #3 OSAT (ex-STATS ChipPAC), eWLB fan-out | #3 |
+| JCET | China | OSAT (including STATS ChipPAC), fan-out and XDFOI heterogeneous integration | Global packaging-and-test supplier |
 | Tongfu, PTI, Huatian | China / Taiwan / China | #4–6 OSATs; PTI leads memory packaging | Top tier |
 | TSMC (AP1–AP8) | Taiwan | In-house bumping, InFO, CoWoS, SoIC | Leader in advanced packaging |
 | Ajinomoto Fine-Techno | Japan | ABF build-up dielectric film | Near-monopoly (> 90%) |

@@ -325,7 +325,7 @@ Samsung's **I-Cube** is its 2.5D family, and it has the same shape as CoWoS. **I
 
 ### The OSATs: ASE, Amkor, SPIL, JCET
 
-The outsourced assembly houses build 2.5D-class flows on fan-out RDL rather than silicon interposers, since they lack 300 mm front-end fabs. ASE's **FOCoS** (Fan-Out Chip on Substrate) puts dies on a ~2 µm line/space fan-out RDL interposer, and **FOCoS-Bridge** embeds a silicon bridge under die edges, a direct CoWoS-L analogue; ASE's **CoWoP** (chip-on-wafer-on-PCB) proposal drops the ABF substrate and mounts the CoW module on a large fine-line PCB. Amkor's **S-SWIFT** and **S-Connect** are the equivalents. ASE (which owns SPIL) and Amkor are also TSMC's designated overflow for CoWoS oS and, from 2025, some CoWoS-S CoW. JCET's XDFOI is the Chinese equivalent, relevant because 2.5D assembly of domestically fabbed dies is one of the few scaling paths open to Huawei and its foundry partners, and, as of 2026, packaging equipment is far less restricted by export controls than EUV lithography is.
+The outsourced assembly houses build 2.5D-class flows on fan-out RDL rather than silicon interposers, since they lack 300 mm front-end fabs. ASE's **FOCoS** (Fan-Out Chip on Substrate) puts dies on a ~2 µm line/space fan-out RDL interposer, and **FOCoS-Bridge** embeds a silicon bridge under die edges, a direct CoWoS-L analogue; ASE's **CoWoP** (chip-on-wafer-on-PCB) proposal drops the ABF substrate and mounts the CoW module on a large fine-line PCB. Amkor's **S-SWIFT** and **S-Connect** are the equivalents. ASE (which owns SPIL) and Amkor are also TSMC's designated overflow for CoWoS oS and, from 2025, some CoWoS-S CoW. JCET's **XDFOI** is another heterogeneous-integration platform. In its April 2024 results release, JCET reported stable high-volume XDFOI manufacturing across multiple factories. These factories supply advanced-packaging services to global customers. It is not the same process as CoWoS: interconnect geometry, package dimensions, thermal limits, yield, available capacity and customer qualification must be compared for the particular design. [JCET Q1 2024 production update](https://www.prnewswire.com/news-releases/jcet-q1-2024-revenue-and-net-profit-achieve-double-digit-year-on-year-growth-302126070.html).
 
 ## Fan-Out and the Move to Panels
 
@@ -438,11 +438,11 @@ Doubling CoWoS from ~35k to ~80k wpm in 2025 required on the order of a thousand
 | NVIDIA | USA | ~55–65% of CoWoS capacity; NV-HBI; Blackwell/Rubin on CoWoS-L | #1 customer |
 | AMD | USA | MI300/MI350 on SoIC + CoWoS; 3D V-Cache; Infinity Fabric | #2 accelerator customer; hybrid-bonding pioneer |
 | Broadcom / Marvell / Alchip / MediaTek | USA / USA / Taiwan / Taiwan | Custom AI ASICs on CoWoS for Google, Meta, Amazon, Microsoft | Major CoWoS consumers |
-| Intel (Intel Foundry) | USA | EMIB, EMIB-T, Foveros, Foveros Direct; AP fabs in Arizona, New Mexico, Malaysia | Only full-stack alternative to TSMC |
+| Intel (Intel Foundry) | USA | EMIB, EMIB-T, Foveros, Foveros Direct; AP fabs in Arizona, New Mexico, Malaysia | Foundry and advanced-packaging supplier |
 | Samsung | South Korea | I-Cube (2.5D), X-Cube (3D); HBM + logic + packaging turnkey | #3 in advanced packaging |
 | ASE (incl. SPIL) | Taiwan | CoWoS oS overflow, FOCoS, FOCoS-Bridge, CoWoP | #1 OSAT |
 | Amkor | USA | CoWoS oS overflow, S-SWIFT/S-Connect, Arizona plant (~2027–28) | #2 OSAT |
-| JCET | China | XDFOI fan-out and 2.5D for domestic AI chips | #3 OSAT; China's main option |
+| JCET | China | XDFOI fan-out and heterogeneous integration | Global OSAT; reported XDFOI high-volume production |
 | SK hynix / Samsung / Micron | South Korea / South Korea / USA | HBM3E/HBM4 known-good stacks | ~50% / ~33% / ~18% of HBM (Q2 2026 Counterpoint estimate, Module 15) |
 | Ibiden / Unimicron / Shinko / Kinsus / AT&S | Japan / Taiwan / Japan / Taiwan / Austria | High-layer-count ABF substrates (film from Ajinomoto) | Leaders in large AI substrates |
 | Besi | Netherlands | TCB and die-to-wafer hybrid bonders (Applied holds ~9%) | ~80% of hybrid bonding |

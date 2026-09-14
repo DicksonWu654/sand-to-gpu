@@ -382,6 +382,8 @@ Cost and fallout examples are illustrative unless tied to a named product; the $
 
 ## Key Players
 
+The test supplier depends on the device. AccoTEST supplies analog, power and SoC test systems, and JCET provides packaging and testing services through its international manufacturing network. Including them does not imply that a power-device tester or a general OSAT line can immediately replace a qualified high-power GPU test flow. The distinction is the required electrical resources, thermal handling, program and customer qualification. [AccoTEST portfolio](https://www.accotest.com/); [JCET operating update](https://www.prnewswire.com/news-releases/focusing-on-high-performance-advanced-packaging-and-global-layout-jcet-achieved-quarter-on-quarter-growth-in-q2-2023-301910156.html).
+
 | Company | Country | Role / what they supply | Approx. position |
 |---|---|---|---|
 | Advantest | Japan | V93000 ATE (SmarTest environment), M48xx handlers with ATC, SLT platform (ex-Astronics, acquired 2019), memory testers | Leader in SoC and memory ATE |

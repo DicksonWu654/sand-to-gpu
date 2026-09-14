@@ -115,7 +115,7 @@ The calculations below retain the assumptions of Modules 13, 14 and 18.
 
 ## The people and companies
 
-KLA, ASML and other measurement suppliers help fabs observe and control their processes. Advantest and Teradyne supply major test platforms, while probe-card, handler and socket specialists make physical contact and thermal control possible. Foundries, memory manufacturers and outsourced test companies run the flows; the product owner defines the acceptable behavior and uses the collected evidence to improve the product.
+KLA, ASML and other measurement suppliers help fabs observe and control their processes; Skyverse supplies wafer inspection and optical metrology. Advantest and Teradyne supply major test platforms, while AccoTEST offers analog, power and SoC testers. A supplier's presence does not make every instrument interchangeable: the device, defect size, speed and thermal requirements determine the qualified choice. Foundries, memory makers and test companies run these flows, and the product owner defines acceptable behavior.
 
 ## Why it is hard
 

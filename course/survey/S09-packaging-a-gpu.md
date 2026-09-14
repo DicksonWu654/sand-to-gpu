@@ -119,7 +119,7 @@ These are representative values and worked comparisons from Modules 16 and 17.
 
 ## The people and companies
 
-TSMC integrates CoWoS and SoIC, while other foundries and packaging companies offer their own architectures. ASE and Amkor provide major outsourced assembly and test services; substrate manufacturers and materials companies supply the routing structures underneath the dies. DISCO, bonding-tool makers and inspection specialists provide the equipment that handles, joins and checks the components. The product owner must coordinate these capabilities with its design and qualification requirements.
+TSMC integrates CoWoS and SoIC; other foundries and packaging companies offer different architectures. ASE, Amkor and JCET provide outsourced assembly and test, and JCET reports production of its XDFOI heterogeneous-integration platform. Suppliers also span Taiwan, Japan, Korea, Europe and other regions. Compare the actual package, factory and qualified capacity: a headquarters location or the label “2.5D” does not establish that two production flows can substitute for each other. Substrate, bonding-tool and inspection suppliers complete the chain.
 
 ## Why it is hard
 

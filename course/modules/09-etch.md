@@ -368,7 +368,7 @@ A leading-edge etch platform is a vacuum hub with a wafer-handling robot in the 
 
 **Hitachi High-Tech** (Japan) holds a niche in ECR/microwave conductor etch (gate, fin), a few percent of the market; long counted the fourth etch vendor, it has probably been overtaken by AMEC (~$1 billion of etch revenue) as of 2024–2025, though estimates differ.
 
-**AMEC** (Advanced Micro-Fabrication Equipment, Shanghai) makes the **Primo** family of CCP dielectric and ICP conductor etchers and is qualified for some dielectric etch at TSMC as well as at every Chinese fab. **Naura** (Beijing) makes ICP silicon etch and CCP tools and is the largest Chinese equipment vendor. As of 2024–2025 the two together took roughly 20% of etch purchases in China and a mid-single-digit share globally, concentrated in mature nodes and in memory (YMTC, CXMT) where export controls limit the US vendors; etch chambers, unlike EUV scanners, can be built from commercially available subsystems.
+**AMEC** (Advanced Micro-Fabrication Equipment, Shanghai) makes the **Primo** family of CCP dielectric and ICP conductor etchers, including TSV etch systems. **NAURA** (Beijing) also supplies semiconductor etch equipment within a broader process-tool portfolio. Those product categories correspond to the different plasma and material-removal problems explained in this module. Qualification is specific to a tool, recipe, layer and customer; it cannot be inferred for every fab from the supplier’s nationality or from one successful installation. Commercially available subsystems can support tool development, but integrating stable plasma control, uniformity, low defect counts and reliable operation remains substantial engineering work.
 
 ### Market shares and economics
 
@@ -426,14 +426,14 @@ The etch step count has grown faster than the total step count: SAQP turned one 
 | Lam Research | USA | Kiyo (ICP conductor), Flex (CCP dielectric), Sense.i, Syndion (TSV), Coronus (bevel), Cryo 3.0, first production ALE; wet clean | Leader (~40–45% of etch) |
 | Tokyo Electron (TEL) | Japan | Tactras platform with Vigus CCP and RLSA/ICP chambers; Episode UL cryogenic channel-hole etch; Certas CDE; wet benches | #2 (~25%); strong in dielectric and memory |
 | Applied Materials | USA | Centris Sym3 (dielectric), Centura conductor etch, Selectra and SiCoNi selective/radical removal, APF carbon hardmask | #3 (~18–20%); leader in selective removal |
-| AMEC | China | Primo CCP dielectric and ICP conductor etchers; TSV etch; qualified at TSMC for some dielectric etch | Rising; ~$1 B etch revenue (2024); ~20% of China's etch purchases with Naura |
+| AMEC | China | Primo CCP dielectric and ICP conductor etchers; TSV etch | Etch-equipment supplier with application-specific product lines |
 | Hitachi High-Tech | Japan | ECR/microwave conductor etchers (gate, fin) | Niche (~few %); fourth or fifth by revenue |
-| Naura | China | ICP silicon etch, CCP dielectric etch, strip; largest Chinese equipment vendor | Rising; mature nodes and China memory |
+| NAURA | China | Semiconductor etch and related process equipment | Product and layer qualification determine application |
 | SCREEN | Japan | Single-wafer (SU-3300) and batch (FC-3100) wet etch/clean | Leader in wet (~40–50%) |
 | SEMES | Korea | Wet etch/clean and strip, Samsung affiliate | #3–4 in wet |
 | KLA (SPTS) | USA / UK | Deep silicon (Bosch) etch for MEMS, TSV, photonics | Leader in MEMS deep etch |
 | Mattson, PSK, ULVAC | China (formerly USA) / Korea / Japan | Photoresist strip (ash) | PSK and Mattson lead strip |
-| Hana Materials, SK Enpulse, Mitsubishi Materials, CoorsTek, Ferrotec | Korea / Japan / USA | Si, SiC and ceramic consumables: edge rings, showerheads, liners | Consumables suppliers |
+| Hana Materials, SK Enpulse, Mitsubishi Materials, CoorsTek, Ferrotec | Korea / Japan / USA; Ferrotec has Japan/China operations | Si, SiC and ceramic consumables: edge rings, showerheads, liners | Consumables suppliers |
 | Robert Bosch GmbH | Germany | Originator and licensor of the Bosch deep-etch process | IP holder |
 
 ## Common Misconceptions
@@ -463,3 +463,7 @@ Etch consumes the patterned resist and hardmask stacks from lithography (Modules
 8. Lam Research, "Lam Research Introduces Lam Cryo 3.0 Cryogenic Etch Technology," press release, July 2024, and the Lam newsroom blog "The Road to 1,000 Layer 3D NAND."
 9. Semiconductor Engineering, "Cryogenic Etch: A Key Enabler of 3D NAND" and its knowledge-center articles on atomic layer etching and high-aspect-ratio etch (semiengineering.com).
 10. K. R. Williams, K. Gupta and M. Wasilik, "Etch rates for micromachining processing, Part II," *Journal of Microelectromechanical Systems* 12, 761 (2003). The reference table of wet and dry etch rates for dozens of materials and etchants.
+
+- [AMEC 2024 ESG report: CCP, ICP and TSV product families](https://www.amec-inc.com/uploads/files/20250611/17496080859885.pdf). Official product scope, reviewed September 2026.
+
+- [NAURA semiconductor process-equipment catalogue](https://www.naura.com/product/). Official product scope, reviewed September 2026.

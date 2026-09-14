@@ -108,7 +108,7 @@ The useful question to carry into the next chapter is therefore not “How clean
 
 ## The people and companies
 
-WACKER, Hemlock and Tokuyama are examples of companies associated with high-purity polysilicon. Shin-Etsu, SUMCO, GlobalWafers, Siltronic and SK Siltron are major wafer suppliers discussed in the deep modules. Their products depend on specialized equipment, chemicals and handling systems. The relevant relationship is between a qualified material and a customer's process; a supplier's name alone does not establish that every product in its catalogue is interchangeable.
+WACKER, Hemlock, Tokuyama and Xinhua Semiconductor (GCL) supply electronic-grade polysilicon. That product must be distinguished from the much larger solar-polysilicon business. Shin-Etsu, SUMCO, GlobalWafers, Siltronic, SK Siltron and NSIG/Zing are wafer suppliers. JSG makes crystal-growth and processing equipment, rather than performing the same role as a wafer seller. A qualified material must meet a particular customer’s process requirements; neither company size nor nationality makes every product interchangeable.
 
 ## Why it is hard
 

@@ -1,27 +1,259 @@
 [
-  {"hover": "#box svg [data-ev=\"h20-ban\"]"}, {"wait": 200}, {"shot": "hover-h20-ban"},
-  {"hover": "#box svg [data-ev=\"nl-euv\"]"}, {"wait": 200}, {"shot": "hover-nl-euv"},
-  {"click": "#box svg [data-ev=\"oct17\"]"}, {"wait": 250}, {"shot": "click-oct17"},
-  {"click": "#box svg [data-ev=\"dec2\"]"}, {"wait": 250}, {"shot": "click-dec2"},
-  {"click": "#box svg [data-ev=\"cn-gage\"]"}, {"wait": 250}, {"shot": "click-cn-gage"},
-  {"click": "#box svg [data-ev=\"truce\"]"}, {"wait": 250}, {"shot": "click-truce"},
-  {"click": "#box svg [data-ev=\"h200\"]"}, {"wait": 250}, {"shot": "click-h200-asof"},
-  {"click": "#box .w-step-nav button:nth-of-type(2)"}, {"wait": 250}, {"shot": "next-last-event"},
-  {"click": "#box .w-step-nav button:nth-of-type(1)"}, {"wait": 200},
-  {"click": "#box .w-step-nav button:nth-of-type(1)"}, {"wait": 250}, {"shot": "prev-twice"},
-  {"set": "#box select[aria-label=\"Jump to event\"]", "value": "huawei-el"}, {"wait": 250}, {"shot": "jump-first-event"},
-  {"set": "#box .w-controls label:nth-of-type(2) select", "value": "us"}, {"wait": 250}, {"shot": "filter-us"},
-  {"set": "#box .w-controls label:nth-of-type(2) select", "value": "ally"}, {"wait": 250}, {"shot": "filter-allies"},
-  {"set": "#box .w-controls label:nth-of-type(2) select", "value": "cn"}, {"wait": 250}, {"shot": "filter-china"},
-  {"set": "#box .w-controls label:nth-of-type(2) select", "value": "all"}, {"wait": 200},
-  {"set": "#box .w-controls label:nth-of-type(3) select", "value": "y2025"}, {"wait": 250}, {"shot": "zoom-2025"},
-  {"click": "#box svg [data-ev=\"h20-deal\"]"}, {"wait": 250}, {"shot": "zoom-2025-h20-deal"},
-  {"set": "#box .w-controls label:nth-of-type(3) select", "value": "early"}, {"wait": 250}, {"shot": "zoom-2019-2022"},
-  {"set": "#box .w-controls label:nth-of-type(3) select", "value": "y2026"}, {"wait": 250}, {"shot": "zoom-2026"},
-  {"set": "#box .w-controls label:nth-of-type(3) select", "value": "y2023"}, {"wait": 250}, {"shot": "zoom-2023"},
-  {"set": "#box .w-controls label:nth-of-type(3) select", "value": "all"}, {"wait": 200},
-  {"set": "#box select[aria-label=\"Jump to event\"]", "value": "oct7"}, {"wait": 200},
-  {"click": "#box .w-step-nav button:nth-of-type(3)"}, {"wait": 5000}, {"shot": "play-1"},
-  {"wait": 4700}, {"shot": "play-2"},
-  {"click": "#box .w-step-nav button:nth-of-type(3)"}, {"wait": 250}, {"shot": "paused"}
+  {
+    "hover": "#box svg [data-ev=\"h20-ban\"]"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "shot": "hover-h20-ban"
+  },
+  {
+    "hover": "#box svg [data-ev=\"nl-euv\"]"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "shot": "hover-nl-euv"
+  },
+  {
+    "click": "#box svg [data-ev=\"oct17\"]"
+  },
+  {
+    "assertValue": {
+      "selector": "#box select[aria-label=\"Jump to event\"]",
+      "value": "oct17"
+    }
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "click-oct17"
+  },
+  {
+    "click": "#box svg [data-ev=\"dec2\"]"
+  },
+  {
+    "assertValue": {
+      "selector": "#box select[aria-label=\"Jump to event\"]",
+      "value": "dec2"
+    }
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "click-dec2"
+  },
+  {
+    "click": "#box svg [data-ev=\"cn-gage\"]"
+  },
+  {
+    "assertValue": {
+      "selector": "#box select[aria-label=\"Jump to event\"]",
+      "value": "cn-gage"
+    }
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "click-cn-gage"
+  },
+  {
+    "click": "#box svg [data-ev=\"truce\"]"
+  },
+  {
+    "assertValue": {
+      "selector": "#box select[aria-label=\"Jump to event\"]",
+      "value": "truce"
+    }
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "click-truce"
+  },
+  {
+    "click": "#box svg [data-ev=\"h200\"]"
+  },
+  {
+    "assertValue": {
+      "selector": "#box select[aria-label=\"Jump to event\"]",
+      "value": "h200"
+    }
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "click-h200-asof"
+  },
+  {
+    "click": "#box .w-step-nav button:nth-of-type(2)"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "next-last-event"
+  },
+  {
+    "click": "#box .w-step-nav button:nth-of-type(1)"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "click": "#box .w-step-nav button:nth-of-type(1)"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "prev-twice"
+  },
+  {
+    "set": "#box select[aria-label=\"Jump to event\"]",
+    "value": "huawei-el"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "jump-first-event"
+  },
+  {
+    "set": "#box .w-controls label:nth-of-type(2) select",
+    "value": "us"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "filter-us"
+  },
+  {
+    "set": "#box .w-controls label:nth-of-type(2) select",
+    "value": "ally"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "filter-allies"
+  },
+  {
+    "set": "#box .w-controls label:nth-of-type(2) select",
+    "value": "cn"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "filter-china"
+  },
+  {
+    "set": "#box .w-controls label:nth-of-type(2) select",
+    "value": "all"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "set": "#box .w-controls label:nth-of-type(3) select",
+    "value": "y2025"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "zoom-2025"
+  },
+  {
+    "click": "#box svg [data-ev=\"h20-deal\"]"
+  },
+  {
+    "assertValue": {
+      "selector": "#box select[aria-label=\"Jump to event\"]",
+      "value": "h20-deal"
+    }
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "zoom-2025-h20-deal"
+  },
+  {
+    "set": "#box .w-controls label:nth-of-type(3) select",
+    "value": "early"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "zoom-2019-2022"
+  },
+  {
+    "set": "#box .w-controls label:nth-of-type(3) select",
+    "value": "y2026"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "zoom-2026"
+  },
+  {
+    "set": "#box .w-controls label:nth-of-type(3) select",
+    "value": "y2023"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "zoom-2023"
+  },
+  {
+    "set": "#box .w-controls label:nth-of-type(3) select",
+    "value": "all"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "set": "#box select[aria-label=\"Jump to event\"]",
+    "value": "oct7"
+  },
+  {
+    "wait": 200
+  },
+  {
+    "click": "#box .w-step-nav button:nth-of-type(3)"
+  },
+  {
+    "wait": 5000
+  },
+  {
+    "shot": "play-1"
+  },
+  {
+    "wait": 4700
+  },
+  {
+    "shot": "play-2"
+  },
+  {
+    "click": "#box .w-step-nav button:nth-of-type(3)"
+  },
+  {
+    "wait": 250
+  },
+  {
+    "shot": "paused"
+  }
 ]

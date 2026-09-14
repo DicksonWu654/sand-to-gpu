@@ -604,6 +604,8 @@ None of these dimensions can be imaged optically; a 6 nm fin is roughly a hundre
 
 ## Key Players
 
+The table emphasizes the most advanced transistor transitions; it is not the complete foundry market. SMIC also manufactures FinFET logic, while Hua Hong supplies specialty processes for functions such as embedded memory and power devices. A power-management chip does not need the same transistor geometry as a dense GPU. Compare the technology needed by the product, not only the smallest node in a company's roadmap. [Hua Hong 2025 report](https://www.hkexnews.hk/listedco/listconews/sehk/2026/0409/2026040901618_c.pdf); [TechInsights N+3 analysis](https://www.techinsights.com/blog/smic-n3-kirin-9030-pro-process-flow-analysis).
+
 | Company | Country | Role / what they supply | Approx. position |
 |---|---|---|---|
 | TSMC | Taiwan | N2 nanosheet in HVM (Q4 2025), A16 with Super Power Rail (H2 2026); ~90% of leading-edge foundry output (as of 2025) | Leader |
@@ -612,7 +614,7 @@ None of these dimensions can be imaged optically; a 6 nm fin is roughly a hundre
 | imec | Belgium | Pre-competitive R&D consortium: nanosheet, forksheet, CFET, BSPDN roadmaps used by the whole industry | Leader (research) |
 | IBM Research | USA | Nanosheet pioneer (Albany, 2017 5 nm demo), VTFET; partners Samsung and Rapidus | Niche (research/IP) |
 | Rapidus | Japan | 2 nm nanosheet foundry start-up with IBM technology, pilot line 2025, HVM target 2027 | Entrant |
-| SMIC | China | DUV-only FinFET at ~N7/N5-class density (N+2/N+3) under export controls | Niche (constrained) |
+| SMIC | China | FinFET logic; N+2 and further-scaled N+3 identified in chip teardowns | DUV scaling; N+3 is not equivalent to TSMC/Samsung 5 nm in the cited dimensional comparison |
 | Applied Materials | USA | Epi (Centura for Si/SiGe superlattice and S/D), PVD/ALD metals for gate stack and contacts (Endura, Volta), selective removal (SiCoNi, Selectra), FCVD (Eterna), CMP (Reflexion) | Leader in epi, PVD, CMP |
 | Lam Research | USA | Conductor and dielectric etch (fin, gate, S/D recess, channel release; Kiyo), ALD spacers/inner spacers, W/Mo fill (Altus) | Leader in etch |
 | Tokyo Electron (TEL) | Japan | Etch, ALD/CVD, tracks, wet clean, selective SiGe etch and chemical oxide removal (Certas gas-phase) | #2–3 in etch/dep |

@@ -486,9 +486,9 @@ ASML has shipped roughly 350 EUV systems cumulatively since the NXE:3100 in 2010
 
 ## Who Has EUV, and Who Is Not Allowed To
 
-EUV has never shipped to China. SMIC ordered an NXE:3400 in 2018 and the Dutch government, under US pressure, never issued the licence; EUV has been formally export-controlled since 2019. The US October 2022 and 2023 rules and the Dutch September 2023 (NXT:2000i and above) and September 2024 (NXT:1970i/1980i) rules then restricted the immersion DUV tools that would be used to multi-pattern around the lack of EUV. SMIC nonetheless produced 7 nm-class logic (Huawei Kirin 9000S, 2023) and "5 nm-class" parts by DUV quadruple patterning (the SAQP of the Before-you-start list), at lower yield and higher cost.
+EUV has never shipped to China. SMIC ordered an NXE:3400 in 2018 and the Dutch government, under US pressure, never issued the licence; EUV has been formally export-controlled since 2019. The US October 2022 and 2023 rules and the Dutch September 2023 (NXT:2000i and above) and September 2024 (NXT:1970i/1980i) rules then restricted the immersion DUV tools that would be used to multi-pattern around the lack of EUV. TechInsights identified SMIC 7 nm-class logic in the Huawei Kirin 9000S (2023), made without EUV. This demonstrates manufactured fine-feature devices; it does not by itself measure the factory’s yield, available capacity or profitability. Extra patterning steps add opportunities for error and expense, but their actual cost depends on the complete process.
 
-China's domestic response: **SMEE** (Shanghai Micro Electronics Equipment) is the DUV champion, with 90 nm tools in production and a 28 nm-class immersion tool (SSA800) that has been "about to ship" for years. On EUV, the most public program is the **laser-induced discharge plasma (LDP)** source at Harbin Institute of Technology under Zhao Yongpeng, in which a laser vaporizes tin from an electrode and a high-voltage discharge through the vapour forms the plasma; reported in-band power was ~100 to 150 W in 2025 (as reported, 2025), versus ASML's 500 to 600 W, and discharge sources are hard to scale (Ushio's XTREME group, which took over Philips' LDP program in 2010, reached ~30 W at the intermediate focus in 2011 and gave up on high-volume manufacturing sources a few years later). A prototype scanner, reportedly assembled with former ASML engineers, was said to be under test in 2025 with a target of ~2028 (as reported, 2025). Tsinghua's **steady-state microbunching (SSMB)** source is a longer-shot alternative: it starts from a synchrotron, the ring accelerator introduced under the Mo/Si mirror section, whose circulating electrons normally emit light incoherently and spread across the spectrum, and SSMB would make the electrons bunch so that they emit coherently at 13.5 nm, an approach still on paper at wafer-scale power. As of 2026 no Chinese EUV tool has printed a production wafer; the source gap is years, and the Zeiss-class optics are the harder problem behind it.
+Chinese companies and research groups work on different parts of this problem. **SMEE** supplies DUV lithography equipment; its public IC catalogue includes 90 nm-class projection systems. Research on alternative sources includes **steady-state microbunching (SSMB)**, studied by a Tsinghua-led international collaboration. In an electron storage ring, the idea is to arrange electrons into very short groups so their radiation adds coherently, rather than being emitted with unrelated phases. The collaboration demonstrated the underlying mechanism experimentally in 2021 and reported further tests in 2024. These are research milestones toward a possible light source, not demonstrations of an industrial 13.5 nm wafer scanner. A production EUV system must combine source power and stability, projection optics, masks, stages, contamination control and reliable wafer throughput. ASML remains the commercial EUV scanner supplier in its 2025 annual report; research progress should be described separately from a shipped and customer-qualified production system.
 
 ## History
 
@@ -586,7 +586,7 @@ The 2010s were a decade of delays. The 2008 roadmaps had EUV in production at 22
 | Samsung | South Korea | First EUV HVM (7LPP, 2019); logic and DRAM | #2 |
 | Intel | USA | Largest High-NA customer; 18A (low-NA, with some layers dual-qualified on High-NA in HVM from 2026), 14A (High-NA) | #3, High-NA leader |
 | SK hynix, Micron | South Korea / USA | EUV in DRAM (the 1a, 1b and 1γ generations: DRAM makers' node labels for successive "10 nm-class" generations, Module 15), high-bandwidth memory (HBM) base layers | DRAM users |
-| SMEE / Harbin IT | China | Domestic DUV; LDP EUV source research (~100–150 W, as reported 2025) | No production EUV |
+| SMEE / Tsinghua-led SSMB collaboration | China / international research collaboration | DUV equipment / experimental research toward an accelerator-based light source | Different roles; research is not a qualified EUV scanner |
 
 ## Common Misconceptions
 
@@ -597,7 +597,7 @@ The 2010s were a decade of delays. The 2008 roadmaps had EUV in production at 22
 - **"EUV ended multi-patterning."** → It ended it for one node. At N3 and N2, the tightest metal layers are below the ~26 nm single-exposure pitch of 0.33 NA and are double-patterned with EUV LELE or SALELE. High-NA exists to end it again.
 - **"High-NA just prints smaller; everything else is the same."** → The optics are anamorphic (4× / 8×) to keep the reticle-side angles workable, which halves the field to 26 × 16.5 mm. Reticle-limited dies such as large GPUs must be stitched or split into chiplets.
 - **"The hydrogen in the tool is there to make a better vacuum."** → It is a deliberately added gas at ~100 Pa in the source and a few Pa in the scanner: it slows tin ions before they sputter the collector, its radicals turn tin and carbon deposits into gases the pumps remove, and it costs only ~10% of the light per metre at 100 Pa.
-- **"China has, or is about to have, its own EUV."** → As of 2026 the strongest Chinese source (Harbin LDP) is reported at ~100–150 W versus ASML's 500–600 W in production and 1,000 W demonstrated; no Chinese tool has printed a production wafer, and the Zeiss-class optics are the larger unsolved problem.
+- **"A promising EUV source means a production EUV scanner is ready."** → A source experiment establishes a particular result under measured conditions. Production lithography also requires optics, masks, stages, contamination control, availability and customer qualification. Assess those demonstrated capabilities separately, regardless of where a team works.
 
 ## Where This Fits in the Supply Chain
 
@@ -616,3 +616,13 @@ Module 07 delivered the resist chemistry, the track, and the DUV scanner that st
 - imec press releases on the CNT pellicle and High-NA lab (imec-int.com); Mitsui Chemicals CNT pellicle production announcements (2024–2025).
 - SemiAnalysis (semianalysis.com), coverage of the EUV supply chain and High-NA economics.
 - Carl Zeiss SMT, EUV and High-NA EUV lithography optics technology pages (zeiss.com/smt).
+
+- [SMEE IC projection-lithography catalogue](https://www.smee.com.cn/eis.pub?differ_net=0&method=indexinfo&onclicknodeno=1_4_1_1&service=homepageService). Reviewed September 2026.
+
+- [TechInsights: Kirin 9000S physical process analysis](https://www.techinsights.com/blog/hisilicon-kirin-9000s-smic-7nm-n2-process-flow-analysis). Reviewed September 2026.
+
+- [Deng et al., experimental demonstration of SSMB, Nature (2021)](https://www.nature.com/articles/s41586-021-03203-0). Reviewed September 2026.
+
+- [Confirming the theoretical foundation of SSMB (2024)](https://www.nature.com/articles/s42005-024-01657-y). Reviewed September 2026.
+
+- [ASML 2025 annual report](https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm). Reviewed September 2026.

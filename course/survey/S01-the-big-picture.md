@@ -123,7 +123,7 @@ These examples are drawn from Modules 00, 20 and 21; approximate manufacturing f
 
 ## The people and companies
 
-NVIDIA illustrates the design and system-integration role, TSMC the foundry and advanced-packaging role, and SK hynix, Samsung and Micron the major memory-manufacturing role. ASML and other equipment companies provide the tools, while wafer and materials specialists supply the controlled starting surfaces and consumables. Packaging houses and system builders complete later stages. Each name represents a larger network of specialized suppliers and engineers.
+NVIDIA illustrates the design and system-integration role, TSMC the foundry and advanced-packaging role, and SK hynix, Samsung and Micron the major memory-manufacturing role. Hoshine supplies silicon metal, while Xinhua Semiconductor supplies electronic-grade polysilicon: these are different stages and purity requirements. Equipment suppliers such as ASML and NAURA make tools used by chip manufacturers, while Anji supplies CMP slurries and wet chemicals. Packaging houses and system builders complete later stages. These examples describe roles in the wider industry, not a confirmed list of suppliers for a particular NVIDIA chip.
 
 ## Why it is hard
 

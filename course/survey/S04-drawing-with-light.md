@@ -111,7 +111,7 @@ The economic question is whether the complete layer can be produced at the requi
 
 ## The people and companies
 
-ASML supplies EUV lithography systems and is a major DUV supplier; ZEISS supplies critical optics. Light sources, precision motion, masks, resists and pellicles involve specialized suppliers. Tokyo Electron is an important lithography-track supplier discussed in the course. Nikon and Canon also participate in lithography segments. Supplier roles should be understood by product and application rather than collapsed into a claim that one company manufactures every part of the patterning process.
+ASML supplies commercial EUV lithography systems and is a major DUV supplier; ZEISS supplies critical optics. Nikon and Canon also supply lithography equipment, and SMEE’s public catalogue includes 90 nm-class IC projection systems. These portfolios serve different applications. Tokyo Electron supplies lithography tracks, while other specialists supply light sources, motion systems, masks, resists and pellicles. A scanner specification, a source experiment and a customer-qualified production process are different kinds of evidence; none should be substituted for another.
 
 ## Why it is hard
 

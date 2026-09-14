@@ -465,10 +465,12 @@ The BEOL is where the equipment oligopoly is most visible, because each step has
 | Intel PowerVia effect on M0 pitch | 30 nm relaxed to 36 nm | Backside power buys litho margin at the tightest level |
 | IR drop example | ~70 mV at 133 A through ~0.5 mΩ (100 W at 0.75 V) | Nearly 10 percent of the supply lost in the grid |
 | Steps per dual damascene level | ~30 to 40 operations | Half the steps of a logic flow are BEOL |
-| Applied Materials share of CMP / Lam share of Cu ECD (estimated, as of 2025) | ~70 percent / majority (> 60 percent) | Two tools, two suppliers |
+| Applied Materials share of CMP / Lam share of Cu ECD (estimated, as of 2025) | ~70 percent / majority (> 60 percent) | Estimated leadership in two distinct tool categories; other suppliers also participate |
 | Al pad thickness / C4 bump pitch | ~1 to 3 µm / ~130 to 150 µm | The 10,000× jump in scale to the package |
 
 ## Key Players
+
+Supplier choice varies by BEOL operation. Alongside the established suppliers below, Hwatsing offers CMP tools and ACM Research offers copper electroplating systems for dual-damascene processing. Those are concrete polishing and metal-fill roles; a catalogue does not prove qualification for every metal layer in a particular foundry flow. [Hwatsing CMP equipment](https://www.hwatsing.com/en/product_detail/757.html); [ACM process portfolio](https://www.acmr.com/), checked 14 September 2026.
 
 | Company | Country | What they supply | Position |
 |---|---|---|---|
