@@ -173,17 +173,20 @@
       {
         "glyph": "memory",
         "label": "Electronic devices",
-        "detail": "Tight contaminant and resistivity control protects circuit behavior."
+        "detail": "Tight contaminant and resistivity control protects circuit behavior.",
+        "variant": "planar"
       },
       {
         "glyph": "light",
         "label": "Solar cells",
-        "detail": "Carrier lifetime and photovoltaic performance guide feedstock limits."
+        "detail": "Carrier lifetime and photovoltaic performance guide feedstock limits.",
+        "variant": "solar-cell"
       },
       {
         "glyph": "test",
         "label": "Customer qualification",
-        "detail": "Measurements establish whether a lot fits its intended process."
+        "detail": "Measurements establish whether a lot fits its intended process.",
+        "variant": "instrument"
       }
     ],
     "edges": [],
@@ -201,22 +204,26 @@
       {
         "glyph": "test",
         "label": "Chemical analysis",
-        "detail": "Spectrometry identifies selected trace species."
+        "detail": "Spectrometry identifies selected trace species.",
+        "variant": "mass-analyzer"
       },
       {
         "glyph": "light",
         "label": "Optical measurements",
-        "detail": "Absorption reveals particular impurities or bonds."
+        "detail": "Absorption reveals particular impurities or bonds.",
+        "variant": "absorption"
       },
       {
         "glyph": "transistor",
         "label": "Electrical measurements",
-        "detail": "Resistivity and lifetime expose electrical effects."
+        "detail": "Resistivity and lifetime expose electrical effects.",
+        "variant": "four-point"
       },
       {
         "glyph": "crystal",
         "label": "Qualified polysilicon",
-        "detail": "The combined evidence supports a feedstock specification."
+        "detail": "The combined evidence supports a feedstock specification.",
+        "variant": "polycrystal"
       }
     ],
     "edges": [],
@@ -234,12 +241,14 @@
       {
         "glyph": "crystal",
         "label": "Charge the puller",
-        "detail": "The starting polysilicon mass enters the melt."
+        "detail": "The starting polysilicon mass enters the melt.",
+        "variant": "polycrystal"
       },
       {
         "glyph": "crystal",
         "label": "Crop the crystal",
-        "detail": "Unusable ends and residual melt reduce output."
+        "detail": "Unusable ends and residual melt reduce output.",
+        "variant": "cylinder"
       },
       {
         "glyph": "wafer",
@@ -324,6 +333,7 @@
     "source": {
       "file": "course/modules/01-sand-to-polysilicon.md",
       "heading": "10. The Other Ultra-Pure Feedstocks: Crucibles and Graphite"
-    }
+    },
+    "scene": "hot-zone"
   }
 ]

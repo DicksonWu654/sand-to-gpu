@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-14T01:02:31.330Z",
+  "pass": true,
+  "checks": [
+    "Section/root/back/forward preserve the existing lab and its input state",
+    "Repeated current-section links still jump and focus the heading",
+    "Malformed and encoded anchors leave routing operational",
+    "Search keyboard selection exposes state, restores focus on Escape, and follows Enter",
+    "Slash respects editable controls and contenteditable regions",
+    "Mobile curriculum contains focus, locks background, and returns focus on Escape",
+    "Opening curriculum then selecting current chapter closes it without resetting the lab",
+    "Desktop resize restores the normal non-modal sidebar",
+    "Completed quiz score and reading progress persist across a fresh page load",
+    "Leaving the bottom of a chapter does not mark the next unread chapter read",
+    "Selecting the already active track from its first chapter closes the mobile menu",
+    "Overflowing prose tables are labeled, keyboard reachable, and clean up on resize"
+  ],
+  "limitations": "Focused Chromium user-path regression; no screen reader or touch-device testing."
+}

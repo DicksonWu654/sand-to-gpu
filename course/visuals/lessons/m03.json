@@ -104,17 +104,20 @@
       {
         "glyph": "crystal",
         "label": "As-grown surface",
-        "detail": "Growth leaves diameter variation and ripples."
+        "detail": "Growth leaves diameter variation and ripples.",
+        "variant": "rough-cylinder"
       },
       {
         "glyph": "material",
         "label": "Grinding wheel",
-        "detail": "Abrasive contact removes the outer material."
+        "detail": "Abrasive contact removes the outer material.",
+        "variant": "grinding-wheel"
       },
       {
         "glyph": "crystal",
         "label": "Sized cylinder",
-        "detail": "The finished diameter fits wafering and handling specifications."
+        "detail": "The finished diameter fits wafering and handling specifications.",
+        "variant": "cylinder"
       }
     ],
     "edges": [],
@@ -163,12 +166,14 @@
       {
         "glyph": "wires",
         "label": "Wire web",
-        "detail": "Repeated spans form closely spaced cutting paths."
+        "detail": "Repeated spans form closely spaced cutting paths.",
+        "variant": "wire-web"
       },
       {
         "glyph": "crystal",
         "label": "Ingot feed",
-        "detail": "The block advances into the moving wire."
+        "detail": "The block advances into the moving wire.",
+        "variant": "cylinder"
       },
       {
         "glyph": "wafer",
@@ -179,7 +184,8 @@
       {
         "glyph": "material",
         "label": "Kerf loss",
-        "detail": "Silicon removed by the cuts cannot remain in the slices."
+        "detail": "Silicon removed by the cuts cannot remain in the slices.",
+        "variant": "silicon-fines"
       }
     ],
     "edges": [],
@@ -191,8 +197,8 @@
   {
     "section": "lapping-and-double-disk-grinding",
     "family": "layers",
-    "title": "Work both wafer faces together",
-    "caption": "Opposing tools remove stock while carriers distribute contact across the wafer; flatness control is different from final mirror polishing. Schematic, not to scale.",
+    "title": "Lapping: work both wafer faces together",
+    "caption": "In double-side lapping, abrasive slurry works between two plates while a carrier moves the wafer. Double-disk grinding uses opposed abrasive wheels and different support, as described in the text. Schematic section; thicknesses and clearances exaggerated.",
     "nodes": [
       {
         "glyph": "material",
@@ -214,7 +220,8 @@
     "source": {
       "file": "course/modules/03-ingot-to-wafer.md",
       "heading": "Lapping and Double-Disk Grinding"
-    }
+    },
+    "scene": "lapping-section"
   },
   {
     "section": "edge-profiling",
@@ -267,7 +274,8 @@
     "source": {
       "file": "course/modules/03-ingot-to-wafer.md",
       "heading": "Etching to Remove Damage"
-    }
+    },
+    "scene": "damage-removal"
   },
   {
     "section": "laser-marking",
@@ -317,12 +325,14 @@
       {
         "glyph": "material",
         "label": "Pad and particles",
-        "detail": "Contact removes the reacted material."
+        "detail": "Contact removes the reacted material.",
+        "variant": "polishing-pad"
       },
       {
         "glyph": "wafer",
         "label": "Fresh surface",
-        "detail": "Newly exposed silicon repeats the polishing cycle."
+        "detail": "Newly exposed silicon repeats the polishing cycle.",
+        "variant": "round"
       }
     ],
     "edges": [],

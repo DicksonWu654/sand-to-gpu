@@ -1,6 +1,8 @@
 > **Continuation:** See [CONTINUATION_2026-09-13.md](CONTINUATION_2026-09-13.md) for the Git repository, subsequent work, validation, and remaining limits. The original handoff below is preserved as historical context.
 >
 > **Diagram corrections:** See [DIAGRAM_AUDIT_2026-09-13.md](DIAGRAM_AUDIT_2026-09-13.md) for the subsequent visual and semantic audit. Earlier passing layout checks missed internal clipping and misleading physical geometry.
+>
+> **Further refinement:** See [QUALITY_REFINEMENT_2026-09-13.md](QUALITY_REFINEMENT_2026-09-13.md) for navigation/progress fixes, phone tables, visual polish, and the fresh materials/crystal/wafer diagram review.
 
 # HANDOFF: "Sand to GPU" semiconductor course + interactive site
 

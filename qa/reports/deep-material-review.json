@@ -1,0 +1,472 @@
+{
+  "checkedAt": "2026-09-14T01:05:12.760Z",
+  "scope": {
+    "reviewed": 21,
+    "m01": 10,
+    "m02": 6,
+    "m03": 5,
+    "correctedSelection": 16,
+    "dataChanged": 14,
+    "additionalSharedEffects": "Charge-bed and Siemens keys affect existing survey placements; mobile convergence CSS affects all branch figures. Geometry validation covers all 352 figures in both themes and widths.",
+    "captured": "21 figures × 2 widths × 2 themes, before and after. Manual review concentrated on desktop-light and phone-dark; opposite themes received automated geometry checks rather than a separate exhaustive semantic rereview.",
+    "limitations": "Comparison glyphs remain simplified teaching symbols. This is a fresh full-size/source review of the selected 21 figures, not a claim of reviewing the remaining deep modules or re-verifying all numerical facts. Existing course fact-review uncertainties remain."
+  },
+  "verification": {
+    "commands": [
+      "npm run build",
+      "npm run check",
+      "node qa/figure-geometry.js"
+    ],
+    "geometryReport": "qa/reports/figure-geometry.json",
+    "preservationReport": "qa/reports/section-figures.json",
+    "result": "Final rebuilt source passes npm run check (352/352 authored figures, 32/32 source prose and heading preservation) and 352 figures at two widths and two themes with zero geometry errors. Final polishing-pad contact correction visually reviewed at phone-dark.",
+    "geometryCheckedAt": "2026-09-14T01:03:10.621Z",
+    "build": {
+      "contentSha256": "8199c27d847a33c09e5943d8ff4bfb4b2e16b415db00b24a0da6f9f4754684e3",
+      "builtAt": "2026-09-14T01:02:38.878Z"
+    }
+  },
+  "ledger": [
+    {
+      "lesson": "m01",
+      "section": "1-why-purity-is-the-whole-game",
+      "title": "Impurity count is not electrical impact",
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "1. Why Purity Is the Whole Game"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": false,
+      "sceneChanged": false,
+      "corrected": false,
+      "finding": "Retained simplified lattice comparison; no new rendering defect in the reviewed states.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m01-1-why-purity-is-the-whole-game-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m01-1-why-purity-is-the-whole-game-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m01-1-why-purity-is-the-whole-game-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "2-the-rock-quartz-and-quartzite",
+      "title": "The furnace needs a permeable charge",
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "2. The Rock: Quartz and Quartzite"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": false,
+      "sceneChanged": true,
+      "corrected": true,
+      "finding": "Quartz and carbon inherited identical fill; gas arrows crossed solids. Distinct material fills and open curved gas paths.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m01-2-the-rock-quartz-and-quartzite-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m01-2-the-rock-quartz-and-quartzite-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m01-2-the-rock-quartz-and-quartzite-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "3-carbothermic-reduction-the-submerged-arc-furnace",
+      "title": "Break the silicon–oxygen bond with heat and carbon",
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "3. Carbothermic Reduction: The Submerged-Arc Furnace"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": false,
+      "sceneChanged": false,
+      "corrected": false,
+      "finding": "Retained schematic arc furnace; electrode/charge/melt/outlet relationships remain clear at reviewed sizes.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m01-3-carbothermic-reduction-the-submerged-arc-furnace-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m01-3-carbothermic-reduction-the-submerged-arc-furnace-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m01-3-carbothermic-reduction-the-submerged-arc-furnace-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "4-the-siemens-process",
+      "title": "Purify a volatile intermediate, then rebuild silicon",
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "4. The Siemens Process"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": false,
+      "sceneChanged": true,
+      "corrected": true,
+      "finding": "Scene key discarded useful mechanism descriptions into generic verbs. Keys now identify chlorosilane reaction, distillation, hot-rod deposition, and gas recovery.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m01-4-the-siemens-process-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m01-4-the-siemens-process-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m01-4-the-siemens-process-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "5-fbr-granular-polysilicon-the-silane-route",
+      "title": "A growing bed of silicon granules",
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "5. FBR Granular Polysilicon: the Silane Route"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": false,
+      "sceneChanged": false,
+      "corrected": false,
+      "finding": "Retained fluidized bed: upward feed, particles, heat and separate product/gas outlets are legible.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m01-5-fbr-granular-polysilicon-the-silane-route-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m01-5-fbr-granular-polysilicon-the-silane-route-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m01-5-fbr-granular-polysilicon-the-silane-route-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "6-grades-electronic-grade-vs-solar-grade",
+      "title": "The grade follows the device requirement",
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "6. Grades: Electronic Grade vs Solar Grade"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Replaced a focusing-lens solar-cell symbol and unrelated stacked-memory symbol with illuminated cell and transistor; qualification uses an instrument.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m01-6-grades-electronic-grade-vs-solar-grade-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m01-6-grades-electronic-grade-vs-solar-grade-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m01-6-grades-electronic-grade-vs-solar-grade-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "7-how-purity-is-measured",
+      "title": "Build a purity picture from complementary measurements",
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "7. How Purity Is Measured"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Replaced probe-as-chemical-analysis, transistor-as-electrical-measurement and single-crystal-as-polysilicon with assay-specific and polycrystalline glyphs. Phone convergence no longer squeezes the result into a narrow side column.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m01-7-how-purity-is-measured-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m01-7-how-purity-is-measured-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m01-7-how-purity-is-measured-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "8-how-much-polysilicon-a-wafer-needs",
+      "title": "Charged silicon exceeds shipped wafer mass",
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "8. How Much Polysilicon a Wafer Needs"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Polysilicon feed and cropped cylinder now have distinct representations.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m01-8-how-much-polysilicon-a-wafer-needs-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m01-8-how-much-polysilicon-a-wafer-needs-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m01-8-how-much-polysilicon-a-wafer-needs-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "9-economics-the-china-boom-and-xinjiang",
+      "title": "Capacity and price move on different clocks",
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "9. Economics, the China Boom, and Xinjiang"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": false,
+      "sceneChanged": false,
+      "corrected": false,
+      "finding": "Retained qualitative economics cycle and explicit feedback wording; icons remain broad category symbols, not physical process models.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m01-9-economics-the-china-boom-and-xinjiang-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m01-9-economics-the-china-boom-and-xinjiang-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m01-9-economics-the-china-boom-and-xinjiang-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m01",
+      "section": "10-the-other-ultra-pure-feedstocks-crucibles-and-graphite",
+      "title": "The hot zone is another contamination path",
+      "source": {
+        "file": "course/modules/01-sand-to-polysilicon.md",
+        "heading": "10. The Other Ultra-Pure Feedstocks: Crucibles and Graphite"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Rock-as-crucible and arc-furnace-as-CZ-melt replaced by connected melt/quartz/graphite scene and distinct contamination pathways.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m01-10-the-other-ultra-pure-feedstocks-crucibles-and-graphite-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m01-10-the-other-ultra-pure-feedstocks-crucibles-and-graphite-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m01-10-the-other-ultra-pure-feedstocks-crucibles-and-graphite-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "anatomy-of-a-300-mm-cz-puller",
+      "title": "A seed, a melt and a controlled hot zone",
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Anatomy of a 300 mm CZ Puller"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": false,
+      "sceneChanged": false,
+      "corrected": false,
+      "finding": "Retained schematic CZ puller; this is a component overview, not complete gas plumbing or thermal design.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m02-anatomy-of-a-300-mm-cz-puller-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m02-anatomy-of-a-300-mm-cz-puller-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m02-anatomy-of-a-300-mm-cz-puller-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "point-defects-v-g-and-the-voronkov-theory",
+      "title": "Growth rate and thermal gradient change the defect balance",
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Point Defects, v/G, and the Voronkov Theory"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Generic crystal/heat/rock symbols did not depict point defects. Added missing lattice site and extra silicon between sites; no universal v/G threshold asserted.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m02-point-defects-v-g-and-the-voronkov-theory-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m02-point-defects-v-g-and-the-voronkov-theory-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m02-point-defects-v-g-and-the-voronkov-theory-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "oxygen-and-carbon",
+      "title": "Trace the impurity path through the hot zone",
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Oxygen and Carbon"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Replaced generic input convergence with the same source-grounded hot-zone contamination scene used in m01.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m02-oxygen-and-carbon-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m02-oxygen-and-carbon-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m02-oxygen-and-carbon-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "magnetic-czochralski",
+      "title": "A magnetic field calms an electrically conducting melt",
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Magnetic Czochralski"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Electrical interconnect was wrongly used for a magnetic field. Replaced with directional field lines; puller symbols remain an overview of the melt/interface.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m02-magnetic-czochralski-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m02-magnetic-czochralski-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m02-magnetic-czochralski-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "the-heavy-crystal-problem",
+      "title": "A massive body hangs through a narrow neck",
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "The Heavy-Crystal Problem"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Disconnected generic icons showed no narrow neck. Connected shaft, seed, narrow neck, shoulder/body and weight direction now convey the load path.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m02-the-heavy-crystal-problem-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m02-the-heavy-crystal-problem-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m02-the-heavy-crystal-problem-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m02",
+      "section": "float-zone",
+      "title": "Float zone removes the crucible from the melt",
+      "source": {
+        "file": "course/modules/02-crystal-growth.md",
+        "heading": "Float Zone"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Disconnected rod/coil icons obscured the unsupported molten zone. Connected polycrystal/liquid/single-crystal section with noncontact coil sections and relative zone motion.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m02-float-zone-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m02-float-zone-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m02-float-zone-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "cylindrical-grinding-to-diameter",
+      "title": "Grind beneath the deepest surface ripple",
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Cylindrical Grinding to Diameter"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Rock labelled grinding wheel and identical before/after ingots replaced by rough body, abrasive wheel and sized cylinder.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m03-cylindrical-grinding-to-diameter-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m03-cylindrical-grinding-to-diameter-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m03-cylindrical-grinding-to-diameter-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "multi-wire-slicing",
+      "title": "One moving wire becomes a parallel cutting web",
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Multi-Wire Slicing"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Electrical circuit used for wire web and rock used for kerf replaced by parallel web and particulate loss.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m03-multi-wire-slicing-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m03-multi-wire-slicing-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m03-multi-wire-slicing-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "lapping-and-double-disk-grinding",
+      "title": "Lapping: work both wafer faces together",
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Lapping and Double-Disk Grinding"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Equal-width slabs omitted the carrier and conflated lapping with DDG. A lapping-specific section shows thin carrier, wafer, opposed plates and abrasive interfaces; caption distinguishes DDG.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m03-lapping-and-double-disk-grinding-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m03-lapping-and-double-disk-grinding-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m03-lapping-and-double-disk-grinding-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "etching-to-remove-damage",
+      "title": "Chemical removal must reach below the damage",
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Etching to Remove Damage"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Different-colored layers contradicted caption saying damage is not a separate film. Before/after sections now show cracks in one silicon material and removal below the damage.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m03-etching-to-remove-damage-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m03-etching-to-remove-damage-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m03-etching-to-remove-damage-375-dark-after.png"
+      }
+    },
+    {
+      "lesson": "m03",
+      "section": "polishing-i-double-side-polishing-dsp",
+      "title": "CMP alternates surface chemistry and mechanical removal",
+      "source": {
+        "file": "course/modules/03-ingot-to-wafer.md",
+        "heading": "Polishing I: Double-Side Polishing (DSP)"
+      },
+      "sourceExcerptReviewed": true,
+      "beforeReview": "Full-size desktop-light rendering; source mechanism comparison.",
+      "afterReview": "Desktop-light and phone-dark full-size review. Retained unchanged desktop drawings were compared against the before capture. Root independently reviewed charge-bed, hot-zone, grade comparison, phone assay convergence, float zone, heavy crystal, lapping, and damage removal.",
+      "dataChanged": true,
+      "sceneChanged": false,
+      "corrected": true,
+      "finding": "Rock labelled pad/particles replaced by a contacting pad-abrasive-surface section; fresh wafer no longer carries a die-grid motif.",
+      "screenshots": {
+        "before": "/tmp/deep-r4/m03-polishing-i-double-side-polishing-dsp-1000-light-before.png",
+        "afterDesktop": "/tmp/deep-r4/m03-polishing-i-double-side-polishing-dsp-1000-light-after.png",
+        "afterPhone": "/tmp/deep-r4/m03-polishing-i-double-side-polishing-dsp-375-dark-after.png"
+      }
+    }
+  ]
+}

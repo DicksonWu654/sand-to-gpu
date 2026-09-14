@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-14T00:23:16.202Z",
+  "checkedAt": "2026-09-14T01:03:10.621Z",
   "scope": "Rendered typography bounds, label collisions, and relationship-label layout. Scientific correctness is covered only by the separate manual audit ledger.",
   "cases": [
     {

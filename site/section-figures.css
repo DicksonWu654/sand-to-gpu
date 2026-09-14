@@ -22,3 +22,14 @@
 @media(max-width:600px){.sf-connections>li{grid-template-columns:minmax(0,1fr) 78px minmax(0,1fr);gap:.35rem}.sf-endpoint{font-size:.75rem}.sf-endpoint>svg{width:65px;height:62px}.sf-connection{font-size:.7rem}.section-figure .sf-scene-key{grid-template-columns:1fr;font-size:.79rem}.sf-callout text{font-size:30px}}
 @media(max-width:600px){.sf-connections>li{grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr);gap:.65rem .4rem}.sf-connections .sf-connection{display:contents}.sf-connection>span{grid-column:1/-1;grid-row:1;font:500 .78rem/1.4 var(--sans,system-ui);text-align:center;color:var(--text-muted,var(--muted))}.sf-connection>svg{grid-column:2;grid-row:2;margin:auto}.sf-endpoint{grid-row:2}.sf-endpoint:first-child{grid-column:1}.sf-endpoint:last-child{grid-column:3}}
 @media(max-width:600px){.sf-network .sf-label{font-size:30px}}
+/* Carbon is a distinct material, not a parent fill that child shapes can override. */
+.sf-carbon{fill:color-mix(in srgb,var(--sf-ink) 72%,var(--sf-paper));stroke:var(--sf-ink);stroke-width:1.8;stroke-linejoin:round}
+/* A convergence remains readable on a phone: all inputs feed one full-width result. */
+@media(max-width:600px){
+ .sf-convergence{grid-template-columns:minmax(0,1fr);gap:1rem}
+ .sf-branch-inputs .sf-unit,.sf-branch-output .sf-unit{display:grid;grid-template-columns:70px minmax(0,1fr);gap:.85rem;align-items:center;text-align:left}
+ .sf-branch-inputs .sf-unit>svg,.sf-branch-output .sf-unit>svg{width:70px;height:68px;margin:0}
+ .sf-branch-output .sf-unit-copy{margin:0;max-width:none}
+ .sf-merge{height:12px;width:calc(100% - 52px);margin:0 auto;border:1px solid var(--line);border-top:0}
+ .sf-merge span{right:calc(50% - .5em);top:.1em;transform:rotate(90deg)}
+}

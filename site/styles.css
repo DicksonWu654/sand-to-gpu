@@ -364,8 +364,8 @@ main {
 }
 
 .curriculum-label {
-  font: 9px var(--mono);
-  letter-spacing: .16em;
+  font: 10px var(--mono);
+  letter-spacing: .12em;
   color: var(--muted);
   padding: 0 10px 12px;
 }
@@ -449,8 +449,8 @@ main {
   border-radius: 4px;
   text-decoration: none;
   color: var(--muted);
-  font-size: 12px;
-  line-height: 1.38;
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .sidebar a.mod:hover {
@@ -617,14 +617,22 @@ main {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 12px 0;
+  min-height: 44px;
+  padding: 12px 8px;
   color: var(--muted);
   text-decoration: none;
-  font: 10px var(--sans);
+  font: 12px var(--sans);
+  border-radius: 3px;
+}
+
+.stage-ribbon a:hover, .stage-ribbon a:focus-visible {
+  background: var(--panel2);
+  color: var(--ink);
 }
 
 .stage-ribbon a.current {
   color: var(--accent);
+  background: color-mix(in srgb, var(--accent-soft) 55%, transparent);
 }
 
 .stage-ribbon a.current:after {
@@ -648,8 +656,8 @@ main {
   align-items: center;
   gap: 20px;
   border-bottom: 1px solid var(--line);
-  padding: 0 0 20px;
-  margin-bottom: 36px;
+  padding: 0 0 12px;
+  margin-bottom: 32px;
   font: 11px var(--sans);
   color: var(--muted);
 }
@@ -663,6 +671,7 @@ main {
   display: flex;
   align-items: center;
   gap: 25px;
+  min-height: 44px;
   color: var(--ink);
   list-style: none;
 }
@@ -673,7 +682,7 @@ main {
 
 .chapter-outline nav {
   position: absolute;
-  top: 30px;
+  top: 46px;
   left: 0;
   right: 0;
   max-height: 60vh;
@@ -693,6 +702,7 @@ main {
 }
 
 .visual-jump {
+  min-height: 44px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -875,6 +885,14 @@ main {
   color: var(--muted);
 }
 
+.prose tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--panel2) 35%, transparent);
+}
+
+.prose tbody tr:hover {
+  background: color-mix(in srgb, var(--si) 7%, var(--panel));
+}
+
 .prose tr:last-child td {
   border-bottom: 0;
 }
@@ -937,15 +955,15 @@ main {
 }
 
 .rail h5 {
-  font: 9px var(--mono);
-  letter-spacing: .08em;
+  font: 10px var(--mono);
+  letter-spacing: .06em;
   text-transform: uppercase;
   margin: 0;
   color: var(--muted);
 }
 
 .rail-top>span {
-  font: 9px var(--mono);
+  font: 10px var(--mono);
   color: var(--muted);
 }
 
@@ -954,13 +972,13 @@ main {
   gap: 8px;
   padding: 7px 4px;
   text-decoration: none;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
   color: var(--muted);
 }
 
 .toc-number {
-  font: 9px/1.8 var(--mono);
+  font: 10px/1.8 var(--mono);
   opacity: .65;
   flex: none;
 }
@@ -971,8 +989,8 @@ main {
 
 .toc .d3 {
   display: none;
-  padding: 5px 0 5px 26px;
-  font-size: 10px;
+  padding: 6px 0 6px 26px;
+  font-size: 11px;
   border-left: 1px solid var(--line);
   margin-left: 4px;
 }
@@ -999,13 +1017,13 @@ main {
 .chapter-plate {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0,1fr) 220px;
+  grid-template-columns: minmax(0,1fr) minmax(220px,38%);
   align-items: center;
   min-height: 205px;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 24px 30px 42px;
+  padding: 24px 30px 0;
   margin: 4px 0 22px;
   background: radial-gradient(ellipse at 80% 40%, color-mix(in srgb, var(--si) 11%, transparent), transparent 65%), var(--panel);
 }
@@ -1020,16 +1038,16 @@ main {
   mask-image: linear-gradient(90deg, transparent, #000);
 }
 .plate-copy { position: relative; z-index: 1; }
-.plate-index { display: block; color: var(--accent); font: 9px var(--mono); letter-spacing: .12em; }
-.plate-copy strong { display: block; max-width: 18ch; font: 500 25px/1.13 var(--sans); letter-spacing: -.035em; margin: 15px 0 12px; }
-.plate-path { display: block; color: var(--muted); font: 10px/1.6 var(--mono); }
-.plate-drawing { position: relative; width: 220px; height: 152px; }
+.plate-index { display: block; color: var(--accent); font: 10px var(--mono); letter-spacing: .12em; }
+.plate-copy strong { display: block; max-width: 18ch; font: 500 clamp(25px,2.35vw,34px)/1.13 var(--sans); letter-spacing: -.035em; margin: 15px 0 12px; }
+.plate-path { display: block; color: var(--muted); font: 11px/1.7 var(--mono); }
+.plate-drawing { position: relative; justify-self: center; width: 220px; height: 160px; }
 .plate-drawing:before { content: ""; position: absolute; width: 155px; height: 155px; border: 1px solid var(--line); border-radius: 50%; top: -1px; left: 32px; }
 .plate-drawing .atlas-object { position: relative; height: 160px; filter: drop-shadow(0 7px 6px #23322710); }
 .plate-cross { position: absolute; color: var(--line2); font: 16px var(--mono); }
 .cross-a { left: 4px; top: 0; }
 .cross-b { right: 4px; bottom: 4px; }
-.plate-label { position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: space-between; gap: 12px; padding: 10px 15px; border-top: 1px solid var(--line); color: var(--si); font: 10px var(--mono); }
+.plate-label { position: relative; grid-column: 1 / -1; margin: 20px -30px 0; background: color-mix(in srgb, var(--panel) 82%, transparent); display: flex; justify-content: space-between; gap: 12px; padding: 10px 15px; border-top: 1px solid var(--line); color: var(--si); font: 10px var(--mono); }
 .plate-label small { color: var(--muted); font-size: 10px; }
 .prose > p:first-child { font-size: 1.08em; }
 .prose > p:first-child:first-letter { float: left; color: var(--accent); font: 400 3.6em/.84 var(--serif); padding: .08em .13em 0 0; }
@@ -1727,6 +1745,9 @@ input[type=checkbox] {
   font: 15px var(--mono);
 }
 .journey-stage:hover .atlas-object { transform: translateY(-5px); }
+.journey-stage:focus-visible { outline-offset: -4px; background: var(--panel2); }
+.path-option:focus-visible, .mod-card:focus-visible { outline-offset: 4px; border-color: var(--accent); }
+.atlas-journey .atlas-object { stroke-width: 1.7; }
 .journey-stage strong {
   display: block;
   font-size: 15px;
@@ -2169,8 +2190,8 @@ input[type=checkbox] {
   }
 
   .topbar {
-    padding: 0 14px;
-    gap: 10px;
+    padding: 0 12px;
+    gap: 6px;
   }
 
   .brand {
@@ -2183,13 +2204,14 @@ input[type=checkbox] {
   }
 
   .search {
-    width: 40px;
-    min-width: 40px;
-    flex: 0 0 40px;
+    width: 44px;
+    min-width: 44px;
+    flex: 0 0 44px;
     margin-left: auto;
   }
 
   .search input {
+    height: 44px;
     padding-left: 30px;
     padding-right: 0;
     color: transparent;
@@ -2201,7 +2223,8 @@ input[type=checkbox] {
   }
 
   .search>svg {
-    left: 13px;
+    left: 15px;
+    top: 15px;
   }
 
   .search:focus-within {
@@ -2233,13 +2256,13 @@ input[type=checkbox] {
   }
 
   .icon-btn {
-    width: 32px;
-    height: 32px;
+    width: 44px;
+    height: 44px;
   }
 
   .menu-btn {
     border: 0;
-    width: 24px;
+    width: 44px;
   }
 
   .article {
@@ -2303,15 +2326,15 @@ input[type=checkbox] {
   }
 
   .stage-ribbon a {
-    font-size: 9px;
+    font-size: 10px;
     gap: 4px;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px 0;
+    padding: 10px 4px;
   }
 
   .stage-node {
-    font-size: 8px;
+    font-size: 9px;
   }
 
   .stage-ribbon a.current:after {
@@ -2359,6 +2382,23 @@ input[type=checkbox] {
 
   .prose th,.prose td {
     padding: 10px;
+  }
+
+  /* Keep explanatory columns readable instead of wrapping one word per line. */
+  .prose > .table-scroll > table:has(th:nth-child(4)) {
+    min-width: 560px;
+  }
+
+  .prose > .table-scroll:has(th:nth-child(4))::before {
+    content: "Scroll horizontally to read all columns →";
+    display: block;
+    position: sticky;
+    left: 0;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    background: var(--panel2);
+    color: var(--muted);
+    font: 11px/1.5 var(--sans);
   }
 
   .widget-head {
@@ -2599,15 +2639,15 @@ input[type=checkbox] {
 
 @media (max-width: 560px) {
   .chapter-intro { display: block; }
-  .chapter-plate { grid-template-columns: minmax(0,1fr) 132px; min-height: 184px; padding: 18px 15px 65px; margin-top: 4px; }
-  .plate-copy strong { font-size: 20px; margin: 12px 0 9px; max-width: 12ch; }
-  .plate-index { font-size: 9px; }
+  .chapter-plate { grid-template-columns: minmax(0,1fr) 132px; min-height: 184px; padding: 18px 15px 0; margin-top: 4px; }
+  .plate-copy strong { font-size: 21px; margin: 12px 0 9px; max-width: 12ch; }
+  .plate-index { font-size: 10px; }
   .plate-path { font-size: 10px; }
   .plate-drawing { width: 132px; height: 120px; }
   .plate-drawing .atlas-object { height: 120px; }
   .plate-drawing:before { width: 110px; height: 110px; left: 11px; top: 5px; }
   .plate-cross { display: none; }
-  .plate-label { display: grid; gap: 3px; font-size: 10px; padding: 9px 12px; }
+  .plate-label { display: grid; gap: 3px; margin: 18px -15px 0; font-size: 10px; padding: 9px 12px; }
   .plate-label small { font-size: 10px; }
   .journey-stage:nth-child(3):after { display: none; }
   .journey-stage:nth-child(4):after { top: 42%; }

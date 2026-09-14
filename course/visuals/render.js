@@ -20,13 +20,25 @@ function glyph(name, variant) {
   const domain=(xs,ys)=>`<path d="M${xs[0]} ${ys[0]}H${xs[2]}M${xs[0]} ${ys[1]}H${xs[2]}M${xs[0]} ${ys[2]}H${xs[2]}M${xs[0]} ${ys[0]}V${ys[2]}M${xs[1]} ${ys[0]}V${ys[2]}M${xs[2]} ${ys[0]}V${ys[2]}" class="sf-fine"/>`+xs.flatMap(x=>ys.map(y=>`<circle cx="${x}" cy="${y}" r="3"/>`)).join('');
   return domain([-38,-25,-12],[-25,0,25])+`<g transform="rotate(24 25 0)">${domain([12,25,38],[-25,0,25])}</g><path d="M0-39-4-20 3-4-3 16 2 39" class="sf-hot"/>`;
  }
- if(['lattice','dopant','impurity'].includes(variant)) {
+ if(['lattice','dopant','impurity','vacancy','interstitial'].includes(variant)) {
   let out='<path d="M-28-28H28M-28 0H28M-28 28H28M-28-28V28M0-28V28M28-28V28" class="sf-fine"/>';
-  for(const x of [-28,0,28])for(const y of [-28,0,28])out+=`<circle cx="${x}" cy="${y}" r="${x===0&&y===0&&variant==='dopant'?9:5}" class="${x===0&&y===0&&variant==='dopant'?'sf-accent':''}"/>`;
+  for(const x of [-28,0,28])for(const y of [-28,0,28]){if(variant==='vacancy'&&x===0&&y===0)continue;out+=`<circle cx="${x}" cy="${y}" r="${x===0&&y===0&&variant==='dopant'?9:5}" class="${x===0&&y===0&&variant==='dopant'?'sf-accent':''}"/>`;}
+  if(variant==='vacancy')out+='<circle cx="0" cy="0" r="7" class="sf-fine" style="fill:var(--sf-paper)" stroke-dasharray="2 3"/>';
+  if(variant==='interstitial')out+='<circle cx="14" cy="14" r="5" class="sf-accent"/>';
   if(variant==='impurity')out+='<circle cx="14" cy="14" r="8" class="sf-accent"/><path d="M10 10 18 18M18 10 10 18" class="sf-hot"/>';
   return out;
  }
  const variants={
+ 'solar-cell':'<path d="M-39 0H39V29H-39Z" class="sf-accent"/><path d="M-26 0V29M-13 0V29M0 0V29M13 0V29M26 0V29M-39 14H39" class="sf-fine"/><path d="M-24-36-10-9M-18-12-10-9-8-18M0-36 14-9M6-12 14-9 16-18M24-36 38-9M30-12 38-9 40-18" class="sf-hot"/>',
+ 'absorption':'<path d="M-9-27H9V27H-9Z" class="sf-accent"/><path d="M-44 0H-12M-21-7-12 0-21 7M12 0H43M34-7 43 0 34 7" class="sf-hot"/><path d="M-2-19V19M3-19V19" class="sf-fine"/>',
+ 'four-point':'<path d="M-40 13H40V29H-40Z"/><path d="M-30-14V13M-10-14V13M10-14V13M30-14V13M-30-14V-29H30V-14M-10-14V-20H10V-14"/><circle cx="0" cy="-29" r="7" class="sf-accent"/>',
+ 'magnetic-field':'<path d="M-42-32H-29V32H-42ZM29-32H42V32H29Z"/><path d="M-24-21H24M16-27 24-21 16-15M-24 0H24M16-6 24 0 16 6M-24 21H24M16 15 24 21 16 27" class="sf-hot"/>',
+ 'grinding-wheel':'<circle cx="0" cy="0" r="33"/><circle cx="0" cy="0" r="24" class="sf-fine"/><circle cx="0" cy="0" r="8" class="sf-accent"/><path d="M-22-24-18-19M0-33V-27M22-24 18-19M33 0H27M22 24 18 19M0 33V27M-22 24-18 19M-33 0H-27" class="sf-hot"/>',
+ 'wire-web':'<path d="M-43-31H43V-20H-43ZM-43 20H43V31H-43Z"/><path d="M-33-28V28Q-27 37-21 28V-28Q-15-37-9-28V28Q-3 37 3 28V-28Q9-37 15-28V28Q21 37 27 28V-28Q33-37 39-28V28" class="sf-hot"/>',
+ 'silicon-fines':'<circle cx="-24" cy="14" r="3"/><circle cx="-10" cy="-3" r="2"/><circle cx="7" cy="20" r="3"/><circle cx="25" cy="5" r="2"/><circle cx="-27" cy="-19" r="2"/><circle cx="8" cy="-17" r="3"/><circle cx="32" cy="-23" r="2"/><path d="M-39 33H39" class="sf-fine"/>',
+ 'polishing-pad':'<path d="M-40-26H40V-1H-40ZM-40 13H40V33H-40Z"/><path d="M-33-17H33" class="sf-fine"/><circle cx="-26" cy="6" r="7" class="sf-accent"/><circle cx="-1" cy="6" r="7" class="sf-accent"/><circle cx="24" cy="6" r="7" class="sf-accent"/><path d="M-37 13H37" class="sf-hot"/>',
+ 'rough-cylinder':'<path d="M-29-28-24-16-31-4-27 10-30 27H30L26 12 32 0 26-13 30-28Z"/><ellipse cx="0" cy="-28" rx="30" ry="8"/><path d="M-19-19V21M20-19V21" class="sf-fine"/>',
+ 'cylinder':'<path d="M-28-27V27Q0 42 28 27V-27Z"/><ellipse cx="0" cy="-27" rx="28" ry="9"/><path d="M-17-15V24M18-15V24" class="sf-fine"/>',
  'ingot-slice':'<path d="M-32-25H29Q44 0 29 25H-32Z"/><ellipse cx="-32" cy="0" rx="10" ry="25"/><path d="M-17-25Q3 0-17 25M-4-25Q16 0-4 25M9-25Q29 0 9 25M22-25Q42 0 22 25" class="sf-fine"/>',
  'notch':'<path d="M-5 35A36 36 0 1 1 5 35L0 27Z"/>',
  'sharp-edge':'<path d="M-40-21H35V21H-40"/><path d="M35-21 44-30M35 21 44 30" class="sf-fine"/>',

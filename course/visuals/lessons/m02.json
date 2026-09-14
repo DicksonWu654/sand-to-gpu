@@ -130,22 +130,25 @@
     "section": "point-defects-v-g-and-the-voronkov-theory",
     "family": "compare",
     "title": "Growth rate and thermal gradient change the defect balance",
-    "caption": "The v/G framework describes competing vacancy and interstitial populations; the figure does not define a universal operating threshold. Schematic, not to scale.",
+    "caption": "A vacancy is a missing atom; a self-interstitial is extra silicon between lattice sites. The v/G framework describes their competing populations, not a universal operating threshold. Simplified lattice projection, not to scale.",
     "nodes": [
       {
         "glyph": "crystal",
         "label": "Vacancy-rich regime",
-        "detail": "Missing lattice atoms can cluster during cooling."
+        "detail": "Missing lattice atoms can cluster during cooling.",
+        "variant": "vacancy"
       },
       {
-        "glyph": "heat",
-        "label": "Balance at the interface",
-        "detail": "Pulling rate and temperature gradient act together."
+        "glyph": "crystal",
+        "label": "Competing populations",
+        "detail": "Growth rate and temperature gradient set which point defects survive.",
+        "variant": "lattice"
       },
       {
         "glyph": "material",
         "label": "Interstitial-rich regime",
-        "detail": "Extra silicon atoms can also form extended defects."
+        "detail": "Extra silicon atoms can also form extended defects.",
+        "variant": "interstitial"
       }
     ],
     "edges": [],
@@ -185,7 +188,8 @@
     "source": {
       "file": "course/modules/02-crystal-growth.md",
       "heading": "Oxygen and Carbon"
-    }
+    },
+    "scene": "hot-zone"
   },
   {
     "section": "magnetic-czochralski",
@@ -202,12 +206,14 @@
       {
         "glyph": "wires",
         "label": "Applied magnetic field",
-        "detail": "Electromagnetic forces oppose parts of the flow."
+        "detail": "Electromagnetic forces oppose parts of the flow.",
+        "variant": "magnetic-field"
       },
       {
         "glyph": "crystal",
         "label": "Growth interface",
-        "detail": "A steadier environment helps control crystal uniformity."
+        "detail": "A steadier environment helps control crystal uniformity.",
+        "variant": "cz-puller"
       }
     ],
     "edges": [],
@@ -275,7 +281,8 @@
     "source": {
       "file": "course/modules/02-crystal-growth.md",
       "heading": "The Heavy-Crystal Problem"
-    }
+    },
+    "scene": "suspended-crystal"
   },
   {
     "section": "yield-what-gets-thrown-away",
@@ -337,7 +344,8 @@
     "source": {
       "file": "course/modules/02-crystal-growth.md",
       "heading": "Float Zone"
-    }
+    },
+    "scene": "float-zone-section"
   },
   {
     "section": "450-mm-the-diameter-that-did-not-happen",
