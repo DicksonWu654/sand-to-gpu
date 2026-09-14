@@ -1,0 +1,119 @@
+{
+  "status": "passed",
+  "timestamp": "2026-09-14T15:32:00.124Z",
+  "baseURL": "http://127.0.0.1:8790",
+  "expectedStageTargets": {
+    "survey": [
+      "#/s/02",
+      "#/s/03",
+      "#/s/06",
+      "#/s/09",
+      "#/s/10"
+    ],
+    "deep": [
+      "#/m/01",
+      "#/m/05",
+      "#/m/11",
+      "#/m/16",
+      "#/m/19"
+    ]
+  },
+  "expectedPhaseStates": {
+    "survey": [
+      null,
+      0,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      4
+    ],
+    "deep": [
+      null,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      4,
+      null,
+      null
+    ]
+  },
+  "results": [
+    {
+      "name": "Pointer stage destinations survey 1280 light",
+      "status": "passed",
+      "detail": {
+        "clicks": [
+          {
+            "destination": "#/s/02",
+            "currentStage": 0,
+            "progress": "20% complete"
+          },
+          {
+            "destination": "#/s/03",
+            "currentStage": 1,
+            "progress": "20% complete"
+          },
+          {
+            "destination": "#/s/06",
+            "currentStage": 2,
+            "progress": "20% complete"
+          },
+          {
+            "destination": "#/s/09",
+            "currentStage": 3,
+            "progress": "20% complete"
+          },
+          {
+            "destination": "#/s/10",
+            "currentStage": 4,
+            "progress": "20% complete"
+          }
+        ],
+        "rect": {
+          "left": 256,
+          "right": 1044,
+          "scroll": 788,
+          "client": 788
+        }
+      }
+    },
+    {
+      "name": "Survey completion updates immediately and remains separate from deep-dive progress",
+      "status": "passed",
+      "detail": {
+        "surveyBefore": 20,
+        "surveyAfter": 30,
+        "deep": 5
+      }
+    }
+  ],
+  "pageErrors": [],
+  "sourceHash": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
+  "aiContentHash": "29c1d33a9497270b17ca1dd4957433da88169f5230fe9342a47e1980d6f2c34b",
+  "screenshotsDirectory": "/tmp/sand-to-gpu-reader-cleanup-live",
+  "limitations": [
+    "Real pointer navigation is tested with reduced motion for deterministic coordinates.",
+    "Seeded progress belongs to disposable Chromium storage, not user progress.",
+    "No narration generation, clipboard action or external AI request is required for these navigation checks."
+  ],
+  "visualReview": "Single live screenshot inspected; stagebar/control layout remains clear."
+}

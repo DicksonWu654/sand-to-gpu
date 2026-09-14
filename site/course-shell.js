@@ -2,11 +2,11 @@
 (function () {
   'use strict';
   const stages = [
-    { name: 'Make the material', short: 'Material', detail: 'Quartz → single crystal', href: '#/m/01', icon: 'crystal' },
-    { name: 'Pattern the wafer', short: 'Wafer', detail: 'Light, chemistry & precision', href: '#/m/05', icon: 'wafer' },
-    { name: 'Build the devices', short: 'Devices', detail: 'Transistors → circuits', href: '#/m/11', icon: 'chip' },
-    { name: 'Connect the pieces', short: 'Package', detail: 'Logic, memory & interconnect', href: '#/m/17', icon: 'package' },
-    { name: 'Bring it to life', short: 'System', detail: 'A chip becomes a computer', href: '#/m/19', icon: 'rack' },
+    { name: 'Make the material', short: 'Material', detail: 'Quartz → single crystal', href: '#/m/01', surveyHref: '#/s/02', icon: 'crystal' },
+    { name: 'Pattern the wafer', short: 'Wafer', detail: 'Light, chemistry & precision', href: '#/m/05', surveyHref: '#/s/03', icon: 'wafer' },
+    { name: 'Build the devices', short: 'Devices', detail: 'Transistors → circuits', href: '#/m/11', surveyHref: '#/s/06', icon: 'chip' },
+    { name: 'Connect the pieces', short: 'Package', detail: 'Logic, memory & interconnect', href: '#/m/16', surveyHref: '#/s/09', icon: 'package' },
+    { name: 'Bring it to life', short: 'System', detail: 'A chip becomes a computer', href: '#/m/19', surveyHref: '#/s/10', icon: 'rack' },
   ];
   const descriptions = [
     'Follow the connections between the material, the machines and the finished computer.',
@@ -76,8 +76,10 @@
     return `<svg class="atlas-object" viewBox="0 0 240 180" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true">${drawing}</svg>`;
   }
   function stageFor(n, survey) {
-    if (survey) return [0,0,1,1,1,2,2,2,3,4][n-1] ?? 0;
-    return n <= 4 ? 0 : n <= 10 ? 1 : n <= 14 ? 2 : n <= 18 ? 3 : 4;
+    // Overviews and industry/reference chapters cover several stages, so mark none.
+    if (survey) return [null,0,1,1,1,2,2,2,3,4][n-1] ?? null;
+    if (n < 1 || n > 19) return null;
+    return n <= 4 ? 0 : n <= 10 ? 1 : n <= 15 ? 2 : n <= 18 ? 3 : 4;
   }
   const signatures = [
     ['package', 'A system of systems', 'Material · device · system', 'Follow the connections'],
@@ -106,14 +108,14 @@
   const surveySignature = [0,1,5,7,6,11,13,15,17,19];
   function plate(n, survey) {
     const spec = signatures[survey ? surveySignature[n-1] : n] || signatures[0];
-    return `<div class="chapter-plate"><div class="plate-copy"><span class="plate-index">FIELD NOTE / ${survey?'S'+String(n).padStart(2,'0'):String(n).padStart(2,'0')}</span><strong>${spec[1]}</strong><span class="plate-path">${spec[2]}</span></div><div class="plate-drawing">${icon(spec[0])}<span class="plate-cross cross-a" aria-hidden="true">+</span><span class="plate-cross cross-b" aria-hidden="true">+</span></div><span class="plate-label">${spec[3]}<small>Conceptual schematic · not to scale</small></span></div>`;
+    return `<div class="chapter-plate"><div class="plate-copy"><span class="plate-index">FIELD NOTE / ${survey?'S'+String(n).padStart(2,'0'):String(n).padStart(2,'0')}</span><strong>${spec[1]}</strong><span class="plate-path">${spec[2]}</span></div><div class="plate-drawing">${icon(spec[0])}<span class="plate-cross cross-a" aria-hidden="true">+</span><span class="plate-cross cross-b" aria-hidden="true">+</span></div><span class="plate-label">${spec[3]}</span></div>`;
   }
   function journey() {
     return `<div class="atlas-journey" aria-label="Five connected stages from raw silicon to a computing system">${stages.map((s,i)=>`<a class="journey-stage" href="${s.href}"><span class="journey-number">0${i+1}<span aria-hidden="true">↗</span></span>${icon(s.icon)}<strong>${s.name}</strong><span class="journey-detail">${s.detail}</span></a>`).join('')}</div>`;
   }
   function ribbon(n, survey) {
     const selected=stageFor(n,survey);
-    return `<div class="stage-ribbon" aria-label="Position in the manufacturing journey">${stages.map((s,i)=>`<a href="${s.href}" class="${selected===i?'current':''}"${selected===i?' aria-current="step"':''}><span class="stage-node" aria-hidden="true">${String(i+1).padStart(2,'0')}</span><span>${s.short}</span></a>`).join('')}</div>`;
+    return `<div class="stage-ribbon" aria-label="Position in the manufacturing journey">${stages.map((s,i)=>`<a href="${survey?s.surveyHref:s.href}" title="${s.name}" aria-label="${s.short}: ${s.name} (${survey?'survey':'deep dive'})" class="${selected===i?'current':''}"${selected===i?' aria-current="step"':''}><span class="stage-node" aria-hidden="true">${String(i+1).padStart(2,'0')}</span><span>${s.short}</span></a>`).join('')}</div>`;
   }
   window.CourseShell = { stages, icon, plate, journey, ribbon, stageFor, description(n, survey) { return (survey ? surveyDescriptions[n-1] : descriptions[n]) || ''; } };
 })();

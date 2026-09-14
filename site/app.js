@@ -84,14 +84,22 @@
   // ---------- progress ----------
   function passed(n) { const q = state.quiz[n]; return q && q.total && q.score / q.total >= 2 / 3; }
   function progressPct() {
+    if (state.track === 'survey') return survey.length ? Math.round(100 * survey.filter(m => state.sread[m.n]).length / survey.length) : 0;
     let pts = 0; mods.forEach(m => { if (state.read[m.n]) pts += 0.5; if (passed(m.n)) pts += 0.5; });
     return Math.round(100 * pts / mods.length);
   }
   function renderProgress() {
     const p = progressPct();
+    const isSurvey = state.track === 'survey';
+    const indicator = $('.progress-pill');
+    indicator.title = isSurvey ? 'Survey completion: each chapter counts when read to the end.' : 'Deep-dive completion: half credit for reading a module to the end, half for passing its quiz.';
+    indicator.setAttribute('role', 'progressbar');
+    indicator.setAttribute('aria-label', isSurvey ? 'Survey completion' : 'Deep-dive completion');
+    indicator.setAttribute('aria-valuemin', '0'); indicator.setAttribute('aria-valuemax', '100'); indicator.setAttribute('aria-valuenow', String(p));
     $('#progress-bar i').style.width = p + '%';
     $('#progress-txt').textContent = p + '% complete';
     $$('.sidebar a.mod[data-n]').forEach(a => { const n = +a.dataset.n; a.classList.toggle('read', !!state.read[n]); a.classList.toggle('passed', !!passed(n)); });
+    $$('.sidebar a.mod[data-s]').forEach(a => a.classList.toggle('read', !!state.sread[+a.dataset.s]));
   }
 
   // ---------- sidebar ----------
@@ -109,7 +117,7 @@
     }
     if (state.track === 'survey' && survey.length) {
       const box = ctxBase.h('div', { class: 'part' });
-      box.append(ctxBase.h('div', { class: 'part-h' }, ctxBase.h('b', null, 'Survey'), 'The whole chain in ' + survey.length + ' chapters'));
+      box.append(ctxBase.h('div', { class: 'part-h' }, ctxBase.h('b', null, 'Survey')));
       for (const s of survey) {
         box.append(ctxBase.h('a', { class: 'mod' + (state.sread[s.n] ? ' read' : ''), href: '#/s/' + pad(s.n), 'data-s': s.n },
           ctxBase.h('span', { class: 'num' }, 'S' + s.n), ctxBase.h('span', null, s.title), ctxBase.h('span', { class: 'tick' }, iconCheck())));
@@ -219,7 +227,7 @@
           ctxBase.h('p', { class: 'lede' }, 'Follow selected quartz through the physics, factories and extraordinary precision that turn silicon into a GPU. A connected story, from raw material to computing system.'),
           ctxBase.h('a', { class: 'text-link', href: '#reading-paths' }, 'Find your starting point', ctxBase.h('span', { 'aria-hidden': 'true' }, '↓')))),
       ctxBase.h('div', { class: 'hero-visual', html: Shell.journey() }),
-      ctxBase.h('div', { class: 'hero-caption' }, ctxBase.h('span', null, 'A journey in five transformations'), ctxBase.h('span', null, 'Explore any stage ↑ · Schematics not to scale')));
+      ctxBase.h('div', { class: 'hero-caption' }, ctxBase.h('span', null, 'A journey in five transformations')));
     art.append(hero);
     const paths = ctxBase.h('section', { class: 'reading-paths', id: 'reading-paths' },
       ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '01 / CHOOSE YOUR PATH'), ctxBase.h('h2', null, 'The big picture. Or every detail.')),
@@ -247,7 +255,7 @@
       group.append(grid); curriculum.append(group);
     }
     art.append(curriculum);
-    art.append(ctxBase.h('footer', { class: 'atlas-footer' }, ctxBase.h('b', null, 'Sand to GPU'), ctxBase.h('p', null, 'A self-study field guide. Read, experiment, connect the dots.'), ctxBase.h('a', { href: '#/m/21' }, 'Glossary & reference ↗')));
+    art.append(ctxBase.h('footer', { class: 'atlas-footer' }, ctxBase.h('b', null, 'Sand to GPU'), ctxBase.h('a', { href: '#/m/21' }, 'Glossary & reference ↗')));
     main.append(art);
     // The home-page jump is local scrolling, not a course route.
     $('.text-link', hero).addEventListener('click', e => { e.preventDefault(); paths.scrollIntoView({ block: 'start' }); });
@@ -333,6 +341,7 @@
     update(); activeCleanups.push(() => observer.disconnect());
   }
   function renderChapterTools(m, prose, base, n) {
+    // Retain existing visual anchors so saved links continue to resolve.
     const visuals = $$('.section-figure, .widget[data-widget]', prose);
     visuals.forEach((figure, i) => { if (!figure.id) figure.id = 'visual-' + (i + 1); });
     const bar = ctxBase.h('div', { class: 'chapter-tools' });
@@ -341,7 +350,6 @@
     const links = ctxBase.h('nav', { 'aria-label': 'Chapter sections' });
     m.toc.filter(t => t.depth === 2).forEach(t => links.append(ctxBase.h('a', { href: base + pad(n) + '/' + t.id }, t.text)));
     outline.append(links); bar.append(outline);
-    if (visuals.length) bar.append(ctxBase.h('a', { class: 'visual-jump', href: base + pad(n) + '/' + visuals[0].id }, ctxBase.h('span', { class: 'visual-symbol', 'aria-hidden': 'true' }, '◈'), visuals.length + ' visuals to explore', ctxBase.h('span', { 'aria-hidden': 'true' }, '↓')));
     bar.append(ctxBase.h('div', { class: 'reading-status' }, ctxBase.h('span', { class: 'reading-label' }, 'Reading progress'), ctxBase.h('b', { id: 'reading-percent' }, '0%')));
     return bar;
   }
@@ -355,7 +363,7 @@
       const numbered = t.depth === 2 ? t.text.match(/^(\d+(?:\.\d+)*)(?:[.)])\s+/) : null;
       group.append(ctxBase.h('a', { href: base + pad(n) + '/' + t.id, class: 'd' + t.depth, 'data-id': t.id, 'data-section': groupId }, t.depth===2 ? ctxBase.h('span', { class:'toc-number', 'aria-hidden': 'true' }, numbered ? numbered[1].padStart(2, '0') : '·') : null, ctxBase.h('span',null,numbered ? t.text.slice(numbered[0].length) : t.text)));
     }); rail.append(toc);
-    rail.append(ctxBase.h('div', { class: 'rail-bottom' }, ctxBase.h('span', null, 'Follow your curiosity.'), ctxBase.h('a', { href: '#/home' }, 'Return to the atlas ↗')));
+    rail.append(ctxBase.h('div', { class: 'rail-bottom' }, ctxBase.h('a', { href: '#/home' }, 'Return to the atlas ↗')));
   }
   // Scroll spy uses document positions because figures and prose may contain nested elements.
   let spyHandler = null;
@@ -377,7 +385,7 @@
       const progress=$('#reading-percent'); if(progress)progress.textContent=percentage+'%';
       document.documentElement.style.setProperty('--reading-progress',percentage+'%');
       const nearEnd=(window.scrollY+window.innerHeight)/doc.scrollHeight>0.9;
-      if(isSurvey) { if(!state.sread[m.n]&&nearEnd){state.sread[m.n]=true;store.set('sread',state.sread);renderSidebar();markSidebarPage('#/s/'+pad(m.n));} return; }
+      if(isSurvey) { if(!state.sread[m.n]&&nearEnd){state.sread[m.n]=true;store.set('sread',state.sread);renderSidebar();markSidebarPage('#/s/'+pad(m.n));renderProgress();} return; }
       if(!state.read[m.n]&&nearEnd){state.read[m.n]=true;store.set('read',state.read);renderProgress();}
     }
     spyHandler=()=>{if(!queued){queued=true;spyFrame=requestAnimationFrame(update);}};

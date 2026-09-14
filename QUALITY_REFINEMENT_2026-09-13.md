@@ -42,3 +42,21 @@ node qa/round2-shell.js
 npm run check
 node qa/figure-geometry.js
 ```
+
+## September 14: quieter reading controls and track-aware navigation
+
+Following reader feedback, this pass removes the chapter’s “visuals to explore” link and the decorative hero’s “Conceptual schematic · not to scale” caption. It also removes the repeated “Follow your curiosity” rail message, the survey sidebar’s duplicate chapter-count line, the home footer slogan and the generic home-stage caption. Useful navigation, control instructions, source attribution and scientific qualifications in the actual lessons and figures remain.
+
+The five-stage chapter navigation now uses the active course track. Survey links stay in the survey; explicitly labelled links into a deep-dive chapter still work. Stage indicators reflect the relevant topic rather than interpreting survey chapter numbers as deep-dive module numbers.
+
+The stage entries are S02/S03/S06/S09/S10 for the survey and M01/M05/M11/M16/M19 for the deep dive. The “Wafer” stage means wafer patterning and fab processing, which begins in S03 or M05. Memory remains under Devices; Package begins with the M16 fundamentals rather than skipping ahead to M17. Overview, economics and reference chapters do not falsely highlight a manufacturing stage.
+
+The header’s completion percentage also follows the active track. Previously, a reader with two of ten survey chapters completed could see the deep-dive percentage instead. Completing a survey chapter now refreshes the header as well as the sidebar.
+
+This is a reader-shell change. Authored lessons, copied Markdown and narration extraction are preserved, so existing recordings require no regeneration. Targeted browser evidence is recorded with the current QA reports; the earlier broad visual and scientific review above remains a separate historical pass.
+
+Validation covers all 32 chapter-stage states, 40 actual stage-link clicks across desktop and phone layouts, and separate survey/deep-dive completion values. A seeded survey moves from 20% to 30% immediately after another chapter is completed; the deep-dive value remains 5% for the same saved browser state. Old direct links to numbered visuals still resolve even though their toolbar shortcut was removed. Reproduce these checks with a source preview running using `QA_BASE_URL=http://127.0.0.1:8793 node qa/reader-cleanup.js`; results are in `qa/reports/reader-cleanup.json`.
+
+All 11 targeted check groups passed. Twelve screenshots were inspected across both themes and desktop/phone layouts, including the shortened home footer and survey chapter controls. Course and figure checks also passed.
+
+After promotion, the static preview also passed five real survey stage clicks and immediate survey/deep-dive progress checks; see `qa/reports/reader-cleanup-live.json`.

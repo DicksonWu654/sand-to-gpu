@@ -701,17 +701,7 @@ main {
   text-decoration: none;
 }
 
-.visual-jump {
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-}
 
-.visual-symbol {
-  font-size: 17px;
-}
 
 .reading-status {
   display: flex;
@@ -1048,11 +1038,11 @@ main {
 .cross-a { left: 4px; top: 0; }
 .cross-b { right: 4px; bottom: 4px; }
 .plate-label { position: relative; grid-column: 1 / -1; margin: 20px -30px 0; background: color-mix(in srgb, var(--panel) 82%, transparent); display: flex; justify-content: space-between; gap: 12px; padding: 10px 15px; border-top: 1px solid var(--line); color: var(--si); font: 10px var(--mono); }
-.plate-label small { color: var(--muted); font-size: 10px; }
+
 .prose > p:first-child { font-size: 1.08em; }
 .prose > p:first-child:first-letter { float: left; color: var(--accent); font: 400 3.6em/.84 var(--serif); padding: .08em .13em 0 0; }
 .toc-group.in-view { border-left: 2px solid var(--accent); padding-left: 7px; margin-left: -9px; }
-.prose a:not(.visual-jump) { text-decoration-color: color-mix(in srgb, var(--si) 40%, transparent); }
+.prose a { text-decoration-color: color-mix(in srgb, var(--si) 40%, transparent); }
 .prose a:hover { text-decoration-color: currentColor; }
 button:disabled { opacity: .62; }
 .w-lab-kicker { margin-bottom: 8px; color: var(--accent); font: 11px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .12em; }
@@ -1962,7 +1952,7 @@ input[type=checkbox] {
 
 .atlas-footer {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto;
   gap: 30px;
   align-items: center;
   padding: 36px 0 0;
@@ -1977,9 +1967,6 @@ input[type=checkbox] {
   color: var(--ink);
 }
 
-.atlas-footer p {
-  margin: 0;
-}
 
 .atlas-footer a {
   text-decoration: none;
@@ -2177,10 +2164,6 @@ input[type=checkbox] {
     gap: 12px;
   }
 
-  .atlas-footer p {
-    grid-column: 1/-1;
-    grid-row: 2;
-  }
 
 }
 
@@ -2357,9 +2340,6 @@ input[type=checkbox] {
     display: none;
   }
 
-  .visual-jump {
-    font-size: 10px;
-  }
 
   .prose h2 {
     font-size: 26px;
@@ -2557,9 +2537,6 @@ input[type=checkbox] {
     gap: 14px;
   }
 
-  .hero-caption>span {
-    max-width: 50%;
-  }
 
   .reading-paths,.home-curriculum {
     padding-top: 40px;
@@ -2648,7 +2625,7 @@ input[type=checkbox] {
   .plate-drawing:before { width: 110px; height: 110px; left: 11px; top: 5px; }
   .plate-cross { display: none; }
   .plate-label { display: grid; gap: 3px; margin: 18px -15px 0; font-size: 10px; padding: 9px 12px; }
-  .plate-label small { font-size: 10px; }
+
   .journey-stage:nth-child(3):after { display: none; }
   .journey-stage:nth-child(4):after { top: 42%; }
   .prose > p:first-child:first-letter { font-size: 3.2em; }

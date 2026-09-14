@@ -1,21 +1,23 @@
 {
   "status": "passed",
-  "verifiedAt": "2026-09-14T05:53:33.501057+00:00",
+  "verifiedAt": "2026-09-14T15:36:55.788725+00:00",
   "archive": "/mnt/c/Users/dicks/Downloads/sand-to-gpu-static-2026-09-13.zip",
   "files": 6650,
   "lessons": 32,
   "audioClips": 6556,
-  "bytes": 1651026562,
-  "sha256": "b4337a976171830c1156a154548d0613e012e25aabc778335db24e2178cba30d",
-  "previousArchiveSha256": "5115c3a132f24994cbf3bd67dd6255cb249d889b7a765cdb4f05a1a53bce5cbf",
-  "update": "Copy page for AI: complete chapter Markdown, direct clipboard and download, with manual recovery if copying is blocked. Superseded question-helper assets removed; audio and timing manifests unchanged.",
+  "bytes": 1651026678,
+  "sha256": "0e00eb49b6405841fe530715db4f0917a28dd8c45974fbc10318c10ea8be37c4",
+  "previousArchiveSha256": "b4337a976171830c1156a154548d0613e012e25aabc778335db24e2178cba30d",
+  "update": "Reader navigation cleanup: stage links preserve survey/deep-dive track, accurate phase highlights, immediate active-track progress, and redundant shell labels removed. Course, Markdown, narration and timing assets unchanged.",
   "sourceHashes": {
-    "app.js": "0ca58b6e48f016df299774fcf338b98ee6a074f67865306bb7982eb21465a64b",
+    "app.js": "481a9eced6e517ae3bf0960841715853b2a442bea80c99d0804cdaa79b0d0214",
     "narration.js": "a9627196075fbb54e9d06036b995735d2215fb1beb1e6e05516a3ee984def277",
     "page-copy.js": "d6e5873230dbbee14e9ef27918c333498ab05cdaa2f456837a2aa70bb99f3b57",
     "page-copy.css": "a774c61563f96fd3ceb93a414ce4f82e001de37e1bc95da6f54f97949766b6e2",
     "ai-content.js": "29c1d33a9497270b17ca1dd4957433da88169f5230fe9342a47e1980d6f2c34b",
-    "index.html": "2620e1d33ec4e71da05665f9b1af6f769a92ae9bb3ccba1cb01889f8cb035da1"
+    "index.html": "2620e1d33ec4e71da05665f9b1af6f769a92ae9bb3ccba1cb01889f8cb035da1",
+    "course-shell.js": "ebf6e7b20ce76fb0ac2d37d96ee35a4173845f1cca1d3ac66415a4a40a713470",
+    "styles.css": "cb53c5b135128e40a3f942ea598d41d7aaa314b1901b8d39994a9fda1bbe2de5"
   },
   "contentHash": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
   "checks": {
@@ -31,7 +33,7 @@
     "unchangedAudioFiles": 6556,
     "sourcePreviewStopped": true,
     "livePreviewHealthy": true,
-    "actualLiveClipboardRoundtrip": true
+    "liveStageNavigationAndProgress": true
   },
   "compression": {
     "mp3": "ZIP_STORED",
