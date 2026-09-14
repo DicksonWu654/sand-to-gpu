@@ -108,7 +108,6 @@
     const sb = $('#sidebar');
     sb.innerHTML = '';
     sb.append(ctxBase.h('div', { class: 'curriculum-label' }, 'THE FIELD GUIDE'));
-    sb.append(ctxBase.h('a', { class: 'home', href: '#/home' }, iconHome(), 'Explore the atlas'));
     if (survey.length) {
       const sw = ctxBase.h('div', { class: 'track-switch', role: 'group', 'aria-label': 'Course track' },
         ctxBase.h('button', { class: 'track-btn' + (state.track === 'survey' ? ' active' : ''), 'aria-pressed': String(state.track === 'survey'), on: { click: () => { setTrack('survey'); navigateTo('#/s/01'); } } }, ctxBase.h('b', null, 'Survey'), ctxBase.h('small', null, survey.length + ' chapters')),
@@ -141,7 +140,6 @@
   }
   const pad = n => String(n).padStart(2, '0');
   function iconCheck() { return ctxBase.svg('svg', { viewBox: '0 0 12 12', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, ctxBase.svg('path', { d: 'M2 6.5l2.5 2.5L10 3.5' })); }
-  function iconHome() { return ctxBase.svg('svg', { width: 16, height: 16, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, ctxBase.svg('path', { d: 'M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z' })); }
 
   // ---------- router ----------
   function markSidebarPage(href) {
@@ -285,7 +283,7 @@
       ctxBase.h('div', { class: 'chapter-stage', html: Shell.ribbon(n, isSurvey) })));
     const prose = ctxBase.h('div', { class: 'prose', html: m.html });
     decorateProse(prose);
-    const chapterTools = renderChapterTools(m, prose, base, n);
+    const chapterTools = renderChapterTools(prose);
     art.append(chapterTools, prose);
     if (m.quiz && m.quiz.questions && m.quiz.questions.length) art.append(renderQuiz(m));
     const label = x => isSurvey ? 'S' + x.n : pad(x.n);
@@ -340,16 +338,11 @@
     wrappers.forEach(wrapper => { observer.observe(wrapper); const table = $('table', wrapper); if (table) observer.observe(table); });
     update(); activeCleanups.push(() => observer.disconnect());
   }
-  function renderChapterTools(m, prose, base, n) {
+  function renderChapterTools(prose) {
     // Retain existing visual anchors so saved links continue to resolve.
     const visuals = $$('.section-figure, .widget[data-widget]', prose);
     visuals.forEach((figure, i) => { if (!figure.id) figure.id = 'visual-' + (i + 1); });
     const bar = ctxBase.h('div', { class: 'chapter-tools' });
-    const outline = ctxBase.h('details', { class: 'chapter-outline' });
-    outline.append(ctxBase.h('summary', null, 'In this chapter', ctxBase.h('span', { 'aria-hidden': 'true' }, '⌄')));
-    const links = ctxBase.h('nav', { 'aria-label': 'Chapter sections' });
-    m.toc.filter(t => t.depth === 2).forEach(t => links.append(ctxBase.h('a', { href: base + pad(n) + '/' + t.id }, t.text)));
-    outline.append(links); bar.append(outline);
     bar.append(ctxBase.h('div', { class: 'reading-status' }, ctxBase.h('span', { class: 'reading-label' }, 'Reading progress'), ctxBase.h('b', { id: 'reading-percent' }, '0%')));
     return bar;
   }
@@ -363,7 +356,6 @@
       const numbered = t.depth === 2 ? t.text.match(/^(\d+(?:\.\d+)*)(?:[.)])\s+/) : null;
       group.append(ctxBase.h('a', { href: base + pad(n) + '/' + t.id, class: 'd' + t.depth, 'data-id': t.id, 'data-section': groupId }, t.depth===2 ? ctxBase.h('span', { class:'toc-number', 'aria-hidden': 'true' }, numbered ? numbered[1].padStart(2, '0') : '·') : null, ctxBase.h('span',null,numbered ? t.text.slice(numbered[0].length) : t.text)));
     }); rail.append(toc);
-    rail.append(ctxBase.h('div', { class: 'rail-bottom' }, ctxBase.h('a', { href: '#/home' }, 'Return to the atlas ↗')));
   }
   // Scroll spy uses document positions because figures and prose may contain nested elements.
   let spyHandler = null;

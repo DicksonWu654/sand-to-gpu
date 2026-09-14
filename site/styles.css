@@ -235,16 +235,7 @@ button:disabled {
   flex: 1;
 }
 
-.header-about {
-  font-size: 12px;
-  color: var(--muted);
-  text-decoration: none;
-  white-space: nowrap;
-}
 
-.header-about span {
-  margin-left: 12px;
-}
 
 .icon-btn {
   width: 36px;
@@ -370,19 +361,7 @@ main {
   padding: 0 10px 12px;
 }
 
-.sidebar a.home {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  text-decoration: none;
-  color: var(--ink);
-  font-size: 13px;
-}
 
-.sidebar a.home.active {
-  color: var(--accent);
-}
 
 .track-switch {
   display: grid;
@@ -662,44 +641,10 @@ main {
   color: var(--muted);
 }
 
-.chapter-outline {
-  flex: 1;
-}
 
-.chapter-outline summary {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  min-height: 44px;
-  color: var(--ink);
-  list-style: none;
-}
 
-.chapter-outline summary::-webkit-details-marker {
-  display: none;
-}
 
-.chapter-outline nav {
-  position: absolute;
-  top: 46px;
-  left: 0;
-  right: 0;
-  max-height: 60vh;
-  overflow: auto;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  z-index: 10;
-  padding: 12px 20px;
-  border-radius: 6px;
-}
 
-.chapter-outline nav a {
-  display: block;
-  padding: 7px 0;
-  text-decoration: none;
-}
 
 
 
@@ -989,19 +934,7 @@ main {
   display: block;
 }
 
-.rail-bottom {
-  display: grid;
-  gap: 8px;
-  border-top: 1px solid var(--line);
-  margin-top: 30px;
-  padding-top: 18px;
-  font-size: 10px;
-  color: var(--muted);
-}
 
-.rail-bottom a {
-  text-decoration: none;
-}
 
 /* Chapter opening plate: one illustrated artifact in its process context. */
 .chapter-plate {
@@ -2009,9 +1942,6 @@ input[type=checkbox] {
     max-width: 900px;
   }
 
-  .header-about {
-    display: none;
-  }
 
   .home-page {
     padding-left: 40px;
@@ -2332,9 +2262,6 @@ input[type=checkbox] {
     font-size: 10px;
   }
 
-  .chapter-outline {
-    flex: 1;
-  }
 
   .reading-status {
     display: none;

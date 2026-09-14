@@ -60,3 +60,9 @@ Validation covers all 32 chapter-stage states, 40 actual stage-link clicks acros
 All 11 targeted check groups passed. Twelve screenshots were inspected across both themes and desktop/phone layouts, including the shortened home footer and survey chapter controls. Course and figure checks also passed.
 
 After promotion, the static preview also passed five real survey stage clicks and immediate survey/deep-dive progress checks; see `qa/reports/reader-cleanup-live.json`.
+
+### Additional navigation trim
+
+At the reader’s request, the duplicate “In this chapter” toolbar dropdown is removed while the right-side section outline remains. “Explore the atlas” links are removed from the header and sidebar, and “Return to the atlas” is removed from the section rail. The site-name link remains the route home. This follow-up changes navigation controls only; the course, Markdown exports and recordings are unchanged.
+
+Four bounded browser cases passed across both tracks at 1280 px and 375 px. They check the removed controls, nonempty right-side outlines with live targets, real desktop section clicks, the site-name link home, and layout/browser errors. All four screenshots were inspected. The existing navigation QA now checks the retained right-side outline rather than the removed dropdown; see `qa/reports/reader-trim.json` for this follow-up’s evidence.

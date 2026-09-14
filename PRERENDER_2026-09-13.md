@@ -4,9 +4,9 @@ The publishing edition uses saved Heart recordings for every passage narrated by
 
 **Current edition, September 14:** all 6,556 unique MP3 clips and 6,739 passage placements passed the final audit. The recordings total approximately 56.76 hours and 1.639 GB of MP3 audio. The supplier and geography revisions required 99 new recordings; 6,457 unchanged recordings were reused. Generation/cache assembly took 101 seconds and MP3 export took 39 seconds, with zero failures.
 
-The verified archive on this computer is `C:\Users\dicks\Downloads\sand-to-gpu-static-2026-09-13.zip` (1,651,026,678 bytes; 6,650 files). Its CRC, source snapshot and SHA-256 checks passed; see `qa/reports/narration-package.json` for the checksum. The preview on port 8790 now serves the completed static edition, with the local speech API disabled.
+The verified archive on this computer is `C:\Users\dicks\Downloads\sand-to-gpu-static-2026-09-13.zip` (1,651,026,247 bytes; 6,650 files). Its CRC, source snapshot and SHA-256 checks passed; see `qa/reports/narration-package.json` for the checksum. The preview on port 8790 now serves the completed static edition, with the local speech API disabled.
 
-Archive SHA-256: `0e00eb49b6405841fe530715db4f0917a28dd8c45974fbc10318c10ea8be37c4`.
+Archive SHA-256: `366814437675a88f54ad76272acc41000b47077e44d745fd2236e481b3d07593`.
 
 With Listen open, clicking a paragraph starts playback from that paragraph. **Read from here** starts at the passage currently on screen. The publishing edition includes these controls. Their earlier refresh reused all existing recordings; the September 14 content revision regenerated changed passages. Eight paragraph interaction cases and eleven static-player cases passed. Native browser playback also verified a real pointer click from paused narration: it selected the correct MP3, restarted near the beginning, highlighted the expected text, and made no speech API requests. See `qa/reports/narration-paragraph.json` and `qa/reports/narration-static.json`.
 
@@ -125,3 +125,7 @@ The publishing bundle keeps the five-stage chapter bar within the selected track
 The redundant visual-jump link and generic chapter-hero scale label were removed, along with repeated navigation filler. Scientific caveats inside individual figures and existing figure anchors remain. The homepage retains its short journey label and its glossary link; its footer uses the two remaining elements.
 
 `qa/reports/reader-cleanup.json` records 11 passing groups: all 32 chapter phase states, 40 real pointer clicks across both tracks, desktop/phone widths and light/dark themes, separate immediate progress updates, live outline targets, and retained scientific caveats. All 12 resulting source screenshots were visually inspected. Two focused groups passed again on the refreshed port 8790 preview, recorded in `qa/reports/reader-cleanup-live.json`. Course text, complete Markdown exports, narration extraction, all 33 narration manifests and all 6,556 recordings are unchanged; no narration was regenerated.
+
+## Additional navigation trim — 2026-09-14
+
+The duplicate chapter-outline dropdown beside the listening controls and the repeated “Explore the atlas”/“Return to the atlas” links were removed. The desktop right-side table of contents remains, and the Sand to GPU brand still opens the homepage. Four bounded browser checks covered survey/deep-dive pages at 1280px and 375px, including real TOC and brand clicks, live section targets, console errors and overflow; all four screenshots were inspected. The existing reader-cleanup anchor assertion now checks the surviving right-side TOC and passed a focused live-preview spot check. Evidence: `qa/reports/reader-trim.json`. Narration, course text and complete Markdown data are unchanged.

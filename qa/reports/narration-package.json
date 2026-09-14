@@ -1,23 +1,23 @@
 {
   "status": "passed",
-  "verifiedAt": "2026-09-14T15:36:55.788725+00:00",
+  "verifiedAt": "2026-09-14T16:09:41.572044+00:00",
   "archive": "/mnt/c/Users/dicks/Downloads/sand-to-gpu-static-2026-09-13.zip",
   "files": 6650,
   "lessons": 32,
   "audioClips": 6556,
-  "bytes": 1651026678,
-  "sha256": "0e00eb49b6405841fe530715db4f0917a28dd8c45974fbc10318c10ea8be37c4",
-  "previousArchiveSha256": "b4337a976171830c1156a154548d0613e012e25aabc778335db24e2178cba30d",
-  "update": "Reader navigation cleanup: stage links preserve survey/deep-dive track, accurate phase highlights, immediate active-track progress, and redundant shell labels removed. Course, Markdown, narration and timing assets unchanged.",
+  "bytes": 1651026247,
+  "sha256": "366814437675a88f54ad76272acc41000b47077e44d745fd2236e481b3d07593",
+  "previousArchiveSha256": "0e00eb49b6405841fe530715db4f0917a28dd8c45974fbc10318c10ea8be37c4",
+  "update": "Removed duplicate toolbar outline and repeated atlas links; retained right-side TOC and brand home navigation. Course, Markdown, narration and timing assets unchanged.",
   "sourceHashes": {
-    "app.js": "481a9eced6e517ae3bf0960841715853b2a442bea80c99d0804cdaa79b0d0214",
+    "app.js": "0f170ede91e6a43ee470226d26362ccacfcffb1ae67761206328c9548300deb0",
     "narration.js": "a9627196075fbb54e9d06036b995735d2215fb1beb1e6e05516a3ee984def277",
     "page-copy.js": "d6e5873230dbbee14e9ef27918c333498ab05cdaa2f456837a2aa70bb99f3b57",
     "page-copy.css": "a774c61563f96fd3ceb93a414ce4f82e001de37e1bc95da6f54f97949766b6e2",
     "ai-content.js": "29c1d33a9497270b17ca1dd4957433da88169f5230fe9342a47e1980d6f2c34b",
-    "index.html": "2620e1d33ec4e71da05665f9b1af6f769a92ae9bb3ccba1cb01889f8cb035da1",
+    "index.html": "9df5a2cd23b70d4b3b88055aef7b24f4c37cbe7f16b2db21fd5d8d7629f9433b",
     "course-shell.js": "ebf6e7b20ce76fb0ac2d37d96ee35a4173845f1cca1d3ac66415a4a40a713470",
-    "styles.css": "cb53c5b135128e40a3f942ea598d41d7aaa314b1901b8d39994a9fda1bbe2de5"
+    "styles.css": "85e5371557fd826c2d750b0d0dd5d172c0cba3f745bfa77cae3d48fc4a2f017b"
   },
   "contentHash": "98afc1fb1569fa7f22a05a64264ede2fd51a4e6ea35bd5b5a08a2f4af6413cca",
   "checks": {
@@ -38,5 +38,10 @@
   "compression": {
     "mp3": "ZIP_STORED",
     "text": "ZIP_DEFLATED, level6"
+  },
+  "publishedAssetHashes": {
+    "app.js": "0f170ede91e6a43ee470226d26362ccacfcffb1ae67761206328c9548300deb0",
+    "styles.css": "85e5371557fd826c2d750b0d0dd5d172c0cba3f745bfa77cae3d48fc4a2f017b",
+    "index.html": "3a09e5b5f85e3c53cbddb4fbf0a26c7cbb32fafa3a5f9230cc2d3070649c472b"
   }
 }

@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-09-14T16:06:13.858Z",
+  "baseURL": "http://127.0.0.1:8793",
+  "scope": "Bounded manual browser inspection for navigation removals; no unrelated player/copy suites.",
+  "cases": [
+    {
+      "track": "survey",
+      "width": 1280,
+      "theme": "light",
+      "status": "passed",
+      "rightTocEntries": 10,
+      "desktopTocPointerClick": true,
+      "brandPointerHome": true,
+      "noOverflowOrConsoleErrors": true
+    },
+    {
+      "track": "survey",
+      "width": 375,
+      "theme": "dark",
+      "status": "passed",
+      "rightTocEntries": 10,
+      "desktopTocPointerClick": false,
+      "brandPointerHome": true,
+      "noOverflowOrConsoleErrors": true
+    },
+    {
+      "track": "deep",
+      "width": 1280,
+      "theme": "dark",
+      "status": "passed",
+      "rightTocEntries": 47,
+      "desktopTocPointerClick": true,
+      "brandPointerHome": true,
+      "noOverflowOrConsoleErrors": true
+    },
+    {
+      "track": "deep",
+      "width": 375,
+      "theme": "light",
+      "status": "passed",
+      "rightTocEntries": 47,
+      "desktopTocPointerClick": false,
+      "brandPointerHome": true,
+      "noOverflowOrConsoleErrors": true
+    }
+  ],
+  "visualReview": {
+    "status": "passed",
+    "screenshotsInspected": 4,
+    "paths": [
+      "/tmp/reader-trim-s-1280-light.png",
+      "/tmp/reader-trim-s-375-dark.png",
+      "/tmp/reader-trim-m-1280-dark.png",
+      "/tmp/reader-trim-m-375-light.png"
+    ]
+  },
+  "coreCheck": "npm run check passed",
+  "maintainedQA": "Only reader-cleanup used an obsolete selector; its nonempty live-anchor assertion now targets the surviving right-side TOC.",
+  "liveAssetHashesMatch": true,
+  "ownedSourcePreviewStopped": true,
+  "maintainedCaseLiveSpotcheck": {
+    "status": "passed",
+    "case": "Pointer stage destinations survey 1280 light",
+    "actualPointerClicks": 5,
+    "nonemptyRightTocAnchorsVerified": true
+  }
+}
