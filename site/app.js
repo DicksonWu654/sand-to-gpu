@@ -215,6 +215,9 @@
     document.documentElement.style.setProperty('--reading-progress', '0%');
     const main = $('#main'); main.innerHTML = '';
     $('#rail').innerHTML = '';
+    const figureCount = mods.reduce((total, module) => total + (module.figureCount || 0), 0)
+      + survey.reduce((total, module) => total + (module.figureCount || 0), 0);
+    const labCount = Object.keys(registry).length;
     const art = ctxBase.h('div', { class: 'home-page' });
     const last = state.last != null && byN.get(state.last);
     const hero = ctxBase.h('section', { class: 'home-hero' },
@@ -225,7 +228,9 @@
           ctxBase.h('p', { class: 'lede' }, 'Follow selected quartz through the physics, factories and extraordinary precision that turn silicon into a GPU. A connected story, from raw material to computing system.'),
           ctxBase.h('a', { class: 'text-link', href: '#reading-paths' }, 'Find your starting point', ctxBase.h('span', { 'aria-hidden': 'true' }, '↓')))),
       ctxBase.h('div', { class: 'hero-visual', html: Shell.journey() }),
-      ctxBase.h('div', { class: 'hero-caption' }, ctxBase.h('span', null, 'A journey in five transformations')));
+      ctxBase.h('div', { class: 'hero-caption' },
+        ctxBase.h('span', null, 'A journey in five transformations'),
+        ctxBase.h('span', { class: 'hero-caption-meta' }, figureCount + ' figures · ' + labCount + ' interactive labs')));
     art.append(hero);
     const paths = ctxBase.h('section', { class: 'reading-paths', id: 'reading-paths' },
       ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '01 / CHOOSE YOUR PATH'), ctxBase.h('h2', null, 'The big picture. Or every detail.')),
@@ -241,8 +246,17 @@
           ctxBase.h('p', null, 'The mechanisms, machines and tradeoffs. Work through detailed explanations, interactive experiments and quizzes.'),
           ctxBase.h('div', { class: 'path-bottom' }, ctxBase.h('span', null, mods.length + ' modules · At your own pace'), ctxBase.h('b', null, last ? 'Continue module ' + pad(last.n) + ' →' : 'Start the deep dive →')))));
     art.append(paths);
+    const proof = ctxBase.h('section', { class: 'home-proof', 'aria-labelledby': 'proof-title' },
+      ctxBase.h('div', { class: 'proof-intro' },
+        ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '02 / BUILT FOR CURIOSITY'), ctxBase.h('h2', { id: 'proof-title' }, 'Learn the chain by following the evidence.')),
+        ctxBase.h('p', null, 'Start with a picture, change a parameter, then return to the explanation. The reader keeps the whole supply chain in view.')),
+      ctxBase.h('div', { class: 'proof-list' },
+        ctxBase.h('div', { class: 'proof-item' }, ctxBase.h('b', null, figureCount), ctxBase.h('span', null, 'authored figures'), ctxBase.h('small', null, 'Diagrams before equations.')),
+        ctxBase.h('div', { class: 'proof-item' }, ctxBase.h('b', null, labCount), ctxBase.h('span', null, 'interactive labs'), ctxBase.h('small', null, 'Change a process parameter and see the tradeoff.')),
+        ctxBase.h('div', { class: 'proof-item' }, ctxBase.h('b', null, 'local'), ctxBase.h('span', null, 'by design'), ctxBase.h('small', null, 'No account. Reading progress stays in your browser.'))));
+    art.append(proof);
     const curriculum = ctxBase.h('section', { class: 'home-curriculum' },
-      ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '02 / THE COMPLETE ATLAS'), ctxBase.h('h2', null, 'One connected story.')));
+      ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '03 / THE COMPLETE ATLAS'), ctxBase.h('h2', null, 'One connected story.')));
     const surveyDetails = ctxBase.h('details', { class: 'curriculum-part' });
     surveyDetails.append(ctxBase.h('summary', null, ctxBase.h('span', { class: 'part-index' }, 'S'), ctxBase.h('span', null, ctxBase.h('b', null, 'The survey'), ctxBase.h('small', null, 'Ten chapters to connect the whole chain')), ctxBase.h('span', { class: 'expand-sign', 'aria-hidden': 'true' }, '+')));
     const surveyGrid = ctxBase.h('div', { class: 'mod-grid' }); survey.forEach(m => surveyGrid.append(courseCard(m, true))); surveyDetails.append(surveyGrid); curriculum.append(surveyDetails);
