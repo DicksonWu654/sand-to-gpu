@@ -55,6 +55,8 @@ By default, generated files live under the current user's `.cache/sand-to-gpu/` 
 
 Rendering is resumable. Run the same commands again after interruption; cached passages are reused. The export finalizer verifies coverage, converts recordings to MP3, updates manifests, and adds the static-only marker. Publish only after both rendering and finalization report completion. Copy the **whole finalized directory**, including `narration/index.json`, lesson manifests, and `narration/audio/`, together with project license and notice files.
 
+For ChatGPT Sites static publishing, keep the generated MP3s in small hash-prefix subdirectories under `narration/audio/` (for example, `audio/fd/<key>.mp3`) and update each manifest's `audioUrl` to match. This avoids the host's per-directory asset limit while preserving the reader's relative URL handling.
+
 The [historical recording report](../PRERENDER_2026-09-13.md) records the existing 32-lesson edition and archive checksum. That local artifact is not a public download. A future release may attach a verified archive separately from Git source. Do not add gigabytes of recordings to ordinary Git history.
 
 ## Release checks
