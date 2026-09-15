@@ -68,7 +68,7 @@ module.exports = { installMediaClock };
 
 function installApiMock() {
   const nativeFetch = window.fetch.bind(window);
-  const api = window.__qaApi = { calls: [], delayed: [], delayNext: false, ignoreAbort: false, failNext: false, ready: true, cache: new Set(), manifests: {}, statusCalls: 0 };
+  const api = window.__qaApi = { calls: [], delayed: [], delayNext: false, ignoreAbort: false, failNext: false, ready: true, cache: new Set(), manifests: {}, statusCalls: 0, externalAudio: '' };
   window.fetch = (url, options = {}) => {
     const pathname = new URL(typeof url === 'string' ? url : url instanceof URL ? url.href : url.url, location.href).pathname;
     // Keep local-generation cases isolated even when a recorded bundle is present.
@@ -82,7 +82,7 @@ function installApiMock() {
     api.calls.push(call);
     const words = [...input.text.matchAll(/\S+/g)].map((m, i) => ({ start: i * .5, end: i * .5 + .45, textOffset: m.index, length: m[0].length }));
     const cacheKey = input.voice + '\n' + input.text;
-    const data = { audioUrl: '/api/narration/audio/' + String(api.calls.length).padStart(64, '0') + '.wav', words, duration: words.length * .5 + .5, cached: api.cache.has(cacheKey), voice: input.voice, timing: 'qa-fixture' };
+    const data = { audioUrl: api.externalAudio || '/api/narration/audio/' + String(api.calls.length).padStart(64, '0') + '.wav', words, duration: words.length * .5 + .5, cached: api.cache.has(cacheKey), voice: input.voice, timing: 'qa-fixture' };
     api.cache.add(cacheKey); api.manifests[data.audioUrl] = data;
     const fail = api.failNext; api.failNext = false;
     const delay = api.delayNext; api.delayNext = false;
@@ -234,6 +234,22 @@ async function run() {
       await p.evaluate(() => { __qaApi.ready = false; }); await p.click('.narration-launch');
       await p.waitForFunction(() => document.querySelector('.narration-player')?.dataset.state === 'error');
       assert.match(await p.$eval('.narration-status', e => e.textContent), /Install/);
+      await p.close();
+    });
+    await test('Approved GitHub release audio uses native playback without CORS prefetch', async () => {
+      const p = await fresh(); await mountFixture(p);
+      const releaseUrl = 'https://github.com/DicksonWu654/sand-to-gpu/releases/download/narration-fixtures/passage.wav';
+      await p.evaluate(url => { __qaApi.externalAudio = url; window.__audioFetches = []; const fetch0 = window.fetch; window.fetch = (...args) => { __audioFetches.push(String(args[0])); return fetch0(...args); }; }, releaseUrl);
+      await p.click('.narration-launch'); await playing(p);
+      const result = await p.evaluate(() => ({ src: __qaMedia.snapshot().at(-1).src, audioFetches: __audioFetches.filter(url => url.includes('github.com')) }));
+      assert.equal(result.src, releaseUrl); assert.deepEqual(result.audioFetches, []);
+      await p.close();
+    });
+    await test('Unapproved external audio URL is rejected', async () => {
+      const p = await fresh(); await mountFixture(p);
+      await p.evaluate(() => { __qaApi.externalAudio = 'https://cdn.example.test/audio/passage.wav'; });
+      await p.click('.narration-launch'); await p.waitForFunction(() => document.querySelector('.narration-player')?.dataset.state === 'error');
+      assert.match(await p.$eval('.narration-status', e => e.textContent), /approved GitHub|website/);
       await p.close();
     });
     await test('Pause during generation, end progression and keyboard close', async () => {

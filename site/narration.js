@@ -44,6 +44,13 @@
     if (!a || !b || length < 1) return null;
     const range = document.createRange(); range.setStart(a.node, from - a.start); range.setEnd(b.node, to - b.start); return range;
   }
+  const RELEASE_AUDIO_PREFIX = '/DicksonWu654/sand-to-gpu/releases/download/';
+  function isAllowedAudioUrl(value) {
+    let url;
+    try { url = new URL(value, location.href); } catch { return false; }
+    if (url.origin === location.origin) return true;
+    return url.protocol === 'https:' && url.hostname === 'github.com' && !url.username && !url.password && !url.search && !url.hash && url.pathname.startsWith(RELEASE_AUDIO_PREFIX) && url.pathname.length > RELEASE_AUDIO_PREFIX.length;
+  }
   function el(tag, attrs, text) {
     const node = document.createElement(tag);
     for (const [key,value] of Object.entries(attrs || {})) node.setAttribute(key,value);
@@ -146,7 +153,7 @@
           if (!response.ok) throw new Error(data.error || data.message || 'Narration could not be generated.');
         }
         if (!Array.isArray(data.words) || !data.words.length || typeof data.audioUrl!=='string' || !Number.isFinite(data.duration) || data.duration<=0 || data.words.some((w,i)=>!w||!Number.isFinite(w.start)||!Number.isFinite(w.end)||w.start<0||w.end<=w.start||w.end>data.duration||(i>0&&w.start<data.words[i-1].start)||!Number.isInteger(w.textOffset)||!Number.isInteger(w.length)||w.textOffset<0||w.length<1||w.textOffset+w.length>passage.text.length)) throw new Error('The narration response was incomplete. Please retry.');
-        const url=new URL(data.audioUrl,location.href); if(url.origin!==location.origin) throw new Error('The recording must come from this website.');
+        const url=new URL(data.audioUrl,location.href); if(!isAllowedAudioUrl(url.href)) throw new Error('The recording must come from this website or the approved GitHub release.');
         cache.set(key,data); if(cache.size>12) cache.delete(cache.keys().next().value); return data;
       })();
       pending.set(key,{promise:request,signal});
@@ -157,7 +164,7 @@
       const controller=new AbortController(); prefetchControllers.add(controller);
       Promise.allSettled(passages.slice(index+1,index+3).map(async p=>{
         const data=await getAudio(p,voice.value,controller.signal);
-        if(recorded) {
+        if(recorded && new URL(data.audioUrl,location.href).origin===location.origin) {
           const response=await fetch(data.audioUrl,{signal:controller.signal,cache:'force-cache'});
           if(response.ok)await response.arrayBuffer();
         }
