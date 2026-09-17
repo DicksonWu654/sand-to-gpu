@@ -1,4 +1,4 @@
-/* Local neural narration. Audio is cached by the server; highlighting uses source-text offsets. */
+/* Local neural narration. Static releases may provide the audio; highlighting uses source-text offsets. */
 (function () {
   'use strict';
   const SKIP = '.widget,.section-figure,table,pre,.reference-content,[hidden],[aria-hidden="true"],script,style,button';
