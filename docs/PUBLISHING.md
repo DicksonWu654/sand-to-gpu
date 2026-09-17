@@ -57,6 +57,8 @@ Rendering is resumable. Run the same commands again after interruption; cached p
 
 For ChatGPT Sites static publishing, keep the generated recordings in small hash-prefix subdirectories under `narration/audio/` (for example, `audio/fd/<key>.mp3`) and update each manifest's `audioUrl` to match. This avoids the host's per-directory asset limit while preserving the reader's relative URL handling. Ogg/Opus is a useful speech-quality option when the Sites bundle cap makes low-bitrate MP3 sound muffled; set the index format metadata and verify `audio/ogg` playback in the target browsers.
 
+The current high-quality public edition stores its 64 kbps MP3 recordings in the public GitHub Releases `narration-64k-0` through `narration-64k-f`. The Sites bundle carries the manifests and points each passage at the matching release asset, keeping the multi-gigabyte recordings out of the Sites archive.
+
 The [historical recording report](../PRERENDER_2026-09-13.md) records the existing 32-lesson edition and archive checksum. That local artifact is not a public download. A future release may attach a verified archive separately from Git source. Do not add gigabytes of recordings to ordinary Git history.
 
 ## Release checks
