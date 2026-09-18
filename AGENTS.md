@@ -13,7 +13,7 @@
 
 - Start with `README.md` and `CONTRIBUTING.md` for current setup. The dated handoffs and review logs are historical evidence, not current installation instructions. See `docs/DEVELOPMENT_HISTORY.md` for their sequence and `docs/PUBLISHING.md` for release preparation.
 - Keep new reports portable: use repository-relative paths and descriptive placeholders for excluded local artifacts. Do not add personal workstation paths, private session URLs, or credentials to review evidence. Current-tree sanitation does not remove earlier Git history.
-- The proposed licenses in `docs/licenses/` are drafts until the owner chooses a license; see `docs/LICENSING.md`. Do not claim that public visibility alone grants open-source reuse rights.
+- Licensing is adopted: code and tools are MIT; educational content and project-produced narration are CC BY 4.0, subject to retained third-party rights. See `docs/LICENSING.md`; include both root licenses and third-party notices in release bundles.
 
 - Page QA must assert the rendered theme, not just the requested theme or localStorage value. Hash navigation can retain the current document and its startup state.
 - Interaction scenarios must assert which item was selected, not only that a click produced no browser error. Dense SVG hit regions can select a neighboring event on phones despite clean geometry reports; verify actual pointer coordinates, hover and keyboard paths.

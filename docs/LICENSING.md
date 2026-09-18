@@ -1,34 +1,26 @@
-# Licensing proposal
+# Licensing
 
-**Status: prepared for owner review; not yet adopted.** The repository remains private. The license texts in `docs/licenses/` are proposed release materials, not a current grant of rights in this project. Public visibility alone would not make this an open-source release; adopt the selected licenses before launch.
+Adopted by the project owner on September 18, 2026. Sand to GPU has open-source software under MIT and open educational content under CC BY 4.0.
 
-## Recommended split
-
-| Material | Proposed license | Scope |
+| Material | License | Scope |
 | --- | --- | --- |
-| Website code, build and QA tools, developer documentation | [MIT](licenses/MIT.txt) | Original JavaScript, Python, CSS, HTML templates, build configuration, and development guides |
-| Lessons, quizzes, original educational illustrations and figure definitions | [Creative Commons Attribution 4.0 International](licenses/CC-BY-4.0.txt) | Original educational material in `course/`, the learning-map illustration, and its generated representations |
-| Generated lesson bundles and diagrams | Follow the component's license | Course prose and illustration content under CC BY 4.0; rendering code under MIT |
-| Project-produced narration | CC BY 4.0, to the extent the project holds rights | Recordings of the licensed lessons; the model, runtime, and voice assets retain upstream terms |
+| Website code, build and QA tools, developer documentation | [MIT](../LICENSE) | Original JavaScript, Python, CSS, HTML templates, build configuration, and development guides |
+| Lessons, quizzes, original educational illustrations and figure definitions | [CC BY 4.0](../LICENSE-CONTENT) | Original educational material in `course/`, the learning-map illustration, and its generated representations |
+| Generated lesson bundles and diagrams | Component-specific | Educational content under CC BY 4.0; rendering code under MIT |
+| Project-produced narration, including public GitHub Release MP3s | CC BY 4.0, to the extent the project holds rights | Recordings of the lessons; model, runtime, and voice assets retain upstream terms |
 
-MIT allows code reuse and modification while retaining the copyright and permission notice. CC BY 4.0 permits sharing and adaptation, including commercial use, with attribution, a license link, and an indication of changes. Consult the [official MIT text](https://opensource.org/license/mit) and [CC BY 4.0 deed and legal code](https://creativecommons.org/licenses/by/4.0/) for the terms.
+The educational-content license is an exception to the code license: MIT does not replace CC BY 4.0 for content bundled with the software. The package's `license: MIT` field describes the code package. `private: true` prevents accidental npm publication; it does not restrict the public repository or license grants.
 
-This split makes it straightforward to reuse the software and teach from the lessons. It does not claim ownership of scientific facts, public-domain material, or material the project cannot license. AI assistance is documented in the [development history](DEVELOPMENT_HISTORY.md); the proposal grants only whatever rights the contributors hold.
+MIT permits code reuse and modification while retaining the copyright and permission notice. CC BY 4.0 permits sharing and adaptation, including commercial use, with attribution, a license link, and an indication of changes. Complete terms are in the root license files; copies of the standard texts also remain in `docs/licenses/`.
 
-## Proposed attribution
-
-For reused or adapted educational material:
+## Attribution for educational material
 
 > Based on *Sand to GPU*, by the Sand to GPU contributors. Source: https://github.com/DicksonWu654/sand-to-gpu. Licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/. Changes: describe your changes here.
 
-This attribution becomes applicable only if the content license is adopted. Preserve separately stated credits and source citations. Company names and trademarks do not imply endorsement and are not included in the grant.
+Preserve separately stated credits and source citations. Company names and trademarks do not imply endorsement and are not included in the grant. No ownership is claimed over scientific facts or public-domain material. AI assistance is documented in the [development history](DEVELOPMENT_HISTORY.md); the grants cover only rights the contributors hold.
 
-## Finalizing the release
+## Third-party material and distribution
 
-Once the owner chooses the licenses, put the approved code license at root `LICENSE`, put the content notice and complete approved text at root `LICENSE-CONTENT`, and replace this proposal with the definitive scope. Set the package's `license` metadata to `MIT` for the code package, with the content exception documented here. Include both license files and the third-party notices in future downloadable website bundles.
+See [third-party notices](../THIRD_PARTY_NOTICES.md) for dependencies, typography, Kokoro, eSpeak NG, and source material. These project licenses do not replace upstream terms. Linked papers and manufacturer documents remain with their owners. The speech runtime is not covered by a blanket MIT license.
 
-The root license files and package license field are intentionally absent while the choice is pending. No default license has silently been applied. A different selection can be adopted without modifying the lessons or re-rendering audio.
-
-## Upstream material
-
-See [third-party notices](../THIRD_PARTY_NOTICES.md) for dependencies, typography, Kokoro, eSpeak NG, and source material. Neither proposal replaces their terms. Linked papers and manufacturer documents remain with their owners, and the dependency runtime is not covered by a blanket project license.
+Include `LICENSE`, `LICENSE-CONTENT`, this scope notice, and `THIRD_PARTY_NOTICES.md` when distributing website bundles. No lesson edits or audio regeneration are required to apply these licenses to existing project-produced recordings.

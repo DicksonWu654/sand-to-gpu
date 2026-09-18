@@ -22,7 +22,7 @@ For a public static-only edition, add the following line inside the exported cop
 
 This marks playback as recorded-audio only, so missing recordings do not trigger calls to a local generation API. Without the narration assets, reading, labs, quizzes, search, and Markdown export still work; listening is unavailable. Keep the marker out of the development source if you want to use local speech generation there.
 
-Copy the applicable license files and `THIRD_PARTY_NOTICES.md` alongside the published assets. Keep relative asset paths intact. The reader uses hash routes such as `#/s/01`, so chapter paths do not require server rewrite rules. If deploying below a URL subdirectory, test navigation, Markdown download, and any narration at that exact base path.
+Copy `LICENSE`, `LICENSE-CONTENT`, `docs/LICENSING.md`, and `THIRD_PARTY_NOTICES.md` alongside the published assets, preserving their relative paths. The reader uses hash routes such as `#/s/01`, so chapter paths do not require server rewrite rules. If deploying below a URL subdirectory, test navigation, Markdown download, and any narration at that exact base path.
 
 The site loads Google Fonts over the network, with local fallback fonts. It does not embed an AI provider: copying a chapter makes text available for the reader to paste elsewhere. Browser-local reading progress is not an account or a server-side profile.
 

@@ -97,6 +97,10 @@ npm run qa:widget -- hbm-stack
 
 `npm run check` and browser checks need Chrome or Chromium. Keep a full Git clone: the source-preservation check compares against a recorded historical baseline. The harness can use Puppeteer's browser or `PUPPETEER_EXECUTABLE_PATH`; use `npx puppeteer browsers install chrome` if a browser is missing. Set `QA_BASE_URL` when testing another port. Read [CONTRIBUTING.md](CONTRIBUTING.md) for content, visual, and validation standards before opening a pull request.
 
+## License
+
+The website code and tools are open source under the [MIT License](LICENSE). Original lessons, quizzes, educational illustrations, and project-produced narration are available under [CC BY 4.0](LICENSE-CONTENT), to the extent the contributors hold rights. See [license scope and attribution](docs/LICENSING.md) and [third-party notices](THIRD_PARTY_NOTICES.md); upstream dependencies, models, fonts, and separately attributed material retain their own terms.
+
 ## Accuracy and provenance
 
 This is an **AI-assisted educational project**, developed through repeated human feedback, source checks, visual audits, and corrections. Its [development history](docs/DEVELOPMENT_HISTORY.md) preserves what changed and why, including approaches that did not work well. AI-assisted review is not independent expert certification.

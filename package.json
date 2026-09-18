@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "An interactive course through the semiconductor supply chain, from raw materials to GPU systems.",
   "private": true,
+  "license": "MIT",
   "engines": {
     "node": ">=22.12.0"
   },
