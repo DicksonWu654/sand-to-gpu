@@ -2830,3 +2830,98 @@ input[type=checkbox] {
 .w-grid2.diagram-grid-stack { grid-template-columns: minmax(0, 1fr) !important; }
 .diagram-grid-stack > svg.w-svg { max-width: 520px; margin-inline: auto; }
 .diagram-grid-stack .diagram-scroll { max-width: 560px; width: 100%; margin-inline: auto; }
+
+/* Landing edition: an open engineering plate, followed by the reading atlas. */
+.home-page { max-width: none; }
+.home-page > section:not(.home-hero),.home-page > .atlas-footer { max-width: 1312px; margin-inline: auto; }
+.home-page .home-hero {
+  padding-top: 66px;
+  padding-bottom: 28px;
+  background: radial-gradient(ellipse at 76% 40%, #354d462e, transparent 58%), #14221e;
+}
+.home-page .home-hero:before { display: none; }
+.home-page .hero-copy {
+  display: block;
+  min-height: 530px;
+  padding: 30px 0 45px;
+}
+.home-page .hero-copy > .eyebrow { letter-spacing: .17em; font-size: 10px; }
+.home-page .home-hero h1 {
+  font-size: clamp(72px, 7.7vw, 112px);
+  line-height: .96;
+  letter-spacing: -.065em;
+  margin: 38px 0 28px;
+  white-space: normal;
+  max-width: 7ch;
+}
+.home-page .hero-intro { max-width: 480px; }
+.home-page .hero-intro .lede { font-size: 18px; line-height: 1.65; max-width: 35ch; }
+.home-page .hero-cta { min-height: 48px; font-size: 12px; border-radius: 2px; padding-inline: 18px; }
+.home-page .hero-cta-primary { box-shadow: none; }
+.home-page .hero-cta-secondary { background: transparent; border-color: transparent; }
+.home-page .hero-cta-secondary:hover { border-color: var(--hero-line); }
+.home-page .hero-subnote { margin-top: 20px; max-width: 39ch; font-size: 10px; line-height: 1.7; }
+.home-page .hero-specimen {
+  position: absolute;
+  pointer-events: none;
+  width: min(52%, 660px);
+  right: max(25px, calc((100% - 1360px)/2));
+  top: 10px;
+  margin: 0;
+  animation: home-rise 1.2s .15s both;
+}
+.hero-specimen svg { width: 100%; height: auto; display: block; overflow: visible; }
+.wafer-sheen { animation: wafer-light 12s ease-in-out infinite alternate; }
+@keyframes wafer-light { from { opacity: .3; } to { opacity: .85; } }
+.home-page .hero-caption { border-top: 1px solid #a4b6aa33; padding-top: 20px; font-size: 10px; }
+.home-journey { padding-top: 64px; }
+.home-journey .section-kicker { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
+.home-journey .section-kicker h2 { font-size: 27px; margin: 0 0 24px; }
+.home-journey .hero-visual { margin-top: 0; background: none; border-radius: 0; box-shadow: none; }
+.home-journey .atlas-journey { border: 0; border-block: 1px solid var(--line); border-radius: 0; }
+.home-journey .journey-stage { border: 0; padding: 20px 16px 25px; }
+.home-journey .journey-stage:hover { color: var(--ink); background: var(--panel2); }
+.home-journey .journey-stage .atlas-object { height: 130px; }
+.home-journey .journey-stage:after { background: var(--ground); }
+.home-page .home-journey .hero-caption { color: var(--muted); border: 0; padding-top: 0; }
+.home-page .reading-paths { padding-top: 90px; }
+.home-page .section-kicker h2 { font-weight: 500; }
+.home-page .path-options { gap: 60px; }
+.home-page .path-option { background: none; border: 0; border-top: 1px solid var(--line2); border-radius: 0; padding: 26px 0; }
+.home-page .path-option:hover { box-shadow: none; transform: none; border-color: var(--accent); }
+.home-page .path-option h3 { font: 400 36px/1.2 var(--serif); letter-spacing: -.035em; }
+.home-page .path-arrow { transition: transform .25s; }
+.home-page .path-option:hover .path-arrow { transform: translate(4px,-4px); }
+.home-page .home-proof { border-block: 1px solid var(--line); padding-block: 56px; margin-top: 40px; }
+.home-page .home-curriculum { padding-top: 80px; }
+.home-page .atlas-footer { padding-block: 36px; margin-top: 60px; }
+@media (max-width: 1100px) {
+  .home-page .home-hero { padding-top: 42px; }
+  .home-page .hero-copy { min-height: 480px; }
+  .home-page .hero-specimen { width: 57%; top: 65px; right: -25px; }
+  .home-page .hero-intro { max-width: 400px; }
+  .home-page .hero-intro .lede { max-width: 30ch; font-size: 16px; }
+  .home-page .hero-actions { max-width: 350px; }
+}
+@media (max-width: 960px) {
+  .home-page .home-hero { padding-top: 30px; padding-bottom: 22px; }
+  .home-page .hero-copy { min-height: 0; padding: 0; }
+  .home-page .hero-copy > .eyebrow { font-size: 9px; letter-spacing: .08em; }
+  .home-page .home-hero h1 { font-size: clamp(68px, 13vw, 94px); margin: 28px 0 22px; }
+  .home-page .hero-intro { max-width: 480px; }
+  .home-page .hero-intro .lede { max-width: 40ch; }
+  .home-page .hero-specimen { position: relative; width: min(100%,300px); right: auto; top: auto; margin: -5px auto -20px; }
+  .home-page .hero-cta { font-size: 11px; padding-inline: 12px; gap: 12px; }
+  .home-page .hero-subnote { max-width: none; margin-top: 12px; }
+  .home-page .hero-caption { position: relative; margin-top: 0; font-size: 9px; gap: 12px; }
+  .home-journey { padding-top: 42px; }
+  .home-journey .section-kicker { display: block; }
+  .home-journey .section-kicker h2 { margin-top: 10px; }
+  .home-journey .journey-stage .atlas-object { height: 100px; }
+  .home-page .path-options { gap: 20px; }
+  .home-page .reading-paths,.home-page .home-curriculum { padding-top: 52px; }
+  .home-page .path-option h3 { font-size: 29px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-page .hero-specimen,.wafer-sheen { animation: none; }
+}

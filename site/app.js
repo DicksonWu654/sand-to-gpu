@@ -222,21 +222,83 @@
     const last = state.last != null && byN.get(state.last);
     const hero = ctxBase.h('section', { class: 'home-hero' },
       ctxBase.h('div', { class: 'hero-copy' },
-        ctxBase.h('div', { class: 'eyebrow' }, ctxBase.h('span', { class: 'status-dot', 'aria-hidden': 'true' }), 'From quartz to compute · An interactive atlas'),
-        ctxBase.h('h1', null, 'How does sand', ctxBase.h('br'), ctxBase.h('em', null, 'become a GPU?')),
+        ctxBase.h('div', { class: 'eyebrow' }, ctxBase.h('span', { class: 'status-dot', 'aria-hidden': 'true' }), 'An illustrated guide to semiconductors'),
+        ctxBase.h('h1', null, 'Sand to', ctxBase.h('br'), ctxBase.h('em', null, 'GPU.')),
         ctxBase.h('div', { class: 'hero-intro' },
-          ctxBase.h('p', { class: 'lede' }, 'Trace one material through crystal growth, lithography, transistors, memory, packaging and the rack-scale systems that put a GPU to work.'),
+          ctxBase.h('p', { class: 'lede' }, 'A journey through the materials, machines and ideas that turn a grain of quartz into a world of computation.'),
           ctxBase.h('div', { class: 'hero-actions' },
-            ctxBase.h('a', { class: 'hero-cta hero-cta-primary', href: '#/s/01' }, 'Start with the big picture', ctxBase.h('span', { 'aria-hidden': 'true' }, '→')),
-            ctxBase.h('a', { class: 'hero-cta hero-cta-secondary', href: '#/m/00' }, 'Open the deep dive', ctxBase.h('span', { 'aria-hidden': 'true' }, '↗'))),
+            ctxBase.h('a', { class: 'hero-cta hero-cta-primary', href: '#/s/01' }, 'Explore the survey', ctxBase.h('span', { 'aria-hidden': 'true' }, '→')),
+            ctxBase.h('a', { class: 'hero-cta hero-cta-secondary', href: '#/m/00' }, 'Take the deep dive', ctxBase.h('span', { 'aria-hidden': 'true' }, '↗'))),
           ctxBase.h('div', { class: 'hero-subnote' }, 'No chip background required. Start anywhere, then follow the chain.'))),
+      ctxBase.h('div', { class: 'hero-specimen wafer-scene', 'aria-hidden': 'true', html: `
+        <svg viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="home-wafer-face" cx="34%" cy="28%" r="76%">
+              <stop offset="0" stop-color="#a8c3c6" stop-opacity=".78"/>
+              <stop offset=".48" stop-color="#3b5660" stop-opacity=".96"/>
+              <stop offset="1" stop-color="#101b23"/>
+            </radialGradient>
+            <linearGradient id="home-wafer-copper" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f1c087"/>
+              <stop offset=".45" stop-color="#b96c3d"/>
+              <stop offset="1" stop-color="#6e3527"/>
+            </linearGradient>
+            <pattern id="home-wafer-dies" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+              <rect x="2" y="2" width="40" height="40" rx="2" fill="none" stroke="#c3d8da" stroke-opacity=".48"/>
+              <path d="M7 13h30M7 23h30M7 33h30M13 7v30M23 7v30M33 7v30" stroke="#91b4b8" stroke-opacity=".18" stroke-width=".7"/>
+              <path d="M7 7h9v9H7zM25 25h12v12H25z" fill="#d28a52" fill-opacity=".18"/>
+            </pattern>
+            <clipPath id="home-wafer-clip"><circle cx="320" cy="320" r="205"/></clipPath>
+            <filter id="home-wafer-shadow" x="-30%" y="-30%" width="160%" height="170%">
+              <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#071016" flood-opacity=".48"/>
+            </filter>
+          </defs>
+          <g fill="none" stroke="#8ba4aa" stroke-opacity=".3">
+            <ellipse cx="320" cy="320" rx="278" ry="214" transform="rotate(-23 320 320)"/>
+            <ellipse cx="320" cy="320" rx="286" ry="162" transform="rotate(29 320 320)"/>
+            <circle cx="320" cy="320" r="264" stroke-dasharray="2 13"/>
+            <circle cx="320" cy="320" r="240" stroke-dasharray="74 9 5 9" stroke-opacity=".2"/>
+          </g>
+          <g stroke="#c18457" stroke-width="2" stroke-linecap="round" stroke-opacity=".75">
+            <path d="M96 189l-14-9M106 173l-8-15M535 448l14 9M525 464l8 15M451 104l8-15M468 113l15-8M172 530l-9 15M154 519l-15 8"/>
+          </g>
+          <g transform="rotate(-8 320 320)" filter="url(#home-wafer-shadow)">
+            <circle cx="320" cy="320" r="214" fill="#0b171e" stroke="#d29a6c" stroke-opacity=".45" stroke-width="3"/>
+            <circle cx="320" cy="320" r="205" fill="url(#home-wafer-face)"/>
+            <g clip-path="url(#home-wafer-clip)">
+              <rect x="105" y="105" width="430" height="430" fill="url(#home-wafer-dies)"/>
+              <path d="M90 455C216 393 330 449 550 232" fill="none" stroke="url(#home-wafer-copper)" stroke-width="18" stroke-opacity=".2"/>
+              <path class="wafer-sheen" d="M130 190C265 263 390 166 526 238" fill="none" stroke="#e3f2f3" stroke-width="7" stroke-opacity=".13"/>
+              <ellipse class="wafer-sheen" cx="257" cy="234" rx="116" ry="74" fill="#e3f2f3" fill-opacity=".08" transform="rotate(-24 257 234)"/>
+            </g>
+            <circle cx="320" cy="320" r="205" fill="none" stroke="#cde0df" stroke-opacity=".48" stroke-width="2"/>
+            <path d="M286 522q34-12 68 0" fill="#101b23" stroke="#d29a6c" stroke-opacity=".55" stroke-width="2"/>
+            <g fill="url(#home-wafer-copper)"><circle cx="194" cy="193" r="5"/><circle cx="442" cy="231" r="4"/><circle cx="407" cy="418" r="6"/></g>
+          </g>
+          <g fill="#b9cdd0" fill-opacity=".65">
+            <circle cx="66" cy="320" r="3"/><circle cx="574" cy="320" r="3"/><circle cx="320" cy="66" r="3"/><circle cx="320" cy="574" r="3"/>
+          </g>
+          <g stroke="#aebfc2" stroke-opacity=".42">
+            <path d="M52 304v32M588 304v32M304 52h32M304 588h32M83 255l18 5M539 380l18 5M255 83l5 18M380 539l5 18"/>
+            <path d="M116 111l45 45M479 484l45 45" stroke-dasharray="3 5"/>
+          </g>
+          <g fill="#aebfc2" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1.8">
+            <text x="46" y="298">Ø 300 MM</text>
+            <text x="466" y="548">MONOCRYSTAL</text>
+            <text x="477" y="99">DIE GRID</text>
+          </g>
+          <g fill="#c18457"><circle cx="472" cy="103" r="2.5"/><circle cx="112" cy="111" r="2.5"/></g>
+        </svg>` }));
+    art.append(hero);
+    const journey = ctxBase.h('section', { class: 'home-journey' },
+      ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '01 / FOLLOW THE MATERIAL'), ctxBase.h('h2', null, 'From the ground. To the cloud.')),
       ctxBase.h('div', { class: 'hero-visual', html: Shell.journey() }),
       ctxBase.h('div', { class: 'hero-caption' },
         ctxBase.h('span', null, 'Five transformations · One working GPU'),
         ctxBase.h('span', { class: 'hero-caption-meta' }, figureCount + ' figures · ' + labCount + ' interactive labs')));
-    art.append(hero);
+    art.append(journey);
     const paths = ctxBase.h('section', { class: 'reading-paths', id: 'reading-paths' },
-      ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '01 / CHOOSE YOUR PATH'), ctxBase.h('h2', null, 'The big picture. Or every detail.')),
+      ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '02 / CHOOSE YOUR PATH'), ctxBase.h('h2', null, 'The big picture. Or every detail.')),
       ctxBase.h('div', { class: 'path-options' },
         ctxBase.h('a', { class: 'path-option survey-path', href: '#/s/01' },
           ctxBase.h('div', { class: 'path-top' }, ctxBase.h('span', { class: 'eyebrow' }, 'The survey'), ctxBase.h('span', { class: 'path-arrow', 'aria-hidden': 'true' }, '↗')),
@@ -251,7 +313,7 @@
     art.append(paths);
     const proof = ctxBase.h('section', { class: 'home-proof', 'aria-labelledby': 'proof-title' },
       ctxBase.h('div', { class: 'proof-intro' },
-        ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '02 / BUILT FOR CURIOSITY'), ctxBase.h('h2', { id: 'proof-title' }, 'Learn the chain by following the evidence.')),
+        ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '03 / BUILT FOR CURIOSITY'), ctxBase.h('h2', { id: 'proof-title' }, 'Learn the chain by following the evidence.')),
         ctxBase.h('p', null, 'Start with a picture, change a parameter, then return to the explanation. The reader keeps the whole supply chain in view.')),
       ctxBase.h('div', { class: 'proof-list' },
         ctxBase.h('div', { class: 'proof-item' }, ctxBase.h('b', null, figureCount), ctxBase.h('span', null, 'authored figures'), ctxBase.h('small', null, 'Diagrams before equations.')),
@@ -259,7 +321,7 @@
         ctxBase.h('div', { class: 'proof-item' }, ctxBase.h('b', null, 'local'), ctxBase.h('span', null, 'by design'), ctxBase.h('small', null, 'No account. Reading progress stays in your browser.'))));
     art.append(proof);
     const curriculum = ctxBase.h('section', { class: 'home-curriculum' },
-      ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '03 / THE COMPLETE ATLAS'), ctxBase.h('h2', null, 'One connected story.')));
+      ctxBase.h('div', { class: 'section-kicker' }, ctxBase.h('span', null, '04 / THE COMPLETE ATLAS'), ctxBase.h('h2', null, 'One connected story.')));
     const surveyDetails = ctxBase.h('details', { class: 'curriculum-part' });
     surveyDetails.append(ctxBase.h('summary', null, ctxBase.h('span', { class: 'part-index' }, 'S'), ctxBase.h('span', null, ctxBase.h('b', null, 'The survey'), ctxBase.h('small', null, 'Ten chapters to connect the whole chain')), ctxBase.h('span', { class: 'expand-sign', 'aria-hidden': 'true' }, '+')));
     const surveyGrid = ctxBase.h('div', { class: 'mod-grid' }); survey.forEach(m => surveyGrid.append(courseCard(m, true))); surveyDetails.append(surveyGrid); curriculum.append(surveyDetails);
