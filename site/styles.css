@@ -1627,7 +1627,7 @@ input[type=checkbox] {
 }
 
 .home-hero h1 {
-  font: 600 clamp(44px,5.5vw,80px)/1.03 var(--sans);
+  font: 600 clamp(44px,5.5vw,80px)/.98 var(--sans);
   letter-spacing: -.055em;
   margin: 14px 0 0;
   white-space: nowrap;
@@ -1646,12 +1646,76 @@ input[type=checkbox] {
 .hero-intro .lede {
   font: 17px/1.7 var(--serif);
   color: var(--hero-muted);
-  margin: 0 0 18px;
+  margin: 0 0 20px;
   max-width: 40ch;
 }
 
 .hero-intro {
   animation: home-rise .7s .18s cubic-bezier(.2,.75,.25,1) both;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 42px;
+  padding: 0 14px 0 16px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  font: 600 11px var(--sans);
+  transition: transform .2s, background .2s, border-color .2s, color .2s;
+}
+
+.hero-cta span {
+  font: 15px var(--mono);
+  color: var(--accent);
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  color: var(--hero-ink);
+}
+
+.hero-cta-primary {
+  color: #18211e;
+  background: var(--accent);
+  box-shadow: 0 10px 24px #0003;
+}
+
+.hero-cta-primary:hover {
+  color: #18211e;
+  background: #f0ad88;
+}
+
+.hero-cta-primary span {
+  color: #18211e;
+}
+
+.hero-cta-secondary {
+  color: var(--hero-ink);
+  border-color: var(--line2);
+  background: #ffffff08;
+}
+
+.hero-cta-secondary:hover {
+  border-color: var(--accent);
+  background: #ffffff0d;
+}
+
+.hero-subnote {
+  margin-top: 12px;
+  color: var(--hero-muted);
+  font: 10px/1.5 var(--mono);
+  letter-spacing: .015em;
 }
 
 .text-link {
@@ -2193,19 +2257,16 @@ input[type=checkbox] {
   }
 
   .hero-intro {
-    display: flex;
-    gap: 25px;
-    align-items: end;
+    display: block;
   }
 
   .hero-intro .lede {
     max-width: 50ch;
-    margin-bottom: 0;
+    margin-bottom: 18px;
   }
 
-  .text-link {
-    flex: none;
-    font-size: 11px;
+  .hero-actions {
+    gap: 8px;
   }
 
   .journey-stage {

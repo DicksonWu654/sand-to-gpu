@@ -222,14 +222,17 @@
     const last = state.last != null && byN.get(state.last);
     const hero = ctxBase.h('section', { class: 'home-hero' },
       ctxBase.h('div', { class: 'hero-copy' },
-        ctxBase.h('div', { class: 'eyebrow' }, ctxBase.h('span', { class: 'status-dot', 'aria-hidden': 'true' }), 'An illustrated guide to semiconductors'),
-        ctxBase.h('h1', null, 'Extraordinary machines.', ctxBase.h('br'), ctxBase.h('em', null, 'Ordinary sand.')),
+        ctxBase.h('div', { class: 'eyebrow' }, ctxBase.h('span', { class: 'status-dot', 'aria-hidden': 'true' }), 'From quartz to compute · An interactive atlas'),
+        ctxBase.h('h1', null, 'How does sand', ctxBase.h('br'), ctxBase.h('em', null, 'become a GPU?')),
         ctxBase.h('div', { class: 'hero-intro' },
-          ctxBase.h('p', { class: 'lede' }, 'Follow selected quartz through the physics, factories and extraordinary precision that turn silicon into a GPU. A connected story, from raw material to computing system.'),
-          ctxBase.h('a', { class: 'text-link', href: '#reading-paths' }, 'Find your starting point', ctxBase.h('span', { 'aria-hidden': 'true' }, '↓')))),
+          ctxBase.h('p', { class: 'lede' }, 'Trace one material through crystal growth, lithography, transistors, memory, packaging and the rack-scale systems that put a GPU to work.'),
+          ctxBase.h('div', { class: 'hero-actions' },
+            ctxBase.h('a', { class: 'hero-cta hero-cta-primary', href: '#/s/01' }, 'Start with the big picture', ctxBase.h('span', { 'aria-hidden': 'true' }, '→')),
+            ctxBase.h('a', { class: 'hero-cta hero-cta-secondary', href: '#/m/00' }, 'Open the deep dive', ctxBase.h('span', { 'aria-hidden': 'true' }, '↗'))),
+          ctxBase.h('div', { class: 'hero-subnote' }, 'No chip background required. Start anywhere, then follow the chain.'))),
       ctxBase.h('div', { class: 'hero-visual', html: Shell.journey() }),
       ctxBase.h('div', { class: 'hero-caption' },
-        ctxBase.h('span', null, 'A journey in five transformations'),
+        ctxBase.h('span', null, 'Five transformations · One working GPU'),
         ctxBase.h('span', { class: 'hero-caption-meta' }, figureCount + ' figures · ' + labCount + ' interactive labs')));
     art.append(hero);
     const paths = ctxBase.h('section', { class: 'reading-paths', id: 'reading-paths' },
@@ -269,8 +272,6 @@
     art.append(curriculum);
     art.append(ctxBase.h('footer', { class: 'atlas-footer' }, ctxBase.h('b', null, 'Sand to GPU'), ctxBase.h('a', { href: '#/m/21' }, 'Glossary & reference ↗')));
     main.append(art);
-    // The home-page jump is local scrolling, not a course route.
-    $('.text-link', hero).addEventListener('click', e => { e.preventDefault(); paths.scrollIntoView({ block: 'start' }); });
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }
 
