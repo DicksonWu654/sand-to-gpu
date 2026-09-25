@@ -332,7 +332,10 @@
       group.append(grid); curriculum.append(group);
     }
     art.append(curriculum);
-    art.append(ctxBase.h('footer', { class: 'atlas-footer' }, ctxBase.h('b', null, 'Sand to GPU'), ctxBase.h('a', { href: '#/m/21' }, 'Glossary & reference ↗')));
+    art.append(ctxBase.h('footer', { class: 'atlas-footer' }, ctxBase.h('b', null, 'Sand to GPU'),
+      ctxBase.h('div', { class: 'footer-links' },
+        ctxBase.h('a', { href: 'https://sand-to-gpu-foundry.shadow654.chatgpt.site/' }, 'Play Foundry ↗'),
+        ctxBase.h('a', { href: '#/m/21' }, 'Glossary & reference ↗'))));
     main.append(art);
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }

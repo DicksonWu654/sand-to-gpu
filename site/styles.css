@@ -2117,6 +2117,13 @@ input[type=checkbox] {
   text-decoration: none;
 }
 
+.atlas-footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px 24px;
+}
+
 /* Responsive recomposition; no page-wide horizontal scrolling. */
 @media(min-width:1550px) {
   .layout {

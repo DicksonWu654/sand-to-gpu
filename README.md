@@ -17,6 +17,8 @@ A visual, interactive course through the semiconductor supply chain: from quartz
 
 The course includes **352 authored figures** and **46 interactive widget implementations**. Change a process parameter, inspect a physical structure, or work through a manufacturing tradeoff alongside the explanation. Quizzes, search, light and dark themes, and browser-local reading progress support self-study.
 
+Prefer learning by building the factory? [Play Sand to GPU: Foundry](https://sand-to-gpu-foundry.shadow654.chatgpt.site/), the companion game based on this course.
+
 **Listen alongside the text.** Optional local Kokoro narration provides saved passages, word highlighting, playback speed controls, and paragraph seeking. With listening open, click a narrated paragraph to start there. A separately generated static edition can serve recordings without running a model for visitors.
 
 **Bring your own AI assistant.** Use **Copy page for AI** or **Download Markdown** to take a complete chapter into the assistant of your choice. The reader does not embed an AI service or automatically send the chapter elsewhere.
