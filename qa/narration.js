@@ -245,12 +245,20 @@ async function run() {
       assert.equal(result.src, releaseUrl); assert.deepEqual(result.audioFetches, []);
       await p.close();
     });
-    await test('Unapproved external audio URL is rejected', async () => {
-      const p = await fresh(); await mountFixture(p);
-      await p.evaluate(() => { __qaApi.externalAudio = 'https://cdn.example.test/audio/passage.wav'; });
-      await p.click('.narration-launch'); await p.waitForFunction(() => document.querySelector('.narration-player')?.dataset.state === 'error');
-      assert.match(await p.$eval('.narration-status', e => e.textContent), /approved GitHub|website/);
-      await p.close();
+    await test('Unapproved external audio URLs are rejected', async () => {
+      for (const url of [
+        'https://cdn.example.test/audio/passage.wav',
+        'https://github.com/DicksonWu654/sand-to-gpu/releases/download/narration-fixtures/passage.wav?download=1',
+        'https://user:pass@github.com/DicksonWu654/sand-to-gpu/releases/download/narration-fixtures/passage.wav',
+        'https://github.com/other-owner/sand-to-gpu/releases/download/narration-fixtures/passage.wav',
+        'http://github.com/DicksonWu654/sand-to-gpu/releases/download/narration-fixtures/passage.wav',
+      ]) {
+        const p = await fresh(); await mountFixture(p);
+        await p.evaluate(value => { __qaApi.externalAudio = value; }, url);
+        await p.click('.narration-launch'); await p.waitForFunction(() => document.querySelector('.narration-player')?.dataset.state === 'error');
+        assert.match(await p.$eval('.narration-status', e => e.textContent), /approved GitHub|website/);
+        await p.close();
+      }
     });
     await test('Pause during generation, end progression and keyboard close', async () => {
       const p = await fresh(); await mountFixture(p);
